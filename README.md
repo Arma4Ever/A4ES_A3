@@ -8,7 +8,9 @@
 	         ARMA 3 COMBAT SYSTEM
 		 
 Wersja: 0.50.0
+
 Strona: http://www.Arma3Coop.pl
+
 Opis: Arma 3 Combat System jest nakładką na Advanced Combat Environment 3 zapewniajaca grupie A3C niezbędne do gry elementy.
 
 Autorzy:
