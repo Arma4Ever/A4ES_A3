@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+    <Package name="Dogtag">
+        <Key ID="STR_A3CS_Dogtag_CheckDogtag">
+            <Original>Sprawdź Dogtag</Original>
+        </Key>
+    </Package>
+</Project>

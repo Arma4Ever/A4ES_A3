@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+    <Package name="Main">
+        <Key ID="STR_A3CS_Main_CfgModsOverview">
+            <Original>Arma 3 Combat System jest nakładką na Advanced Combat Environment 3 zapewniajaca grupie Arma3Coop niezbędne do gry elementy.</Original>
+        </Key>
+    </Package>
+</Project>
