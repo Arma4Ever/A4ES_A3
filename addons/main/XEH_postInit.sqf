@@ -75,12 +75,12 @@ if !(isServer) exitWith {};
 ["ace_medical_keepLocalSettingsSynced", true, true, true] call ace_common_fnc_setSetting;
 
 ["ace_medical_enableFor", 0, true, true] call ace_common_fnc_setSetting;
-["ace_medical_enableAdvancedWounds", false, true, true] call ace_common_fnc_setSetting;
+["ace_medical_enableAdvancedWounds", true, true, true] call ace_common_fnc_setSetting;
 ["ace_medical_medicSetting_PAK", 1, true, true] call ace_common_fnc_setSetting;
 ["ace_medical_medicSetting_SurgicalKit", 1, true, true] call ace_common_fnc_setSetting;
 ["ace_medical_consumeItem_PAK", 1, true, true] call ace_common_fnc_setSetting;
 ["ace_medical_consumeItem_SurgicalKit", 1, true, true] call ace_common_fnc_setSetting;
 ["ace_medical_useLocation_PAK", 0, true, true] call ace_common_fnc_setSetting;
-["ace_medical_useLocation_SurgicalKit", 3, true, true] call ace_common_fnc_setSetting;
+["ace_medical_useLocation_SurgicalKit", 0, true, true] call ace_common_fnc_setSetting;
 ["ace_medical_healHitPointAfterAdvBandage", false, true, true] call ace_common_fnc_setSetting;
 ["ace_medical_painIsOnlySuppressed", true, true, true] call ace_common_fnc_setSetting;

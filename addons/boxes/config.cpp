@@ -65,7 +65,6 @@ class CfgVehicles
             MACRO_ADDITEM(ACE_HandFlare_White,16);
             MACRO_ADDITEM(ACE_HandFlare_Yellow,16);
             MACRO_ADDITEM(ACE_IR_Strobe_Item,32);
-            MACRO_ADDITEM(ItemGPS,32);
             MACRO_ADDITEM(ACE_simpleGPS,32);
             MACRO_ADDITEM(ACE_MapTools,32);
             MACRO_ADDITEM(ACE_NVG_Gen2,32);
@@ -223,6 +222,7 @@ class CfgVehicles
             MACRO_ADDITEM(ACE_bloodIV_250,8);
             MACRO_ADDITEM(ACE_bloodIV_500,8);
             MACRO_ADDITEM(ACE_personalAidKit,16);
+            MACRO_ADDITEM(ACE_surgicalKit,16);
         };
     };
 };
