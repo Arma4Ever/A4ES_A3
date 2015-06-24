@@ -14,8 +14,7 @@
 #define ACE_TAG A.C.E.
 #define A3CS_TAG A3CS
 
-#define A3CS_VERSION 1.0.0
-#define A3CS_VERSION_ARRAY {1,0,0}
+#define A3CS_VERSION 0.5.0
+#define A3CS_VERSION_ARRAY {0,5,0}
 
-// MINIMAL required version for the Mod. Components can specify others..
-#define REQUIRED_VERSION 1.44
+#define REQUIRED_VERSION 1.46

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+    <Package name="PTB">
+        <Key ID="STR_A3CS_Ptb_StrobeItem_DisplayName">
+            <Original>IR-Thermal Strobe</Original>
+        </Key>
+        <Key ID="STR_A3CS_Ptb_StrobeItem_Description">
+            <Original>IR-Thermal Strobe pozwala na oznaczenie twojej pozycji migającym światłem widocznym tylko w noktowizji oraz termowizji</Original>
+        </Key>
+    </Package>
+</Project>

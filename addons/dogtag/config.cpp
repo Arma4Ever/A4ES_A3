@@ -6,9 +6,9 @@ class CfgPatches
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"a3cs_main"};
+        requiredAddons[] = {"a3cs_main", "a3cs_common"};
         version = A3CS_VERSION;
-        versionStr = A3CS_VERSION;
+        versionStr = QUOTE(A3CS_VERSION);
         versionAr[] = A3CS_VERSION_ARRAY;
         author[] = {"SzwedzikPL", "ACE3 Team"};
         authorUrl = "http://arma3coop.pl";
@@ -29,7 +29,7 @@ class CfgVehicles {
                 displayName = "$STR_A3CS_Dogtag_CheckDogtag";
                 distance = 2;
                 priority = 2;
-                condition = QUOTE(!alive _target); // QUOTE([ARR_4(_player, _target, 'body', 'BodyBag')] call DFUNC(canTreatCached));
+                condition = QUOTE(!alive _target || _target getVariable [ARR_2(QUOTE(QUOTE(ACE_isUnconscious)), false)]); // QUOTE([ARR_4(_player, _target, 'body', 'BodyBag')] call DFUNC(canTreatCached));
                 statement = QUOTE([_target] call DFUNC(showDogtag)); // QUOTE([ARR_4(_player, _target, 'body', 'BodyBag')] call DFUNC(treatment));
                 exceptions[] = {};
             };
@@ -43,7 +43,7 @@ class RscStructuredText;
 class RscTitles {
     class A3CS_RscDogtag {
         idd = -1;
-        onLoad = "uiNamespace setVariable ['A3CS_ctrlDogtag', (_this select 0) displayCtrl 2];";
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QUOTE(A3CS_ctrlDogtag)), (_this select 0) displayCtrl 2)]);
         movingEnable = false;
         duration = 5;
         fadeIn = 0.2;

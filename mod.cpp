@@ -1,12 +1,12 @@
-name = "Arma 3 Combat System";
+name = "Arma 3 Combat System 0.5.0";
 picture = "logo_a3cs_ca.paa";
 actionName = "Forum";
 action = "http://forum.arma3coop.pl";
-description = "Arma 3 Combat System";
+description = "Arma 3 Combat System 0.5.0";
 logo = "logo_a3cs_ca.paa";
 logoOver = "logo_a3cs_ca.paa";
 tooltip = "Arma 3 Combat System";
-tooltipOwned = "Arma 3 Combat System Owned";
+tooltipOwned = "Arma 3 Combat System";
 overview = "Arma 3 Combat System jest nakładką na Advanced Combat Environment 3 zapewniajaca grupie Arma3Coop niezbędne do gry elementy.";
 author = "Arma3Coop.pl + ACE3 Team";
 overviewPicture = "logo_a3cs_ca.paa";
