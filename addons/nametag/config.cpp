@@ -25,6 +25,15 @@ class Extended_PostInit_EventHandlers {
     };
 };
 
+class ACE_Settings {
+    class GVAR(addFunctionUnitsItems) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSettable = 1;
+        displayName = "Dodaj itemy osobom funkcyjnym";
+    };
+};
+
 // Control types
 #define CT_STATIC           0
 #define CT_BUTTON           1

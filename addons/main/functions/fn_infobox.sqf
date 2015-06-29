@@ -10,6 +10,8 @@ private ["_mode", "_url", "_file", "_data", "_display", "_displayCtrl", "_nickna
 
 _mode = [_this, 0,  "", [""]] call BIS_fnc_param;
 
+diag_log _mode;
+
 _url = "http://arma3coop.pl/a3.php";
 _file = "a3\Ui_f\data\news.html";
 _data = "";

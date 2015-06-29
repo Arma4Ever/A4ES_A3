@@ -147,3 +147,4 @@ class ACE_moduleAssignMedicalFacility: ACE_Module {scope = 1;};
 class ACE_moduleAssignMedicVehicle: ACE_Module {scope = 1;};
 class ACE_moduleAmbianceSound: ACE_Module {scope = 1;};
 class ace_viewdistance_ModuleSettings: ACE_Module {scope = 1;};
+class ACE_ModuleSitting: ACE_Module {scope = 1;};

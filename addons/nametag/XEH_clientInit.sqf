@@ -57,7 +57,7 @@ a3cs_rankImg = {
 
 //---- CursorTarget
 0 spawn {
-    sleep 0.5;
+    sleep 5;
     if(isNil ("A3CSS_ADMIN")) then {A3CSS_ADMIN=[];};
     if(isNil ("A3CSS_OFICER")) then {A3CSS_OFICER=[];};
     if(isNil ("A3CSS_DOWODCA")) then {A3CSS_DOWODCA=[];};
@@ -70,7 +70,7 @@ a3cs_rankImg = {
         case ((name ace_player) in A3CSS_INSTRUKTOR) : {_bandana = "maska_instruktor";};
         default {};
     };
-    if(_bandana != "") then {
+    if(GVAR(addFunctionUnitsItems) && _bandana != "") then {
         if(goggles ace_player == "") then {
             ace_player addGoggles _bandana;
         } else {

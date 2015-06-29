@@ -18,6 +18,17 @@ class CfgPatches
     };
 };
 
+class CfgSettings
+{
+    class CBA
+    {
+        class XEH
+        {
+            supportMonitor = 1;
+        };
+    };
+};
+
 class Extended_PreInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));

@@ -3,5 +3,6 @@
 ADDON = false;
 
 PREP(isPilot);
+PREP(checkGear);
 
 ADDON = true;

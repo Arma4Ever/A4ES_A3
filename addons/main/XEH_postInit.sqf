@@ -1,7 +1,19 @@
 #include "script_component.hpp"
 
+//AI FF fix
+player addEventHandler ["HandleRating", {0}];
+
 if !(isServer) exitWith {};
 
+//Zeus fix
+private "_curators";
+_curators = allCurators;
+if(count _curators > 0) then {
+	//Add all units to manage for Zeus
+	{_x addCuratorEditableObjects [allUnits,true];} forEach _curators;
+};
+
+//Force options
 private "_setOption";
 _setOption = {[_this select 0, _this select 1, true, true] call ace_common_fnc_setSetting;};
 
@@ -28,6 +40,9 @@ _setOption = {[_this select 0, _this select 1, true, true] call ace_common_fnc_s
 
 //hearing
 ["ace_hearing_enableCombatDeafness", true] call _setOption;
+
+//sitting
+["ace_sitting_enable", true] call _setOption;
 
 //interaction
 ["ace_interaction_EnableTeamManagement", true] call _setOption;
