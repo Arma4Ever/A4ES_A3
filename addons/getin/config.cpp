@@ -20,7 +20,7 @@ class Extended_PreInit_EventHandlers {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
     };
 };
-
+/*
 class CfgActions
 {
     class GetOut {show = 0;showWindow = 0;hideOnUse = 1;textSimple = "";shortcut = "";};
@@ -38,7 +38,7 @@ class CfgActions
     class MoveToPilot {show = 0;showWindow = 0;hideOnUse = 1;textSimple = "";shortcut = "";};
     class MoveToTurret {show = 0;showWindow = 0;hideOnUse = 1;textSimple = "";shortcut = "";};
 };
-
+*/
 class CfgVehicles {
     class LandVehicle;
     class Car: LandVehicle {
@@ -63,12 +63,12 @@ class CfgVehicles {
                 condition = "true";
                 statement = QUOTE(_this call DFUNC(eject));
             };
-            class GVAR(Move) {
+            /*class GVAR(Move) {
                 displayName = CSTRING(Move);
                 condition = "true";
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addGetinActions));
-            };
+            };*/
         };
     };
 
@@ -89,12 +89,12 @@ class CfgVehicles {
                 condition = "true";
                 statement = QUOTE(_this call DFUNC(getOut));
             };
-            class GVAR(Move) {
+            /*class GVAR(Move) {
                 displayName = CSTRING(Move);
                 condition = "true";
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addGetinActions));
-            };
+            };*/
         };
     };
 
@@ -102,12 +102,12 @@ class CfgVehicles {
     class Helicopter: Air {
         class ACE_Actions {
             class ACE_MainActions {
-                class GVAR(Getin) {
+                /*class GVAR(Getin) {
                     displayName = CSTRING(Getin);
                     condition = "true";
                     statement = "";
                     insertChildren = QUOTE(_this call DFUNC(addGetinActions));
-                };
+                };*/
             };
         };
         class ACE_SelfActions {
@@ -121,12 +121,12 @@ class CfgVehicles {
                 condition = "true";
                 statement = QUOTE(_this call DFUNC(eject));
             };
-            class GVAR(Move) {
+            /*class GVAR(Move) {
                 displayName = CSTRING(Move);
                 condition = "true";
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addGetinActions));
-            };
+            };*/
         };
     };
 
@@ -152,12 +152,12 @@ class CfgVehicles {
                 condition = "true";
                 statement = QUOTE(_this call DFUNC(eject));
             };
-            class GVAR(Move) {
+            /*class GVAR(Move) {
                 displayName = CSTRING(Move);
                 condition = "true";
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addGetinActions));
-            };
+            };*/
         };
     };
 
@@ -179,12 +179,12 @@ class CfgVehicles {
                 condition = "true";
                 statement = QUOTE(_this call DFUNC(getOut));
             };
-            class GVAR(Move) {
+            /*class GVAR(Move) {
                 displayName = CSTRING(Move);
                 condition = "true";
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addGetinActions));
-            };
+            };*/
         };
     };
 
