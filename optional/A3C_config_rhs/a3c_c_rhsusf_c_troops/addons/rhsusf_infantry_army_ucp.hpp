@@ -113,14 +113,16 @@
 		Scope = 1;
 	};
 
-	class rhsusf_army_ucp_officer: rhsusf_army_ocp_officer
+	class rhsusf_army_ucp_officer: rhsusf_army_ucp_grenadier
 	{
-		faction = "Faction_USAM";
 		vehicleClass = "rhs_vehclass_infantry_ucp";
 		backpack ="rhsusf_assault_eagleaiii_ucp";		
-		
-		linkedItems[] = {"a3c_us_vest_9","rhsusf_ach_helmet_ESS_ucp","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
-		respawnLinkedItems[] = {"a3c_us_vest_9","rhsusf_ach_helmet_ESS_ucp","ItemMap","ItemCompass","ItemWatch","ItemRadio"};				
+		faction = "Faction_USAM";		
+		displayName = "Dowodca druzyny (Podporucznik)";		
+		a3cs_nametag_rankname = "Podporucznik"; 
+		a3cs_nametag_rankicon = "\pam_ranks\USARMY\lieutenant_gs.paa";			
+		linkedItems[] = {"a3c_us_vest_9","rhsusf_ach_helmet_headset_ucp","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+		respawnLinkedItems[] = {"a3c_us_vest_9","rhsusf_ach_helmet_headset_ucp","ItemMap","ItemCompass","ItemWatch","ItemRadio"};	
 	};
 
 	class rhsusf_army_ucp_squadleader: rhsusf_army_ocp_squadleader
@@ -222,7 +224,7 @@
 		faction = "Faction_USAM";
 		vehicleClass = "rhs_vehclass_infantry_ucp";
 		backpack ="rhsusf_assault_eagleaiii_ucp";		
-		
+		uniformClass = "rhs_uniform_cu_ucp";		
 		linkedItems[] = {"a3c_us_vest_6","rhsusf_ach_helmet_headset_ess_ucp","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		respawnLinkedItems[] = {"a3c_us_vest_6","rhsusf_ach_helmet_headset_ess_ucp","ItemMap","ItemCompass","ItemWatch","ItemRadio"};				
 	};

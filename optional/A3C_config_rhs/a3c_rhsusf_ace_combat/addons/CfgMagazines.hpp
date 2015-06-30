@@ -28,4 +28,50 @@ class cfgMagazines {
     class RHS_48Rnd_40mm_MK19: VehicleMagazine {
         ace_isbelt = 1;
     };
+
+    class CA_LauncherMagazine;
+    class rhs_m136_mag: CA_LauncherMagazine
+    {
+        scope = 1;
+        scopeArsenal = 1;
+        displayName = "M136 HEAT";
+        descriptionShort = "";
+        picture = "\z\ace\addons\common\UI\blank_CO.paa";
+        weaponPoolAvailable = 0;
+        mass = 0;
+    };
+    class rhs_m136_mag_fired: rhs_m136_mag
+    {
+        count = 0;
+    };
+    class rhs_m136_hedp_mag: rhs_m136_mag
+    {
+        scope = 1;
+        scopeArsenal = 1;
+        displayName = "M136 HEDP";
+        descriptionShort = "";
+        picture = "\z\ace\addons\common\UI\blank_CO.paa";
+        ammo = "rhs_ammo_M136_hedp_rocket";
+        weaponPoolAvailable = 0;
+        mass = 0;
+    };
+    class rhs_m136_hedp_mag_fired: rhs_m136_hedp_mag
+    {
+        count = 0;
+    };
+    class rhs_m136_hp_mag: rhs_m136_mag
+    {
+        scope = 1;
+        scopeArsenal = 1;
+        displayName = "M136 HP";
+        descriptionShort = "";
+        picture = "\z\ace\addons\common\UI\blank_CO.paa";
+        ammo = "rhs_ammo_M136_hp_rocket";
+        weaponPoolAvailable = 0;
+        mass = 0;
+    };
+    class rhs_m136_hp_mag_fired: rhs_m136_hp_mag
+    {
+        count = 0;
+    };
 };

@@ -160,6 +160,7 @@
 	class rhsusf_army_ocp_jfo: rhsusf_infantry_army_base
 	{
 		faction = "Faction_USAM";
+		uniformClass = "rhs_uniform_cu_ocp";	
 		displayName = "St Dowodca druzyny (Porucznik)";		
 		a3cs_nametag_rankname = "Porucznik"; 
 		a3cs_nametag_rankicon = "\pam_ranks\USARMY\porucznik.paa";		
