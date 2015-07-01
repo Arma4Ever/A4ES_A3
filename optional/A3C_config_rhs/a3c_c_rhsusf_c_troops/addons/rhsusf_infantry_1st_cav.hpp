@@ -158,7 +158,7 @@
 		Scope = 2;
 		faction = "Faction_USAM";
 		vehicleClass = "rhs_vehclass_infantry_1cav";
-		backpack ="B_AssaultPack_cbr";		
+		backpack ="plecak_med_us_rhs_cbr";		
 		uniformClass = "rhs_uniform_cu_ocp_1stcav";			
 		weapons[] = {"rhs_weap_m4a1_carryhandle_grip","Throw","Put"};
 		magazines[] = {"rhs_mag_30Rnd_556x45_Mk318_Stanag","rhs_mag_30Rnd_556x45_Mk318_Stanag","rhs_mag_30Rnd_556x45_Mk318_Stanag","rhs_mag_30Rnd_556x45_Mk318_Stanag","rhs_mag_30Rnd_556x45_Mk318_Stanag"};		

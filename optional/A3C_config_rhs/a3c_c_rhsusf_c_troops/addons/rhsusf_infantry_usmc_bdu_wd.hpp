@@ -46,7 +46,7 @@
 		
 		attendant = 1;			
 		Scope = 2;		
-		backpack ="rhsusf_assault_eagleaiii_coy"; 
+		backpack ="plecak_med_us_rhs_cbr"; 
 		uniformClass = "rhs_uniform_FROG01_m81";		
 		
 		linkedItems[] = {"usmc_vest_kapral","rhsusf_ach_helmet_M81","ItemMap","ItemCompass","ItemWatch","ItemRadio"};

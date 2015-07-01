@@ -50,7 +50,7 @@
 		
 		attendant = 1;			
 		
-		backpack ="rhsusf_assault_eagleaiii_coy";		
+		backpack ="plecak_med_us_rhs_cbr";		
 		
 		linkedItems[] = {"usmc_vest_kapral","rhsusf_mich_helmet_marpatwd_norotos","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		respawnLinkedItems[] = {"usmc_vest_kapral","rhsusf_mich_helmet_marpatwd_norotos","ItemMap","ItemCompass","ItemWatch","ItemRadio"};			

@@ -173,7 +173,7 @@
 	{
 		faction = "Faction_USAM";
 		vehicleClass = "rhs_vehclass_infantry_ucp";
-		backpack ="rhsusf_assault_eagleaiii_ucp";		
+		backpack ="plecak_med_us_rhs_ucp";		
 		attendant = 1;			
 		linkedItems[] = {"a3c_us_vest_8","rhsusf_ach_helmet_headset_ucp","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		respawnLinkedItems[] = {"a3c_us_vest_8","rhsusf_ach_helmet_headset_ucp","ItemMap","ItemCompass","ItemWatch","ItemRadio"};				

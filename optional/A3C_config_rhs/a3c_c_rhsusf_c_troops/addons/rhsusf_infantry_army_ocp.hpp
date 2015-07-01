@@ -202,7 +202,7 @@
 		displayName = "Medyk (Kapral)";		
 		a3cs_nametag_rankname = "Kapral"; 
 		a3cs_nametag_rankicon = "\pam_ranks\USARMY\corporal_gs.paa";		
-		backpack ="rhsusf_assault_eagleaiii_ocp";		
+		backpack ="plecak_med_us_rhs_cbr";		
 		attendant = 1;			
 	};
 

@@ -21,6 +21,7 @@
 		a3cs_nametag_rankname = "Kapral"; 
 		a3cs_nametag_rankicon = "\pam_ranks\USMC\corporal_gs.paa";			
 		faction = "Faction_USAM";
+		backpack ="plecak_med_us_rhs_cbr";	
 		vehicleClass = "rhs_vehclass_infantry_usmc_d";
 		linkedItems[] = {"usmc_vest_kapral","rhsusf_mich_helmet_marpatd_norotos","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		respawnLinkedItems[] = {"usmc_vest_kapral","rhsusf_mich_helmet_marpatd_norotos","ItemMap","ItemCompass","ItemWatch","ItemRadio"};	

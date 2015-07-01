@@ -52,6 +52,14 @@ class CfgVehicleClasses
 	class rhs_vehclass_infantry_1cav
 	{ 
 		displayname = "U.S. Army 1st Cavalry Division";
+	};	
+	class rhs_vehclass_navyseals
+	{ 
+		displayname = "S.F. Navy Seals";
+	};	
+	class rhs_vehclass_deltaforce
+	{ 
+		displayname = "S.F. Delta Force";
 	};		
 	class rhs_vehclass_infantry_usmc_fr_wd
 	{ 
@@ -78,5 +86,11 @@ class CfgVehicles {
 	#include "rhsusf_infantry_airforce.hpp"
 	#include "rhsusf_infantry_usmc_bdu_wd.hpp"
 	#include "rhsusf_infantry_airborne.hpp"	
-	#include "rhsusf_infantry_1st_cav.hpp"	
+	#include "rhsusf_infantry_1st_cav.hpp"
+	#include "rhsusf_infantry_navyseals.hpp"
+	#include "rhsusf_infantry_usaf_troops.hpp"	
+	#include "rhsusf_infantry_deltaforce.hpp"		
+	
+	#include "plecaki_a3c_rhs.hpp"
 };
+	#include "a3c_uniforms_cfg.hpp"
