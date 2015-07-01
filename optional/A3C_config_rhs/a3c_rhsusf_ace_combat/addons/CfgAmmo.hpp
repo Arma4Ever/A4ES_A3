@@ -87,7 +87,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={230, 250, 285};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-
+    /*
     class M_Titan_AT;
     class rhs_ammo_M_fgm148_AT: M_Titan_AT {
         irLock = 0;
@@ -122,4 +122,5 @@ class CfgAmmo
             attackProfiles[] = { "JAV_TOP", "JAV_DIR" };
         };
     };
+    */
 };

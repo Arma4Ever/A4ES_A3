@@ -45,7 +45,14 @@ class CfgVehicleClasses
 	{ 
 		displayname = "USMC (BDU Woodland)";
 	};	
-	
+	class rhs_vehclass_infantry_101
+	{ 
+		displayname = "U.S. Army 101st Airborne Division";
+	};		
+	class rhs_vehclass_infantry_1cav
+	{ 
+		displayname = "U.S. Army 1st Cavalry Division";
+	};		
 	class rhs_vehclass_infantry_usmc_fr_wd
 	{ 
 		displayname = "USMC Recon (Marpat Woodland)";
@@ -70,4 +77,6 @@ class CfgVehicles {
 	#include "rhsusf_infantry_navy.hpp"
 	#include "rhsusf_infantry_airforce.hpp"
 	#include "rhsusf_infantry_usmc_bdu_wd.hpp"
+	#include "rhsusf_infantry_airborne.hpp"	
+	#include "rhsusf_infantry_1st_cav.hpp"	
 };

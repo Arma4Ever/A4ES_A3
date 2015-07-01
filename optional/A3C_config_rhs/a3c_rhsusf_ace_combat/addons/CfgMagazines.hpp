@@ -30,6 +30,11 @@ class cfgMagazines {
     };
 
     class CA_LauncherMagazine;
+    class rhs_fgm148_magazine_AT: CA_LauncherMagazine
+    {
+        ammo = "ACE_Javelin_FGM148";
+    };
+
     class rhs_m136_mag: CA_LauncherMagazine
     {
         scope = 1;
