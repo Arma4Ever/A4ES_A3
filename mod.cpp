@@ -1,4 +1,4 @@
-name = "Arma 3 Combat System 0.5.2";
+name = "DEV Arma 3 Combat System 0.5.2";
 picture = "logo_a3cs_ca.paa";
 actionName = "Forum";
 action = "http://forum.arma3coop.pl";

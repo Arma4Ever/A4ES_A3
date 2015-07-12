@@ -190,14 +190,9 @@ class CfgVehicles
         transportMaxItems = 9001;
         class TransportItems
         {
-            MACRO_ADDITEM(ACE_fieldDressing,64);
-            MACRO_ADDITEM(ACE_packingBandage,32);
-            MACRO_ADDITEM(ACE_elasticBandage,32);
-            MACRO_ADDITEM(ACE_tourniquet,32);
-            MACRO_ADDITEM(ACE_morphine,32);
-            MACRO_ADDITEM(ACE_atropine,32);
-            MACRO_ADDITEM(ACE_epinephrine,32);
-            MACRO_ADDITEM(ACE_quikclot,32);
+            MACRO_ADDITEM(ACE_morphine,512);
+            MACRO_ADDITEM(ACE_epinephrine,512);
+            MACRO_ADDITEM(ACE_quikclot,512);
         };
     };
     class a3cs_box_specialMedical: a3cs_box_base
@@ -212,6 +207,11 @@ class CfgVehicles
         transportMaxItems = 9001;
         class TransportItems
         {
+            MACRO_ADDITEM(ACE_fieldDressing,512);
+            MACRO_ADDITEM(ACE_packingBandage,512);
+            MACRO_ADDITEM(ACE_elasticBandage,512);
+            MACRO_ADDITEM(ACE_tourniquet,512);
+            MACRO_ADDITEM(ACE_atropine,512);
             MACRO_ADDITEM(ACE_plasmaIV,8);
             MACRO_ADDITEM(ACE_plasmaIV_250,8);
             MACRO_ADDITEM(ACE_plasmaIV_500,8);

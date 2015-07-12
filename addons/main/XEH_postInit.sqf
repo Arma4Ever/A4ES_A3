@@ -100,4 +100,4 @@ _setOption = {[_this select 0, _this select 1, true, true] call ace_common_fnc_s
 ["ace_medical_useLocation_SurgicalKit", 0] call _setOption;
 ["ace_medical_consumeItem_SurgicalKit", 0] call _setOption;
 ["ace_medical_healHitPointAfterAdvBandage", true] call _setOption;
-["ace_medical_painIsOnlySuppressed", true] call _setOption;
+["ace_medical_painIsOnlySuppressed", false] call _setOption;
