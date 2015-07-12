@@ -1,1 +1,0 @@
-rhs_armor_hint = true;
