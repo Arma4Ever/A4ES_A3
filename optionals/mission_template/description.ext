@@ -1,67 +1,16 @@
-﻿//---- Informacje o misji ----//
-author="Nick autora";							//Auror misji
-OnLoadName = "Nazwa misji";						//Tytuł misji
-OnLoadMission = "Opis misji";					//Krótki opis misji
-loadScreen = "data\loadscreen.jpg";				//Ścieżka do zdjęcia tytułowego misji
-class Header
-{
-	gameType = Coop;							//Typ gry
-	minPlayers = 1;								//Minimalna ilość graczy pozwalająca ukończyć misje
-	maxPlayers = 32;							//Ilość slotów na misji
-};
+﻿/***************************************
+           Ustawienia A3C
+****************************************/
 
-disableChannels[] = {0,1,2,3,4,5};				//Nie zmieniać!!!
+#include "include\macros.hpp"
+#include "ustawienia_podstawowe.hpp"
+#include "ustawienia_briefing.hpp"
+#include "ustawienia_debriefing.hpp"
+#include "ustawienia_orbat.hpp"
+#include "szablony_wyposarzenia.hpp"
+#include "szablony_cargo.hpp"
+#include "szablony_generatora_ai.hpp"
 
-//---- Zarządzanie ciałami ----//
-corpseManagerMode = 1;							//Nie zmieniać!!!
-corpseLimit = 30;								//Limit ciał
-corpseRemovalMinTime = 300;						//Czas po jakim ciało zostanie usunięte jeśli limit zostanie przekroczony
-corpseRemovalMaxTime = 1800;					//Czas po jakim ciało zostanie usunięte jeli limit nie zostanie przekroczony
-
-//---- Zarządzanie wrakami ----//
-wreckManagerMode = 1;							//Nie zmieniać!!!
-wreckLimit = 10;								//Limit wraków
-wreckRemovalMinTime = 300;						//Czas po jakim ciało zostanie usunięte jeśli limit zostanie przekroczony
-wreckRemovalMaxTime = 3600;						//Czas po jakim ciało zostanie usunięte jeli limit nie zostanie przekroczony
-
-//---- Deklaracja zakończeń (OPCJONALNE) ----//
-// Poradnik A3C: ----
-// Dokumentacja BI: https://community.bistudio.com/wiki/Debriefing
-class CfgDebriefing
-{
-	class End1
-	{
-		title = "MISJA ZAKOŃCZONA";
-		subtitle = "Wszystkie zadania zostały wykonane";
-		description = "Brawo! Wszystkie zadania zostały wykonane. Dobra robota!";
-		pictureBackground = "data\loadscreen.jpg";
-		picture = "data\a3c.paa";
-		pictureColor[] = {1,1,1,1};
-	};
-	class End2
-	{
-		title = "MISJA ZAKOŃCZONA";
-		subtitle = "Misja nie powiodła się";
-		description = "Niestety, mimo pełnego zaagażowania naszych jednostek misja zakończyła się niepowodzeniem";
-		pictureBackground = "data\loadscreen.jpg";
-		picture = "data\a3c.paa";
-		pictureColor[] = {1,1,1,1};
-	};
-
-	//Poniższa klasa zostanie wywołana AUTOMATYCZNIE w przypadku gdy wszyscy gracze zginą
-	class endDeath
-	{
-		title = "MISJA ZAKOŃCZONA";
-		subtitle = "Wszystkie jednostki poległy";
-		description = "Tragedia! Wszystkie jednostki wysłane na misję poległy...";
-		pictureBackground = "";
-		picture = "KIA";
-		pictureColor[] = {0.6,0.1,0.2,1};
-	};
-};
-
-//---- Konfiguracja podglądu ORBAT (OPCJONALNE) ----/
-// Poradnik A3C: ----
-// Dokumentacja BI: https://community.bistudio.com/wiki/ORBAT_Viewer
-
-//----
+/***************************************
+          Twoje ustawienia
+****************************************/

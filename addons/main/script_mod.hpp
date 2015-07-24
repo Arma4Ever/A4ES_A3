@@ -4,8 +4,8 @@
 #define PREFIX a3cs
 
 #define MAJOR 0
-#define MINOR 5
-#define PATCHLVL 2
+#define MINOR 51
+#define PATCHLVL 0
 #define BUILD 0
 
 #define VERSION MAJOR.MINOR.PATCHLVL.BUILD
@@ -14,9 +14,9 @@
 #define ACE_TAG A.C.E.
 #define A3CS_TAG A3CS
 
-#define A3CS_VERSION 0.5.2
-#define A3CS_VERSION_ARRAY {0,5,2}
+#define A3CS_VERSION 0.51.0
+#define A3CS_VERSION_ARRAY {0,51,0}
 
-#define REQUIRED_VERSION 1.46
+#define REQUIRED_VERSION 1.48
 
 //change ver in make.py

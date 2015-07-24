@@ -67,39 +67,21 @@ class CfgMods
 class CfgVehicleClasses
 {
     class a3cs_common
-    { 
+    {
         displayname = "[A3CS] Obiekty";
     };
     class a3cs_boxes
-    { 
+    {
         displayname = "[A3CS] Skrzynie";
     };
 };
 
-class CfgVehicles 
+/* ----------------- DEV DEV DEV DEV
+class CfgVehicles
 {
     class Module_F;
     class ACE_Module;
     #include "\z\a3cs\addons\main\hidden_modules.hpp"
-};
-
-/*
-class CfgHints
-{
-    class Default{};
-    class A3C
-    {
-        displayName = "A3C";
-        class A3CS
-        {
-            displayName = "Arma 3 Combat System";
-            description = "$STR_A3CS_Main_CfgModsOverview";
-            tip = "Osoba odpowiedzialna: SzwedzikPL";
-            arguments[] = {};
-            image = PATHTOF(data\a3cs_hint_icon.paa);
-
-        };
-    };
 };
 */
 

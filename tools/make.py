@@ -58,7 +58,7 @@ if sys.platform == "win32":
 
 ######## GLOBALS #########
 project = "@A3CS"
-ACE_VERSION = "0.5.2"
+ACE_VERSION = "0.51.0"
 arma3tools_path = ""
 work_drive = ""
 module_root = ""

@@ -3,6 +3,7 @@ release/*
 *.pbo
 texHeaders.bin
 *.swp
+*.sqm
 *.swo
 *.biprivatekey
 Thumbs.db

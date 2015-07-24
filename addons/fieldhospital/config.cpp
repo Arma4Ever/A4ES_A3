@@ -14,7 +14,13 @@ class CfgPatches
         authorUrl = "http://arma3coop.pl";
     };
 };
-
+class Extended_Init_EventHandlers {
+    class A3CS_Fieldhospital {
+        class enableFieldhospital {
+            init = "(_this select 0) setvariable ['ace_medical_isMedicalFacility', true]";
+        };
+    };
+};
 class CfgVehicles
 {
     class Camping_base_F;
@@ -33,8 +39,5 @@ class CfgVehicles
         mapSize = 13.06;
         hiddenSelections[] = {"Camo_1"};
         hiddenSelectionsTextures[] = {PATHTOF(data\fieldhospital_01_co.paa)};
-        class EventHandlers {
-            init = QUOTE((_this select 0) setVariable [QUOTE(QUOTE(ace_medical_isMedicalFacility)), true]);
-        };
     };
 };

@@ -1,4 +1,6 @@
-/*
+/***********************************************************************
 	init.sqf
-	Poniższy kod wykona się u każdego gracza + na serwerze w trakcie ładowania misji przez grę
-*/
+	Poniższy kod wykona się lokalnie u gracza oraz na serwerze w trakcie ładowania misji przez grę
+************************************************************************/
+
+//-- Twój kod --//

@@ -1,6 +1,9 @@
 /***********************************************************************
-    initServer.sqf
-    Poniższy kod wykona się na serwerze w trakcie ładowania misji przez serwer
+	Szablony cargo
 ************************************************************************/
 
-//-- Twój kod --//
+class cargoTemplates {
+	class przykadlowa_skrzynka {
+		ITEM(ItemMap,32);
+	};
+};
