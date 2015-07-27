@@ -1,0 +1,1 @@
+#include "\z\a3cs\addons\getin\script_component.hpp"

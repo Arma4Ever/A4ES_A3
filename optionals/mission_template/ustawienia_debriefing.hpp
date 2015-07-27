@@ -1,4 +1,4 @@
-//---- Deklaracja zakończeń (OPCJONALNE) ----//
+//---- Deklaracja zakończeń (opcjonalne) ----//
 // Poradnik A3C: ----
 // Dokumentacja BI: https://community.bistudio.com/wiki/Debriefing
 class CfgDebriefing

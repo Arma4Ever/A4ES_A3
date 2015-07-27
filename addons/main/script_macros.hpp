@@ -25,7 +25,7 @@
 #ifndef STRING_MACROS_GUARD
 #define STRING_MACROS_GUARD
     #define LSTRING(var1) QUOTE(TRIPLES(STR,ADDON,var1))
-    #define LESTRING(var1,var2) QUOTE(TRIPLES(STR,DOUBLES(PREFIX,var1),var2))
+    #define ELSTRING(var1,var2) QUOTE(TRIPLES(STR,DOUBLES(PREFIX,var1),var2))
     #define CSTRING(var1) QUOTE(TRIPLES($STR,ADDON,var1))
     #define ECSTRING(var1,var2) QUOTE(TRIPLES($STR,DOUBLES(PREFIX,var1),var2))
 #endif
@@ -52,7 +52,6 @@
 
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
 
-
 #define MACRO_ADDWEAPON(WEAPON,COUNT) class _xx_##WEAPON { \
   weapon = #WEAPON; \
   count = COUNT; \
@@ -68,6 +67,10 @@
   count = COUNT; \
 }
 
+#define MACRO_ADDBACKPACK(BACKPACK,COUNT) class _xx_##BACKPACK { \
+  backpack = #BACKPACK; \
+  count = COUNT; \
+}
 
 #ifdef DISABLE_COMPILE_CACHE
     #define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))

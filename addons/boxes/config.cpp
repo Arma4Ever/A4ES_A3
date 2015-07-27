@@ -17,7 +17,15 @@ class CfgPatches
 
 class CfgVehicles
 {
+    class Box_NATO_Wps_F;
     class Box_NATO_Support_F;
+    class Box_NATO_WpsSpecial_F;
+    class Box_NATO_WpsLaunch_F;
+    class Box_FIA_Wps_F;
+    class Box_FIA_Support_F;
+    class Box_FIA_Ammo_F;
+    class B_supplyCrate_F;
+
     class a3cs_box_base: Box_NATO_Support_F
     {
         scope = 0;
@@ -36,7 +44,7 @@ class CfgVehicles
     class a3cs_empty_box: a3cs_box_base
     {
         scope = 2;
-        displayName = "Skrzynia pusta";
+        displayName = "Skrzynia cargo";
         vehicleClass = "a3cs_boxes";
         transportMaxWeapons = 50;
         transportMaxMagazines = 200;
@@ -99,7 +107,7 @@ class CfgVehicles
             MACRO_ADDITEM(ACE_Tripod,8);
             MACRO_ADDITEM(ACE_UAVBattery,8);
             MACRO_ADDITEM(ACE_wirecutter,8);
-            MACRO_ADDITEM(ACE_bodyBag,8);
+            MACRO_ADDITEM(ACE_bodyBag,32);
             MACRO_ADDITEM(Laserbatteries,8);
         };
         class TransportWeapons
@@ -113,10 +121,7 @@ class CfgVehicles
         };
         class TransportBackpacks
         {
-            class _xx_ACE_TacticalLadder_Pack {
-                backpack = "ACE_TacticalLadder_Pack";
-                count = 4;
-            };
+            MACRO_ADDBACKPACK(ACE_TacticalLadder_Pack,4);
         };
     };
     class a3cs_box_sniperItems: a3cs_box_base
@@ -155,6 +160,8 @@ class CfgVehicles
         model = "\A3\weapons_F\AmmoBoxes\WpnsBox_large_F";
         class TransportItems
         {
+            MACRO_ADDITEM(G_Combat,32);
+            MACRO_ADDITEM(G_Lowprofile,32);
             MACRO_ADDITEM(G_Balaclava_blk,32);
             MACRO_ADDITEM(G_Balaclava_combat,32);
             MACRO_ADDITEM(G_Bandanna_blk,32);
@@ -171,11 +178,15 @@ class CfgVehicles
     {
         scope = 2;
         displayName = "Skrzynia ze spadochronami";
-        class TransportBackpacks {
-            class _xx_ACE_NonSteerableParachute {
-                backpack = "ACE_NonSteerableParachute";
-                count = 32;
-            };
+        class TransportItems
+        {
+            MACRO_ADDITEM(G_Combat,32);
+            MACRO_ADDITEM(G_Balaclava_combat,32);
+            MACRO_ADDITEM(ACE_Altimeter,32);
+        };
+        class TransportBackpacks
+        {
+            MACRO_ADDBACKPACK(B_Parachute,32);
         };
     };
     class a3cs_box_basicMedical: a3cs_box_base
@@ -190,9 +201,9 @@ class CfgVehicles
         transportMaxItems = 9001;
         class TransportItems
         {
+            MACRO_ADDITEM(ACE_quikclot,512);
             MACRO_ADDITEM(ACE_morphine,512);
             MACRO_ADDITEM(ACE_epinephrine,512);
-            MACRO_ADDITEM(ACE_quikclot,512);
         };
     };
     class a3cs_box_specialMedical: a3cs_box_base
@@ -212,17 +223,17 @@ class CfgVehicles
             MACRO_ADDITEM(ACE_elasticBandage,512);
             MACRO_ADDITEM(ACE_tourniquet,512);
             MACRO_ADDITEM(ACE_atropine,512);
-            MACRO_ADDITEM(ACE_plasmaIV,8);
-            MACRO_ADDITEM(ACE_plasmaIV_250,8);
-            MACRO_ADDITEM(ACE_plasmaIV_500,8);
-            MACRO_ADDITEM(ACE_salineIV,8);
-            MACRO_ADDITEM(ACE_salineIV_250,8);
-            MACRO_ADDITEM(ACE_salineIV_500,8);
-            MACRO_ADDITEM(ACE_bloodIV,8);
-            MACRO_ADDITEM(ACE_bloodIV_250,8);
-            MACRO_ADDITEM(ACE_bloodIV_500,8);
-            MACRO_ADDITEM(ACE_personalAidKit,16);
-            MACRO_ADDITEM(ACE_surgicalKit,16);
+            MACRO_ADDITEM(ACE_plasmaIV,32);
+            MACRO_ADDITEM(ACE_plasmaIV_250,32);
+            MACRO_ADDITEM(ACE_plasmaIV_500,32);
+            MACRO_ADDITEM(ACE_salineIV,32);
+            MACRO_ADDITEM(ACE_salineIV_250,32);
+            MACRO_ADDITEM(ACE_salineIV_500,32);
+            MACRO_ADDITEM(ACE_bloodIV,32);
+            MACRO_ADDITEM(ACE_bloodIV_250,32);
+            MACRO_ADDITEM(ACE_bloodIV_500,32);
+            MACRO_ADDITEM(ACE_personalAidKit,32);
+            MACRO_ADDITEM(ACE_surgicalKit,8);
         };
     };
 };

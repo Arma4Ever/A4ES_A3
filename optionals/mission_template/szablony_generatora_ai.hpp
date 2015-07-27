@@ -1,5 +1,5 @@
 /***********************************************************************
-	Szablony oddziałów do generatora AI
+	Szablony oddziałów do generatora AI (opcjonalne)
 
 	Opis wartosci:
 	unitClass - klasa jednostki
@@ -22,12 +22,14 @@ class genUnitTemplates {
 			gearTemplate = "przykladowy_sprzet_strzelca";
 			groupPart = 0.7;
 			skill = 0.5;
+			script = "";
 		};
 		class strzelec2_at {
 			unitClass = "rhs_msv_rifleman";
 			gearTemplate = "przykladowy_sprzet_strzelca_at";
 			groupPart = 0.3;
 			skill = 0.55;
+			script = "";
 		};
 	};
 };

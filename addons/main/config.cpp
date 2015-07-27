@@ -17,11 +17,17 @@ class CfgPatches
         authorUrl = "http://arma3coop.pl";
     };
 };
-
-class CfgSettings
-{
-    class CBA
-    {
+class CfgSettings {
+    class CBA {
+        class Versioning {
+            class a3cs {
+                main_addon = "a3cs_main";
+                level = -1;
+                //handler = "a3cs_common_fnc_mismatch";
+                //removed[] = {"a3cs_oldaddon"};
+            };
+        };
+        //enable_auto_xeh
         class XEH
         {
             supportMonitor = 1;
