@@ -25,13 +25,15 @@ class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_Actions {
-            class GVAR(checkGear) {
-                displayName = "Spr. sprzet";
-                distance = 5;
-                condition = "true";
-                statement = QUOTE([ARR_2(_player, _target)] call DFUNC(checkGear));
-                showDisabled = 0;
-                priority = 8;
+            class ACE_MainActions {
+                class GVAR(checkGear) {
+                    displayName = "Spr. sprzet";
+                    distance = 5;
+                    condition = "true";
+                    statement = QUOTE([ARR_2(_player, _target)] call DFUNC(checkGear));
+                    showDisabled = 0;
+                    priority = 8;
+                };
             };
         };
     };
