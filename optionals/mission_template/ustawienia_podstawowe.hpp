@@ -2,7 +2,7 @@
          Ustawienia ogólne
 ****************************************/
 
-//-- Auror misji --//
+//-- Autor misji --//
 author="Nick autora";
 
 //-- Tytuł misji --//
