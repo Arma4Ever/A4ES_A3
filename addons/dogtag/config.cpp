@@ -21,21 +21,25 @@ class Extended_PreInit_EventHandlers {
     };
 };
 
+
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_Actions {
-            class A3CS_ShowDogtag {
-                displayName = "$STR_A3CS_Dogtag_CheckDogtag";
-                distance = 2;
-                priority = 2;
-                condition = QUOTE(!alive _target || _target getVariable [ARR_2(QUOTE(QUOTE(ACE_isUnconscious)), false)]); // QUOTE([ARR_4(_player, _target, 'body', 'BodyBag')] call DFUNC(canTreatCached));
-                statement = QUOTE([_target] call DFUNC(showDogtag)); // QUOTE([ARR_4(_player, _target, 'body', 'BodyBag')] call DFUNC(treatment));
-                exceptions[] = {};
+            class ACE_MainActions {
+                class A3CS_ShowDogtag {
+                    displayName = "$STR_A3CS_Dogtag_CheckDogtag";
+                    distance = 2;
+                    priority = 2;
+                    condition = QUOTE(!alive _target || _target getVariable [ARR_2(QUOTE(QUOTE(ACE_isUnconscious)), false)]); // QUOTE([ARR_4(_player, _target, 'body', 'BodyBag')] call DFUNC(canTreatCached));
+                    statement = QUOTE([_target] call DFUNC(showDogtag)); // QUOTE([ARR_4(_player, _target, 'body', 'BodyBag')] call DFUNC(treatment));
+                    exceptions[] = {};
+                };
             };
         };
     };
 };
+
 
 class RscPicture;
 class RscStructuredText;
