@@ -7,10 +7,10 @@
 
 if (!hasInterface) exitWith {};
 
-EXPLODE_1_PVT(_this,_strobe);
+params ["_strobe"];
 
 while {!isNull  _strobe} do {
-    waituntil {sleep 0.5;currentVisionMode ace_player == 2};
+    waituntil {sleep 0.5;currentVisionMode ace_player == 2 || isNull _strobe};
     while {currentVisionMode ace_player == 2 && !isNull _strobe} do {
         _l = "#particlesource" createVehicleLocal (getPos _strobe);
         _l attachto [_strobe, [0, 1.35, 0]];
