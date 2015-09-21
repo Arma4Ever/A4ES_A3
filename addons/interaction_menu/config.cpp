@@ -20,3 +20,18 @@ class Extended_PreInit_EventHandlers {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
     };
 };
+class Extended_PostInit_EventHandlers {
+    class ADDON {
+        init = QUOTE(call COMPILE_FILE(XEH_postInit));
+    };
+};
+
+class ACE_Settings {
+    class GVAR(useFlexiMenu) {
+        value = 1;
+        typeName = "BOOL";
+        isClientSettable = 1;
+        category = "$STR_ACE_Interact_Menu_Category_InteractionMenu";
+        displayName = "Fleximenu";
+    };
+};

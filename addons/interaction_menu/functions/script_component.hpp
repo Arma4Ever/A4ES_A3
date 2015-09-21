@@ -1,1 +1,1 @@
-#include "\z\a3cs\addons\getin\script_component.hpp"
+#include "\z\a3cs\addons\interaction_menu\script_component.hpp"
