@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+    <Package name="WeaponActions">
+		<Key ID="STR_A3CS_WeaponActions_WeaponActionsCat">
+			<Original>Broń</Original>
+		</Key>
+		<Key ID="STR_A3CS_WeaponActions_UnloadMagazine">
+			<Original>Ta akcja wymaga wyjęcia magazynka</Original>
+		</Key>
+    </Package>
+</Project>
