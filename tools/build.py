@@ -28,7 +28,7 @@ def check_for_obsolete_pbos(addonspath, file):
 def main():
     print("""
   ####################
-  # ACE3 Debug Build #
+  # A3CS Debug Build #
   ####################
 """)
 
