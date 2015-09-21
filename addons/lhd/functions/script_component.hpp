@@ -1,0 +1,1 @@
+#include "\z\a3cs\addons\lhd\script_component.hpp"
