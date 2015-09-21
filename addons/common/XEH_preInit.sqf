@@ -4,5 +4,6 @@ ADDON = false;
 
 PREP(isPilot);
 PREP(checkGear);
+PREP(respawnServerHandler);
 
 ADDON = true;
