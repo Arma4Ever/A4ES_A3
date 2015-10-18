@@ -2,8 +2,6 @@
 
 ADDON = false;
 
-PREP(isPilot);
-PREP(checkGear);
-PREP(respawnServerHandler);
+PREP(handleRating);
 
 ADDON = true;

@@ -20,21 +20,24 @@ class Extended_PreInit_EventHandlers {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
     };
 };
-
-class CfgVehicles {
-    class Man;
-    class CAManBase: Man {
-        class ACE_Actions {
-            class ACE_MainActions {
-                class GVAR(checkGear) {
-                    displayName = "Spr. sprzet";
-                    distance = 5;
-                    condition = "true";
-                    statement = QUOTE([ARR_2(_player, _target)] call DFUNC(checkGear));
-                    showDisabled = 0;
-                    priority = 8;
-                };
-            };
+class Extended_Init_EventHandlers {
+    class CAManBase {
+        class GVAR(handleRating) {
+            init = QUOTE(_this call FUNC(handleRating));
         };
     };
+};
+class Extended_Respawn_EventHandlers {
+    class CAManBase {
+        class GVAR(handleRating) {
+            respawn = QUOTE(_this call FUNC(handleRating));
+        };
+    };
+};
+
+//Disable Assemble/Disassemble static's
+class CfgActions {
+    class None;
+    class Assemble: None {show = 0;};
+    class DisAssemble: None {show = 0;};
 };
