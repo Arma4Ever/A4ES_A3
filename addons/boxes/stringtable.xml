@@ -1,6 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
-    <Package name="Box">
-
+    <Package name="Boxes">
+        <Key ID="STR_A3CS_Boxes_open">
+            <Original>Otwórz</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_displayName_us_ammo_empty">
+            <Original>Drewniana skrzynia z amunicja</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_displayName_us_weapons_empty">
+            <Original>Drewniana skrzynia z bronia</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_displayName_us_launchers_empty">
+            <Original>Drewniana skrzynia z wyrzutniami</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_displayName_us_explosives_empty">
+            <Original>Drewniana skrzynia z ladunkami</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_displayName_medical_crate_empty">
+            <Original>Drewniana skrzynia z medykamentami</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_displayName_weapon_cache_empty">
+            <Original>Ukryty sklad broni</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_displayName_ammo_cache_empty">
+            <Original>Ukryty sklad amunicji</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_displayName_support_cache_empty">
+            <Original>Ukryty sklad sprzetu</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_displayName_metal_case_large_empty">
+            <Original>Metalowa skrzynka (duza)</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_displayName_metal_case_medium_empty">
+            <Original>Metalowa skrzynka (srednia)</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_displayName_metal_case_small_empty">
+            <Original>Metalowa skrzynka (mala)</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_displayName_plastic_case_large_empty">
+            <Original>Plastikowa skrzynka (duza)</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_displayName_plastic_case_medium_empty">
+            <Original>Plastikowa skrzynka (srednia)</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_displayName_plastic_case_small_empty">
+            <Original>Plastikowa skrzynka (mala)</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_displayName_support_cargo_box_empty">
+            <Original>Skrzynia transportowa</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_displayName_cargo_net_empty">
+            <Original>Skrzynia transportowa (duza)</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_displayName_metal_container_blue_empty">
+            <Original>Metalowy kontener (niebieski)</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_displayName_metal_container_yellow_empty">
+            <Original>Metalowy kontener (zolty)</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_displayName_metal_container_white_empty">
+            <Original>Metalowy kontener (bialy)</Original>
+        </Key>
     </Package>
 </Project>
