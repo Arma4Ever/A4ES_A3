@@ -32,6 +32,6 @@ class ACE_Settings {
         typeName = "BOOL";
         isClientSettable = 1;
         category = "$STR_ACE_Interact_Menu_Category_InteractionMenu";
-        displayName = "Fleximenu";
+        displayName = "$STR_A3CS_Interaction_menu_Settings_displayName_useFlexiMenu";
     };
 };
