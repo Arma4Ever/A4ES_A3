@@ -10,9 +10,9 @@ class CfgWeapons {
         displayName = "GAU-8";
         canLock = 2;
         dispersion = 0.0082;
-        modes[] = {"autoLO","close","near","short","medium","far"};
+        modes[] = {"autoLO", "close", "near", "short", "medium", "far"};
         autoFire = 0;
-        burst = 20;
+        burst = 10;
         class GunParticles {
             class Effect {
                 effectName = "MachineGun3";
@@ -26,13 +26,14 @@ class CfgWeapons {
             reloadTime = 0.012;
             dispersion = 0.0082;
             sounds[] = {"StandardSound"};
-            class StandardSound
-            {
-                begin1[] = {"A3\Sounds_F_EPC\Weapons\gau_03_burst",2.5118864,1,4500,{ 25704,32159 }};
+            class StandardSound {
+                begin1[] = {"A3\Sounds_F_EPC\Weapons\gau_03_burst", 2.5118864, 1, 4500, { 25704,32159 }};
                 soundBegin[] = {"begin1",1};
             };
+            soundBurst = 1;
             soundContinuous = 1;
             autoFire = 1;
+            burst = 10;
             flash = "gunfire";
             flashSize = 0.1;
             recoil = "Empty";
@@ -50,6 +51,7 @@ class CfgWeapons {
             showToPlayer = 1;
             textureType = "fullAuto";
         };
+
         class close: autoLO {
             showToPlayer = 0;
             burst = 25;
