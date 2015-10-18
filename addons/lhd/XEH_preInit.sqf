@@ -3,5 +3,6 @@
 ADDON = false;
 
 PREP(initLHD);
+PREP(initLights);
 
 ADDON = true;

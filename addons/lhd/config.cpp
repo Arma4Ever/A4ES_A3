@@ -3,7 +3,7 @@ class CfgPatches
 {
     class ADDON
     {
-        units[] = {};
+        units[] = {"a3cs_lhd"};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"a3cs_main", "a3cs_common"};
@@ -25,8 +25,9 @@ class CfgVehicles {
     class StaticShip;
     class a3cs_lhd: StaticShip {
         scope = 2;
+        scopeCurator = 0;
         author = "$STR_A3_Bohemia_Interactive";
-        displayName = "USS Khe Sanh";
+        displayName = "$STR_A3CS_LHD_displayName_lhd";
         model = "\a3\weapons_f\empty";
         vehicleClass = "Submerged";
         icon = PATHTOF(data\lhd_ca.paa);
