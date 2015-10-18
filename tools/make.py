@@ -57,8 +57,8 @@ if sys.platform == "win32":
     import winreg
 
 ######## GLOBALS #########
-project = "@A3CS"
-ACE_VERSION = "0.51.0"
+project = "@a3cs"
+ACE_VERSION = "0.6.0"
 arma3tools_path = ""
 work_drive = ""
 module_root = ""
@@ -71,7 +71,7 @@ key = ""
 dssignfile = ""
 prefix = "a3cs"
 pbo_name_prefix = "a3cs_"
-signature_blacklist = ["ace_server.pbo"]
+signature_blacklist = ["a3cs_server.pbo"]
 importantFiles = ["mod.cpp", "README", "logo_a3cs_ca.paa"]
 versionFiles = ["mod.cpp"]
 
