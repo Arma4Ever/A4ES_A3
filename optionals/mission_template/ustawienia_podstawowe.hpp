@@ -16,7 +16,6 @@ overviewText = "Nazwa misji | Nick autora";
 
 //-- Ścieżka do zdjęcia tytułowego misji --//
 loadScreen = "data\loadscreen.jpg";
-overviewPicture = "data\loadscreen.jpg";
 
 //-- ID misji w kalendarzu --//
 //-- Ustaw 0 jesli misja nieoficjalna/testowa --//
@@ -64,7 +63,5 @@ wreckRemovalMaxTime = 3600;
            Ustawienia stałe
             NIE ZMIENIAĆ!
 ****************************************/
-showGPS = 0;
-disableChannels[]={2,3,4,5};
 corpseManagerMode = 1;
 wreckManagerMode = 1;
