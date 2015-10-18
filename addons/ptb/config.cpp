@@ -4,7 +4,7 @@ class CfgPatches
     class ADDON
     {
         units[] = {};
-        weapons[] = {};
+        weapons[] = {"ACE_IR_Strobe_Item"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"a3cs_main", "a3cs_common", "ace_attach"};
         version = A3CS_VERSION;
