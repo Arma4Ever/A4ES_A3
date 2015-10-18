@@ -1,6 +1,7 @@
 #include "script_component.hpp"
 
 params ["_target", "_player", "_actionClass"];
+private ["_weapon", "_class", "_actionName", "_actionTime", "_actionProgressTitle", "_actionWeapon", "_actionUnloadMagazine"];
 
 //Check action
 _weapon = currentWeapon ACE_player;
@@ -33,5 +34,5 @@ if (!([ACE_player, objNull, []] call ace_common_fnc_canInteractWith)) exitWith {
     {_this call FUNC(finishWeaponAction)},
     _actionProgressTitle,
     {true},
-    ["isNotInside", "isNotSitting"]
+    []
 ] call ace_common_fnc_progressBar;

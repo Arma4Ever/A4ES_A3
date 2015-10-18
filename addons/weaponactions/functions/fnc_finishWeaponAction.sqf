@@ -1,6 +1,7 @@
 #include "script_component.hpp"
 
 params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
+private ["_weapon", "_class", "_actionSuccess", "_actionFailure", "_actionWeapon"];
 
 _args params ["_actionClass"];
 
@@ -20,6 +21,8 @@ _actionFailure = getText (_class >> "actionFailure");
 _actionWeapon = getText (_class >> "targetWeapon");
 
 if(_errorCode == 0) then {
+    private ["_weaponItems", "_addItem", "_removeItem", "_loadedMagazine", "_loadedMagazineAmmo", "_currentMagazine", "_currentMagazineAmmo"];
+
 	_weaponItems = [];
 	_addItem = {};
 	_removeItem = {};
@@ -70,4 +73,3 @@ if(_errorCode == 0) then {
 } else {
 	[parseText format ["<t align='center'>%1</t>", _actionFailure], 2] call ace_common_fnc_displayTextStructured;
 };
-

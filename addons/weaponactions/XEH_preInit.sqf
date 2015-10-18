@@ -5,5 +5,8 @@ ADDON = false;
 PREP(finishWeaponAction);
 PREP(getWeaponActionsChildren);
 PREP(startWeaponAction);
+PREP(checkDivingGearAction);
+PREP(startDivingGearSwitch);
+PREP(finishDivingGearSwitch);
 
 ADDON = true;

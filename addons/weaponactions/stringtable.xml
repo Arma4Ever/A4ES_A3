@@ -7,5 +7,53 @@
 		<Key ID="STR_A3CS_WeaponActions_UnloadMagazine">
 			<Original>Ta akcja wymaga wyjęcia magazynka</Original>
 		</Key>
+		<Key ID="STR_A3CS_WeaponActions_switchUniform">
+			<Original>Załóż piankę do nurkowania</Original>
+		</Key>
+        <Key ID="STR_A3CS_WeaponActions_switchUniformProgress">
+			<Original>Trwa zakładanie pianki do nurkowania...</Original>
+		</Key>
+        <Key ID="STR_A3CS_WeaponActions_switchUniformSuccess">
+			<Original>Założono piankę do nurkowania</Original>
+		</Key>
+        <Key ID="STR_A3CS_WeaponActions_switchUniformFailure">
+			<Original>Przerwano zakładanie pianki do nurkowania</Original>
+		</Key>
+		<Key ID="STR_A3CS_WeaponActions_switchUniformBack">
+			<Original>Zdejmij piankę do nurkowania</Original>
+		</Key>
+        <Key ID="STR_A3CS_WeaponActions_switchUniformBackProgress">
+			<Original>Trwa zdejmowanie pianki do nurkowania...</Original>
+		</Key>
+        <Key ID="STR_A3CS_WeaponActions_switchUniformBackSuccess">
+			<Original>Zdjęto piankę do nurkowania</Original>
+		</Key>
+        <Key ID="STR_A3CS_WeaponActions_switchUniformBackFailure">
+			<Original>Przerwano zdejmowanie pianki do nurkowania</Original>
+		</Key>
+		<Key ID="STR_A3CS_WeaponActions_switchVest">
+			<Original>Załóż zestaw tlenowy</Original>
+		</Key>
+        <Key ID="STR_A3CS_WeaponActions_switchVestProgress">
+			<Original>Trwa zakładanie zestawu tlenowego</Original>
+		</Key>
+        <Key ID="STR_A3CS_WeaponActions_switchVestSuccess">
+			<Original>Założono zestaw tlenowy</Original>
+		</Key>
+        <Key ID="STR_A3CS_WeaponActions_switchVestFailure">
+			<Original>Przerwano zakładanie zestawu tlenowego</Original>
+		</Key>
+		<Key ID="STR_A3CS_WeaponActions_switchVestBack">
+			<Original>Zdejmij zestaw tlenowy</Original>
+		</Key>
+        <Key ID="STR_A3CS_WeaponActions_switchVestBackProgress">
+			<Original>Trwa ściąganie zestawu tlenowego</Original>
+		</Key>
+        <Key ID="STR_A3CS_WeaponActions_switchVestBackSuccess">
+			<Original>Ściągnieto zestaw tlenowy</Original>
+		</Key>
+        <Key ID="STR_A3CS_WeaponActions_switchVestBackFailure">
+			<Original>Przerwano ściąganie zestawu tlenowego</Original>
+		</Key>
     </Package>
 </Project>
