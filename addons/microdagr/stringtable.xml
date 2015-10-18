@@ -1,6 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
     <Package name="Microdagr">
-
+        <Key ID="STR_A3CS_Microdagr_Actions_simpleGpsOn">
+            <Original>Włącz nadajnik GPS</Original>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_Actions_simpleGpsOff">
+            <Original>Wyłącz nadajnik GPS</Original>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_displayName_simpleGPS">
+            <Original>Prosty nadajnik GPS</Original>
+        </Key>
     </Package>
 </Project>

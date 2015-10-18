@@ -4,7 +4,7 @@ class CfgPatches
     class ADDON
     {
         units[] = {};
-        weapons[] = {};
+        weapons[] = {"ACE_simpleGPS"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"a3cs_main", "a3cs_common"};
         version = A3CS_VERSION;
@@ -34,7 +34,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
                 class ace_microdagr_simpleGpsOn {
-                    displayName = "Włącz nadajnik GPS";
+                    displayName = "$STR_A3CS_Microdagr_Actions_simpleGpsOn";
                     condition = QUOTE([0] call ace_microdagr_fnc_simpleGps);
                     statement = QUOTE([1] call ace_microdagr_fnc_simpleGps);
                     showDisabled = 0;
@@ -43,7 +43,7 @@ class CfgVehicles {
                     exceptions[] = {"notOnMap", "isNotInside"};
                 };
                 class ace_microdagr_simpleGpsOff {
-                    displayName = "Wyłącz nadajnik GPS";
+                    displayName = "$STR_A3CS_Microdagr_Actions_simpleGpsOff";
                     condition = QUOTE([2] call ace_microdagr_fnc_simpleGps);
                     statement = QUOTE([3] call ace_microdagr_fnc_simpleGps);
                     showDisabled = 0;
@@ -59,13 +59,13 @@ class CfgVehicles {
 class CfgWeapons {
     class ACE_ItemCore;
     class InventoryItem_Base_F;
-
     class ACE_simpleGPS: ACE_ItemCore {
         author = "Arma3Coop.pl";
         scope = 2;
-        displayName = "Prosty nadajnik GPS";
-        descriptionShort = "Prosty nadajnik GPS";
-        picture = QUOTE(\z\a3cs\addons\common\data\icon_simpleGPS.paa);
+        scopeArsenal = 2;
+        displayName = "$STR_A3CS_Microdagr_displayName_simpleGPS";
+        descriptionShort = "$STR_A3CS_Microdagr_displayName_simpleGPS";
+        picture = PATHTOF(data\icon_simpleGPS.paa);
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
         };
