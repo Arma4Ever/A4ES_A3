@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 class CfgPatches {
     class ADDON {
-        units[] = {};
+        units[] = {QGVAR(fieldhospital)};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"a3cs_main", "a3cs_common"};
@@ -10,6 +10,14 @@ class CfgPatches {
         versionAr[] = A3CS_VERSION_ARRAY;
         author[] = {"SzwedzikPL", "ACE3 Team"};
         authorUrl = "http://arma3coop.pl";
+    };
+};
+
+class Extended_Init_EventHandlers {
+    class GVAR(fieldhospital) {
+        class GVAR(enable_fieldhospital) {
+            init = "(_this select 0) setvariable ['ace_medical_isMedicalFacility', true]";
+        };
     };
 };
 
@@ -25,7 +33,26 @@ class CfgVehicles
 	class Cargo_HQ_base_F;
 	class Cargo_Patrol_base_F;
 	class Strategic;
+    class Camping_base_F;
 	class Lamps_base_F: House_Small_F {};
+
+    //--- Szpital polowy
+    class GVAR(fieldhospital): Camping_base_F
+    {
+        displayName = "$STR_A3CS_Editor_displayName_fieldhospital";
+        vehicleClass = "a3cs_objects";
+        author = "$STR_A3_Bohemia_Interactive";
+        scope = 2;
+        scopeCurator = 2;
+        model = "\A3\Structures_F_Bootcamp\Civ\Camping\PartyTent_01_F.p3d";
+        icon = "iconObject_1x1";
+        destrType = "DestructTent";
+        cost = 100;
+        armor = 3;
+        mapSize = 13.06;
+        hiddenSelections[] = {"Camo_1"};
+        hiddenSelectionsTextures[] = {PATHTOF(data\fieldhospital_01_co.paa)};
+    };
 
 	//--- Budynki
 	class Land_Offices_01_V1_F: House_F { SCOPE_PUBLIC; };
