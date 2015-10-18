@@ -6,23 +6,20 @@
 */
 disableSerialization;
 
-private ["_mode", "_url", "_file", "_data", "_display", "_displayCtrl", "_nickname", "_ctrlHTML", "_htmlLoaded", "_possibleMods", "_mods"];
-
-_mode = [_this, 0,  "", [""]] call BIS_fnc_param;
-
-_url = "http://arma3coop.pl/a3.php";
-_file = "a3\Ui_f\data\news.html";
-_data = "";
-_display = findDisplay 0;
-_displayCtrl = 19005;
+params ["_mode"];
+private ["_nickname", "_uid", "_lang", "_possibleMods", "_mods"];
 
 _nickname = profileNameSteam;
+_uid = profilenamespace getVariable ["player_uid", 0];
+_lang = language;
 
-_possibleMods = ["CBA", "ACRE2","A3CS", "PAM", "A3MP", "A3AP"];
+_possibleMods = ["CBA", "TFAR", "A3CS", "PAM", "A3MP", "A3AP"];
 _mods = "";
 
 {
 	if(isClass (configFile >> "CfgMods" >> _x)) then {
+        private ["_modCode", "_modVersion"];
+
 		_modCode = getText(configFile >> "CfgMods" >> _x >> "mod_code");
 		_modVersion = getText(configFile >> "CfgMods" >> _x >> "mod_version");
 
@@ -38,18 +35,24 @@ _mods = "";
 	};
 } foreach _possibleMods;
 
+//send data
+
+private ["_url", "_file", "_display", "_displayCtrl", "_data", "_ctrlHTML", "_htmlLoaded"];
+
+_url = "http://arma3coop.pl/a3.php";
+_file = "a3\Ui_f\data\news.html";
+_display = findDisplay 0;
+_displayCtrl = 19005;
+_data = "";
+
 if(_mode == "log") then {
     _displayCtrl = 19000;
-    _data = format["?mode=log&name=%1&mods=%2",_nickname, _mods];
+    _data = format["?mode=log&name=%1&uid=%2&lang=%3&mods=%4",_nickname, _uid, _lang, _mods];
 };
+
 if(_mode == "mods") then {
     _data = format["?mode=mods&mods=%2",_nickname, _mods];
 };
-/*
-if(_mode == "missions") then {
-    _data = format["?mode=missions&name=%1",_nickname];
-};
-*/
 
 _ctrlHTML = _display displayCtrl _displayCtrl;
 _ctrlHTML htmlLoad format ["%1%2", _url, _data];
@@ -57,5 +60,5 @@ _ctrlHTML htmlLoad format ["%1%2", _url, _data];
 _htmlLoaded = ctrlHTMLLoaded _ctrlHTML;
 if (!_htmlLoaded) then {
     _ctrlHTML htmlLoad _file;
-    uinamespace setvariable ["BIS_fnc_guiNewsfeed_disable",true];
+    uinamespace setvariable ["BIS_fnc_guiNewsfeed_disable", true];
 };

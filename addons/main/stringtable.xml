@@ -4,5 +4,14 @@
         <Key ID="STR_A3CS_Main_CfgModsOverview">
             <Original>Arma 3 Combat System jest nakładką na Advanced Combat Environment 3 zapewniajaca grupie Arma3Coop niezbędne do gry elementy.</Original>
         </Key>
+        <Key ID="STR_A3CS_Main_VehicleClasses_displayname_objects">
+            <Original>[A3CS] Obiekty</Original>
+        </Key>
+        <Key ID="STR_A3CS_Main_VehicleClasses_displayname_crates">
+            <Original>[A3CS] Skrzynie</Original>
+        </Key>
+        <Key ID="STR_A3CS_Main_VehicleClasses_displayname_crates_empty">
+            <Original>[A3CS] Skrzynie puste</Original>
+        </Key>
     </Package>
 </Project>

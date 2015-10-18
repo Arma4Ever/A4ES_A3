@@ -114,6 +114,11 @@ class ModuleHvtObjectivesInstance_F: Module_F {scope = 1;};
 class ModuleHvtSimpleObjective_F: Module_F {scope = 1;};
 class ModuleHvtStartGameObjective_F: Module_F {scope = 1;};
 
+/* Curator Modules */
+
+//pogoda
+//czas
+
 /* CBA Modules */
 
 class CBA_main_require: Module_F {scope = 1;};
