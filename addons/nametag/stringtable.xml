@@ -1,6 +1,95 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
     <Package name="Nametag">
-
+        <Key ID="STR_A3CS_Nametag_no">
+            <Original>Nie</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_close">
+            <Original>Zamknij</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_rank_0">
+            <Original>Szeregowy</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_rank_1">
+            <Original>Kapral</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_rank_2">
+            <Original>Sierzant</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_rank_3">
+            <Original>Podporucznik</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_rank_4">
+            <Original>Kapitan</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_rank_5">
+            <Original>Major</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_rank_6">
+            <Original>Pulkownik</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_Actions_displayName_checkGear">
+            <Original>Sprawdź sprzet</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_Actions_displayName_checkId">
+            <Original>Sprawdź dokumenty</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_Settings_category">
+            <Original>NameTag</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_Settings_displayName_enableSthud">
+            <Original>Pokaz STHud</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_Settings_displayName_enableCommandBar">
+            <Original>Pokaz panel dowodcy</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_Settings_description_enableCommandBar">
+            <Original>Pokaz panel dowodcy (domyslnie w prawym dolnym rogu)</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_Settings_displayName_enableCursorNametag">
+            <Original>Pokaz nametag 2D</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_Settings_description_enableCursorNametag">
+            <Original>Pokaz nametag 2D po najechaniu na gracza</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_Settings_displayName_enable3dNametag">
+            <Original>Pokaz nametag 3D</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_Settings_value_enable3dNametag_1_duringfreelook">
+            <Original>Podczas rozgladania sie</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_Settings_value_enable3dNametag_2_oncursortarget">
+            <Original>Po najechaniu na gracza</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_Settings_displayName_addSpecialItems">
+            <Original>Dodaj item specjalny osobom funkcyjnym</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_checkGear_header">
+            <Original>Sprzet gracza %1</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_checkGear_addons">
+            <Original>Dodatki: %1</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_checkId_header">
+            <Original>Dokumenty gracza %1</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_checkId_nick">
+            <Original>Nick: %1</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_checkId_rank">
+            <Original>Stopien: %1</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_checkId_rank_in_a3c">
+            <Original>Stopien w A3C: %1</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_checkId_prems_medic">
+            <Original>Uprawnienia: Medyk</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_checkId_prems_engineer">
+            <Original>Uprawnienia: Inzynier</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_checkId_prems_eod">
+            <Original>Uprawnienia: Saper</Original>
+        </Key>
     </Package>
 </Project>
