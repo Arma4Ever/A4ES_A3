@@ -4,7 +4,7 @@ class CfgPatches
     class ADDON
     {
         units[] = {};
-        weapons[] = {};
+        weapons[] = {"a3cs_dummyVest"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"a3cs_main", "a3cs_common"};
         version = A3CS_VERSION;
@@ -15,6 +15,71 @@ class CfgPatches
     };
 };
 
+class Extended_PreInit_EventHandlers {
+    class ADDON {
+        init = QUOTE(call COMPILE_FILE(XEH_preInit));
+    };
+};
+
+class Extended_PostInit_EventHandlers {
+    class ADDON {
+        clientInit = QUOTE(call COMPILE_FILE(XEH_clientInit));
+        init = QUOTE(call COMPILE_FILE(XEH_postInit));
+    };
+};
+
+class Extended_Killed_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            killed = QUOTE(call FUNC(removeDummyVest));
+        };
+    };
+};
+
+class CfgFactionClasses
+{
+    class NO_CATEGORY;
+    class a3cs_modules: NO_CATEGORY
+    {
+        displayName = "A3CS";
+    };
+    class a3cs_modules_supplies: NO_CATEGORY
+    {
+        displayName = "Zaopatrzenie";
+    };
+    class a3cs_modules_support: NO_CATEGORY
+    {
+        displayName = "Wsparcie";
+    };
+    class a3cs_modules_interactions: NO_CATEGORY
+    {
+        displayName = "Interakcje";
+    };
+    class a3cs_modules_tasks: NO_CATEGORY
+    {
+        displayName = "Zadania";
+    };
+    class a3cs_modules_effects: NO_CATEGORY
+    {
+        displayName = "Efekty";
+    };
+    class a3cs_modules_ai: NO_CATEGORY
+    {
+        displayName = "AI";
+    };
+    class a3cs_modules_settings: NO_CATEGORY
+    {
+        displayName = "Ustawienia";
+    };
+};
+
+#include "CfgWeapons.hpp"
+#include "CfgVehicles.hpp"
+#include "CfgSounds.hpp"
+
+#include "dialogs.hpp"
+
+/*
 class CfgFunctions
 {
     class PAM_Modules
@@ -60,7 +125,7 @@ class CfgVehicles
     };
     class PAM_Modules_CC_Effect: A3C_Module
     {
-        scope = 2; 
+        scope = 2;
         scopeCurator = 0;
         displayName = "Efekty kolorystyczne";
         category = "a3cs_modules";
@@ -142,14 +207,14 @@ class CfgVehicles
         };
         class ModuleDescription: ModuleDescription
         {
-            description = "Zmiana kolorystyki widocznej w grze."; 
+            description = "Zmiana kolorystyki widocznej w grze.";
             sync[] = {};
             position = 1;
         };
     };
     class PAM_Modules_Sound_Effect: A3C_Module
     {
-        scope = 2; 
+        scope = 2;
         scopeCurator = 0;
         displayName = "Efekty dzwiekowe";
         category = "a3cs_modules";
@@ -180,37 +245,37 @@ class CfgVehicles
                                                 name = "Arabski market #1";
                                                 value = "pam_module_soundeffect_03";
                                                 default = 0;
-                                        };     
+                                        };
                                         class Effect4 {
                                                 name = "Arabski market #2";
                                                 value = "pam_module_soundeffect_04";
                                                 default = 0;
-                                        };     
+                                        };
                                         class Effect5 {
                                                 name = "Arabski market #3";
                                                 value = "pam_module_soundeffect_05";
                                                 default = 0;
-                                        };     
+                                        };
                                         class Effect6 {
                                                 name = "Arabski market #4";
                                                 value = "pam_module_soundeffect_06";
                                                 default = 0;
-                                        };                                     
+                                        };
                                         class Effect7 {
                                                 name = "Arabskie modlitwy #1";
                                                 value = "pam_module_soundeffect_07";
                                                 default = 0;
-                                        };     
+                                        };
                                         class Effect8 {
                                                 name = "Arabskie modlitwy #2";
                                                 value = "pam_module_soundeffect_08";
                                                 default = 0;
-                                        };     
+                                        };
                                         class Effect9 {
                                                 name = "Arabskie modlitwy #3";
                                                 value = "pam_module_soundeffect_09";
                                                 default = 0;
-                                        };     
+                                        };
                                         class Effect10 {
                                                 name = "Arabskie modlitwy #4";
                                                 value = "pam_module_soundeffect_10";
@@ -230,17 +295,17 @@ class CfgVehicles
                                                 name = "Lecacy Jet";
                                                 value = "pam_module_soundeffect_13";
                                                 default = 0;
-                                        };                                     
+                                        };
                                         class Effect14 {
                                                 name = "Radio chatter";
                                                 value = "pam_module_soundeffect_14";
                                                 default = 0;
-                                        };                                                                     
+                                        };
                                         class Effect17 {
                                                 name = "Efekt las noc #1";
                                                 value = "pam_module_soundeffect_17";
                                                 default = 0;
-                                        };                                     
+                                        };
                                         class Effect18 {
                                                 name = "Efekt las noc #2";
                                                 value = "pam_module_soundeffect_18";
@@ -250,22 +315,22 @@ class CfgVehicles
                                                 name = "Efekt las dzien #1";
                                                 value = "pam_module_soundeffect_15";
                                                 default = 0;
-                                        };                                     
+                                        };
                                         class Effect19 {
                                                 name = "Efekt las dzien #2";
                                                 value = "pam_module_soundeffect_19";
                                                 default = 0;
-                                        };                                     
+                                        };
                                         class Effect20 {
                                                 name = "Efekt las dzien #3";
                                                 value = "pam_module_soundeffect_20";
                                                 default = 0;
-                                        };     
+                                        };
                                         class Effect16 {
                                                 name = "Efekt wietrzny las";
                                                 value = "pam_module_soundeffect_16";
                                                 default = 0;
-                                        };   
+                                        };
                 };
             };
             class EffectLoop
@@ -290,14 +355,14 @@ class CfgVehicles
         };
         class ModuleDescription: ModuleDescription
         {
-            description = "Odtwarzanie dzwieków."; 
+            description = "Odtwarzanie dzwieków.";
             sync[] = {};
             position = 1;
         };
     };
     class PAM_Modules_Fog_Effect: A3C_Module
     {
-        scope = 2; 
+        scope = 2;
         scopeCurator = 0;
         displayName = "Efekt mgly";
         category = "a3cs_modules";
@@ -308,14 +373,14 @@ class CfgVehicles
         class Arguments {};
         class ModuleDescription: ModuleDescription
         {
-            description = "Efekt mgly."; 
+            description = "Efekt mgly.";
             sync[] = {};
             position = 1;
         };
     };
     class PAM_Modules_Sand_Effect: A3C_Module
     {
-        scope = 2; 
+        scope = 2;
         scopeCurator = 0;
         displayName = "Efekt piasku";
         category = "a3cs_modules";
@@ -326,14 +391,14 @@ class CfgVehicles
         class Arguments {};
         class ModuleDescription: ModuleDescription
         {
-            description = "Efekt piasku."; 
+            description = "Efekt piasku.";
             sync[] = {};
             position = 1;
         };
     };
     class PAM_Modules_Snow_Effect: A3C_Module
     {
-        scope = 2; 
+        scope = 2;
         scopeCurator = 0;
         displayName = "Efekt opadow sniegu";
         category = "a3cs_modules";
@@ -370,14 +435,14 @@ class CfgVehicles
         };
         class ModuleDescription: ModuleDescription
         {
-            description = "Efekt opadow sniegu."; 
+            description = "Efekt opadow sniegu.";
             sync[] = {};
             position = 1;
         };
     };
     class PAM_Modules_BreathFog_Effect: A3C_Module
     {
-        scope = 2; 
+        scope = 2;
         scopeCurator = 0;
         displayName = "Efekt pary z ust";
         category = "a3cs_modules";
@@ -388,158 +453,9 @@ class CfgVehicles
         class Arguments {};
         class ModuleDescription: ModuleDescription
         {
-            description = "Efekt pary z ust."; 
+            description = "Efekt pary z ust.";
             sync[] = {};
             position = 1;
         };
     };
-};
-
-class CfgSounds
-{
-    sounds[] = {};
-        class pam_module_soundeffect_01
-        {
-                name = "pam_module_soundeffect_01";
-                sound[] = {PATHTOF(sounds\chase.ogg), 1, 1};
-                soundtime = 6; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        };
-        class pam_module_soundeffect_02
-        {
-                name = "pam_module_soundeffect_02";
-                sound[] = {PATHTOF(sounds\chase.ogg) 1, 1};
-                soundtime = 6; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        };
-        class pam_module_soundeffect_03
-        {
-                name = "pam_module_soundeffect_03";
-                sound[] = {PATHTOF(sounds\arabian_market_1.wss), 1, 1};
-                soundtime = 10; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        };     
-        class pam_module_soundeffect_04
-        {
-                name = "pam_module_soundeffect_04";
-                sound[] = {PATHTOF(sounds\arabian_market_2.wss), 1, 1};
-                soundtime = 14; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        };     
-        class pam_module_soundeffect_05
-        {
-                name = "pam_module_soundeffect_05";
-                sound[] = {PATHTOF(sounds\arabian_market_3.wss), 1, 1};
-                soundtime = 28; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        };     
-        class pam_module_soundeffect_06
-        {
-                name = "pam_module_soundeffect_06";
-                sound[] = {PATHTOF(sounds\arabian_market_4.wss), 1, 1};
-                soundtime = 28; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        };     
-        class pam_module_soundeffect_07
-        {
-                name = "pam_module_soundeffect_07";
-                sound[] = {PATHTOF(sounds\arabian_market_5.wss), 1, 1};
-                soundtime = 17; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        };     
-        class pam_module_soundeffect_08
-        {
-                name = "pam_module_soundeffect_08";
-                sound[] = {PATHTOF(sounds\Muslim_prayer_1.wss), 1, 1};
-                soundtime = 11; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        };     
-        class pam_module_soundeffect_09
-        {
-                name = "pam_module_soundeffect_09";
-                sound[] = {PATHTOF(sounds\Muslim_prayer_2.wss), 1, 1};
-                soundtime = 12; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        };     
-        class pam_module_soundeffect_10
-        {
-                name = "pam_module_soundeffect_10";
-                sound[] = {PATHTOF(sounds\Muslim_prayer_3.wss), 1, 1};
-                soundtime = 13; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        };     
-        class pam_module_soundeffect_11
-        {
-                name = "pam_module_soundeffect_11";
-                sound[] = {PATHTOF(sounds\Muslim_prayer_4.wss), 1, 1};
-                soundtime = 24; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        };     
- 
-       
-        class pam_module_soundeffect_12
-        {
-                name = "pam_module_soundeffect_12";
-                sound[] = {PATHTOF(sounds\allahakbar_1.ogg), 1, 1};
-                soundtime = 6; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        };     
-        class pam_module_soundeffect_13
-        {
-                name = "pam_module_soundeffect_13";
-                sound[] = {PATHTOF(sounds\jet_1.ogg), 1, 1};
-                soundtime = 21; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        };
-        class pam_module_soundeffect_14
-        {
-                name = "pam_module_soundeffect_14";
-                sound[] = {PATHTOF(sounds\radio_chatter.ogg), 1, 1};
-                soundtime = 577; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        };     
-        class pam_module_soundeffect_15
-        {
-                name = "pam_module_soundeffect_15";
-                sound[] = {PATHTOF(sounds\forest-day-1.wss), 1, 1};
-                soundtime = 49; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        };     
-        class pam_module_soundeffect_16
-        {
-                name = "pam_module_soundeffect_16";
-                sound[] = {PATHTOF(sounds\wind-forest-3.wss), 1, 1};
-                soundtime = 24; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        };     
- 
-        class pam_module_soundeffect_17
-        {
-                name = "pam_module_soundeffect_17";
-                sound[] = {PATHTOF(sounds\forest_v1_night.wss), 1, 1};
-                soundtime = 6; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        };     
-        class pam_module_soundeffect_18
-        {
-                name = "pam_module_soundeffect_18";
-                sound[] = {PATHTOF(sounds\forest_v2_night.wss), 1, 1};
-                soundtime = 5; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        };     
- 
-        class pam_module_soundeffect_19
-        {
-                name = "pam_module_soundeffect_19";
-                sound[] = {PATHTOF(sounds\forest_v2_day.wss), 1, 1};
-                soundtime = 17; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        };     
-        class pam_module_soundeffect_20
-        {
-                name = "pam_module_soundeffect_20";
-                sound[] = {PATHTOF(sounds\forest_v3_day.wss), 1, 1};
-                soundtime = 13; //czas trwania dzwieku w sekundach
-                titles[] = {0, ""};
-        }; 
 };

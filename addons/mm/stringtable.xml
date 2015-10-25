@@ -1,6 +1,172 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
     <Package name="MM">
-
-    </Package>
+        <Key ID="STR_A3CS_MM_displayName_dummyVest">
+            <Original>Kamizelka AI</Original>
+        </Key>
+        <Key ID="STR_A3CS_MM_FactionClasses_displayName_X">
+            <Original>[A3CS] Efekty</Original>
+        </Key>
+		<!-- --
+		STARE WARTOSCI!
+		<!-- -->
+		<Container name="A3CS_MM_module_fireArtillery">
+			<Key ID="STR_A3CS_MM_fireArtillery_Name">
+				<Original>Artyleria</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_fireArtillery_Desc">
+				<Original>Moduł generujący ostrzał artyleryjski</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_fireArtillery_EmptyDetector_Desc">
+				<Original>Trigger określający pole ostrzału</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_fireArtillery_EmptyDetector_Desc2">
+				<Original>Aby ostrzał się rozpoczął warunki wszystkich zsynchronizowanych triggerów muszą być prawdziwe</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_fireArtillery_EmptyDetector_Desc3">
+				<Original>Moduł może uruchamiać się wielokrotnie zależnie od ustawień triggera</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_fireArtillery_Ammotype_Name">
+				<Original>Rodzaj pocisków</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_fireArtillery_Ammotype_Desc">
+				<Original>Typ pocisków używanych w ostrzale</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_fireArtillery_Conditionlogic_Name">
+				<Original>Warunek logiczny</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_fireArtillery_Conditionlogic_Desc">
+				<Original>Warunek ostrzału np. true (jeśli chcesz ustawić ostrzał na ilość pocisków zostaw to pole puste).</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_fireArtillery_Conditionnumber_Name">
+				<Original>Warunek liczbowy</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_fireArtillery_Conditionnumber_Desc">
+				<Original>Ilość strzałów (to pole będzie ignorowane jeśli użyty został warunek logiczny)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_fireArtillery_shellmindelay_Name">
+				<Original>Minimalny odstęp</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_fireArtillery_shellmindelay_Desc">
+				<Original>Minimalny odstęp czasowy pomiędzy strzałami w sekundach</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_fireArtillery_shellmaxdelay_Name">
+				<Original>Maksymalny odstęp</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_fireArtillery_shellmaxdelay_Desc">
+				<Original>Maksymalny odstęp czasowy pomiędzy strzałami w sekundach</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_FNC_module_fireArtillery">
+			<Key ID="STR_A3CS_MM_FNC_fireArtillery_WrongTypeOfObjs">
+				<Original>Brak zsynchronizowanych obiektow</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_FNC_fireArtillery_WrongTypeOfSyncedObjs">
+				<Original>Niepoprawny typ zsynchronizowanego obiektu: %1</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_FNC_fireArtillery_NoFireCondition">
+				<Original>Nie podano warunku ostrzalu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_FNC_fireArtillery_Debug_StartingOfFire">
+				<Original>Rozpoczynam ostrzał artyleryjski</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_EditBox">
+			<Key ID="STR_A3CS_MM_EditBox_Displayname">
+				<Original>Edycja skrzynki</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBox_Desciption">
+				<Original>Moduł należy zsynchronizować ze skrzynką której zawartość chcemy edytować</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBox_Contentcode_Displayname">
+				<Original>Kod zawartości</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBox_Contentcode_Description">
+				<Original>Kod wygenerowany za pomocą generatora</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBox_Clearbefore_Displayname">
+				<Original>Opróżnij skrzynkę</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBox_Clearbefore_Description">
+				<Original>Czy opróżnić skrzynkę przed dodaniem nowych elementów</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_EditBoxGUI">
+			<Key ID="STR_A3CS_MM_EditBoxGUI_Displayname">
+				<Original>Edycja skrzynki (Generator)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_Desciption">
+				<Original>GUI służące do generowania kodu skrzynki dla modułu edycji</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Loading">
+				<Original>Wczytywanie...</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Boxtitle">
+				<Original>[A3C] Edytor skrzynek</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_AvailableElements0">
+				<Original>Dostepne elementy (0)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Elementsinbox0">
+				<Original>Elementy w skrzynce (0)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_AvailableElements">
+				<Original>Dostępne elementy (%1)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Elementsinbox">
+				<Original>Elementy w skrzynce (%1)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Elementcountinbox">
+				<Original>Elementów w skrzyni: %1</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Additem_desc">
+				<Original>Dodaj element do skrzynki</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Removeitem_desc">
+				<Original>Usuń element ze skrzynki</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Category_weapon">
+				<Original>Kategoria: Broń</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Category_ammo">
+				<Original>Kategoria: Amunicja</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Category_items">
+				<Original>Kategoria: Ekwipunek</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Category_gear">
+				<Original>Kategoria: Ubiór</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Count">
+				<Original>Ilość</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Code">
+				<Original>Kod</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Generate">
+				<Original>Generuj</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_GenerateDesc">
+				<Original>Wygeneruj kod dla modułu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_GenerateDone">
+				<Original>Wygenerowano kod</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Copycode">
+				<Original>Kopiuj</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_CopycodeDesc">
+				<Original>Kopiuj do schowka</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_CopyDone">
+				<Original>Skopiowano kod do schowka</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Close">
+				<Original>Zamknij</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_CloseDesc">
+				<Original>Zamknij edytor</Original>
+			</Key>
+		</Container>
+	</Package>
 </Project>
