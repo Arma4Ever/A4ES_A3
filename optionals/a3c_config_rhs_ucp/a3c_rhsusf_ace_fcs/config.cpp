@@ -5,8 +5,8 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 1.0;
-		requiredAddons[] = {"rhsusf_optics","rhsusf_c_m1a1","rhsusf_c_m1a2"};
-		author[]={"Ruthberg","SzwedzikPL"};
+		requiredAddons[] = {"ace_fcs","rhsusf_optics","rhsusf_c_m1a1","rhsusf_c_m1a2"};
+		author[]={"SzwedzikPL"};
 		authorUrl = "";
 		versionDesc = "";
 		version = "";
@@ -16,5 +16,4 @@ class CfgPatches
 	};
 };
 
-#include "rscInGameUI.hpp"
 #include "CfgVehicles.hpp"

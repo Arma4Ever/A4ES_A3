@@ -172,6 +172,11 @@ class CfgWeapons
         canLock = 0;
         lockingTargetSound[] = {"",0,1};
         lockedTargetSound[] = {"",0,1};
+
+        ace_overpressure_priority = 1;
+        ace_overpressure_angle = 0;
+        ace_overpressure_range = 0;
+        ace_overpressure_damage = 0;
     };
 
     class rhsusf_ach_helmet_ocp;
@@ -218,6 +223,7 @@ class CfgWeapons
         rhs_disposable = 0;
         ACE_UsedTube = "rhs_weap_M136_used";
         magazines[] = {"rhs_m136_mag"};
+        ace_overpressure_priority = 1;
         ace_overpressure_angle = 30;
         ace_overpressure_range = 2;
         ace_overpressure_damage = 0.6;
@@ -227,6 +233,7 @@ class CfgWeapons
         displayName = "M136 (HEDP)";
         ACE_UsedTube = "rhs_weap_M136_hedp_used";
         magazines[] = {"rhs_m136_hedp_mag"};
+        ace_overpressure_priority = 1;
         ace_overpressure_angle = 30;
         ace_overpressure_range = 2;
         ace_overpressure_damage = 0.6;
@@ -236,6 +243,7 @@ class CfgWeapons
         displayName = "M136 (HP)";
         ACE_UsedTube = "rhs_weap_M136_hp_used";
         magazines[] = {"rhs_m136_hp_mag"};
+        ace_overpressure_priority = 1;
         ace_overpressure_angle = 30;
         ace_overpressure_range = 2;
         ace_overpressure_damage = 0.6;

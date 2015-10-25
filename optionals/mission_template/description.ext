@@ -1,15 +1,9 @@
 ﻿/***************************************
-           Ustawienia A3C
+        Szablon misji A3C - 1.0
 ****************************************/
 
-#include "include\macros.hpp"
 #include "ustawienia_podstawowe.hpp"
-#include "ustawienia_briefing.hpp"
 #include "ustawienia_debriefing.hpp"
-#include "ustawienia_orbat.hpp"
-#include "szablony_wyposarzenia.hpp"
-#include "szablony_cargo.hpp"
-#include "szablony_generatora_ai.hpp"
 
 /***************************************
           Twoje ustawienia

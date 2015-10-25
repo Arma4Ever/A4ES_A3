@@ -3,7 +3,7 @@
 ****************************************/
 
 //-- Autor misji --//
-author="Nick autora";
+author = "Nick autora";
 
 //-- Tytuł misji --//
 OnLoadName = "Nazwa misji";
@@ -23,14 +23,14 @@ missionID = 0;
 
 class Header
 {
-	//-- Typ gry --//
-	gameType = Coop;
+    //-- Typ gry --//
+    gameType = Coop;
 
-	//-- Minimalna ilość graczy pozwalająca ukończyć misje --//
-	minPlayers = 16;
+    //-- Minimalna ilość graczy pozwalająca ukończyć misje --//
+    minPlayers = 16;
 
-	//-- Ilość slotów na misji --//
-	maxPlayers = 32;
+    //-- Ilość slotów na misji --//
+    maxPlayers = 32;
 };
 
 /***************************************

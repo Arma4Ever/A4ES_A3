@@ -55,9 +55,26 @@ class CfgVehicles
 		{
 			class MainTurret: MainTurret
 			{
+				ace_fcs_Enabled = 1;
+				turretInfoType = "RscOptics_APC_Wheeled_01_gunner";
+				class Turrets: Turrets
+				{
+					class CommanderOptics: CommanderOptics
+					{
+						ace_fcs_Enabled = 1;
+						turretInfoType = "RscOptics_APC_Wheeled_01_gunner";
+					};
+					class Loader: CommanderOptics
+					{
+						turretInfoType = "";
+						ace_fcs_Enabled = 0;
+					};
+				};
 				class OpticsIn
 				{
-					class Wide: ViewOptics
+					delete Wide;
+					delete Medium;
+					class Wide_TI: Wide
 					{
 						initAngleX = 0;
 						minAngleX = -30;
@@ -66,27 +83,12 @@ class CfgVehicles
 						minAngleY = -100;
 						maxAngleY = "+100";
 						initFov = "0.7/3";
-						minFov = 0.3;
-						maxFov = 0.3;
+						minFov = 0.07;
+						maxFov = 0.07;
 						visionMode[] = {"Normal","Ti"};
 						thermalMode[] = {2,3};
-						gunnerOpticsModel = "\rhsusf\addons\rhsusf_m1a1\gunnerOptics_M1A2";
 						gunnerOpticsEffect[] = {"TankGunnerOptics1","OpticsBlur2","OpticsCHAbera2"};
-					};
-					class Medium: Wide
-					{
-						gunnerOpticsModel = "\rhsusf\addons\rhsusf_m1a1\gunnerOptics_M1A1_2";
-						initFov = "0.7/10";
-						minFov = 0.07;
-						maxFov = 0.07;
-					};
-					class Wide_TI: Wide
-					{
 						gunnerOpticsModel = "\rhsusf\addons\rhsusf_m1a1\gunnerOptics_M1A2_ti";
-						visionMode[] = {"Normal","Ti"};
-						initFov = "0.7/3";
-						minFov = 0.07;
-						maxFov = 0.07;
 					};
 					class Wide2_TI: Wide_TI
 					{
@@ -129,11 +131,12 @@ class CfgVehicles
 		{
 			class MainTurret: MainTurret
 			{
-				weapons[] = {"rhs_weap_m256","rhs_weap_m240_abrams_coax"};
-				magazines[] = {"rhs_mag_M829A2","rhs_mag_M830A1","rhs_mag_762x51_M240_1200","rhs_mag_762x51_M240_1200","rhs_mag_762x51_M240_1200","rhs_mag_762x51_M240_1200","rhs_mag_762x51_M240_1200","rhs_mag_762x51_M240_1200","rhs_mag_762x51_M240_1200","rhs_mag_762x51_M240_1200","rhs_mag_762x51_M240_1200"};
+				ace_fcs_Enabled = 1;
 				class OpticsIn
 				{
-					class Wide: ViewOptics
+					delete Wide;
+					delete Medium;
+					class Wide_TI: Wide
 					{
 						initAngleX = 0;
 						minAngleX = -30;
@@ -141,25 +144,10 @@ class CfgVehicles
 						initAngleY = 0;
 						minAngleY = -100;
 						maxAngleY = "+100";
-						initFov = "0.7/3";
-						minFov = 0.3;
-						maxFov = 0.3;
+						gunnerOpticsModel = "\rhsusf\addons\rhsusf_m1a1\gunnerOptics_M1A2_ti";
+						gunnerOpticsEffect[] = {};
 						visionMode[] = {"Normal","Ti"};
 						thermalMode[] = {2,3};
-						gunnerOpticsModel = "\rhsusf\addons\rhsusf_m1a1\gunnerOptics_M1A2";
-						gunnerOpticsEffect[] = {};
-					};
-					class Medium: Wide
-					{
-						gunnerOpticsModel = "\rhsusf\addons\rhsusf_m1a1\gunnerOptics_M1A1_2";
-						initFov = "0.7/10";
-						minFov = 0.07;
-						maxFov = 0.07;
-					};
-					class Wide_TI: Wide
-					{
-						gunnerOpticsModel = "\rhsusf\addons\rhsusf_m1a1\gunnerOptics_M1A2_ti";
-						visionMode[] = {"Normal","Ti"};
 						initFov = "0.7/3";
 						minFov = 0.07;
 						maxFov = 0.07;
@@ -204,10 +192,14 @@ class CfgVehicles
 		{
 			class MainTurret: MainTurret
 			{
+				ace_fcs_Enabled = 1;
+				turretInfoType = "RscOptics_APC_Wheeled_01_gunner";
 				class Turrets: Turrets
 				{
 					class CommanderOptics: CommanderOptics
 					{
+						ace_fcs_Enabled = 1;
+						turretInfoType = "RscOptics_APC_Wheeled_01_gunner";
 						class OpticsIn: Optics_Commander_01
 						{
 							class Wide: Wide
@@ -242,6 +234,16 @@ class CfgVehicles
 								maxFov = 0.07;
 							};
 						};
+					};
+					class Loader: CommanderOptics
+					{
+						ace_fcs_Enabled = 0;
+						turretInfoType = "";
+					};
+					class CommanderMG: CommanderOptics
+					{
+						ace_fcs_Enabled = 0;
+						turretInfoType = "";
 					};
 				};
 				class OpticsIn

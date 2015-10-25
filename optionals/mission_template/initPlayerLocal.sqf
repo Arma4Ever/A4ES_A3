@@ -10,4 +10,7 @@ _player = param [0];
 //-- Zwraca true jesli gracz wchodzi w trakcie trwania misji, false jesli na starcie misji --//
 _jip = param [1];
 
+//-- Briefing --//
+#include "briefing.hpp"
+
 //-- Twój kod --//
