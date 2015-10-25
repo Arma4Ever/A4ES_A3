@@ -39,7 +39,7 @@ class CfgVehicles {
                     statement = QUOTE([1] call ace_microdagr_fnc_simpleGps);
                     showDisabled = 0;
                     priority = 0.3;
-                    icon = QUOTE(\z\a3cs\addons\common\data\icon_simpleGPS.paa);
+                    icon = PATHTOF(data\icon_simpleGPS.paa);
                     exceptions[] = {"notOnMap", "isNotInside"};
                 };
                 class ace_microdagr_simpleGpsOff {
@@ -48,7 +48,7 @@ class CfgVehicles {
                     statement = QUOTE([3] call ace_microdagr_fnc_simpleGps);
                     showDisabled = 0;
                     priority = 0.3;
-                    icon = QUOTE(\z\a3cs\addons\common\data\icon_simpleGPS.paa);
+                    icon = PATHTOF(data\icon_simpleGPS.paa);
                     exceptions[] = {"notOnMap", "isNotInside"};
                 };
             };
