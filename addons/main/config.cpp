@@ -90,15 +90,15 @@ class CfgVehicleClasses
 //ACE
 
 #include "ace_options.hpp"
+#include "ace_medical_treatments.hpp"
 
-/*
 class CfgVehicles
 {
     class Module_F;
     class ACE_Module;
     #include "hidden_modules.hpp"
+    #include "ace_actions.hpp"
 };
-*/
 
 //Infobox
 #include "infobox.hpp"
