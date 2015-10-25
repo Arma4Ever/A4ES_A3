@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 params ["_player", "_unit"];
-private ["_dialog", "_dialogMenu", "_unitData", "_isMedic", "_isEngineer", "_isEOD", "_index", "_squadParams", "_memberRemark"];
+private ["_dialog", "_dialogMenu", "_unitData", "_isMedic", "_isEngineer", "_isEOD", "_index", "_squadParams", "_roleDesc", "_memberRemark"];
 
 while {dialog} do {closeDialog 0;};
 
@@ -22,6 +22,7 @@ ctrlSetText [8860, localize "STR_A3CS_Nametag_close"];
 _index = lbAdd [_dialogMenu, format [localize "STR_A3CS_Nametag_checkId_nick", _unitName]];
 _index = lbAdd [_dialogMenu, format [localize "STR_A3CS_Nametag_checkId_rank", _unitRank]];
 
+/*
 _squadParams = squadParams _unit;
 if(count _squadParams == 2) then {
     if(count (_squadParams select 1) == 6) then {
@@ -30,8 +31,16 @@ if(count _squadParams == 2) then {
             _index = lbAdd [_dialogMenu, format [localize "STR_A3CS_Nametag_checkId_rank_in_a3c", _memberRemark]];
         };
     };
-
 };
+*/
+
+_roleDesc = roleDescription _unit;
+if(_roleDesc == "") then {_roleDesc = localize "STR_A3CS_Nametag_none";};
+_index = lbAdd [_dialogMenu, format [localize "STR_A3CS_Nametag_checkId_desc", _roleDesc]];
+
+if(typename _isMedic == typename 0) then {_isMedic = _isMedic > 0;};
+if(typename _isEngineer == typename 0) then {_isEngineer = _isEngineer > 0;};
+if(typename _isEOD == typename 0) then {_isEOD = _isEOD > 0;};
 
 if(_isMedic) then {_index = lbAdd [_dialogMenu, localize "STR_A3CS_Nametag_checkId_prems_medic"];};
 if(_isEngineer) then {_index = lbAdd [_dialogMenu, localize "STR_A3CS_Nametag_checkId_prems_engineer"];};

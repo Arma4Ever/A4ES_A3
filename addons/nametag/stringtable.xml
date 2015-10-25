@@ -4,6 +4,9 @@
         <Key ID="STR_A3CS_Nametag_no">
             <Original>Nie</Original>
         </Key>
+        <Key ID="STR_A3CS_Nametag_none">
+            <Original>Brak</Original>
+        </Key>
         <Key ID="STR_A3CS_Nametag_close">
             <Original>Zamknij</Original>
         </Key>
@@ -78,6 +81,9 @@
         </Key>
         <Key ID="STR_A3CS_Nametag_checkId_rank">
             <Original>Stopien: %1</Original>
+        </Key>
+        <Key ID="STR_A3CS_Nametag_checkId_desc">
+            <Original>Opis: %1</Original>
         </Key>
         <Key ID="STR_A3CS_Nametag_checkId_rank_in_a3c">
             <Original>Stopien w A3C: %1</Original>
