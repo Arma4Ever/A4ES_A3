@@ -21,7 +21,7 @@ class Extended_Init_EventHandlers {
     };
 };
 
-#define SCOPE_PUBLIC scope = 2
+#include "laser.hpp"
 
 class CfgVehicles
 {
@@ -52,7 +52,10 @@ class CfgVehicles
         mapSize = 13.06;
         hiddenSelections[] = {"Camo_1"};
         hiddenSelectionsTextures[] = {PATHTOF(data\fieldhospital_01_co.paa)};
+        XEH_ENABLED;
     };
+
+    #define SCOPE_PUBLIC scope = 2
 
 	//--- Budynki
 	class Land_Offices_01_V1_F: House_F { SCOPE_PUBLIC; };
