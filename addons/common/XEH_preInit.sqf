@@ -2,6 +2,4 @@
 
 ADDON = false;
 
-PREP(handleRating);
-
 ADDON = true;

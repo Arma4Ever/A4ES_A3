@@ -23,14 +23,14 @@ class Extended_PreInit_EventHandlers {
 class Extended_Init_EventHandlers {
     class CAManBase {
         class GVAR(handleRating) {
-            init = QUOTE(_this call FUNC(handleRating));
+            init = QUOTE(call COMPILE_FILE(XEH_init));
         };
     };
 };
 class Extended_Respawn_EventHandlers {
     class CAManBase {
         class GVAR(handleRating) {
-            respawn = QUOTE(_this call FUNC(handleRating));
+            respawn = QUOTE(call COMPILE_FILE(XEH_init));
         };
     };
 };
