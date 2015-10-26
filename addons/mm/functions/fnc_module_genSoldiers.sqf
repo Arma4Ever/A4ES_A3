@@ -179,7 +179,7 @@ _this spawn {
 			}];
 			if(_ammount>10) then {sleep 0.3;};
 		};
-        /*
+
 		//------------ UNGEN CHECK
 		waitUntil {
 			sleep 5;
@@ -199,7 +199,7 @@ _this spawn {
 			deleteGroup _gr;
 		} forEach _soldiers;
 		if(_debug) then {hint ("DEBUG: USUWAM ŻOŁNIERZY!");};
-        */
+
 	};
 	//------------------------------------------------------------
 };

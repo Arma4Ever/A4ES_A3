@@ -45,7 +45,7 @@ class GVAR(module_genAttack): A3C_Module
         };
         class condition {
             displayName = "Warunek respu";
-            description = "Warunek logiczny (np. alive unit1) lub liczbowy (limit zrespionych jednostek np. 20)";
+            description = "Warunek logiczny (np. alive unit1) lub liczbowy (czas trwania ataku np. 30 czyli 30 sekund - przez 30 sekund beda respic sie kolejne fale jednostek)";
             typeName = "STRING";
             defaultValue = "";
         };

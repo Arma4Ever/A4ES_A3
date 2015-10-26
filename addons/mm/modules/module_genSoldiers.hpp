@@ -26,7 +26,7 @@ class GVAR(module_genSoldiers): A3C_Module
             defaultValue = 0;
         };
         class ammount {
-            displayName = "Ilosc grup AI";
+            displayName = "Ilosc AI";
             description = "";
             typeName = "NUMBER";
             defaultValue = 0;
@@ -50,7 +50,7 @@ class GVAR(module_genSoldiers): A3C_Module
             defaultValue = "";
         };
         class groupCount {
-            displayName = "Ilosc AI z grupie";
+            displayName = "Ilosc AI w grupie";
             description = "Wartosc stala np. 5 lub losowa np. [3,5] (czyli od 3 do 5)";
             typeName = "STRING";
             defaultValue = "";
