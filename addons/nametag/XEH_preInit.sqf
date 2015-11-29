@@ -8,6 +8,7 @@ PREP(checkId);
 PREP(drawNametag);
 PREP(drawNametag3d);
 PREP(getUnitData);
+PREP(getUnitCommunityData);
 PREP(onDraw3D);
 PREP(updateSettings);
 

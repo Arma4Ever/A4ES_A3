@@ -31,10 +31,18 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_Actions {
             class ACE_MainActions {
+                class GVAR(takeCommand) {
+                    displayName = "$STR_A3CS_Nametag_Actions_displayName_takeCommand";
+                    condition = QUOTE(leader _player == _player && !isPlayer _target && {[ARR_2(_player,_target)] call ace_interaction_fnc_canJoinGroup});
+                    statement = QUOTE([_target] joinSilent group _player);
+                    showDisabled = 0;
+                    priority = 2.6;
+                    icon = "\z\ace\addons\interaction\UI\team\team_management_ca.paa";
+                };
                 class GVAR(checkGear) {
                     displayName = "$STR_A3CS_Nametag_Actions_displayName_checkGear";
                     distance = 5;
-                    condition = "true";
+                    condition = "alive _target";
                     statement = QUOTE([ARR_2(_player, _target)] call DFUNC(checkGear));
                     showDisabled = 0;
                     priority = 8;
@@ -42,7 +50,7 @@ class CfgVehicles {
                 class GVAR(checkId) {
                     displayName = "$STR_A3CS_Nametag_Actions_displayName_checkId";
                     distance = 5;
-                    condition = "true";
+                    condition = "alive _target";
                     statement = QUOTE([ARR_2(_player, _target)] call DFUNC(checkId));
                     showDisabled = 0;
                     priority = 8;

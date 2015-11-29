@@ -1,52 +1,22 @@
 #include "script_component.hpp"
 
-private ["_uid", "_index", "_class", "_bandana"];
+private ["_communityData", "_bandanaClass"];
 
-if(GVAR(members) isEqualTo [[],[]]) exitWith {};
-if(!GVAR(addSpecialItems)) exitWith {};
+_communityData = [ace_player] call FUNC(getUnitCommunityData);
+_communityData params ["_communityGroup", "_communityGroupName", "_communityGroupColor", "_communityRank"];
 
-GVAR(members) params ["_uids", "_classes"];
+if(_communityGroup == "") exitWith {};
 
-_uid = getPlayerUID ace_player;
-_index = _uids find _uid;
+_bandanaClass = "";
+if(_communityGroup == "adm") then {_bandanaClass = "maska_admin";};
+if(_communityGroup == "ofc") then {_bandanaClass = "maska_oficer";};
+if(_communityGroup == "dow") then {_bandanaClass = "maska_dowodca";};
+if(_communityGroup == "ins") then {_bandanaClass = "maska_instruktor";};
 
-if(_index == -1) exitWith {};
-
-_class = _classes select _index;
-_bandana = "";
-if(_class == "adm") then {_bandana = "maska_admin";};
-if(_class == "ofc") then {_bandana = "maska_oficer";};
-if(_class == "dow") then {_bandana = "maska_dowodca";};
-if(_class == "ins") then {_bandana = "maska_instruktor";};
-
-if(_bandana == "") exitWith {};
+if(_bandanaClass == "") exitWith {};
 
 if(goggles ace_player == "") then {
-    ace_player addGoggles _bandana;
+    ace_player addGoggles _bandanaClass;
 } else {
-    ace_player addItem _bandana;
+    ace_player addItem _bandanaClass;
 };
-
-/*
-0 spawn {
-    sleep 5;
-    if(isNil ("A3CSS_ADMIN")) then {A3CSS_ADMIN=[];};
-    if(isNil ("A3CSS_OFICER")) then {A3CSS_OFICER=[];};
-    if(isNil ("A3CSS_DOWODCA")) then {A3CSS_DOWODCA=[];};
-    if(isNil ("A3CSS_INSTRUKTOR")) then {A3CSS_INSTRUKTOR=[];};
-    _bandana = "";
-    switch(true) do {
-        case ((name ace_player) in A3CSS_ADMIN) : {_bandana = "maska_admin";};
-        case ((name ace_player) in A3CSS_OFICER) : {_bandana = "maska_oficer";};
-        case ((name ace_player) in A3CSS_DOWODCA) : {_bandana = "maska_dowodca";};
-        case ((name ace_player) in A3CSS_INSTRUKTOR) : {_bandana = "maska_instruktor";};
-        default {};
-    };
-    if(GVAR(addFunctionUnitsItems) && _bandana != "") then {
-        if(goggles ace_player == "") then {
-            ace_player addGoggles _bandana;
-        } else {
-            ace_player addItem _bandana;
-        };
-    };
-    */

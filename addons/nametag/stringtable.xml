@@ -31,6 +31,9 @@
         <Key ID="STR_A3CS_Nametag_rank_6">
             <Original>Pulkownik</Original>
         </Key>
+        <Key ID="STR_A3CS_Nametag_Actions_displayName_takeCommand">
+            <Original>Przejmij dowodzenie</Original>
+        </Key>
         <Key ID="STR_A3CS_Nametag_Actions_displayName_checkGear">
             <Original>Sprawdź sprzet</Original>
         </Key>
