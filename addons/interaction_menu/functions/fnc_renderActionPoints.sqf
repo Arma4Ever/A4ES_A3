@@ -27,10 +27,6 @@ _fnc_renderNearbyActions = {
     GVAR(foundActions) = [];
     GVAR(lastTimeSearchedActions) = ACE_diagTime;
 
-    //--- EDIT
-    a3cs_interaction_menu_fleximenuInteractionOptionsData = [];
-    //--- !EDIT
-
     _numInteractObjects = 0;
     _nearestObjects = nearestObjects [ACE_player, ["All"], 13];
     {
@@ -65,14 +61,13 @@ _fnc_renderNearbyActions = {
                     //--- EDIT
                     if(a3cs_interaction_menu_useFlexiMenu) then {
                         if(tolower ((_action select 0) select 0) == "ace_mainactions") then {
-                            private ["_subActions", "_dataIndex"];
-
+                            private ["_subActions"];
+                            
                             _subActions = _action select 1;
-                            _dataIndex = count a3cs_interaction_menu_fleximenuInteractionOptionsData;
-                            a3cs_interaction_menu_fleximenuInteractionOptionsData set [_dataIndex, [_target, _subActions]];
+                            _code = compile "_this call a3cs_interaction_menu_fnc_flexiMenuOpenInteractionMenu";
 
-                            _code = compile format ["[%1] call a3cs_interaction_menu_fnc_flexiMenuOpenInteractionMenu", _dataIndex];
                             (_action select 0) set [3, _code];
+                            (_action select 0) set [6, _subActions];
                         };
                     };
                     //--- !EDIT
