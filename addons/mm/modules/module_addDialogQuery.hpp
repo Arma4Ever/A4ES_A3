@@ -29,7 +29,7 @@ class GVAR(module_addDialogQuery): A3C_Module
 			displayName = "Uprawnieni do rozmowy";
 			description = "Strona (np. west) lub tablica (np. [jednostka1, jednostka2]) uprawniona do rozmowy. Jesli kazdy wpisz: true";
 			typeName = "STRING";
-			defaultValue = "";
+			defaultValue = "true";
 		};
     };
 
