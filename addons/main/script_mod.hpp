@@ -5,7 +5,7 @@
 
 #define MAJOR 0
 #define MINOR 6
-#define PATCHLVL 1
+#define PATCHLVL 2
 #define BUILD 0
 
 #define VERSION MAJOR.MINOR.PATCHLVL.BUILD
@@ -14,8 +14,8 @@
 #define ACE_TAG A.C.E.
 #define A3CS_TAG A3CS
 
-#define A3CS_VERSION 0.6.1
-#define A3CS_VERSION_ARRAY {0,6,1}
+#define A3CS_VERSION 0.6.2
+#define A3CS_VERSION_ARRAY {0,6,2}
 
 #define REQUIRED_VERSION 1.52
 
