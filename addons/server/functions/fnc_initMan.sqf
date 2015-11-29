@@ -7,8 +7,5 @@
 
 params ["_unit"];
 
-//Only dedicated
-if(!isDedicated) exitWith {};
-
 //Disable score
 _unit addEventHandler ["HandleScore", {false}];
