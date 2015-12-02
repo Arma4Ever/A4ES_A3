@@ -59,7 +59,7 @@ if sys.platform == "win32":
 
 ######## GLOBALS #########
 project = "@a3cs"
-project_version = "3.0.0"
+project_version = "0.1.0"
 arma3tools_path = ""
 work_drive = ""
 module_root = ""
@@ -72,7 +72,7 @@ key = ""
 dssignfile = ""
 prefix = "a3cs"
 pbo_name_prefix = "a3cs_"
-signature_blacklist = []
+signature_blacklist = ["a3cs_server.pbo"]
 importantFiles = ["mod.cpp", "README", "logo_a3cs_ca.paa"]
 versionFiles = ["mod.cpp"]
 
@@ -361,103 +361,8 @@ def copy_important_files(source_dir,destination_dir):
         raise
     finally:
         os.chdir(originalDir)
-
-
-def copy_optionals_for_building(mod,pbos):
-    src_directories = os.listdir(optionals_root)
-    current_dir = os.getcwd()
-
-    print_blue("\nChecking Optionals folder...")
-    try:
-
-        #special server.pbo processing
-        files = glob.glob(os.path.join(release_dir, project, "optionals", "*.pbo"))
-        for file in files:
-            file_name = os.path.basename(file)
-            #print ("Adding the following file: {}".format(file_name))
-            pbos.append(file_name)
-            pbo_path = os.path.join(release_dir, project, "optionals", file_name)
-            sigFile_name = file_name +"."+ key_name + ".bisign"
-            sig_path = os.path.join(release_dir, project, "optionals", sigFile_name)
-            if (os.path.isfile(pbo_path)):
-                print("Moving {} for processing.".format(pbo_path))
-                shutil.move(pbo_path, os.path.join(release_dir, project, "addons", file_name))
-
-            if (os.path.isfile(sig_path)):
-                #print("Moving {} for processing.".format(sig_path))
-                shutil.move(sig_path, os.path.join(release_dir, project, "addons", sigFile_name))
-
-    except:
-        print_error("Error in moving")
-        raise
-    finally:
-        os.chdir(current_dir)
-
-    print("")
-    try:
-        for dir_name in src_directories:
-            mod.append(dir_name)
-            #userconfig requires special handling since it is not a PBO source folder.
-            #CfgConvert fails to build server.pbo if userconfig is not found in P:\
-            if (dir_name == "userconfig"):
-                if (os.path.exists(os.path.join(release_dir, project, "optionals", dir_name))):
-                    shutil.rmtree(os.path.join(release_dir, project, "optionals", dir_name), True)
-                shutil.copytree(os.path.join(optionals_root,dir_name), os.path.join(release_dir, project, "optionals", dir_name))
-                destination = os.path.join(work_drive,dir_name)
-            else:
-                destination = os.path.join(module_root,dir_name)
-
-            print("Temporarily copying {} => {} for building.".format(os.path.join(optionals_root,dir_name),destination))
-            if (os.path.exists(destination)):
-                shutil.rmtree(destination, True)
-            shutil.copytree(os.path.join(optionals_root,dir_name), destination)
-    except:
-        print_error("Copy Optionals Failed")
-        raise
-    finally:
-        os.chdir(current_dir)
-
-
-def cleanup_optionals(mod):
-    print("")
-    try:
-        for dir_name in mod:
-            #userconfig requires special handling since it is not a PBO source folder.
-            if (dir_name == "userconfig"):
-                destination = os.path.join(work_drive,dir_name)
-            else:
-                destination = os.path.join(module_root,dir_name)
-
-            print("Cleaning {}".format(destination))
-
-            try:
-                file_name = "{}{}.pbo".format(pbo_name_prefix,dir_name)
-                src_file_path = os.path.join(release_dir, project, "addons", file_name)
-                dst_file_path = os.path.join(release_dir, project, "optionals", file_name)
-
-                sigFile_name = "{}.{}.bisign".format(file_name,key_name)
-                src_sig_path = os.path.join(release_dir, project, "addons", sigFile_name)
-                dst_sig_path = os.path.join(release_dir, project, "optionals", sigFile_name)
-
-                if (os.path.isfile(src_file_path)):
-                    #print("Preserving {}".format(file_name))
-                    os.renames(src_file_path,dst_file_path)
-                if (os.path.isfile(src_sig_path)):
-                    #print("Preserving {}".format(sigFile_name))
-                    os.renames(src_sig_path,dst_sig_path)
-            except FileExistsError:
-                print_error("{} already exists".format(file_name))
-                continue
-            shutil.rmtree(destination)
-
-    except FileNotFoundError:
-        print_yellow("{} file not found".format(file_name))
-
-    except:
-        print_error("Cleaning Optionals Failed")
-        raise
-
-
+			
+			
 def purge(dir, pattern, friendlyPattern="files"):
     print_green("Deleting {} files from directory: {}".format(friendlyPattern,dir))
     for f in os.listdir(dir):
@@ -489,7 +394,7 @@ def check_for_obsolete_pbos(addonspath, file):
 
 
 def backup_config(module):
-    #PABST: Convert config (run the macro'd config.cpp through CfgConvert twice to produce a de-macro'd cpp that pboProject can read without fucking up:
+    #backup original $PBOPREFIX$
     global work_drive
     global prefix
 
@@ -503,52 +408,11 @@ def backup_config(module):
     except:
         print_error("Error creating backup of $PBOPREFIX$ for module {}.".format(module))
 
-    try:
-        shutil.copyfile(os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.backup"))
-        os.chdir(work_drive)
-    except:
-        print_error("Error creating backup of config.cpp for module {}.".format(module))
-
     return True
-
-def convert_config(module):
-    try:
-        global work_drive
-        global prefix
-        global arma3tools_path
-
-        cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-bin", "-dst", os.path.join(work_drive, prefix, module, "config.bin"), os.path.join(work_drive, prefix, module, "config.cpp")]
-        ret = subprocess.call(cmd)
-        if ret != 0:
-            print_error("CfgConvert -bin return code == {}. Usually means there is a syntax error within the config.cpp file.".format(str(ret)))
-            os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
-            shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
-
-        cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-txt", "-dst", os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.bin")]
-        ret = subprocess.call(cmd)
-        if ret != 0:
-            print_error("CfgConvert -txt return code == {}. Usually means there is a syntax error within the config.cpp file.".format(str(ret)))
-            os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
-            shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
-    except Exception as e:
-        print_error("Exception from convert_config=>CfgConvert: {}".format(e))
-        return False
-
-    return True
-
 
 def addon_restore(modulePath):
-    #PABST: cleanup config BS (you could comment this out to see the "de-macroed" cpp
-    #print_green("\Pabst! (restoring): {}".format(os.path.join(modulePath, "config.cpp")))
+    #restore original $PBOPREFIX$
     try:
-        if os.path.isfile(os.path.join(modulePath, "config.cpp")):
-            os.remove(os.path.join(modulePath, "config.cpp"))
-        if os.path.isfile(os.path.join(modulePath, "config.backup")):
-            os.rename(os.path.join(modulePath, "config.backup"), os.path.join(modulePath, "config.cpp"))
-        if os.path.isfile(os.path.join(modulePath, "config.bin")):
-            os.remove(os.path.join(modulePath, "config.bin"))
-        if os.path.isfile(os.path.join(modulePath, "texHeaders.bin")):
-            os.remove(os.path.join(modulePath, "texHeaders.bin"))
         if os.path.isfile(os.path.join(modulePath, "$PBOPREFIX$.backup")):
             if os.path.isfile(os.path.join(modulePath, "$PBOPREFIX$")):
                 os.remove(os.path.join(modulePath, "$PBOPREFIX$"))
@@ -961,11 +825,11 @@ See the make.cfg file for additional build options.
             print_error ("Directory {} does not exist.".format(module_root))
             sys.exit()
 
-        if (os.path.isdir(optionals_root)):
-            print_green ("optionals_root: {}".format(optionals_root))
-        else:
-            print_error ("Directory {} does not exist.".format(optionals_root))
-            sys.exit()
+        #if (os.path.isdir(optionals_root)):
+        #    print_green ("optionals_root: {}".format(optionals_root))
+        #else:
+        #    print_error ("Directory {} does not exist.".format(optionals_root))
+        #    sys.exit()
 
         print_green ("release_dir: {}".format(release_dir))
 
@@ -1044,7 +908,7 @@ See the make.cfg file for additional build options.
         # Temporarily copy optionals_root for building. They will be removed later.
         optionals_modules = []
         optional_files = []
-        copy_optionals_for_building(optionals_modules,optional_files)
+        #copy_optionals_for_building(optionals_modules,optional_files)
 
         # Get list of subdirs in make root.
         dirs = next(os.walk(module_root))[1]
@@ -1074,7 +938,7 @@ See the make.cfg file for additional build options.
                     print_green("Created: {}".format(os.path.join(private_key_path, key_name + ".biprivatekey")))
                     print("Removing any old signature keys...")
                     purge(os.path.join(module_root, release_dir, project, "addons"), "^.*\.bisign$","*.bisign")
-                    purge(os.path.join(module_root, release_dir, project, "optionals"), "^.*\.bisign$","*.bisign")
+                    #purge(os.path.join(module_root, release_dir, project, "optionals"), "^.*\.bisign$","*.bisign")
                     purge(os.path.join(module_root, release_dir, project, "keys"), "^.*\.bikey$","*.bikey")
                 else:
                     print_error("Failed to create key!")
@@ -1123,6 +987,9 @@ See the make.cfg file for additional build options.
                     except:
                         print_error("\nFailed to delete {}".format(os.path.join(obsolete_check_path,file)))
                         pass
+
+        amountOfBuildsFailed = 0
+        namesOfBuildsFailed = []
 
         # For each module, prep files and then build.
         print_blue("\nBuilding...")
@@ -1216,9 +1083,6 @@ See the make.cfg file for additional build options.
                     nobinFilePath = os.path.join(work_drive, prefix, module, "$NOBIN$")
                     backup_config(module)
 
-                    if (not os.path.isfile(nobinFilePath)):
-                        convert_config(module)
-
                     version_stamp_pboprefix(module,commit_id)
 
                     if os.path.isfile(nobinFilePath):
@@ -1266,6 +1130,8 @@ See the make.cfg file for additional build options.
                         print_error("pboProject return code == {}".format(str(ret)))
                         print_error("Module not successfully built/signed. Check your {}temp\{}_packing.log for more info.".format(work_drive,module))
                         print ("Resuming build...")
+                        amountOfBuildsFailed += 1
+                        namesOfBuildsFailed.append("{}".format(module))
                         continue
 
                     # Back to the root
@@ -1361,7 +1227,7 @@ See the make.cfg file for additional build options.
 
     finally:
         copy_important_files(module_root_parent,os.path.join(release_dir, project))
-        cleanup_optionals(optionals_modules)
+        #cleanup_optionals(optionals_modules)
         if not version_update:
             restore_version_files()
 
@@ -1432,12 +1298,18 @@ See the make.cfg file for additional build options.
             except:
                 print_error("Could not copy files. Is Arma 3 running?")
 
-    print_green("\nDone.")
+    if amountOfBuildsFailed > 0:
+        print_error("Build failed. {} pbos failed.".format(amountOfBuildsFailed))
 
+        for failedModuleName in namesOfBuildsFailed:
+            print("- {} failed.".format(failedModuleName))
+
+    else:
+        print_green("\Completed with 0 errors.")
 
 if __name__ == "__main__":
     start_time = timeit.default_timer()
     main(sys.argv)
     d,h,m,s = Fract_Sec(timeit.default_timer() - start_time)
     print("\nTotal Program time elapsed: {0:2}h {1:2}m {2:4.5f}s".format(h,m,s))
-input("Press Enter to continue...")
+    input("Press Enter to continue...")
