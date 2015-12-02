@@ -10,7 +10,7 @@ class CfgSounds {
         class GVAR(soundeffect_02)
         {
                 name = "pam_module_soundeffect_02";
-                sound[] = {PATHTOF(sounds\chase.ogg) 1, 1};
+                sound[] = {PATHTOF(sounds\chase.ogg), 1, 1};
                 soundtime = 6; //czas trwania dzwieku w sekundach
                 titles[] = {0, ""};
         };
