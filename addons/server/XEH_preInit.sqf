@@ -2,7 +2,6 @@
 
 ADDON = false;
 
-PREP(initMan);
 PREP(handleKilled);
 PREP(onEachFrame);
 PREP(getMissionData);
