@@ -42,6 +42,7 @@ PREP(module_genCas);
 PREP(module_genHeliSupportdrop);
 PREP(module_genParadrop);
 PREP(module_genSupplydrop);
+PREP(module_getInVehicle);
 
 PREP(module_assignMedic);
 PREP(module_assignEngineer);
@@ -52,6 +53,7 @@ PREP(module_assignRepairFacility);
 PREP(module_assignRepairVehicle);
 
 PREP(module_surrenderUnit);
+PREP(module_handcuffUnit);
 PREP(module_weatherSettings);
 
 ADDON = true;
