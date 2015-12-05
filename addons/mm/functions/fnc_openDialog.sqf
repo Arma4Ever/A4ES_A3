@@ -4,19 +4,19 @@
 */
 #include "script_component.hpp"
 
-if(isDedicated) exitWith {};
+if(!hasInterface) exitWith {};
 
 _unit = _this select 0;
 _player = _this select 1;
 
 _dialogID =  _unit getVariable ["a3c_dialog_id", ""];
 
-if(_dialogID == "") exitWith {};
+if(_dialogID == "") exitWith {hint "1";};
 
 _dialogIDStr = format ["a3c_sys_var_dialog_%1",_dialogID];
 _missionDialogs = missionNamespace getVariable [_dialogIDStr,[]];
 
-if(count _missionDialogs == 0) exitWith {};
+if(count _missionDialogs == 0) exitWith {hint "2";};
 
 _dialogs = [];
 {

@@ -35,6 +35,7 @@ class CfgVehicles {
     #include "modules\module_sandStorm.hpp"
     #include "modules\module_soundEffect.hpp"
     #include "modules\module_playSound.hpp"
+    #include "modules\module_getInVehicle.hpp"
     #include "modules\module_assignMedic.hpp"
     #include "modules\module_assignEngineer.hpp"
     #include "modules\module_assignEod.hpp"
@@ -43,5 +44,6 @@ class CfgVehicles {
     #include "modules\module_assignRepairFacility.hpp"
     #include "modules\module_assignRepairVehicle.hpp"
     #include "modules\module_surrenderUnit.hpp"
+    #include "modules\module_handcuffUnit.hpp"
     #include "modules\module_weatherSettings.hpp"
 };
