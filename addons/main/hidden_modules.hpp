@@ -209,3 +209,7 @@ class ACE_moduleAssignRepairFacility: ACE_moduleAssignEngineerRoles {scope = 1;}
 class ACE_moduleAssignRepairVehicle: Module_F {scope = 1;};
 class ace_map_gestures_moduleSettings: ACE_Module {scope = 1;};
 class ace_map_gestures_moduleGroupSettings: ACE_Module {scope = 1;};
+class ACE_moduleRearmSettings: ACE_Module {scope = 1;};
+class ACE_moduleRefuelSettings: ACE_Module {scope = 1;};
+class ace_captives_ModuleHandcuffed: ACE_Module {scope = 1;};
+class ace_nightvision_ModuleSettings: ACE_Module {scope = 1;};

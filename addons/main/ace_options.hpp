@@ -596,4 +596,23 @@ class ACE_Settings {
         value = 0.03; //0.03s
         typeName = "SCALAR";
     };
+
+    /****** ace_rearm ******/
+    class ace_rearm_level {
+        value = 0;
+        typeName = "SCALAR";
+    };
+
+    /****** ace_refuel ******/
+    class ace_refuel_rate {
+        value = 10;
+        typeName = "SCALAR";
+    };
+
+    /****** ace_nightvision ******/
+    class ace_nightvision_disableNVGsWithSights {
+        value = 0;
+        typeName = "BOOL";
+    };
+
 };
