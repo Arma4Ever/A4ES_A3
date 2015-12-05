@@ -1,8 +1,6 @@
 #include "script_component.hpp"
-class CfgPatches
-{
-    class ADDON
-    {
+class CfgPatches {
+    class ADDON {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -31,6 +29,13 @@ class Extended_Respawn_EventHandlers {
     class CAManBase {
         class GVAR(handleRating) {
             respawn = QUOTE(call COMPILE_FILE(XEH_init));
+        };
+    };
+};
+class Extended_Local_EventHandlers {
+    class CAManBase {
+        class GVAR(handleRating) {
+            local = QUOTE(call COMPILE_FILE(XEH_init));
         };
     };
 };
