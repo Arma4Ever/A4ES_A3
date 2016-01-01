@@ -161,7 +161,7 @@ class ACE_Settings {
         typeName = "BOOL";
     };
     class ace_medical_preventInstaDeath {
-        value = 0; //no!
+        value = 1; //yes //testing
         typeName = "BOOL";
     };
     class ace_medical_bleedingCoefficient {
@@ -535,7 +535,7 @@ class ACE_Settings {
         typeName = "BOOL";
     };
     class ace_weather_serverUpdateInterval {
-        value = 60; //60s
+        value = 30; //30s
         typeName = "SCALAR";
     };
 
