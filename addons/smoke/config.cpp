@@ -22,7 +22,7 @@ class CfgCloudlets
 		colorCoef[] = {"colorR","colorG","colorB","colorA"};
 		sizeCoef = 1;
 		position[] = {0,0,0};
-		interval = 0.00825; //oryginal: 0.03 last: 0.00525
+		interval = 0.01; //oryginal: 0.03 last: 0.01
 		circleRadius = 0;
 		circleVelocity[] = {0,0,0};
 		particleShape = "\A3\data_f\ParticleEffects\Universal\Universal";
