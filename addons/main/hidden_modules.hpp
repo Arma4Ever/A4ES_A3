@@ -130,9 +130,9 @@ class ModuleCuratorSetCoefs_F: Module_F {scope = 1;};
 
 class ModulePostprocess_F: Module_F {scope = 1;scopeCurator = 0;};
 class ModuleLightning_F: Module_F {scope = 1;scopeCurator = 0;};
-class ModuleSkiptime_F: Module_F {scope = 1;scopeCurator = 0;};
-class ModuleWeather_F: Module_F {scope = 1;scopeCurator = 0;};
-class ModuleTimeMultiplier_F: Module_F {scope = 1;scopeCurator = 0;};
+class ModuleSkiptime_F: Module_F {scope = 1;scopeCurator = 2;};
+class ModuleWeather_F: Module_F {scope = 1;scopeCurator = 2;};
+class ModuleTimeMultiplier_F: Module_F {scope = 1;scopeCurator = 2;};
 class ModuleRespawnInventory_F: Module_F {scope = 1;scopeCurator = 0;};
 class ModuleRespawnPositionWest_F: Module_F {scope = 1;scopeCurator = 0;};
 class ModuleRespawnPositionEast_F: ModuleRespawnPositionWest_F {scope = 1;scopeCurator = 0;};

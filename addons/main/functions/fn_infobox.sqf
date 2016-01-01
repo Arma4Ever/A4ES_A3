@@ -7,13 +7,13 @@
 disableSerialization;
 
 params ["_mode"];
-private ["_nickname", "_uid", "_lang", "_possibleMods", "_mods"];
+private ["_nickname", "_uid", "_lang", "_modList", "_mods"];
 
 _nickname = profileNameSteam;
 _uid = profilenamespace getVariable ["player_uid", 0];
 _lang = language;
 
-_possibleMods = ["CBA", "TFAR", "A3CS", "PAM", "A3MP", "A3AP"];
+_modList = getArray (configFile >> "a3c_mods" >> "modlist");
 _mods = "";
 
 {
@@ -33,7 +33,7 @@ _mods = "";
 		};
 
 	};
-} foreach _possibleMods;
+} foreach _modList;
 
 //send data
 

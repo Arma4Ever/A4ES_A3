@@ -47,11 +47,12 @@ class Extended_PostInit_EventHandlers {
     };
 };
 
-class CfgMods
-{
+class a3c_mods {
+    modlist[] += {"CBA","TFAR","A3CS","PAM","A3MP","A3AP"};
+};
+class CfgMods {
     class Mod_Base;
-    class A3CS: Mod_Base
-    {
+    class A3CS: Mod_Base {
         name = "Arma 3 Combat System";
         picture = PATHTOF(data\logo_a3cs_ca.paa);
         actionName = "Forum";
@@ -71,18 +72,14 @@ class CfgMods
     };
 };
 
-class CfgVehicleClasses
-{
-    class a3cs_objects
-    {
+class CfgVehicleClasses {
+    class a3cs_objects {
         displayname = "$STR_A3CS_Main_VehicleClasses_displayname_objects";
     };
-    class a3cs_crates
-    {
+    class a3cs_crates {
         displayname = "$STR_A3CS_Main_VehicleClasses_displayname_crates";
     };
-    class a3cs_crates_empty
-    {
+    class a3cs_crates_empty {
         displayname = "$STR_A3CS_Main_VehicleClasses_displayname_crates_empty";
     };
 };
@@ -92,8 +89,7 @@ class CfgVehicleClasses
 #include "ace_options.hpp"
 #include "ace_medical_treatments.hpp"
 
-class CfgVehicles
-{
+class CfgVehicles {
     class Module_F;
     class ACE_Module;
     #include "hidden_modules.hpp"
