@@ -15,7 +15,7 @@ class GVAR(module_playSound): A3C_Module
         };
         class sound {
             displayName = "Sciezka do dzwieku";
-            description = "np. sounds\dzwiek.ogg";
+            description = "np. sounds(backslash)dzwiek.ogg";
             typeName = "STRING";
         };
         class soundFromMS {
