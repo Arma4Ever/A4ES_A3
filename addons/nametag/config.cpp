@@ -140,46 +140,46 @@ class CfgMarkers
 	class ST_STHudM_Rifleman: ST_STHudM_Base
 	{
 		name = "zzzSTHud - Rifleman";
-		icon = "\A3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+		icon = "\a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
 	};
 	class ST_STHudM_Medic: ST_STHudM_Base
 	{
 		name = "zzzSTHud - Medic";
-		icon = "\A3\ui_f\data\map\vehicleicons\iconManMedic_ca.paa";
+		icon = "\a3\ui_f\data\map\vehicleicons\iconManMedic_ca.paa";
 	};
 	class ST_STHudM_Engineer: ST_STHudM_Base
 	{
 		name = "zzzSTHud - Engineer";
-		icon = "\A3\ui_f\data\map\vehicleicons\iconManEngineer_ca.paa";
+		icon = "\a3\ui_f\data\map\vehicleicons\iconManEngineer_ca.paa";
 	};
 	class ST_STHudM_Explosive: ST_STHudM_Base
 	{
 		name = "zzzSTHud - Explosive";
-		icon = "\A3\ui_f\data\map\vehicleicons\iconManExplosive.paa";
+		icon = "\a3\ui_f\data\map\vehicleicons\iconmanexplosive_ca.paa";
 	};
 	class ST_STHudM_Recon: ST_STHudM_Base
 	{
 		name = "zzzSTHud - Recon";
-		icon = "\A3\ui_f\data\map\vehicleicons\iconManRecon.paa";
+		icon = "\a3\ui_f\data\map\vehicleicons\iconmanrecon_ca.paa";
 	};
 	class ST_STHudM_AT: ST_STHudM_Base
 	{
 		name = "zzzSTHud - AT";
-		icon = "\A3\ui_f\data\map\vehicleicons\iconManAT_ca.paa";
+		icon = "\a3\ui_f\data\map\vehicleicons\iconManAT_ca.paa";
 	};
 	class ST_STHudM_Leader: ST_STHudM_Base
 	{
 		name = "zzzSTHud - Leader";
-		icon = "\A3\ui_f\data\map\vehicleicons\iconManLeader_ca.paa";
+		icon = "\a3\ui_f\data\map\vehicleicons\iconManLeader_ca.paa";
 	};
 	class ST_STHudM_MG: ST_STHudM_Base
 	{
 		name = "zzzSTHud - MG";
-		icon = "\A3\ui_f\data\map\vehicleicons\iconManMG_ca.paa";
+		icon = "\a3\ui_f\data\map\vehicleicons\iconManMG_ca.paa";
 	};
 	class ST_STHudM_Officer: ST_STHudM_Base
 	{
 		name = "zzzSTHud - Officer";
-		icon = "\A3\ui_f\data\map\vehicleicons\iconManOfficer_ca.paa";
+		icon = "\a3\ui_f\data\map\vehicleicons\iconManOfficer_ca.paa";
 	};
 };
