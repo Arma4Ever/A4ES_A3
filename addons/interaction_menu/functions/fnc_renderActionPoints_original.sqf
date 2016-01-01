@@ -34,7 +34,7 @@ _fnc_renderNearbyActions = {
 
         // Quick oclussion test. Skip objects more than 1 m behind the camera plane
         _lambda = ((getPosASL _x) vectorDiff _cameraPos) vectorDotProduct _cameraDir;
-        if (_lambda > -1) then {
+        if ((_lambda > -1) && {!isObjectHidden _target}) then {
             _numInteractions = 0;
             // Prevent interacting with yourself or your own vehicle
             if (_target != ACE_player && {_target != vehicle ACE_player}) then {
@@ -166,7 +166,7 @@ if (count GVAR(collectedActionPoints) > 1) then {
             // Check if action point _i is ocluded by _j
             _delta = vectorNormalized ((GVAR(collectedActionPoints) select _i select 1) vectorDiff (GVAR(collectedActionPoints) select _j select 1));
 
-            // If _i is inside a cone with 20º half angle with origin on _j
+            // If _i is inside a cone with 20ยบ half angle with origin on _j
             if (_delta select 2 > 0.94) exitWith {
                 GVAR(collectedActionPoints) deleteAt _i;
             };

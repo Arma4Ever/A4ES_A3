@@ -12,7 +12,7 @@ if(count _menuPath > 0) then {
 
             if(typename _actionChildren != typename []) then {_actionChildren = [];};
 
-			_actionChildren append _scriptedChildren;
+			_actionChildren = _scriptedChildren;
 		};
 
 		_menuActions = _actionChildren;
