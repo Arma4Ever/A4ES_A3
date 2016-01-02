@@ -2,6 +2,9 @@
 
 if(!hasInterface) exitWith {};
 
+//testing
+{player reveal _x;} foreach vehicles;
+
 if(isMultiplayer) then {
     private ["_uid"];
     _uid = getPlayerUID player;
