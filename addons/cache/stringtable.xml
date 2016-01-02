@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+    <Package name="Cache">
+        <Key ID="STR_A3CS_Cache_module_cacheSettings_enabled_displayName">
+            <Original>Włącz</Original>
+        </Key>
+        <Key ID="STR_A3CS_Cache_module_cacheSettings_enabled_description">
+            <Original>Włącz system cache jednostek</Original>
+        </Key>
+        <Key ID="STR_A3CS_Cache_module_cacheSettings_distance_displayName">
+            <Original>Min. odległość</Original>
+        </Key>
+        <Key ID="STR_A3CS_Cache_module_cacheSettings_distance_description">
+            <Original>Odległość z jakiej najbliższy gracz będzie uruchamiał system</Original>
+        </Key>
+	</Package>
+</Project>
