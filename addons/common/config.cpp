@@ -18,6 +18,11 @@ class Extended_PreInit_EventHandlers {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
     };
 };
+class Extended_PostInit_EventHandlers {
+    class ADDON {
+        serverInit = QUOTE(call COMPILE_FILE(XEH_post_initServer));
+    };
+};
 class Extended_Init_EventHandlers {
     class CAManBase {
         class GVAR(handleRating) {
