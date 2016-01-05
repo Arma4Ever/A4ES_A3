@@ -8,14 +8,13 @@ class GVAR(module_snowEffect): A3C_Module
 
     class Arguments {
 		class effecttype {
-			displayName = "Sila opadow";
+			displayName = "Typ opadow";
 			description = "";
 			typeName = "NUMBER";
 			class values {
-				class none {name = "Brak"; value = 0; default = 1;};
-				class easy {name = "Slabe opady"; value = 1; default = 0;};
-				class medium {name = "Srednie opady"; value = 2; default = 0;};
-				class hard {name = "Silne opady"; value = 3; default = 0;};
+				class flurry {name = "Rzadkie"; value = 0; default = 1;};
+				class lightStorm {name = "Lekka burza"; value = 1; default = 0;};
+				class mediumStorm {name = "Burza"; value = 2; default = 0;};
 			};
 		};
     };

@@ -1,69 +1,90 @@
 /*
-	Author: SzwedzikPL
+    Author: SzwedzikPL
 
-	Description:
-	Create snow effect
+    Description:
+    Create snow effect
 */
 #include "script_component.hpp"
 
-_logic = [_this,0,objNull,[objNull]] call BIS_fnc_param;
-_units = [_this,1,[],[[]]] call BIS_fnc_param;
-_activated = [_this,2,true,[true]] call BIS_fnc_param;
+params ["_logic", "_units", "_activated"];
+private ["_effectType"];
 
-if(isDedicated) exitWith {};
+if(!hasInterface) exitWith {};
+if(!_activated) exitWith {};
 
-if (_activated) then {
-	_n = _logic spawn {
-		private ["_pos","_snp","_d","_h","_h1","_h2","_density","_a"];
+_effectType = _logic getvariable ["effecttype", 0];
 
-        sleep 0.5;
-
-		_snp = _this getvariable ["effecttype",0];
-		_d = 15;
-		_h = 12;
-		_h1 = 8;
-		_h2 = 4;
-		_density = 20000;
-
-		while {true} do
-		{
-			_pos = position vehicle ace_player;
-			if(_snp > 0) then {
-				_a = 0;
-				while { _a < _density } do
-				{
-					_pos = position vehicle ace_player;
-					0 setRain 0;
-					if(_snp > 0) then {
-						_dpos = [((_pos select 0) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 1) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 2) + _h)];
-						drop ["\A3\data_f\ParticleEffects\Universal\smoke", "", "Billboard", 1, 7, _dpos, [0,0,-1], 1, 0.0000001, 0.000, 0.7, [0.01,0.01,0.01,0.01], [[1,1,1,0], [1,1,1,1], [1,1,1,1], [1,1,1,1]], [0,0], 0.2, 1.2, "", "", ""];
-						_dpos = [((_pos select 0) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 1) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 2) + _h)];
-						drop ["\A3\data_f\ParticleEffects\Universal\smoke", "", "Billboard", 1, 7, _dpos, [0,0,-1], 1, 0.0000001, 0.000, 0.7, [0.02,0.02,0.02,0.02], [[1,1,1,0], [1,1,1,1], [1,1,1,1], [1,1,1,1]], [0,0], 0.2, 1.2, "", "", ""];
-						_dpos = [((_pos select 0) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 1) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 2) + _h1)];
-						drop ["\A3\data_f\ParticleEffects\Universal\smoke", "", "Billboard", 1, 7, _dpos, [0,0,-1], 1, 0.0000001, 0.000, 0.7, [0.04,0.04,0.04,0.04], [[1,1,1,0], [1,1,1,1], [1,1,1,1], [1,1,1,1]], [0,0], 0.2, 1.2, "", "", ""];
-					};
-					if(_snp > 1) then {
-						_dpos = [((_pos select 0) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 1) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 2) + _h2)];
-						drop ["\A3\data_f\ParticleEffects\Universal\smoke", "", "Billboard", 1, 7, _dpos, [0,0,-1], 1, 0.0000001, 0.000, 0.7, [0.05,0.05,0.05,0.05], [[1,1,1,0], [1,1,1,1], [1,1,1,1], [1,1,1,1]], [0,0], 0.2, 1.2, "", "", ""];
-						_dpos = [((_pos select 0) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 1) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 2) + _h2)];
-						drop ["\A3\data_f\ParticleEffects\Universal\smoke", "", "Billboard", 1, 7, _dpos, [0,0,-1], 1, 0.0000001, 0.000, 0.7, [0.045,0.045,0.045,0.045], [[1,1,1,0], [1,1,1,1], [1,1,1,1], [1,1,1,1]], [0,0], 0.2, 1.2, "", "", ""];
-						_dpos = [((_pos select 0) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 1) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 2) + _h2)];
-						drop ["\A3\data_f\ParticleEffects\Universal\smoke", "", "Billboard", 1, 7, _dpos, [0,0,-1], 1, 0.0000001, 0.000, 0.7, [0.035,0.035,0.035,0.035], [[1,1,1,0], [1,1,1,1], [1,1,1,1], [1,1,1,1]], [0,0], 0.2, 1.2, "", "", ""];
-					};
-					if(_snp > 2) then {
-						_dpos = [((_pos select 0) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 1) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 2) + _h2)];
-						drop ["\A3\data_f\ParticleEffects\Universal\smoke", "", "Billboard", 1, 7, _dpos, [0,0,-1], 1, 0.0000001, 0.000, 0.7, [0.025,0.025,0.025,0.025], [[1,1,1,0], [1,1,1,1], [1,1,1,1], [1,1,1,1]], [0,0], 0.2, 1.2, "", "", ""];
-						_dpos = [((_pos select 0) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 1) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 2) + _h2)];
-						drop ["\A3\data_f\ParticleEffects\Universal\smoke", "", "Billboard", 1, 7, _dpos, [0,0,-1], 1, 0.0000001, 0.000, 0.7, [0.015,0.015,0.015,0.015], [[1,1,1,0], [1,1,1,1], [1,1,1,1], [1,1,1,1]], [0,0], 0.2, 1.2, "", "", ""];
-						_dpos = [((_pos select 0) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 1) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 2) + _h2)];
-						drop ["\A3\data_f\ParticleEffects\Universal\smoke", "", "Billboard", 1, 7, _dpos, [0,0,-1], 1, 0.0000001, 0.000, 0.7, [0.035,0.035,0.035,0.035], [[1,1,1,0], [1,1,1,1], [1,1,1,1], [1,1,1,1]], [0,0], 0.2, 1.2, "", "", ""];
-					};
-					_a = _a + 1;
-				};
-			};
-			sleep 0.2;
-		};
-	};
+//flurry
+if(_effectType == 0) then {
+    [{
+        private ["_sourceParent"];
+        _sourceParent = "#particleSource" createVehicleLocal (position player);
+        _sourceParent setParticleParams [["\A3\data_f\ParticleEffects\Universal\Universal", 16,12,13,1], "","Billboard", 1, 7, [0,0,0], [0,0,0], 1, 0.0000001, 0.000, 1.7,[0.07],[[1,1,1,1]],[0,1], 0.2, 1.2, "", "", vehicle ace_player];
+        _sourceParent setParticleRandom [0,[30,30,20],[0,0,0],0,0.01,[0,0,0,0.1],0,0];
+        _sourceParent setParticleCircle [0,[0,0,0]];
+        _sourceParent setDropInterval 0.00001;
+    }, [], 1] call ace_common_fnc_waitAndExecute;
+};
+//light storm
+if(_effectType == 1) then {
+    [{
+        private ["_sourceParent", "_sourceLightFront", "_sourceLightRear", "_sourceLightRight", "_sourceLightLeft"];
+        _sourceParent = "#particleSource" createVehicleLocal (position player);
+        _sourceParent setParticleParams [["a3\data_f\ParticleEffects\Universal\Universal.p3d",16,13,10,0],"","Billboard",1,8,[0,0,8],[0,0,-8],(.7),1.69,1,2,[.05],[[1,1,1,0],[1,1,1,.99]],[1000],.7,.3,"","",vehicle ace_player];
+        _sourceParent setParticleCircle [0,[0,0,0]];
+        _sourceParent setParticleRandom [0,[15,15,.5],[0,0,0],0,0.55,[0,0,0,.5],0,0];
+        _sourceParent setDropInterval 0.003;
+        _sourceLightFront = "#particlesource" createVehicleLocal (position player);
+        _sourceLightFront setParticleParams [["a3\data_f\ParticleEffects\Universal\Universal.p3d",16,14,2,0],"","Billboard",1,10,[0,30,12],[0,0,-8],1,1.59,1,2,[1.75],[[1,1,1,0.2],[1,1,1,0.4]],[1000],0.5,0.15,"","",vehicle ace_player];
+        _sourceLightFront setParticleCircle [0,[0,0,0]];
+        _sourceLightFront setParticleRandom [0,[20,20,.5],[0,0,0],0,0,[0,0,0,0.03],0,0];
+        _sourceLightFront setDropInterval 0.004;
+        _sourceLightRear = "#particleSource" createVehicleLocal (position player);
+        _sourceLightRear setParticleParams [["a3\data_f\ParticleEffects\Universal\Universal.p3d",16,13,6,0],"","Billboard",1,14,[0,0,18],[0,0,-8],(.7),1.69,1,2,[5],[[1,1,1,0],[1,1,1,.29]],[1000],.7,.2,"","",vehicle ace_player];
+        _sourceLightRear setParticleCircle [0,[0,0,0]];
+        _sourceLightRear setParticleRandom [0,[40,40,.5],[0,0,0],0,0,[0,0,0,0],0,0];
+        _sourceLightRear setDropInterval 0.009;
+        _sourceLightRight = "#particlesource" createVehicleLocal (position player);
+        _sourceLightRight setParticleParams [["a3\data_f\ParticleEffects\Universal\Universal.p3d",16,14,2,0],"","Billboard",1,10,[0,10,12],[0,0,-8],1,1.59,1,2,[1.75],[[1,1,1,0.2],[1,1,1,0.4]],[1000],0.5,0.15,"","",vehicle ace_player];
+        _sourceLightRight setParticleCircle [0,[0,0,0]];
+        _sourceLightRight setParticleRandom [0,[15,20,.5],[0,0,0],0,0,[0,0,0,0.03],0,0];
+        _sourceLightRight setDropInterval 0.009;
+        _sourceLightLeft = "#particleSource" createVehicleLocal (position player);
+        _sourceLightLeft setParticleParams [["a3\data_f\ParticleEffects\Universal\Universal.p3d",16,13,6,0],"","Billboard",1,8,[0,0,8],[0,0,-8],0,1.69,1,2,[5],[[1,1,1,0],[1,1,1,.29]],[1000],.7,.2,"","",vehicle ace_player];
+        _sourceLightLeft setParticleCircle [0,[0,0,0]];
+        _sourceLightLeft setParticleRandom [0,[40,40,.5],[0,0,0],0,0,[0,0,0,0],0,0];
+        _sourceLightLeft setDropInterval 0.009;
+    }, [], 1] call ace_common_fnc_waitAndExecute;
 };
 
-true
+//med storm
+if(_effectType == 2) then {
+    [{
+        private ["_sourceParent", "_sourceLightFront", "_sourceLightRear", "_sourceLightRight", "_sourceLightLeft"];
+        _sourceParent = "#particleSource" createVehicleLocal (position player);
+        _sourceParent setParticleParams [["a3\data_f\ParticleEffects\Universal\Universal.p3d",16,13,10,0],"","Billboard",1,8,[0,0,8],[0,0,-8],(.7),1.69,1,2,[.05],[[1,1,1,0],[1,1,1,.99]],[1000],.7,.3,"","",vehicle ace_player];
+        _sourceParent setParticleCircle [0,[0,0,0]];
+        _sourceParent setParticleRandom [0,[15,15,.5],[0,0,0],0,0.55,[0,0,0,.5],0,0];
+        _sourceParent setDropInterval 0.001;
+        _sourceLightFront = "#particlesource" createVehicleLocal (position player);
+        _sourceLightFront setParticleParams [["a3\data_f\ParticleEffects\Universal\Universal.p3d",16,14,2,0],"","Billboard",1,10,[0,30,12],[0,0,-8],1,1.59,1,2,[1.75],[[1,1,1,0.2],[1,1,1,0.4]],[1000],0.5,0.15,"","",vehicle ace_player];
+        _sourceLightFront setParticleCircle [0,[0,0,0]];
+        _sourceLightFront setParticleRandom [0,[20,20,.5],[0,0,0],0,0,[0,0,0,0.03],0,0];
+        _sourceLightFront setDropInterval 0.002;
+        _sourceLightRear = "#particleSource" createVehicleLocal (position player);
+        _sourceLightRear setParticleParams [["a3\data_f\ParticleEffects\Universal\Universal.p3d",16,13,6,0],"","Billboard",1,14,[0,0,18],[0,0,-8],(.7),1.69,1,2,[5],[[1,1,1,0],[1,1,1,.29]],[1000],.7,.2,"","",vehicle ace_player];
+        _sourceLightRear setParticleCircle [0,[0,0,0]];
+        _sourceLightRear setParticleRandom [0,[40,40,.5],[0,0,0],0,0,[0,0,0,0],0,0];
+        _sourceLightRear setDropInterval 0.007;
+        _sourceLightRight = "#particlesource" createVehicleLocal (position player);
+        _sourceLightRight setParticleParams [["a3\data_f\ParticleEffects\Universal\Universal.p3d",16,14,2,0],"","Billboard",1,10,[0,10,12],[0,0,-8],1,1.59,1,2,[1.75],[[1,1,1,0.2],[1,1,1,0.4]],[1000],0.5,0.15,"","",vehicle ace_player];
+        _sourceLightRight setParticleCircle [0,[0,0,0]];
+        _sourceLightRight setParticleRandom [0,[15,20,.5],[0,0,0],0,0,[0,0,0,0.03],0,0];
+        _sourceLightRight setDropInterval 0.007;
+        _sourceLightLeft = "#particleSource" createVehicleLocal (position player);
+        _sourceLightLeft setParticleParams [["a3\data_f\ParticleEffects\Universal\Universal.p3d",16,13,6,0],"","Billboard",1,8,[0,0,8],[0,0,-8],0,1.69,1,2,[5],[[1,1,1,0],[1,1,1,.29]],[1000],.7,.2,"","",vehicle ace_player];
+        _sourceLightLeft setParticleCircle [0,[0,0,0]];
+        _sourceLightLeft setParticleRandom [0,[40,40,.5],[0,0,0],0,0,[0,0,0,0],0,0];
+        _sourceLightLeft setDropInterval 0.007;
+    }, [], 1] call ace_common_fnc_waitAndExecute;
+};
