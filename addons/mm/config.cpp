@@ -36,6 +36,16 @@ class Extended_Killed_EventHandlers {
     };
 };
 
+class ACE_Settings {
+    class GVAR(enableColorCorrectionsEffect) {
+        value = 1;
+        typeName = "BOOL";
+        isClientSettable = 1;
+        displayName = "$STR_A3CS_MM_Settings_displayName_enableColorCorrectionsEffect";
+        category = "$STR_A3CS_MM_Settings_category_effects";
+    };
+};
+
 class CfgFactionClasses
 {
     class NO_CATEGORY;

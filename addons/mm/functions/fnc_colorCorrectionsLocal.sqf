@@ -61,9 +61,12 @@ if (_activated) then {
 	if(count _effectArray == 0) exitWith {true};
 
 	_ppEffect = ppEffectCreate ["colorCorrections", 5];
-	_ppEffect ppEffectEnable true;
+	_ppEffect ppEffectEnable GVAR(enableColorCorrectionsEffect);
 	_ppEffect ppEffectAdjust _effectArray;
 	_ppEffect ppEffectCommit 0;
+
+    missionNamespace setVariable [QGVAR(colorCorrectionsEnabled), true];
+    missionNamespace setVariable [QGVAR(colorCorrectionsEffect), _ppEffect];
 };
 
 true

@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
     <Package name="MM">
+	    <Key ID="STR_A3CS_MM_Settings_displayName_enableColorCorrectionsEffect">
+            <Original>Włącz efekty kolorystyczne</Original>
+        </Key>
+        <Key ID="STR_A3CS_MM_Settings_category_effects">
+            <Original>Efekty</Original>
+        </Key>
         <Key ID="STR_A3CS_MM_displayName_dummyVest">
             <Original>Kamizelka AI</Original>
         </Key>
