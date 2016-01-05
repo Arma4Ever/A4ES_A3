@@ -31,6 +31,7 @@ class CfgVehicles {
     #include "modules\module_breathFog.hpp"
     #include "modules\module_colorCorrections.hpp"
     #include "modules\module_fogEffect.hpp"
+    #include "modules\module_forceGunLights.hpp"
     #include "modules\module_snowEffect.hpp"
     #include "modules\module_sandStorm.hpp"
     #include "modules\module_soundEffect.hpp"

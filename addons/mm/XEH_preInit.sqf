@@ -32,6 +32,7 @@ PREP(module_deadzone);
 PREP(module_editBox);
 PREP(module_editBoxGUI);
 PREP(module_fogEffect);
+PREP(module_forceGunLights);
 PREP(module_soundEffect);
 PREP(module_sandStorm);
 PREP(module_setTask);
