@@ -519,7 +519,7 @@ class ACE_Settings {
         typeName = "BOOL";
     };
     class ace_weather_useACEWeather {
-        value = 0; //default no
+        value = 1; //default no
         typeName = "BOOL";
     };
     class ace_weather_syncRain {
