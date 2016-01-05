@@ -26,6 +26,9 @@ if(isMultiplayer) then {
     if(_uid == "76561197998970466" || _uid == "76561198005080407") then {
         GVAR(lastInputPersonView) = 0;
         GVAR(enableForce3rd) = false;
+
+        if(difficultyEnabled "3rdPersonView") exitWith {};
+
         [{
             if(GVAR(lastInputPersonView) != inputAction "personView") then {
                 if(GVAR(lastInputPersonView) == 1 && (inputAction "personView") == 0) then {
@@ -33,8 +36,12 @@ if(isMultiplayer) then {
                 };
                 GVAR(lastInputPersonView) = inputAction "personView";
             };
-            if(GVAR(enableForce3rd) && (ace_player == player)) then {
-                (vehicle player) switchCamera "External";
+            if(inputAction "Optics" > 0) then {
+                GVAR(enableForce3rd) = false;
+                (vehicle ace_player) switchCamera "Gunner";
+            };
+            if(GVAR(enableForce3rd)) then {
+                (vehicle ace_player) switchCamera "External";
             };
         }, 0, []] call CBA_fnc_addPerFrameHandler;
     };
