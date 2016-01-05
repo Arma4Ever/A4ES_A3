@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 {
-    private ["_unit", "_score"]
+    private ["_unit", "_score"];
     _unit = _x;
     _score = score _unit;
     if(_score != 0) then {
