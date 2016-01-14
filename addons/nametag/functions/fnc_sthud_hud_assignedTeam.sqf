@@ -27,6 +27,7 @@
 // [] spawn ST_STHud_AssignedTeamWatcher -> nothing
 ST_STHud_AssignedTeamWatcher =
 {
+    /*
     // Nothing to do in SP
     if (!isMultiplayer) exitWith {};
 
@@ -82,6 +83,7 @@ ST_STHud_AssignedTeamWatcher =
             sleep 5;
         };
     };
+    */
 };
 
 // unit call ST_STHud_assignedTeam -> "MAIN" etc.
@@ -90,9 +92,9 @@ ST_STHud_assignedTeam =
     private "_unit";
     _unit = _this;
 
-    // Nothing to do in SP
-    if (!isMultiplayer) exitWith {assignedTeam(_unit)};
+    if (true) exitWith {assignedTeam _unit};
 
+    /*
     // Assume MAIN if not defined, which avoids any complex behaviour
     _assigned_team = _unit getVariable [HUD_ASSIGNEDTEAM, "MAIN"];
 
@@ -118,6 +120,7 @@ ST_STHud_assignedTeam =
     };
 
     _assigned_team;
+    */
 };
 
 // unit call ST_STHud_HasAssignedTeam -> true/false

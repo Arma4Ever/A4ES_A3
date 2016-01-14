@@ -170,8 +170,7 @@ if (isNil "ST_STHud_referenceTarget") then
 // unit call ST_STHud_GetTextColour -> RRGGBB
 ST_STHud_GetTextColour =
 {
-    switch (_this call ST_STHud_assignedTeam) do
-    {
+    switch (assignedTeam _this) do {
         case "MAIN": {"FFFFFF"};
         case "RED": {"FFAAAA"};
         case "BLUE": {"AAAAFF"};
