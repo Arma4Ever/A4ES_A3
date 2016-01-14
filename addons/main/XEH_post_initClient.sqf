@@ -39,9 +39,11 @@ if(isMultiplayer) then {
             if(inputAction "Optics" > 0) then {
                 GVAR(enableForce3rd) = false;
                 (vehicle ace_player) switchCamera "Gunner";
-            };
-            if(GVAR(enableForce3rd)) then {
+                if(player != ace_player) then {player remoteControl cameraOn;};
+        };
+            if(GVAR(enableForce3rd) && {alive cameraOn}) then {
                 (vehicle ace_player) switchCamera "External";
+                if(player != ace_player) then {player remoteControl cameraOn;};
             };
         }, 0, []] call CBA_fnc_addPerFrameHandler;
     };
