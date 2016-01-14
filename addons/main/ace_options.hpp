@@ -13,11 +13,11 @@ class ACE_Settings {
         typeName = "SCALAR";
         isClientSettable = 1;
     };
-    class ace_hearing_DisableEarRinging {
-        value = 1; //disabled
-        typeName = "BOOL";
-        isClientSettable = 0;
-    };
+    //class ace_hearing_DisableEarRinging {
+    //    value = 1; //disabled
+    //    typeName = "BOOL";
+    //    isClientSettable = 0;
+    //};
     class ace_medical_painEffectType {
         value = 0; //White flashing
         typeName = "SCALAR";
@@ -53,75 +53,75 @@ class ACE_Settings {
         typeName = "BOOL";
         isClientSettable = 0;
     };
-    class ace_nametags_defaultNametagColor {
-        value[] = {0.77, 0.51, 0.08, 1}; //w/e
-        typeName = "COLOR";
-        isClientSettable = 0;
-        category = "";
-    };
-    class ace_nametags_showPlayerNames {
-        value = 0; //no
-        typeName = "SCALAR";
-        isClientSettable = 0;
-        category = "";
-    };
-    class ace_nametags_showPlayerRanks {
-        value = 0; //no
-        typeName = "BOOL";
-        isClientSettable = 0;
-        category = "";
-    };
-    class ace_nametags_showVehicleCrewInfo {
-        value = 0; //no
-        typeName = "BOOL";
-        isClientSettable = 0;
-        category = "";
-    };
-    class ace_nametags_showNamesForAI {
-        value = 0; //no
-        typeName = "BOOL";
-        isClientSettable = 0;
-        category = "";
-    };
-    class ace_nametags_showSoundWaves {
-        value = 0; //no
-        typeName = "SCALAR";
-        isClientSettable = 0;
-        category = "";
-    };
-    class ace_nametags_tagSize {
-        value = 0; //medium
-        typeName = "SCALAR";
-        isClientSettable = 0;
-        category = "";
-    };
+    //class ace_nametags_defaultNametagColor {
+    //    value[] = {0.77, 0.51, 0.08, 1}; //w/e
+    //    typeName = "COLOR";
+    //    isClientSettable = 0;
+    //    category = "";
+    //};
+    //class ace_nametags_showPlayerNames {
+    //    value = 0; //no
+    //    typeName = "SCALAR";
+    //    isClientSettable = 0;
+    //    category = "";
+    //};
+    //class ace_nametags_showPlayerRanks {
+    //    value = 0; //no
+    //    typeName = "BOOL";
+    //    isClientSettable = 0;
+    //    category = "";
+    //};
+    //class ace_nametags_showVehicleCrewInfo {
+    //    value = 0; //no
+    //    typeName = "BOOL";
+    //    isClientSettable = 0;
+    //    category = "";
+    //};
+    //class ace_nametags_showNamesForAI {
+    //    value = 0; //no
+    //    typeName = "BOOL";
+    //    isClientSettable = 0;
+    //    category = "";
+    //};
+    //class ace_nametags_showSoundWaves {
+    //    value = 0; //no
+    //    typeName = "SCALAR";
+    //    isClientSettable = 0;
+    //    category = "";
+    //};
+    //class ace_nametags_tagSize {
+    //    value = 0; //medium
+    //    typeName = "SCALAR";
+    //    isClientSettable = 0;
+    //    category = "";
+    //};
     /*************************
         Module options
     *************************/
 
-    /****** ace_nametags ******/
-    class ace_nametags_playerNamesViewDistance {
-        value = 0; //0m
-        typeName = "SCALAR";
-        isClientSettable = 0;
-        category = "";
-    };
-    class ace_nametags_playerNamesMaxAlpha {
-        value = 0.8; //80%
-        typeName = "SCALAR";
-        isClientSettable = 0;
-        category = "";
-    };
+    /****** ace_nametags (removed) ******/
+    //class ace_nametags_playerNamesViewDistance {
+    //    value = 0; //0m
+    //    typeName = "SCALAR";
+    //    isClientSettable = 0;
+    //    category = "";
+    //};
+    //class ace_nametags_playerNamesMaxAlpha {
+    //    value = 0.8; //80%
+    //    typeName = "SCALAR";
+    //    isClientSettable = 0;
+    //    category = "";
+    //};
 
-    /****** ace_hearing ******/
-    class ace_hearing_EnableCombatDeafness {
-        value = 0; //disable
-        typeName = "BOOL";
-    };
-    class ace_hearing_enabledForZeusUnits {
-        value = 0; //disable
-        typeName = "BOOL";
-    };
+    /****** ace_hearing (removed) ******/
+    //class ace_hearing_EnableCombatDeafness {
+    //    value = 0; //disable
+    //    typeName = "BOOL";
+    //};
+    //class ace_hearing_enabledForZeusUnits {
+    //    value = 0; //disable
+    //    typeName = "BOOL";
+    //};
 
     /****** ace_medical ******/
     class ace_medical_level {
@@ -145,7 +145,7 @@ class ACE_Settings {
         typeName = "BOOL";
     };
     class ace_medical_playerDamageThreshold {
-        value = 0.5; //50% normal damage //testing
+        value = 0.75; //75% normal damage //testing
         typeName = "SCALAR";
     };
     class ace_medical_AIDamageThreshold {
@@ -201,7 +201,7 @@ class ACE_Settings {
         typeName = "SCALAR";
     };
     class ace_medical_useLocation_PAK {
-        value = 3; //vehicle & facility
+        value = 0; //anywhere
         typeName = "SCALAR";
     };
     class ace_medical_useLocation_SurgicalKit {
@@ -281,47 +281,47 @@ class ACE_Settings {
         typeName = "SCALAR";
     };
 
-    /****** ace_advanced_ballistics ******/
-    class ace_advanced_ballistics_enabled {
-        value = 0; //no
-        typeName = "BOOL";
-    };
-    class ace_advanced_ballistics_simulateForSnipers {
-        value = 0; //no
-        typeName = "BOOL";
-    };
-    class ace_advanced_ballistics_simulateForGroupMembers {
-        value = 0; //no
-        typeName = "BOOL";
-    };
-    class ace_advanced_ballistics_simulateForEveryone {
-        value = 0; //no
-        typeName = "BOOL";
-    };
-    class ace_advanced_ballistics_disabledInFullAutoMode {
-        value = 1; //yes
-        typeName = "BOOL";
-    };
-    class ace_advanced_ballistics_ammoTemperatureEnabled {
-        value = 1; //yes
-        typeName = "BOOL";
-    };
-    class ace_advanced_ballistics_barrelLengthInfluenceEnabled {
-        value = 1; //yes
-        typeName = "BOOL";
-    };
-    class ace_advanced_ballistics_bulletTraceEnabled {
-        value = 1; //yes
-        typeName = "BOOL";
-    };
-    class ace_advanced_ballistics_simulationInterval {
-        value = 0; //0s = PFH
-        typeName = "SCALAR";
-    };
-    class ace_advanced_ballistics_simulationRadius {
-        value = 3000; //3000m
-        typeName = "SCALAR";
-    };
+    /****** ace_advanced_ballistics (removed) ******/
+    //class ace_advanced_ballistics_enabled {
+    //    value = 0; //no
+    //    typeName = "BOOL";
+    //};
+    //class ace_advanced_ballistics_simulateForSnipers {
+    //    value = 0; //no
+    //    typeName = "BOOL";
+    //};
+    //class ace_advanced_ballistics_simulateForGroupMembers {
+    //    value = 0; //no
+    //    typeName = "BOOL";
+    //};
+    //class ace_advanced_ballistics_simulateForEveryone {
+    //    value = 0; //no
+    //    typeName = "BOOL";
+    //};
+    //class ace_advanced_ballistics_disabledInFullAutoMode {
+    //    value = 1; //yes
+    //    typeName = "BOOL";
+    //};
+    //class ace_advanced_ballistics_ammoTemperatureEnabled {
+    //    value = 1; //yes
+    //    typeName = "BOOL";
+    //};
+    //class ace_advanced_ballistics_barrelLengthInfluenceEnabled {
+    //    value = 1; //yes
+    //    typeName = "BOOL";
+    //};
+    //class ace_advanced_ballistics_bulletTraceEnabled {
+    //    value = 1; //yes
+    //    typeName = "BOOL";
+    //};
+    //class ace_advanced_ballistics_simulationInterval {
+    //    value = 0; //0s = PFH
+    //    typeName = "SCALAR";
+    //};
+    //class ace_advanced_ballistics_simulationRadius {
+    //    value = 3000; //3000m
+    //    typeName = "SCALAR";
+    //};
 
     /****** ace_map ******/
     class ace_map_BFT_Interval {
@@ -513,49 +513,49 @@ class ACE_Settings {
         typeName = "SCALAR";
     };
 
-    /****** ace_weather ******/
-    class ace_weather_enableServerController {
-        value = 1; //yes
-        typeName = "BOOL";
-    };
-    class ace_weather_useACEWeather {
-        value = 1; //default no
-        typeName = "BOOL";
-    };
-    class ace_weather_syncRain {
-        value = 1; //yes
-        typeName = "BOOL";
-    };
-    class ace_weather_syncWind {
-        value = 1; //yes
-        typeName = "BOOL";
-    };
-    class ace_weather_syncMisc {
-        value = 1; //yes
-        typeName = "BOOL";
-    };
-    class ace_weather_serverUpdateInterval {
-        value = 30; //30s
-        typeName = "SCALAR";
-    };
+    /****** ace_weather (removed) ******/
+    //class ace_weather_enableServerController {
+    //    value = 1; //yes
+    //    typeName = "BOOL";
+    //};
+    //class ace_weather_useACEWeather {
+    //    value = 1; //default no
+    //    typeName = "BOOL";
+    //};
+    //class ace_weather_syncRain {
+    //    value = 1; //yes
+    //    typeName = "BOOL";
+    //};
+    //class ace_weather_syncWind {
+    //    value = 1; //yes
+    //    typeName = "BOOL";
+    //};
+    //class ace_weather_syncMisc {
+    //    value = 1; //yes
+    //    typeName = "BOOL";
+    //};
+    //class ace_weather_serverUpdateInterval {
+    //    value = 30; //30s
+    //    typeName = "SCALAR";
+    //};
 
-    /****** ace_winddeflection ******/
-    class ace_winddeflection_enabled {
-        value = 1; //yes
-        typeName = "BOOL";
-    };
-    class ace_winddeflection_vehicleEnabled {
-        value = 1; //yes
-        typeName = "BOOL";
-    };
-    class ace_winddeflection_simulationInterval {
-        value = 0.05; //0.05s
-        typeName = "SCALAR";
-    };
-    class ace_winddeflection_simulationRadius {
-        value = 3000; //3000m
-        typeName = "SCALAR";
-    };
+    /****** ace_winddeflection (removed) ******/
+    //class ace_winddeflection_enabled {
+    //    value = 1; //yes
+    //    typeName = "BOOL";
+    //};
+    //class ace_winddeflection_vehicleEnabled {
+    //    value = 1; //yes
+    //    typeName = "BOOL";
+    //};
+    //class ace_winddeflection_simulationInterval {
+    //    value = 0.05; //0.05s
+    //    typeName = "SCALAR";
+    //};
+    //class ace_winddeflection_simulationRadius {
+    //    value = 3000; //3000m
+    //    typeName = "SCALAR";
+    //};
 
     /****** ace_zeus ******/
     class ace_zeus_zeusAscension {

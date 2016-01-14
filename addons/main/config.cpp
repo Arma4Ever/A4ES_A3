@@ -84,10 +84,27 @@ class CfgVehicleClasses {
     };
 };
 
-//ACE
-
+/*
+    Removed ACE modules:
+    ace_advanced_ballistics
+    ace_atragmx
+    ace_dagr
+    ace_frag
+    ace_gforces
+    ace_goggles
+    ace_hearing
+    ace_kestrel4500
+    ace_nametags
+    ace_rangecard
+    ace_weather
+    ace_winddeflection
+*/
 #include "ace_options.hpp"
 #include "ace_medical_treatments.hpp"
+
+class CfgWeapons {
+    #include "ace_medical_items.hpp"
+};
 
 class CfgVehicles {
     class Module_F;

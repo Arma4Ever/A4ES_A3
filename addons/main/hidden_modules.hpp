@@ -165,14 +165,14 @@ class SLX_XEH_Logic: Module_F {scope = 1;};
 
 /* ACE3 Modules */
 
-class ace_advanced_ballistics_ModuleSettings: ACE_Module {scope = 1;};
+//class ace_advanced_ballistics_ModuleSettings: ACE_Module {scope = 1;};
 class ACE_moduleAllowConfigExport: ACE_Module {scope = 1;};
 class ACE_ModuleBlueForceTracking: ACE_Module {scope = 1;};
 class ace_captives_moduleSettings: ACE_Module {scope = 1;};
 class ACE_ModuleCheckPBOs: ACE_Module {scope = 1;};
 class ACE_ModuleExplosive: ACE_Module {scope = 1;};
 class ACE_ModuleFriendlyFire: ACE_Module {scope = 1;};
-class ACE_ModuleHearing: ACE_Module {scope = 1;};
+//class ACE_ModuleHearing: ACE_Module {scope = 1;};
 class ACE_ModuleInteraction: ACE_Module {scope = 1;};
 class ACE_ModuleLSDVehicles: ACE_Module {scope = 1;};
 class ACE_ModuleMap: ACE_Module {scope = 1;};
@@ -181,8 +181,8 @@ class ace_mk6mortar_module: ACE_Module {scope = 1;};
 class ACE_ModuleRallypoint: ACE_Module {scope = 1;};
 class ACE_ModuleRespawn: ACE_Module {scope = 1;};
 class ACE_ModuleSwitchUnits: ACE_Module {scope = 1;};
-class ace_weather_ModuleSettings: ACE_Module {scope = 1;};
-class ace_winddeflection_ModuleSettings: ACE_Module {scope = 1;};
+//class ace_weather_ModuleSettings: ACE_Module {scope = 1;};
+//class ace_winddeflection_ModuleSettings: ACE_Module {scope = 1;};
 class ACE_moduleAdvancedMedicalSettings: ACE_Module {scope = 1;};
 class ACE_moduleMedicalSettings: ACE_Module {scope = 1;};
 class ACE_moduleReviveSettings: ACE_Module {scope = 1;};
@@ -193,7 +193,7 @@ class ACE_moduleAmbianceSound: ACE_Module {scope = 1;};
 class ace_viewdistance_ModuleSettings: ACE_Module {scope = 1;};
 class ACE_ModuleSitting: ACE_Module {scope = 1;};
 class ace_captives_ModuleSurrender: Module_F {scope = 1;};
-class ACE_ModuleNameTags: ACE_Module {scope = 1;};
+//class ACE_ModuleNameTags: ACE_Module {scope = 1;};
 class ace_finger_moduleSettings: ACE_Module {scope = 1;};
 class ace_spectator_moduleSettings: ACE_Module {scope = 1;};
 class ACE_VehicleLock_ModuleSyncedAssign: ACE_Module {scope = 1;};

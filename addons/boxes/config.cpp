@@ -1,8 +1,6 @@
 #include "script_component.hpp"
-class CfgPatches
-{
-    class ADDON
-    {
+class CfgPatches {
+    class ADDON {
         units[] = {
             QGVAR(us_ammo_empty),
             QGVAR(us_weapons_empty),
@@ -413,16 +411,16 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_RangeTable_82mm,8);
             MACRO_ADDITEM(ACE_microDAGR,8);
             MACRO_ADDITEM(ACE_Altimeter,8);
-            MACRO_ADDITEM(ACE_ATragMX,8);
+            //MACRO_ADDITEM(ACE_ATragMX,8);
             MACRO_ADDITEM(ACE_Clacker,8);
             MACRO_ADDITEM(ACE_M26_Clacker,8);
-            MACRO_ADDITEM(ACE_DAGR,8);
+            //MACRO_ADDITEM(ACE_DAGR,8);
             MACRO_ADDITEM(ACE_Deadmanswitch,8);
             MACRO_ADDITEM(ACE_Cellphone,8);
             MACRO_ADDITEM(ACE_DefusalKit,8);
             MACRO_ADDITEM(ACE_HuntIR_monitor,8);
             MACRO_ADDITEM(ACE_Item_SpottingScope,8);
-            MACRO_ADDITEM(ACE_Kestrel4500,8);
+            //MACRO_ADDITEM(ACE_Kestrel4500,8);
             MACRO_ADDITEM(ACE_M84,8);
             MACRO_ADDITEM(ACE_Tripod,8);
             MACRO_ADDITEM(ACE_UAVBattery,8);
@@ -431,7 +429,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_Flashlight_MX991,8);
             MACRO_ADDITEM(ACE_Flashlight_KSF1,8);
             MACRO_ADDITEM(ACE_Flashlight_XL50,8);
-            MACRO_ADDITEM(ACE_RangeCard,8);
+            //MACRO_ADDITEM(ACE_RangeCard,8);
             MACRO_ADDITEM(ACE_bodyBag,8);
             MACRO_ADDITEM(ACE_quikclot,8);
             MACRO_ADDITEM(ACE_morphine,8);
@@ -560,16 +558,16 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_RangeTable_82mm,8);
             MACRO_ADDITEM(ACE_microDAGR,16);
             MACRO_ADDITEM(ACE_Altimeter,8);
-            MACRO_ADDITEM(ACE_ATragMX,8);
+            //MACRO_ADDITEM(ACE_ATragMX,8);
             MACRO_ADDITEM(ACE_Clacker,8);
             MACRO_ADDITEM(ACE_M26_Clacker,8);
-            MACRO_ADDITEM(ACE_DAGR,16);
+            //MACRO_ADDITEM(ACE_DAGR,16);
             MACRO_ADDITEM(ACE_Deadmanswitch,8);
             MACRO_ADDITEM(ACE_Cellphone,8);
             MACRO_ADDITEM(ACE_DefusalKit,8);
             MACRO_ADDITEM(ACE_HuntIR_monitor,8);
             MACRO_ADDITEM(ACE_Item_SpottingScope,8);
-            MACRO_ADDITEM(ACE_Kestrel4500,8);
+            //MACRO_ADDITEM(ACE_Kestrel4500,8);
             MACRO_ADDITEM(ACE_M84,32);
             MACRO_ADDITEM(ACE_Tripod,8);
             MACRO_ADDITEM(ACE_UAVBattery,8);
@@ -578,7 +576,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_Flashlight_MX991,8);
             MACRO_ADDITEM(ACE_Flashlight_KSF1,8);
             MACRO_ADDITEM(ACE_Flashlight_XL50,8);
-            MACRO_ADDITEM(ACE_RangeCard,8);
+            //MACRO_ADDITEM(ACE_RangeCard,8);
             //vanilla working stuff
             MACRO_ADDITEM(Laserbatteries,8);
             MACRO_ADDITEM(ToolKit,8);
