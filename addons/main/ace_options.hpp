@@ -181,7 +181,7 @@ class ACE_Settings {
         typeName = "SCALAR";
     };
     class ace_medical_enableAdvancedWounds {
-        value = 1; //yes
+        value = 0; //no
         typeName = "BOOL";
     };
     class ace_medical_medicSetting_PAK {
