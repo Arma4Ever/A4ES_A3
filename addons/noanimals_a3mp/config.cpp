@@ -43,13 +43,12 @@ class CfgPatches {
 };
 class CfgWorlds {
     class CAWorld;
-    class DefaultWorld;
     //utes
     class Utes: CAWorld {
         class AmbientA3 {maxCost = 0;};
     };
     //chernarus
-    class Chernarus: DefaultWorld {
+    class Chernarus: CAWorld {
         class AmbientA3 {maxCost = 0;};
     };
     //takistan
