@@ -395,7 +395,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_acc_pointer_green_IR,8);
             MACRO_ADDITEM(ACE_acc_pointer_red,8);
             MACRO_ADDITEM(ACE_CableTie,8);
-            MACRO_ADDITEM(ACE_EarPlugs,8);
+            //MACRO_ADDITEM(ACE_EarPlugs,8);
             MACRO_ADDITEM(ACE_HandFlare_Green,8);
             MACRO_ADDITEM(ACE_HandFlare_Red,8);
             MACRO_ADDITEM(ACE_HandFlare_White,8);
@@ -518,7 +518,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_acc_pointer_green_IR,32);
             MACRO_ADDITEM(ACE_acc_pointer_red,32);
             MACRO_ADDITEM(ACE_CableTie,32);
-            MACRO_ADDITEM(ACE_EarPlugs,32);
+            //MACRO_ADDITEM(ACE_EarPlugs,32);
             MACRO_ADDITEM(ACE_HandFlare_Green,32);
             MACRO_ADDITEM(ACE_HandFlare_Red,32);
             MACRO_ADDITEM(ACE_HandFlare_White,32);
@@ -549,7 +549,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_acc_pointer_green_IR,8);
             MACRO_ADDITEM(ACE_acc_pointer_red,8);
             MACRO_ADDITEM(ACE_CableTie,32);
-            MACRO_ADDITEM(ACE_EarPlugs,32);
+            //MACRO_ADDITEM(ACE_EarPlugs,32);
             MACRO_ADDITEM(ACE_IR_Strobe_Item,32);
             MACRO_ADDITEM(ACE_simpleGPS,32);
             MACRO_ADDITEM(ACE_MapTools,32);
