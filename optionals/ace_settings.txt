@@ -87,11 +87,6 @@ class ace_frag_EnableDebugTrace {
     value = 0;
     isClientSettable = 0;
 };
-class ace_goggles_showInThirdPerson {
-    typeName = BOOL;
-    value = 0;
-    isClientSettable = 1;
-};
 class ace_hitreactions_minDamageToTrigger {
     typeName = SCALAR;
     value = 0.1;
@@ -556,59 +551,6 @@ class ace_movement_useImperial {
     value = 0;
     isClientSettable = 1;
 };
-class ace_nametags_defaultNametagColor {
-    typeName = COLOR;
-    value = [0.77,0.51,0.08,1];
-    isClientSettable = 1;
-};
-class ace_nametags_showPlayerNames {
-    typeName = SCALAR;
-    value = 1;
-    isClientSettable = 1;
-    values[] = ["Disabled","Enabled","Only on Cursor","Only on Keypress","Only on Cursor and Keypress"];
-};
-class ace_nametags_showPlayerRanks {
-    typeName = BOOL;
-    value = 1;
-    isClientSettable = 1;
-};
-class ace_nametags_showVehicleCrewInfo {
-    typeName = BOOL;
-    value = 1;
-    isClientSettable = 1;
-};
-class ace_nametags_showNamesForAI {
-    typeName = BOOL;
-    value = 0;
-    isClientSettable = 1;
-};
-class ace_nametags_showCursorTagForVehicles {
-    typeName = BOOL;
-    value = 0;
-    isClientSettable = 0;
-};
-class ace_nametags_showSoundWaves {
-    typeName = SCALAR;
-    value = 1;
-    isClientSettable = 1;
-    values[] = ["Disabled","Use Nametag settings","Always Show All"];
-};
-class ace_nametags_playerNamesViewDistance {
-    typeName = SCALAR;
-    value = 5;
-    isClientSettable = 0;
-};
-class ace_nametags_playerNamesMaxAlpha {
-    typeName = SCALAR;
-    value = 0.8;
-    isClientSettable = 0;
-};
-class ace_nametags_tagSize {
-    typeName = SCALAR;
-    value = 2;
-    isClientSettable = 1;
-    values[] = ["$str_very_small","$str_small","$str_medium","$str_large","$str_very_large"];
-};
 class ace_nightvision_disableNVGsWithSights {
     typeName = BOOL;
     value = 0;
@@ -835,56 +777,6 @@ class ace_weaponselect_DisplayText {
     value = 1;
     isClientSettable = 1;
 };
-class ace_weather_enableServerController {
-    typeName = BOOL;
-    value = 1;
-    isClientSettable = 0;
-};
-class ace_weather_useACEWeather {
-    typeName = BOOL;
-    value = 1;
-    isClientSettable = 0;
-};
-class ace_weather_syncRain {
-    typeName = BOOL;
-    value = 1;
-    isClientSettable = 0;
-};
-class ace_weather_syncWind {
-    typeName = BOOL;
-    value = 1;
-    isClientSettable = 0;
-};
-class ace_weather_syncMisc {
-    typeName = BOOL;
-    value = 1;
-    isClientSettable = 0;
-};
-class ace_weather_serverUpdateInterval {
-    typeName = SCALAR;
-    value = 60;
-    isClientSettable = 0;
-};
-class ace_winddeflection_enabled {
-    typeName = BOOL;
-    value = 1;
-    isClientSettable = 0;
-};
-class ace_winddeflection_vehicleEnabled {
-    typeName = BOOL;
-    value = 1;
-    isClientSettable = 0;
-};
-class ace_winddeflection_simulationInterval {
-    typeName = SCALAR;
-    value = 0.05;
-    isClientSettable = 0;
-};
-class ace_winddeflection_simulationRadius {
-    typeName = SCALAR;
-    value = 3000;
-    isClientSettable = 0;
-};
 class ace_zeus_zeusAscension {
     typeName = BOOL;
     value = 0;
@@ -957,84 +849,4 @@ class ace_Gestures_showOnInteractionMenu {
     value = 2;
     isClientSettable = 1;
     values[] = ["Disabled","Just Keybinds","Keybinds + Interaction Menu"];
-};
-class ace_hearing_EnableCombatDeafness {
-    typeName = BOOL;
-    value = 1;
-    isClientSettable = 0;
-};
-class ace_hearing_EarplugsVolume {
-    typeName = SCALAR;
-    value = 0.5;
-    isClientSettable = 0;
-};
-class ace_hearing_UnconsciousnessVolume {
-    typeName = SCALAR;
-    value = 0.4;
-    isClientSettable = 0;
-};
-class ace_hearing_DisableEarRinging {
-    typeName = BOOL;
-    value = 0;
-    isClientSettable = 1;
-};
-class ace_hearing_enabledForZeusUnits {
-    typeName = BOOL;
-    value = 1;
-    isClientSettable = 0;
-};
-class ace_hearing_autoAddEarplugsToUnits {
-    typeName = BOOL;
-    value = 1;
-    isClientSettable = 0;
-};
-class ace_advanced_ballistics_enabled {
-    typeName = BOOL;
-    value = 0;
-    isClientSettable = 0;
-};
-class ace_advanced_ballistics_simulateForSnipers {
-    typeName = BOOL;
-    value = 1;
-    isClientSettable = 0;
-};
-class ace_advanced_ballistics_simulateForGroupMembers {
-    typeName = BOOL;
-    value = 0;
-    isClientSettable = 0;
-};
-class ace_advanced_ballistics_simulateForEveryone {
-    typeName = BOOL;
-    value = 0;
-    isClientSettable = 0;
-};
-class ace_advanced_ballistics_disabledInFullAutoMode {
-    typeName = BOOL;
-    value = 0;
-    isClientSettable = 0;
-};
-class ace_advanced_ballistics_ammoTemperatureEnabled {
-    typeName = BOOL;
-    value = 1;
-    isClientSettable = 0;
-};
-class ace_advanced_ballistics_barrelLengthInfluenceEnabled {
-    typeName = BOOL;
-    value = 1;
-    isClientSettable = 0;
-};
-class ace_advanced_ballistics_bulletTraceEnabled {
-    typeName = BOOL;
-    value = 1;
-    isClientSettable = 0;
-};
-class ace_advanced_ballistics_simulationInterval {
-    typeName = SCALAR;
-    value = 0;
-    isClientSettable = 0;
-};
-class ace_advanced_ballistics_simulationRadius {
-    typeName = SCALAR;
-    value = 3000;
-    isClientSettable = 0;
 };
