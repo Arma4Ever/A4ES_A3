@@ -2,6 +2,10 @@
 
 ADDON = false;
 
-PREP(thermalStrobeEffect);
+PREP(onVisionModeChanged);
+PREP(strobePFH);
+PREP(initStrobe);
+
+GVAR(particleSources) = [];
 
 ADDON = true;

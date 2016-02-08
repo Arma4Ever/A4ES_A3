@@ -1,8 +1,6 @@
 #include "script_component.hpp"
-class CfgPatches
-{
-    class ADDON
-    {
+class CfgPatches {
+    class ADDON {
         units[] = {};
         weapons[] = {"ACE_IR_Strobe_Item"};
         requiredVersion = REQUIRED_VERSION;
@@ -15,24 +13,6 @@ class CfgPatches
     };
 };
 
-class Extended_PreInit_EventHandlers {
-    class ADDON {
-        init = QUOTE(call COMPILE_FILE(XEH_preInit));
-    };
-};
-
-class Extended_InitPost_EventHandlers {
-    class ACE_IR_Strobe_Effect {
-        class GVAR(thermalStrobeEffect) {
-            init = QUOTE(_this spawn FUNC(thermalStrobeEffect));
-        };
-    };
-};
-
-class CfgWeapons {
-    class ACE_ItemCore;
-    class ACE_IR_Strobe_Item: ACE_ItemCore {
-        displayName = CSTRING(StrobeItem_DisplayName);
-        descriptionShort = CSTRING(StrobeItem_Description);
-    };
-};
+#include "CfgEventHandlers.hpp"
+#include "CfgWeapons.hpp"
+#include "CfgCloudlets.hpp"

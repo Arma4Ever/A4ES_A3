@@ -5,7 +5,7 @@
             <Original>IR-Thermal Strobe</Original>
         </Key>
         <Key ID="STR_A3CS_Ptb_StrobeItem_Description">
-            <Original>IR-Thermal Strobe pozwala na oznaczenie twojej pozycji migającym światłem widocznym tylko w noktowizji oraz termowizji</Original>
+            <Original>IR-Thermal Strobe pozwala na oznaczenie swojej pozycji migającym światłem widocznym tylko w noktowizji oraz termowizji</Original>
         </Key>
     </Package>
 </Project>
