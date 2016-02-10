@@ -10,8 +10,7 @@ params [["_mode", "", [""]], ["_input", [], [[]]]];
 // Module - init
 if(_mode == "init") then {
     _input params [["_logic", objNull, [objNull]], ["_isActivated", true, [true]], ["_isCuratorPlaced", false, [true]]];
-    if(isNull _logic || !_isActivated) exitWith {};
-    if(_isCuratorPlaced) exitWith {};
+    if(isNull _logic || !_isActivated || _isCuratorPlaced) exitWith {};
 
     //Load module params
     private _place = call compile (_logic getVariable ["place", ""]);
@@ -83,7 +82,7 @@ if(_mode == "init") then {
         _unit setVariable [QGVAR(genSoldiers_group), _group];
         _aliveUnits pushback _unit;
         //Set skill level
-        [_unit, _training] call FUNC(genSoldiers_setSkillLevel);
+        [_unit, _training] call FUNC(setSkillLevel);
         //Spawn custom script
         if(!isNil "_script") then {_unit spawn _script;};
         //Killed event handler - cleanup group data and call support

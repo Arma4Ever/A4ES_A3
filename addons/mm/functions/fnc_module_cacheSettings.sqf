@@ -10,8 +10,7 @@ params [["_mode", "", [""]], ["_input", [], [[]]]];
 // Module - init
 if(_mode == "init") then {
     _input params [["_logic", objNull, [objNull]], ["_isActivated", true, [true]], ["_isCuratorPlaced", false, [true]]];
-    if(isNull _logic || !_isActivated) exitWith {};
-    if(_isCuratorPlaced) exitWith {};
+    if(isNull _logic || !_isActivated || _isCuratorPlaced) exitWith {};
 
     GVAR(cacheEnabled) = (_logic getVariable ["enable", 1]) > 0;
     GVAR(cacheDistanceLand) = _logic getVariable ["distanceLand", 2500];
