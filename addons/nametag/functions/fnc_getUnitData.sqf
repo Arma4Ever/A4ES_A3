@@ -4,7 +4,7 @@ params ["_target"];
 private ["_unitName", "_unitRank", "_unitIcon", "_unitColorHex", "_unitColorArma", "_unitTeam"];
 
 //unit name
-_unitName = _target getVariable ["ACE_Name", name _target];
+_unitName = _target call EFUNC(common,getName);
 
 //unit rank name
 _unitRank = getText (configFile >> "CfgVehicles" >> typeof _target  >> QGVAR(rankname));

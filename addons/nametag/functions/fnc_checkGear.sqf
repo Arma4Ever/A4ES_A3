@@ -9,7 +9,7 @@ _dialog = createDialog QGVAR(select_menu);
 if(!_dialog) exitWith {};
 
 _dialogMenu = 8866;
-_unitName = _unit getVariable ["ACE_Name", name _unit];
+_unitName = _unit call EFUNC(common,getName);
 
 ctrlSetText [8870, format [localize "STR_A3CS_Nametag_checkGear_header", _unitName]];
 ctrlSetText [8860, localize "STR_A3CS_Nametag_close"];
@@ -83,5 +83,4 @@ _listedGearClasses = [];
             lbSetPicture [_dialogMenu, _index, _picture];
         };
     };
-    nil
-} count _allGear;
+} forEach _allGear;

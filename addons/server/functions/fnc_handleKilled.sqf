@@ -16,8 +16,8 @@ if(isPlayer _victim) then {
     if(!isDedicated) exitWith {};
 
     //send dead log
-    _victimName = _victim getVariable ["ACE_Name", name _victim];
-    _killerName = _killer getVariable ["ACE_Name", name _killer];
+    _victimName = _victim call EFUNC(common,getName);
+    _killerName = _killer call EFUNC(common,getName);
 
     if(!isPlayer _killer) then {_killerName = "AI";};
 
