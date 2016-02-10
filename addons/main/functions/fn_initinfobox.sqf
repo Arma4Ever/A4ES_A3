@@ -1,7 +1,5 @@
 /*
     Author: SzwedzikPL
-
-    Description:
     Init A3C infobox
 */
 if (missionNamespace getVariable ["A3C_infoBoxInited", false]) exitWith {};
