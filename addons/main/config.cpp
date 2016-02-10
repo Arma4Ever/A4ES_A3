@@ -1,8 +1,6 @@
 #include "script_component.hpp"
-class CfgPatches
-{
-    class ADDON
-    {
+class CfgPatches {
+    class ADDON {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -13,7 +11,7 @@ class CfgPatches
         version = A3CS_VERSION;
         versionStr = QUOTE(A3CS_VERSION);
         versionAr[] = A3CS_VERSION_ARRAY;
-        author[] = {"SzwedzikPL", "Alduric", "Chris", "Wodzu", "Samsung1702", "ACE3 Team"};
+        author[] = {"SzwedzikPL", "ACE3 Team", "Alduric", "Chris", "Wodzu", "Samsung1702"};
         authorUrl = "http://arma3coop.pl";
     };
 };
@@ -27,62 +25,35 @@ class CfgSettings {
                 //removed[] = {"a3cs_oldaddon"};
             };
         };
-
-        //enable_auto_xeh
-        class XEH
-        {
-            supportMonitor = 1;
-        };
     };
 };
-class Extended_PreInit_EventHandlers {
-    class ADDON {
-        init = QUOTE(call COMPILE_FILE(XEH_preInit));
-    };
-};
-class Extended_PostInit_EventHandlers {
-    class ADDON {
-        clientInit = QUOTE(call COMPILE_FILE(XEH_post_initClient));
-        serverInit = QUOTE(call COMPILE_FILE(XEH_post_initServer));
-    };
-};
-
 class a3c_mods {
-    modlist[] += {"CBA","TFAR","A3CS","PAM","A3MP","A3AP"};
+    //modlist[] += {"CBA","TFAR","A3CS","PAM","A3MP","A3AP"};
+    modlist[] += {"A3CS"};
 };
 class CfgMods {
     class Mod_Base;
     class A3CS: Mod_Base {
-        name = "Arma 3 Combat System";
+        name = ECSTRING(common,A3CS);
         picture = PATHTOF(data\logo_a3cs_ca.paa);
         actionName = "Forum";
         action = "http://forum.arma3coop.pl";
-        description = "Arma 3 Combat System";
+        description = ECSTRING(common,A3CS);
         logo = PATHTOF(data\logo_a3cs_ca.paa);
         logoOver = PATHTOF(data\logo_a3cs_ca.paa);
-        tooltip = "Arma 3 Combat System";
-        tooltipOwned = "Arma 3 Combat System Owned";
-        overview = "$STR_A3CS_Main_CfgModsOverview";
-        author = "Arma3Coop.pl & ACE3 Team";
+        tooltip = ECSTRING(common,A3CS);
+        tooltipOwned = ECSTRING(common,A3CS);
+        overview = ECSTRING(common,A3CS_Description);
+        author = ECSTRING(common,A3CS_Authors);
         overviewPicture = PATHTOF(data\logo_a3cs_ca.paa);
-        fieldManualTopicAndHint[] = {"A3C", "A3CS"};
         mod_code = "A3CS";
         mod_version = A3CS_VERSION;
         mod_version_ar[] = A3CS_VERSION_ARRAY;
     };
 };
 
-class CfgVehicleClasses {
-    class a3cs_objects {
-        displayname = "$STR_A3CS_Main_VehicleClasses_displayname_objects";
-    };
-    class a3cs_crates {
-        displayname = "$STR_A3CS_Main_VehicleClasses_displayname_crates";
-    };
-    class a3cs_crates_empty {
-        displayname = "$STR_A3CS_Main_VehicleClasses_displayname_crates_empty";
-    };
-};
+#include "CfgWeapons.hpp"
+#include "CfgVehicles.hpp"
 
 /*
     Removed ACE modules:
@@ -92,26 +63,17 @@ class CfgVehicleClasses {
     ace_frag
     ace_gforces
     ace_goggles
+    ace_headless
     ace_hearing
     ace_kestrel4500
     ace_nametags
+    ace_scopes
     ace_rangecard
     ace_weather
     ace_winddeflection
 */
-#include "ace_options.hpp"
+#include "ace_settings.hpp"
 #include "ace_medical_treatments.hpp"
-
-class CfgWeapons {
-    #include "ace_medical_items.hpp"
-};
-
-class CfgVehicles {
-    class Module_F;
-    class ACE_Module;
-    #include "hidden_modules.hpp"
-    #include "ace_actions.hpp"
-};
 
 //Infobox
 #include "infobox.hpp"
