@@ -1,7 +1,6 @@
 class CfgSounds {
     sounds[] = {};
-        class GVAR(soundeffect_01)
-        {
+        class GVAR(soundeffect_01) {
                 name = "pam_module_soundeffect_01";
                 sound[] = {PATHTOF(sounds\chase.ogg), 1, 1};
                 soundtime = 6; //czas trwania dzwieku w sekundach
