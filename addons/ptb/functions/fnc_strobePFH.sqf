@@ -10,5 +10,4 @@
         GVAR(particleSources) deleteAt (GVAR(particleSources) find _source);
         deleteVehicle _source;
     };
-    nil
-} count GVAR(particleSources);
+} foreach +GVAR(particleSources);

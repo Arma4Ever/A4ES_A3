@@ -1,5 +1,12 @@
 #include "script_component.hpp"
 
+if(!hasInterface) exitWith {};
+
+private _characterDesc = player getVariable [QGVAR(characterDesc), ""];
+if(_characterDesc != "") then {
+    player createDiaryRecord ["Diary", [localize LSTRING(ObjectAttribute_Control_CharacterDesc_DisplayName), _characterDesc]];
+};
+
 ["SettingChanged", {
     params ["_option"];
     if(_option == QGVAR(enableColorCorrectionsEffect)) then {
