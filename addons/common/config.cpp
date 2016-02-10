@@ -13,41 +13,6 @@ class CfgPatches {
     };
 };
 
-class Extended_PreInit_EventHandlers {
-    class ADDON {
-        init = QUOTE(call COMPILE_FILE(XEH_preInit));
-    };
-};
-class Extended_PostInit_EventHandlers {
-    class ADDON {
-        serverInit = QUOTE(call COMPILE_FILE(XEH_post_initServer));
-    };
-};
-class Extended_Init_EventHandlers {
-    class CAManBase {
-        class GVAR(handleRating) {
-            init = QUOTE(call COMPILE_FILE(XEH_init));
-        };
-    };
-};
-class Extended_Respawn_EventHandlers {
-    class CAManBase {
-        class GVAR(handleRating) {
-            respawn = QUOTE(call COMPILE_FILE(XEH_init));
-        };
-    };
-};
-class Extended_Local_EventHandlers {
-    class CAManBase {
-        class GVAR(handleRating) {
-            local = QUOTE(call COMPILE_FILE(XEH_init));
-        };
-    };
-};
-
-//Disable Assemble/Disassemble static's
-class CfgActions {
-    class None;
-    class Assemble: None {show = 0;};
-    class DisAssemble: None {show = 0;};
-};
+#include "CfgEventHandlers.hpp"
+#include "CfgVehicleClasses.hpp"
+#include "CfgActions.hpp"
