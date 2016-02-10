@@ -12,7 +12,7 @@ if (vehicle ace_player != ace_player) exitWith {};
 //cursortarget nametag
 if(!freeLook && (GVAR(enableCursorNametag) || {GVAR(enable3dNametag) == 2})) then {
     private ["_target", "_distance"];
-    _target = cursorTarget;
+    _target = cursorObject;
     if ((!isNull _target) &&
         (alive _target) &&
         {_target isKindOf "CAManBase"} &&
