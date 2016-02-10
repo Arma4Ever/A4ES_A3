@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+    <Package name="Unitactions">
+        <Key ID="STR_A3CS_Unitactions_Actions_CheckDogtag_DisplayName">
+            <Original>Sprawdź Dogtag</Original>
+        </Key>
+        <Key ID="STR_A3CS_Unitactions_Actions_HideBody_DisplayName">
+            <Original>Ukryj ciało</Original>
+        </Key>
+        <Key ID="STR_A3CS_Unitactions_Actions_OpenGear_DisplayName">
+            <Original>Otwórz ekwipunek</Original>
+        </Key>
+    </Package>
+</Project>
