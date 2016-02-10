@@ -1,12 +1,6 @@
 #include "script_component.hpp"
 
 if(!isServer) exitWith {};
-if(!isMultiplayer) exitWith {};
 
-[{
-    if(!isNil "a3c_headlessClient") then {
-        if(!isNull a3c_headlessClient) then {
-            [a3c_headlessClient] call FUNC(initHC);
-        };
-    };
-}, [], 1] call ace_common_fnc_waitAndExecute;
+[FUNC(initHeadless), [], 2] call ace_common_fnc_waitAndExecute;
+[FUNC(initCache), [], 3] call ace_common_fnc_waitAndExecute;
