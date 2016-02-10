@@ -21,6 +21,11 @@ if(!isDedicated) exitWith {};
     };
 }] call BIS_fnc_addStackedEventHandler;
 
+//Refresh curator points
+if(count allCurators > 0) then {
+    [{{_x addCuratorPoints 1;} foreach allCurators}, 60, []] call CBA_fnc_addPerFrameHandler;
+};
+
 //Update game status in DB every 60s
 [FUNC(updateGameStatus), 60, []] call CBA_fnc_addPerFrameHandler;
 
