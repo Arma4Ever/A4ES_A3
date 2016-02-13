@@ -1,11 +1,13 @@
+/*
+ * Author: SzwedzikPL
+ * Reset players score
+ */
 #include "script_component.hpp"
 
 {
-    private ["_unit", "_score"];
-    _unit = _x;
-    _score = score _unit;
+    private _unit = _x;
+    private _score = score _unit;
     if(_score != 0) then {
-        _score = _score * -1;
-        _unit addScore _score;
+        _unit addScore (_score * -1);
     };
 } foreach allPlayers;
