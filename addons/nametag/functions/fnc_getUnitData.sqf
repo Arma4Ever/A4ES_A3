@@ -1,23 +1,31 @@
 #include "script_component.hpp"
 
 params ["_target"];
-private ["_unitName", "_unitRank", "_unitIcon", "_unitColorHex", "_unitColorArma", "_unitTeam"];
 
-//unit name
+private _cacheTime = _target getVariable [QGVAR(getUnitDataCacheTime), 0];
+if((ace_time - _cacheTime) > 2 && {_cacheTime > 0}) exitWith {
+    [
+        (_target getVariable [QGVAR(getUnitDataCache_unitName), ""]),
+        (_target getVariable [QGVAR(getUnitDataCache_unitRank), ""]),
+        (_target getVariable [QGVAR(getUnitDataCache_unitIcon), ""]),
+        (_target getVariable [QGVAR(getUnitDataCache_unitColorHex), ""]),
+        (_target getVariable [QGVAR(getUnitDataCache_unitColorArma), []])
+    ]
+};
+
+//unit name & rank
 private _unitName = _target call EFUNC(common,getName);
-
-//unit rank name
 private _unitRank = getText (configFile >> "CfgVehicles" >> typeof _target  >> QGVAR(rankname));
 private _unitIcon = getText (configFile >> "CfgVehicles" >> typeof _target  >> QGVAR(rankicon));
-if(_unitRank == "" || _unitIcon == "") then {
+if(_unitRank == "" || {_unitIcon == ""}) then {
     private _rank = rank _target;
     _unitRank = localize format [LSTRING(Rank_%1), _rank];
     _unitIcon = format ["\A3\ui_f\data\gui\cfg\Ranks\%1_gs.paa", _rank]
 };
 
 //unit color
-_unitColorHex = "";
-_unitColorArma = [];
+private _unitColorHex = "";
+private _unitColorArma = [];
 if((group ace_player) isEqualTo (group _target)) then {
     //player group
     switch (tolower (assignedTeam _target)) do {
@@ -32,5 +40,12 @@ if((group ace_player) isEqualTo (group _target)) then {
     _unitColorHex = "#DEDEDE";
     _unitColorArma = [0.87,0.87,0.87,1];
 };
+
+_target setVariable [QGVAR(getUnitDataCache_unitName), _unitName];
+_target setVariable [QGVAR(getUnitDataCache_unitRank), _unitRank];
+_target setVariable [QGVAR(getUnitDataCache_unitIcon), _unitIcon];
+_target setVariable [QGVAR(getUnitDataCache_unitColorHex), _unitColorHex];
+_target setVariable [QGVAR(getUnitDataCache_unitColorArma), _unitColorArma];
+_target setVariable [QGVAR(getUnitDataCacheTime), ace_time];
 
 [_unitName, _unitRank, _unitIcon, _unitColorHex, _unitColorArma]

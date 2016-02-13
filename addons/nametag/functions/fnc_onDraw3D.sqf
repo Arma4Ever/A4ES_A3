@@ -10,12 +10,12 @@ if (dialog) exitWith {};
 if (vehicle ace_player != ace_player) exitWith {};
 
 //cursortarget nametag
-if(!freeLook && (GVAR(enableCursorNametag) || {GVAR(enable3dNametag) == 2})) then {
+if(!freeLook && {GVAR(enableCursorNametag) || GVAR(enable3dNametag) == 2}) then {
     private ["_target", "_distance"];
     _target = cursorObject;
     if ((!isNull _target) &&
-        (alive _target) &&
         {_target isKindOf "CAManBase"} &&
+        {alive _target} &&
         {(side (group _target)) == (side (group ace_player))} &&
         {_target != ace_player}
         //{GVAR(showNamesForAI) || {[_target] call ace_common_fnc_isPlayer}} &&
@@ -23,9 +23,9 @@ if(!freeLook && (GVAR(enableCursorNametag) || {GVAR(enable3dNametag) == 2})) the
         _distance = ace_player distance _target;
         if(_distance <= 5) then {
             //draw 2d nametag
-            if(GVAR(enableCursorNametag)) then {[_target] call FUNC(drawNametag);};
+            if(GVAR(enableCursorNametag)) then {_target call FUNC(drawNametag);};
             //draw 3d nametag
-            if(GVAR(enable3dNametag) == 2) then {[_target] call FUNC(drawNametag3d);};
+            if(GVAR(enable3dNametag) == 2) then {_target call FUNC(drawNametag3d);};
         };
     };
 };
@@ -35,9 +35,10 @@ if(ace_interact_menu_openedMenuType >= 0) exitWith {};
 
 //freelok nametag
 if(freeLook && {GVAR(enable3dNametag) == 1}) then {
-    private ["_pos", "_targets"];
-    _pos = positionCameraToWorld [0, 0, 0];
-    _targets = _pos nearObjects ["CAManBase", 10];
+    if(ace_time - GVAR(nearObjectsCacheTime) > 1) then {
+        GVAR(nearObjectsCache) = (positionCameraToWorld [0, 0, 0]) nearObjects ["CAManBase", 10];
+        GVAR(nearObjectsCacheTime) = ace_time;
+    };
     {
         private ["_target", "_targetEyePosASL"];
         _target = _x;
@@ -55,6 +56,5 @@ if(freeLook && {GVAR(enable3dNametag) == 1}) then {
                 [_target] call FUNC(drawNametag3d);
             };
         };
-        nil
-    } count _targets;
+    } forEach GVAR(nearObjectsCache);
 };
