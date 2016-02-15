@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+    <Package name="Interact_menu">
+        <Key ID="STR_A3CS_Interact_Menu_Settings_UseFlexiMenu_DisplayName">
+            <Original>Używaj Flexi Menu</Original>
+        </Key>
+    </Package>
+</Project>

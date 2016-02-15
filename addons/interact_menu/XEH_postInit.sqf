@@ -1,8 +1,5 @@
 #include "script_component.hpp"
 
-ace_interact_menu_fnc_renderActionPoints = compile preProcessFileLineNumbers "\z\a3cs\addons\interaction_menu\functions\fnc_renderActionPoints.sqf";
-ace_interact_menu_fnc_renderMenu = compile preProcessFileLineNumbers "\z\a3cs\addons\interaction_menu\functions\fnc_renderMenu.sqf";
-
 GVAR(fleximenuDef) call cba_fnc_flexiMenu_add;
 
 ["interactMenuOpened", {
