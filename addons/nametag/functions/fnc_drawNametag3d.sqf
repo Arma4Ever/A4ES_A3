@@ -1,9 +1,13 @@
+/*
+ * Author: SzwedzikPL
+ * Draw 3D nametag (triggered by onDraw EH)
+ */
 #include "script_component.hpp"
 
 params ["_target"];
 
 private _unitData = _target call FUNC(getUnitData);
-_unitData params ["_unitName", "_unitRank", "_unitIcon", "_unitColorHex", "_unitColorArma"];
+_unitData params ["_unitName", "_unitRank", "", "", "_unitColorArma"];
 
 private _positionCamera = positionCameraToWorld [0, 0, 0];
 if (!surfaceIsWater _positionCamera) then {_positionCamera = ATLtoASL _positionCamera;};
@@ -17,7 +21,6 @@ private _heightOffset2 = _distance * 0.044;
 private _position = _target modelToWorldVisual ((_target selectionPosition "pilot") vectorAdd [0,0,(_heightOffset + .3)]);
 private _position2 = _target modelToWorldVisual ((_target selectionPosition "pilot") vectorAdd [0,0,(_heightOffset2 + .3)]);
 
-private _size = 1;
 private _scale = 0.83333;
 
 //Draw name

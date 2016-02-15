@@ -1,3 +1,7 @@
+/*
+ * Author: SzwedzikPL
+ * Draw 2D nametag on screen (triggered by onDraw EH)
+ */
 #include "script_component.hpp"
 
 params ["_target"];
@@ -10,7 +14,7 @@ private _uiNameTagCtrl = _uiNametag displayCtrl 3600;
 if(isNull _uiNameTagCtrl) exitWith {};
 
 private _unitData = _target call FUNC(getUnitData);
-_unitData params ["_unitName", "_unitRank", "_unitIcon", "_unitColorHex", "_unitColorArma"];
+_unitData params ["_unitName", "_unitRank", "_unitIcon", "_unitColorHex"];
 
 if(dialog || {ace_interact_menu_openedMenuType >= 0}) exitWith {_uiNameTagCtrl ctrlShow false;};
 

@@ -1,13 +1,18 @@
+/*
+ * Author: SzwedzikPL
+ * Add community (A3C) group special item (bandana)
+ */
 #include "script_component.hpp"
 
-private ["_communityData", "_bandanaClass"];
+if(!GVAR(addSpecialItem)) exitWith {};
+if(ace_player getVariable [QGVAR(specialItemAdded), false]) exitWith {};
 
-_communityData = [ace_player] call FUNC(getUnitCommunityData);
-_communityData params ["_communityGroup", "_communityGroupName", "_communityGroupColor", "_communityRank"];
+private _communityData = (ace_player call FUNC(getUnitCommunityData));
+_communityData params ["_communityGroup"];
 
 if(_communityGroup == "") exitWith {};
 
-_bandanaClass = "";
+private _bandanaClass = "";
 if(_communityGroup == "adm") then {_bandanaClass = "maska_admin";};
 if(_communityGroup == "ofc") then {_bandanaClass = "maska_oficer";};
 if(_communityGroup == "dow") then {_bandanaClass = "maska_dowodca";};
@@ -20,3 +25,5 @@ if(goggles ace_player == "") then {
 } else {
     ace_player addItem _bandanaClass;
 };
+
+ace_player setVariable [QGVAR(specialItemAdded), true, true];

@@ -11,14 +11,3 @@ if (!hasInterface) exitWith {};
 ["SettingChanged", {
     _this call FUNC(updateSettings);
 }] call ace_common_fnc_addEventHandler;
-
-if(!isMultiplayer) exitWith {};
-if(didJIP) exitWith {};
-
-if(GVAR(members) isEqualTo [[],[]]) then {
-    QGVAR(members) addPublicVariableEventHandler {
-        [FUNC(addSpecialItem), [], 1] call ace_common_fnc_waitAndExecute;
-    };
-} else {
-    [FUNC(addSpecialItem), [], 1] call ace_common_fnc_waitAndExecute;
-};

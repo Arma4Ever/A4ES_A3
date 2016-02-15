@@ -1,22 +1,26 @@
+/*
+ * Author: SzwedzikPL
+ * Get unit community (A3C) identity (community group)
+ */
 #include "script_component.hpp"
 
-params ["_target", "_uid", "_index", "_communityGroup", "_communityGroupName", "_communityGroupColor", "_communityRank"];
+params ["_target"];
 
-_emptyReturn = ["","","",""];
+private _emptyReturn = ["","","",""];
 
 if(!isPlayer _target) exitWith {_emptyReturn};
 if(GVAR(members) isEqualTo [[],[]]) exitWith {_emptyReturn};
 
 GVAR(members) params ["_uids", "_classes"];
 
-_uid = getPlayerUID _target;
-_index = _uids find _uid;
+private _uid = getPlayerUID _target;
+private _index = _uids find _uid;
 
-if(_index == -1) exitWith {_emptyReturn};
+if(_index < 0) exitWith {_emptyReturn};
 
-_communityGroup = _classes select _index;
-_communityGroupName = "";
-_communityGroupColor = "";
-_communityRank = "";
+private _communityGroup = _classes select _index;
+private _communityGroupName = "";
+private _communityGroupColor = "";
+private _communityRank = "";
 
 [_communityGroup, _communityGroupName, _communityGroupColor, _communityRank]
