@@ -3,14 +3,24 @@
  * Check ID of unit
  */
 #include "script_component.hpp"
-#include "\z\a3cs\addons\common\ui\idcSelectMenu.hpp"
+#include "\z\a3cs\addons\common\ui\idcListBox.hpp"
 
 params ["_player", "_unit"];
 
 while {dialog} do {closeDialog 0;};
 
-private _dialog = createDialog "A3CS_ui_selectMenu";
+private _dialog = createDialog "A3CS_ui_listBox";
 if(!_dialog) exitWith {};
+
+disableSerialization;
+private _display = uiNamespace getVariable ["A3CS_ui_listBox", displayNull];
+if(isNull _display) exitWith {};
+
+if(isPlayer _unit && {!(_player isEqualTo _unit)}) then {
+    private _playerName = _player call EFUNC(common,getName);
+    private _hintText = format [localize LSTRING(CheckID_Notification), _playerName];
+    _hintText remoteExecCall ["hint", _unit];
+};
 
 private _unitData = _unit call EFUNC(nametag,getUnitData);
 _unitData params ["_unitName", "_unitRank"];
@@ -18,29 +28,27 @@ _unitData params ["_unitName", "_unitRank"];
 private _roleDesc = roleDescription _unit;
 if(_roleDesc == "") then {_roleDesc = tolower localize ELSTRING(Common,None);};
 
-private _isMedic = _unit call ace_medical_fnc_isMedic;
-private _isEngineer = _unit call ace_common_fnc_isEngineer;
-private _isEOD = _unit call ace_common_fnc_isEOD;
-if(_isMedic isEqualType 0) then {_isMedic = _isMedic > 0;};
-if(_isEngineer isEqualType 0) then {_isEngineer = _isEngineer > 0;};
-if(_isEOD isEqualType 0) then {_isEOD = _isEOD > 0;};
+private _isEOD = (_unit call ace_common_fnc_isEOD) isEqualTo true;
+private _isEngineer = (_unit call ace_common_fnc_isEngineer) isEqualTo true;
+private _isMedic = (_unit call ace_medical_fnc_isMedic) isEqualTo true;
 
 //set header title
-ctrlSetText [IDC_SELECTMENU_HEADER, format [localize LSTRING(CheckID_ListHeader), _unitName]];
-//hide left button
-ctrlShow [IDC_SELECTMENU_BUTTON1, false];
-ctrlShow [IDC_SELECTMENU_BUTTON1BG, false];
-//setup right button
-ctrlSetText [IDC_SELECTMENU_BUTTON2, localize ELSTRING(Common,Close)];
-buttonSetAction [IDC_SELECTMENU_BUTTON2, "closeDialog 0"];
+(_display displayCtrl IDC_LISTBOX_HEADER) ctrlSetText format [localize LSTRING(CheckID_ListHeader), _unitName];
+//setup close button
+(_display displayCtrl IDC_LISTBOX_BUTTON3) ctrlSetText localize ELSTRING(Common,Close);
+(_display displayCtrl IDC_LISTBOX_BUTTON3) buttonSetAction "closeDialog 0";
+//hide 2 buttons
+(_display displayCtrl IDC_LISTBOX_BUTTON1) ctrlShow false;
+(_display displayCtrl IDC_LISTBOX_BUTTON2) ctrlShow false;
 
+private _controlList = _display displayCtrl IDC_LISTBOX_LIST;
 private _index = 0;
-_index = lbAdd [IDC_SELECTMENU_ITEMLIST, format [localize LSTRING(CheckID_Name), _unitName]];
-_index = lbAdd [IDC_SELECTMENU_ITEMLIST, format [localize LSTRING(CheckID_Rank), _unitRank]];
-_index = lbAdd [IDC_SELECTMENU_ITEMLIST, format [localize LSTRING(CheckID_Desc), _roleDesc]];
-if(_isMedic) then {_index = lbAdd [IDC_SELECTMENU_ITEMLIST, format ["%1 %2", localize LSTRING(CheckID_Prems), localize LSTRING(CheckID_Medic)];};
-if(_isEngineer) then {_index = lbAdd [IDC_SELECTMENU_ITEMLIST, format ["%1 %2", localize LSTRING(CheckID_Prems), localize LSTRING(CheckID_Engineer)];};
-if(_isEOD) then {_index = lbAdd [IDC_SELECTMENU_ITEMLIST, format ["%1 %2", localize LSTRING(CheckID_Prems), localize LSTRING(CheckID_Eod)];};
+_index = _controlList lbAdd format [localize LSTRING(CheckID_Name), _unitName];
+_index = _controlList lbAdd format [localize LSTRING(CheckID_Rank), _unitRank];
+_index = _controlList lbAdd format [localize LSTRING(CheckID_Desc), _roleDesc];
+if(_isMedic) then {_index = _controlList lbAdd format [localize LSTRING(CheckID_Prems), localize LSTRING(CheckID_Medic)];};
+if(_isEngineer) then {_index = _controlList lbAdd format [localize LSTRING(CheckID_Prems), localize LSTRING(CheckID_Engineer)];};
+if(_isEOD) then {_index = _controlList lbAdd format [localize LSTRING(CheckID_Prems), localize LSTRING(CheckID_Eod)];};
 
 /*
 _squadParams = squadParams _unit;
