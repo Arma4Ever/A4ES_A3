@@ -34,6 +34,8 @@ private _uncachedUnitCount = 0;
             private _dir = getDir (vehicle _groupLeader);
             _unit setPos _position;
             _unit setDir _dir;
+            //move to leader vehicle if possible
+            if(!isNull objectParent _groupLeader) then {_unit moveInAny (objectParent _groupLeader)};
         };
     };
     nil

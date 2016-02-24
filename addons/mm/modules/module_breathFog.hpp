@@ -1,14 +1,15 @@
-class GVAR(module_breathFog): A3C_Module
-{
-	scope = 2;
-    author = "Arma3Coop.pl";
-	displayName = "Para z ust";
-	category = "a3cs_modules_effects";
-	function = QUOTE(DFUNC(module_breathFog));
+class GVAR(module_breathFog): A3C_Module {
+    scope = 2;
+    author = ECSTRING(common,A3C);
+    displayName = CSTRING(Module_BreathFog_DisplayName);
+    category = "a3cs_modules_effects";
+    function = QUOTE(DFUNC(module_breathFog));
+    isTriggerActivated = 0;
 
-	class Arguments {};
-	class ModuleDescription: ModuleDescription
-	{
-		description = "";
-	};
+    class Attributes: AttributesBase {
+        class ModuleDescription: ModuleDescription {};
+    };
+    class ModuleDescription: ModuleDescription {
+        description = CSTRING(Module_BreathFog_Description);
+    };
 };

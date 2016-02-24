@@ -33,8 +33,7 @@ private _childGroups = _childPlace getVariable [QGVAR(genSoldiers_aliveGroups), 
         if(count (units _group) > _vehicleSeats) then {_canGetIn = false;};
 
         if(_canGetIn) then {_useVehicle = _vehicle;};
-        nil
-    } count _nearestVehicles;
+    } forEach _nearestVehicles;
 
     private _waypointCount = 0;
     private _waypoint = [];
@@ -54,5 +53,4 @@ private _childGroups = _childPlace getVariable [QGVAR(genSoldiers_aliveGroups), 
     _waypoint setWaypointBehaviour "AWARE";
     _waypoint setWaypointCombatMode "RED";
     _waypoint setWaypointSpeed "FULL";
-    nil
-} count _childGroups;
+} forEach _childGroups;

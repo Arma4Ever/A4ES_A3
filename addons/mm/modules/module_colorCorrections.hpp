@@ -1,87 +1,43 @@
-class GVAR(module_colorCorrections): A3C_Module
-{
-	scope = 2;
-    author = "Arma3Coop.pl";
-	displayName = "Filtr kolorystyczny";
-	category = "a3cs_modules_effects";
-	function = QUOTE(DFUNC(module_colorCorrections));
+class GVAR(module_colorCorrections): A3C_Module {
+    scope = 2;
+    author = ECSTRING(common,A3C);
+    displayName = CSTRING(Module_ColorCorrections_DisplayName);
+    category = "a3cs_modules_effects";
+    function = QUOTE(DFUNC(module_colorCorrections));
+    isTriggerActivated = 0;
+    execIn3DEN = 1;
 
-    class Arguments {
-        class EffectType {
-            displayName = "Typ efektu";
-            description = "Typ efektu widocznego na ekranie po uruchomieniu modułu";
-            typeName = "STRING";
+    class Attributes: AttributesBase {
+        class effecttype: Combo {
+            displayName = CSTRING(Module_ColorCorrections_EffectType_DisplayName);
+            tooltip = CSTRING(Module_ColorCorrections_EffectType_Description);
+            property = QGVAR(module_colorCorrections_effectType);
+            defaultValue = "'dayzsa'";
             class values {
-                class Effect01 {
-                    name = "DayZ Standalone";
-                    value = "dayz";
-                    default = 1;
-                };
-                class Effect02 {
-                    name = "Operation Flashpoint";
-                    value = "ofp";
-                    default = 0;
-                };
-                class Effect03 {
-                    name = "Arma 2";
-                    value = "a2";
-                    default = 0;
-                };
-                class Effect04 {
-                    name = "Arma 2 OA";
-                    value = "a2oa";
-                    default = 0;
-                };
-                class Effect05 {
-                    name = "Zima";
-                    value = "zima";
-                    default = 0;
-                };
-                class Effect06 {
-                    name = "Wiosna";
-                    value = "wiosna";
-                    default = 0;
-                };
-                class Effect07 {
-                    name = "Jesien";
-                    value = "jesien";
-                    default = 0;
-                };
-                class Effect08 {
-                    name = "Sloneczny dzien";
-                    value = "sloneczny_dzien";
-                    default = 0;
-                };
-                class Effect09 {
-                    name = "Deszczowy dzien";
-                    value = "deszczowy_dzien";
-                    default = 0;
-                };
-                class Effect10 {
-                    name = "Afryka";
-                    value = "afryka";
-                    default = 0;
-                };
-                class Effect11 {
-                    name = "Pustynia";
-                    value = "pustynia";
-                    default = 0;
-                };
-                class Effect12 {
-                    name = "Postapo";
-                    value = "postapo";
-                    default = 0;
-                };
+                class dayzsa {name = CSTRING(Module_ColorCorrections_EffectType_DayZSA_DisplayName); value = "dayzsa"; default = 1;};
+                class ofp {name = CSTRING(Module_ColorCorrections_EffectType_OFP_DisplayName); value = "ofp"; default = 0;};
+                class arma2 {name = CSTRING(Module_ColorCorrections_EffectType_Arma2_DisplayName); value = "arma2"; default = 0;};
+                class arma2oa {name = CSTRING(Module_ColorCorrections_EffectType_Arma2OA_DisplayName); value = "arma2oa"; default = 0;};
+                class winter {name = CSTRING(Module_ColorCorrections_EffectType_Winter_DisplayName); value = "winter"; default = 0;};
+                class spring {name = CSTRING(Module_ColorCorrections_EffectType_Spring_DisplayName); value = "spring"; default = 0;};
+                class autumn {name = CSTRING(Module_ColorCorrections_EffectType_Autumn_DisplayName); value = "autumn"; default = 0;};
+                class sunnyday {name = CSTRING(Module_ColorCorrections_EffectType_SunnyDay_DisplayName); value = "sunnyday"; default = 0;};
+                class rainyday {name = CSTRING(Module_ColorCorrections_EffectType_RainyDay_DisplayName); value = "rainyday"; default = 0;};
+                class africa {name = CSTRING(Module_ColorCorrections_EffectType_Africa_DisplayName); value = "africa"; default = 0;};
+                class desert {name = CSTRING(Module_ColorCorrections_EffectType_Desert_DisplayName); value = "desert"; default = 0;};
+                class postapo {name = CSTRING(Module_ColorCorrections_EffectType_PostApo_DisplayName); value = "postapo"; default = 0;};
             };
         };
+        class enableInEden: CheckboxNumber {
+            displayName = CSTRING(Module_ColorCorrections_EnableInEden_DisplayName);
+            tooltip = CSTRING(Module_ColorCorrections_EnableInEden_Description);
+            property = QGVAR(module_colorCorrections_enableInEden);
+            typeName = "NUMBER";
+            defaultValue = 1;
+        };
+        class ModuleDescription: ModuleDescription {};
     };
-    class ModuleDescription: ModuleDescription
-    {
-        description = "Zmiana kolorystyki widocznej w grze.";
-        sync[] = {};
-        position = 1;
+    class ModuleDescription: ModuleDescription {
+        description = CSTRING(Module_ColorCorrections_Description);
     };
-};
-class PAM_Modules_CC_Effect: A3C_Module {
-    scope = 1;
 };

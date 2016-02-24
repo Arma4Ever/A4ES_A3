@@ -7,6 +7,9 @@ class CfgFactionClasses {
     class a3cs_modules_ai: a3cs_modules {
         displayName = CSTRING(FactionClass_AI);
     };
+    class a3cs_modules_effects: a3cs_modules {
+        displayName = CSTRING(FactionClass_Effects);
+    };
     class a3cs_modules_support: a3cs_modules {
         displayName = CSTRING(FactionClass_Support);
     };
@@ -15,8 +18,5 @@ class CfgFactionClasses {
     };
     class a3cs_modules_tasks: a3cs_modules {
         displayName = CSTRING(FactionClass_Tasks);
-    };
-    class a3cs_modules_effects: a3cs_modules {
-        displayName = CSTRING(FactionClass_Effects);
     };
 };

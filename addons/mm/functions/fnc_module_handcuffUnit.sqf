@@ -1,16 +1,35 @@
+/*
+ * Author: SzwedzikPL
+ * handcuffUnit module function
+ */
 #include "script_component.hpp"
 
-params ["_logic", "_units", "_activated"];
+if(!isServer) exitWith {true};
+params [["_mode", "", [""]], ["_input", [], [[]]]];
 
-if (!_activated) exitWith {};
-if (!isServer) exitWith {};
+// Module - init
+if(_mode == "init") then {
+    _input params [["_logic", objNull, [objNull]], ["_isActivated", false, [false]], ["_isCuratorPlaced", false, [false]]];
+    if(isNull _logic || !_isActivated) exitWith {true};
+    if(!(_logic call FUNC(canExecuteModule))) exitWith {A3CS_LOGWARN("handcuffUnit: blokuje wykonanie modulu")true};
 
-//Modules run before postInit can instal the event handler, so we need to wait a little bit
-[{
-    params ["_units"];
-    {
-        ["SetHandcuffed", [_x], [_x, true]] call ace_common_fnc_targetEvent;
-    } forEach _units;
-}, [_units], 0.05] call ace_common_fnc_waitAndExecute;
+    private _units = (synchronizedObjects _logic) select {_x isKindOf "CAManBase"};
 
-deleteVehicle _logic;
+    [{
+        params ["_units", "_setHandcuffed"];
+        {["SetHandcuffed", [_x], [_x, _setHandcuffed]] call ace_common_fnc_targetEvent;} forEach _units;
+    }, [_units, true]] call ace_common_fnc_runAfterSettingsInit;
+
+    //Set as disposable if possible
+    _logic call FUNC(setDisposable);
+};
+// EDEN - When some attributes were changed (including position and rotation)
+if(_mode == "attributesChanged3DEN") then {};
+// EDEN - When added to the world (e.g., after undoing and redoing creation)
+if(_mode == "registeredToWorld3DEN") then {};
+// When removed from the world (i.e., by deletion or undoing creation)
+if(_mode == "unregisteredFromWorld3DEN") then {};
+// EDEN - When connection to object changes (i.e., new one is added or existing one removed)
+if(_mode == "connectionChanged3DEN") then {};
+
+true

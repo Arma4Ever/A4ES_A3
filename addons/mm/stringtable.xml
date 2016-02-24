@@ -1,177 +1,749 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
     <Package name="MM">
-	    <Key ID="STR_A3CS_MM_Settings_displayName_enableColorCorrectionsEffect">
-            <Original>Włącz efekty kolorystyczne</Original>
+	    <Key ID="STR_A3CS_MM_Side_Blufor">
+            <Original>BLUFOR</Original>
         </Key>
-        <Key ID="STR_A3CS_MM_Settings_category_effects">
+	    <Key ID="STR_A3CS_MM_Side_Opfor">
+            <Original>OPFOR</Original>
+        </Key>
+	    <Key ID="STR_A3CS_MM_Side_Indep">
+            <Original>Independent</Original>
+        </Key>
+	    <Key ID="STR_A3CS_MM_Side_Civilian">
+            <Original>Cywile</Original>
+        </Key>
+	    <Key ID="STR_A3CS_MM_FactionClass_AI">
+            <Original>AI</Original>
+        </Key>
+	    <Key ID="STR_A3CS_MM_FactionClass_Effects">
             <Original>Efekty</Original>
         </Key>
-        <Key ID="STR_A3CS_MM_displayName_dummyVest">
+	    <Key ID="STR_A3CS_MM_FactionClass_Support">
+            <Original>Wsparcie</Original>
+        </Key>
+	    <Key ID="STR_A3CS_MM_FactionClass_Interactions">
+            <Original>Interakcje</Original>
+        </Key>
+	    <Key ID="STR_A3CS_MM_FactionClass_Tasks">
+            <Original>Zadania</Original>
+        </Key>
+	    <Key ID="STR_A3CS_MM_Headless_Inited">
+            <Original>Wszystkie AI zostały przekazane do Headless Clienta poprawnie</Original>
+        </Key>
+	    <Key ID="STR_A3CS_MM_Cache_Inited">
+            <Original>System cache został uruchomiony</Original>
+        </Key>
+        <Key ID="STR_A3CS_MM_DummyVest_DisplayName">
             <Original>Kamizelka AI</Original>
         </Key>
-        <Key ID="STR_A3CS_MM_FactionClasses_displayName_X">
-            <Original>[A3CS] Efekty</Original>
+        <Key ID="STR_A3CS_MM_Settings_Category_Effects">
+            <Original>Efekty</Original>
         </Key>
-		<!-- --
-		STARE WARTOSCI!
-		<!-- -->
-		<Container name="A3CS_MM_module_fireArtillery">
-			<Key ID="STR_A3CS_MM_fireArtillery_Name">
-				<Original>Artyleria</Original>
+	    <Key ID="STR_A3CS_MM_Settings_EnableColorCorrectionsEffect_DisplayName">
+            <Original>Włącz filtry kolorystyczne</Original>
+        </Key>
+	    <Key ID="STR_A3CS_MM_MissionFrom2DEditor1">
+            <Original>UWAGA!</Original>
+        </Key>
+	    <Key ID="STR_A3CS_MM_MissionFrom2DEditor2">
+            <Original>Misja pochodzi z edytora 2D</Original>
+        </Key>
+		<Container name="A3CS_MM_ObjectAttribute">
+			<Key ID="STR_A3CS_MM_ObjectAttribute_Control_CharacterDesc_DisplayName">
+				<Original>Opis postaci</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_fireArtillery_Desc">
-				<Original>Moduł generujący ostrzał artyleryjski</Original>
+			<Key ID="STR_A3CS_MM_ObjectAttribute_Control_CharacterDesc_Description">
+				<Original>Opis postaci (zobaczy go tylko gracz który będzie grał tą jednostką)</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_fireArtillery_EmptyDetector_Desc">
-				<Original>Trigger określający pole ostrzału</Original>
+			<Key ID="STR_A3CS_MM_ObjectAttribute_CacheSettings_DisplayName">
+				<Original>Ustawienia Cache</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_fireArtillery_EmptyDetector_Desc2">
-				<Original>Aby ostrzał się rozpoczął warunki wszystkich zsynchronizowanych triggerów muszą być prawdziwe</Original>
+			<Key ID="STR_A3CS_MM_ObjectAttribute_CacheSettings_CacheUnit_DisplayName">
+				<Original>Ukrywaj jednostkę</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_fireArtillery_EmptyDetector_Desc3">
-				<Original>Moduł może uruchamiać się wielokrotnie zależnie od ustawień triggera</Original>
+			<Key ID="STR_A3CS_MM_ObjectAttribute_CacheSettings_CacheUnit_Description">
+				<Original>Czy system ma ukryć jednostkę jeśli będzie ona poza zasięgiem graczy</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_fireArtillery_Ammotype_Name">
+			<Key ID="STR_A3CS_MM_ObjectAttribute_CacheSettings_CacheUnit_Yes_DisplayName">
+				<Original>Tak</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_ObjectAttribute_CacheSettings_CacheUnit_NoLeader_DisplayName">
+				<Original>Nie, jeśli jest liderem grupy</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_ObjectAttribute_CacheSettings_CacheUnit_No_DisplayName">
+				<Original>Nie</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_CacheSettings">
+			<Key ID="STR_A3CS_MM_Module_CacheSettings_DisplayName">
+				<Original>Ustawienia Cache</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_CacheSettings_Description">
+				<Original>Ustawienia systemu cache jednostek</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_CacheSettings_Enable_DisplayName">
+				<Original>Włącz system</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_CacheSettings_Enable_Description">
+				<Original>Włącz system cache na starcie misji</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_CacheSettings_DistanceLand_DisplayName">
+				<Original>Min. odległość jedn. lądowych</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_CacheSettings_DistanceLand_Description">
+				<Original>Z jakiej odległości jednostki lądowe będą odkrywać AI (ustaw 0 jeśli dany typ jednostek ma być ignorowany)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_CacheSettings_DistanceHelicopter_DisplayName">
+				<Original>Min. odległość śmigłowców</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_CacheSettings_DistanceHelicopter_Description">
+				<Original>Z jakiej odległości śmigłowce będą odkrywać AI (ustaw 0 jeśli dany typ jednostek ma być ignorowany)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_CacheSettings_DistancePlane_DisplayName">
+				<Original>Min. odległość samolotów</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_CacheSettings_DistancePlane_Description">
+				<Original>Z jakiej odległości samoloty będą odkrywać AI (ustaw 0 jeśli dany typ jednostek ma być ignorowany)</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_GenSoldiers">
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_DisplayName">
+				<Original>Generator AI</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Description">
+				<Original>Moduł generowania jednostek&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Place_DisplayName">
+				<Original>Obszar respawnu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Place_Description">
+				<Original>Nazwa triggera w którym mają się wygenerować jednostki</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_ParentUnit_DisplayName">
+				<Original>Jednostka nadrzędna</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_ParentUnit_Description">
+				<Original>Nazwa triggera (obszaru respawnu) któremu wygenerowane jednostki ruszą z pomocą w przypadku ataku. Zostaw puste jeśli jednostka ma być samodzielna</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_UnitCount_DisplayName">
+				<Original>Ilość AI</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_UnitCount_Description">
+				<Original>Ilość jednostek jaka ma zostać wygenerowana</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Side_DisplayName">
+				<Original>Strona konfliktu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Side_Description">
+				<Original>Strona do której zostaną przydzielone wygenerowane jednostki</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Classes_DisplayName">
+				<Original>Klasy jednostek</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Classes_Description">
+				<Original>Tabliza z klasami możliwych do wygenerowania jednostek (np. [""klasa1"", ""klasa2""])</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_GroupCount_DisplayName">
+				<Original>Ilość AI w grupie</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_GroupCount_Description">
+				<Original>Ilość AI w każdej grupie (np. generując 10 AI możesz je podzielić na 2 grupy po 5 AI w każdej)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Training_DisplayName">
+				<Original>Wyszkolenie</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Training_Description">
+				<Original>Poziom wyszkolenia wygenerowanych jednostek</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Training_Militia_DisplayName">
+				<Original>Bojówka</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Training_Guards_DisplayName">
+				<Original>Gwardia</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Training_Conscripts_DisplayName">
+				<Original>Jednostki poborowe</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Training_Professional_DisplayName">
+				<Original>Jednostki zawodowe</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Training_Elite_DisplayName">
+				<Original>Jednostki specjalne</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Behaviour_DisplayName">
+				<Original>Zachowanie AI</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Behaviour_Description">
+				<Original>Sposób w jaki mają zachowywać się AI po wygenerowaniu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Behaviour_Patrol_DisplayName">
+				<Original>Patrol</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Behaviour_Defend_DisplayName">
+				<Original>Obrona pozycji</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Behaviour_Base_DisplayName">
+				<Original>Oczekiwanie w bazie</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Script_DisplayName">
+				<Original>Skrypt jednostki</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Script_Description">
+				<Original>Skrypt który zostanie wykonany dla każdej wykonanej jednostki (np. _this setSkill 0.7)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Ignore_DisplayName">
+				<Original>Lista obszarów ignorowanych</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Ignore_Description">
+				<Original>Tablica z triggerami wewnątrz podanego obszaru respawnu w których AI ma się nie respić aby wykluczyć np. wygenerowanie w budynkach lub w trudno dostępnych miejscach (np. [trig01,trig02])</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_GenAttack">
+			<Key ID="STR_A3CS_MM_Module_GenAttack_DisplayName">
+				<Original>Generator ataków</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAttack_Description">
+				<Original>Moduł generowania ataków&lt;br /&gt;Jeśli wielkość fali jest mniejsza niż limit AI, nowe jednostki zostaną wygenerowane w momencie, w którym wszystkie AI z poprzedniej fali polegną&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAttack_AttackTarget_DisplayName">
+				<Original>Cel ataku</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAttack_AttackTarget_Description">
+				<Original>Nazwa markera który mają zaatakować AI (np. marker01)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAttack_TimeCondition_DisplayName">
+				<Original>Limit czasu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAttack_TimeCondition_Description">
+				<Original>Limit czasu trwania ataku (ustaw 0 jeśli bez limitu)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAttack_CountCondition_DisplayName">
+				<Original>Limit AI</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAttack_CountCondition_Description">
+				<Original>Limit wygenerowanych przez moduł AI (ustaw 0 jeśli bez limitu)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAttack_CodeCondition_DisplayName">
+				<Original>Warunek logiczny ataku</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAttack_CodeCondition_Description">
+				<Original>Do momentu, aż warunek zwróci prawdę a żaden z powyższych limitów się nie wyczerpie atak będzie kontynuowany (pozostaw true jeśli istotny jest tylko któryś z limitów)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAttack_WaveCount_DisplayName">
+				<Original>Ilość AI w fali</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAttack_WaveCount_Description">
+				<Original>Ilość AI która zostanie wygenerowana jednocześnie</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAttack_GroupVehicle_DisplayName">
+				<Original>Pojazd</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAttack_GroupVehicle_Description">
+				<Original>Klasa pojazdu który ma zostać użyty w ataku (jeden pojazd na każdą grupę, np. B_MRAP_01_F)</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_SurrenderUnit">
+			<Key ID="STR_A3CS_MM_Module_SurrenderUnit_DisplayName">
+				<Original>Poddaj jednostkę</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SurrenderUnit_Description">
+				<Original>Moduł poddawania jednostek&lt;br /&gt;Zsynchronizuj moduł z każdą jednostką której ma dotyczyć wybrana akcja&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SurrenderUnit_Action_DisplayName">
+				<Original>Akcja</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SurrenderUnit_Action_Description">
+				<Original>Co moduł ma zrobić w momencie aktywacji</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SurrenderUnit_Action_Surrender_DisplayName">
+				<Original>Poddaj jednostkę</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SurrenderUnit_Action_StopSurrender_DisplayName">
+				<Original>Przestań poddawać jednostkę</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_HandcuffUnit">
+			<Key ID="STR_A3CS_MM_Module_HandcuffUnit_DisplayName">
+				<Original>Zakuj jednostkę</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_HandcuffUnit_Description">
+				<Original>Moduł zakuwania jednostek&lt;br /&gt;Zsynchronizuj moduł z każdą jednostką która ma zostać zakuta&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_ForceGunLights">
+			<Key ID="STR_A3CS_MM_Module_ForceGunLights_DisplayName">
+				<Original>Wymuś włączenie latarek</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_ForceGunLights_Description">
+				<Original>Moduł wymuszania włączenia latarek przez jednostki&lt;br /&gt;Zsynchronizuj moduł z każdą jednostką która ma mieć włączoną latarkę&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_SandStorm">
+			<Key ID="STR_A3CS_MM_Module_SandStorm_DisplayName">
+				<Original>Burza piaskowa</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SandStorm_Description">
+				<Original>Moduł dodający efekt burzy piaskowej&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_FogEffect">
+			<Key ID="STR_A3CS_MM_Module_FogEffect_DisplayName">
+				<Original>Mgła</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_FogEffect_Description">
+				<Original>Moduł dodający efekt lekkiej mgły&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_SnowEffect">
+			<Key ID="STR_A3CS_MM_Module_SnowEffect_DisplayName">
+				<Original>Opady śniegu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SnowEffect_Description">
+				<Original>Moduł dodający efekt opadów śniegu&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SnowEffect_Type_DisplayName">
+				<Original>Typ opadów</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SnowEffect_Type_Description">
+				<Original>Typ opadów śniegu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SnowEffect_Type_Flurry_DisplayName">
+				<Original>Lekkie opady</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SnowEffect_Type_LightStorm_DisplayName">
+				<Original>Burza</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SnowEffect_Type_MediumStorm_DisplayName">
+				<Original>Silna burza</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_BreathFog">
+			<Key ID="STR_A3CS_MM_Module_BreathFog_DisplayName">
+				<Original>Para z ust</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_BreathFog_Description">
+				<Original>Moduł dodający efekt pary z ust&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_ColorCorrections">
+			<Key ID="STR_A3CS_MM_Module_ColorCorrections_DisplayName">
+				<Original>Filtr kolorystyczny</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_ColorCorrections_Description">
+				<Original>Moduł nadający filtr kolorystyczny&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_ColorCorrections_EffectType_DisplayName">
+				<Original>Typ efektu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_ColorCorrections_EffectType_DayZSA_DisplayName">
+				<Original>DayZ Standalone</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_ColorCorrections_EffectType_OFP_DisplayName">
+				<Original>Operation Flashpoint</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_ColorCorrections_EffectType_Arma2_DisplayName">
+				<Original>ArmA 2</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_ColorCorrections_EffectType_Arma2OA_DisplayName">
+				<Original>ArmA 2 Operation Arrowhead</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_ColorCorrections_EffectType_Winter_DisplayName">
+				<Original>Zima</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_ColorCorrections_EffectType_Spring_DisplayName">
+				<Original>Wiosna</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_ColorCorrections_EffectType_Autumn_DisplayName">
+				<Original>Jesień</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_ColorCorrections_EffectType_SunnyDay_DisplayName">
+				<Original>Słoneczny dzień</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_ColorCorrections_EffectType_RainyDay_DisplayName">
+				<Original>Deszczowy dzień</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_ColorCorrections_EffectType_Africa_DisplayName">
+				<Original>Afryka</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_ColorCorrections_EffectType_Desert_DisplayName">
+				<Original>Pustynia</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_ColorCorrections_EffectType_PostApo_DisplayName">
+				<Original>Post Apo</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_ColorCorrections_EnableInEden_DisplayName">
+				<Original>Pokaż w edytorze</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_ColorCorrections_EnableInEden_Description">
+				<Original>Czy filtr kolorystyczny ma być widoczny w edytorze</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_GenMinefield">
+			<Key ID="STR_A3CS_MM_Module_GenMinefield_DisplayName">
+				<Original>Generator min</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenMinefield_Description">
+				<Original>Moduł generowania min&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenMinefield_Place_DisplayName">
+				<Original>Obszar respawnu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenMinefield_Place_Description">
+				<Original>Nazwa triggera w którym mają się wygenerować miny</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenMinefield_Classes_DisplayName">
+				<Original>Klasy min</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenMinefield_Classes_Description">
+				<Original>Tablica klas min jakie mają zostać wygenerowane</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenMinefield_MineCount_DisplayName">
+				<Original>Ilość min</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenMinefield_MineCount_Description">
+				<Original>Ilość min jaka zostanie wygenerowana na danym obszarze</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_Lanterns">
+			<Key ID="STR_A3CS_MM_Module_Lanterns_DisplayName">
+				<Original>Latarnie</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_Lanterns_Description">
+				<Original>Moduł zarządzania latarniami na danym obszarze&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_Lanterns_Place_DisplayName">
+				<Original>Obszar</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_Lanterns_Place_Description">
+				<Original>Nazwa triggera na obszarze którego mają być zmienione latarnie</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_Lanterns_Mode_DisplayName">
+				<Original>Stan</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_Lanterns_Mode_Description">
+				<Original>Jak mają zostać ustawione latarnie</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_Lanterns_Mode_On_DisplayName">
+				<Original>Włączone</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_Lanterns_Mode_Off_DisplayName">
+				<Original>Wyłączone</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_PlaySound">
+			<Key ID="STR_A3CS_MM_Module_PlaySound_DisplayName">
+				<Original>Dźwięki</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Description">
+				<Original>Moduł odtwarzający dźwięk&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Place_DisplayName">
+				<Original>Źródło dźwięku</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Place_Description">
+				<Original>Nazwa markera który ma być źródłem dźwięku (np. dzwiek1)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_DisplayName">
+				<Original>Typ</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Description">
+				<Original>Typ odtwarzanego dźwięku. Wybierz własny jeśli chcesz odtworzyć własny dźwięk</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Own_DisplayName">
+				<Original>Własny</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Allahuakbar_DisplayName">
+				<Original>Allahu Akbar</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Radiochatter_DisplayName">
+				<Original>Radio Chatter</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Arabmarket1_DisplayName">
+				<Original>Arabski targ #1</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Arabmarket2_DisplayName">
+				<Original>Arabski targ #2</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Arabmarket3_DisplayName">
+				<Original>Arabski targ #3</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Arabmarket4_DisplayName">
+				<Original>Arabski targ #4</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Arabmarket5_DisplayName">
+				<Original>Arabski targ #5</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Muslimpray1_DisplayName">
+				<Original>Muzułmańskie modlitwy #1</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Muslimpray2_DisplayName">
+				<Original>Muzułmańskie modlitwy #2</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Muslimpray3_DisplayName">
+				<Original>Muzułmańskie modlitwy #3</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Muslimpray4_DisplayName">
+				<Original>Muzułmańskie modlitwy #4</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_SoundPath_DisplayName">
+				<Original>Ścieżka do pliku</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_SoundPath_Description">
+				<Original>Ścieżka do pliku (dotyczy tylko własnego dźwięku)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_MissionPath_DisplayName">
+				<Original>Ścieżka z folderu misji</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_MissionPath_Description">
+				<Original>Zaznacz jeśli podana ścieżka dotyczy folderu misji. Aby dźwięk zadziałał w folderze misji MUSI znajdować się plik description.ext (dotyczy tylko własnego dźwięku)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_SoundDuration_DisplayName">
+				<Original>Czas trwania</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_SoundDuration_Description">
+				<Original>Czas trwania podanego dźwięku (dotyczy tylko własnego dźwięku)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Volume_DisplayName">
+				<Original>Głośność</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Volume_Description">
+				<Original>Głośność dzwięku</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Distance_DisplayName">
+				<Original>Słyszalność</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Distance_Description">
+				<Original>Z jakiej odległości dźwięk ma być słyszalny</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Loop_DisplayName">
+				<Original>Zapętl</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Loop_Description">
+				<Original>Zaznacz jeśli dźwięk ma być zapętlony (dla bardzo krótkich dźwięków ta opcja może spowodować zwiększone obciążenie sieci)</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_MissionIntro">
+			<Key ID="STR_A3CS_MM_Module_MissionIntro_DisplayName">
+				<Original>Intro</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MissionIntro_Description">
+				<Original>Moduł ustawień intro&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MissionIntro_Enable_DisplayName">
+				<Original>Uruchom w multiplayer</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MissionIntro_Enable_Description">
+				<Original>Czy uruchomić intro na poczatku misji multiplayer</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MissionIntro_EnableInSP_DisplayName">
+				<Original>Uruchom w singleplayer (edytor)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MissionIntro_EnableInSP_Description">
+				<Original>Czy uruchomić intro na poczatku misji singleplayer (podgląd w edytorze)</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_FireArtillery">
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_DisplayName">
+				<Original>Ostrzał artylerii</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_Description">
+				<Original>Moduł generowania ostrzału artylerii&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_Place_DisplayName">
+				<Original>Obszar ostrzału</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_Place_Description">
+				<Original>Nazwa triggera na obszarze którego ma być prowadzony ostrzał</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_Ammo_DisplayName">
 				<Original>Rodzaj pocisków</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_fireArtillery_Ammotype_Desc">
-				<Original>Typ pocisków używanych w ostrzale</Original>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_Ammo_Description">
+				<Original>Typ używanych przez moduł pocisków</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_fireArtillery_Conditionlogic_Name">
-				<Original>Warunek logiczny</Original>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_Ammo_Mortar_DisplayName">
+				<Original>HE 82mm</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_fireArtillery_Conditionlogic_Desc">
-				<Original>Warunek ostrzału np. true (jeśli chcesz ustawić ostrzał na ilość pocisków zostaw to pole puste).</Original>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_Ammo_Artillery_DisplayName">
+				<Original>HE 155mm</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_fireArtillery_Conditionnumber_Name">
-				<Original>Warunek liczbowy</Original>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_Ammo_Smoke_DisplayName">
+				<Original>Dymny 155mm</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_fireArtillery_Conditionnumber_Desc">
-				<Original>Ilość strzałów (to pole będzie ignorowane jeśli użyty został warunek logiczny)</Original>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_Ammo_Rocket_DisplayName">
+				<Original>Rakiety 120mm</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_fireArtillery_shellmindelay_Name">
-				<Original>Minimalny odstęp</Original>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_Ammo_RocketCluster_DisplayName">
+				<Original>Rakiety 220mm</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_fireArtillery_shellmindelay_Desc">
-				<Original>Minimalny odstęp czasowy pomiędzy strzałami w sekundach</Original>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_TimeCondition_DisplayName">
+				<Original>Limit czasu</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_fireArtillery_shellmaxdelay_Name">
-				<Original>Maksymalny odstęp</Original>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_TimeCondition_Description">
+				<Original>Limit czasu trwania ostrzału (ustaw 0 jeśli bez limitu)</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_fireArtillery_shellmaxdelay_Desc">
-				<Original>Maksymalny odstęp czasowy pomiędzy strzałami w sekundach</Original>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_CountCondition_DisplayName">
+				<Original>Limit pocisków</Original>
 			</Key>
-		</Container>
-		<Container name="A3CS_MM_FNC_module_fireArtillery">
-			<Key ID="STR_A3CS_MM_FNC_fireArtillery_WrongTypeOfObjs">
-				<Original>Brak zsynchronizowanych obiektow</Original>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_CountCondition_Description">
+				<Original>Limit wystrzelonych przez moduł pocisków (ustaw 0 jeśli bez limitu)</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_FNC_fireArtillery_WrongTypeOfSyncedObjs">
-				<Original>Niepoprawny typ zsynchronizowanego obiektu: %1</Original>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_CodeCondition_DisplayName">
+				<Original>Warunek logiczny ostrzału</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_FNC_fireArtillery_NoFireCondition">
-				<Original>Nie podano warunku ostrzalu</Original>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_CodeCondition_Description">
+				<Original>Do momentu, aż warunek zwróci prawdę a żaden z powyższych limitów się nie wyczerpie ostrzał będzie kontynuowany (pozostaw true jeśli istotny jest tylko któryś z limitów)</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_FNC_fireArtillery_Debug_StartingOfFire">
-				<Original>Rozpoczynam ostrzał artyleryjski</Original>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_MinDelay_DisplayName">
+				<Original>Min. odstęp</Original>
 			</Key>
-		</Container>
-		<Container name="A3CS_MM_EditBox">
-			<Key ID="STR_A3CS_MM_EditBox_Displayname">
-				<Original>Edycja skrzynki</Original>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_MinDelay_Description">
+				<Original>Minimalny odstęp czasowy (w sekundach) pomiędzy trafienami pocisków</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBox_Desciption">
-				<Original>Moduł należy zsynchronizować ze skrzynką której zawartość chcemy edytować</Original>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_MaxDelay_DisplayName">
+				<Original>Max. odstęp</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBox_Contentcode_Displayname">
-				<Original>Kod zawartości</Original>
-			</Key>
-			<Key ID="STR_A3CS_MM_EditBox_Contentcode_Description">
-				<Original>Kod wygenerowany za pomocą generatora</Original>
-			</Key>
-			<Key ID="STR_A3CS_MM_EditBox_Clearbefore_Displayname">
-				<Original>Opróżnij skrzynkę</Original>
-			</Key>
-			<Key ID="STR_A3CS_MM_EditBox_Clearbefore_Description">
-				<Original>Czy opróżnić skrzynkę przed dodaniem nowych elementów</Original>
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_GroupVehicle_Description">
+				<Original>Maksymalny odstęp czasowy (w sekundach) pomiędzy trafienami pocisków</Original>
 			</Key>
 		</Container>
-		<Container name="A3CS_MM_EditBoxGUI">
-			<Key ID="STR_A3CS_MM_EditBoxGUI_Displayname">
-				<Original>Edycja skrzynki (Generator)</Original>
+		<Container name="A3CS_MM_Module_GenCAS">
+			<Key ID="STR_A3CS_MM_Module_GenCAS_DisplayName">
+				<Original>CAS</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_Desciption">
-				<Original>GUI służące do generowania kodu skrzynki dla modułu edycji</Original>
+			<Key ID="STR_A3CS_MM_Module_GenCAS_Description">
+				<Original>Moduł generowania ostrzału lotniczego&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Loading">
-				<Original>Wczytywanie...</Original>
+			<Key ID="STR_A3CS_MM_Module_GenCAS_Place_DisplayName">
+				<Original>Cel ataku</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Boxtitle">
-				<Original>[A3C] Edytor skrzynek</Original>
+			<Key ID="STR_A3CS_MM_Module_GenCAS_Place_Description">
+				<Original>Nazwa markera który ma być celem ataku (np. marker1)</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_AvailableElements0">
-				<Original>Dostepne elementy (0)</Original>
+			<Key ID="STR_A3CS_MM_Module_GenCAS_Plane_DisplayName">
+				<Original>Klasa samolotu</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Elementsinbox0">
-				<Original>Elementy w skrzynce (0)</Original>
+			<Key ID="STR_A3CS_MM_Module_GenCAS_Plane_Description">
+				<Original>Klasa samolotu który ma zostać użyty do ataku (np. B_Plane_CAS_01_F)</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_AvailableElements">
-				<Original>Dostępne elementy (%1)</Original>
+			<Key ID="STR_A3CS_MM_Module_GenCAS_Type_DisplayName">
+				<Original>Typ ataku</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Elementsinbox">
-				<Original>Elementy w skrzynce (%1)</Original>
+			<Key ID="STR_A3CS_MM_Module_GenCAS_Type_Description">
+				<Original>Typ ataku jaki ma zostać wykonany</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Elementcountinbox">
-				<Original>Elementów w skrzyni: %1</Original>
+			<Key ID="STR_A3CS_MM_Module_GenCAS_Type_Gunrun_DisplayName">
+				<Original>Ostrzał z działka</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Additem_desc">
-				<Original>Dodaj element do skrzynki</Original>
+			<Key ID="STR_A3CS_MM_Module_GenCAS_Type_Rocketrun_DisplayName">
+				<Original>Ostrzał rakietami</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Removeitem_desc">
-				<Original>Usuń element ze skrzynki</Original>
+			<Key ID="STR_A3CS_MM_Module_GenCAS_Type_Bothrun_DisplayName">
+				<Original>Ostrzał z działka i rakietami</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Category_weapon">
-				<Original>Kategoria: Broń</Original>
+			<Key ID="STR_A3CS_MM_Module_GenCAS_Type_Bomb_DisplayName">
+				<Original>Zrzut bomb (wszystkich)</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Category_ammo">
-				<Original>Kategoria: Amunicja</Original>
+			<Key ID="STR_A3CS_MM_Module_GenCAS_Type_Bombone_DisplayName">
+				<Original>Zrzut bomby (jednej)</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Category_items">
-				<Original>Kategoria: Ekwipunek</Original>
+			<Key ID="STR_A3CS_MM_Module_GenCAS_PlaneDir_DisplayName">
+				<Original>Kierunek lotu</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Category_gear">
-				<Original>Kategoria: Ubiór</Original>
+			<Key ID="STR_A3CS_MM_Module_GenCAS_PlaneDir_Description">
+				<Original>Kierunek w jakim ma lecieć samolot podczas ataku (np. jeśli chcemy aby samolot atakował z północy na południe wpisujemy 180)</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Count">
-				<Original>Ilość</Original>
+			<Key ID="STR_A3CS_MM_Module_GenCAS_Side_DisplayName">
+				<Original>Strona konfliktu</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Code">
-				<Original>Kod</Original>
+			<Key ID="STR_A3CS_MM_Module_GenCAS_Side_Description">
+				<Original>Strona do której zostanie przydzielony wygenerowany samolot</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Generate">
-				<Original>Generuj</Original>
+			<Key ID="STR_A3CS_MM_Module_GenCAS_WeaponIndex_DisplayName">
+				<Original>Index broni</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_GenerateDesc">
-				<Original>Wygeneruj kod dla modułu</Original>
+			<Key ID="STR_A3CS_MM_Module_GenCAS_WeaponIndex_Description">
+				<Original>Index użytej broni. Ustaw inny niż 0 jeśli samolot posiada więcej niż jeden rodzaj danego uzbrojenia (np. 2 rodzaje rakiet)</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_GenerateDone">
-				<Original>Wygenerowano kod</Original>
+		</Container>
+		<Container name="A3CS_MM_Module_CreateTask">
+			<Key ID="STR_A3CS_MM_Module_CreateTask_DisplayName">
+				<Original>Nowe zadanie</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Copycode">
-				<Original>Kopiuj</Original>
+			<Key ID="STR_A3CS_MM_Module_CreateTask_Description">
+				<Original>Moduł dodający nowe zadanie&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_CopycodeDesc">
-				<Original>Kopiuj do schowka</Original>
+			<Key ID="STR_A3CS_MM_Module_CreateTask_TaskID_DisplayName">
+				<Original>ID zadania</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_CopyDone">
-				<Original>Skopiowano kod do schowka</Original>
+			<Key ID="STR_A3CS_MM_Module_CreateTask_TaskID_Description">
+				<Original>Identyfikator zadania np. zadanie1</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_Close">
-				<Original>Zamknij</Original>
+			<Key ID="STR_A3CS_MM_Module_CreateTask_TaskTitle_DisplayName">
+				<Original>Tytuł zadania</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_EditBoxGUI_FNC_CloseDesc">
-				<Original>Zamknij edytor</Original>
+			<Key ID="STR_A3CS_MM_Module_CreateTask_TaskTitle_Description">
+				<Original>Tytuł zadania wyświetlający się na liście zadań</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_CreateTask_TaskDesc_DisplayName">
+				<Original>Opis zadania</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_CreateTask_TaskDesc_Description">
+				<Original>Opis zadania wyświetlający się na liście zadań</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_CreateTask_TaskTarget_DisplayName">
+				<Original>Grupa docelowa</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_CreateTask_TaskTarget_Description">
+				<Original>Grupa docelowa danego zadania. Może być to strona (np. west) lub tablica jednostek (np. [zolnierz1, zolnierz2])</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_CreateTask_ShowNotification_DisplayName">
+				<Original>Wyświetl komunikat</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_CreateTask_ShowNotification_Description">
+				<Original>Czy ma zostać wyświetlony komunikat o dodaniu nowego zadania (działa tylko dla zadań dodanych po starcie misji)</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_SetTaskState">
+			<Key ID="STR_A3CS_MM_Module_SetTaskState_DisplayName">
+				<Original>Status zadania</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SetTaskState_Description">
+				<Original>Moduł nadający nowy status zadania&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SetTaskState_TaskID_DisplayName">
+				<Original>ID zadania</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SetTaskState_TaskID_Description">
+				<Original>Identyfikator isniejącego zadania np. zadanie1</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SetTaskState_TaskState_DisplayName">
+				<Original>Status zadania</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SetTaskState_TaskState_Description">
+				<Original>Status jaki ma zostań nadany na podane zadanie</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SetTaskState_TaskState_Created_DisplayName">
+				<Original>Utworzone</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SetTaskState_TaskState_Assigned_DisplayName">
+				<Original>Przydzielone</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SetTaskState_TaskState_Succeeded_DisplayName">
+				<Original>Wykonane</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SetTaskState_TaskState_Failed_DisplayName">
+				<Original>Niewykonane</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SetTaskState_TaskState_Canceled_DisplayName">
+				<Original>Anulowane</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SetTaskState_ShowNotification_DisplayName">
+				<Original>Wyświetl komunikat</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SetTaskState_ShowNotification_Description">
+				<Original>Czy ma zostać wyświetlony komunikat o zmianie statusu zadania</Original>
 			</Key>
 		</Container>
 	</Package>

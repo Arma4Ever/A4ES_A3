@@ -13,7 +13,7 @@ private _uncachedUnitsCount = 0;
     private _group = _x;
 
     if(({alive _x} count (units _group)) > 0) then {
-        private _leader = leader _group;
+        private _leader = vehicle (leader _group);
         private _isVisibleForPlayers = false;
         private _playableUnits = [[player], playableUnits] select isMultiplayer;
         {

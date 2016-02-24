@@ -1,33 +1,33 @@
-class GVAR(module_genMinefield): A3C_Module
-{
-	scope = 2;
-    author = "Arma3Coop.pl";
-	displayName = "Generator pola minowego";
-	category = "a3cs_modules_effects";
-	function = QUOTE(DFUNC(module_genMinefield));
+class GVAR(module_genMinefield): A3C_Module {
+    scope = 2;
+    author = ECSTRING(common,A3C);
+    displayName = CSTRING(Module_GenMinefield_DisplayName);
+    category = "a3cs_modules_effects";
+    function = QUOTE(DFUNC(module_genMinefield));
 
-	class Arguments {
-        class object {
-            displayName = "Obszar";
-            description = "Nazwa triggera np. resp01";
-            typeName = "STRING";
-            defaultValue = "";
+    class Attributes: AttributesBase {
+        class place: Edit {
+            displayName = CSTRING(Module_GenMinefield_Place_DisplayName);
+            tooltip = CSTRING(Module_GenMinefield_Place_Description);
+            property = QGVAR(module_genMinefield_place);
+            validate = "variable";
         };
-        class elements {
-            displayName = "Klasy min";
-            description = "Tablica z klasami min (np. [""klasa1"", ""klasa2""])";
-            typeName = "STRING";
-            defaultValue = "";
+        class classes: Edit {
+            displayName = CSTRING(Module_GenMinefield_Classes_DisplayName);
+            tooltip = CSTRING(Module_GenMinefield_Classes_Description);
+            property = QGVAR(module_genMinefield_classes);
+            defaultValue = "'[]'";
         };
-        class number {
-            displayName = "Ilosc min";
-            description = "";
+        class mineCount: Edit {
+            displayName = CSTRING(Module_GenMinefield_MineCount_DisplayName);
+            tooltip = CSTRING(Module_GenMinefield_MineCount_Description);
+            property = QGVAR(module_genMinefield_mineCount);
             typeName = "NUMBER";
             defaultValue = 0;
         };
+        class ModuleDescription: ModuleDescription {};
     };
-	class ModuleDescription: ModuleDescription
-	{
-		description = "";
-	};
+    class ModuleDescription: ModuleDescription {
+        description = CSTRING(Module_GenMinefield_Description);
+    };
 };

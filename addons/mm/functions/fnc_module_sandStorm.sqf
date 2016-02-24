@@ -1,12 +1,30 @@
+/*
+ * Author: SzwedzikPL
+ * sandStorm module function
+ */
 #include "script_component.hpp"
 
-_logic = [_this,0,objNull,[objNull]] call BIS_fnc_param;
-_units = [_this,1,[],[[]]] call BIS_fnc_param;
-_activated = [_this,2,true,[true]] call BIS_fnc_param;
+if(!isServer) exitWith {true};
+params [["_mode", "", [""]], ["_input", [], [[]]]];
 
-if(!isServer) exitWith {};
-if(!_activated) exitWith {};
+// Module - init
+if(_mode == "init") then {
+    _input params [["_logic", objNull, [objNull]], ["_isActivated", false, [false]], ["_isCuratorPlaced", false, [false]]];
+    if(isNull _logic || !_isActivated) exitWith {true};
+    if(!(_logic call FUNC(canExecuteModule))) exitWith {A3CS_LOGWARN("sandStorm: blokuje wykonanie modulu")true};
 
-[[_logic, _units, _activated],QFUNC(sandStormLocal),true,true] call BIS_fnc_MP;
+    [] remoteExec [QFUNC(sandStorm), 0, true];
+
+    //Set as disposable if possible
+    _logic call FUNC(setDisposable);
+};
+// EDEN - When some attributes were changed (including position and rotation)
+if(_mode == "attributesChanged3DEN") then {};
+// EDEN - When added to the world (e.g., after undoing and redoing creation)
+if(_mode == "registeredToWorld3DEN") then {};
+// When removed from the world (i.e., by deletion or undoing creation)
+if(_mode == "unregisteredFromWorld3DEN") then {};
+// EDEN - When connection to object changes (i.e., new one is added or existing one removed)
+if(_mode == "connectionChanged3DEN") then {};
 
 true

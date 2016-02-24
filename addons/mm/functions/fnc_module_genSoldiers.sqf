@@ -4,13 +4,14 @@
  */
 #include "script_component.hpp"
 
-if(!isServer) exitWith {};
+if(!isServer) exitWith {true};
 params [["_mode", "", [""]], ["_input", [], [[]]]];
 
 // Module - init
 if(_mode == "init") then {
-    _input params [["_logic", objNull, [objNull]], ["_isActivated", true, [true]], ["_isCuratorPlaced", false, [true]]];
-    if(isNull _logic || !_isActivated || _isCuratorPlaced) exitWith {};
+    _input params [["_logic", objNull, [objNull]], ["_isActivated", false, [false]], ["_isCuratorPlaced", false, [false]]];
+    if(isNull _logic || !_isActivated) exitWith {true};
+    if(!(_logic call FUNC(canExecuteModule))) exitWith {A3CS_LOGWARN("genSoldiers: blokuje wykonanie modulu")true};
 
     //Load module params
     private _place = call compile (_logic getVariable ["place", ""]);
@@ -23,11 +24,6 @@ if(_mode == "init") then {
     private _behaviour = _logic getvariable ["behaviour", "patrol"];
     private _script = compile (_logic getVariable ["script", ""]);
     private _ignore = call compile (_logic getVariable ["ignore", "[]"]);
-
-    //Delete module if disposable
-    if(getNumber (configFile >> "CfgVehicles" >> (typeof _logic) >> "disposable") > 0) then {
-        deleteVehicle _logic;
-    };
 
     //Save data in resp trigger
     private _aliveUnits = [];
@@ -78,6 +74,8 @@ if(_mode == "init") then {
         };
         _unit = _group createUnit [_class, _unitPosition, [], 0, "FORM"];
         _groupLeader = leader _group;
+        _unit setVariable ["a3cs_generated", true, true];
+        _unit setVariable ["ACE_Name", name _unit, true];
         _unit setVariable [QGVAR(genSoldiers_place), _place];
         _unit setVariable [QGVAR(genSoldiers_group), _group];
         _aliveUnits pushback _unit;
@@ -86,28 +84,11 @@ if(_mode == "init") then {
         //Spawn custom script
         if(!isNil "_script") then {_unit spawn _script;};
         //Killed event handler - cleanup group data and call support
-        _unit addEventHandler ["killed", {
-            params ["_unit"];
-            private _unitPlace = _unit getVariable [QGVAR(genSoldiers_place), objNull];
-            private _unitGroup = _unit getVariable [QGVAR(genSoldiers_group), grpNull];
-            //Update alive units in place data
-            private _alivePlaceUnits = _unitPlace getVariable [QGVAR(genSoldiers_aliveUnits), []];
-            _alivePlaceUnits deleteAt (_alivePlaceUnits find _unit);
-            _unitPlace setVariable [QGVAR(genSoldiers_aliveUnits), _alivePlaceUnits];
-            //Call support units
-            private _childUnits = _unitPlace getVariable [QGVAR(genSoldiers_children), []];
-            {
-                private _childUnitPlace = _x;
-                private _childUnitRespawned = _childUnitPlace getVariable [QGVAR(genSoldiers_respawned), false];
-                private _childUnitsCalled = _childUnitPlace getVariable [QGVAR(genSoldiers_called), false];
-                if(_childUnitRespawned && !_childUnitsCalled) then {
-                    systemchat "genSoldiers - Wzywam wsparcie";
-                    _childUnitPlace setVariable [QGVAR(genSoldiers_called), true];
-                    [_childUnitPlace, _unitPlace] call FUNC(genSoldiers_callSupport);
-                };
-            } forEach _childUnits;
-        }];
-
+        _unit addEventHandler ["killed", {call FUNC(genSoldiers_handleKilled)}];
+        //Set cache settings to "no if leader" if parentUnit present
+        if(!isNil "_parentUnit") then {
+            _unit setVariable [QGVAR(cacheUnit), "noifleader"];
+        };
         //If limit is reached force next AI to spawn in new group
         if(count (units _group) >= _groupCount) then {_group = grpNull;};
     };
@@ -195,7 +176,6 @@ if(_mode == "init") then {
             private _aliveUnits = _this;
             private _allMarkers = [];
             while {({alive _x} count _aliveUnits) > 0} do {
-                {deleteMarkerLocal _x;} forEach _allMarkers;
                 _allMarkers = [];
                 {
                     private _unit = _x;
@@ -211,9 +191,13 @@ if(_mode == "init") then {
                     };
                 } forEach +_aliveUnits;
                 sleep 0.1;
+                {deleteMarkerLocal _x;} forEach _allMarkers;
             };
         };
     };
+
+    //Set as disposable if possible
+    _logic call FUNC(setDisposable);
 };
 // EDEN - When some attributes were changed (including position and rotation)
 if(_mode == "attributesChanged3DEN") then {};
@@ -223,3 +207,5 @@ if(_mode == "registeredToWorld3DEN") then {};
 if(_mode == "unregisteredFromWorld3DEN") then {};
 // EDEN - When connection to object changes (i.e., new one is added or existing one removed)
 if(_mode == "connectionChanged3DEN") then {};
+
+true

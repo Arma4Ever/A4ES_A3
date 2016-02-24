@@ -9,7 +9,7 @@ if(is3DEN) exitWith {};
 if(!isMultiplayer && ((tolower missionName) in ["intro","intro1","intro_new"])) exitWith {};
 
 //log mission name to add this to ignored
-if(!isMultiplayer) then {diag_log missionName;};
+A3CS_LOGINFO_1("initCache: %1",missionName)
 
 if(!GVAR(cacheEnabled)) exitWith {};
 if(GVAR(cacheInited)) exitWith {};

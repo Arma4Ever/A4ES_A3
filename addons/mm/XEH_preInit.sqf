@@ -2,6 +2,62 @@
 
 ADDON = false;
 
+//modules
+PREP(module_cacheSettings);
+PREP(module_genSoldiers);
+PREP(module_genAttack);
+PREP(module_surrenderUnit);
+PREP(module_handcuffUnit);
+PREP(module_forceGunLights);
+PREP(module_colorCorrections);
+PREP(module_playSound);
+PREP(module_missionIntro);
+PREP(module_genMinefield);
+PREP(module_fireArtillery);
+//PREP(module_genCAS);
+PREP(module_createTask);
+PREP(module_setTaskState);
+PREP(module_sandStorm);
+PREP(module_fogEffect);
+PREP(module_snowEffect);
+PREP(module_breathFog);
+PREP(module_lanterns);
+
+//other
+PREP(initHeadless);
+PREP(initCache);
+PREP(cacheGroup);
+PREP(uncacheGroup);
+PREP(cacheHandler);
+PREP(setSkillLevel);
+PREP(genSoldiers_callSupport);
+PREP(genSoldiers_handleKilled);
+PREP(genAttack_handleKilled);
+PREP(genAttack_genUnits);
+PREP(removeDummyVest);
+PREP(setColorCorrection);
+PREP(fireArtillery_fireShell);
+PREP(createTask);
+PREP(setTaskState);
+PREP(sandStorm);
+PREP(fogEffect);
+PREP(snowEffect);
+PREP(breathFog);
+
+
+PREP(onLoadIntroEffect);
+PREP(canExecuteModule);
+PREP(setDisposable);
+
+//vars
+GVAR(cacheEnabled) = true;
+GVAR(cacheInited) = false;
+GVAR(cacheDistanceLand) = 2000;
+GVAR(cacheDistanceHelicopters) = 3000;
+GVAR(cacheDistancePlanes) = 0;
+GVAR(cacheLeaders) = false;
+
+/*
 PREP(removeDummyVest);
 PREP(addBoxItems);
 PREP(breathFogLocal);
@@ -29,8 +85,6 @@ PREP(module_breathFog);
 PREP(module_colorCorrections);
 PREP(module_createDialog);
 PREP(module_deadzone);
-PREP(module_editBox);
-PREP(module_editBoxGUI);
 PREP(module_fogEffect);
 PREP(module_forceGunLights);
 PREP(module_soundEffect);
@@ -55,6 +109,6 @@ PREP(module_assignRepairVehicle);
 
 PREP(module_surrenderUnit);
 PREP(module_handcuffUnit);
-PREP(module_weatherSettings);
+*/
 
 ADDON = true;

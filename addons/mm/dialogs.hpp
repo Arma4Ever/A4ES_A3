@@ -1,4 +1,7 @@
 
+#include "\z\a3cs\addons\common\ui\define.hpp"
+#include "ui\idcRscA3CSIntroEffect.hpp"
+
 class RscText;
 class RscStructuredText;
 class RscButton;
@@ -6,9 +9,94 @@ class RscButtonArsenal;
 class RscListbox;
 class RscEdit;
 class RscPicture;
+class RscPictureKeepAspect;
+class RscControlsGroupNoScrollbars;
+
+class RscTitles {
+    class RscA3CSIntroEffect {
+        idd = -1;
+        duration = 25;
+        fadeIn = 2;
+        fadeOut = 2;
+        onload = QUOTE(uiNamespace setVariable [ARR_2('RscA3CSIntroEffect', _this select 0)];0 call DFUNC(onLoadIntroEffect));
+        onUnload = QUOTE(uiNamespace setVariable [ARR_2('RscA3CSIntroEffect', nil)];);
+        class controls {
+            class Picture: RscPicture {
+                idc = IDC_RSCA3CINTROEFFECT_PICTURE;
+                x = "14.2 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2)) / 2)";
+                y = "0 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2)) / 2)";
+                w = "12 * (((safezoneW / safezoneH) min 1.2) / 40)";
+                h = "12 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                colorText[] = {0,0.3,0.6,1};
+                //18 5.5 4 4
+            };
+            class Title: RscText {
+                style = ST_CENTER;
+                idc = IDC_RSCA3CINTROEFFECT_TITLE;
+                text = "";
+                x = "7.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2)) / 2)";
+                y = "11 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2)) / 2)";
+                w = "26 * (((safezoneW / safezoneH) min 1.2) / 40)";
+                h = "2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                colorBackground[] = {0,0,0,1};
+                sizeEx = "2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            };
+            class Subtitle1: RscText {
+                style = ST_LEFT;
+                idc = IDC_RSCA3CINTROEFFECT_SUBTITLE1;
+                x = "8.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2)) / 2)";
+                y = "13.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2)) / 2)";
+                w = "11.75 * (((safezoneW / safezoneH) min 1.2) / 40)";
+                h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                colorBackground[] = {0,0,0,1};
+                sizeEx = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            };
+            class Subtitle2: RscText {
+                style = ST_LEFT;
+                idc = IDC_RSCA3CINTROEFFECT_SUBTITLE2;
+                x = "20.70 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2)) / 2)";
+                y = "13.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2)) / 2)";
+                w = "11.75 * (((safezoneW / safezoneH) min 1.2) / 40)";
+                h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                colorBackground[] = {0,0,0,1};
+                sizeEx = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            };
+            class Subtitle3: RscText {
+                style = ST_LEFT;
+                idc = IDC_RSCA3CINTROEFFECT_SUBTITLE3;
+                x = "8.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2)) / 2)";
+                y = "15 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2)) / 2)";
+                w = "11.75 * (((safezoneW / safezoneH) min 1.2) / 40)";
+                h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                colorBackground[] = {0,0,0,1};
+                sizeEx = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            };
+            class Subtitle4: RscText {
+                style = ST_LEFT;
+                idc = IDC_RSCA3CINTROEFFECT_SUBTITLE4;
+                x = "20.70 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2)) / 2)";
+                y = "15 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2)) / 2)";
+                w = "11.75 * (((safezoneW / safezoneH) min 1.2) / 40)";
+                h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                colorBackground[] = {0,0,0,1};
+                sizeEx = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            };
+            class Subtitle5: RscText {
+                style = ST_CENTER;
+                idc = IDC_RSCA3CINTROEFFECT_SUBTITLE5;
+                x = "8.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2)) / 2)";
+                y = "16.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2)) / 2)";
+                w = "24 * (((safezoneW / safezoneH) min 1.2) / 40)";
+                h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                colorBackground[] = {0,0,0,1};
+                sizeEx = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            };
+        };
+    };
+};
 
 //rozmowa z AI
-class a3cs_mm_dialogQueryGUI {
+class A3CS_ui_dialogQuery {
     idd = -1;
     movingEnable = 1;
     enableSimulation = 1;

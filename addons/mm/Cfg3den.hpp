@@ -10,7 +10,7 @@ class Cfg3DEN {
                         tooltip = CSTRING(ObjectAttribute_Control_CharacterDesc_Description);
                         property = QGVAR(characterDesc);
                         defaultValue = "''";
-                        expression = "_this setVariable ['%s',_value];";
+                        expression = "_this setVariable ['%s', _value, true];";
                         typeName = "STRING";
                         condition = "objectBrain";
                         wikiType = "[[String]]";
@@ -27,11 +27,11 @@ class Cfg3DEN {
                         displayName = CSTRING(ObjectAttribute_CacheSettings_CacheUnit_DisplayName);
                         tooltip = CSTRING(ObjectAttribute_CacheSettings_CacheUnit_Description);
                         property = QGVAR(cacheUnit);
-                        expression = "_this setVariable ['%s',_value];";
+                        expression = "_this setVariable ['%s', _value, true];";
                         typeName = "STRING";
                         condition = "objectBrain";
                         wikiType = "[[String]]";
-                        defaultValue = 0;
+                        defaultValue = "'always'";
                         class values {
                             class always {name = CSTRING(ObjectAttribute_CacheSettings_CacheUnit_Yes_DisplayName); value = "always"; default = 1;};
                             class noifleader {name = CSTRING(ObjectAttribute_CacheSettings_CacheUnit_NoLeader_DisplayName); value = "noifleader"; default = 0;};
