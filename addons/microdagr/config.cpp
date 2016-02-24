@@ -1,8 +1,6 @@
 #include "script_component.hpp"
-class CfgPatches
-{
-    class ADDON
-    {
+class CfgPatches {
+    class ADDON {
         units[] = {};
         weapons[] = {"ACE_simpleGPS"};
         requiredVersion = REQUIRED_VERSION;
