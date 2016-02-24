@@ -4,5 +4,20 @@
         <Key ID="STR_A3CS_Editor_displayName_fieldhospital">
             <Original>Szpital polowy</Original>
         </Key>
+        <Key ID="STR_A3CS_Editor_ChangeClass_DisplayName">
+            <Original>Zmień klasę</Original>
+        </Key>
+        <Key ID="STR_A3CS_Editor_ChangeClass_ClassChanged">
+            <Original>Klasa zmieniona</Original>
+        </Key>
+        <Key ID="STR_A3CS_Editor_ChangeClass_InvalidClass">
+            <Original>Podano nieprawidłową klasę</Original>
+        </Key>
+        <Key ID="STR_A3CS_Editor_ChangeClass_InvalidObjects">
+            <Original>Brak obiektów do zmiany klasy</Original>
+        </Key>
+        <Key ID="STR_A3CS_Editor_Delete_DisplayName">
+            <Original>Usuń</Original>
+        </Key>
     </Package>
 </Project>
