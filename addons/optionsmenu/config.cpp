@@ -1,8 +1,6 @@
 #include "script_component.hpp"
-class CfgPatches
-{
-    class ADDON
-    {
+class CfgPatches {
+    class ADDON {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -18,22 +16,20 @@ class CfgPatches
 class ACE_settingsMenu {
     class controls {
         class HeaderName {
-            text = "$STR_A3CS_OptionsMenu_OpenConfigMenu";
+            text = CSTRING(OpenConfigMenu);
         };
     };
 };
 class ACE_serverSettingsMenu {
     class controls {
         class HeaderName {
-            text = "$STR_A3CS_OptionsMenu_OpenConfigMenu";
+            text = CSTRING(OpenConfigMenu);
         };
     };
 };
-
 class ACE_Open_SettingsMenu_BtnBase {
-    text = "$STR_A3CS_OptionsMenu_OpenConfigMenu";
+    text = CSTRING(OpenConfigMenu);
 };
-
 class RscStandardDisplay;
 class RscDisplayMain: RscStandardDisplay {
     class controls {
