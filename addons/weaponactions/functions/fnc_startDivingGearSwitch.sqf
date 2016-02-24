@@ -1,15 +1,18 @@
+/*
+ * Author: SzwedzikPL
+ * Init diving gear switch action
+ */
 #include "script_component.hpp"
 
 params ["_player", "_type"];
-private ["_gear", "_actionTime", "_actionProgressTitle", "_actionFailureText", "_actionSuccessText", "_actionClass", "_actionType"];
 
-_gear = "";
-_actionTime = -1;
-_actionProgressTitle = "";
-_actionFailureText = "";
-_actionSuccessText = "";
-_actionClass = "";
-_actionType = "";
+private _gear = "";
+private _actionTime = -1;
+private _actionProgressTitle = "";
+private _actionFailureText = "";
+private _actionSuccessText = "";
+private _actionClass = "";
+private _actionType = "";
 
 if(_type == "uniform") then {
     _gear = uniform ace_player;

@@ -8,5 +8,6 @@ PREP(startWeaponAction);
 PREP(checkDivingGearAction);
 PREP(startDivingGearSwitch);
 PREP(finishDivingGearSwitch);
+PREP(handleFired);
 
 ADDON = true;

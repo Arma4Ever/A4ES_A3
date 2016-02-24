@@ -1,8 +1,13 @@
+/*
+ * Author: SzwedzikPL
+ * End of diving gear switch action
+ */
 #include "script_component.hpp"
 
 params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
 _args params ["_gearType", "_gearClass", "_actionSuccessText", "_actionFailureText"];
-private ["_items"];
+
+private _items = [];
 
 //Don't show anything if player can't interact:
 if (!([ACE_player, objNull, []] call ace_common_fnc_canInteractWith)) exitWith {};

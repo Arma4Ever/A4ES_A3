@@ -1,10 +1,13 @@
+/*
+ * Author: SzwedzikPL
+ * Check diving gear action
+ */
 #include "script_component.hpp"
 
-params ["_player", "_type", "_mode"];
-private ["_gear", "_expectedType", "_switchClass", "_switchType"];
+params [["_player", objNull, [objNull]], ["_type", "", [""]], ["_mode", 0, [0]]];
 
-_gear = "";
-_expectedType = "";
+private _gear = "";
+private _expectedType = "";
 
 if(_mode == 0) then {_expectedType = "normal";};
 if(_mode == 1) then {_expectedType = "diving";};
@@ -13,8 +16,8 @@ if(_type == "uniform") then {_gear = uniform _player;};
 if(_type == "vest") then {_gear = vest _player;};
 if(_gear == "") exitWith {false};
 
-_switchClass = "";
-_switchType = "";
+private _switchClass = "";
+private _switchType = "";
 
 if(_type == "uniform") then {
     _switchClass = getText (configFile >> "CfgWeapons" >> _gear >> QGVAR(switchDivingUniform));
