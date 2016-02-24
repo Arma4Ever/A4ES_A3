@@ -304,6 +304,11 @@ class ace_medical_medicSetting {
     isClientSettable = 0;
     values[] = ["Disabled","Normal","Advanced"];
 };
+class ace_medical_increaseTrainingInLocations {
+    typeName = BOOL;
+    value = 0;
+    isClientSettable = 0;
+};
 class ace_medical_enableFor {
     typeName = SCALAR;
     value = 0;
@@ -571,6 +576,21 @@ class ace_overheating_DisplayTextOnJam {
     typeName = BOOL;
     value = 1;
     isClientSettable = 1;
+};
+class ace_overheating_showParticleEffects {
+    typeName = BOOL;
+    value = 1;
+    isClientSettable = 1;
+};
+class ace_overheating_showParticleEffectsForEveryone {
+    typeName = BOOL;
+    value = 0;
+    isClientSettable = 1;
+};
+class ace_overheating_overheatingDispersion {
+    typeName = BOOL;
+    value = 1;
+    isClientSettable = 0;
 };
 class ace_rearm_level {
     typeName = SCALAR;

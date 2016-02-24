@@ -1,9 +1,11 @@
 ﻿/***************************************
-        Szablon misji A3C - 1.0
-****************************************/
+ ***************************************
+        Szablon misji A3C - 2.0
+ ***************************************
+ ****************************************/
 
 #include "ustawienia_podstawowe.hpp"
-#include "ustawienia_debriefing.hpp"
+#include "ustawienia_zakonczen.hpp"
 
 /***************************************
           Twoje ustawienia
