@@ -56,6 +56,7 @@ GVAR(cacheDistanceLand) = 2000;
 GVAR(cacheDistanceHelicopters) = 3000;
 GVAR(cacheDistancePlanes) = 0;
 GVAR(cacheLeaders) = false;
+GVAR(cacheIndex) = 0;
 
 /*
 PREP(removeDummyVest);
