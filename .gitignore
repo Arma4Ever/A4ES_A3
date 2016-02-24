@@ -5,6 +5,7 @@ texHeaders.bin
 *.swp
 *.sqm
 *.swo
+*.zip
 *.biprivatekey
 Thumbs.db
-addons/a3c_config_rhs/*
+optionals/tmp/*
