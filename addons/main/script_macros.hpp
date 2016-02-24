@@ -199,3 +199,4 @@
 #define ACE_DEPRECATED(arg1,arg2,arg3) ACE_LOGWARNING_3("%1 is deprecated. Support will be dropped in version %2. Replaced by: %3",arg1,arg2,arg3)
 
 #include "script_debug.hpp"
+#include "script_debug_a3cs.hpp"

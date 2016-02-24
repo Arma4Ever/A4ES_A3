@@ -19,4 +19,5 @@
 
 #define REQUIRED_VERSION 1.54
 
-//change ver in make.py
+//wylacz debug przed release!
+#define A3CS_DEBUG_ENABLED

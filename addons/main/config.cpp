@@ -57,20 +57,21 @@ class CfgMods {
 
 /*
     Removed ACE modules:
-    ace_advanced_ballistics
-    ace_atragmx
-    ace_dagr
-    ace_frag
-    ace_gforces
-    ace_goggles
-    ace_headless
-    ace_hearing
-    ace_kestrel4500
-    ace_nametags
-    ace_scopes
-    ace_rangecard
-    ace_weather
-    ace_winddeflection
+    ace_advanced_ballistics.pbo
+    ace_gforces.pbo
+    ace_goggles.pbo
+    ace_headless.pbo
+    ace_hearing.pbo
+    ace_nametags.pbo
+    ace_weather.pbo
+    ace_winddeflection.pbo
+    ace_atragmx.pbo
+    ace_kestrel4500.pbo
+    ace_dagr.pbo
+    ace_rangecard.pbo
+    ace_scopes.pbo
+    ace_frag.pbo
+    ace_testmissions.pbo
 */
 #include "ace_settings.hpp"
 #include "ace_medical_treatments.hpp"
