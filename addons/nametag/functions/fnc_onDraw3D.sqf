@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 //don't show nametags in spectator or if RscDisplayInterrupt is open
-if((isNull ace_player) || {!alive ace_player} || {!isNull (findDisplay 49)}) exitWith {};
+if((isNull ace_player) || {!alive ace_player} || {!isNull curatorCamera} || {GVAR(displayInterrupt)} || {EGVAR(admin,debugCameraEnabled)}) exitWith {};
 
 //don't show nametag if flexi/some dialog
 if(dialog) exitWith {};

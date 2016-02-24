@@ -4,8 +4,10 @@
  */
 #include "script_component.hpp"
 
+//BEGIN_COUNTER(drawTacticalHud);
+
 //Hide hud if nessesary
-if(visibleMap || {!alive player} || {!alive ace_player} || {!isNull curatorCamera}) exitWith {
+if(visibleMap || {isNull ace_player} || {!alive ace_player} || {!isNull curatorCamera} || {GVAR(displayInterrupt)} || {EGVAR(admin,debugCameraEnabled)}) exitWith {
     if(!GVAR(tacticalHudHidden)) then {
         {_x ctrlSetPosition [0, 0, 0, 0];_x ctrlCommit 0;} foreach [
             uiNamespace getVariable [QGVAR(tacticalHudRadar), controlNull],
@@ -89,6 +91,11 @@ ctrlMapAnimCommit _tacticalMap;
 
 private _playerData = GVAR(tacticalHudGroupData) select GVAR(tacticalHudGroupDataPlayerIndex);
 _playerData params ["", "_playerColorArma", "_playerMapIcon"];
+
+private _cameraDirVector = (positionCameraToWorld [0, 0, 1]) vectorDiff (positionCameraToWorld [0, 0, 0]);
+private _cameraDir = (_cameraDirVector select 0) atan2 (_cameraDirVector select 1);
+private _relativePlayerDir = (getDir ace_player) - _cameraDir;
+
 //Draw player as a center of hud
 _tacticalMap drawIcon [
     _playerMapIcon,
@@ -96,7 +103,7 @@ _tacticalMap drawIcon [
     (position vehicle ace_player), //pos
     _iconSize, //x
     _iconSize, //y
-    0, //dir
+    _relativePlayerDir, //dir
     '', //text
     0 //text shadow
 ];
@@ -114,12 +121,13 @@ if(ace_time - GVAR(tacticalHudRadarUnitsCacheTime) > 1 || {GVAR(tacticalHudRadar
 
 {
     _x params ["_unit", "_unitColorArma", "_unitMapIcon"];
+
     private _staticDirTo = ace_player getDir _unit;
-    private _playerDir = getDir ace_player;
     private _unitDir = getDir _unit;
     private _distance = ace_player distance _unit;
-    private _unitRelPos = ace_player getPos [_distance, (_staticDirTo - _playerDir)];
-    private _unitRelDir = _unitDir - _playerDir;
+    private _unitRelPos = ace_player getPos [_distance, (_staticDirTo - _cameraDir)];
+    private _unitRelDir = _unitDir - _cameraDir;
+
     _tacticalMap drawIcon [
         _unitMapIcon, //icon
         _unitColorArma, //color
@@ -132,7 +140,6 @@ if(ace_time - GVAR(tacticalHudRadarUnitsCacheTime) > 1 || {GVAR(tacticalHudRadar
     ];
 } foreach GVAR(tacticalHudRadarUnitsCache);
 
+//END_COUNTER(drawTacticalHud);
+
 //DO TO: Show formation type
-if(false) then {
-    private _leader = leader ace_player;
-};
