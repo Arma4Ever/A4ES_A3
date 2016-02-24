@@ -1,22 +1,15 @@
 /*
  * Author: SzwedzikPL
- * Man init EH
+ * Man respawn EH
  */
 #include "script_component.hpp"
 
 params ["_unit"];
-
-_unit addEventHandler ["HitPart", {call FUNC(handleHitPart);}];
 
 if(_unit in playableUnits) then {
     [{
         params ["_unit"];
         //Disable score - works only on server ?
         _unit addEventHandler ["HandleScore", {false}];
-        //No rating - friendly fire ai fix
-        _unit addEventHandler ["HandleRating", {0}];
     }, [_unit], 1] call ace_common_fnc_waitAndExecute;
 };
-
-
-//TO DO, hitpart EH, kills counting and sending data to server

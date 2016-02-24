@@ -11,22 +11,22 @@ class Extended_PostInit_EventHandlers {
 };
 class Extended_Init_EventHandlers {
     class CAManBase {
-        class GVAR(handleRating) {
+        class ADDON {
             init = QUOTE(call COMPILE_FILE(XEH_initMan));
         };
     };
 };
 class Extended_Respawn_EventHandlers {
     class CAManBase {
-        class GVAR(handleRating) {
-            respawn = QUOTE(call COMPILE_FILE(XEH_initMan));
+        class ADDON {
+            respawn = QUOTE(call COMPILE_FILE(XEH_respawnMan));
         };
     };
 };
-class Extended_Local_EventHandlers {
+class Extended_Killed_EventHandlers {
     class CAManBase {
-        class GVAR(handleRating) {
-            local = QUOTE(call COMPILE_FILE(XEH_initMan));
+        class ADDON {
+            killed = QUOTE(call FUNC(handleKilled));
         };
     };
 };

@@ -14,5 +14,9 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgRespawnTemplates.hpp"
 #include "CfgVehicleClasses.hpp"
+#include "CfgDebriefing.hpp"
+#include "CfgFunctions.hpp"
 #include "CfgActions.hpp"
+#include "dialogs.hpp"
