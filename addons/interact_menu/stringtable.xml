@@ -4,5 +4,10 @@
         <Key ID="STR_A3CS_Interact_Menu_Settings_UseFlexiMenu_DisplayName">
             <Original>Używaj Flexi Menu</Original>
         </Key>
+        <Key ID="STR_A3CS_Interact_Menu_Settings_MoveMainInteractionToCursor_DisplayName">
+            <Original>Przesuwaj punkt interackji względem kursora</Original>
+        </Key>
     </Package>
 </Project>
+
+

@@ -11,7 +11,7 @@ _menuRsc = "popup";
 _menus = [];
 
 if (typeName _params == typeName []) then {
-	if (count _params < 1) exitWith {diag_log format["Error: Invalid params: %1, %2", _this, __FILE__];};
+	if (count _params < 1) exitWith {A3CS_LOGWARN_2("Error: Invalid params: %1, %2",_this,__FILE__)};
 	_menuName = _params select 0;
 	_menuRsc = if (count _params > 1) then {_params select 1} else {_menuRsc};
 } else {
