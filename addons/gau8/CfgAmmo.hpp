@@ -23,8 +23,8 @@ class CfgAmmo {
         airFriction = -0.00036;
         explosive = 0.35;
         typicalSpeed = 1036;
-        soundHit1[] = {PATHTOF(sounds\GAU8_Hit1),3.162278,1,2000};
-        multiSoundHit[] = {"soundHit1",1};
+        //soundHit1[] = {PATHTOF(sounds\GAU8_Hit1),3.162278,1,2000};
+        //multiSoundHit[] = {"soundHit1",1};
         explosionSoundEffect = "DefaultExplosion";
         explosionEffects = "Gau8ShellImpact";
         muzzleEffect = ""; //replaced with Fired EH couse this not support fncs from preinit
