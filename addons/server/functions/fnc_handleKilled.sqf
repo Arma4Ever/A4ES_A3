@@ -1,31 +1,27 @@
 /*
  * Author: SzwedzikPL
- *
- * Killed EH (runs on server & HC)
+ * Killed EH (runs on serverName only)
  */
-
 #include "script_component.hpp"
 
-params ["_victim", "_killer"];
-private ["_victimName", "_killerName", "_Log"];
+if(!isServer) exitWith {};
 
-if(hasInterface) exitWith {};
+//wait for data from owners
+[{
+    params ["_victim", "_killer"];
+    private _victimName = _victim call EFUNC(common,getName);
+    private _killerName = ["AI", (_killer call EFUNC(common,getName))] select (isPlayer _killer);
 
-if(isPlayer _victim) then {
-    //player logs only on dedicated
-    if(!isDedicated) exitWith {};
+    A3CS_LOGINFO_1("handleKilled: %1",_this)
 
-    //send dead log
-    _victimName = _victim call EFUNC(common,getName);
-    _killerName = _killer call EFUNC(common,getName);
+    //Send dead log if victim is player
+    if(isPlayer _victim) then {
+        private _Log = format [localize LSTRING(Log_WasKilledBy), _victimName, _killerName];
+        _Log call FUNC(missionLog);
+    };
 
-    if(!isPlayer _killer) then {_killerName = "AI";};
+    //Add kill score if killer is player?
+    if(isPlayer _killer) then {
 
-    _Log = format ["%1 zostal zabity przez %2", _victimName, _killerName];
-
-    [_Log] call FUNC(missionLog);
-};
-
-if(isPlayer _killer) then {
-    //score kill?
-};
+    };
+}, _this, 1] call ace_common_fnc_waitAndExecute;

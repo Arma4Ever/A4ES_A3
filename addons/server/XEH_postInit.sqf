@@ -1,23 +1,18 @@
 #include "script_component.hpp"
 
-if(!isDedicated) exitWith {};
-
-//Killed EH for players
-{
-    _x addMPEventHandler ["mpkilled", {_this call FUNC(handleKilled)}];
-} foreach playableUnits;
+if(!isServer) exitWith {};
 
 [QGVAR(onPlayerConnected), "onPlayerConnected", {
-    diag_log ["onPlayerConnected", _id, _name, _uid, _owner, _jip];
+    A3CS_LOGINFO_5("onPlayerConnected [id:%1, name:%2, uid:%3, owner:%4, jip:%5]",_id,_name,_uid,_owner,_jip)
     if(_uid != "" && _name != "headlessclient") then {
-        [format ["%1 wszedl na serwer", _name]] call FUNC(missionLog);
+        [format [localize LSTRING(Log_PlayerConnected), _name]] call FUNC(missionLog);
     };
 }] call BIS_fnc_addStackedEventHandler;
 
 [QGVAR(onPlayerDisconnected), "onPlayerDisconnected", {
-    diag_log ["onPlayerDisconnected", _id, _name, _uid, _owner, _jip];
+    A3CS_LOGINFO_5("onPlayerDisconnected [id:%1, name:%2, uid:%3, owner:%4, jip:%5]",_id,_name,_uid,_owner,_jip)
     if(_uid != "" && _name != "headlessclient") then {
-        [format ["%1 wyszedl z serwera", _name]] call FUNC(missionLog);
+        [format [localize LSTRING(Log_PlayerDisconnected), _name]] call FUNC(missionLog);
     };
 }] call BIS_fnc_addStackedEventHandler;
 
@@ -27,7 +22,7 @@ if(count allCurators > 0) then {
 };
 
 //Update game status in DB every 60s
-[FUNC(updateGameStatus), 60, []] call CBA_fnc_addPerFrameHandler;
+//[FUNC(updateGameStatus), 60, []] call CBA_fnc_addPerFrameHandler;
 
 //Update server status in DB
 [FUNC(onEachFrame), 0, []] call CBA_fnc_addPerFrameHandler;

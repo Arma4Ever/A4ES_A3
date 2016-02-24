@@ -4,12 +4,11 @@ ADDON = false;
 
 PREP(handleKilled);
 PREP(onEachFrame);
-PREP(getMissionData);
 PREP(missionLog);
 PREP(queryDB);
 PREP(sendNametagData);
 PREP(updateGameStatus);
 
-GVAR(status_id) = "";
+GVAR(serverState) = "";
 
 ADDON = true;

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+    <Package name="Server">
+        <Key ID="STR_A3CS_Server_Log_MissionStart">
+            <Original>Uruchomiono misję</Original>
+        </Key>
+        <Key ID="STR_A3CS_Server_Log_MissionEnd">
+            <Original>Zakończono misję</Original>
+        </Key>
+        <Key ID="STR_A3CS_Server_Log_WasKilledBy">
+            <Original>%1 został zabity przez %2</Original>
+        </Key>
+        <Key ID="STR_A3CS_Server_Log_PlayerConnected">
+            <Original>%1 wszedł na serwer</Original>
+        </Key>
+        <Key ID="STR_A3CS_Server_Log_PlayerDisconnected">
+            <Original>%1 wyszedł z serwera</Original>
+        </Key>
+    </Package>
+</Project>
