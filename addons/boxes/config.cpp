@@ -429,6 +429,10 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_Flashlight_MX991,8);
             MACRO_ADDITEM(ACE_Flashlight_KSF1,8);
             MACRO_ADDITEM(ACE_Flashlight_XL50,8);
+            MACRO_ADDITEM(ACE_EntrenchingTool,8);
+            MACRO_ADDITEM(ACE_SpraypaintBlue,8);
+            MACRO_ADDITEM(ACE_SpraypaintGreen,8);
+            MACRO_ADDITEM(ACE_SpraypaintRed,8);
             //MACRO_ADDITEM(ACE_RangeCard,8);
             MACRO_ADDITEM(ACE_bodyBag,8);
             MACRO_ADDITEM(ACE_quikclot,8);
@@ -531,6 +535,10 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_Flashlight_MX991,32);
             MACRO_ADDITEM(ACE_Flashlight_KSF1,32);
             MACRO_ADDITEM(ACE_Flashlight_XL50,32);
+            MACRO_ADDITEM(ACE_EntrenchingTool,32);
+            MACRO_ADDITEM(ACE_SpraypaintBlue,32);
+            MACRO_ADDITEM(ACE_SpraypaintGreen,32);
+            MACRO_ADDITEM(ACE_SpraypaintRed,32);
             MACRO_ADDITEM(ToolKit,8);
         };
         class TransportWeapons
@@ -576,6 +584,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_Flashlight_MX991,8);
             MACRO_ADDITEM(ACE_Flashlight_KSF1,8);
             MACRO_ADDITEM(ACE_Flashlight_XL50,8);
+            MACRO_ADDITEM(ACE_EntrenchingTool,32);
             //MACRO_ADDITEM(ACE_RangeCard,8);
             //vanilla working stuff
             MACRO_ADDITEM(Laserbatteries,8);
@@ -633,7 +642,7 @@ class CfgVehicles {
         vehicleClass = "a3cs_crates";
         class TransportItems
         {
-            MACRO_ADDITEM(ACE_Sandbag_empty,512);
+            MACRO_ADDITEM(ACE_Sandbag_empty,128);
         };
     };
 };
