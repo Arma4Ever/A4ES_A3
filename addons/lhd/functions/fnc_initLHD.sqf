@@ -1,132 +1,108 @@
 /*
  * Author: SzwedzikPL
- *
  * Create A3MP LHD on server
  */
 #include "script_component.hpp"
 
-params ["_object"];
+params ["_LHDObject"];
 
 if(!isServer) exitWith {};
-if(!isClass (configFile >> "CfgVehicles" >> "Land_LHD_1")) exitWith {systemChat (localize "STR_A3CS_LHD_error_noa3mp");};
+if(!isClass (configFile >> "CfgVehicles" >> "Land_LHD_1")) exitWith {systemChat (localize LSTRING(NoA3MP));};
 
-_LHDdir = getDir _object;
-_LHDpos = getPos _object;
+private _LHDDir = getDir _LHDObject;
+private _LHDPosition = getPosASL _LHDObject;
+private _LHDParts = [];
 
-_LHDparts = [];
-
-_parts = [
-    ["Land_LHD_house_1", []],
-    ["Land_LHD_house_2", ["dveremale", "dverevelkeL", "dverevelkeR"]],
-    ["Land_LHD_elev_R", []],
-    ["Land_LHD_1", []],
-    ["Land_LHD_2", []],
-    ["Land_LHD_3", ["dveremale1", "dveremale"]],
-    ["Land_LHD_4", ["dveremale"]],
-    ["Land_LHD_5", []],
-    ["Land_LHD_6", []]
+private _LHDArray = [
+    ["Land_LHD_house_1", [-2.64648, 17.9055, 0], []],
+    ["Land_LHD_house_2", [-5.85498, -22.894, 0], ["dveremale", "dverevelkeL", "dverevelkeR"]],
+    ["Land_LHD_elev_R", [3.09619, -92.0864, 0], []],
+    ["Land_LHD_1", [-0.00537109, 108.5, 0], []],
+    ["Land_LHD_2", [-0.604492, 47.0452, 0], []],
+    ["Land_LHD_3", [0.623047, 24.0347, 0], ["dveremale1", "dveremale"]],
+    ["Land_LHD_4", [-1.44629, -20.9797, 0], ["dveremale"]],
+    ["Land_LHD_5", [-1.83203, -65.94, 0], []],
+    ["Land_LHD_6", [-1.44141, -107.012, 0], []]
 ];
 
 {
-	_x params ["_class", "_doors"];
-    _LHDpart = createVehicle [_class, _LHDpos, [], 0, "CAN_COLLIDE"];
-    _LHDpart setDir _LHDdir;
-    _LHDpart setPos _LHDpos;
-    _LHDparts pushback _LHDpart;
+    _x params ["_class", "_offset" ,"_doors"];
+    private _LHDPart = createVehicle [_class, _LHDPosition, [], 0, "CAN_COLLIDE"];
+    _LHDPart setDir _LHDDir;
+    _LHDPart setPosASL AGLToASL (_LHDObject modelToWorld _offset);
+    _LHDParts pushback _LHDPart;
 
-    {_LHDpart animate [_x, 1];nil} count _doors;
-
+    {_LHDPart animate [_x, 1];} forEach _doors;
 
     if(_class == "Land_LHD_house_2") then {
         //init lights on all clients
         private "_jipid";
         _jipid = [_LHDpart] remoteExec [QFUNC(initLights), 0, true];
 
-        //gen floor on level 0
-        {
-            for "_i" from 1 to 24 do {
-                private ["_floorPos", "_floor"];
-                _floorPos = AGLToASL (_LHDpart modelToWorld [_x, (144.8 - (10*(_i-1))), -0.94]); //-0.91 - debug h
-                _floor = createVehicle ["Land_Podesta_10", _floorPos, [], 0, "CAN_COLLIDE"];
-                _floor setPosASL _floorPos;
-                _floor setDir (getDir _LHDpart);
-            };
-        } foreach [-7, 2, 12, 18.6];
+        if(!is3DEN) then {
+            //gen floor on level 0
+            {
+                private _floorOffset = _x;
+                private _floorIndex = 0;
+                for "_floorIndex" from 1 to 24 do {
+                    private _floorPos = AGLToASL (_LHDpart modelToWorld [_floorOffset, (144.8 - (10*(_floorIndex-1))), -0.94]); //-0.91 - debug h
+                    private _floor = createVehicle ["Land_Podesta_10", _floorPos, [], 0, "CAN_COLLIDE"];
+                    _floor setPosASL _floorPos;
+                    _floor setDir (getDir _LHDpart);
+                };
+            } foreach [-7, 2, 12, 18.6];
 
-        //gen floor on level -1
-        {
-            for "_i" from 1 to 5 do {
-                private ["_floorPos", "_floor"];
-                _floorPos = AGLToASL (_LHDpart modelToWorld [_x, (35.5 - (10*(_i-1))), -7.69]); //-7.66 - debug h
-                _floor = createVehicle ["Land_Podesta_10", _floorPos, [], 0, "CAN_COLLIDE"];
-                _floor setPosASL _floorPos;
-                _floor setDir (getDir _LHDpart);
-            };
-        } foreach [-4.5, 4, 11.5];
-
-        /*
-        //Enter - top>bottom
-        private "_topSign";
-    	_topSign = createVehicle ["SignAd_SponsorS_ARMEX_F", _LHDpos, [], 0, "CAN_COLLIDE"];
-    	_topSign attachTo [_LHDpart, [11.9,-17.9,-0.2]];
-    	_topSign setDir 90;
-    	_topSign setObjectTextureGlobal [0, "#(rgb,8,8,3)color(0,0,0,0)"];
-
-        //Enter bottom>top
-        private "_bottomSign";
-    	_bottomSign = createVehicle ["SignAd_SponsorS_ARMEX_F", _LHDpos, [], 0, "CAN_COLLIDE"];
-    	_bottomSign attachTo [_LHDpart, [-4.88,-9.435,-7]];
-    	_bottomSign setDir 180;
-    	_bottomSign setObjectTextureGlobal [0, "#(rgb,8,8,3)color(0,0,0,0)"];
-
-        //Enter bottom>ship1
-        private "_bottomSignShip";
-
-        //Enter botom>ship2
-        private "_bottomSignShip2";
-
-        //Ship1
-        private ["_attachPoint", "_ship", "_shipRopes"];
-        _attachPoint = createVehicle ["Land_Flush_Light_green_F", _LHDpos, [], 0, "CAN_COLLIDE"];
-        _attachPoint setPosASL AGLToASL (_LHDpart modelToWorld [24,-69,-3]);
-        _attachPoint setDir _LHDdir;
-
-        _shipFloorPos = AGLToASL (_LHDpart modelToWorld [16.12, -70, -9.85]);
-        _shipFloor = createVehicle ["Land_Podesta_10", _shipFloorPos, [], 0, "CAN_COLLIDE"];
-        _shipFloor setPosASL _shipFloorPos;
-        _shipFloor setDir (getDir _LHDpart);
-
-        _ship = createVehicle ["B_Boat_Armed_01_minigun_F", (_attachPoint modelToworld [0,0,-5]), [], 0, "CAN_COLLIDE"];
-        _ship setPos (_attachPoint modelToworld [0,0,-5]);
-        _ship setDir _LHDdir;
-        _shipRopes = [];
-
-        {
-            private "_rope";
-            _rope = ropeCreate [_ship, _x, _attachPoint, [0,0,0], 5];
-            _shipRopes pushBack _rope;
-        } foreach [[-1.2,-3,-1.5],[1.2,-3,-1.5],[-1.2,3,-1.5],[1.2,3,-1.5]];
-        _ship setVariable [QGVAR(shipRopes), _shipRopes];
-
-        _attachPoint setPosASL AGLToASL (_LHDpart modelToWorld [25.5,-69,-3]);
-
-        [_ship, _attachPoint] spawn {sleep 0.1;params ["_ship", "_attachPoint"];_ship attachTo [_attachPoint, [0,0,-5]];};
-
-        _ship addAction ["Odetnij", {
-            params ["_ship", "_player", "_id"];
-            _ship removeAction _id;
-            {ropeDestroy _x;} foreach (_ship getVariable [QGVAR(shipRopes), []]);
-            detach _ship;
-        }];
-
-        boat = _ship;
-
-        //Ship2
-        */
+            //gen floor on level -1
+            {
+                private _floorOffset = _x;
+                private _floorIndex = 0;
+                for "_floorIndex" from 1 to 5 do {
+                    private _floorPos = AGLToASL (_LHDpart modelToWorld [_floorOffset, (35.5 - (10*(_floorIndex-1))), -7.69]); //-7.66 - debug h
+                    private _floor = createVehicle ["Land_Podesta_10", _floorPos, [], 0, "CAN_COLLIDE"];
+                    _floor setPosASL _floorPos;
+                    _floor setDir (getDir _LHDpart);
+                };
+            } foreach [-4.5, 4, 11.5];
+        };
     };
+} forEach _LHDArray;
 
+_LHDObject setVariable [QGVAR(parts), _LHDParts];
 
-    nil
-} count _parts;
+//3DEN support
+if(is3DEN) then {
+    _LHDObject removeAllEventHandlers "AttributesChanged3DEN";
+    _LHDObject removeAllEventHandlers "RegisteredToWorld3DEN";
+    _LHDObject removeAllEventHandlers "ConnectionChanged3DEN";
+    _LHDObject removeAllEventHandlers "UnregisteredFromWorld3DEN";
+    private _onChangeFunction = {
+        params ["_object"];
+        private _LHDParts = _object getVariable [QGVAR(parts), []];
+        private _nullCount = count (_LHDParts select {isNull _x});
+        if(count _LHDParts == 0 || _nullCount > 0) exitWith {_object call FUNC(initLHD);};
 
-_object setVariable [QGVAR(parts), _LHDparts];
+        private _LHDPartsArray = [
+            "Land_LHD_house_1","Land_LHD_house_2","Land_LHD_elev_R","Land_LHD_1",
+            "Land_LHD_2","Land_LHD_3","Land_LHD_4","Land_LHD_5","Land_LHD_6"
+        ];
+        private _LHDOffsetsArray = [
+            [-2.64648, 17.9055, 0],[-5.85498, -22.894, 0],[3.09619, -92.0864, 0],
+            [-0.00537109, 108.5, 0],[-0.604492, 47.0452, 0],[0.623047, 24.0347, 0],
+            [-1.44629, -20.9797, 0],[-1.83203, -65.94, 0],[-1.44141, -107.012, 0]
+        ];
+        private _LHDDir = getDir _object;
+        {
+            private _offset = _LHDOffsetsArray select (_LHDPartsArray find (typeof _x));
+            _x setPosASL AGLToASL (_object modelToWorld _offset);
+            _x setDir _LHDDir;
+        } forEach _LHDParts;
+    };
+    _LHDObject addEventHandler ["AttributesChanged3DEN", _onChangeFunction];
+    _LHDObject addEventHandler ["RegisteredToWorld3DEN", _onChangeFunction];
+    _LHDObject addEventHandler ["ConnectionChanged3DEN", _onChangeFunction];
+    _LHDObject addEventHandler ["UnregisteredFromWorld3DEN", {
+        params ["_object"];
+        private _LHDParts = _object getVariable [QGVAR(parts), []];
+        {deleteVehicle _x} forEach _LHDParts;
+    }];
+};

@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
     <Package name="LHD">
-        <Key ID="STR_A3CS_LHD_displayName_lhd">
+        <Key ID="STR_A3CS_LHD_DisplayName">
             <Original>USS Khe Sanh</Original>
         </Key>
-        <Key ID="STR_A3CS_LHD_error_noa3mp">
-            <Original>Brak A3MP - nie mozna zrespic lotniskowca</Original>
+        <Key ID="STR_A3CS_LHD_NoA3MP">
+            <Original>Brak A3MP - nie można zrespić lotniskowca</Original>
         </Key>
     </Package>
 </Project>

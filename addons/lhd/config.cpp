@@ -1,8 +1,6 @@
 #include "script_component.hpp"
-class CfgPatches
-{
-    class ADDON
-    {
+class CfgPatches {
+    class ADDON {
         units[] = {"a3cs_lhd"};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -27,9 +25,11 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 0;
         author = "$STR_A3_Bohemia_Interactive";
-        displayName = "$STR_A3CS_LHD_displayName_lhd";
+        displayName = CSTRING(DisplayName);
         model = "\a3\weapons_f\empty";
         vehicleClass = "Submerged";
+        editorCategory = "EdCat_Default";
+        editorSubcategory  = "EdSubcat_Default";
         icon = PATHTOF(data\lhd_ca.paa);
         mapsize = 250;
         destrType = 0;

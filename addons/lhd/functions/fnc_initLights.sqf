@@ -23,8 +23,7 @@ _objectPos = getPos _object;
     _light setLightIntensity 40;
     _light setLightDayLight false;
     _light lightAttachObject [_object, _lightVector];
-    nil
-} count [
+} forEach [
     [9.1, -1.1, 2.65],
     [9.1, -0.25, 2.65],
     [10.22, 13.1, 2.65],
