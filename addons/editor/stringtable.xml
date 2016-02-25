@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
     <Package name="Editor">
-        <Key ID="STR_A3CS_Editor_displayName_fieldhospital">
+        <Key ID="STR_A3CS_Editor_FieldHospital_DisplayName">
             <Original>Szpital polowy</Original>
         </Key>
         <Key ID="STR_A3CS_Editor_ChangeClass_DisplayName">

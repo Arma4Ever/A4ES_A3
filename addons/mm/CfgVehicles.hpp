@@ -10,9 +10,6 @@ class CfgVehicles {
             class ModuleDescription;
         };
     };
-    class ACE_Module;
-    //#include "hidden_modules.hpp"
-
     class A3C_Module: Module_F {
         scope = 0;
         scopeCurator = 0;
@@ -42,34 +39,34 @@ class CfgVehicles {
     #include "modules\module_surrenderUnit.hpp"
     #include "modules\module_handcuffUnit.hpp"
     #include "modules\module_forceGunLights.hpp"
-    //#include "modules\module_genParadrop.hpp" --todo: rewirte
+    //#include "modules\module_genParadrop.hpp" //--todo: rewirte
 
     //----- Effects
     #include "modules\module_sandStorm.hpp"
     #include "modules\module_fogEffect.hpp"
     #include "modules\module_snowEffect.hpp"
-    #include "modules\module_breathFog.hpp"
+    #include "modules\module_breathFog.hpp" //-- FIX!
     #include "modules\module_colorCorrections.hpp"
     #include "modules\module_genMinefield.hpp"
-    //#include "modules\module_genFlare.hpp" --todo: write, option to set color and height
-    //#include "modules\module_genFire.hpp" --todo: write
-    //#include "modules\module_genSmoke.hpp" --todo: write
+    //#include "modules\module_genFlare.hpp" //--todo: write, option to set color and height
+    //#include "modules\module_genFire.hpp" //--todo: write
+    //#include "modules\module_genSmoke.hpp" //--todo: write
     #include "modules\module_lanterns.hpp"
     #include "modules\module_playSound.hpp"
     #include "modules\module_missionIntro.hpp"
-    //#include "modules\module_restrictedArea.hpp" --todo: rewrite
-    //#include "modules\module_radioJamming.hpp" --todo: write
+    //#include "modules\module_restrictedArea.hpp" //--todo: rewrite
+    //#include "modules\module_radioJamming.hpp" //--todo: write
 
     //----- Interaction
-    //#include "modules\module_createDialog.hpp" --todo: optimize, use ace_interact_menu
-    //#include "modules\module_addDialogQuestion.hpp" --todo: add code executed after asking question, optimize
-    //#include "modules\module_addAction.hpp" --todo: write
+    //#include "modules\module_createDialog.hpp" //--todo: optimize, use ace_interact_menu
+    //#include "modules\module_addDialogQuestion.hpp" //--todo: add code executed after asking question, optimize
+    //#include "modules\module_addAction.hpp" //--todo: write
 
     //----- Support
     #include "modules\module_fireArtillery.hpp"
-    //#include "modules\module_genCAS.hpp" --todo: rewirte
-    //#include "modules\module_genHeliSupportdrop.hpp" --todo: rewirte
-    //#include "modules\module_genSupplydrop.hpp" --todo: rewirte
+    //#include "modules\module_genCAS.hpp" //--todo: rewirte
+    //#include "modules\module_genHeliSupportdrop.hpp" //--todo: rewirte
+    //#include "modules\module_genSupplydrop.hpp" //--todo: rewirte
 
     //----- Tasks
     #include "modules\module_createTask.hpp"
