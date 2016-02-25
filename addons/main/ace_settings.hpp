@@ -312,6 +312,10 @@ class ACE_Settings {
         value = 1; //yes
         typeName = "BOOL";
     };
+    class ace_mk6mortar_useAmmoHandling {
+        value = 1; //yes
+        typeName = "BOOL";
+    };
 
     /****** ace_finger ******/
     class ace_finger_enabled {
