@@ -17,7 +17,7 @@
 #define A3CS_VERSION 0.6.6
 #define A3CS_VERSION_ARRAY {0,6,6}
 
-#define REQUIRED_VERSION 1.54
+#define REQUIRED_VERSION 1.56
 
 //wylacz debug przed release!
-#define A3CS_DEBUG_ENABLED
+//#define A3CS_DEBUG_ENABLED
