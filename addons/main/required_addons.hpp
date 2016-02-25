@@ -556,7 +556,7 @@
 "cba_ui",
 "cba_xeh",
 "cba_xeh_a3",
-"cba_jr"
+"cba_jr",
 /* ACE */
 "ace_main",
 "ace_modules",
