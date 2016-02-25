@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Author: PabstMirror
  * Updates the display (several times a second) called from the pfeh
  *
@@ -13,7 +13,7 @@
  *
  * Public: No
  */
-#include "\z\ace\addons\microdagr\functions\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_display", "_waypoints", "_posString", "_eastingText", "_northingText", "_numASL", "_aboveSeaLevelText", "_compassAngleText", "_targetPos", "_targetPosName", "_targetPosLocationASL", "_bearingText", "_rangeText", "_targetName", "_bearing", "_2dDistanceKm", "_SpeedText", "_wpListBox", "_currentIndex", "_wpName", "_wpPos", "_settingListBox", "_yearString", "_monthSring", "_dayString", "_daylight"];
 
@@ -171,9 +171,9 @@ case (APP_MODE_WAYPOINTS): {
 
         _currentIndex = (_currentIndex max 0) min (count _waypoints);
         _wpListBox lbSetCurSel _currentIndex;
-
+             
         //Reset focus to a dummy ctrl (top button), otherwise HOME/POS1 key goes to top of listBox and has keybind blocked
-        //ctrlSetFocus (_display displayCtrl IDC_TOPMENUBUTTON); //--- EDIT
+        ctrlSetFocus (_display displayCtrl IDC_TOPMENUBUTTON);
     };
 
 case (APP_MODE_SETUP): {
@@ -187,67 +187,14 @@ case (APP_MODE_SETUP): {
             _settingListBox lbSetTextRight [0, (localize LSTRING(settingDegrees))];
         };
 
-        //--- EDIT
-        _settingListBox lbSetSelectColorRight [0, [1, 1, 1, 1]];
-        //--- EDIT
-
         _settingListBox lbAdd (localize LSTRING(settingShowWP));
         if (GVAR(settingShowAllWaypointsOnMap)) then {
             _settingListBox lbSetTextRight [1, (localize LSTRING(settingOn))];
         } else {
             _settingListBox lbSetTextRight [1, (localize LSTRING(settingOff))];
         };
-
-        //--- EDIT
-        _settingListBox lbSetSelectColorRight [1, [1, 1, 1, 1]];
-
-        _settingListBox lbAdd localize "STR_A3CS_Microdagr_BroadCastingPosition";
-        if (GVAR(settingTransmitter)) then {
-            _settingListBox lbSetTextRight [2, (localize LSTRING(settingOn))];
-        } else {
-            _settingListBox lbSetTextRight [2, (localize LSTRING(settingOff))];
-        };
-        _settingListBox lbSetSelectColorRight [2, [1, 1, 1, 1]];
-
-        _settingListBox lbAdd localize "STR_A3CS_Microdagr_ReceivingPosition";
-        if (GVAR(settingReceiver)) then {
-            _settingListBox lbSetTextRight [3, (localize LSTRING(settingOn))];
-        } else {
-            _settingListBox lbSetTextRight [3, (localize LSTRING(settingOff))];
-        };
-        _settingListBox lbSetSelectColorRight [3, [1, 1, 1, 1]];
-
-        _settingListBox lbAdd localize "STR_A3CS_Microdagr_ShowMarkers";
-        if (GVAR(settingShowAllMarkers)) then {
-            _settingListBox lbSetTextRight [4, localize "STR_A3CS_Microdagr_ShowMarkers_All"];
-        } else {
-            _settingListBox lbSetTextRight [4, localize "STR_A3CS_Microdagr_ShowMarkers_OnlyGroups"];
-        };
-        _settingListBox lbSetSelectColorRight [4, [1, 1, 1, 1]];
-
-        _settingListBox lbAdd localize "STR_A3CS_Microdagr_CallSign";
-        if(GVAR(settingMarkerName) != "") then {
-            _settingListBox lbSetTextRight [5, GVAR(settingMarkerName)];
-        } else {
-            _settingListBox lbSetTextRight [5, localize "STR_A3CS_Microdagr_CallSign_None"];
-        };
-        _settingListBox lbSetSelectColorRight [5, [1, 1, 1, 1]];
-
-        _settingListBox lbAdd localize "STR_A3CS_Microdagr_Icon";
-        if(GVAR(settingMarkerIcon) == 0) then {
-            _settingListBox lbSetTextRight [6, localize "STR_A3CS_Microdagr_Icon_Auto"];
-        } else {
-            _settingListBoxMarker = [GVAR(settingMarkerIcon), ACE_player] call FUNC(getMarker);
-            _settingListBox lbSetTextRight [6, (_settingListBoxMarker select 0)];
-            _settingListBox lbSetPictureRight [6, (_settingListBoxMarker select 1)];
-            _settingListBox lbSetPictureRightColor  [6, (_settingListBoxMarker select 2)];
-            _settingListBox lbSetPictureRightColorDisabled [6, (_settingListBoxMarker select 2)];
-            _settingListBox lbSetPictureRightColorSelected [6, (_settingListBoxMarker select 2)];
-        };
-        _settingListBox lbSetSelectColorRight [6, [1, 1, 1, 1]];
-        //--- EDIT
-
+           
         //Reset focus to a dummy ctrl (top button), otherwise HOME/POS1 key goes to top of listBox and has keybind blocked
-        //ctrlSetFocus (_display displayCtrl IDC_TOPMENUBUTTON); //--- EDIT
+        ctrlSetFocus (_display displayCtrl IDC_TOPMENUBUTTON);
     };
 };

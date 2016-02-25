@@ -7,7 +7,7 @@
  * 1: Index <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [settingList, 1] call ace_microdagr_fnc_appSettingsLBClick
@@ -17,9 +17,7 @@
 #include "\z\ace\addons\microdagr\functions\script_component.hpp"
 
 disableSerialization;
-PARAMS_2(_control,_itemClicked);
-
-//--- EDIT
+params ["", "_itemClicked"];
 
 switch (_itemClicked) do {
     case (0): {
@@ -69,5 +67,3 @@ switch (_itemClicked) do {
         [] call FUNC(updateDisplay);
     };
 };
-
-//--- !EDIT

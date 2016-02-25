@@ -5,17 +5,12 @@
 
 #include "\z\ace\addons\microdagr\functions\script_component.hpp"
 
-private ["_markerType", "_markerColorType", "_markerName", "_markerIcon", "_markerColor"];
+params ["_markerType", "_unit"];
 
-_markerType = _this select 0;
-_unit = _this select 1;
-_markerColorType = 0;
-
-_markerName = "";
-_markerIcon = "";
-_markerColor = [];
-
-_return = [];
+private _markerColorType = 0;
+private _markerName = "";
+private _markerIcon = "";
+private _markerColor = [];
 
 //Auto
 if(_markerType == 0) then {
@@ -97,10 +92,10 @@ if(_markerType in [45,46,47,48]) then {
 };
 
 switch (_markerColorType) do {
-	case 0: {_markerColor = [0, 0.4, 1, 1];}; //Niebieski
-	case 1: {_markerColor = [1, 0.1, 0.1, 1];}; //Czerwony
-	case 2: {_markerColor = [0.4, 1, 0, 1];}; //Zielony
-	case 3: {_markerColor = [1, 1, 0.4, 1];}; //Zolty
+	case 0: {_markerColor = [0, 0.4, 1, 1];}; //Blue
+	case 1: {_markerColor = [1, 0.1, 0.1, 1];}; //Red
+	case 2: {_markerColor = [0.4, 1, 0, 1];}; //Green
+	case 3: {_markerColor = [1, 1, 0.4, 1];}; //Yellow
 };
 
 [_markerName, _markerIcon, _markerColor]

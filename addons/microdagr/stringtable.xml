@@ -1,14 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
     <Package name="Microdagr">
-        <Key ID="STR_A3CS_Microdagr_Actions_simpleGpsOn">
+        <Key ID="STR_A3CS_Microdagr_Actions_SimpleGpsOn_DisplayName">
             <Original>Włącz nadajnik GPS</Original>
         </Key>
-        <Key ID="STR_A3CS_Microdagr_Actions_simpleGpsOff">
+        <Key ID="STR_A3CS_Microdagr_Actions_SimpleGpsOff_DisplayName">
             <Original>Wyłącz nadajnik GPS</Original>
         </Key>
-        <Key ID="STR_A3CS_Microdagr_displayName_simpleGPS">
+        <Key ID="STR_A3CS_Microdagr_ACE_simpleGPS_DisplayName">
             <Original>Prosty nadajnik GPS</Original>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_TransmitterEnabled">
+            <Original>Nadajnik GPS włączony</Original>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_TransmitterDisabled">
+            <Original>Nadajnik GPS wyłączony</Original>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_BroadCastingPosition">
+            <Original>Nadawanie pozycji</Original>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_ReceivingPosition">
+            <Original>Odbieranie pozycji</Original>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_ShowMarkers">
+            <Original>Pokazuj markery</Original>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_ShowMarkers_All">
+            <Original>Wszystkie</Original>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_ShowMarkers_OnlyGroups">
+            <Original>Tylko grupy</Original>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_CallSign">
+            <Original>Call sign</Original>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_CallSign_None">
+            <Original>Brak</Original>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_Icon">
+            <Original>Ikona</Original>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_Icon_Auto">
+            <Original>Auto</Original>
         </Key>
     </Package>
 </Project>

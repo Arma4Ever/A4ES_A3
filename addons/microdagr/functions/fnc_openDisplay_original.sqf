@@ -13,7 +13,7 @@
  *
  * Public: No
  */
-#include "\z\ace\addons\microdagr\functions\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_oldShowMode", "_args", "_player"];
 
@@ -76,21 +76,6 @@ if ((_oldShowMode == DISPLAY_MODE_CLOSED) && {GVAR(currentShowMode) != DISPLAY_M
         params ["_args", "_idPFH"];
         _args params ["_player"];
         if ((isNull ACE_player) || {!alive ACE_player} || {ACE_player != _player} || {!("ACE_microDAGR" in (items ACE_player))} || {GVAR(currentShowMode) == DISPLAY_MODE_CLOSED}) then {
-
-            //--- EDIT
-            if(!("ACE_microDAGR" in (items ace_player))) then {
-                //A3C Wylacz nadajnik i odbiornik
-                GVAR(settingTransmitter) = false;
-                GVAR(settingReceiver) = false;
-                GVAR(settingMarkerName) = "";
-                GVAR(settingMarkerIcon) = 0;
-                ACE_player setvariable [QGVAR(simpleTransmitting), false, true];
-                ACE_player setvariable [QGVAR(transmitting), false, true];
-                ACE_player setvariable [QGVAR(transmittingMarkerName), "", true];
-                ACE_player setvariable [QGVAR(transmittingMarkerIcon), 0, true];
-            };
-            //--- EDIT
-
             //Close Display if still open:
             if (GVAR(currentShowMode) != DISPLAY_MODE_CLOSED) then {
                 [DISPLAY_MODE_CLOSED] call FUNC(openDisplay);

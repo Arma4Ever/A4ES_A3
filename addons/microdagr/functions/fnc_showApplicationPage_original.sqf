@@ -13,7 +13,7 @@
  *
  * Public: No
  */
-#include "\z\ace\addons\microdagr\functions\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_display", "_theMap", "_mapSize"];
 
@@ -96,24 +96,7 @@ if (GVAR(currentApplicationPage) == APP_MODE_MARK) then {
 (_display displayCtrl IDC_MODEWAYPOINTS) ctrlShow (GVAR(currentApplicationPage) == APP_MODE_WAYPOINTS);
 
 //Mode: Setting
-//--- EDIT
-if (GVAR(currentApplicationPage) == APP_MODE_SETUP) then {
-    if (GVAR(newGroupName) > 0) then {
-        (_display displayCtrl IDC_MODESETTINGS) ctrlShow false;
-
-        (_display displayCtrl IDC_MODEMARK) ctrlShow true;
-        (_display displayCtrl IDC_MODEMARK_HEADER) ctrlSetText "Call sign";
-        (_display displayCtrl IDC_MODEMARK_CORDSEDIT) ctrlSetText GVAR(settingMarkerName);
-
-        ctrlSetFocus (_display displayCtrl IDC_MODEMARK_CORDSEDIT);
-    } else {
-        (_display displayCtrl IDC_MODESETTINGS) ctrlShow true;
-    };
-} else {
-    (_display displayCtrl IDC_MODESETTINGS) ctrlShow false;
-    GVAR(newGroupName) = 0;
-};
-//--- EDIT
+(_display displayCtrl IDC_MODESETTINGS) ctrlShow (GVAR(currentApplicationPage) == APP_MODE_SETUP);
 
 //Buttons pushed:
 if (GVAR(currentApplicationPage) == APP_MODE_INFODISPLAY) then {

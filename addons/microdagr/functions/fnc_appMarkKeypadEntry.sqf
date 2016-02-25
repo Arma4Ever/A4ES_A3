@@ -6,7 +6,7 @@
  * 0: String version of Keypad entry ["ok","del","1",...] <STRING>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * ["ok"] call ace_microdagr_fnc_appMarkKeypadEntry
@@ -16,22 +16,21 @@
 #include "\z\ace\addons\microdagr\functions\script_component.hpp"
 
 private ["_display", "_editText", "_actualPos"];
-PARAMS_1(_keypadButton);
+
+params ["_keypadButton"];
 
 disableSerialization;
-_display = displayNull;
-if (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG) then {
-    _display = (uiNamespace getVariable [QGVAR(DialogDisplay), displayNull]);
-} else {
-    _display = (uiNamespace getVariable [QGVAR(RscTitleDisplay), displayNull]);
-};
+_display = uiNamespace getVariable [[QGVAR(RscTitleDisplay), QGVAR(DialogDisplay)] select (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG), displayNull];
+
 if (isNull _display) exitWith {ERROR("No Display");};
 
+//--- EDIT
+//if (GVAR(currentApplicationPage) != APP_MODE_MARK) exitWith {};
 //--- EDIT
 
 _editText = ctrlText (_display displayCtrl IDC_MODEMARK_CORDSEDIT);
 
-if (GVAR(currentApplicationPage) == APP_MODE_MARK) then {
+if (GVAR(currentApplicationPage) == APP_MODE_MARK) then { //--- EDIT
     switch (_keypadButton) do {
         case ("ok"): {
             if ((count GVAR(newWaypointPosition)) == 0) then {
@@ -57,13 +56,14 @@ if (GVAR(currentApplicationPage) == APP_MODE_MARK) then {
     };
 };
 
+//--- EDIT
 if (GVAR(currentApplicationPage) == APP_MODE_SETUP) then {
-    if(GVAR(newGroupName)==0) exitWith {};
+    if(GVAR(newGroupName) == 0) exitWith {};
     switch (_keypadButton) do {
         case ("ok"): {
             GVAR(settingMarkerName) = _editText;
             GVAR(newGroupName) = 0;
-            ACE_player setvariable [QGVAR(transmittingMarkerName), GVAR(settingMarkerName), true];
+            ACE_player setVariable [QGVAR(transmittingMarkerName), GVAR(settingMarkerName), true];
             [APP_MODE_SETUP] call FUNC(saveCurrentAndSetNewMode);
         };
         default {
@@ -73,5 +73,4 @@ if (GVAR(currentApplicationPage) == APP_MODE_SETUP) then {
         };
     };
 };
-
-//--- !EDIT
+//--- EDIT
