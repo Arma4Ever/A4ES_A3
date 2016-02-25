@@ -4,12 +4,7 @@ ADDON = false;
 
 GVAR(useFlexiMenu) = true;
 
-PREP(flexiMenu);
-PREP(flexiMenuOpenInteractionMenu);
-PREP(flexiMenuCallOption);
-PREP(flexiMenuGetActionsFromPath);
-PREP(flexiMenuGetMenuData);
-PREP(flexiMenuGetOptions);
+#include "XEH_PREP.hpp"
 
 GVAR(fleximenuTarget) = objNull;
 GVAR(fleximenuType) = -1;

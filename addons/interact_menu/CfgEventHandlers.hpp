@@ -1,3 +1,11 @@
+class Extended_PreStart_EventHandlers {
+    class ADDON {
+        init = QUOTE(call COMPILE_FILE(XEH_preStart));
+    };
+    class ace_interact_menu {
+        init = QUOTE(call COMPILE_FILE(XEH_ace_preStart));
+    };
+};
 class Extended_PreInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
