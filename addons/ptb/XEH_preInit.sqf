@@ -2,9 +2,7 @@
 
 ADDON = false;
 
-PREP(onVisionModeChanged);
-PREP(strobePFH);
-PREP(initStrobe);
+#include "XEH_PREP.hpp"
 
 GVAR(particleSources) = [];
 
