@@ -2,15 +2,7 @@
 
 ADDON = false;
 
-PREP(addSpecialItem);
-PREP(drawNametag);
-PREP(drawNametag3d);
-PREP(getUnitData);
-PREP(getUnitCommunityData);
-PREP(onDraw3D);
-PREP(updateSettings);
-PREP(drawTacticalHud);
-PREP(onLoadTacticalHud);
+#include "XEH_PREP.hpp"
 
 GVAR(tacticalHudMapEHID) = -1;
 GVAR(tacticalHudLayer) = 0;
