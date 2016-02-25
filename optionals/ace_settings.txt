@@ -44,7 +44,7 @@ class ace_common_displayTextFontColor {
 };
 class ace_finger_enabled {
     typeName = BOOL;
-    value = 0;
+    value = 1;
     isClientSettable = 0;
 };
 class ace_finger_maxRange {
@@ -61,31 +61,6 @@ class ace_finger_indicatorColor {
     typeName = COLOR;
     value = [0.83,0.68,0.21,0.75];
     isClientSettable = 1;
-};
-class ace_frag_Enabled {
-    typeName = BOOL;
-    value = 1;
-    isClientSettable = 0;
-};
-class ace_frag_SpallEnabled {
-    typeName = BOOL;
-    value = 0;
-    isClientSettable = 0;
-};
-class ace_frag_maxTrack {
-    typeName = SCALAR;
-    value = 500;
-    isClientSettable = 0;
-};
-class ace_frag_MaxTrackPerFrame {
-    typeName = SCALAR;
-    value = 50;
-    isClientSettable = 0;
-};
-class ace_frag_EnableDebugTrace {
-    typeName = BOOL;
-    value = 0;
-    isClientSettable = 0;
 };
 class ace_hitreactions_minDamageToTrigger {
     typeName = SCALAR;
@@ -104,7 +79,7 @@ class ace_interact_menu_cursorKeepCentered {
 };
 class ace_interact_menu_AlwaysUseCursorInteraction {
     typeName = BOOL;
-    value = 0;
+    value = 1;
     isClientSettable = 1;
 };
 class ace_interact_menu_UseListMenu {
@@ -157,8 +132,8 @@ class ace_interact_menu_menuBackground {
 };
 class ace_interact_menu_addBuildingActions {
     typeName = BOOL;
-    value = 0;
-    isClientSettable = 1;
+    value = 1;
+    isClientSettable = 0;
 };
 class ace_interact_menu_menuAnimationSpeed {
     typeName = SCALAR;
@@ -294,19 +269,19 @@ class ace_maptools_EveryoneCanDrawOnBriefing {
 };
 class ace_medical_level {
     typeName = SCALAR;
-    value = 1;
+    value = 2;
     isClientSettable = 0;
     values[] = ["Disabled","Basic","Advanced"];
 };
 class ace_medical_medicSetting {
     typeName = SCALAR;
-    value = 1;
+    value = 2;
     isClientSettable = 0;
     values[] = ["Disabled","Normal","Advanced"];
 };
 class ace_medical_increaseTrainingInLocations {
     typeName = BOOL;
-    value = 0;
+    value = 1;
     isClientSettable = 0;
 };
 class ace_medical_enableFor {
@@ -342,7 +317,7 @@ class ace_medical_enableFractures {
 };
 class ace_medical_enableAdvancedWounds {
     typeName = BOOL;
-    value = false;
+    value = 1;
     isClientSettable = 0;
 };
 class ace_medical_enableVehicleCrashes {
@@ -357,7 +332,7 @@ class ace_medical_enableScreams {
 };
 class ace_medical_playerDamageThreshold {
     typeName = SCALAR;
-    value = 1;
+    value = 0.85;
     isClientSettable = 0;
 };
 class ace_medical_AIDamageThreshold {
@@ -378,7 +353,7 @@ class ace_medical_remoteControlledAI {
 };
 class ace_medical_preventInstaDeath {
     typeName = BOOL;
-    value = 0;
+    value = 1;
     isClientSettable = 0;
 };
 class ace_medical_enableRevive {
@@ -415,8 +390,14 @@ class ace_medical_litterSimulationDetail {
 };
 class ace_medical_litterCleanUpDelay {
     typeName = SCALAR;
-    value = 0;
+    value = 1800;
     isClientSettable = 0;
+};
+class ace_medical_medicSetting_basicEpi {
+    typeName = SCALAR;
+    value = 1;
+    isClientSettable = 0;
+    values[] = ["Anyone","Medics only","Doctors only"];
 };
 class ace_medical_medicSetting_PAK {
     typeName = SCALAR;
@@ -432,7 +413,7 @@ class ace_medical_medicSetting_SurgicalKit {
 };
 class ace_medical_consumeItem_PAK {
     typeName = SCALAR;
-    value = 0;
+    value = 1;
     isClientSettable = 0;
     values[] = ["No","Yes"];
 };
@@ -442,15 +423,21 @@ class ace_medical_consumeItem_SurgicalKit {
     isClientSettable = 0;
     values[] = ["No","Yes"];
 };
+class ace_medical_useLocation_basicEpi {
+    typeName = SCALAR;
+    value = 0;
+    isClientSettable = 0;
+    values[] = ["Anywhere","Medical vehicles","Medical facility","Vehicles & facility","Disabled"];
+};
 class ace_medical_useLocation_PAK {
     typeName = SCALAR;
-    value = 3;
+    value = 0;
     isClientSettable = 0;
     values[] = ["Anywhere","Medical vehicles","Medical facility","Vehicles & facility","Disabled"];
 };
 class ace_medical_useLocation_SurgicalKit {
     typeName = SCALAR;
-    value = 2;
+    value = 0;
     isClientSettable = 0;
     values[] = ["Anywhere","Medical vehicles","Medical facility","Vehicles & facility","Disabled"];
 };
@@ -473,18 +460,18 @@ class ace_medical_keepLocalSettingsSynced {
 };
 class ace_medical_healHitPointAfterAdvBandage {
     typeName = BOOL;
-    value = 0;
+    value = 1;
     isClientSettable = 0;
 };
 class ace_medical_painIsOnlySuppressed {
     typeName = BOOL;
-    value = 1;
+    value = 0;
     isClientSettable = 0;
 };
 class ace_medical_painEffectType {
     typeName = SCALAR;
     value = 0;
-    isClientSettable = 1;
+    isClientSettable = 0;
     values[] = ["Colour Flashing","Chromatic Aberration"];
 };
 class ace_medical_allowUnconsciousAnimationOnTreatment {
@@ -499,8 +486,8 @@ class ace_medical_moveUnitsFromGroupOnUnconscious {
 };
 class ace_medical_menuTypeStyle {
     typeName = SCALAR;
-    value = 0;
-    isClientSettable = 1;
+    value = 2;
+    isClientSettable = 0;
     values[] = ["Selections (3d)","Radial","Disabled"];
 };
 class ace_medical_menu_allow {
@@ -511,8 +498,8 @@ class ace_medical_menu_allow {
 };
 class ace_medical_menu_useMenu {
     typeName = SCALAR;
-    value = 0;
-    isClientSettable = 1;
+    value = 1;
+    isClientSettable = 0;
     values[] = ["Disabled","Enabled","Vehicles only"];
 };
 class ace_medical_menu_openAfterTreatment {
@@ -533,7 +520,7 @@ class ace_microdagr_MapDataAvailable {
 class ace_missileguidance_enabled {
     typeName = SCALAR;
     value = 2;
-    isClientSettable = 1;
+    isClientSettable = 0;
     values[] = ["Off","Player Only","Player and AI"];
 };
 class ace_mk6mortar_airResistanceEnabled {
@@ -543,7 +530,7 @@ class ace_mk6mortar_airResistanceEnabled {
 };
 class ace_mk6mortar_allowComputerRangefinder {
     typeName = BOOL;
-    value = 1;
+    value = 0;
     isClientSettable = 0;
 };
 class ace_mk6mortar_allowCompass {
@@ -551,10 +538,15 @@ class ace_mk6mortar_allowCompass {
     value = 1;
     isClientSettable = 0;
 };
+class ace_mk6mortar_useAmmoHandling {
+    typeName = BOOL;
+    value = 0;
+    isClientSettable = 0;
+};
 class ace_movement_useImperial {
     typeName = BOOL;
     value = 0;
-    isClientSettable = 1;
+    isClientSettable = 0;
 };
 class ace_nightvision_disableNVGsWithSights {
     typeName = BOOL;
@@ -563,14 +555,14 @@ class ace_nightvision_disableNVGsWithSights {
 };
 class ace_optionsmenu_optionMenuDisplaySize {
     typeName = SCALAR;
-    value = 0;
+    value = 2;
     isClientSettable = 1;
     values[] = ["$str_medium","$str_large","$str_very_large"];
 };
 class ace_optionsmenu_showNewsOnMainMenu {
     typeName = BOOL;
-    value = 1;
-    isClientSettable = 1;
+    value = 0;
+    isClientSettable = 0;
 };
 class ace_overheating_DisplayTextOnJam {
     typeName = BOOL;
@@ -600,7 +592,7 @@ class ace_rearm_level {
 };
 class ace_refuel_rate {
     typeName = SCALAR;
-    value = 1;
+    value = 10;
     isClientSettable = 0;
 };
 class ace_reload_DisplayText {
@@ -649,7 +641,7 @@ class ace_repair_fullRepairLocation {
 };
 class ace_repair_engineerSetting_fullRepair {
     typeName = SCALAR;
-    value = 2;
+    value = 1;
     isClientSettable = 0;
     values[] = ["Anyone","Engineer only","Repair Specialist only"];
 };
@@ -681,7 +673,7 @@ class ace_respawn_BodyRemoveTimer {
 };
 class ace_sitting_enable {
     typeName = BOOL;
-    value = 0;
+    value = 1;
     isClientSettable = 0;
 };
 class ace_spectator_filterUnits {
@@ -735,12 +727,12 @@ class ace_switchunits_SwitchToCivilian {
 };
 class ace_switchunits_EnableSafeZone {
     typeName = BOOL;
-    value = 1;
+    value = 0;
     isClientSettable = 0;
 };
 class ace_switchunits_SafeZoneRadius {
     typeName = SCALAR;
-    value = 100;
+    value = 0;
     isClientSettable = 0;
 };
 class ace_vehiclelock_DefaultLockpickStrength {
@@ -825,7 +817,7 @@ class ace_zeus_revealMines {
 };
 class ace_zeus_autoAddObjects {
     typeName = BOOL;
-    value = 0;
+    value = 1;
     isClientSettable = 0;
 };
 class ace_captives_allowHandcuffOwnSide {
@@ -835,7 +827,7 @@ class ace_captives_allowHandcuffOwnSide {
 };
 class ace_captives_requireSurrender {
     typeName = SCALAR;
-    value = 1;
+    value = 0;
     isClientSettable = 0;
     values[] = ["Disabled","Surrendering only","Surrendering or No weapon"];
 };
@@ -861,7 +853,7 @@ class ace_explosives_PunishNonSpecialists {
 };
 class ace_explosives_ExplodeOnDefuse {
     typeName = BOOL;
-    value = 1;
+    value = 0;
     isClientSettable = 0;
 };
 class ace_Gestures_showOnInteractionMenu {
@@ -869,4 +861,55 @@ class ace_Gestures_showOnInteractionMenu {
     value = 2;
     isClientSettable = 1;
     values[] = ["Disabled","Just Keybinds","Keybinds + Interaction Menu"];
+};
+class a3cs_interact_menu_useFlexiMenu {
+    typeName = BOOL;
+    value = 1;
+    isClientSettable = 1;
+};
+class a3cs_interact_menu_moveMainInteractionToCursor {
+    typeName = BOOL;
+    value = 1;
+    isClientSettable = 1;
+};
+class a3cs_mm_enableColorCorrectionsEffect {
+    typeName = BOOL;
+    value = 1;
+    isClientSettable = 1;
+};
+class a3cs_nametag_enableTacticalHud {
+    typeName = BOOL;
+    value = 1;
+    isClientSettable = 1;
+};
+class a3cs_nametag_enableTacticalHudBackground {
+    typeName = BOOL;
+    value = 1;
+    isClientSettable = 1;
+};
+class a3cs_nametag_enableTacticalHudLists {
+    typeName = BOOL;
+    value = 1;
+    isClientSettable = 1;
+};
+class a3cs_nametag_enableCommandBar {
+    typeName = BOOL;
+    value = 1;
+    isClientSettable = 1;
+};
+class a3cs_nametag_enableCursorNametag {
+    typeName = BOOL;
+    value = 1;
+    isClientSettable = 1;
+};
+class a3cs_nametag_enable3dNametag {
+    typeName = SCALAR;
+    value = 1;
+    isClientSettable = 1;
+    values[] = ["Nie","Podczas rozglÄ…dania siÄ™","Po najechaniu na gracza"];
+};
+class a3cs_nametag_addSpecialItem {
+    typeName = BOOL;
+    value = 0;
+    isClientSettable = 1;
 };
