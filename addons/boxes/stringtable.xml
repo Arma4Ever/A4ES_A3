@@ -4,62 +4,83 @@
         <Key ID="STR_A3CS_Boxes_open">
             <Original>Otwórz</Original>
         </Key>
-        <Key ID="STR_A3CS_Boxes_displayName_us_ammo_empty">
-            <Original>Drewniana skrzynia z amunicja</Original>
+        <Key ID="STR_A3CS_Boxes_US_Ammo_Empty_DisplayName">
+            <Original>Drewniana skrzynia z amunicją</Original>
         </Key>
-        <Key ID="STR_A3CS_Boxes_displayName_us_weapons_empty">
-            <Original>Drewniana skrzynia z bronia</Original>
+        <Key ID="STR_A3CS_Boxes_US_Weapons_Empty_DisplayName">
+            <Original>Drewniana skrzynia z bronią</Original>
         </Key>
-        <Key ID="STR_A3CS_Boxes_displayName_us_launchers_empty">
+        <Key ID="STR_A3CS_Boxes_US_Launchers_Empty_DisplayName">
             <Original>Drewniana skrzynia z wyrzutniami</Original>
         </Key>
-        <Key ID="STR_A3CS_Boxes_displayName_us_explosives_empty">
-            <Original>Drewniana skrzynia z ladunkami</Original>
+        <Key ID="STR_A3CS_Boxes_US_Explosives_Empty_DisplayName">
+            <Original>Drewniana skrzynia z ładunkami</Original>
         </Key>
-        <Key ID="STR_A3CS_Boxes_displayName_medical_crate_empty">
+        <Key ID="STR_A3CS_Boxes_Medical_Crate_Empty_DisplayName">
             <Original>Drewniana skrzynia z medykamentami</Original>
         </Key>
-        <Key ID="STR_A3CS_Boxes_displayName_weapon_cache_empty">
-            <Original>Ukryty sklad broni</Original>
+        <Key ID="STR_A3CS_Boxes_Weapon_Cache_Empty_DisplayName">
+            <Original>Skład broni</Original>
         </Key>
-        <Key ID="STR_A3CS_Boxes_displayName_ammo_cache_empty">
-            <Original>Ukryty sklad amunicji</Original>
+        <Key ID="STR_A3CS_Boxes_Ammo_Cache_Empty_DisplayName">
+            <Original>Skład amunicji</Original>
         </Key>
-        <Key ID="STR_A3CS_Boxes_displayName_support_cache_empty">
-            <Original>Ukryty sklad sprzetu</Original>
+        <Key ID="STR_A3CS_Boxes_Support_Cache_Empty_DisplayName">
+            <Original>Skład sprzętu</Original>
         </Key>
-        <Key ID="STR_A3CS_Boxes_displayName_metal_case_large_empty">
-            <Original>Metalowa skrzynka (duza)</Original>
+        <Key ID="STR_A3CS_Boxes_Metal_Case_Large_Empty_DisplayName">
+            <Original>Duża metalowa skrzynia</Original>
         </Key>
-        <Key ID="STR_A3CS_Boxes_displayName_metal_case_medium_empty">
-            <Original>Metalowa skrzynka (srednia)</Original>
+        <Key ID="STR_A3CS_Boxes_Metal_Case_Medium_Empty_DisplayName">
+            <Original>Metalowa skrzynia</Original>
         </Key>
-        <Key ID="STR_A3CS_Boxes_displayName_metal_case_small_empty">
-            <Original>Metalowa skrzynka (mala)</Original>
+        <Key ID="STR_A3CS_Boxes_Metal_Case_Small_Empty_DisplayName">
+            <Original>Mała metalowa skrzynia</Original>
         </Key>
-        <Key ID="STR_A3CS_Boxes_displayName_plastic_case_large_empty">
-            <Original>Plastikowa skrzynka (duza)</Original>
+        <Key ID="STR_A3CS_Boxes_Plastic_Case_Large_Empty_DisplayName">
+            <Original>Duża plastikowa skrzynia</Original>
         </Key>
-        <Key ID="STR_A3CS_Boxes_displayName_plastic_case_medium_empty">
-            <Original>Plastikowa skrzynka (srednia)</Original>
+        <Key ID="STR_A3CS_Boxes_Plastic_Case_Medium_Empty_DisplayName">
+            <Original>Plastikowa skrzynia</Original>
         </Key>
-        <Key ID="STR_A3CS_Boxes_displayName_plastic_case_small_empty">
-            <Original>Plastikowa skrzynka (mala)</Original>
+        <Key ID="STR_A3CS_Boxes_Plastic_Case_Small_Empty_DisplayName">
+            <Original>Mała plastikowa skrzynia</Original>
         </Key>
-        <Key ID="STR_A3CS_Boxes_displayName_support_cargo_box_empty">
+        <Key ID="STR_A3CS_Boxes_Support_Cargo_Box_Empty_DisplayName">
             <Original>Skrzynia transportowa</Original>
         </Key>
-        <Key ID="STR_A3CS_Boxes_displayName_cargo_net_empty">
-            <Original>Skrzynia transportowa (duza)</Original>
+        <Key ID="STR_A3CS_Boxes_Cargo_Net_Empty_DisplayName">
+            <Original>Duża skrzynia transportowa</Original>
         </Key>
-        <Key ID="STR_A3CS_Boxes_displayName_metal_container_blue_empty">
-            <Original>Metalowy kontener (niebieski)</Original>
+        <Key ID="STR_A3CS_Boxes_Metal_Blue_Container_Empty_DisplayName">
+            <Original>Niebieski metalowy kontener</Original>
         </Key>
-        <Key ID="STR_A3CS_Boxes_displayName_metal_container_yellow_empty">
-            <Original>Metalowy kontener (zolty)</Original>
+        <Key ID="STR_A3CS_Boxes_Metal_Yellow_Container_Empty_DisplayName">
+            <Original>Żółty metalowy kontener</Original>
         </Key>
-        <Key ID="STR_A3CS_Boxes_displayName_metal_container_white_empty">
-            <Original>Metalowy kontener (bialy)</Original>
+        <Key ID="STR_A3CS_Boxes_Metal_White_Container_Empty_DisplayName">
+            <Original>Biały metalowy kontener</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_Items_Crate_All">
+            <Original>Cały sprzęt</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_Medical_Crate_Basic">
+            <Original>Podstawowe medykamenty</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_Medical_Crate_Advanced">
+            <Original>Zaawansowane medykamenty</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_Items_Crate_Basic">
+            <Original>Podstawowy ekwipunek</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_Items_Crate_Advanced">
+            <Original>Zaawansowany ekwipunek</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_Items_Crate_Extra">
+            <Original>Dodatkowy ekwipunek</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_Items_Crate_Sandbags">
+            <Original>Worki z piaskiem</Original>
         </Key>
     </Package>
 </Project>
