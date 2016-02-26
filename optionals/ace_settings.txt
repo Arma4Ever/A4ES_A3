@@ -1,4 +1,4 @@
-
+﻿
 class ace_common_forceAllSettings {
     typeName = BOOL;
     value = 0;
@@ -490,6 +490,11 @@ class ace_medical_menuTypeStyle {
     isClientSettable = 0;
     values[] = ["Selections (3d)","Radial","Disabled"];
 };
+class ace_medical_delayUnconCaptive {
+    typeName = SCALAR;
+    value = 3;
+    isClientSettable = 0;
+};
 class ace_medical_menu_allow {
     typeName = SCALAR;
     value = 1;
@@ -540,7 +545,7 @@ class ace_mk6mortar_allowCompass {
 };
 class ace_mk6mortar_useAmmoHandling {
     typeName = BOOL;
-    value = 0;
+    value = 1;
     isClientSettable = 0;
 };
 class ace_movement_useImperial {
@@ -582,6 +587,16 @@ class ace_overheating_showParticleEffectsForEveryone {
 class ace_overheating_overheatingDispersion {
     typeName = BOOL;
     value = 1;
+    isClientSettable = 0;
+};
+class ace_overheating_unJamOnreload {
+    typeName = BOOL;
+    value = 0;
+    isClientSettable = 0;
+};
+class ace_overheating_unJamFailChance {
+    typeName = SCALAR;
+    value = 0.1;
     isClientSettable = 0;
 };
 class ace_rearm_level {
