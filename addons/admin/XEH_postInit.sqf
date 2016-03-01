@@ -2,9 +2,9 @@
 
 [QGVAR(onPlayerConnected), "onPlayerConnected", {
     if(_jip) then {
-        [time, {player setVariable [QGVAR(enterTime), _this, true];systemchat format ["sync jip: %1", _this];}] remoteExec ["bis_fnc_call", _owner, false];
+        [time, {player setVariable [QGVAR(enterTime), _this, true];}] remoteExec ["bis_fnc_call", _owner, false];
     } else {
-        [time, {player setVariable [QGVAR(enterTime), _this, true];systemchat format ["sync: %1", _this];}] remoteExec ["bis_fnc_call", _owner, false];
+        [time, {player setVariable [QGVAR(enterTime), _this, true];}] remoteExec ["bis_fnc_call", _owner, false];
     };
 }] call BIS_fnc_addStackedEventHandler;
 
