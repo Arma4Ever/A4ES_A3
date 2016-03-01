@@ -5,6 +5,8 @@
 #include "script_component.hpp"
 #include "\z\a3cs\addons\nametag\ui\idcTacticalHud.hpp"
 
+if(!hasInterface) exitWith {};
+
 params ["_display"];
 
 private _controlMap = _display displayCtrl IDC_TACTICALHUD_RADAR;
@@ -28,7 +30,14 @@ uiNamespace setVariable [QGVAR(tacticalHudListThreePosition), ctrlPosition _cont
 if(GVAR(enableTacticalHudBackground)) then {
     _controlMapBG ctrlSetText QUOTE(PATHTOF(data\tacticalhud_ca.paa));
 };
+private _mapSize = (ctrlPosition _controlMap) select 3;
+private _mapZoomLevel = (30720 / worldsize) * 0.012;
 
-if(!hasInterface) exitWith {};
+GVAR(tacticalHudMaxDistance) = _mapSize * 130; //26m
+GVAR(tacticalHudRefPosition) = [GVAR(tacticalHudMaxDistance), GVAR(tacticalHudMaxDistance), 0];
+GVAR(tacticalHudIconSize) = _mapSize * 80;
+
+_controlMap ctrlMapAnimAdd [0, 0.045, GVAR(tacticalHudRefPosition)];
+ctrlMapAnimCommit _controlMap;
 
 GVAR(tacticalHudMapEHID) = _controlMap ctrlAddEventHandler ["Draw", QUOTE(call FUNC(drawTacticalHud))];

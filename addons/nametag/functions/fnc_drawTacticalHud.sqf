@@ -82,13 +82,6 @@ if(ace_time - GVAR(tacticalHudGroupDataRefreshTime) > 2 || {GVAR(tacticalHudGrou
 
 params ["_tacticalMap"];
 
-private _mapSize = (ctrlPosition _tacticalMap) select 3;
-private _iconSize = 70 * _mapSize;
-private _maxDistance = _mapSize * 87.5;
-
-_tacticalMap ctrlMapAnimAdd [0, 0.03, vehicle ace_player];
-ctrlMapAnimCommit _tacticalMap;
-
 private _playerData = GVAR(tacticalHudGroupData) select GVAR(tacticalHudGroupDataPlayerIndex);
 _playerData params ["", "_playerColorArma", "_playerMapIcon"];
 
@@ -100,9 +93,9 @@ private _relativePlayerDir = (getDir ace_player) - _cameraDir;
 _tacticalMap drawIcon [
     _playerMapIcon,
     _playerColorArma, //color
-    (position vehicle ace_player), //pos
-    _iconSize, //x
-    _iconSize, //y
+    GVAR(tacticalHudRefPosition), //pos
+    GVAR(tacticalHudIconSize), //x
+    GVAR(tacticalHudIconSize), //y
     _relativePlayerDir, //dir
     '', //text
     0 //text shadow
@@ -112,7 +105,7 @@ if(ace_time - GVAR(tacticalHudRadarUnitsCacheTime) > 1 || {GVAR(tacticalHudRadar
     GVAR(tacticalHudRadarUnitsCache) = [];
     {
         _x params ["_unit"];
-        if(_unit distance ace_player <= _maxDistance && {!(_unit isEqualTo ace_player)}) then {
+        if(_unit distance ace_player <= GVAR(tacticalHudMaxDistance) && {!(_unit isEqualTo ace_player)}) then {
             GVAR(tacticalHudRadarUnitsCache) pushBack _x;
         };
     } forEach GVAR(tacticalHudGroupData);
@@ -125,15 +118,17 @@ if(ace_time - GVAR(tacticalHudRadarUnitsCacheTime) > 1 || {GVAR(tacticalHudRadar
     private _staticDirTo = ace_player getDir _unit;
     private _unitDir = getDir _unit;
     private _distance = ace_player distance _unit;
-    private _unitRelPos = ace_player getPos [_distance, (_staticDirTo - _cameraDir)];
+    private _unitRelPos = GVAR(tacticalHudRefPosition) getPos [_distance, (_staticDirTo - _cameraDir)];
+    _unitRelPos set [2, 0];
+
     private _unitRelDir = _unitDir - _cameraDir;
 
     _tacticalMap drawIcon [
         _unitMapIcon, //icon
         _unitColorArma, //color
         _unitRelPos, //pos
-        _iconSize, //x
-        _iconSize, //y
+        GVAR(tacticalHudIconSize), //x
+        GVAR(tacticalHudIconSize), //y
         _unitRelDir, //dir
         '', //text
         0 //text shadow

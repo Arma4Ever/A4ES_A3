@@ -4,6 +4,11 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
+
+GVAR(tacticalHudMaxDistance) = 0;
+GVAR(tacticalHudRefPosition) = [0,0,0];
+GVAR(tacticalHudIconSize) = 0;
+
 GVAR(tacticalHudMapEHID) = -1;
 GVAR(tacticalHudLayer) = 0;
 GVAR(tacticalHudHidden) = false;
