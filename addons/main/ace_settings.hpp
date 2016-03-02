@@ -71,7 +71,7 @@ class ACE_Settings {
         typeName = "BOOL";
     };
     class ace_medical_playerDamageThreshold {
-        value = 0.85; //85% normal damage //testing
+        value = 1; //100% normal damage
         typeName = "SCALAR";
     };
     class ace_medical_AIDamageThreshold {
