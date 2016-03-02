@@ -22,6 +22,9 @@
         <Key ID="STR_A3CS_Nametag_Rank_Colonel">
             <Original>Pułkownik</Original>
         </Key>
+        <Key ID="STR_A3CS_Nametag_ToggleCommanderBar_DisplayName">
+            <Original>Ukryj/Pokaż panel dowódcy</Original>
+        </Key>
         <Key ID="STR_A3CS_Nametag_Settings_Category">
             <Original>NameTag</Original>
         </Key>
