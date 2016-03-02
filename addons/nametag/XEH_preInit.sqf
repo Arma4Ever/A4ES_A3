@@ -23,9 +23,9 @@ GVAR(nametagObjectsCacheTime) = 0;
 if(isNil QGVAR(members)) then {GVAR(members) = [[],[]];};
 
 //Setting colors for getUnitData fnc
-missionNameSpace setVariable ["a3cs_nametag_colors_red", ["#FF0000", [1,0,0,1]]];
-missionNameSpace setVariable ["a3cs_nametag_colors_green", ["#00DB04", [0,0.85,0.15,1]]];
-missionNameSpace setVariable ["a3cs_nametag_colors_blue", ["#1C7BFF", [0.1,0.48,1,1]]];
-missionNameSpace setVariable ["a3cs_nametag_colors_yellow", ["#E0D422", [0.87,0.83,0.13,1]]];
+missionNameSpace setVariable ["a3cs_nametag_colors_red", ["#ff8b8b", [1,0.54,0.54,1]]];
+missionNameSpace setVariable ["a3cs_nametag_colors_green", ["#9dff83", [0.61,1,0.51,1]]];
+missionNameSpace setVariable ["a3cs_nametag_colors_blue", ["#83b5ff", [0.51,0.70,1,1]]];
+missionNameSpace setVariable ["a3cs_nametag_colors_yellow", ["#ffe383", [1,0.89,0.51,1]]];
 
 ADDON = true;

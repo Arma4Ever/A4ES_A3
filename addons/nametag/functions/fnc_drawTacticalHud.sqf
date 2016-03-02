@@ -38,7 +38,7 @@ if(GVAR(tacticalHudHidden)) then {
 };
 
 //refresh group data
-if(ace_time - GVAR(tacticalHudGroupDataRefreshTime) > 2 || {GVAR(tacticalHudGroupDataRefreshTime) isEqualTo 0}) then {
+if(ace_time - GVAR(tacticalHudGroupDataRefreshTime) > 1 || {GVAR(tacticalHudGroupDataRefreshTime) isEqualTo 0}) then {
     GVAR(tacticalHudGroupData) = [];
     {
         private _unit = _x;
