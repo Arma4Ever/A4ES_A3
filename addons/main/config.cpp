@@ -60,7 +60,6 @@ class CfgMods {
     ace_advanced_ballistics.pbo
     ace_gforces.pbo
     ace_goggles.pbo
-    ace_headless.pbo
     ace_hearing.pbo
     ace_nametags.pbo
     ace_weather.pbo
