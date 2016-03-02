@@ -15,7 +15,7 @@ _missionData params ["_missionName", "_missionMap"];
 //add log to DB
 private _query = format [
     "INSERT INTO mission_logs (mission_log_map, mission_log_mission, mission_log_data) VALUES('%1', '%2', '%3')",
-    _map,
+    _missionMap,
     _missionName,
     _log
 ];

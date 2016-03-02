@@ -9,7 +9,7 @@ if(GVAR(serverState) != getClientState) then {
 
     //get mission data
     private _missionData = call EFUNC(common,getMissionData);
-    _missionData params ["_map", "_missionName"];
+    _missionData params ["_missionName", "_missionMap"];
 
     private _missionID = "missionid" call EFUNC(common,getSingleMissionData);
 
@@ -20,7 +20,7 @@ if(GVAR(serverState) != getClientState) then {
     private _query = format [
         "INSERT INTO server_status (status_id, status_map, status_mission_name, status_mission_id) VALUES ('%1', '%2', '%3', '%4')",
         GVAR(serverState),
-        _map,
+        _missionMap,
         _missionName,
         _missionID
     ];
@@ -28,9 +28,9 @@ if(GVAR(serverState) != getClientState) then {
     _sql = _query call FUNC(queryDB);
 
     if(GVAR(serverState) == "BRIEFING READ") then {
-        [localize LSTRING(Log_MissionStart)] call FUNC(missionLog);
+        ["Uruchomiono misje"] call FUNC(missionLog);
     };
     if(GVAR(serverState) == "LOGGED IN") then {
-        [localize LSTRING(Log_MissionEnd)] call FUNC(missionLog);
+        ["Zakończono misje"] call FUNC(missionLog);
     };
 };

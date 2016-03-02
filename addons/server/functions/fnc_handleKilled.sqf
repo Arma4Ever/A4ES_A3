@@ -16,7 +16,7 @@ if(!isServer) exitWith {};
 
     //Send dead log if victim is player
     if(isPlayer _victim) then {
-        private _Log = format [localize LSTRING(Log_WasKilledBy), _victimName, _killerName];
+        private _Log = format ["%1 zostal zabity przez %2", _victimName, _killerName];
         _Log call FUNC(missionLog);
     };
 
