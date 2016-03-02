@@ -31,7 +31,7 @@ if(GVAR(enableTacticalHudBackground)) then {
     _controlMapBG ctrlSetText QUOTE(PATHTOF(data\tacticalhud_ca.paa));
 };
 private _mapSize = (ctrlPosition _controlMap) select 3;
-private _mapZoomLevel = (30720 / worldsize) * 0.012;
+private _mapZoomLevel = (30720 / worldsize) * 0.013;
 
 GVAR(tacticalHudMaxDistance) = _mapSize * 130; //26m
 GVAR(tacticalHudRefPosition) = [GVAR(tacticalHudMaxDistance), GVAR(tacticalHudMaxDistance), 0];
