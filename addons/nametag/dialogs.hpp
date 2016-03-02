@@ -12,6 +12,9 @@
         color[] = {0,0,0,0}; \
     }
 
+#define X_TACTICALHUD_OFFSET 19
+#define Y_TACTICALHUD_OFFSET 5.5
+
 class RscStructuredText;
 class RscPicture;
 class RscMapControlEmpty;
@@ -33,7 +36,7 @@ class RscTitles {
         fadein = 0;
         duration = 0.25;
         name = QGVAR(tag);
-        onLoad = QUOTE(uiNamespace setVariable [ARR_2('a3cs_nametag_tag', _this select 0)]);
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2('a3cs_nametag_tag',_this select 0)]);
         class controlsBackground {
             class GVAR(tag_status): GVAR(tag_textBase) {
                 idc = 3600;
@@ -67,15 +70,15 @@ class RscTitles {
                 idc = IDC_TACTICALHUD_RADAR;
                 text = "";
                 style = 0;
-                x = "37.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX)";
-                y = "40 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
-                w = "5 * (((safezoneW / safezoneH) min 1.2) / 40)";
-                h = "5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                x = X_ORIGINAL((0 + X_TACTICALHUD_OFFSET));
+                y = (safezoneY + safezoneH - (0 + Y_TACTICALHUD_OFFSET) * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25));
+                w = W_ORIGINAL(5);
+                h = H_ORIGINAL(5);
+                sizeEx = 0;
                 type = 100;
                 moveOnEdges = 1;
                 shadow = 0;
                 font = "PuristaSemibold";
-                sizeEx = 0;
                 ptsPerSquareSea = 1000000;
                 ptsPerSquareTxt = 1000000;
                 ptsPerSquareCLn = 1000000;
@@ -190,37 +193,37 @@ class RscTitles {
             class tacticalHudRadarBackground: RscPicture {
                 idc = IDC_TACTICALHUD_RADARBG;
                 text = "";
-                x = "37.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX)";
-                y = "40 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
-                w = "5 * (((safezoneW / safezoneH) min 1.2) / 40)";
-                h = "5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                x = X_ORIGINAL((0 + X_TACTICALHUD_OFFSET));
+                y = (safezoneY + safezoneH - (0 + Y_TACTICALHUD_OFFSET) * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25));
+                w = W_ORIGINAL(5);
+                h = H_ORIGINAL(5);
             };
             class tacticalHudListOne: RscStructuredText {
                 idc = IDC_TACTICALHUD_LISTONE;
                 text = "";
                 colorBackground[] = {0,0,0,0};
-                x = "43.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX)";
-                y = "40 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
-                w = "6 * (((safezoneW / safezoneH) min 1.2) / 40)";
-                h = "8 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                x = X_ORIGINAL((5.5 + X_TACTICALHUD_OFFSET));
+                y = (safezoneY + safezoneH - (0 + Y_TACTICALHUD_OFFSET) * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25));
+                w = W_ORIGINAL(6);
+                h = H_ORIGINAL(8);
             };
             class tacticalHudListTwo: RscStructuredText {
                 idc = IDC_TACTICALHUD_LISTTWO;
                 text = "";
                 colorBackground[] = {0,0,0,0};
-                x = "50 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX)";
-                y = "40 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
-                w = "6 * (((safezoneW / safezoneH) min 1.2) / 40)";
-                h = "8 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                x = X_ORIGINAL((12 + X_TACTICALHUD_OFFSET));
+                y = (safezoneY + safezoneH - (0 + Y_TACTICALHUD_OFFSET) * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25));
+                w = W_ORIGINAL(6);
+                h = H_ORIGINAL(8);
             };
             class tacticalHudListThree: RscStructuredText {
                 idc = IDC_TACTICALHUD_LISTTHREE;
                 text = "";
                 colorBackground[] = {0,0,0,0};
-                x = "56.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX)";
-                y = "40 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
-                w = "6 * (((safezoneW / safezoneH) min 1.2) / 40)";
-                h = "8 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                x = X_ORIGINAL((18.5 + X_TACTICALHUD_OFFSET));
+                y = (safezoneY + safezoneH - (0 + Y_TACTICALHUD_OFFSET) * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25));
+                w = W_ORIGINAL(6);
+                h = H_ORIGINAL(8);
             };
         };
     };
