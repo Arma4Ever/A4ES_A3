@@ -17,6 +17,3 @@ if(_unit in playableUnits) then {
         _unit addEventHandler ["HandleRating", {0}];
     }, [_unit], 1] call ace_common_fnc_waitAndExecute;
 };
-
-
-//TO DO, hitpart EH, kills counting and sending data to server

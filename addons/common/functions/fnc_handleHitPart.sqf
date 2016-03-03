@@ -5,8 +5,12 @@
 #include "script_component.hpp"
 
 private _params = _this select 0;
-_params params ["_unit", "_shooter"];
+_params params ["_unit", "_shooter", "", "", "", "", "_ammoData"];
 
-A3CS_LOGINFO_1("handleHitPart: %1",[_unit, _shooter])
+private _ammo = _ammoData select 4;
 
-_unit setVariable ["a3cs_lastHitPartSource", _shooter, true]; //To Do: better solution that public var every hit
+A3CS_LOGINFO_2("handleHitPart: %1 %2",_shooter,_ammo)
+
+//To Do: better solution that public var every hit
+_unit setVariable ["a3cs_lastHitPartSource", _shooter, true];
+_unit setVariable ["a3cs_lastHitPartSourceAmmo", _ammo, true];
