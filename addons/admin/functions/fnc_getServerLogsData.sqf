@@ -9,6 +9,7 @@ if(!isServer) exitWith {};
 params ["_client", "_logClass"];
 
 private _logData = [];
+
 if(tolower _logClass == "debuglogs") then {
     private _serverFPS = floor diag_fps;
     private _headless = false;
@@ -52,6 +53,9 @@ if(tolower _logClass == "activescriptsserver") then {
         _x params ["_scriptName", "_fileName"];
         _logData pushBack [_scriptName, _fileName];
     } forEach diag_activeSQFScripts;
+};
+if(tolower _logClass == "missionlogs") then {
+    _logData = missionNamespace getVariable [QEGVAR(server,missionLogs), []];
 };
 
 [_logClass, _logData] remoteExecCall [QFUNC(loadPanelLogs), _client];

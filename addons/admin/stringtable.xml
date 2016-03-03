@@ -148,7 +148,8 @@
 	    <Key ID="STR_A3CS_Admin_Module_ActiveScriptsServer_DisplayName">
             <Original>Aktywne skrypty (server)</Original>
         </Key>
-		
-		
+	    <Key ID="STR_A3CS_Admin_Module_MissionLogs_DisplayName">
+            <Original>Logi z misji</Original>
+        </Key>
     </Package>
 </Project>

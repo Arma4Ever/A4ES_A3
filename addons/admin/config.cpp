@@ -33,13 +33,13 @@ class GVAR(modules) {
         displayName = CSTRING(Module_AdminMessages_DisplayName);
         function = QFUNC(moduleAdminMessages);
     };
-    /*class debugConsole {
-        mode = 1;
+    class debugConsole {
+        mode = 2;//mode = 1;
         type = 2;
         serveradmin = 0;
         displayName = CSTRING(Module_DebugConsole_DisplayName);
         function = QFUNC(moduleDebugConsole);
-    };*/
+    };
     class debugCamera {
         mode = 1;
         type = 3;
@@ -66,6 +66,13 @@ class GVAR(modules) {
         type = 1;
         serveradmin = 1;
         displayName = CSTRING(Module_DebugLogs_DisplayName);
+        server = 1;
+    };
+    class missionLogs {
+        mode = 2;//mode = 1;
+        type = 1;
+        serveradmin = 1;
+        displayName = CSTRING(Module_MissionLogs_DisplayName);
         server = 1;
     };
     class playersList {
@@ -96,15 +103,12 @@ class GVAR(modules) {
         displayName = CSTRING(Module_ActiveScriptsServer_DisplayName);
         server = 1;
     };
-    /*
-    todo: server logs (from DB)
-    */
 };
 class GVAR(admins) {
     class szwedzikpl {
         uid = "76561198005080407";
         admin = 1;
-        allowedModules[] = {"endMission", "adminMessages", "debugCamera", "debug3rdPerson", "debugLogs", "playersList", "adminList", "activeScripts", "activeScriptsServer"};
+        allowedModules[] = {"endMission", "adminMessages", "debugConsole", "debugCamera", "debug3rdPerson", "debugLogs", "playersList", "adminList", "activeScripts", "activeScriptsServer"};
     };
     class alduric {
         uid = "76561197998970466";

@@ -1,6 +1,7 @@
 
 #include "\z\a3cs\addons\common\ui\define.hpp"
 #include "ui\idcAdminPanel.hpp"
+#include "ui\idcDebugConsole.hpp"
 
 class RscTitle;
 class RscHTML;

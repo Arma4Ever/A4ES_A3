@@ -99,3 +99,6 @@ if(tolower _logClass == "activescriptsserver") then {
         _controlLogs lnbAddRow [_scriptName, _fileName];
     } forEach _serverData;
 };
+if(tolower _logClass == "missionlogs") then {
+    {_controlLogs lnbAddRow _x;} forEach _serverData;
+};
