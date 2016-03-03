@@ -9,6 +9,6 @@ if(_missionName == "") then {_missionName = missionName;};
 
 private _missionMap = getText (configFile >> "cfgWorlds" >> worldName >> "description");
 
-private _missionAuthor = getMissionConfigValue ["MissionAuthor", ""];
+private _missionAuthor = getMissionConfigValue ["Author", "Nie podano"];
 
 [_missionName, _missionMap, _missionAuthor];

@@ -19,21 +19,6 @@ class Cfg3DEN {
                 delete States;
                 //delete useless SP campaign system
                 delete Unlock;
-                //fix not saving author in sqm
-                class Presentation {
-                    class Attributes {
-                        delete Author;
-                        class MissionAuthor {
-                            property = "MissionAuthor";
-                            displayName = "$STR_3DEN_Scenario_Attribute_Author_displayName";
-                            tooltip = "$STR_3DEN_Scenario_Attribute_Author_tooltip";
-                            control = "Edit";
-                            defaultValue = "profileNameSteam";
-                            expression = "";
-                            condition = "true";
-                        };
-                    };
-                };
             };
         };
         class Multiplayer {
