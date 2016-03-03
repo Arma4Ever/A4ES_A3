@@ -28,9 +28,9 @@ if(GVAR(serverState) != getClientState) then {
     _sql = _query call FUNC(queryDB);
 
     if(GVAR(serverState) == "BRIEFING READ") then {
-        ["Uruchomiono misje"] call FUNC(missionLog);
+        [localize LSTRING(Log_MissionStart)] call FUNC(missionLog);
     };
     if(GVAR(serverState) == "LOGGED IN") then {
-        ["Zakończono misje"] call FUNC(missionLog);
+        [localize LSTRING(Log_MissionEnd)] call FUNC(missionLog);
     };
 };
