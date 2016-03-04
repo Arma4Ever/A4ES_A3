@@ -1,7 +1,7 @@
 class Cfg3DEN {
     class Object {
         class AttributeCategories {
-            //delete special states
+            //delete vanilla special states
             class StateSpecial {
                 class Attributes {
                     delete HideObject;
