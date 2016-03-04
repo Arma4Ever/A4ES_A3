@@ -18,14 +18,14 @@ class GVAR(module_cacheSettings): A3C_Module {
             tooltip = CSTRING(Module_CacheSettings_DistanceLand_Description);
             property = QGVAR(module_cacheSettings_distanceLand);
             typeName = "NUMBER";
-            defaultValue = 2000;
+            defaultValue = 1500;
         };
         class distanceHelicopter: Edit {
             displayName = CSTRING(Module_CacheSettings_DistanceHelicopter_DisplayName);
             tooltip = CSTRING(Module_CacheSettings_DistanceHelicopter_Description);
             property = QGVAR(module_cacheSettings_distanceHelicopter);
             typeName = "NUMBER";
-            defaultValue = 3000;
+            defaultValue = 1800;
         };
         class distancePlane: Edit {
             displayName = CSTRING(Module_CacheSettings_DistancePlane_DisplayName);
