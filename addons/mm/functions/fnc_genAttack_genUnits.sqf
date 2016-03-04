@@ -43,6 +43,9 @@ if(!_active) exitWith {
     if(!isMultiplayer) then {systemchat "genAttack - Koniec ataku";};
 };
 
+//if count is unlimited make in always up to the limit
+if(_countCondition <= 0) then {_countCondition = (_genCount + _waveCount) + 1;};
+
 //Start respawn
 private _newGroups = [];
 private _newUnits = [];

@@ -30,6 +30,9 @@ if(_mode == "init") then {
 
     if(isNil "_codeCondition") then {_codeCondition = {true};};
 
+    _timeCondition = _timeCondition max 0;
+    _countCondition = _countCondition max 0;
+
     //Save data in resp trigger
     _place setVariable [QGVAR(genAttack_attackTarget), _attackTarget];
     _place setVariable [QGVAR(genAttack_timeCondition), _timeCondition];
@@ -55,11 +58,9 @@ if(_mode == "init") then {
     _place setVariable [QGVAR(genAttack_placeSize), _placeSize];
 
     //Start respawn
-    if(_timeCondition > 0 || _countCondition > 0 || (call _codeCondition)) then {
-        _place setVariable [QGVAR(genAttack_active), true, true];
-        _place setVariable [QGVAR(genAttack_startTime), ACE_time, true];
-        _place call FUNC(genAttack_genUnits);
-    };
+    _place setVariable [QGVAR(genAttack_active), true, true];
+    _place setVariable [QGVAR(genAttack_startTime), ACE_time, true];
+    _place call FUNC(genAttack_genUnits);
 
     //Set as disposable if possible
     _logic call FUNC(setDisposable);
