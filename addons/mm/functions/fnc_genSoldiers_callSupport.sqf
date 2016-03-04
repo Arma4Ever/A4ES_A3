@@ -35,6 +35,9 @@ private _childGroups = _childPlace getVariable [QGVAR(genSoldiers_aliveGroups), 
         if(_canGetIn) then {_useVehicle = _vehicle;};
     } forEach _nearestVehicles;
 
+    //Remove existing waypoints
+    {deleteWaypoint _x;} foreach (waypoints _group);
+
     private _waypointCount = 0;
     private _waypoint = [];
 

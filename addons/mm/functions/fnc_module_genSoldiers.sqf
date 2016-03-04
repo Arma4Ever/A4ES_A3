@@ -85,8 +85,8 @@ if(_mode == "init") then {
         if(!isNil "_script") then {_unit spawn _script;};
         //Killed event handler - cleanup group data and call support
         _unit addEventHandler ["killed", {call FUNC(genSoldiers_handleKilled)}];
-        //Set cache settings to "no if leader" if parentUnit present
-        if(!isNil "_parentUnit") then {
+        //Set cache settings to "no if leader" if parentUnit present or behaviour is patrol
+        if(!isNil "_parentUnit" || _behaviour == "patrol") then {
             _unit setVariable [QGVAR(cacheUnit), "noifleader"];
         };
         //If limit is reached force next AI to spawn in new group
