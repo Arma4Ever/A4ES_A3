@@ -19,5 +19,8 @@
         <Key ID="STR_A3CS_Editor_Delete_DisplayName">
             <Original>Usuń</Original>
         </Key>
+        <Key ID="STR_A3CS_Editor_CopyClass_DisplayName">
+            <Original>Skopiuj klasę</Original>
+        </Key>
     </Package>
 </Project>

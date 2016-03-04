@@ -27,12 +27,18 @@ class Display3DEN {
     };
     class ContextMenu: ctrlMenu {
         class Items {
-            items[] += {QGVAR(changeClass), QGVAR(delete)};
+            items[] += {QGVAR(changeClass), QGVAR(copyClass), QGVAR(delete)};
             class GVAR(changeClass) {
                 text = CSTRING(ChangeClass_DisplayName);
                 value = 0;
                 conditionShow = "selected";
                 action = QUOTE(GVAR(changeClassArray) = (get3DENSelected 'object');(ctrlparent (_this select 0)) createdisplay 'A3CS_ui_3DENChangeClass';);
+            };
+            class GVAR(copyClass) {
+                text = CSTRING(CopyClass_DisplayName);
+                value = 0;
+                conditionShow = "selected";
+                action = "if (count (get3DENSelected 'object') > 1) then {copyToClipboard str ((get3DENSelected 'object') apply {typeof _x})} else {copyToClipboard str (typeof ((get3DENSelected 'object') select 0))} ";
             };
             class GVAR(delete) {
                 text = CSTRING(Delete_DisplayName);
