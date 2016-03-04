@@ -6,8 +6,9 @@
 
 params ["_class"];
 
-diag_log GVAR(changeClassArray);
-diag_log _class;
+//in case of class in quotes
+_classArray = _class splitString """'";
+_class = _classArray joinString "";
 
 //check params
 if(isNil QGVAR(changeClassArray) || {count GVAR(changeClassArray) == 0}) exitWith {
