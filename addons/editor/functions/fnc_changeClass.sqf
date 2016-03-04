@@ -7,7 +7,7 @@
 params ["_class"];
 
 //in case of class in quotes
-_classArray = _class splitString """'";
+private _classArray = _class splitString """ ''";
 _class = _classArray joinString "";
 
 //check params
