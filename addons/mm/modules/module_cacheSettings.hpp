@@ -4,7 +4,8 @@ class GVAR(module_cacheSettings): A3C_Module {
     displayName = CSTRING(Module_CacheSettings_DisplayName);
     category = "a3cs_modules_ai";
     function = QUOTE(DFUNC(module_cacheSettings));
-
+    isTriggerActivated = 0;
+    
     class Attributes: AttributesBase {
         class enable: CheckboxNumber {
             displayName = CSTRING(Module_CacheSettings_Enable_DisplayName);

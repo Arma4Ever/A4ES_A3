@@ -38,7 +38,6 @@ class CfgVehicles {
     #include "modules\module_genAttack.hpp"
     #include "modules\module_surrenderUnit.hpp"
     #include "modules\module_handcuffUnit.hpp"
-    #include "modules\module_forceGunLights.hpp"
     //#include "modules\module_genParadrop.hpp" //--todo: rewirte
 
     //----- Effects
@@ -56,6 +55,7 @@ class CfgVehicles {
     #include "modules\module_missionIntro.hpp"
     //#include "modules\module_restrictedArea.hpp" //--todo: rewrite
     //#include "modules\module_radioJamming.hpp" //--todo: write
+    #include "modules\module_hideTerrainObjects.hpp"
 
     //----- Interaction
     //#include "modules\module_createDialog.hpp" //--todo: optimize, use ace_interact_menu

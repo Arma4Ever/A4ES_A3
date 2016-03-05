@@ -7,5 +7,5 @@ if(!isServer) exitWith {};
     if (_unit getVariable [QGVAR(genAttack), false] && {_status}) then {_unit setDamage 1;};
 }] call EFUNC ace_common_fnc_addEventHandler;
 
-[FUNC(initHeadless), [], 2] call ace_common_fnc_waitAndExecute;
-[FUNC(initCache), [], 3] call ace_common_fnc_waitAndExecute;
+[FUNC(initHeadless), [], 1] call ace_common_fnc_waitAndExecute;
+[FUNC(initCache), [], 2] call ace_common_fnc_waitAndExecute;

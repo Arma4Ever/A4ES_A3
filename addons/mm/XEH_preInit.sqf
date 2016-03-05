@@ -5,6 +5,7 @@ ADDON = false;
 #include "XEH_PREP.hpp"
 
 //vars
+GVAR(hiddenTerrainObjects) = [];
 GVAR(cacheEnabled) = true;
 GVAR(cacheInited) = false;
 GVAR(cacheDistanceLand) = 1500;

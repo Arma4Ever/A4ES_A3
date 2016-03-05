@@ -5,7 +5,7 @@ class CfgWeapons {
         author = "$STR_A3_Bohemia_Interactive";
         scope = 2;
         scopeArsenal = 0;
-        displayName = "$STR_A3CS_MM_displayName_dummyVest";
+        displayName = CSTRING(DummyVest_DisplayName);
         picture = "\A3\Characters_F\data\ui\icon_V_Belt_CA.paa";
         model = "\A3\Weapons_F\DummyVest";
         class ItemInfo: VestItem {

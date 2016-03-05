@@ -74,13 +74,38 @@
 			<Key ID="STR_A3CS_MM_ObjectAttribute_CacheSettings_CacheUnit_No_DisplayName">
 				<Original>Nie</Original>
 			</Key>
+			<Key ID="STR_A3CS_MM_ObjectAttribute_StateSpecial_ForceUpStance_DisplayName">
+				<Original>Wymuś postawę stojącą</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_ObjectAttribute_StateSpecial_ForceUpStance_Description">
+				<Original>Wymusza na jednostce postawe stojącą. Uwaga! Opcja ograniczna możliwości poruszania się AI. Nie powinno się jej używać dla jednostek mobilnych</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_ObjectAttribute_StateSpecial_ForceMidStance_DisplayName">
+				<Original>Wymuś postawę kucającą</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_ObjectAttribute_StateSpecial_ForceUpStance_Description">
+				<Original>Wymusza na jednostce postawe kucającą. Uwaga! Opcja ograniczna możliwości poruszania się AI. Nie powinno się jej używać dla jednostek mobilnych</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_ObjectAttribute_StateSpecial_ForceDownStance_DisplayName">
+				<Original>Wymuś postawę leżącą</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_ObjectAttribute_StateSpecial_ForceDownStance_Description">
+				<Original>Wymusza na jednostce postawe leżącą. Uwaga! Opcja ograniczna możliwości poruszania się AI. Nie powinno się jej używać dla jednostek mobilnych</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_ObjectAttribute_StateSpecial_ForceFlashlightOn_DisplayName">
+				<Original>Wymuś włączenie latarki</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_ObjectAttribute_StateSpecial_ForceFlashlightOn_Description">
+				<Original>Wymusza na oddziale włączenie latarek</Original>
+			</Key>
+			
 		</Container>
 		<Container name="A3CS_MM_Module_CacheSettings">
 			<Key ID="STR_A3CS_MM_Module_CacheSettings_DisplayName">
 				<Original>Ustawienia Cache</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_CacheSettings_Description">
-				<Original>Ustawienia systemu cache jednostek</Original>
+				<Original>Moduł ustawień systemu cache jednostek&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_CacheSettings_Enable_DisplayName">
 				<Original>Włącz system</Original>
@@ -271,14 +296,6 @@
 				<Original>Moduł zakuwania jednostek&lt;br /&gt;Zsynchronizuj moduł z każdą jednostką która ma zostać zakuta&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
 			</Key>
 		</Container>
-		<Container name="A3CS_MM_Module_ForceGunLights">
-			<Key ID="STR_A3CS_MM_Module_ForceGunLights_DisplayName">
-				<Original>Wymuś włączenie latarek</Original>
-			</Key>
-			<Key ID="STR_A3CS_MM_Module_ForceGunLights_Description">
-				<Original>Moduł wymuszania włączenia latarek przez jednostki&lt;br /&gt;Zsynchronizuj moduł z każdą jednostką która ma mieć włączoną latarkę&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
-			</Key>
-		</Container>
 		<Container name="A3CS_MM_Module_SandStorm">
 			<Key ID="STR_A3CS_MM_Module_SandStorm_DisplayName">
 				<Original>Burza piaskowa</Original>
@@ -334,6 +351,9 @@
 				<Original>Moduł nadający filtr kolorystyczny&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_ColorCorrections_EffectType_DisplayName">
+				<Original>Typ efektu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_ColorCorrections_EffectType_Description">
 				<Original>Typ efektu</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_ColorCorrections_EffectType_DayZSA_DisplayName">
@@ -604,7 +624,7 @@
 			<Key ID="STR_A3CS_MM_Module_FireArtillery_MaxDelay_DisplayName">
 				<Original>Max. odstęp</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_Module_FireArtillery_GroupVehicle_Description">
+			<Key ID="STR_A3CS_MM_Module_FireArtillery_MaxDelay_Description">
 				<Original>Maksymalny odstęp czasowy (w sekundach) pomiędzy trafienami pocisków</Original>
 			</Key>
 		</Container>
@@ -744,6 +764,23 @@
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_SetTaskState_ShowNotification_Description">
 				<Original>Czy ma zostać wyświetlony komunikat o zmianie statusu zadania</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_HideTerrainObjects">
+			<Key ID="STR_A3CS_MM_Module_HideTerrainObjects_DisplayName">
+				<Original>Ukryj obiekty mapy</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_HideTerrainObjects_Description">
+				<Original>Moduł ukrywający wybrane obiekty na mapie&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_HideTerrainObjects_Distance_DisplayName">
+				<Original>Zasięg</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_HideTerrainObjects_Distance_Description">
+				<Original>W jakiej odległości od modułu mają być ukrywane obiekty</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_HideTerrainObjects_Types_Description">
+				<Original>Zaznacz jeśli chcesz aby dany typ obiektów został ukryty</Original>
 			</Key>
 		</Container>
 	</Package>

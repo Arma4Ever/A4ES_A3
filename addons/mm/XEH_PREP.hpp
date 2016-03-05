@@ -4,7 +4,7 @@ PREP(module_genSoldiers);
 PREP(module_genAttack);
 PREP(module_surrenderUnit);
 PREP(module_handcuffUnit);
-PREP(module_forceGunLights);
+PREP(module_hideTerrainObjects);
 PREP(module_colorCorrections);
 PREP(module_playSound);
 PREP(module_missionIntro);
@@ -40,6 +40,7 @@ PREP(fogEffect);
 PREP(snowEffect);
 PREP(breathFog);
 
+PREP(loadSpecialStates);
 PREP(onLoadIntroEffect);
 PREP(canExecuteModule);
 PREP(setDisposable);

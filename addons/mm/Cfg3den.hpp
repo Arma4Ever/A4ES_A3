@@ -1,6 +1,46 @@
 class Cfg3DEN {
     class Object {
         class AttributeCategories {
+            class StateSpecial {
+                class Attributes {
+                    class GVAR(forceUpStance) {
+                        property = QGVAR(forceUpStance);
+                        control = "CheckboxNumber";
+                        displayName = CSTRING(ObjectAttribute_StateSpecial_ForceUpStance_DisplayName);
+                        tooltip = CSTRING(ObjectAttribute_StateSpecial_ForceUpStance_Description);
+                        expression = "_this setVariable ['%s', _value, true];";
+                        condition = "objectBrain";
+                        defaultValue = 0;
+                    };
+                    class GVAR(forceMidStance) {
+                        property = QGVAR(forceMidStance);
+                        control = "CheckboxNumber";
+                        displayName = CSTRING(ObjectAttribute_StateSpecial_ForceMidStance_DisplayName);
+                        tooltip = CSTRING(ObjectAttribute_StateSpecial_ForceMidStance_Description);
+                        expression = "_this setVariable ['%s', _value, true];";
+                        condition = "objectBrain";
+                        defaultValue = 0;
+                    };
+                    class GVAR(forceDownStance) {
+                        property = QGVAR(forceDownStance);
+                        control = "CheckboxNumber";
+                        displayName = CSTRING(ObjectAttribute_StateSpecial_ForceDownStance_DisplayName);
+                        tooltip = CSTRING(ObjectAttribute_StateSpecial_ForceDownStance_Description);
+                        expression = "_this setVariable ['%s', _value, true];";
+                        condition = "objectBrain";
+                        defaultValue = 0;
+                    };
+                    class GVAR(forceFlashlightOn) {
+                        property = QGVAR(forceFlashlightOn);
+                        control = "CheckboxNumber";
+                        displayName = CSTRING(ObjectAttribute_StateSpecial_ForceFlashlightOn_DisplayName);
+                        tooltip = CSTRING(ObjectAttribute_StateSpecial_ForceFlashlightOn_Description);
+                        expression = "_this setVariable ['%s', _value, true];";
+                        condition = "objectBrain";
+                        defaultValue = 0;
+                    };
+                };
+            };
             class Control {
                 class Attributes {
                     class GVAR(characterDesc) {
