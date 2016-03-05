@@ -11,6 +11,8 @@ private _menuAddedOptions = [];
 
     if(isNil "_target") then {_target = _mainTarget;};
 
+    ace_interact_menu_selectedTarget = _target;
+
     private _actionPath = [];
     _actionPath = _actionPath + _menuPath;
     _actionPath pushBack _forEachIndex;
