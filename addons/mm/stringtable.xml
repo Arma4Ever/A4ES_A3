@@ -83,7 +83,7 @@
 			<Key ID="STR_A3CS_MM_ObjectAttribute_StateSpecial_ForceMidStance_DisplayName">
 				<Original>Wymuś postawę kucającą</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_ObjectAttribute_StateSpecial_ForceUpStance_Description">
+			<Key ID="STR_A3CS_MM_ObjectAttribute_StateSpecial_ForceMidStance_Description">
 				<Original>Wymusza na jednostce postawe kucającą. Uwaga! Opcja ograniczna możliwości poruszania się AI. Nie powinno się jej używać dla jednostek mobilnych</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_ObjectAttribute_StateSpecial_ForceDownStance_DisplayName">

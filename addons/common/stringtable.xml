@@ -34,9 +34,6 @@
 	    <Key ID="STR_A3CS_Common_DisabledShort">
             <Original>Wył</Original>
         </Key>
-	    <Key ID="STR_A3CS_Common_None">
-            <Original>Brak</Original>
-        </Key>
 	    <Key ID="STR_A3CS_Common_A3C">
             <Original>Arma3Coop.pl</Original>
         </Key>
