@@ -35,9 +35,13 @@ class Extended_Killed_EventHandlers {
         };
     };
 };
+
 //TMP CBA preInit FIX
 class Extended_DisplayLoad_EventHandlers {
     class Display3DEN {
         ADDON = "[] spawn CBA_fnc_preInit;";
+    };
+    class RscDisplayInterrupt {
+        cba_xeh_3denFix = "";
     };
 };
