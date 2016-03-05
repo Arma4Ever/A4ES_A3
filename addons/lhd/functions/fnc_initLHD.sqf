@@ -1,6 +1,6 @@
 /*
  * Author: SzwedzikPL
- * Create A3MP LHD on server
+ * Create A3MP LHD on server or in eden
  */
 #include "script_component.hpp"
 
