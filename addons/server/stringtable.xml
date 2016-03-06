@@ -7,6 +7,9 @@
         <Key ID="STR_A3CS_Server_Log_MissionEnd">
             <Original>Zakonczono misje</Original>
         </Key>
+        <Key ID="STR_A3CS_Server_Environment">
+            <Original>srodowisko</Original>
+        </Key>		
         <Key ID="STR_A3CS_Server_Log_WasKilledBy">
             <Original>%1 zostal zabity przez %2</Original>
         </Key>
