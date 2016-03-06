@@ -75,7 +75,7 @@ class ACE_Settings {
         typeName = "SCALAR";
     };
     class ace_medical_AIDamageThreshold {
-        value = 1; //100% normal damage
+        value = 2; //200% normal damage
         typeName = "SCALAR";
     };
     class ace_medical_enableUnconsciousnessAI {
