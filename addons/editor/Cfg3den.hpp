@@ -1,3 +1,5 @@
+class ctrlToolbox;
+
 class Cfg3DEN {
     class Object {
         class AttributeCategories {
@@ -36,5 +38,19 @@ class Cfg3DEN {
         };
         //remove garbage settings
         delete GarbageCollection;
+    };
+    class Attributes {
+        class Default;
+        class TitleWide: Default {
+            class Controls;
+        };
+        class AmmoBox: TitleWide {
+            class Controls: Controls {
+                class Type: ctrlToolbox {
+                    //disable virutal boxes
+                    strings[] = {"$STR_3den_attributes_ammobox_type_default"};
+                };
+            };
+        };
     };
 };
