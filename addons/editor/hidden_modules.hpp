@@ -210,3 +210,4 @@ class ace_captives_ModuleHandcuffed: ACE_Module {scope = 1;};
 class ace_nightvision_ModuleSettings: ACE_Module {scope = 1;};
 class ace_cargo_makeLoadable: ACE_Module {scope = 1;};
 class ACE_moduleBasicMedicalSettings: ACE_Module {scope = 1;};
+class ACE_moduleEquipFRIES: ACE_Module {scope = 1;};
