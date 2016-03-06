@@ -4,6 +4,9 @@ ADDON = false;
 
 #include "XEH_PREP_ACE.hpp"
 
+GVAR(ActNamespace) = [] call CBA_fnc_createNamespace;
+GVAR(ActSelfNamespace) = [] call CBA_fnc_createNamespace;
+
 // Event handlers for all interact menu controls
 DFUNC(handleMouseMovement) = {
     if (GVAR(cursorKeepCentered)) then {
