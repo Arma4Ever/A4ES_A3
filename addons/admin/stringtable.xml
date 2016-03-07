@@ -53,7 +53,7 @@
             <Original>Wybierz typ zakończenia misji</Original>
         </Key>
 	    <Key ID="STR_A3CS_Admin_Module_EndMission_EndMissionLog">
-            <Original>Admin %1 zakończył misję</Original>
+            <Original>Admin %1 zakonczyl misje</Original>
         </Key>
 	    <Key ID="STR_A3CS_Admin_Module_AdminMessages_DisplayName">
             <Original>Komunikaty</Original>
