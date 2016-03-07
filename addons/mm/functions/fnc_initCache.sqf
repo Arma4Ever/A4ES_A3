@@ -26,8 +26,7 @@ private _playableUnits = [[player], playableUnits] select isMultiplayer;
     if((count _playableInGroup) == 0 && {!(_group in GVAR(cacheGroups))}) then {
         GVAR(cacheGroups) pushBack _group;
     };
-    nil
-} count allGroups;
+} forEach allGroups;
 
 GVAR(cacheIndex) = 0;
 
