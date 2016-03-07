@@ -17,7 +17,7 @@ private _actionVariable = getText (_actionConfig >> "variable");
 if(isNull (findDisplay 60492)) then {
     missionNamespace setVariable [_actionVariable, 1];
     GVAR(debugCameraEnabled) = true;
-    ["Initialize", [player, [], false]] call BIS_fnc_EGSpectator;
+    ["Initialize", [player, [], true]] call BIS_fnc_EGSpectator;
 } else {
     missionNamespace setVariable [_actionVariable, 0];
     GVAR(debugCameraEnabled) = false;
