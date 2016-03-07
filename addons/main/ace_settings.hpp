@@ -313,7 +313,7 @@ class ACE_Settings {
         typeName = "BOOL";
     };
     class ace_mk6mortar_useAmmoHandling {
-        value = 1; //yes
+        value = 0; //no until ACE fix it TMP
         typeName = "BOOL";
     };
 
