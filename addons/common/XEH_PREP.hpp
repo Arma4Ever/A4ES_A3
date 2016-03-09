@@ -9,3 +9,4 @@ PREP(showNotification);
 PREP(handleKilled);
 PREP(handleHitPart);
 PREP(secondsToTime);
+PREP(debugmode);
