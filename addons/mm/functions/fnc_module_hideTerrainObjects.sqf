@@ -58,20 +58,40 @@ if(_mode in ["init", "attributesChanged3DEN", "registeredToWorld3DEN"]) then {
     if((_logic getVariable ["shipwreck", 1]) > 0) then {_objectTypes pushBack "SHIPWRECK";};
     if((_logic getVariable ["trail", 1]) > 0) then {_objectTypes pushBack "TRAIL";};
 
-    {_x hideObjectGlobal false;} forEach GVAR(hiddenTerrainObjects);
+    private _hiddenObjects = _logic getVariable [QGVAR(hiddenTerrainObjects), []];
+    {_x hideObjectGlobal false;} forEach _hiddenObjects;
 
     private _objects = nearestTerrainObjects [position _logic, _objectTypes, _distance];
     {_x hideObjectGlobal true;} forEach _objects;
-    GVAR(hiddenTerrainObjects) = _objects;
+    _logic setVariable [QGVAR(hiddenTerrainObjects), _objects];
 
-    if(!is3DEN) then {
+    if(is3DEN) then {
+        private _modules = (all3DENEntities select 3) select {typeof _x == QGVAR(module_hideTerrainObjects)};
+        {
+            private _module = _x;
+            if(_module != _logic) then {
+                private _moduleHiddenObjects = _module getVariable [QGVAR(hiddenTerrainObjects), []];
+                {_x hideObjectGlobal true;} forEach _moduleHiddenObjects;
+            };
+        } forEach _modules;
+    } else {
         //Set as disposable if possible
         _logic call FUNC(setDisposable);
     };
 };
 // When removed from the world (i.e., by deletion or undoing creation)
 if(_mode == "unregisteredFromWorld3DEN") then {
-    {_x hideObjectGlobal false;} forEach GVAR(hiddenTerrainObjects);
+    private _hiddenObjects = _logic getVariable [QGVAR(hiddenTerrainObjects), []];
+    {_x hideObjectGlobal false;} forEach _hiddenObjects;
+
+    private _modules = (all3DENEntities select 3) select {typeof _x == QGVAR(module_hideTerrainObjects)};
+    {
+        private _module = _x;
+        if(_module != _logic) then {
+            private _moduleHiddenObjects = _module getVariable [QGVAR(hiddenTerrainObjects), []];
+            {_x hideObjectGlobal true;} forEach _moduleHiddenObjects;
+        };
+    } forEach _modules;
 };
 // EDEN - When connection to object changes (i.e., new one is added or existing one removed)
 if(_mode == "connectionChanged3DEN") then {};
