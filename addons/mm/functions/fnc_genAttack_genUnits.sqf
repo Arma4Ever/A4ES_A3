@@ -41,6 +41,7 @@ if(!(call _codeCondition)) then {_active = false};
 if(!_active) exitWith {
     _place setVariable [QGVAR(genAttack_active), false, true];
     if(!isMultiplayer) then {systemchat "genAttack - Koniec ataku";};
+    A3CS_LOGINFO("genAttack_genUnits: Koniec ataku")
 };
 
 //if count is unlimited make in always up to the limit
@@ -60,6 +61,7 @@ private _attackPosition = getMarkerPos _attackTarget;
 _genCount = _genCount + _unitCount;
 _place setVariable [QGVAR(genAttack_genCount), _genCount];
 if(!isMultiplayer) then {systemchat format ["genAttack - Generuje %1 AI", _unitCount];};
+A3CS_LOGINFO_1("genAttack_genUnits: Generuje %1 AI",_unitCount)
 
 for "_spawnCounter" from 1 to _unitCount do {
     private _unitPosition = [];
@@ -97,8 +99,8 @@ for "_spawnCounter" from 1 to _unitCount do {
     //Gen unit
     _unit = _group createUnit [_class, _unitPosition, [], 0, "FORM"];
     _groupLeader = leader _group;
-    _unit setVariable [QGVAR(genAttack), true, true];
     _unit setVariable ["a3cs_generated", true, true];
+    _unit setVariable [QGVAR(genAttack), true, true];
     _unit setVariable ["ACE_Name", name _unit, true];
     _unit setVariable [QGVAR(genAttack_place), _place];
     _unit setVariable [QGVAR(genAttack_group), _group];
@@ -107,8 +109,6 @@ for "_spawnCounter" from 1 to _unitCount do {
     [_unit, _training] call FUNC(setSkillLevel);
     //Spawn custom script
     if(!isNil "_script") then {_unit spawn _script;};
-    //Killed event handler - cleanup group data and call support
-    _unit addEventHandler ["killed", {call FUNC(genAttack_handleKilled)}];
     //Set cache settings to "no if leader"
     _unit setVariable [QGVAR(cacheUnit), "noifleader"];
     //Disable fleeing
@@ -154,6 +154,9 @@ if(count allCurators > 0) then {
         } foreach  _newGroups;
     } foreach allCurators;
 };
+
+//Transfer groups to headless
+[_newGroups] call FUNC(transferGroups);
 
 //Start debug if SP/Editor
 if(!isMultiplayer) then {

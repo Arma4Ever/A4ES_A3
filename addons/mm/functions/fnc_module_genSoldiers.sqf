@@ -75,6 +75,7 @@ if(_mode == "init") then {
         _unit = _group createUnit [_class, _unitPosition, [], 0, "FORM"];
         _groupLeader = leader _group;
         _unit setVariable ["a3cs_generated", true, true];
+        _unit setVariable [QGVAR(genSoldiers), true, true];
         _unit setVariable ["ACE_Name", name _unit, true];
         _unit setVariable [QGVAR(genSoldiers_place), _place];
         _unit setVariable [QGVAR(genSoldiers_group), _group];
@@ -83,8 +84,6 @@ if(_mode == "init") then {
         [_unit, _training] call FUNC(setSkillLevel);
         //Spawn custom script
         if(!isNil "_script") then {_unit spawn _script;};
-        //Killed event handler - cleanup group data and call support
-        _unit addEventHandler ["killed", {call FUNC(genSoldiers_handleKilled)}];
         //Set cache settings to "no if leader" if parentUnit present or behaviour is patrol
         if(!isNil "_parentUnit" || _behaviour == "patrol") then {
             _unit setVariable [QGVAR(cacheUnit), "noifleader"];
@@ -169,6 +168,9 @@ if(_mode == "init") then {
             } foreach  _aliveGroups;
         } foreach allCurators;
     };
+
+    //Transfer groups to headless
+    [_aliveGroups] call FUNC(transferGroups);
 
     //Start debug if SP/Editor
     if(!isMultiplayer) then {

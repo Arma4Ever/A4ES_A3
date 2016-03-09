@@ -24,7 +24,14 @@ class Extended_Init_EventHandlers {
 class Extended_Killed_EventHandlers {
     class CAManBase {
         class ADDON {
-            killed = QUOTE(call DFUNC(removeDummyVest));
+            killed = QUOTE(call DFUNC(handleKilled));
+        };
+    };
+};
+class Extended_Local_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            local = QUOTE(call DFUNC(handleLocal));
         };
     };
 };

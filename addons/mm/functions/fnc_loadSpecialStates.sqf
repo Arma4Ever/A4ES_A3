@@ -6,12 +6,7 @@
 
 params ["_unit"];
 
-if(isNull _unit || isNil {_unit}) exitWith {};
-
-if(!local _unit) exitWith {
-    private _owner = owner _unit;
-    _unit remoteExecCall [QFUNC(loadSpecialStates), _owner, false];
-};
+if(!local _unit) exitWith {};
 
 private _forceUpStance = (_unit getVariable [QGVAR(forceUpStance), 0]) > 0;
 if(_forceUpStance) then {

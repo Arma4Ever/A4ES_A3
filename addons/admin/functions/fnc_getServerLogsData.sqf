@@ -24,10 +24,13 @@ if(tolower _logClass == "debuglogs") then {
     private _totalVehicles = 0;
     private _curatorCount = 0;
 
-    private _headlessOwner = 0;
-    if(!isNil "a3c_headlessClient" || {!isNull a3c_headlessClient}) then {
-        _headlessOwner = owner a3c_headlessClient;
-        if(_headlessOwner != 2) then {_headless = true;};
+    private _headlessClient = missionNamespace getVariable [QEGVAR(mm,headlessClient), objNull];
+    private _headlessClientOwner = 0;
+    if(!isNull _headlessClient) then {
+        _headlessClientOwner = owner _headlessClient;
+        if(_headlessClientOwner != 2) then {
+            _headless = true;
+        };
     };
 
     _allAI = allUnits select {!isPlayer _x};
@@ -36,7 +39,7 @@ if(tolower _logClass == "debuglogs") then {
         private _unit = _x;
         private _ownerUnit = owner _unit;
         if(_ownerUnit isEqualTo 2) then {_serverAI = _serverAI + 1;};
-        if(_headless && {_ownerUnit isEqualTo _headlessOwner}) then {_headlessAI = _headlessAI + 1;};
+        if(_headless && {_ownerUnit isEqualTo _headlessClientOwner}) then {_headlessAI = _headlessAI + 1;};
         if(_unit getVariable ["a3cs_generated", false]) then {_generatedAI = _generatedAI + 1;};
         if(_unit getVariable [QEGVAR(mm,cached), false]) then {_cachedAI = _cachedAI + 1;} else {_uncachedAI = _uncachedAI + 1;};
     } foreach _allAI;

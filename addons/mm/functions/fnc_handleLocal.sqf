@@ -1,6 +1,6 @@
 /*
  * Author: SzwedzikPL
- * Man init EH
+ * Local EH handler
  */
 #include "script_component.hpp"
 

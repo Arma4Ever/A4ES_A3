@@ -1,18 +1,21 @@
 /*
  * Author: SzwedzikPL
- * Init headless client
+ * Init headless client on server
  */
 #include "script_component.hpp"
 
 if(!isServer) exitWith {};
 if(!isMultiplayer) exitWith {};
 if(is3DENMultiplayer) exitWith {};
-if(isNil "a3c_headlessClient" || {isNull a3c_headlessClient}) exitWith {};
 
-private _headlessOwner = owner a3c_headlessClient;
+private _headlessClient = missionNamespace getVariable [QGVAR(headlessClient), objNull];
+if(isNull _headlessClient) exitWith {};
 
-if(_headlessOwner == 2) exitWith {};
+private _headlessClientOwner = owner _headlessClient;
+if(_headlessClientOwner == 2) exitWith {};
 
-{_x setGroupOwner _headlessOwner;} forEach allGroups;
+//Transfer all groups to HC
+[allGroups] call FUNC(transferGroups);
 
+//Send info to all players
 {systemChat localize LSTRING(Headless_Inited);} remoteExec ["BIS_fnc_call", 0];

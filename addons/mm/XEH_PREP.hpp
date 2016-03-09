@@ -30,7 +30,6 @@ PREP(genSoldiers_callSupport);
 PREP(genSoldiers_handleKilled);
 PREP(genAttack_handleKilled);
 PREP(genAttack_genUnits);
-PREP(removeDummyVest);
 PREP(setColorCorrection);
 PREP(fireArtillery_fireShell);
 PREP(createTask);
@@ -39,6 +38,9 @@ PREP(sandStorm);
 PREP(fogEffect);
 PREP(snowEffect);
 PREP(breathFog);
+
+PREP(handleKilled);
+PREP(transferGroups);
 
 PREP(loadSpecialStates);
 PREP(onLoadIntroEffect);
