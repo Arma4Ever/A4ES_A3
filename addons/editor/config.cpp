@@ -13,7 +13,6 @@ class CfgPatches {
     };
 };
 
-//#include "laser.hpp"
 #include "CfgEventHandlers.hpp"
 #include "Cfg3den.hpp"
 #include "CfgVehicles.hpp"

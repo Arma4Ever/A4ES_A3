@@ -2,7 +2,6 @@ PREP(resetScoreLoop);
 PREP(exportAddons);
 PREP(exportSettings);
 PREP(exportFunction);
-PREP(exportPropGroup);
 PREP(getName);
 PREP(getMissionData);
 PREP(getSingleMissionData);

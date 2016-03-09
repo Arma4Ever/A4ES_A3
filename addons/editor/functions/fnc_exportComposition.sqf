@@ -1,6 +1,6 @@
 /*
  * Author: SzwedzikPL
- * Exports 3DEN mission props to group cfg format
+ * Exports 3DEN mission props composition to group cfg format
  * WIP - not working for now!
  */
 #include "script_component.hpp"
@@ -14,6 +14,7 @@ if(isNil "_centerObject" || {isNull _centerObject}) exitWith {systemchat "no cen
 private _allObjects = all3DENEntities select 0;
 private _tab = "    ";
 private _objectCount = 0;
+private _centerObjectPosition = position _centerObject;
 
 diag_log text "======================================";
 {
@@ -21,12 +22,15 @@ diag_log text "======================================";
     if(!(_object isKindOf "CAManBase") && !(_object isKindOf "Logic")) then {
 
         private _objectClass = typeof _object;
-        private _objectDir = getDir _object;
-        private _objectPosition = _centerObject worldToModelVisual (ASLToAGL getPosASL _object);
+        private _objectDir = direction _object;
+        private _position = (position _object) vectorDiff _centerObjectPosition;
+        private _positionX = _position select 0;
+        private _positionY = _position select 1;
+        private _positionZ = _position select 2;
 
         diag_log text format ["class Object%1 {", _objectCount];
         diag_log text format ["%1dir = %2;", _tab, _objectDir];
-        diag_log text format ["%1position[] = {%2,%3,%4};", _tab, _objectPosition select 0, _objectPosition select 1, _objectPosition select 2];
+        diag_log text format ["%1position[] = {%2,%3,%4};", _tab, _positionX, _positionY, _positionZ];
         diag_log text format ["%1rank = """";", _tab];
         diag_log text format ["%1side = 8;", _tab];
         diag_log text format ["%1vehicle = ""%2"";", _tab, _objectClass];
