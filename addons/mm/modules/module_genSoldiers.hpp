@@ -74,6 +74,17 @@ class GVAR(module_genSoldiers): A3C_Module {
                 class base {name = CSTRING(Module_GenSoldiers_Behaviour_Base_DisplayName); value = "base"; default = 0;};
             };
         };
+        class cache: Combo {
+            displayName = CSTRING(ObjectAttribute_CacheSettings_CacheUnit_DisplayName);
+            tooltip = CSTRING(ObjectAttribute_CacheSettings_CacheUnit_Description);
+            property = QGVAR(module_genSoldiers_cache);
+            defaultValue = "'noifleader'";
+            class values {
+                class patrol {name = CSTRING(ObjectAttribute_CacheSettings_CacheUnit_Yes_DisplayName); value = "always"; default = 0;};
+                class defend {name = CSTRING(ObjectAttribute_CacheSettings_CacheUnit_NoLeader_DisplayName); value = "noifleader"; default = 1;};
+                class base {name = CSTRING(ObjectAttribute_CacheSettings_CacheUnit_No_DisplayName); value = "never"; default = 0;};
+            };
+        };
         class script: EditMulti3 {
             displayName = CSTRING(Module_GenSoldiers_Script_DisplayName);
             tooltip = CSTRING(Module_GenSoldiers_Script_Description);

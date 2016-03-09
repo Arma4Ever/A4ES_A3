@@ -22,6 +22,7 @@ if(_mode == "init") then {
     private _groupCount = _logic getVariable ["groupCount", 0];
     private _training = _logic getvariable ["training", "conscripts"];
     private _behaviour = _logic getvariable ["behaviour", "patrol"];
+    private _cacheSetting = _logic getvariable ["cache", "noifleader"];
     private _script = compile (_logic getVariable ["script", ""]);
     private _ignore = call compile (_logic getVariable ["ignore", "[]"]);
 
@@ -84,10 +85,8 @@ if(_mode == "init") then {
         [_unit, _training] call FUNC(setSkillLevel);
         //Spawn custom script
         if(!isNil "_script") then {_unit spawn _script;};
-        //Set cache settings to "no if leader" if parentUnit present or behaviour is patrol
-        if(!isNil "_parentUnit" || _behaviour == "patrol") then {
-            _unit setVariable [QGVAR(cacheUnit), "noifleader"];
-        };
+        //Set cache settings
+        _unit setVariable [QGVAR(cacheUnit), _cacheSetting];
         //If limit is reached force next AI to spawn in new group
         if(count (units _group) >= _groupCount) then {_group = grpNull;};
     };
