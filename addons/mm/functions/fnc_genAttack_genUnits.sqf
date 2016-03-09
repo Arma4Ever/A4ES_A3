@@ -109,8 +109,8 @@ for "_spawnCounter" from 1 to _unitCount do {
     [_unit, _training] call FUNC(setSkillLevel);
     //Spawn custom script
     if(!isNil "_script") then {_unit spawn _script;};
-    //Set cache settings to "no if leader"
-    _unit setVariable [QGVAR(cacheUnit), "noifleader"];
+    //Set cache settings to "never"
+    _unit setVariable [QGVAR(cacheUnit), "never"];
     //Disable fleeing
     _group allowFleeing 0;
     //Disable suppression
