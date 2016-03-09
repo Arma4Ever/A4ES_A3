@@ -15,7 +15,7 @@ if(ace_interact_menu_openedMenuType >= 0) exitWith {};
 //cursortarget nametag
 if(!freeLook && {GVAR(enableCursorNametag) || GVAR(enable3dNametag) == 2}) then {
     private _target = cursorObject;
-    if ((!isNull _target) && {_target isKindOf "CAManBase"} && {alive _target} && {(side  _target) isEqualTo (side  ace_player)} && {!(_target isEqualTo ace_player)}) then {
+    if ((!isNull _target) && {_target isKindOf "CAManBase"} && {alive _target} && {(side group _target) isEqualTo (side group ace_player)} && {!(_target isEqualTo ace_player)}) then {
         private _distance = ace_player distance _target;
         if(_distance <= 5) then {
             //draw 2d nametag
@@ -34,7 +34,7 @@ if(freeLook && {GVAR(enable3dNametag) isEqualTo 1}) then {
     };
     {
         private _target = _x;
-        if ((alive _target) && {(side _target) isEqualTo (side ace_player)} && {_target != ace_player}) then {
+        if ((alive _target) && {(side group _target) isEqualTo (side group ace_player)} && {_target != ace_player}) then {
              // Check if there is line of sight
              private _playerEyePosASL = eyePos ace_player;
              private _targetEyePosASL = eyePos _target;
