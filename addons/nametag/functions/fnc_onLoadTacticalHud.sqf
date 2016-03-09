@@ -37,7 +37,7 @@ GVAR(tacticalHudMaxDistance) = _mapSize * 130; //26m
 GVAR(tacticalHudRefPosition) = [GVAR(tacticalHudMaxDistance), GVAR(tacticalHudMaxDistance), 0];
 GVAR(tacticalHudIconSize) = _mapSize * 80;
 
-_controlMap ctrlMapAnimAdd [0, 0.045, GVAR(tacticalHudRefPosition)];
+_controlMap ctrlMapAnimAdd [0, _mapZoomLevel, GVAR(tacticalHudRefPosition)];
 ctrlMapAnimCommit _controlMap;
 
 GVAR(tacticalHudMapEHID) = _controlMap ctrlAddEventHandler ["Draw", QUOTE(call FUNC(drawTacticalHud))];
