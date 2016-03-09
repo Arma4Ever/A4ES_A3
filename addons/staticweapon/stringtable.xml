@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+    <Package name="StaticWeapon">
+	    <Key ID="STR_A3CS_StaticWeapon_Actions_Disassemble">
+            <Original>Rozłóż</Original>
+        </Key>
+    </Package>
+</Project>

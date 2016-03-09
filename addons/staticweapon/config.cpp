@@ -4,18 +4,14 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"a3cs_main"};
+        requiredAddons[] = {"a3cs_main", "a3cs_common"};
         version = A3CS_VERSION;
         versionStr = QUOTE(A3CS_VERSION);
         versionAr[] = A3CS_VERSION_ARRAY;
-        author[] = {"SzwedzikPL", "ACE3 Team"};
+        author[] = {"SzwedzikPL"};
         authorUrl = "http://arma3coop.pl";
     };
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgRespawnTemplates.hpp"
-#include "CfgVehicleClasses.hpp"
-#include "CfgDebriefing.hpp"
-#include "CfgFunctions.hpp"
-#include "dialogs.hpp"
+#include "CfgActions.hpp"

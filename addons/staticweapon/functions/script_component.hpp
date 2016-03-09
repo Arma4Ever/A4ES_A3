@@ -1,0 +1,1 @@
+#include "\z\a3cs\addons\staticweapon\script_component.hpp"
