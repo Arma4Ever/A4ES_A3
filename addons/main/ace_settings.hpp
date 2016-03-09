@@ -166,6 +166,10 @@ class ACE_Settings {
         value = 1; //yes
         typeName = "BOOL";
     };
+    class ace_medical_enableVehicleCrashes {
+        value = 1; //yes
+        typeName = "BOOL";
+    };
 
     /****** ace_cargo ******/
     class ace_cargo_enable {
