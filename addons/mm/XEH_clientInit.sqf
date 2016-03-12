@@ -23,7 +23,7 @@ if(isMultiplayer && !didJIP) then {
     if((isMultiplayer && !didJIP && _enableMissionIntro) || (!isMultiplayer && _enableMissionIntroSP)) then {
         (QGVAR(missionIntro) call BIS_fnc_rscLayer) cutRsc ["RscA3CSIntroEffect", "PLAIN"];
     };
-}, [], 1] call ace_common_fnc_waitAndExecute;
+}, [], 3] call ace_common_fnc_waitAndExecute;
 
 ["SettingChanged", {
     params ["_option"];

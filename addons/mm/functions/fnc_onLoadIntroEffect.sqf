@@ -10,7 +10,7 @@ private _display = uiNamespace getVariable ['RscA3CSIntroEffect', displayNull];
 
 private _missionData =  call EFUNC(common,getMissionData);
 _missionData params ["_missionName", "_missionMap", "_missionAuthor"];
-private _players = count (allPlayers - entities "HeadlessClient_F");
+private _players = count allPlayers;
 if(!isMultiplayer) then {_players = 1;};
 
 date params ["_year", "_month", "_day", "_hour", "_minute"];
@@ -21,7 +21,6 @@ if(_hour < 10) then {_hour = format ["0%1", _hour];};
 if(_minute < 10) then {_minute = format ["0%1", _minute];};
 
 private _unitData = player call EFUNC(nametag,getUnitData);
-
 _unitData params ["_nickname", "_rankname"];
 
 private _playerName = format ["%1 %2", _rankname, _nickname];
@@ -45,45 +44,10 @@ _subtitle3 ctrlsettext toupper format ["Liczba graczy: %1", _players];
 _subtitle4 ctrlsettext toupper format ["Data: %1.%2.%3 %4:%5", _year, _month, _day, _hour, _minute];
 _subtitle5 ctrlsettext toupper format ["%1", _unitDesc];
 
-
 //Icon
 _picture = _display displayctrl IDC_RSCA3CINTROEFFECT_PICTURE;
 _picture ctrlsettextcolor [1,1,1,1];
 _picture ctrlsettext "\z\a3cs\addons\main\data\a3c_logo.paa";
-
-//--- Animated outro screen
-/*
-private _titlePosFinal = ctrlposition _title;
-private _titlePosStart = +_titlePosFinal;
-_titlePosStart set [0,(_titlePosStart select 0) + (_titlePosStart select 2) / 2];
-_titlePosStart set [2,0];
-_title ctrlsetposition _titlePosStart;
-_title ctrlcommit 0;
-_title ctrlsetposition _titlePosFinal;
-_title ctrlcommit 0.2;
-
-//--- Subtitle
-if (_subtitleText != "") then {
-    private _subtitlePosFinal = ctrlposition _subtitle;
-    private _subtitlePosStart = +_subtitlePosFinal;
-    _subtitlePosStart set [0,(_subtitlePosStart select 0) + (_subtitlePosStart select 2) / 2];
-    _subtitlePosStart set [2,0];
-    _subtitle ctrlsetposition _subtitlePosStart;
-    _subtitle ctrlcommit 0;
-    _subtitle ctrlshow false;
-    [_subtitle, _subtitlePosFinal] spawn {
-        disableserialization;
-        params ["_subtitle", "_subtitlePosFinal"];
-        sleep 2;
-        _subtitle = _this select 0;
-        _subtitle ctrlshow true;
-        _subtitle ctrlsetposition _subtitlePosFinal;
-        _subtitle ctrlcommit 0.4;
-    };
-} else {
-    _subtitle ctrlshow false;
-};
-*/
 
 //--- Monochromatic post-process
 RscA3CSIntroEffect_colorCorrection = ppeffectcreate ["ColorCorrections",1616];
