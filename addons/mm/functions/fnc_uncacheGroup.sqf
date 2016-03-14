@@ -19,8 +19,8 @@ private _uncachedUnitCount = 0;
         //uncache unit
         _unit enableSimulationGlobal true;
         _unit hideObjectGlobal false;
-        _unit setDamage (damage _unit); //trigger unit
-        _unit setVariable [QGVAR(cached), false];
+        //_unit setDamage (damage _unit); //trigger unit
+        _unit setVariable [QGVAR(cached), false, true];
         _uncachedUnitCount = _uncachedUnitCount + 1;
         if(_leaderIsCached) then {
             //leader was cached so load cache data
@@ -38,7 +38,12 @@ private _uncachedUnitCount = 0;
             if(!isNull objectParent _groupLeader) then {_unit moveInAny (objectParent _groupLeader)};
         };
     };
-    nil
-} count _groupUnits;
+} forEach _groupUnits;
+
+if(local _groupLeader) then {
+    _group call FUNC(enableGroupAI);
+} else {
+    _group remoteExecCall [QFUNC(enableGroupAI), _groupLeader, false];
+};
 
 _uncachedUnitCount

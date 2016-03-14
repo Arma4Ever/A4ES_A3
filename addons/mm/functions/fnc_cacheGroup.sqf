@@ -8,6 +8,7 @@ if(!isServer) exitWith {};
 params ["_group"];
 
 private _groupUnits = units _group;
+private _groupLeader = leader _group;
 private _cachedUnitCount = 0;
 {
     private _unit = _x;
@@ -16,7 +17,7 @@ private _cachedUnitCount = 0;
     //check if unit should can be hidden
     if(!isNull objectParent _unit) then {_canCache = false;};
     if(_unitSetting == "never") then {_canCache = false;};
-    if(_unit == leader _group && {_unitSetting == "noifleader"}) then {_canCache = false;};
+    if(_unit == _groupLeader && {_unitSetting == "noifleader"}) then {_canCache = false;};
     if(_unit getVariable [QGVAR(cached), false]) then {_canCache = false;};
     if(_canCache) then {
         private _cacheData = [getPosATL _unit, getDir _unit];
@@ -27,5 +28,11 @@ private _cachedUnitCount = 0;
         _cachedUnitCount = _cachedUnitCount + 1;
     };
 } foreach _groupUnits;
+
+if(local _groupLeader) then {
+    _group call FUNC(disableGroupAI);
+} else {
+    _group remoteExecCall [QFUNC(disableGroupAI), _groupLeader, false];
+};
 
 _cachedUnitCount

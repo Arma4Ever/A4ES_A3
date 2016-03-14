@@ -1,17 +1,17 @@
 /*
  * Author: SzwedzikPL
- * Cache PFH
+ * Cache PFH for groups (AI)
  */
 #include "script_component.hpp"
 
-//BEGIN_COUNTER(cacheHandler);
+//BEGIN_COUNTER(cacheGroupHandler);
 
 if(!isServer) exitWith {};
 
 private _cachedUnitsCount = 0;
 private _uncachedUnitsCount = 0;
 
-private _group = GVAR(cacheGroups) select GVAR(cacheIndex);
+private _group = GVAR(cacheGroups) select GVAR(cacheGroupIndex);
 
 if(({alive _x} count (units _group)) > 0) then {
     private _leader = vehicle (leader _group);
@@ -20,10 +20,16 @@ if(({alive _x} count (units _group)) > 0) then {
     {
         private _player = vehicle _x;
         private _distance = _leader distance _player;
-        if(_distance < GVAR(cacheDistanceLand) && {_player iskindOf "Land"}) exitWith {_isVisibleForPlayers = true;};
-        if(_distance < GVAR(cacheDistanceLand) && {_player iskindOf "Ship"}) exitWith {_isVisibleForPlayers = true;};
-        if(_distance < GVAR(cacheDistanceHelicopters) && {_player iskindOf "Helicopter"}) exitWith {_isVisibleForPlayers = true;};
-        if(_distance < GVAR(cacheDistancePlanes) && {_player iskindOf "Plane"}) exitWith {_isVisibleForPlayers = true;};
+        if(GVAR(cacheDistanceLand) > 0) then {
+            if(_distance < GVAR(cacheDistanceLand) && {_player iskindOf "Land"}) exitWith {_isVisibleForPlayers = true;};
+            if(_distance < GVAR(cacheDistanceLand) && {_player iskindOf "Ship"}) exitWith {_isVisibleForPlayers = true;};
+        };
+        if(GVAR(cacheDistanceHelicopters) > 0) then {
+            if(_distance < GVAR(cacheDistanceHelicopters) && {_player iskindOf "Helicopter"}) exitWith {_isVisibleForPlayers = true;};
+        };
+        if(GVAR(cacheDistancePlanes) > 0) then {
+            if(_distance < GVAR(cacheDistancePlanes) && {_player iskindOf "Plane"}) exitWith {_isVisibleForPlayers = true;};
+        };
     } forEach _playableUnits;
 
     if(!_isVisibleForPlayers && {!(_group in GVAR(cachedGroups))}) then {
@@ -44,11 +50,11 @@ if(({alive _x} count (units _group)) > 0) then {
     deleteGroup _group;
 };
 
-GVAR(cacheIndex) = GVAR(cacheIndex) + 1;
-if(GVAR(cacheIndex) >= (count GVAR(cacheGroups))) then {GVAR(cacheIndex) = 0;};
+GVAR(cacheGroupIndex) = GVAR(cacheGroupIndex) + 1;
+if(GVAR(cacheGroupIndex) >= (count GVAR(cacheGroups))) then {GVAR(cacheGroupIndex) = 0;};
 
 if(!isMultiplayer && {_cachedUnitsCount > 0 || _uncachedUnitsCount > 0}) then {
     systemChat format ["Cache - Ukrywam jednostki: %1 | Odkrywam jednostki: %2", _cachedUnitsCount, _uncachedUnitsCount];
 };
 
-//END_COUNTER(cacheHandler);
+//END_COUNTER(cacheGroupHandler);

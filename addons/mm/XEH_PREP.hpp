@@ -24,8 +24,11 @@ PREP(initHeadless);
 PREP(initCache);
 PREP(cacheGroup);
 PREP(uncacheGroup);
-PREP(cacheHandler);
+PREP(cacheGroupHandler);
+PREP(cacheModulesHandler);
 PREP(setSkillLevel);
+PREP(disableGroupAI);
+PREP(enableGroupAI);
 PREP(genSoldiers_callSupport);
 PREP(genSoldiers_handleKilled);
 PREP(genAttack_handleKilled);
@@ -39,7 +42,9 @@ PREP(fogEffect);
 PREP(snowEffect);
 PREP(breathFog);
 
+PREP(handleInitPost);
 PREP(handleKilled);
+PREP(handleLocal);
 PREP(transferGroups);
 
 PREP(loadSpecialStates);

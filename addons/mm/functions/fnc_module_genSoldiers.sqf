@@ -26,6 +26,35 @@ if(_mode == "init") then {
     private _script = compile (_logic getVariable ["script", ""]);
     private _ignore = call compile (_logic getVariable ["ignore", "[]"]);
 
+    //Calc size of spawn place and save data for cache
+    private _placeShape = if ((triggerArea _place) select 3) then {"rectangle"} else {"ellipse"};
+    private _placeSize = ((triggerArea _place) select 0) max ((triggerArea _place) select 1);
+    _placeSize = if (_placeShape == "ellipse") then {_placeSize + (_placeSize/5)} else {_placeSize + (_placeSize/2)};
+    _logic setVariable ["placeObj", _place];
+    _logic setVariable ["placeSize", _placeSize];
+
+    //check distance to nearest player if cache is inited
+    private _isVisibleForPlayers = false;
+    if(GVAR(cacheInited)) then {
+        private _playableUnits = [[player], playableUnits] select isMultiplayer;
+        {
+            private _player = vehicle _x;
+            private _distance = ((_place distance _player) - _placeSize) max 0;
+            if(GVAR(cacheDistanceLand) > 0) then {
+                if(_distance < GVAR(cacheDistanceLand) && {_player iskindOf "Land"}) exitWith {_isVisibleForPlayers = true;};
+                if(_distance < GVAR(cacheDistanceLand) && {_player iskindOf "Ship"}) exitWith {_isVisibleForPlayers = true;};
+            };
+            if(GVAR(cacheDistanceHelicopters) > 0) then {
+                if(_distance < GVAR(cacheDistanceHelicopters) && {_player iskindOf "Helicopter"}) exitWith {_isVisibleForPlayers = true;};
+            };
+            if(GVAR(cacheDistancePlanes) > 0) then {
+                if(_distance < GVAR(cacheDistancePlanes) && {_player iskindOf "Plane"}) exitWith {_isVisibleForPlayers = true;};
+            };
+        } forEach _playableUnits;
+    };
+
+    if(!_isVisibleForPlayers) exitWith {GVAR(cacheModules) pushBack _logic;};
+
     //Save data in resp trigger
     private _aliveUnits = [];
     private _aliveGroups = [];
@@ -41,11 +70,7 @@ if(_mode == "init") then {
         _parentUnit setVariable [QGVAR(genSoldiers_children), _childUnits];
     };
 
-    //Calc size of spawn place
-    private _placeShape = if ((triggerArea _place) select 3) then {"rectangle"} else {"ellipse"};
-    private _placeSize = ((triggerArea _place) select 0) max ((triggerArea _place) select 1);
-    _placeSize = if (_placeShape == "ellipse") then {_placeSize + (_placeSize/5)} else {_placeSize + (_placeSize/2)};
-
+    //SP debug log
     if(!isMultiplayer) then {systemchat format ["genSoldiers - Generuje %1 AI", _unitCount];};
 
     //Start respawn

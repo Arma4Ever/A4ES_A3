@@ -19,7 +19,7 @@ _unitPlace setVariable [QGVAR(genSoldiers_aliveUnits), _alivePlaceUnits];
 //Remove group from alive if empty
 private _alivePlaceGroups = _unitPlace getVariable [QGVAR(genSoldiers_aliveGroups), []];
 private _aliveUnits = {alive _x} count (units _unitGroup);
-if(isNull _unitGroup || _aliveUnits==0) then {_alivePlaceGroups deleteAt (_alivePlaceGroups find _unitGroup);};
+if(isNull _unitGroup || _aliveUnits == 0) then {_alivePlaceGroups deleteAt (_alivePlaceGroups find _unitGroup);};
 _unitPlace setVariable [QGVAR(genSoldiers_aliveGroups), _alivePlaceGroups];
 
 //Call support units
