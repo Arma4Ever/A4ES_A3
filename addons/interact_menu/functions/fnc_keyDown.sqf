@@ -122,7 +122,7 @@ if (a3cs_interact_menu_moveMainInteractionToCursor && {vehicle ACE_player == ACE
     //if (_target isKindOf "CAManBase") exitWith {diag_log format ["Ignoring Man %1",_target];};
 
     private _interestModelPos = _target worldToModelVisual (ASLtoAGL _intsectPosASL);
-    private _classActions = missionNamespace getVariable [(format [QGVAR(Act_%1), typeOf _target]), []];
+    private _classActions = GVAR(ActNamespace) getVariable typeOf _target;
 
     //Check for existance of ACE_MainActions and get it's distance from center
     private _originalMainDistance = -1;
@@ -180,6 +180,7 @@ if (a3cs_interact_menu_moveMainInteractionToCursor && {vehicle ACE_player == ACE
         //diag_log format ["Setting New Main Interaction Pos %1 %2",_target,_originalMainDistance];
         GVAR(firstCursorTarget) = _target;
         GVAR(firstCursorTargetPos) = _interestModelPos;
+
     };
 };
 //--- EDIT
