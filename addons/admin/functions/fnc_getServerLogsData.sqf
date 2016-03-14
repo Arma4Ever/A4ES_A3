@@ -33,7 +33,7 @@ if(tolower _logClass == "debuglogs") then {
         };
     };
 
-    _allAI = allUnits select {!isPlayer _x};
+    private _allAI = allUnits select {!isPlayer _x};
     _totalAI = count _allAI;
     {
         private _unit = _x;
