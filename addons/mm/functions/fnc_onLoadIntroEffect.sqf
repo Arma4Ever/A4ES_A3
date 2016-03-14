@@ -10,7 +10,7 @@ private _display = uiNamespace getVariable ['RscA3CSIntroEffect', displayNull];
 
 private _missionData =  call EFUNC(common,getMissionData);
 _missionData params ["_missionName", "_missionMap", "_missionAuthor"];
-private _players = count allPlayers;
+private _players = count playableUnits; //allplayers is broken atm
 if(!isMultiplayer) then {_players = 1;};
 
 date params ["_year", "_month", "_day", "_hour", "_minute"];
