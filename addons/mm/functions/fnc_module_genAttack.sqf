@@ -59,6 +59,7 @@ if(_mode == "init") then {
 
     //Start respawn
     _place setVariable [QGVAR(genAttack_active), true, true];
+    _place setVariable [QGVAR(genAttack_started), true, true];
     _place setVariable [QGVAR(genAttack_startTime), ACE_time, true];
     _place call FUNC(genAttack_genUnits);
 

@@ -7,6 +7,7 @@
 params ["_taskID", "_taskTitle", "_taskDesc", "_showNotification", "_serverTime"];
 
 private _missionTasks = missionNamespace getVariable [QGVAR(missionTasks), []];
+private _missionTaskStates = missionNamespace getVariable [QGVAR(missionTaskStates), []];
 private _missionTasksData = missionNamespace getVariable [QGVAR(missionTasksData), []];
 if(!(_taskID in _missionTasks)) then {
     private _task = player createSimpleTask [_taskTitle];
@@ -14,7 +15,10 @@ if(!(_taskID in _missionTasks)) then {
     //support for SP
     if(!isServer) then {
         _missionTasks pushBack _taskID;
+        _missionTaskStates pushBack "CREATED";
+        
         missionNamespace setVariable [QGVAR(missionTasks), _missionTasks];
+        missionNamespace setVariable [QGVAR(missionTaskStates), _missionTaskStates];
     };
 
     _missionTasksData pushback [_task, _taskTitle];

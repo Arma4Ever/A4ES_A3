@@ -22,13 +22,16 @@ if(_mode == "init") then {
     if(_taskID == "") exitWith {true};
 
     private _missionTasks = missionNamespace getVariable [QGVAR(missionTasks), []];
+    private _missionTaskStates = missionNamespace getVariable [QGVAR(missionTaskStates), []];
     private _missionTaskTargets = missionNamespace getVariable [QGVAR(missionTaskTargets), []];
     if(!(_taskID in _missionTasks)) then {
         [_taskID, _taskTitle, _taskDesc, _showNotification, serverTime] remoteExecCall [QFUNC(createTask), _taskTarget, true];
 
         _missionTasks pushBack _taskID;
+        _missionTaskStates pushBack "CREATED";
         _missionTaskTargets pushBack _taskTarget;
         missionNamespace setVariable [QGVAR(missionTasks), _missionTasks];
+        missionNamespace setVariable [QGVAR(missionTaskStates), _missionTaskStates];
         missionNamespace setVariable [QGVAR(missionTaskTargets), _missionTaskTargets];
     };
 };

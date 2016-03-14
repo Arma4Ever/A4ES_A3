@@ -15,6 +15,8 @@ private _unitGroup = _unit getVariable [QGVAR(genSoldiers_group), grpNull];
 private _alivePlaceUnits = _unitPlace getVariable [QGVAR(genSoldiers_aliveUnits), []];
 _alivePlaceUnits deleteAt (_alivePlaceUnits find _unit);
 _unitPlace setVariable [QGVAR(genSoldiers_aliveUnits), _alivePlaceUnits];
+//api
+_unitPlace setVariable [QGVAR(genSoldiers_aliveUnitsCount), count _alivePlaceUnits, true];
 
 //Remove group from alive if empty
 private _alivePlaceGroups = _unitPlace getVariable [QGVAR(genSoldiers_aliveGroups), []];

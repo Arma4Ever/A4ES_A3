@@ -62,6 +62,8 @@ if(_mode == "init") then {
     _place setVariable [QGVAR(genSoldiers_unitCount), _unitCount];
     _place setVariable [QGVAR(genSoldiers_aliveUnits), _aliveUnits];
     _place setVariable [QGVAR(genSoldiers_aliveGroups), _aliveGroups];
+    //api
+    _place setVariable [QGVAR(genSoldiers_aliveUnitsCount), count _aliveUnits, true];
 
     //Save data about this unit in parent respawn
     if(!isNil "_parentUnit") then {
@@ -119,7 +121,9 @@ if(_mode == "init") then {
     //Save actual data in place
     _place setVariable [QGVAR(genSoldiers_aliveUnits), _aliveUnits];
     _place setVariable [QGVAR(genSoldiers_aliveGroups), _aliveGroups];
-
+    //api
+    _place setVariable [QGVAR(genSoldiers_aliveUnitsCount), count _aliveUnits, true];
+    
     //Add waypoints
     if(_behaviour == "patrol") then {
         {
@@ -177,7 +181,7 @@ if(_mode == "init") then {
     };
 
     //Set place as respawned
-    _place setVariable [QGVAR(genSoldiers_respawned), true];
+    _place setVariable [QGVAR(genSoldiers_respawned), true, true];
 
     //Add groups in cache array
     if(GVAR(cacheInited)) then {GVAR(cacheGroups) append _aliveGroups;};
