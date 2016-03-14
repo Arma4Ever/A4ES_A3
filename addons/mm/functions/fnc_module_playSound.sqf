@@ -24,8 +24,6 @@ if(_mode == "init") then {
 
     _soundArray params ["_sound", "_soundDuration"];
 
-    diag_log _sound;
-
     if(_sound == "own") then {
         _soundDuration = _soundDurationOwn;
         if(_missionPath) then {
