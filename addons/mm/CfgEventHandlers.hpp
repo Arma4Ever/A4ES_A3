@@ -10,28 +10,28 @@ class Extended_PreInit_EventHandlers {
 };
 class Extended_PostInit_EventHandlers {
     class ADDON {
-        clientInit = QUOTE(call COMPILE_FILE(XEH_clientInit));
+        clientInit = QUOTE(call COMPILE_FILE(XEH_postInitClient));
         init = QUOTE(call COMPILE_FILE(XEH_postInit));
     };
 };
-class Extended_Init_EventHandlers {
+class Extended_InitPost_EventHandlers {
     class CAManBase {
         class ADDON {
-            init = QUOTE(call COMPILE_FILE(XEH_initMan));
+            init = QUOTE(_this call DFUNC(handleInitPost));
         };
     };
 };
 class Extended_Killed_EventHandlers {
     class CAManBase {
         class ADDON {
-            killed = QUOTE(call DFUNC(handleKilled));
+            killed = QUOTE(_this call DFUNC(handleKilled));
         };
     };
 };
 class Extended_Local_EventHandlers {
     class CAManBase {
         class ADDON {
-            local = QUOTE(call DFUNC(handleLocal));
+            local = QUOTE(_this call DFUNC(handleLocal));
         };
     };
 };

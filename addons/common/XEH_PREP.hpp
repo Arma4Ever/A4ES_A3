@@ -6,6 +6,8 @@ PREP(getName);
 PREP(getMissionData);
 PREP(getSingleMissionData);
 PREP(showNotification);
+PREP(handleInit);
+PREP(handleRespawn);
 PREP(handleKilled);
 PREP(handleHitPart);
 PREP(secondsToTime);

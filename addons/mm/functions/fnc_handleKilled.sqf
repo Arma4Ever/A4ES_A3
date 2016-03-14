@@ -1,6 +1,6 @@
 /*
  * Author: SzwedzikPL
- * Killed EH handler
+ * Man killed EH handler
  */
 #include "script_component.hpp"
 

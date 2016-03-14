@@ -5,13 +5,13 @@ class Extended_PreStart_EventHandlers {
 };
 class Extended_PreInit_EventHandlers {
     class ADDON {
-        init = QUOTE( call COMPILE_FILE(XEH_preInit) );
+        init = QUOTE(call COMPILE_FILE(XEH_preInit));
     };
 };
 class Extended_FiredBIS_EventHandlers {
     class Plane {
         class ADDON {
-            firedBIS = QUOTE(_this call FUNC(gau8_muzzleEffect));
+            firedBIS = QUOTE(_this call DFUNC(gau8_muzzleEffect));
         };
     };
 };
