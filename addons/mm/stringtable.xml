@@ -462,7 +462,7 @@
 				<Original>Źródło dźwięku</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Place_Description">
-				<Original>Nazwa markera który ma być źródłem dźwięku (np. dzwiek1)</Original>
+				<Original>Nazwa markera, nazwa obiektu lub tablica pozycji ASL który ma być źródłem dźwięku (np. marker1, obiekt1, [200,893,20])</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_DisplayName">
 				<Original>Typ</Original>

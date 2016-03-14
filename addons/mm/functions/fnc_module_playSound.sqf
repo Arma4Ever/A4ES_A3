@@ -13,7 +13,7 @@ if(_mode == "init") then {
     if(isNull _logic || !_isActivated) exitWith {true};
     if(!(_logic call FUNC(canExecuteModule))) exitWith {A3CS_LOGWARN("playSound: blokuje wykonanie modulu")true};
 
-    private _sourcePos = markerpos (_logic getVariable ["place", ""]);
+    private _source = _logic getVariable ["place", ""];
     private _soundArray = call compile (_logic getVariable ["sound", ""]);
     private _soundPath = _logic getVariable ["soundPath", ""];
     private _missionPath = (_logic getVariable ["missionPath", 0]) > 0;
@@ -21,6 +21,24 @@ if(_mode == "init") then {
     private _volume = _logic getVariable ["volume", 0];
     private _distance = _logic getVariable ["distance", 0];
     private _loop = (_logic getVariable ["loop", 0]) > 0;
+
+    private _sourcePos = [0,0,0];
+
+    if(isNil {(call compile _source)}) then {
+        _sourcePos = markerPos _source;
+    } else {
+        private _sourceResult = call compile _source;
+        if(_sourceResult isEqualTypeAny [[], objNull]) then {
+            if(_sourceResult isEqualType objNull) then {
+                _sourcePos = getPosASL _sourceResult;
+            };
+            if(_sourceResult isEqualType []) then {
+                _sourcePos = _sourceResult;
+            };
+        } else {
+            "Podano niepoprawne zrodlo dzwieku" call BIS_fnc_error;
+        };
+    };
 
     _soundArray params ["_sound", "_soundDuration"];
 
@@ -36,18 +54,10 @@ if(_mode == "init") then {
 
     A3CS_LOGINFO_3("playSound: %1 %2 %3",_soundPath,_soundDuration,_loop)
 
-    playSound3D [_soundPath, objNull, false, _sourcePos, _volume, 1, _distance];
+    _soundDuration = _soundDuration + 0.5;
+    private _soundParams = [_soundPath, objNull, false, _sourcePos, _volume, 1, _distance];
 
-    if(_loop) then {
-        _soundDuration = _soundDuration + 0.5;
-        [_soundPath, _sourcePos, _volume, _distance, _soundDuration] spawn {
-            params ["_soundPath", "_sourcePos", "_volume", "_distance", "_soundDuration"];
-            while {true} do {
-                sleep _soundDuration;
-                playSound3D [_soundPath, objNull, false, _sourcePos, _volume, 1, _distance];
-            };
-        };
-    };
+    [_soundParams, _loop, _soundDuration] call FUNC(playSound3D);
 
     //Set as disposable if possible
     _logic call FUNC(setDisposable);

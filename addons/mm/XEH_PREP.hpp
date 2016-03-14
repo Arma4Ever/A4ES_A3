@@ -41,6 +41,7 @@ PREP(sandStorm);
 PREP(fogEffect);
 PREP(snowEffect);
 PREP(breathFog);
+PREP(playSound3D);
 
 PREP(handleInitPost);
 PREP(handleKilled);
