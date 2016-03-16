@@ -71,11 +71,11 @@ class ACE_Settings {
         typeName = "BOOL";
     };
     class ace_medical_playerDamageThreshold {
-        value = 1; //100% normal damage
+        value = 1; //100% damage is fatal
         typeName = "SCALAR";
     };
     class ace_medical_AIDamageThreshold {
-        value = 2; //200% normal damage
+        value = 1; //95% damage is fatal TMP!!!!
         typeName = "SCALAR";
     };
     class ace_medical_enableUnconsciousnessAI {

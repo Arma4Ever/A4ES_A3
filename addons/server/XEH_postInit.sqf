@@ -19,6 +19,9 @@ if(!isServer) exitWith {};
 //Refresh curator points
 if(count allCurators > 0) then {[] call FUNC(curatorPointsLoop);};
 
+//TMP damage fix
+[ace_common_fnc_setSetting, ["ace_medical_AIDamageThreshold", 0.95, true, true], 0.5] call ace_common_fnc_waitAndExecute;
+
 //Update game status in DB every 60s
 //[FUNC(updateGameStatus), 60, []] call CBA_fnc_addPerFrameHandler;
 
