@@ -75,6 +75,24 @@ class CfgMods {
 #include "ace_settings.hpp"
 #include "ace_medical_treatments.hpp"
 
+class ACE_settingsMenu {
+    class controls {
+        class HeaderName {
+            text = CSTRING(OpenConfigMenu);
+        };
+    };
+};
+class ACE_serverSettingsMenu {
+    class controls {
+        class HeaderName {
+            text = CSTRING(OpenConfigMenu);
+        };
+    };
+};
+class ACE_Open_SettingsMenu_BtnBase {
+    text = CSTRING(OpenConfigMenu);
+};
+
 //Infobox
 #include "infobox.hpp"
 #include "intro.hpp"

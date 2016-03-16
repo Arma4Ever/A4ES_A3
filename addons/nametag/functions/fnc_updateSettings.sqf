@@ -62,7 +62,7 @@ if(_option == "init") then {
 };
 
 //Add Special Item
-if(_option == "init"|| _option == QGVAR(addSpecialItem)) then {
+if(_option == "init" || _option == QGVAR(addSpecialItem)) then {
     if(GVAR(addSpecialItem) && isMultiplayer) then {
         if(GVAR(members) isEqualTo [[],[]]) then {
             QGVAR(members) addPublicVariableEventHandler {

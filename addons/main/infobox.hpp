@@ -25,6 +25,7 @@ class RscPictureKeepAspect;
 class RscDisplayMain: RscStandardDisplay {
     onMouseMoving = "_this call A3C_infobox_fnc_initinfobox";
     class controls {
+        delete ACE_news;
         class GameLogo: RscPicture {
             idc = 1202;
             text = PATHTOF(data\a3c_splash_logo.paa);
