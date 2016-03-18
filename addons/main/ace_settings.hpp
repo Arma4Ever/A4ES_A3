@@ -75,7 +75,7 @@ class ACE_Settings {
         typeName = "SCALAR";
     };
     class ace_medical_AIDamageThreshold {
-        value = 1; //95% damage is fatal TMP!!!!
+        value = 1; //95% damage is fatal
         typeName = "SCALAR";
     };
     class ace_medical_enableUnconsciousnessAI {
@@ -317,7 +317,7 @@ class ACE_Settings {
         typeName = "BOOL";
     };
     class ace_mk6mortar_useAmmoHandling {
-        value = 0; //no until ACE fix it TMP
+        value = 1; //yes
         typeName = "BOOL";
     };
 
