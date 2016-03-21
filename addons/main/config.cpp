@@ -28,7 +28,6 @@ class CfgSettings {
     };
 };
 class a3c_mods {
-    //modlist[] += {"CBA","TFAR","A3CS","PAM","A3MP","A3AP"};
     modlist[] += {"A3CS"};
 };
 class CfgMods {
@@ -59,7 +58,6 @@ class CfgMods {
     Removed ACE modules:
     ace_advanced_ballistics.pbo
     ace_gforces.pbo
-    ace_goggles.pbo
     ace_hearing.pbo
     ace_nametags.pbo
     ace_weather.pbo

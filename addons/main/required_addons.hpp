@@ -568,6 +568,7 @@
 "ace_finger",
 "ace_flashsuppressors",
 "ace_fonts",
+"ace_goggles",
 "ace_grenades",
 "ace_hitreactions",
 "ace_huntir",

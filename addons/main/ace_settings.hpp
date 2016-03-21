@@ -48,6 +48,11 @@ class ACE_Settings {
         typeName = "BOOL";
         isClientSettable = 0;
     };
+    class ace_goggles_showInThirdPerson {
+        value = 0; //disabled
+        typeName = "BOOL";
+        isClientSettable = 0;
+    };
 
     /****** ace_medical ******/
     class ace_medical_level {
