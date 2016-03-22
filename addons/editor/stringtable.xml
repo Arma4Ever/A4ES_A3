@@ -22,5 +22,14 @@
         <Key ID="STR_A3CS_Editor_CopyClass_DisplayName">
             <Original>Skopiuj klasę</Original>
         </Key>
+        <Key ID="STR_A3CS_Editor_Gear_DisplayName">
+            <Original>Ekwipunek</Original>
+        </Key>
+        <Key ID="STR_A3CS_Editor_GearRemoveRadio_DisplayName">
+            <Original>Usuń radio</Original>
+        </Key>
+        <Key ID="STR_A3CS_Editor_gearClearItems_DisplayName">
+            <Original>Wyczyść ekwipunek</Original>
+        </Key>
     </Package>
 </Project>

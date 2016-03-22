@@ -27,7 +27,25 @@ class Display3DEN {
     };
     class ContextMenu: ctrlMenu {
         class Items {
-            items[] += {QGVAR(changeClass), QGVAR(copyClass), QGVAR(delete)};
+            items[] += {QGVAR(gear), QGVAR(changeClass), QGVAR(copyClass), QGVAR(delete)};
+            class GVAR(gear) {
+                text = CSTRING(Gear_DisplayName);
+                value = 0;
+                conditionShow = "hoverObjectBrain * (1 - (hoverObjectVehicle))";
+                items[] = {QGVAR(gearRemoveRadio), QGVAR(gearClearItems)};
+            };
+            class GVAR(gearRemoveRadio) {
+                text = CSTRING(GearRemoveRadio_DisplayName);
+                value = 0;
+                conditionShow = "hoverObjectBrain * (1 - (hoverObjectVehicle))";
+                action = "{_x unlinkItem 'ItemRadio'} forEach (get3DENSelected 'object');save3DENInventory (get3DENSelected 'object')";
+            };
+            class GVAR(gearClearItems) {
+                text = CSTRING(gearClearItems_DisplayName);
+                value = 0;
+                conditionShow = "hoverObjectBrain * (1 - (hoverObjectVehicle))";
+                action = "{removeAllWeapons _x;removeAllItems _x;} forEach (get3DENSelected 'object');save3DENInventory (get3DENSelected 'object')";
+            };
             class GVAR(changeClass) {
                 text = CSTRING(ChangeClass_DisplayName);
                 value = 0;
