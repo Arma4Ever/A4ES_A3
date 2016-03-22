@@ -11,14 +11,14 @@ class CfgVehicles {
                     priority = 2.6;
                     icon = "\z\ace\addons\interaction\UI\team\team_management_ca.paa";
                 };
-                class A3CS_ShowDogtag {
-                    displayName = CSTRING(Actions_CheckDogtag_DisplayName);
-                    distance = 2;
-                    priority = 2;
-                    condition = QUOTE(!alive _target);
-                    statement = QUOTE(_target call DFUNC(showDogtag));
-                    exceptions[] = {};
-                };
+                //class A3CS_ShowDogtag {
+                    //displayName = CSTRING(Actions_CheckDogtag_DisplayName);
+                    //distance = 2;
+                    //priority = 2;
+                    //condition = QUOTE(!alive _target);
+                    //statement = QUOTE(_target call DFUNC(showDogtag));
+                    //exceptions[] = {};
+                //};
                 class A3CS_HideBody {
                     displayName = CSTRING(Actions_HideBody_DisplayName);
                     distance = 2;
