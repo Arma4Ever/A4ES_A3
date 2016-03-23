@@ -11,7 +11,7 @@ if(missionVersion == 12 && {!((tolower missionName) in ["intro","intro1","intro_
 private _characterDesc = player getVariable [QGVAR(characterDesc), ""];
 player createDiaryRecord ["Diary", [localize LSTRING(ObjectAttribute_Control_CharacterDesc_DisplayName), _characterDesc]];
 
-if(isMultiplayer && !didJIP) then {
+if(isMultiplayer && {!didJIP} && {!(player isKindOf "VirtualMan_F")}) then {
     //Put weapon on safety if its start of multiplayer mission
     [player, currentWeapon player, currentMuzzle player] call ace_safemode_fnc_lockSafety;
 };
