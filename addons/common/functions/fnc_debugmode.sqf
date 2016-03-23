@@ -19,7 +19,7 @@
     ["a3cs_debugmode", "onMapSingleClick", {a3cs_debug_pos = _pos;}] call BIS_fnc_addStackedEventHandler;
 
     a3cs_debug_3d_id = addMissionEventHandler ["Draw3D", {
-        if(!a3cs_debug_3d) exitWith {};
+        if(!a3cs_debug_3d || !(isNull curatorCamera)) exitWith {};
         {
             private _color = [side group _x] call BIS_fnc_sideColor;
             private _sizeByDistance = ((a3cs_debug_3d_iconSize + 1) - ((ace_player distance _x) / (a3cs_debug_max_distance / a3cs_debug_3d_iconSize)));
@@ -34,7 +34,7 @@
 
     while {a3cs_debug} do {
         {deleteMarkerLocal _x;} forEach _debugMarkers;
-        if(a3cs_debug_markers) then {
+        if(a3cs_debug_markers && (isNull curatorCamera)) then {
             private _newDebugMarkers = [];
             {
                 private _marker = createMarkerLocal [((str _x) + (str time)), position _x];
@@ -47,7 +47,7 @@
             {deleteMarkerLocal _x;} forEach _debugMarkers;
             _debugMarkers = _newDebugMarkers;
         };
-        if((a3cs_debug_markers || a3cs_debug_3d) && {(time - _lastUnitsRefreshTime) > 5}) then {
+        if((a3cs_debug_markers || a3cs_debug_3d) && {(time - _lastUnitsRefreshTime) > 5} && {!(isNull curatorCamera)}) then {
             _lastUnitsRefreshTime = time;
             a3cs_debug_units = [];
             {
