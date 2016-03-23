@@ -28,9 +28,13 @@ _unitData params ["_unitName", "_unitRank"];
 private _roleDesc = roleDescription _unit;
 if(_roleDesc == "") then {_roleDesc = tolower localize ELSTRING(Common,None);};
 
-private _isEOD = (_unit call ace_common_fnc_isEOD) isEqualTo true;
-private _isEngineer = (_unit call ace_common_fnc_isEngineer) isEqualTo true;
-private _isMedic = (_unit call ace_medical_fnc_isMedic) isEqualTo true;
+private _isEOD = _unit call ace_common_fnc_isEOD;
+private _isEngineer = _unit call ace_common_fnc_isEngineer;
+private _isMedic = _unit call ace_medical_fnc_isMedic;
+
+if(_isEOD isEqualType 0) then {_isEOD = _isEOD > 0;};
+if(_isEngineer isEqualType 0) then {_isEngineer = _isEngineer > 0;};
+if(_isMedic isEqualType 0) then {_isMedic = _isMedic > 0;};
 
 //set header title
 (_display displayCtrl IDC_LISTBOX_HEADER) ctrlSetText format [localize LSTRING(CheckID_ListHeader), _unitName];
