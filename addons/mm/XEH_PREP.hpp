@@ -43,6 +43,8 @@ PREP(snowEffect);
 PREP(breathFog);
 PREP(playSound3D);
 
+PREP(checkUnconsciousness);
+
 PREP(handleInitPost);
 PREP(handleKilled);
 PREP(handleLocal);
