@@ -1,8 +1,6 @@
 #include "script_component.hpp"
 
-if(!hasInterface) exitWith {};
-
-if(isMultiplayer) then {
+if (hasInterface && {isMultiplayer}) then {
     private ["_uid"];
     _uid = getPlayerUID player;
 
@@ -17,4 +15,8 @@ if(isMultiplayer) then {
     //Block channels exept global & side
     //{_x enableChannel false} foreach [2,3,4,5]; - cant disable group chat
     [{if(currentChannel > 1) then {setCurrentChannel 0;};}, 0, []] call CBA_fnc_addPerFrameHandler;
+};
+
+if (isServer) then {
+    [FUNC(resetScoreLoop), 30, []] call CBA_fnc_addPerFrameHandler;
 };
