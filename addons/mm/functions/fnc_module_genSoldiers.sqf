@@ -11,7 +11,7 @@ params [["_mode", "", [""]], ["_input", [], [[]]]];
 if(_mode == "init") then {
     _input params [["_logic", objNull, [objNull]], ["_isActivated", false, [false]], ["_isCuratorPlaced", false, [false]]];
     if(isNull _logic || !_isActivated) exitWith {true};
-    if(!(_logic call FUNC(canExecuteModule))) exitWith {A3CS_LOGWARN("genSoldiers: blokuje wykonanie modulu")true};
+    if(!(_logic call FUNC(canExecuteModule))) exitWith {WARNING("genSoldiers: blokuje wykonanie modulu");true};
 
     //Load module params
     private _place = call compile (_logic getVariable ["place", ""]);
@@ -123,7 +123,7 @@ if(_mode == "init") then {
     _place setVariable [QGVAR(genSoldiers_aliveGroups), _aliveGroups];
     //api
     _place setVariable [QGVAR(genSoldiers_aliveUnitsCount), count _aliveUnits, true];
-    
+
     //Add waypoints
     if(_behaviour == "patrol") then {
         {

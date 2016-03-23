@@ -11,7 +11,7 @@ params [["_mode", "", [""]], ["_input", [], [[]]]];
 if(_mode == "init") then {
     _input params [["_logic", objNull, [objNull]], ["_isActivated", false, [false]], ["_isCuratorPlaced", false, [false]]];
     if(isNull _logic || !_isActivated) exitWith {true};
-    if(!(_logic call FUNC(canExecuteModule))) exitWith {A3CS_LOGWARN("setTaskState: blokuje wykonanie modulu")true};
+    if(!(_logic call FUNC(canExecuteModule))) exitWith {WARNING("setTaskState: blokuje wykonanie modulu");true};
 
     private _taskID = _logic getVariable ["taskID", ""];
     private _taskState = _logic getVariable ["taskState", ""];
@@ -28,7 +28,7 @@ if(_mode == "init") then {
 
         _missionTaskStates set [_taskIndex, _taskState];
         missionNamespace setVariable [QGVAR(missionTaskStates), _missionTaskStates];
-        
+
         [_taskID, _taskState, _showNotification, serverTime] remoteExecCall [QFUNC(setTaskState), _taskTarget, true];
     };
 };

@@ -1,4 +1,4 @@
-#define COMPONENT microdagr
+#define COMPONENT zeus
 #include "\z\a3cs\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
@@ -6,12 +6,12 @@
 // #define CBA_DEBUG_SYNCHRONOUS
 // #define ENABLE_PERFORMANCE_COUNTERS
 
-#ifdef DEBUG_ENABLED_MICRODAGR
+#ifdef DEBUG_ENABLED_ZEUS
     #define DEBUG_MODE_FULL
 #endif
 
-#ifdef DEBUG_SETTINGS_MICRODAGR
-    #define DEBUG_SETTINGS DEBUG_SETTINGS_MICRODAGR
+#ifdef DEBUG_SETTINGS_ZEUS
+    #define DEBUG_SETTINGS DEBUG_SETTINGS_ZEUS
 #endif
 
 #include "\z\a3cs\addons\main\script_macros.hpp"

@@ -4,12 +4,10 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"a3cs_main", "a3cs_common"};
-        version = A3CS_VERSION;
-        versionStr = QUOTE(A3CS_VERSION);
-        versionAr[] = A3CS_VERSION_ARRAY;
+        requiredAddons[] = {"a3cs_common"};
         author[] = {"SzwedzikPL", "ACE3 Team"};
         authorUrl = "http://arma3coop.pl";
+        VERSION_CONFIG;
     };
 };
 #include "CfgEventHandlers.hpp"

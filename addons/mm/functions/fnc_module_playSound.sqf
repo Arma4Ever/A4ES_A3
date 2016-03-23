@@ -11,7 +11,7 @@ params [["_mode", "", [""]], ["_input", [], [[]]]];
 if(_mode == "init") then {
     _input params [["_logic", objNull, [objNull]], ["_isActivated", false, [false]], ["_isCuratorPlaced", false, [false]]];
     if(isNull _logic || !_isActivated) exitWith {true};
-    if(!(_logic call FUNC(canExecuteModule))) exitWith {A3CS_LOGWARN("playSound: blokuje wykonanie modulu")true};
+    if(!(_logic call FUNC(canExecuteModule))) exitWith {WARNING("playSound: blokuje wykonanie modulu");true};
 
     private _source = _logic getVariable ["place", ""];
     private _soundArray = call compile (_logic getVariable ["sound", ""]);
@@ -52,7 +52,7 @@ if(_mode == "init") then {
         _soundPath = [_sound, 1] call BIS_fnc_trimString;
     };
 
-    A3CS_LOGINFO_3("playSound: %1 %2 %3",_soundPath,_soundDuration,_loop)
+    TRACE_3("module_playSound3D",_soundPath,_soundDuration,_loop);
 
     _soundDuration = _soundDuration + 0.5;
     private _soundParams = [_soundPath, objNull, false, _sourcePos, _volume, 1, _distance];

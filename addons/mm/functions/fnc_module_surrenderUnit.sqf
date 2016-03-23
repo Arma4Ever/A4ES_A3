@@ -11,7 +11,7 @@ params [["_mode", "", [""]], ["_input", [], [[]]]];
 if(_mode == "init") then {
     _input params [["_logic", objNull, [objNull]], ["_isActivated", false, [false]], ["_isCuratorPlaced", false, [false]]];
     if(isNull _logic || !_isActivated) exitWith {true};
-    if(!(_logic call FUNC(canExecuteModule))) exitWith {A3CS_LOGWARN("surrenderUnit: blokuje wykonanie modulu")true};
+    if(!(_logic call FUNC(canExecuteModule))) exitWith {WARNING("surrenderUnit: blokuje wykonanie modulu");true};
 
     private _action = _logic getvariable ["action", "surrender"];
     private _setSurrender = [true, false] select ((["surrender", "stopsurrender"] find _action) max 0);

@@ -11,7 +11,7 @@ params [["_mode", "", [""]], ["_input", [], [[]]]];
 if(_mode == "init") then {
     _input params [["_logic", objNull, [objNull]], ["_isActivated", false, [false]], ["_isCuratorPlaced", false, [false]]];
     if(isNull _logic || !_isActivated) exitWith {true};
-    if(!(_logic call FUNC(canExecuteModule))) exitWith {A3CS_LOGWARN("cacheSettings: blokuje wykonanie modulu")true};
+    if(!(_logic call FUNC(canExecuteModule))) exitWith {WARNING("cacheSettings: blokuje wykonanie modulu");true};
 
     GVAR(cacheEnabled) = (_logic getVariable ["enable", 1]) > 0;
     GVAR(cacheDistanceLand) = _logic getVariable ["distanceLand", 2500];

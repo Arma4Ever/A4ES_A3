@@ -32,7 +32,7 @@ private _childUnits = _unitPlace getVariable [QGVAR(genSoldiers_children), []];
     private _childUnitsCalled = _childUnitPlace getVariable [QGVAR(genSoldiers_called), false];
     if(_childUnitRespawned && !_childUnitsCalled) then {
         if(!isMultiplayer) then {systemchat "genSoldiers - Wzywam wsparcie";};
-        A3CS_LOGINFO("genSoldiers_handleKilled: Wzywam wsparcie")
+        LOG("genSoldiers_handleKilled: Wzywam wsparcie");
         _childUnitPlace setVariable [QGVAR(genSoldiers_called), true];
         [_childUnitPlace, _unitPlace] call FUNC(genSoldiers_callSupport);
     };

@@ -11,7 +11,7 @@ params [["_mode", "", [""]], ["_input", [], [[]]]];
 if(_mode in ["init", "attributesChanged3DEN", "registeredToWorld3DEN"]) then {
     _input params [["_logic", objNull, [objNull]]];
     if(isNull _logic) exitWith {true};
-    if(!(_logic call FUNC(canExecuteModule))) exitWith {A3CS_LOGWARN("hideTerrainObjects: blokuje wykonanie modulu")true};
+    if(!(_logic call FUNC(canExecuteModule))) exitWith {WARNING("hideTerrainObjects: blokuje wykonanie modulu");true};
 
     private _distance = _logic getVariable ["distance", 0];
     private _objectTypes = [];

@@ -42,7 +42,7 @@ if(!isServer) exitWith {};
     };
 
     private _logData = [_victim, _victimName, _killer, _killerName, _ammo, _killerWeapon];
-    A3CS_LOGINFO_1("handleKilled: %1",_logData)
+    TRACE_1("handleKilled",_logData);
 
     //Send dead log if victim is player
     if(isPlayer _victim) then {

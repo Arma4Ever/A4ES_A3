@@ -8,7 +8,7 @@ params ["_unit", "_killer"];
 
 if(!local _unit) exitWith {};
 
-A3CS_LOGINFO_1("handleKilled %1",_this)
+TRACE_1("handleKilled",_this);
 
 if(isServer && !isNil QUOTE(EFUNC(server,handleKilled))) then {
     [_unit, _killer] call EFUNC(server,handleKilled);

@@ -8,11 +8,9 @@ class CfgPatches {
             #include "required_addons.hpp"
             "cba_main"
         };
-        version = A3CS_VERSION;
-        versionStr = QUOTE(A3CS_VERSION);
-        versionAr[] = A3CS_VERSION_ARRAY;
         author[] = {"SzwedzikPL", "ACE3 Team", "Alduric", "Chris", "Wodzu", "Samsung1702"};
         authorUrl = "http://arma3coop.pl";
+        VERSION_CONFIG;
     };
 };
 class CfgSettings {
@@ -21,8 +19,9 @@ class CfgSettings {
             class a3cs {
                 main_addon = "a3cs_main";
                 level = -1;
-                //handler = "a3cs_common_fnc_mismatch";
-                //removed[] = {"a3cs_oldaddon"};
+                class dependencies {
+                    CBA[] = {"cba_main", REQUIRED_CBA_VERSION, "(true)"};
+                };
             };
         };
     };
@@ -30,6 +29,7 @@ class CfgSettings {
 class a3c_mods {
     modlist[] += {"A3CS"};
 };
+
 class CfgMods {
     class Mod_Base;
     class A3CS: Mod_Base {
@@ -46,8 +46,8 @@ class CfgMods {
         author = ECSTRING(common,A3CS_Authors);
         overviewPicture = PATHTOF(data\logo_a3cs_ca.paa);
         mod_code = "A3CS";
-        mod_version = A3CS_VERSION;
-        mod_version_ar[] = A3CS_VERSION_ARRAY;
+        mod_version = VERSION;
+        mod_version_ar[] = {VERSION_AR};
     };
 };
 

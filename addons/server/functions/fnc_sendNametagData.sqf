@@ -7,7 +7,7 @@
 private _sql = ["SELECT * FROM members WHERE 1"] call FUNC(queryDB);
 private _sqlArray = call compile _sql;
 
-if(isNil "_sqlArray" || {!(_sqlArray isEqualType [])}) exitWith {A3CS_LOGWARN("sendNametagData: Niepoprawny typ danych")};
+if(isNil "_sqlArray" || {!(_sqlArray isEqualType [])}) exitWith {WARNING("sendNametagData: Niepoprawny typ danych");};
 
 private _membersArray = _sqlArray param [0, [], [[]]];
 

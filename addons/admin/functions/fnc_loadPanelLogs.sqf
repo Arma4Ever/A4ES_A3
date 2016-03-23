@@ -6,8 +6,7 @@
 #include "\z\a3cs\addons\admin\ui\idcAdminPanel.hpp"
 
 params [["_logClass", "", [""]], ["_serverData", [], [[]]]];
-
-A3CS_LOGINFO_1("loadPanelLogs: %1",_this)
+TRACE_2("loadPanelLogs",_logClass,_serverData);
 
 private _access = _logClass call FUNC(canAccessPanelModule);
 if(!_access) exitWith {hint localize LSTRING(NoAccess);};
