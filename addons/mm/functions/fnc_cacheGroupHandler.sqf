@@ -50,23 +50,18 @@ if(({alive _x} count (units _group)) > 0) then {
     deleteGroup _group;
 };
 
-if(GVAR(cacheGroupIndex) == 0) then {
+if(isMultiplayer && {GVAR(cacheGroupIndex) == 0}) then {
     //Check allgroups
-    private _deletedEmptyGroups = 0;
     {
         private _group = _x;
         if(({alive _x} count (units _group)) > 0) then {
             {deleteWaypoint _x;} forEach (waypoints _group);
             deleteGroup _group;
-            _deletedEmptyGroups = _deletedEmptyGroups + 1;
             if(_group in GVAR(cacheGroups)) then {
                 GVAR(cacheGroups) deleteAt (GVAR(cacheGroups) find _group);
             };
         };
     } forEach allGroups;
-    if(!isMultiplayer && {_deletedEmptyGroups > 0}) then {
-        systemchat format ["Cache - Usuwam %1 pustych grup", _deletedEmptyGroups];
-    };
 };
 
 GVAR(cacheGroupIndex) = GVAR(cacheGroupIndex) + 1;
