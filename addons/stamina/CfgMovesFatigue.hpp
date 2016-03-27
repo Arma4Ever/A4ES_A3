@@ -1,6 +1,6 @@
 class CfgMovesFatigue {
     //Reference https://community.bistudio.com/wiki/CfgMovesFatigue
-    staminaDuration = 180;//(default 60) total amount of stamina
+    staminaDuration = 260;//(default 60) total amount of stamina
     staminaCooldown = 5; //(default 10) when you run out of stamina the sprinting is disabled for this duration
     staminaRestoration = 15; //(default 30) time required for your current stamina pool (total stamina - inventory load) to restore
     aimPrecisionSpeedCoef = 0;  //(default 5) aimPrecision adjusting rate coefficient
