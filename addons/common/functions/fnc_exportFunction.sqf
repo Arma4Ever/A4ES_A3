@@ -25,7 +25,7 @@ private _codeLine = [];
         };
         //Break line
         _codeLines pushBack _codeLine;
-        _codeLine = [];v
+        _codeLine = [];
     } else {
         _codeLine pushBack _x;
     };
