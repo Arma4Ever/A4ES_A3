@@ -84,7 +84,7 @@ class ACE_Settings {
         typeName = "SCALAR";
     };
     class ace_medical_enableUnconsciousnessAI {
-        value = 1; //50/50
+        value = 0; //no
         typeName = "SCALAR";
     };
     class ace_medical_remoteControlledAI {

@@ -1,6 +1,7 @@
 /*
  * Author: SzwedzikPL
  * Check unconsciousness of unit after some time
+ * NOT USED SINCE WE DISABLED UNCCONSCIOUSNESS FOR AI
  */
 #include "script_component.hpp"
 
