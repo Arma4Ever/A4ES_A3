@@ -16,7 +16,7 @@ class ace_captives_requireSurrender {
     //Require surrendering
     //Require Players to surrender before they can be arrested
     typeName = "SCALAR";
-    value = 0;
+    value = 1;
     isClientSettable = 0;
     values[] = ["Disabled","Surrendering only","Surrendering or No weapon"];
 };
@@ -82,7 +82,7 @@ class ace_explosives_ExplodeOnDefuse {
     //Explode on defusal?
     //Enable certain explosives to explode on defusal? Default: Yes
     typeName = "BOOL";
-    value = 0;
+    value = 1;
     isClientSettable = 0;
 };
 class ace_explosives_PunishNonSpecialists {
@@ -103,7 +103,7 @@ class ace_finger_enabled {
     //Pointing Enabled
     //
     typeName = "BOOL";
-    value = 1;
+    value = 0;
     isClientSettable = 0;
 };
 class ace_finger_indicatorColor {
@@ -140,7 +140,7 @@ class ace_goggles_showInThirdPerson {
     //
     typeName = "BOOL";
     value = 0;
-    isClientSettable = 0;
+    isClientSettable = 1;
 };
 class ace_hitreactions_minDamageToTrigger {
     typeName = "SCALAR";
@@ -158,14 +158,14 @@ class ace_interact_menu_addBuildingActions {
     //Show actions for buildings
     //Adds interaction actions for opening doors and mounting ladders on buildings. (Note: There is a performance cost when opening interaction menu, especially in towns)
     typeName = "BOOL";
-    value = 1;
-    isClientSettable = 0;
+    value = 0;
+    isClientSettable = 1;
 };
 class ace_interact_menu_AlwaysUseCursorInteraction {
     //Always display cursor for interaction
     //
     typeName = "BOOL";
-    value = 1;
+    value = 0;
     isClientSettable = 1;
 };
 class ace_interact_menu_AlwaysUseCursorSelfInteraction {
@@ -464,7 +464,7 @@ class ace_medical_consumeItem_PAK {
     //Remove PAK on use
     //Should PAK be removed on usage?
     typeName = "SCALAR";
-    value = 1;
+    value = 0;
     isClientSettable = 0;
     values[] = ["No","Yes"];
 };
@@ -487,7 +487,7 @@ class ace_medical_enableAdvancedWounds {
     //Enable Advanced wounds
     //Allow reopening of bandaged wounds?
     typeName = "BOOL";
-    value = 1;
+    value = "false";
     isClientSettable = 0;
 };
 class ace_medical_enableAirway {
@@ -532,7 +532,7 @@ class ace_medical_enableUnconsciousnessAI {
     //AI Unconsciousness
     //Allow AI to go unconscious
     typeName = "SCALAR";
-    value = 0;
+    value = 1;
     isClientSettable = 0;
     values[] = ["Disabled","50/50","Enabled"];
 };
@@ -547,14 +547,14 @@ class ace_medical_healHitPointAfterAdvBandage {
     //Heal hitpoints
     //Heal fully bandaged hitpoints
     typeName = "BOOL";
-    value = 1;
+    value = 0;
     isClientSettable = 0;
 };
 class ace_medical_increaseTrainingInLocations {
     //Locations boost training
     //Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]
     typeName = "BOOL";
-    value = 1;
+    value = 0;
     isClientSettable = 0;
 };
 class ace_medical_keepLocalSettingsSynced {
@@ -568,7 +568,7 @@ class ace_medical_level {
     //Medical Level
     //What is the medical simulation level?
     typeName = "SCALAR";
-    value = 2;
+    value = 1;
     isClientSettable = 0;
     values[] = ["Disabled","Basic","Advanced"];
 };
@@ -576,7 +576,7 @@ class ace_medical_litterCleanUpDelay {
     //Life time of litter objects
     //How long should litter objects stay? In seconds. -1 is forever.
     typeName = "SCALAR";
-    value = 1800;
+    value = 0;
     isClientSettable = 0;
 };
 class ace_medical_litterSimulationDetail {
@@ -598,7 +598,7 @@ class ace_medical_medicSetting {
     //Medics setting
     //What is the level of detail prefered for medics?
     typeName = "SCALAR";
-    value = 2;
+    value = 1;
     isClientSettable = 0;
     values[] = ["Disabled","Normal","Advanced"];
 };
@@ -650,16 +650,16 @@ class ace_medical_menu_useMenu {
     //Use Medical menu
     //If allowed by server, enable the option to use the Medical Menu through keybinding and interaction menu
     typeName = "SCALAR";
-    value = 1;
-    isClientSettable = 0;
+    value = 0;
+    isClientSettable = 1;
     values[] = ["Disabled","Enabled","Vehicles only"];
 };
 class ace_medical_menuTypeStyle {
     //Style of menu (Medical)
     //Select the type of menu you prefer; default 3d selections or radial.
     typeName = "SCALAR";
-    value = 2;
-    isClientSettable = 0;
+    value = 0;
+    isClientSettable = 1;
     values[] = ["Selections (3d)","Radial","Disabled"];
 };
 class ace_medical_moveUnitsFromGroupOnUnconscious {
@@ -679,14 +679,14 @@ class ace_medical_painEffectType {
     //
     typeName = "SCALAR";
     value = 0;
-    isClientSettable = 0;
+    isClientSettable = 1;
     values[] = ["Colour Flashing","Chromatic Aberration"];
 };
 class ace_medical_painIsOnlySuppressed {
     //Pain suppression
     //Pain is only temporarily suppressed, not removed
     typeName = "BOOL";
-    value = 0;
+    value = 1;
     isClientSettable = 0;
 };
 class ace_medical_playerDamageThreshold {
@@ -700,7 +700,7 @@ class ace_medical_preventInstaDeath {
     //Prevent instant death
     //Have a unit move to unconscious instead of death
     typeName = "BOOL";
-    value = 1;
+    value = 0;
     isClientSettable = 0;
 };
 class ace_medical_remoteControlledAI {
@@ -738,7 +738,7 @@ class ace_medical_useLocation_PAK {
     //Locations PAK
     //Where can the PAK be used?
     typeName = "SCALAR";
-    value = 0;
+    value = 3;
     isClientSettable = 0;
     values[] = ["Anywhere","Medical vehicles","Medical facility","Vehicles & facility","Disabled"];
 };
@@ -746,7 +746,7 @@ class ace_medical_useLocation_SurgicalKit {
     //Locations Surgical Kit (Adv)
     //Where can the Surgical Kit be used?
     typeName = "SCALAR";
-    value = 0;
+    value = 2;
     isClientSettable = 0;
     values[] = ["Anywhere","Medical vehicles","Medical facility","Vehicles & facility","Disabled"];
 };
@@ -763,7 +763,7 @@ class ace_missileguidance_enabled {
     //Advanced missile guidance, or AMG, provides multiple enhancements to missile locking and firing. It is also a framework required for missile weapon types.
     typeName = "SCALAR";
     value = 2;
-    isClientSettable = 0;
+    isClientSettable = 1;
     values[] = ["Off","Player Only","Player and AI"];
 };
 class ace_mk6mortar_airResistanceEnabled {
@@ -784,14 +784,14 @@ class ace_mk6mortar_allowComputerRangefinder {
     //Allow Mk6 Computer
     //Show the Computer and Rangefinder (these NEED to be removed if you enable air resistance)
     typeName = "BOOL";
-    value = 0;
+    value = 1;
     isClientSettable = 0;
 };
 class ace_mk6mortar_useAmmoHandling {
     //Use Ammunition handling
     //Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader. Does not affect AI mortars.
     typeName = "BOOL";
-    value = 1;
+    value = 0;
     isClientSettable = 0;
 };
 class ace_movement_useImperial {
@@ -799,7 +799,7 @@ class ace_movement_useImperial {
     //
     typeName = "BOOL";
     value = 0;
-    isClientSettable = 0;
+    isClientSettable = 1;
 };
 class ace_nightvision_disableNVGsWithSights {
     //Disable NVGs in scope
@@ -812,7 +812,7 @@ class ace_optionsmenu_optionMenuDisplaySize {
     //Option Menu UI Scaling
     //
     typeName = "SCALAR";
-    value = 2;
+    value = 0;
     isClientSettable = 1;
     values[] = ["$str_medium","$str_large","$str_very_large"];
 };
@@ -820,8 +820,8 @@ class ace_optionsmenu_showNewsOnMainMenu {
     //Show News on Main Menu
     //
     typeName = "BOOL";
-    value = 0;
-    isClientSettable = 0;
+    value = 1;
+    isClientSettable = 1;
 };
 class ace_overheating_DisplayTextOnJam {
     //Display text on jam
@@ -877,7 +877,7 @@ class ace_refuel_rate {
     //Flow Rate
     //How fast should a vehicle be refueled?
     typeName = "SCALAR";
-    value = 10;
+    value = 1;
     isClientSettable = 0;
 };
 class ace_reload_DisplayText {
@@ -913,7 +913,7 @@ class ace_repair_engineerSetting_fullRepair {
     //Allow Full Repair
     //Who can perform a full repair on a vehicle?
     typeName = "SCALAR";
-    value = 1;
+    value = 2;
     isClientSettable = 0;
     values[] = ["Anyone","Engineer only","Repair Specialist only"];
 };
@@ -986,7 +986,7 @@ class ace_sitting_enable {
     //Enable Sitting
     //
     typeName = "BOOL";
-    value = 1;
+    value = 0;
     isClientSettable = 0;
 };
 class ace_spectator_filterSides {
@@ -1025,7 +1025,7 @@ class ace_switchunits_EnableSafeZone {
     //Enable Safe Zone?
     //Enable a safe zone around enemy units? Players can't switch to units inside of the safe zone.
     typeName = "BOOL";
-    value = 0;
+    value = 1;
     isClientSettable = 0;
 };
 class ace_switchunits_EnableSwitchUnits {
@@ -1037,7 +1037,7 @@ class ace_switchunits_SafeZoneRadius {
     //Safe Zone Radius
     //The safe zone around players from a different team. Default: 200
     typeName = "SCALAR";
-    value = 0;
+    value = 100;
     isClientSettable = 0;
 };
 class ace_switchunits_SwitchToCivilian {
@@ -1146,7 +1146,7 @@ class ace_zeus_autoAddObjects {
     //Add Objects to Curator
     //Adds any spawned object to all curators in the mission
     typeName = "BOOL";
-    value = 1;
+    value = 0;
     isClientSettable = 0;
 };
 class ace_zeus_radioOrdnance {
