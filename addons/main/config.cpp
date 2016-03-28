@@ -70,8 +70,7 @@ class CfgMods {
     ace_frag.pbo
     ace_testmissions.pbo
 */
-#include "ace_settings.hpp"
-#include "ace_medical_treatments.hpp"
+#include "ACE_Settings.hpp"
 
 class ACE_settingsMenu {
     class controls {
