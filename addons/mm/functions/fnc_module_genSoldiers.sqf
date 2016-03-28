@@ -146,7 +146,7 @@ if(_mode == "init") then {
             private _group = _x;
             private _waypointPosition = _place getPos [(random _placeSize), random 360];
             private _waypoint = _group addWaypoint [_waypointPosition, 0];
-            _waypoint setWaypointType "HOLD";
+            _waypoint setWaypointType "MOVE";
             _waypoint setWaypointBehaviour "COMBAT";
             _waypoint setWaypointCombatMode "RED";
             _waypoint setWaypointSpeed "NORMAL";
@@ -172,7 +172,7 @@ if(_mode == "init") then {
             private _group = _x;
             private _waypointPosition = _place getPos [(random _placeSize), random 360];
             private _waypoint = _group addWaypoint [_waypointPosition, 0];
-            _waypoint setWaypointType "HOLD";
+            _waypoint setWaypointType "MOVE";
             _waypoint setWaypointBehaviour "SAFE";
             _waypoint setWaypointCombatMode "RED";
             _waypoint setWaypointSpeed "LIMITED";
