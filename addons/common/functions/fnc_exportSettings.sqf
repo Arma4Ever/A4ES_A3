@@ -4,20 +4,24 @@
  */
 #include "script_component.hpp"
 
-private _configs = "true" configClasses (configFile >> "ACE_Settings");
-private _classes = [];
+private _classesClient = [];
+private _classesConfig = [];
 {
     private _class = configName _x;
-    if((toLower _class) find "a3cs_" != 0) then {
-        _classes pushBackUnique _class;
+    private _isColor = (getText (_x >> "typeName")) == "color";
+    if(((toLower _class) find "a3cs_" != 0) && !_isColor) then {
+        if(getNumber (_x >> "isClientSettable") > 0) then {
+            _classesClient pushBackUnique _class;
+        } else {
+            _classesConfig pushBackUnique _class;
+        };
     };
-} foreach _configs;
-_classes sort true;
+} foreach ("true" configClasses (configFile >> "ACE_Settings"));
+_classesClient sort true;
+_classesConfig sort true;
 
-diag_log text "======================================";
-diag_log text "======================================";
-{
-    private _class = _x;
+private _fnc_exportSettings = {
+    private _class = _this;
     private _config = (configFile >> "ACE_Settings" >> _class);
     private _category = getText (_config >> "category");
     private _displayName = getText (_config >> "displayName");
@@ -35,15 +39,29 @@ diag_log text "======================================";
 
     diag_log text format ["class %1 {", _class];
     if(_displayName != "") then {diag_log text format ["    //%1", _displayName];};
-    if(_displayName != "") then {diag_log text format ["    //%1", _description];};
-    diag_log text format ["    typeName = ""%1"";", _typeName];
-    diag_log text format ["    value = %1;", _value];
-    diag_log text format ["    isClientSettable = %1;", _isClientSettable];
+    if(_description != "") then {diag_log text format ["    //%1", _description];};
+    diag_log text format ["    //typeName: %1", _typeName];
+    diag_log text format ["    //default value: %1", _value];
     if(count _values > 0) then {
-        diag_log text format ["    values[] = %1;", _values];
+        diag_log text format ["    //values: %1", _values];
     };
+    diag_log text format ["    //client: %1", _isClientSettable];
     diag_log text "};"
-} foreach _classes;
-diag_log text "======================================";
-diag_log text "======================================";
+};
+
+diag_log text "//======================================//";
+diag_log text "//               CLIENT                 //";
+diag_log text "//======================================//";
+diag_log text "";
+{
+    _x call _fnc_exportSettings;
+} foreach _classesClient;
+diag_log text "";
+diag_log text "//======================================//";
+diag_log text "//               CONFIG                 //";
+diag_log text "//======================================//";
+diag_log text "";
+{
+    _x call _fnc_exportSettings;
+} foreach _classesConfig;
 hint "gotowe";
