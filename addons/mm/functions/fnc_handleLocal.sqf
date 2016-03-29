@@ -8,4 +8,4 @@ params ["_unit"];
 
 if(!local _unit) exitWith {};
 
-_unit call FUNC(loadSpecialStates);
+_unit call FUNC(loadUnitSettings);

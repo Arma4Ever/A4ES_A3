@@ -50,7 +50,7 @@ PREP(handleKilled);
 PREP(handleLocal);
 PREP(transferGroups);
 
-PREP(loadSpecialStates);
+PREP(loadUnitSettings);
 PREP(onLoadIntroEffect);
 PREP(canExecuteModule);
 PREP(setDisposable);

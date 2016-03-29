@@ -19,6 +19,6 @@ if(!local _groupLeader) exitWith {
         {
             _unit enableAI _x;
         } forEach ["TARGET","AUTOTARGET","MOVE","ANIM","TEAMSWITCH","FSM","AIMINGERROR","SUPPRESSION","CHECKVISIBLE","COVER","AUTOCOMBAT"];
-        _unit call FUNC(loadSpecialStates);
+        _unit call FUNC(loadUnitSettings);
     };
 } forEach _groupUnits;

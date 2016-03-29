@@ -107,6 +107,7 @@ for "_spawnCounter" from 1 to _unitCount do {
     _newUnits pushback _unit;
     //Set skill level
     [_unit, _training] call FUNC(setSkillLevel);
+    _unit setVariable [QGVAR(training), _training, true];
     //Spawn custom script
     if(!isNil "_script") then {_unit spawn _script;};
     //Set cache settings to "never"

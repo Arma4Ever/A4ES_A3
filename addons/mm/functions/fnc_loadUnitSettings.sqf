@@ -1,12 +1,17 @@
 /*
  * Author: SzwedzikPL
- * Loads special states from eden
+ * Loads unit settings from eden
  */
 #include "script_component.hpp"
 
 params ["_unit"];
 
 if(!local _unit) exitWith {};
+
+private _training = _unit getVariable [QGVAR(training), "conscripts"];
+if(_training != "") then {
+    [_unit, _training] call FUNC(setSkillLevel);
+};
 
 private _forceUpStance = (_unit getVariable [QGVAR(forceUpStance), 0]) > 0;
 if(_forceUpStance) then {

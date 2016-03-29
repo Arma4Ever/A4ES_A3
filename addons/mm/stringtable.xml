@@ -49,6 +49,12 @@
 	    <Key ID="STR_A3CS_MM_MissionFrom2DEditor2">
             <Original>Misja pochodzi z edytora 2D</Original>
         </Key>
+		<Key ID="STR_A3CS_MM_Eden_Training_DisplayName">
+			<Original>Wyszkolenie</Original>
+		</Key>
+		<Key ID="STR_A3CS_MM_Eden_Training_Description">
+			<Original>Poziom wyszkolenia jednostki</Original>
+		</Key>
 		<Container name="A3CS_MM_ObjectAttribute">
 			<Key ID="STR_A3CS_MM_ObjectAttribute_Control_CharacterDesc_DisplayName">
 				<Original>Opis postaci</Original>

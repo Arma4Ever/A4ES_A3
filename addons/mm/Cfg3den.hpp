@@ -1,6 +1,30 @@
 class Cfg3DEN {
     class Object {
         class AttributeCategories {
+            class State {
+                class Attributes {
+                    delete Skill;
+                    class GVAR(training) {
+                        value = 0;
+                        control = "Combo";
+                        displayName = CSTRING(Eden_Training_DisplayName);
+                        tooltip = CSTRING(Eden_Training_Description);
+                        property = QGVAR(training);
+                        expression = "_this setVariable ['%s', _value, true];";
+                        typeName = "STRING";
+                        wikiType = "[[String]]";
+                        defaultValue = "'conscripts'";
+                        condition = "objectBrain";
+                        class values {
+                            class militia {name = CSTRING(Module_GenSoldiers_Training_Militia_DisplayName); value = "militia"; default = 0;};
+                            class guards {name = CSTRING(Module_GenSoldiers_Training_Guards_DisplayName); value = "guards"; default = 0;};
+                            class conscripts {name = CSTRING(Module_GenSoldiers_Training_Conscripts_DisplayName); value = "conscripts"; default = 1;};
+                            class professional {name = CSTRING(Module_GenSoldiers_Training_Professional_DisplayName); value = "professional"; default = 0;};
+                            class elite {name = CSTRING(Module_GenSoldiers_Training_Elite_DisplayName); value = "elite"; default = 0;};
+                        };
+                    };
+                };
+            };
             class StateSpecial {
                 class Attributes {
                     class GVAR(forceUpStance) {

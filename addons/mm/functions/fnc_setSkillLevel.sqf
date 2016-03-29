@@ -4,7 +4,7 @@
  */
 #include "script_component.hpp"
 
-if(!isServer) exitWith {};
+if(!local _unit) exitWith {};
 
 params ["_unit", "_training"];
 
@@ -17,9 +17,8 @@ if(_training == "militia") then {
         ["aimingSpeed", 0.5],
         ["commanding", 1],
         ["courage", 1],
-        ["general", 0.8],
-        ["reloadSpeed", 0.5],
-        ["spotDistance", 0.3],
+        ["reloadSpeed", 1],
+        ["spotDistance", 0.5],
         ["spotTime", 0.8]
     ];
 };
@@ -30,9 +29,8 @@ if(_training == "guards") then {
         ["aimingSpeed", 0.5],
         ["commanding", 1],
         ["courage", 1],
-        ["general", 0.8],
-        ["reloadSpeed", 0.5],
-        ["spotDistance", 0.35],
+        ["reloadSpeed", 1],
+        ["spotDistance", 0.5],
         ["spotTime", 0.8]
     ];
 };
@@ -43,9 +41,8 @@ if(_training == "conscripts") then {
         ["aimingSpeed", 0.5],
         ["commanding", 1],
         ["courage", 1],
-        ["general", 0.8],
-        ["reloadSpeed", 0.6],
-        ["spotDistance", 0.45],
+        ["reloadSpeed", 1],
+        ["spotDistance", 0.6],
         ["spotTime", 0.8]
     ];
 };
@@ -56,9 +53,8 @@ if(_training == "professional") then {
         ["aimingSpeed", 0.6],
         ["commanding", 1],
         ["courage", 1],
-        ["general", 0.8],
-        ["reloadSpeed", 0.8],
-        ["spotDistance", 0.55],
+        ["reloadSpeed", 1],
+        ["spotDistance", 0.7],
         ["spotTime", 0.9]
     ];
 };
@@ -69,9 +65,8 @@ if(_training == "elite") then {
         ["aimingSpeed", 0.7],
         ["commanding", 1],
         ["courage", 1],
-        ["general", 1],
-        ["reloadSpeed", 0.9],
-        ["spotDistance", 0.7],
+        ["reloadSpeed", 1],
+        ["spotDistance", 0.8],
         ["spotTime", 0.9]
     ];
 };
@@ -79,5 +74,4 @@ if(_training == "elite") then {
 {
     _x params ["_skill", "_level"];
     _unit setSkill [_skill, _level];
-    nil
-} count _skillArray;
+} forEach _skillArray;
