@@ -8,7 +8,7 @@ class ACE_Medical_Actions {
             allowedSelections[] = {"All"};
             allowSelfTreatment = 1;
         };
-        class PersonalAidKit {
+        class PersonalAidKit: fieldDressing {
             allowedSelections[] = {"All"};
             allowSelfTreatment = 1;
         };
