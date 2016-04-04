@@ -19,7 +19,7 @@ if(_training == "militia") then {
         ["courage", 1],
         ["reloadSpeed", 1],
         ["spotDistance", 0.5],
-        ["spotTime", 0.8]
+        ["spotTime", 1]
     ];
 };
 if(_training == "guards") then {
@@ -30,20 +30,20 @@ if(_training == "guards") then {
         ["commanding", 1],
         ["courage", 1],
         ["reloadSpeed", 1],
-        ["spotDistance", 0.5],
-        ["spotTime", 0.8]
+        ["spotDistance", 0.6],
+        ["spotTime", 1]
     ];
 };
 if(_training == "conscripts") then {
     _skillArray = [
         ["aimingAccuracy", 0.4],
         ["aimingShake", 0.4],
-        ["aimingSpeed", 0.5],
+        ["aimingSpeed", 0.6],
         ["commanding", 1],
         ["courage", 1],
         ["reloadSpeed", 1],
         ["spotDistance", 0.6],
-        ["spotTime", 0.8]
+        ["spotTime", 1]
     ];
 };
 if(_training == "professional") then {
@@ -54,8 +54,8 @@ if(_training == "professional") then {
         ["commanding", 1],
         ["courage", 1],
         ["reloadSpeed", 1],
-        ["spotDistance", 0.7],
-        ["spotTime", 0.9]
+        ["spotDistance", 0.8],
+        ["spotTime", 1]
     ];
 };
 if(_training == "elite") then {
@@ -66,8 +66,8 @@ if(_training == "elite") then {
         ["commanding", 1],
         ["courage", 1],
         ["reloadSpeed", 1],
-        ["spotDistance", 0.8],
-        ["spotTime", 0.9]
+        ["spotDistance", 0.9],
+        ["spotTime", 1]
     ];
 };
 
