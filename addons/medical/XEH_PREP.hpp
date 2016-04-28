@@ -1,0 +1,2 @@
+PREP(actionCheckDamage);
+PREP(actionCheckDamageLocal);

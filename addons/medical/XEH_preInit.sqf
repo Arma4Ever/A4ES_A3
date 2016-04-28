@@ -2,6 +2,8 @@
 
 ADDON = false;
 
+#include "XEH_PREP.hpp"
+
 GVAR(bandagingMultiplier) = 2.2;
 GVAR(reopeningMultiplier) = 0.5;
 
