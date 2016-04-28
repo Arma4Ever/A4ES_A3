@@ -1,7 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
     <Package name="Medical">
-
+	    <Key ID="STR_A3CS_Medical_Actions_CheckDamage">
+            <Original>Sprawdź obrażenia</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Medical_Check_CheckDamage">
+            <Original>Sprawdzanie obrażeń</Original>
+        </Key>
     </Package>
 </Project>
 

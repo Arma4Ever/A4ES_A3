@@ -2,8 +2,8 @@ class ACE_Medical_Actions {
     class Advanced {
         class fieldDressing;
         class CheckDamage: fieldDressing {
-            displayName = "Sprawdź obrażenia";//CSTRING(Actions_CheckPulse);
-            displayNameProgress = "Sprawdzanie obrażeń";//CSTRING(Check_Pulse_Content);
+            displayName = CSTRING(Actions_CheckDamage);
+            displayNameProgress = CSTRING(Check_CheckDamage);
             category = "examine";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
