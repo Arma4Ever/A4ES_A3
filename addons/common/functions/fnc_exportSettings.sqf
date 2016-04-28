@@ -49,8 +49,10 @@ private _fnc_exportSettings = {
     diag_log text "};"
 };
 
+diag_log text format ["//==   ACE3 %1   ==//", getText (configfile >> "CfgPatches" >> "ace_main" >> "version")];
+
 diag_log text "//======================================//";
-diag_log text "//               CLIENT                 //";
+diag_log text "//                CLIENT                //";
 diag_log text "//======================================//";
 diag_log text "";
 {
@@ -58,7 +60,7 @@ diag_log text "";
 } foreach _classesClient;
 diag_log text "";
 diag_log text "//======================================//";
-diag_log text "//               CONFIG                 //";
+diag_log text "//                CONFIG                //";
 diag_log text "//======================================//";
 diag_log text "";
 {

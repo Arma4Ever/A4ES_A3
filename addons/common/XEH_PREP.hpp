@@ -2,6 +2,8 @@ PREP(resetScoreLoop);
 PREP(exportAddons);
 PREP(exportSettings);
 PREP(exportFunction);
+PREP(exportGameConfig);
+PREP(exportGameCommands);
 PREP(getName);
 PREP(getMissionData);
 PREP(getSingleMissionData);

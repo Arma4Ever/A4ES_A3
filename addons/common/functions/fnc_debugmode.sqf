@@ -19,7 +19,7 @@
     ["a3cs_debugmode", "onMapSingleClick", {a3cs_debug_pos = _pos;}] call BIS_fnc_addStackedEventHandler;
 
     a3cs_debug_3d_id = addMissionEventHandler ["Draw3D", {
-        if(!a3cs_debug_3d || !(isNull curatorCamera)) exitWith {};
+        if(!a3cs_debug_3d || !(isNull curatorCamera) || !freeLook) exitWith {};
         {
             private _color = [side group _x] call BIS_fnc_sideColor;
             private _sizeByDistance = ((a3cs_debug_3d_iconSize + 1) - ((ace_player distance _x) / (a3cs_debug_max_distance / a3cs_debug_3d_iconSize)));

@@ -8,6 +8,9 @@ params ["_function"];
 
 #define UTF8_EOL 10
 
+
+
+/*
 //filter tabs
 private _codeArray = toArray str _function;
 private _codeLines = [];
@@ -35,3 +38,4 @@ _codeLine = nil;
 
 {"ace_clipboard" callExtension (toString _x);} foreach _codeLines;
 "ace_clipboard" callExtension "--COMPLETE--";
+*/

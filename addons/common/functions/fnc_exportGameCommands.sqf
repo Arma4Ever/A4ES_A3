@@ -1,17 +1,13 @@
 /*
  * Author: SzwedzikPL
- * Exports all loaded addons
+ * Exports all ArmA commands
  */
 #include "script_component.hpp"
 
 diag_log text format ["//==   %1 %2 %3   ==//", productVersion select 0, productVersion select 2, productVersion select 4];
 diag_log text "//======================================//";
-diag_log text "//                ADDONS                //";
+diag_log text "//             GAME COMMANDS            //";
 diag_log text "//======================================//";
 diag_log text "";
 
-private _configs = "true" configClasses (configFile >> "CfgPatches");
-{
-    private _configName = configname _x;
-    diag_log _configName;
-} foreach _configs;
+{diag_log text _x} forEach supportInfo "";
