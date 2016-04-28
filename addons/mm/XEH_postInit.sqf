@@ -18,6 +18,19 @@ if (!hasInterface && !isDedicated) then {
 
 if (isServer) then {
     [FUNC(initCache), [], 5] call ace_common_fnc_waitAndExecute;
+
+    if (isMultiplayer) then {
+        [QGVAR(startWeaponSafety), []] call ace_common_fnc_globalEvent;
+    };
+
+    [{
+        private _enableMissionIntro = missionNamespace getVariable [QGVAR(enableMissionIntro), true];
+        private _enableMissionIntroSP = missionNamespace getVariable [QGVAR(enableMissionIntroSP), false];
+
+        if ((isMultiplayer && _enableMissionIntro) || (!isMultiplayer && _enableMissionIntroSP)) then {
+            [QGVAR(showIntro), []] call ace_common_fnc_globalEvent;
+        };
+    }, [], 3] call ace_common_fnc_waitAndExecute;
 };
 
 if (hasInterface) then {
@@ -30,28 +43,14 @@ if (hasInterface) then {
     private _characterDesc = player getVariable [QGVAR(characterDesc), ""];
     player createDiaryRecord ["Diary", [localize LSTRING(ObjectAttribute_Control_CharacterDesc_DisplayName), _characterDesc]];
 
-    if(isMultiplayer && {!didJIP} && {!(player isKindOf "VirtualMan_F")}) then {
-        //Put weapon on safety if its start of multiplayer mission
-        [player, currentWeapon player, currentMuzzle player] call ace_safemode_fnc_lockSafety;
-    };
-
-    [{
-        private _enableMissionIntro = missionNamespace getVariable [QGVAR(enableMissionIntro), true];
-        private _enableMissionIntroSP = missionNamespace getVariable [QGVAR(enableMissionIntroSP), false];
-
-        if((isMultiplayer && !didJIP && _enableMissionIntro) || (!isMultiplayer && _enableMissionIntroSP)) then {
-            (QGVAR(missionIntro) call BIS_fnc_rscLayer) cutRsc ["RscA3CSIntroEffect", "PLAIN"];
-        };
-    }, [], 3] call ace_common_fnc_waitAndExecute;
-
     ["SettingChanged", {
         params ["_option"];
-        if(_option == QGVAR(enableColorCorrectionsEffect)) then {
+        if (_option == QGVAR(enableColorCorrectionsEffect)) then {
             private _ppEnabled = missionNamespace getVariable [QGVAR(colorCorrectionsEnabled), false];
-            if(!_ppEnabled) exitWith {};
+            if (!_ppEnabled) exitWith {};
             private _ppEffect = missionNamespace getVariable [QGVAR(colorCorrectionsEffect), []];
-            private _ppEffect ppEffectEnable GVAR(enableColorCorrectionsEffect);
-            private _ppEffect ppEffectCommit 0;
+            _ppEffect ppEffectEnable GVAR(enableColorCorrectionsEffect);
+            _ppEffect ppEffectCommit 0;
         };
     }] call ace_common_fnc_addEventHandler;
 };
