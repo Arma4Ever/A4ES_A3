@@ -4,7 +4,6 @@ class GVAR(module_lanterns): A3C_Module {
     displayName = CSTRING(Module_Lanterns_DisplayName);
     category = "a3cs_modules_effects";
     function = QUOTE(DFUNC(module_lanterns));
-    isTriggerActivated = 0;
 
     class Attributes: AttributesBase {
         class place: Edit {
