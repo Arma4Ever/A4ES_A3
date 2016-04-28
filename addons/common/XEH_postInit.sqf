@@ -13,10 +13,10 @@ if (hasInterface && {isMultiplayer}) then {
     };
 
     //Block channels exept global & side
-    //{_x enableChannel false} foreach [2,3,4,5]; - cant disable group chat
+    //{_x enableChannel false} foreach [2,3,4,5]; - can't disable group chat
     [{if(currentChannel > 1) then {setCurrentChannel 0;};}, 0, []] call CBA_fnc_addPerFrameHandler;
 };
 
 if (isServer) then {
-    [FUNC(resetScoreLoop), 30, []] call CBA_fnc_addPerFrameHandler;
+    [] call FUNC(resetScoreLoop);
 };
