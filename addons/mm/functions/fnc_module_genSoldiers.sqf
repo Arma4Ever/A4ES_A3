@@ -188,7 +188,8 @@ if(_mode == "init") then {
     if(GVAR(cacheInited)) then {GVAR(cacheGroups) append _aliveGroups;};
 
     //Add groups to curators
-    if(count allCurators > 0) then {
+    //ace_zeus to the same?
+    /*if(count allCurators > 0) then {
         {
             private _curator = _x;
             {
@@ -196,7 +197,7 @@ if(_mode == "init") then {
                 _curator addCuratorEditableObjects [units _group, true];
             } foreach  _aliveGroups;
         } foreach allCurators;
-    };
+    };*/
 
     //Transfer groups to headless
     [_aliveGroups] call FUNC(transferGroups);

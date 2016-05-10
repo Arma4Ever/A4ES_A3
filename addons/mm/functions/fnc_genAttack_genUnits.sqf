@@ -146,6 +146,8 @@ _place setVariable [QGVAR(genAttack_aliveUnits), _aliveUnits];
 if(GVAR(cacheInited)) then {GVAR(cacheGroups) append _newGroups;};
 
 //Add groups to curators
+//ace_zeus to the same?
+/*
 if(count allCurators > 0) then {
     {
         private _curator = _x;
@@ -155,6 +157,7 @@ if(count allCurators > 0) then {
         } foreach  _newGroups;
     } foreach allCurators;
 };
+*/
 
 //Transfer groups to headless
 [_newGroups] call FUNC(transferGroups);
