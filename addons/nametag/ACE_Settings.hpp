@@ -20,14 +20,6 @@ class ACE_Settings {
         displayName = CSTRING(Settings_EnableTacticalHudList_DisplayName);
         category = CSTRING(Settings_Category);
     };
-    class GVAR(enableCommandBar) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(Settings_EnableCommandBar_DisplayName);
-        description = CSTRING(Settings_EnableCommandBar_Description);
-        category = CSTRING(Settings_Category);
-    };
     class GVAR(enableCursorNametag) {
         value = 1;
         typeName = "BOOL";

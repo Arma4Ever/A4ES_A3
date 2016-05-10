@@ -37,9 +37,6 @@
         <Key ID="STR_A3CS_Nametag_Settings_EnableTacticalHudList_DisplayName">
             <Original>Pokaż listę członków grupy w taktycznym HUD</Original>
         </Key>
-        <Key ID="STR_A3CS_Nametag_Settings_EnableCommandBar_DisplayName">
-            <Original>Pokaż panel dowódcy</Original>
-        </Key>
         <Key ID="STR_A3CS_Nametag_Settings_EnableCommandBar_Description">
             <Original>Pokaż panel dowódcy (domyślnie w lewym dolnym rogu)</Original>
         </Key>
