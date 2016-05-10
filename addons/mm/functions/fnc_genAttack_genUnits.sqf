@@ -108,8 +108,6 @@ for "_spawnCounter" from 1 to _unitCount do {
     //Set skill level
     [_unit, _training] call FUNC(setSkillLevel);
     _unit setVariable [QGVAR(training), _training, true];
-    //Spawn custom script
-    if(!isNil "_script") then {_unit spawn _script;};
     //Set cache settings to "never"
     _unit setVariable [QGVAR(cacheUnit), "never"];
     //Disable fleeing
@@ -144,6 +142,11 @@ _place setVariable [QGVAR(genAttack_aliveUnits), _aliveUnits];
 
 //Add groups in cache array
 if(GVAR(cacheInited)) then {GVAR(cacheGroups) append _newGroups;};
+
+//Spawn custom script
+if(!isNil "_script") then {
+    {_x spawn _script;} forEach _newUnits;
+};
 
 //Add groups to curators
 //ace_zeus to the same?

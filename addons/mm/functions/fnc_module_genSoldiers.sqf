@@ -111,8 +111,6 @@ if(_mode == "init") then {
         //Set skill level
         [_unit, _training] call FUNC(setSkillLevel);
         _unit setVariable [QGVAR(training), _training, true];
-        //Spawn custom script
-        if(!isNil "_script") then {_unit spawn _script;};
         //Set cache settings
         _unit setVariable [QGVAR(cacheUnit), _cacheSetting];
         //If limit is reached force next AI to spawn in new group
@@ -186,6 +184,11 @@ if(_mode == "init") then {
 
     //Add groups in cache array
     if(GVAR(cacheInited)) then {GVAR(cacheGroups) append _aliveGroups;};
+
+    //Spawn custom script
+    if(!isNil "_script") then {
+        {_x spawn _script;} forEach _aliveUnits;
+    };
 
     //Add groups to curators
     //ace_zeus to the same?
