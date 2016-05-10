@@ -1,8 +1,7 @@
 //==   ACE3 3.5.1.0   ==//
 //======================================//
-//               CLIENT                 //
+//                CLIENT                //
 //======================================//
-
 class ace_common_settingFeedbackIcons {
     //Feedback icons
     //Select the position of or disable the feedback icons on your screen. These icons will show to provide extra feedback on your character status and actions performed.
@@ -11,7 +10,7 @@ class ace_common_settingFeedbackIcons {
     //values: ["Hide","Top right, downwards","Top right, to the left","Top left, downwards","Top left, to the right"]
     //client: 1
 };
-class ace_common_SettingProgressBarLocation {
+class ace_common_settingProgressBarLocation {
     //Progress bar location
     //Set the desired location of the progress bar on your screen.
     //typeName: SCALAR
@@ -53,13 +52,13 @@ class ace_interact_menu_addBuildingActions {
     //default value: 0
     //client: 1
 };
-class ace_interact_menu_AlwaysUseCursorInteraction {
+class ace_interact_menu_alwaysUseCursorInteraction {
     //Always display cursor for interaction
     //typeName: BOOL
     //default value: 0
     //client: 1
 };
-class ace_interact_menu_AlwaysUseCursorSelfInteraction {
+class ace_interact_menu_alwaysUseCursorSelfInteraction {
     //Always display cursor for self interaction
     //typeName: BOOL
     //default value: 0
@@ -102,7 +101,7 @@ class ace_interact_menu_textSize {
     //values: ["$str_very_small","$str_small","$str_medium","$str_large","$str_very_large"]
     //client: 1
 };
-class ace_interact_menu_UseListMenu {
+class ace_interact_menu_useListMenu {
     //Display interaction menus as lists
     //typeName: BOOL
     //default value: 0
@@ -187,7 +186,7 @@ class ace_optionsmenu_showNewsOnMainMenu {
     //default value: 1
     //client: 1
 };
-class ace_overheating_DisplayTextOnJam {
+class ace_overheating_displayTextOnJam {
     //Display text on jam
     //Display a notification whenever your weapon gets jammed
     //typeName: BOOL
@@ -208,16 +207,186 @@ class ace_overheating_showParticleEffectsForEveryone {
     //default value: 0
     //client: 1
 };
-class ace_reload_DisplayText {
+class ace_reload_displayText {
     //Check ammo on weapon reload
     //Check the ammo in your new magazine on magazine reload.
     //typeName: BOOL
     //default value: 1
     //client: 1
 };
-class ace_repair_DisplayTextOnRepair {
+class ace_repair_displayTextOnRepair {
     //Display text on repair
     //Display a notification whenever you repair a vehicle
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_ammoCount {
+    //Ammo Count
+    //Requires Soldier/Vehicle/Weapons Information.
+    //typeName: BOOL
+    //default value: 0
+    //client: 1
+};
+class ace_ui_ammoType {
+    //Ammo Type
+    //Requires Soldier/Vehicle/Weapons Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_commandMenu {
+    //Command Menu
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_firingMode {
+    //Firing Mode
+    //Requires Soldier/Vehicle/Weapons Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_groupBar {
+    //Group Bar
+    //typeName: BOOL
+    //default value: 0
+    //client: 1
+};
+class ace_ui_magCount {
+    //Magazine Count
+    //Requires Soldier/Vehicle/Weapons Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_soldierVehicleWeaponInfo {
+    //Soldier/Vehicle/Weapon Information
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_staminaBar {
+    //Stamina Bar
+    //Requires Soldier/Vehicle/Weapons Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_stance {
+    //Stance
+    //Requires Soldier/Vehicle/Weapons Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_throwableCount {
+    //Throwable Count
+    //Requires Soldier/Vehicle/Weapons Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_throwableName {
+    //Throwable Type
+    //Requires Soldier/Vehicle/Weapons Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_vehicleAltitude {
+    //Vehicle Altitude
+    //Requires Soldier/Vehicle/Weapons Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_vehicleCompass {
+    //Vehicle Compass
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_vehicleDamage {
+    //Vehicle Damage
+    //Requires Soldier/Vehicle/Weapons Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_vehicleFuelBar {
+    //Vehicle Fuel Bar
+    //Requires Soldier/Vehicle/Weapons Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_vehicleGunnerWeapon {
+    //Vehicle Gunner Weapon
+    //Requires Soldier/Vehicle/Weapons Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_vehicleInfoBackground {
+    //Vehicle Info Background
+    //Requires Soldier/Vehicle/Weapons Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_vehicleName {
+    //Vehicle Name
+    //Requires Soldier/Vehicle/Weapons Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_vehicleNameBackground {
+    //Vehicle Name Background
+    //Requires Soldier/Vehicle/Weapons Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_vehicleRadar {
+    //Vehicle Radar
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_vehicleSpeed {
+    //Vehicle Speed
+    //Requires Soldier/Vehicle/Weapons Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_weaponLowerInfoBackground {
+    //Weapon Lower Info Background
+    //Requires Soldier/Vehicle/Weapons Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_weaponName {
+    //Weapon Name
+    //Requires Soldier/Vehicle/Weapons Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_weaponNameBackground {
+    //Weapon Name Background
+    //Requires Soldier/Vehicle/Weapons Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_zeroing {
+    //Zeroing
+    //Requires Soldier/Vehicle/Weapons Information.
     //typeName: BOOL
     //default value: 1
     //client: 1
@@ -254,18 +423,16 @@ class ace_viewdistance_viewDistanceOnFoot {
     //values: ["Video Settings","500","1000","1500","2000","2500","3000","3500","4000","5000","6000","7000","8000","9000","10000"]
     //client: 1
 };
-class ace_weaponselect_DisplayText {
+class ace_weaponselect_displayText {
     //Display text on grenade throw
     //Display a hint or text on grenade throw.
     //typeName: BOOL
     //default value: 1
     //client: 1
 };
-
 //======================================//
-//               CONFIG                 //
+//                CONFIG                //
 //======================================//
-
 class ace_captives_allowHandcuffOwnSide {
     //Can handcuff own side
     //Can players cabletie units on their own side
@@ -316,21 +483,21 @@ class ace_common_forceAllSettings {
     //default value: 0
     //client: 0
 };
-class ace_explosives_ExplodeOnDefuse {
+class ace_explosives_explodeOnDefuse {
     //Explode on defusal?
     //Enable certain explosives to explode on defusal? Default: Yes
     //typeName: BOOL
     //default value: 1
     //client: 0
 };
-class ace_explosives_PunishNonSpecialists {
+class ace_explosives_punishNonSpecialists {
     //Punish non-specialists?
     //Increase the time it takes to complete actions for non-specialists? Default: Yes
     //typeName: BOOL
     //default value: 1
     //client: 0
 };
-class ace_explosives_RequireSpecialist {
+class ace_explosives_requireSpecialist {
     //Require specialists?
     //Require explosive specialists to disable explosives? Default: No
     //typeName: BOOL
@@ -355,7 +522,7 @@ class ace_hitreactions_minDamageToTrigger {
     //default value: 0.1
     //client: 0
 };
-class ace_interaction_EnableTeamManagement {
+class ace_interaction_enableTeamManagement {
     //Enable Team Management
     //Should players be allowed to use the Team Management Menu? Default: Yes
     //typeName: BOOL
@@ -367,17 +534,17 @@ class ace_laserpointer_enabled {
     //default value: 1
     //client: 0
 };
-class ace_magazinerepack_TimePerAmmo {
+class ace_magazinerepack_timePerAmmo {
     //typeName: SCALAR
     //default value: 1.5
     //client: 0
 };
-class ace_magazinerepack_TimePerBeltLink {
+class ace_magazinerepack_timePerBeltLink {
     //typeName: SCALAR
     //default value: 8
     //client: 0
 };
-class ace_magazinerepack_TimePerMagazine {
+class ace_magazinerepack_timePerMagazine {
     //typeName: SCALAR
     //default value: 2
     //client: 0
@@ -410,7 +577,7 @@ class ace_map_BFT_ShowPlayerNames {
     //default value: 0
     //client: 0
 };
-class ace_map_DefaultChannel {
+class ace_map_defaultChannel {
     //Set Channel At Start
     //Change the starting marker channel at mission start
     //typeName: SCALAR
@@ -424,14 +591,14 @@ class ace_map_gestures_enabled {
     //default value: 1
     //client: 0
 };
-class ace_map_gestures_GroupColorConfigurationMapping {
+class ace_map_gestures_groupColorConfigurationMapping {
     //GroupID Color configuration mapping
     //Hash of Group ID mapped to the Group color configuration index.
     //typeName: ARRAY
     //default value: [[],[]]
     //client: 0
 };
-class ace_map_gestures_GroupColorConfigurations {
+class ace_map_gestures_groupColorConfigurations {
     //Group color configurations
     //Group color configuration containing arrays of color pairs ([leadColor, color]).
     //typeName: ARRAY
@@ -487,7 +654,7 @@ class ace_map_mapShowCursorCoordinates {
     //default value: 0
     //client: 0
 };
-class ace_maptools_EveryoneCanDrawOnBriefing {
+class ace_maptools_everyoneCanDrawOnBriefing {
     //typeName: BOOL
     //default value: 1
     //client: 0
@@ -781,7 +948,7 @@ class ace_medical_useLocation_SurgicalKit {
     //values: ["Anywhere","Medical vehicles","Medical facility","Vehicles & facility","Disabled"]
     //client: 0
 };
-class ace_microdagr_MapDataAvailable {
+class ace_microdagr_mapDataAvailable {
     //MicroDAGR Map Fill
     //How much map data is filled on MicroDAGR's
     //typeName: SCALAR
@@ -822,6 +989,13 @@ class ace_nightvision_disableNVGsWithSights {
     //Blocks the usage of night vision goggles whilst aiming down the sight.
     //typeName: BOOL
     //default value: 0
+    //client: 0
+};
+class ace_overheating_enabled {
+    //Overheating Enabled
+    //Master enable for the overheating/jamming module
+    //typeName: BOOL
+    //default value: 1
     //client: 0
 };
 class ace_overheating_overheatingDispersion {
@@ -867,7 +1041,12 @@ class ace_repair_addSpareParts {
     //default value: 1
     //client: 0
 };
-class ace_repair_consumeItem_ToolKit {
+class ace_repair_autoShutOffEngineWhenStartingRepair {
+    //typeName: BOOL
+    //default value: 0
+    //client: 0
+};
+class ace_repair_consumeItem_toolKit {
     //Remove toolkit on use
     //Should the toolkit be removed on usage?
     //typeName: SCALAR
@@ -883,7 +1062,7 @@ class ace_repair_engineerSetting_fullRepair {
     //values: ["Anyone","Engineer only","Repair Specialist only"]
     //client: 0
 };
-class ace_repair_engineerSetting_Repair {
+class ace_repair_engineerSetting_repair {
     //Allow Repair
     //Who can perform repair actions?
     //typeName: SCALAR
@@ -891,7 +1070,7 @@ class ace_repair_engineerSetting_Repair {
     //values: ["Anyone","Engineer only","Repair Specialist only"]
     //client: 0
 };
-class ace_repair_engineerSetting_Wheel {
+class ace_repair_engineerSetting_wheel {
     //Allow Wheel
     //Who can remove and replace wheels?
     //typeName: SCALAR
@@ -914,7 +1093,7 @@ class ace_repair_repairDamageThreshold {
     //default value: 0.6
     //client: 0
 };
-class ace_repair_repairDamageThreshold_Engineer {
+class ace_repair_repairDamageThreshold_engineer {
     //Repair Threshold (Engineer)
     //What is the maximum damage that can be repaired by an engineer?
     //typeName: SCALAR
@@ -929,19 +1108,19 @@ class ace_repair_wheelRepairRequiredItems {
     //values: ["None","ToolKit"]
     //client: 0
 };
-class ace_respawn_BodyRemoveTimer {
+class ace_respawn_bodyRemoveTimer {
     //typeName: SCALAR
     //default value: 0
     //client: 0
 };
-class ace_respawn_RemoveDeadBodiesDisconnected {
+class ace_respawn_removeDeadBodiesDisconnected {
     //Remove bodies?
     //Remove player bodies after disconnect?
     //typeName: BOOL
     //default value: 1
     //client: 0
 };
-class ace_respawn_SavePreDeathGear {
+class ace_respawn_savePreDeathGear {
     //Save Gear?
     //Respawn with the gear a soldier had just before his death?
     //typeName: BOOL
@@ -986,68 +1165,75 @@ class ace_spectator_restrictVisions {
     //values: ["All","Night vision","Thermal imaging","None"]
     //client: 0
 };
-class ace_switchunits_EnableSafeZone {
+class ace_switchunits_enableSafeZone {
     //Enable Safe Zone?
     //Enable a safe zone around enemy units? Players can't switch to units inside of the safe zone.
     //typeName: BOOL
     //default value: 1
     //client: 0
 };
-class ace_switchunits_EnableSwitchUnits {
+class ace_switchunits_enableSwitchUnits {
     //typeName: BOOL
     //default value: 0
     //client: 0
 };
-class ace_switchunits_SafeZoneRadius {
+class ace_switchunits_safeZoneRadius {
     //Safe Zone Radius
     //The safe zone around players from a different team. Default: 200
     //typeName: SCALAR
     //default value: 100
     //client: 0
 };
-class ace_switchunits_SwitchToCivilian {
+class ace_switchunits_switchToCivilian {
     //Switch to Civilian?
     //Allow switching to civilian units?
     //typeName: BOOL
     //default value: 0
     //client: 0
 };
-class ace_switchunits_SwitchToEast {
+class ace_switchunits_switchToEast {
     //Switch to East?
     //Allow switching to east units?
     //typeName: BOOL
     //default value: 0
     //client: 0
 };
-class ace_switchunits_SwitchToIndependent {
+class ace_switchunits_switchToIndependent {
     //Switch to Independent?
     //Allow switching to independent units?
     //typeName: BOOL
     //default value: 0
     //client: 0
 };
-class ace_switchunits_SwitchToWest {
+class ace_switchunits_switchToWest {
     //Switch to West?
     //Allow switching to west units?
     //typeName: BOOL
     //default value: 0
     //client: 0
 };
-class ace_vehiclelock_DefaultLockpickStrength {
+class ace_ui_allowSelectiveUI {
+    //Allow Selective UI
+    //Allow client to modify their UI.
+    //typeName: BOOL
+    //default value: 1
+    //client: 0
+};
+class ace_vehiclelock_defaultLockpickStrength {
     //Default Lockpick Strength
     //Default Time to lockpick (in seconds). Default: 10
     //typeName: SCALAR
     //default value: 10
     //client: 0
 };
-class ace_vehiclelock_LockVehicleInventory {
+class ace_vehiclelock_lockVehicleInventory {
     //Lock Vehicle Inventory
     //Locks the inventory of locked vehicles
     //typeName: BOOL
     //default value: 0
     //client: 0
 };
-class ace_vehiclelock_VehicleStartingLockState {
+class ace_vehiclelock_vehicleStartingLockState {
     //Vehicle Starting Lock State
     //Set lock state for all vehicles (removes ambiguous lock states)
     //typeName: SCALAR
