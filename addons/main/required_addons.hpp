@@ -562,7 +562,6 @@
 "ace_modules",
 "ace_apl",
 "ace_common",
-"ace_difficulties",
 "ace_disposable",
 "ace_fastroping",
 "ace_finger",

@@ -13,20 +13,20 @@ private _skillArray = [];
 if(_training == "militia") then {
     _skillArray = [
         ["aimingAccuracy", 0.2],
-        ["aimingShake", 0.2],
-        ["aimingSpeed", 0.5],
+        ["aimingShake", 1],
+        ["aimingSpeed", 0.2],
         ["commanding", 1],
         ["courage", 1],
         ["reloadSpeed", 1],
-        ["spotDistance", 0.5],
+        ["spotDistance", 0.6],
         ["spotTime", 1]
     ];
 };
 if(_training == "guards") then {
     _skillArray = [
-        ["aimingAccuracy", 0.3],
-        ["aimingShake", 0.3],
-        ["aimingSpeed", 0.5],
+        ["aimingAccuracy", 0.4],
+        ["aimingShake", 1],
+        ["aimingSpeed", 0.4],
         ["commanding", 1],
         ["courage", 1],
         ["reloadSpeed", 1],
@@ -36,8 +36,8 @@ if(_training == "guards") then {
 };
 if(_training == "conscripts") then {
     _skillArray = [
-        ["aimingAccuracy", 0.4],
-        ["aimingShake", 0.4],
+        ["aimingAccuracy", 0.6],
+        ["aimingShake", 1],
         ["aimingSpeed", 0.6],
         ["commanding", 1],
         ["courage", 1],
@@ -48,9 +48,9 @@ if(_training == "conscripts") then {
 };
 if(_training == "professional") then {
     _skillArray = [
-        ["aimingAccuracy", 0.5],
-        ["aimingShake", 0.5],
-        ["aimingSpeed", 0.6],
+        ["aimingAccuracy", 0.8],
+        ["aimingShake", 1],
+        ["aimingSpeed", 0.8],
         ["commanding", 1],
         ["courage", 1],
         ["reloadSpeed", 1],
@@ -60,13 +60,13 @@ if(_training == "professional") then {
 };
 if(_training == "elite") then {
     _skillArray = [
-        ["aimingAccuracy", 0.6],
-        ["aimingShake", 0.6],
-        ["aimingSpeed", 0.7],
+        ["aimingAccuracy", 1],
+        ["aimingShake", 1],
+        ["aimingSpeed", 1],
         ["commanding", 1],
         ["courage", 1],
         ["reloadSpeed", 1],
-        ["spotDistance", 0.9],
+        ["spotDistance", 1],
         ["spotTime", 1]
     ];
 };
