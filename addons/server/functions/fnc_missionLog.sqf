@@ -4,16 +4,16 @@
  */
 #include "script_component.hpp"
 
-if(!isServer) exitWith {};
+if (!isServer) exitWith {};
 
 params [["_log", "", [""]]];
-if(_log == "") exitWith {};
+if (_log == "") exitWith {};
 
 private _missionData = call EFUNC(common,getMissionData);
 _missionData params ["_missionName", "_missionMap"];
 
 private _missionLogs = missionNamespace getVariable [QGVAR(missionLogs), []];
-if((count _missionLogs) >= 20) then {_missionLogs deleteAt 0;};
+if ((count _missionLogs) >= 20) then {_missionLogs deleteAt 0;};
 
 private _logTime = time call EFUNC(common,secondsToTime);
 _missionLogs pushback [_logTime, _log];

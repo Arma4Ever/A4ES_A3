@@ -19,5 +19,8 @@
         <Key ID="STR_A3CS_Server_Log_PlayerDisconnected">
             <Original>%1 wyszedl z serwera</Original>
         </Key>
+        <Key ID="STR_A3CS_Server_Log_PlayerUsedSpray">
+            <Original>%1 użył spraya</Original>
+        </Key>
     </Package>
 </Project>

@@ -73,6 +73,12 @@ class GVAR(modules) {
         displayName = CSTRING(Module_MissionLogs_DisplayName);
         server = 1;
     };
+    class adminLogs {
+        type = 1;
+        serveradmin = 1;
+        displayName = CSTRING(Module_AdminLogs_DisplayName);
+        server = 1;
+    };
     class playersList {
         mode = 1;
         type = 1;
@@ -86,6 +92,12 @@ class GVAR(modules) {
         serveradmin = 1;
         displayName = CSTRING(Module_AdminList_DisplayName);
         server = 0;
+    };
+    class curatorList {
+        type = 1;
+        serveradmin = 1;
+        displayName = CSTRING(Module_CuratorList_DisplayName);
+        server = 1;
     };
     class activeScripts {
         mode = 2;

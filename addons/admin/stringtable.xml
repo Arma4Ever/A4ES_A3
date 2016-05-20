@@ -103,6 +103,18 @@
 	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalGroupCount">
             <Original>Liczba grup:</Original>
         </Key>
+	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_WestGroupCount">
+            <Original>Liczba grup (BLUFOR):</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_EastGroupCount">
+            <Original>Liczba grup (OPFOR):</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_GreenGroupCount">
+            <Original>Liczba grup (INDEP):</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_CivGroupCount">
+            <Original>Liczba grup (CIV):</Original>
+        </Key>
 	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_GeneratedAICount">
             <Original>Liczba wygenerowanych AI:</Original>
         </Key>
@@ -123,6 +135,14 @@
         </Key>
 	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalVehicleCount">
             <Original>Liczba pojazdów:</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalObjectCount">
+            <Original>Liczba obiektów:</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_ModuleGenAICount">
+            <Original>Liczba generatorów AI:</Original>
+        </Key>
+            <Original>Liczba generatorów ataku:</Original>
         </Key>
 	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_CuratorCount">
             <Original>Liczba mistrzów gry (zeus):</Original>
@@ -150,6 +170,12 @@
         </Key>
 	    <Key ID="STR_A3CS_Admin_Module_MissionLogs_DisplayName">
             <Original>Logi z misji</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Admin_Module_AdminLogs_DisplayName">
+            <Original>Logi z misji (admin)</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Admin_Module_CuratorList_DisplayName">
+            <Original>Lista zeusów</Original>
         </Key>
     </Package>
 </Project>
