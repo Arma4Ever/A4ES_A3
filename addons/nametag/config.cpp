@@ -12,6 +12,7 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgInGameUI.hpp"
 #include "ACE_Settings.hpp"
 #include "dialogs.hpp"
+#include "CfgInGameUI.hpp"
+#include "RscInGameUI.hpp"
