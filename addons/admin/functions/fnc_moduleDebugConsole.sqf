@@ -17,6 +17,25 @@ disableSerialization;
 private _display = uiNamespace getVariable ["A3CS_debugConsole", displayNull];
 if(isNull _display) exitWith {};
 
+_display displayAddEventHandler ["Unload", {
+    disableSerialization;
+    private _display = _this select 0;
+
+    _ctrlExpression = _display displayctrl IDC_DEBUGCONSOLE_EXPRESSION;
+    profilenamespace setvariable ["RscDebugConsole_expression", ctrlText _ctrlExpression];
+
+    {
+        private _code  = ctrlText (_display displayCtrl _x);
+        profilenamespace setvariable ["RscDebugConsole_watch" + str(_foreachindex + 1), [true, _code]];
+    } forEach [
+         IDC_DEBUGCONSOLE_WATCHINPUT1,
+         IDC_DEBUGCONSOLE_WATCHINPUT2,
+         IDC_DEBUGCONSOLE_WATCHINPUT3,
+         IDC_DEBUGCONSOLE_WATCHINPUT4
+    ];
+    saveprofilenamespace;
+}];
+
 private _title = localize LSTRING(Module_DebugConsole_DisplayName);
 (_display displayCtrl IDC_DEBUGCONSOLE_TITLE) ctrlSetText _title;
 
@@ -34,6 +53,18 @@ ctrlsetfocus (_display displayCtrl IDC_DEBUGCONSOLE_EXPRESSION);
     private _code = compile ctrlText ((ctrlparent (_this select 0)) displayCtrl IDC_DEBUGCONSOLE_EXPRESSION);
     _code remoteExec ["bis_fnc_spawn", 0];
 }];
+
+(_display displayCtrl IDC_DEBUGCONSOLE_EXPRESSION) ctrlSetText (profilenamespace getvariable ["RscDebugConsole_expression", ""]);
+
+{
+    private _control = _display displayCtrl _x;
+    _control ctrlSetText ((profilenamespace getvariable ["RscDebugConsole_watch" + str(_foreachindex + 1), ""]) select 1);
+} forEach [
+     IDC_DEBUGCONSOLE_WATCHINPUT1,
+     IDC_DEBUGCONSOLE_WATCHINPUT2,
+     IDC_DEBUGCONSOLE_WATCHINPUT3,
+     IDC_DEBUGCONSOLE_WATCHINPUT4
+];
 
 private _callWatchFields = {
     disableSerialization;
