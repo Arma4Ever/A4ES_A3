@@ -142,6 +142,7 @@
 	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_ModuleGenAICount">
             <Original>Liczba generatorów AI:</Original>
         </Key>
+	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_ModuleGenAttackCount">
             <Original>Liczba generatorów ataku:</Original>
         </Key>
 	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_CuratorCount">

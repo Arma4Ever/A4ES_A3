@@ -74,6 +74,7 @@ class GVAR(modules) {
         server = 1;
     };
     class adminLogs {
+        mode = 1;
         type = 1;
         serveradmin = 1;
         displayName = CSTRING(Module_AdminLogs_DisplayName);
@@ -94,6 +95,7 @@ class GVAR(modules) {
         server = 0;
     };
     class curatorList {
+        mode = 1;
         type = 1;
         serveradmin = 1;
         displayName = CSTRING(Module_CuratorList_DisplayName);

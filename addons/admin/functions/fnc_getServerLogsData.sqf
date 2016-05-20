@@ -27,6 +27,8 @@ if (tolower _logClass == "debuglogs") then {
     private _totalWaypoints = 0;
     private _totalVehicles = 0;
     private _totalObjects = 0;
+    private _modulesGenAI = 0;
+    private _modulesGenAttack = 0;
     private _curatorCount = 0;
 
     private _headlessClient = missionNamespace getVariable [QEGVAR(mm,headlessClient), objNull];
@@ -59,6 +61,9 @@ if (tolower _logClass == "debuglogs") then {
     } forEach allGroups;
 
     _totalVehicles = count (vehicles select {_x isKindOf "AllVehicles"});
+    _totalObjects = count (allMissionObjects "All");
+    _modulesGenAI = count (entities QEGVAR(mm,module_genSoldiers));
+    _modulesGenAttack = count (entities QEGVAR(mm,module_genAttack));
     _curatorCount = count allCurators;
 
     _logData = [
@@ -93,6 +98,7 @@ if (tolower _logClass == "missionlogs") then {
     _logData = missionNamespace getVariable [QEGVAR(server,missionLogs), []];
 };
 if (tolower _logClass == "adminlogs") then {
+    _logData = missionNamespace getVariable [QEGVAR(server,adminLogs), []];
 };
 if (tolower _logClass == "curatorlist") then {
     {
