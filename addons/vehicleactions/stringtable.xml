@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
     <Package name="Vehicleactions">
+	    <Key ID="STR_A3CS_Vehicleactions_Actions_Disassemble">
+            <Original>Rozłóż</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Vehicleactions_Actions_DisassembleUAV">
+            <Original>Spakuj drona</Original>
+        </Key>
 	    <Key ID="STR_A3CS_Vehicleactions_ToggleCollisionLights_DisplayName">
             <Original>Włącz/Wyłącz światła pozycyjne</Original>
         </Key>
