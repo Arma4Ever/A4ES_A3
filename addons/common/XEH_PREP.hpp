@@ -5,6 +5,7 @@ PREP(exportFunction);
 PREP(exportGameConfig);
 PREP(exportGameCommands);
 PREP(getName);
+PREP(getPlayerByName);
 PREP(getMissionData);
 PREP(getSingleMissionData);
 PREP(showNotification);
