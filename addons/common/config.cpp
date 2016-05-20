@@ -16,4 +16,5 @@ class CfgPatches {
 #include "CfgVehicleClasses.hpp"
 #include "CfgDebriefing.hpp"
 #include "CfgFunctions.hpp"
+#include "CfgDifficultyPresets.hpp"
 #include "dialogs.hpp"
