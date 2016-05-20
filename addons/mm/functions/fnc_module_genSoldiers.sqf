@@ -4,14 +4,14 @@
  */
 #include "script_component.hpp"
 
-if(!isServer) exitWith {true};
+if (!isServer) exitWith {true};
 params [["_mode", "", [""]], ["_input", [], [[]]]];
 
 // Module - init
-if(_mode == "init") then {
+if (_mode == "init") then {
     _input params [["_logic", objNull, [objNull]], ["_isActivated", false, [false]], ["_isCuratorPlaced", false, [false]]];
-    if(isNull _logic || !_isActivated) exitWith {true};
-    if(!(_logic call FUNC(canExecuteModule))) exitWith {WARNING("genSoldiers: blokuje wykonanie modulu");true};
+    if (isNull _logic || !_isActivated) exitWith {true};
+    if (!(_logic call FUNC(canExecuteModule))) exitWith {WARNING("genSoldiers: blokuje wykonanie modulu");true};
 
     //Load module params
     private _place = call compile (_logic getVariable ["place", ""]);
@@ -35,25 +35,25 @@ if(_mode == "init") then {
 
     //check distance to nearest player if cache is inited
     private _isVisibleForPlayers = false;
-    if(GVAR(cacheInited)) then {
+    if (GVAR(cacheInited)) then {
         private _playableUnits = [[player], playableUnits] select isMultiplayer;
         {
             private _player = vehicle _x;
             private _distance = ((_place distance _player) - _placeSize) max 0;
-            if(GVAR(cacheDistanceLand) > 0) then {
-                if(_distance < GVAR(cacheDistanceLand) && {_player iskindOf "Land"}) exitWith {_isVisibleForPlayers = true;};
-                if(_distance < GVAR(cacheDistanceLand) && {_player iskindOf "Ship"}) exitWith {_isVisibleForPlayers = true;};
+            if (GVAR(cacheDistanceLand) > 0) then {
+                if (_distance < GVAR(cacheDistanceLand) && {_player iskindOf "Land"}) exitWith {_isVisibleForPlayers = true;};
+                if (_distance < GVAR(cacheDistanceLand) && {_player iskindOf "Ship"}) exitWith {_isVisibleForPlayers = true;};
             };
-            if(GVAR(cacheDistanceHelicopters) > 0) then {
-                if(_distance < GVAR(cacheDistanceHelicopters) && {_player iskindOf "Helicopter"}) exitWith {_isVisibleForPlayers = true;};
+            if (GVAR(cacheDistanceHelicopters) > 0) then {
+                if (_distance < GVAR(cacheDistanceHelicopters) && {_player iskindOf "Helicopter"}) exitWith {_isVisibleForPlayers = true;};
             };
-            if(GVAR(cacheDistancePlanes) > 0) then {
-                if(_distance < GVAR(cacheDistancePlanes) && {_player iskindOf "Plane"}) exitWith {_isVisibleForPlayers = true;};
+            if (GVAR(cacheDistancePlanes) > 0) then {
+                if (_distance < GVAR(cacheDistancePlanes) && {_player iskindOf "Plane"}) exitWith {_isVisibleForPlayers = true;};
             };
         } forEach _playableUnits;
     };
 
-    if(!_isVisibleForPlayers) exitWith {GVAR(cacheModules) pushBack _logic;};
+    if (!_isVisibleForPlayers) exitWith {GVAR(cacheModules) pushBack _logic;};
 
     //Save data in resp trigger
     private _aliveUnits = [];
@@ -66,14 +66,14 @@ if(_mode == "init") then {
     _place setVariable [QGVAR(genSoldiers_aliveUnitsCount), count _aliveUnits, true];
 
     //Save data about this unit in parent respawn
-    if(!isNil "_parentUnit") then {
+    if (!isNil "_parentUnit") then {
         private _childUnits = _parentUnit getVariable [QGVAR(genSoldiers_children), []];
         _childUnits pushback _place;
         _parentUnit setVariable [QGVAR(genSoldiers_children), _childUnits];
     };
 
     //SP debug log
-    if(!isMultiplayer) then {systemchat format ["genSoldiers - Generuje %1 AI", _unitCount];};
+    if (!isMultiplayer) then {systemchat format ["genSoldiers - Generuje %1 AI", _unitCount];};
 
     //Start respawn
     private _group = grpNull;
@@ -83,19 +83,19 @@ if(_mode == "init") then {
         private _unitPosition = [];
         private _class = selectRandom _classes;
 
-        if(isNull _group) then {
+        if (isNull _group) then {
             _group = createGroup _side;
             _aliveGroups pushback _group;
             _groupLeader = objNull;
         };
-        if(isNull _groupLeader) then {
+        if (isNull _groupLeader) then {
             //There's no leader so generate position of new group leader
             private _goodPosition = false;
             while {!_goodPosition} do {
                 _goodPosition = true;
                 _unitPosition = _place getPos [random _placeSize, random 360];
                 if (!([_unitPosition, _place] call CBA_fnc_inArea)) then {_goodPosition = false;};
-                {if([_unitPosition, _x] call CBA_fnc_inArea) then {_goodPosition = false;};} forEach _ignore;
+                {if ([_unitPosition, _x] call CBA_fnc_inArea) then {_goodPosition = false;};} forEach _ignore;
             };
         } else  {
             _unitPosition = _groupLeader getPos [(1 + random 3), random 360];
@@ -114,7 +114,7 @@ if(_mode == "init") then {
         //Set cache settings
         _unit setVariable [QGVAR(cacheUnit), _cacheSetting];
         //If limit is reached force next AI to spawn in new group
-        if(count (units _group) >= _groupCount) then {_group = grpNull;};
+        if (count (units _group) >= _groupCount) then {_group = grpNull;};
     };
 
     //Save actual data in place
@@ -124,7 +124,7 @@ if(_mode == "init") then {
     _place setVariable [QGVAR(genSoldiers_aliveUnitsCount), count _aliveUnits, true];
 
     //Add waypoints
-    if(_behaviour == "patrol") then {
+    if (_behaviour == "patrol") then {
         {
             private _group = _x;
             private _waypointMaxCount = 4;
@@ -140,7 +140,7 @@ if(_mode == "init") then {
             };
         } forEach _aliveGroups;
     };
-    if(_behaviour == "defend") then {
+    if (_behaviour == "defend") then {
         {
             private _group = _x;
             private _waypointPosition = _place getPos [(random _placeSize), random 360];
@@ -154,19 +154,19 @@ if(_mode == "init") then {
             {
                 private _static = _x;
                 private _getInThisStatic = true;
-                if(_static isKindOf "StaticMortar") then {_getInThisStatic = false;};
-                if(!canMove _static) then {_getInThisStatic = false;};
-                if(!isNull (gunner _static)) then {_getInThisStatic = false;};
-                if(_getInThisStatic) then {
+                if (_static isKindOf "StaticMortar") then {_getInThisStatic = false;};
+                if (!canMove _static) then {_getInThisStatic = false;};
+                if (!isNull (gunner _static)) then {_getInThisStatic = false;};
+                if (_getInThisStatic) then {
                     private _unit = objNull;
-                    {if(_x == vehicle _x) then {_unit = _x;};} forEach (units _group);
+                    {if (_x == vehicle _x) then {_unit = _x;};} forEach (units _group);
                     _unit assignAsGunner _static;
                     _unit moveInGunner _static;
                 };
             } forEach _staticWeapons;
         } forEach _aliveGroups;
     };
-    if(_behaviour == "base") then {
+    if (_behaviour == "base") then {
         {
             private _group = _x;
             private _waypointPosition = _place getPos [(random _placeSize), random 360];
@@ -183,16 +183,16 @@ if(_mode == "init") then {
     _place setVariable [QGVAR(genSoldiers_respawned), true, true];
 
     //Add groups in cache array
-    if(GVAR(cacheInited)) then {GVAR(cacheGroups) append _aliveGroups;};
+    if (GVAR(cacheInited)) then {GVAR(cacheGroups) append _aliveGroups;};
 
     //Spawn custom script
-    if(!isNil "_script") then {
+    if (!isNil "_script") then {
         {_x spawn _script;} forEach _aliveUnits;
     };
 
     //Add groups to curators
     //ace_zeus to the same?
-    /*if(count allCurators > 0) then {
+    /*if (count allCurators > 0) then {
         {
             private _curator = _x;
             {
@@ -206,7 +206,7 @@ if(_mode == "init") then {
     [_aliveGroups] call FUNC(transferGroups);
 
     //Start debug if SP/Editor
-    if(!isMultiplayer) then {
+    if (!isMultiplayer) then {
         _aliveUnits spawn {
             private _aliveUnits = _this;
             private _allMarkers = [];
@@ -214,10 +214,10 @@ if(_mode == "init") then {
                 _allMarkers = [];
                 {
                     private _unit = _x;
-                    if(alive _unit) then {
+                    if (alive _unit) then {
                         private _marker = createMarkerLocal [str _unit, position _unit];
                         _marker setMarkerTypeLocal "mil_triangle";
-                        _marker setMarkerColorLocal (if(leader (group _unit) == _unit) then {"ColorRed"} else {"ColorBlack"});
+                        _marker setMarkerColorLocal (if (leader (group _unit) == _unit) then {"ColorRed"} else {"ColorBlack"});
                         _marker setMarkerSizeLocal [1, 1];
                         _marker setMarkerDirLocal (getDir _unit);
                         _allMarkers pushBack _marker;
@@ -235,12 +235,12 @@ if(_mode == "init") then {
     _logic call FUNC(setDisposable);
 };
 // EDEN - When some attributes were changed (including position and rotation)
-if(_mode == "attributesChanged3DEN") then {};
+if (_mode == "attributesChanged3DEN") then {};
 // EDEN - When added to the world (e.g., after undoing and redoing creation)
-if(_mode == "registeredToWorld3DEN") then {};
+if (_mode == "registeredToWorld3DEN") then {};
 // When removed from the world (i.e., by deletion or undoing creation)
-if(_mode == "unregisteredFromWorld3DEN") then {};
+if (_mode == "unregisteredFromWorld3DEN") then {};
 // EDEN - When connection to object changes (i.e., new one is added or existing one removed)
-if(_mode == "connectionChanged3DEN") then {};
+if (_mode == "connectionChanged3DEN") then {};
 
 true
