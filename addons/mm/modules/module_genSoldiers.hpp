@@ -85,6 +85,13 @@ class GVAR(module_genSoldiers): A3C_Module {
                 class base {name = CSTRING(ObjectAttribute_CacheSettings_CacheUnit_No_DisplayName); value = "never"; default = 0;};
             };
         };
+        class cacheModule: CheckboxNumber {
+            displayName = CSTRING(Module_GenSoldiers_CacheModule_DisplayName);
+            tooltip = CSTRING(Module_GenSoldiers_CacheModule_Description);
+            property = QGVAR(module_genSoldiers_cacheModule);
+            typeName = "NUMBER";
+            defaultValue = 1;
+        };
         class script: EditMulti3 {
             displayName = CSTRING(Module_GenSoldiers_Script_DisplayName);
             tooltip = CSTRING(Module_GenSoldiers_Script_Description);

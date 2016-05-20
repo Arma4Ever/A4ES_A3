@@ -23,6 +23,7 @@ if (_mode == "init") then {
     private _training = _logic getvariable ["training", "conscripts"];
     private _behaviour = _logic getvariable ["behaviour", "patrol"];
     private _cacheSetting = _logic getvariable ["cache", "noifleader"];
+    private _cacheModule = (_logic getVariable ["cacheModule", 1]) > 0;
     private _script = compile (_logic getVariable ["script", ""]);
     private _ignore = call compile (_logic getVariable ["ignore", "[]"]);
 
@@ -35,7 +36,7 @@ if (_mode == "init") then {
 
     //check distance to nearest player if cache is inited
     private _isVisibleForPlayers = false;
-    if (GVAR(cacheInited)) then {
+    if (GVAR(cacheInited) && {_cacheModule}) then {
         private _playableUnits = [[player], playableUnits] select isMultiplayer;
         {
             private _player = vehicle _x;
@@ -53,7 +54,7 @@ if (_mode == "init") then {
         } forEach _playableUnits;
     };
 
-    if (!_isVisibleForPlayers) exitWith {GVAR(cacheModules) pushBack _logic;};
+    if (!_isVisibleForPlayers && {_cacheModule}) exitWith {GVAR(cacheModules) pushBack _logic;};
 
     //Save data in resp trigger
     private _aliveUnits = [];

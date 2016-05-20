@@ -229,6 +229,12 @@
 			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Ignore_Description">
 				<Original>Tablica z triggerami wewnątrz podanego obszaru respawnu w których AI ma się nie respić aby wykluczyć np. wygenerowanie w budynkach lub w trudno dostępnych miejscach (np. [trig01,trig02])</Original>
 			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_CacheModule_DisplayName">
+				<Original>Cache modułu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_CacheModule_Description">
+				<Original>Czy system cache ma wstrzymać wykonanie modułu do czasu aż gracze zbliżą się na podaną w ustawieniach cache odległość?</Original>
+			</Key>
 		</Container>
 		<Container name="A3CS_MM_Module_GenAttack">
 			<Key ID="STR_A3CS_MM_Module_GenAttack_DisplayName">
