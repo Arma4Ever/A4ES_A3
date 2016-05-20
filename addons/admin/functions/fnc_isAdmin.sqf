@@ -4,11 +4,9 @@
  */
 #include "script_component.hpp"
 
-params [["_unit", objNull, [objNull]]];
+private _unit = player;
 
-if(!isMultiplayer) exitWith {true};
-if(!isPlayer _unit) exitWith {false};
-
+if (!isMultiplayer) exitWith {true};
 private _adminConfigs = "true" configClasses (configFile >> QGVAR(admins));
 private _allAdminsUIDs = [];
 {
@@ -17,6 +15,9 @@ private _allAdminsUIDs = [];
 } foreach _adminConfigs;
 
 private _unitUID = getPlayerUID _unit;
-if(_unitUID in _allAdminsUIDs) exitWith {true};
+if (isNull _unit) then {
+    _unitUID = profilenamespace getVariable ["player_uid", "0"];
+};
+if (_unitUID in _allAdminsUIDs) exitWith {true};
 
 false

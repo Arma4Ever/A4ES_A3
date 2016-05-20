@@ -11,7 +11,7 @@
 //Server admin global info check
 [{
     _serverAdmin = missionNamespace getVariable [QGVAR(serverAdmin), objNull];
-    if(!(player isEqualTo _serverAdmin) && {player call FUNC(isServerAdmin)}) then {
+    if(!(player isEqualTo _serverAdmin) && {[] call FUNC(isServerAdmin)}) then {
         missionNamespace setVariable [QGVAR(serverAdmin), player, true];
     };
 }, 10, []] call CBA_fnc_addPerFrameHandler;

@@ -1,13 +1,10 @@
 #include "script_component.hpp"
 
 if (hasInterface && {isMultiplayer}) then {
-    private ["_uid"];
-    _uid = getPlayerUID player;
+    private _uid = getPlayerUID player;
 
     //Save UID
-    if((profilenamespace getVariable ["player_uid", "0"]) == "0") then {
-        private ["_uid"];
-        _uid = getPlayerUID player;
+    if(!isNull player && _uid != "") then {
         profilenamespace setVariable ["player_uid", _uid];
         saveProfileNamespace;
     };

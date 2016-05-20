@@ -4,12 +4,11 @@
  */
 #include "script_component.hpp"
 
-params [["_unit", objNull, [objNull]]];
+private _unit = player;
 
-if(!isMultiplayer) exitWith {true};
-if(!isPlayer _unit) exitWith {false};
+private _return = false;
 
-if (_unit isEqualTo player && {serverCommandAvailable "#logout"}) exitWith {true};
-if (!(_unit isEqualTo player) && {(missionNamespace getVariable [QGVAR(serverAdmin), objNull]) isEqualTo _unit}) exitWith {true};
+if (!isMultiplayer) exitWith {true};
+if (serverCommandAvailable "#logout") exitWith {true};
 
 _return
