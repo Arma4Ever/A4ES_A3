@@ -10,10 +10,10 @@ private _active = _place getVariable [QGVAR(genAttack_active), false];
 private _startTime = _place getVariable [QGVAR(genAttack_startTime), 0];
 
 //attack already expired
-if(!_active) exitWith {};
+if (!_active) exitWith {};
 
 //exit if some generated units are still alive
-if(count (_place getVariable [QGVAR(genAttack_aliveUnits), []]) > 0) exitWith {};
+if (count (_place getVariable [QGVAR(genAttack_aliveUnits), []]) > 0) exitWith {};
 
 //Load place data
 private _placeSize = _place getVariable [QGVAR(genAttack_placeSize), 0];
@@ -32,20 +32,20 @@ private _ignore = _place getVariable [QGVAR(genAttack_ignore), []];
 private _genCount = _place getVariable [QGVAR(genAttack_genCount), 0];
 
 //check time condition
-if(_timeCondition > 0 && {(ACE_time - _startTime) >= _timeCondition}) then {_active = false;};
+if (_timeCondition > 0 && {(ACE_time - _startTime) >= _timeCondition}) then {_active = false;};
 //check count condition
-if(_countCondition > 0 && {_genCount >= _countCondition}) then {_active = false;};
+if (_countCondition > 0 && {_genCount >= _countCondition}) then {_active = false;};
 //check expression condition
-if(!(call _codeCondition)) then {_active = false};
+if (!(call _codeCondition)) then {_active = false};
 //If attack no longer active set place as not active and log exit
-if(!_active) exitWith {
+if (!_active) exitWith {
     _place setVariable [QGVAR(genAttack_active), false, true];
-    if(!isMultiplayer) then {systemchat "genAttack - Koniec ataku";};
+    if (!isMultiplayer) then {systemchat "genAttack - Koniec ataku";};
     LOG("genAttack_genUnits: Koniec ataku");
 };
 
 //if count is unlimited make in always up to the limit
-if(_countCondition <= 0) then {_countCondition = (_genCount + _waveCount) + 1;};
+if (_countCondition <= 0) then {_countCondition = (_genCount + _waveCount) + 1;};
 
 //Start respawn
 private _newGroups = [];
@@ -60,30 +60,30 @@ private _attackPosition = getMarkerPos _attackTarget;
 //Save gen counter
 _genCount = _genCount + _unitCount;
 _place setVariable [QGVAR(genAttack_genCount), _genCount];
-if(!isMultiplayer) then {systemchat format ["genAttack - Generuje %1 AI", _unitCount];};
+if (!isMultiplayer) then {systemchat format ["genAttack - Generuje %1 AI", _unitCount];};
 TRACE_1("genAttack_genUnits: Generuje AI",_unitCount);
 
 for "_spawnCounter" from 1 to _unitCount do {
     private _unitPosition = [];
     private _class = selectRandom _classes;
 
-    if(isNull _group) then {
+    if (isNull _group) then {
         _group = createGroup _side;
         _newGroups pushback _group;
         _groupLeader = objNull;
         _groupVehicle = objNull;
     };
-    if(isNull _groupLeader) then {
+    if (isNull _groupLeader) then {
         //There's no leader so generate position of new group leader or group vehicle
         private _goodPosition = false;
         while {!_goodPosition} do {
             _goodPosition = true;
             _unitPosition = _place getPos [random _placeSize, random 360];
             if (!([_unitPosition, _place] call CBA_fnc_inArea)) then {_goodPosition = false;};
-            {if([_unitPosition, _x] call CBA_fnc_inArea) then {_goodPosition = false;};} forEach _ignore;
+            {if ([_unitPosition, _x] call CBA_fnc_inArea) then {_goodPosition = false;};} forEach _ignore;
         };
     } else  {
-        if(isNull _groupVehicle) then {
+        if (isNull _groupVehicle) then {
             //if no vehicle spawn at leader
             _unitPosition = _groupLeader getPos [(1 + random 3), random 360];
         } else {
@@ -92,7 +92,7 @@ for "_spawnCounter" from 1 to _unitCount do {
         };
     };
     //Create vehicle is possible
-    if(isNull _groupLeader && _groupVehicleClass != "") then {
+    if (isNull _groupLeader && _groupVehicleClass != "") then {
         _groupVehicle = createVehicle [_groupVehicleClass, _unitPosition, [], 0, "FORM"];
         _groupVehicle setDir (_groupVehicle getDir _attackPosition);
     };
@@ -115,9 +115,9 @@ for "_spawnCounter" from 1 to _unitCount do {
     //Disable suppression
     _unit disableAI "SUPPRESSION";
     //Move to vehicle if present
-    if(!isNull _groupVehicle) then {_unit moveInAny _groupVehicle;};
+    if (!isNull _groupVehicle) then {_unit moveInAny _groupVehicle;};
     //If limit is reached force next AI to spawn in new group
-    if(count (units _group) >= _groupCount) then {_group = grpNull;};
+    if (count (units _group) >= _groupCount) then {_group = grpNull;};
 };
 
 //Add waypoints
@@ -140,18 +140,18 @@ _aliveUnits append _newUnits;
 _place setVariable [QGVAR(genSoldiers_aliveGroups), _aliveGroups];
 _place setVariable [QGVAR(genAttack_aliveUnits), _aliveUnits];
 
-//Add groups in cache array
-if(GVAR(cacheInited)) then {GVAR(cacheGroups) append _newGroups;};
+//Add groups in cache array - not in genAttack
+//if (GVAR(cacheInited)) then {GVAR(cacheGroups) append _newGroups;};
 
 //Spawn custom script
-if(!isNil "_script") then {
+if (!isNil "_script") then {
     {_x spawn _script;} forEach _newUnits;
 };
 
 //Add groups to curators
 //ace_zeus to the same?
 /*
-if(count allCurators > 0) then {
+if (count allCurators > 0) then {
     {
         private _curator = _x;
         {
@@ -166,7 +166,7 @@ if(count allCurators > 0) then {
 [_newGroups] call FUNC(transferGroups);
 
 //Start debug if SP/Editor
-if(!isMultiplayer) then {
+if (!isMultiplayer) then {
     _newUnits spawn {
         private _aliveUnits = _this;
         private _allMarkers = [];
@@ -174,10 +174,10 @@ if(!isMultiplayer) then {
             _allMarkers = [];
             {
                 private _unit = _x;
-                if(alive _unit) then {
+                if (alive _unit) then {
                     private _marker = createMarkerLocal [str _unit, position _unit];
                     _marker setMarkerTypeLocal "mil_triangle";
-                    _marker setMarkerColorLocal (if(leader (group _unit) == _unit) then {"ColorRed"} else {"ColorBlack"});
+                    _marker setMarkerColorLocal (if (leader (group _unit) == _unit) then {"ColorRed"} else {"ColorBlack"});
                     _marker setMarkerSizeLocal [1, 1];
                     _marker setMarkerDirLocal (getDir _unit);
                     _allMarkers pushBack _marker;
