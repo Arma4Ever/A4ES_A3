@@ -7,8 +7,17 @@
 	    <Key ID="STR_A3CS_Vehicleactions_Actions_DisassembleUAV">
             <Original>Spakuj drona</Original>
         </Key>
+	    <Key ID="STR_A3CS_Vehicleactions_Actions_TurnVehicle">
+            <Original>Obróć pojazd</Original>
+        </Key>
 	    <Key ID="STR_A3CS_Vehicleactions_ToggleCollisionLights_DisplayName">
             <Original>Włącz/Wyłącz światła pozycyjne</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Vehicleactions_Eden_DisallowTurnVehicle_DisplayName">
+            <Original>Zablokuj obracanie pojazdu</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Vehicleactions_Eden_DisallowTurnVehicle_Description">
+            <Original>Zablokuj opcję kierowcy "Obróć pojazd" w przypadku przewrócenia się pojazdu</Original>
         </Key>
     </Package>
 </Project>

@@ -12,4 +12,5 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "Cfg3den.hpp"
 #include "CfgActions.hpp"
