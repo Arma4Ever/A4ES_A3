@@ -14,25 +14,31 @@ if (_mode == "init") then {
     if (!(_logic call FUNC(canExecuteModule))) exitWith {WARNING("genSoldiers: blokuje wykonanie modulu");true};
 
     //Load module params
-    private _place = call compile (_logic getVariable ["place", ""]);
+    private _logicAreaParams = _logic getvariable "objectArea";
     private _parentUnit = call compile (_logic getvariable ["parentUnit", ""]);
     private _unitCount = _logic getvariable ["unitCount", 0];
     private _side = call compile (_logic getVariable ["side", "west"]);
     private _classes = call compile (_logic getVariable ["classes", "[]"]);
     private _groupCount = _logic getVariable ["groupCount", 0];
     private _training = _logic getvariable ["training", "conscripts"];
+    private _vehicle = _logic getvariable ["vehicle", ""];
     private _behaviour = _logic getvariable ["behaviour", "patrol"];
+    private _patrolWaypointCount = _logic getvariable ["patrolWaypointCount", 4];
+    private _patrolWaypoints = call compile (_logic getVariable ["patrolWaypoints", "[]"]);
+    private _formation = _logic getvariable ["formation", "COLUMN"];
     private _cacheSetting = _logic getvariable ["cache", "noifleader"];
     private _cacheModule = (_logic getVariable ["cacheModule", 1]) > 0;
     private _script = compile (_logic getVariable ["script", ""]);
-    private _ignore = call compile (_logic getVariable ["ignore", "[]"]);
 
-    //Calc size of spawn place and save data for cache
-    private _placeShape = if ((triggerArea _place) select 3) then {"rectangle"} else {"ellipse"};
-    private _placeSize = ((triggerArea _place) select 0) max ((triggerArea _place) select 1);
-    _placeSize = if (_placeShape == "ellipse") then {_placeSize + (_placeSize/5)} else {_placeSize + (_placeSize/2)};
-    _logic setVariable ["placeObj", _place];
-    _logic setVariable ["placeSize", _placeSize];
+    if (isNil "_classes") then {_classes = [];};
+    if (isNil "_patrolWaypoints") then {_patrolWaypoints = [];};
+
+    //Calc size of logic and save data for cache
+    _logicAreaParams params ["_logicSizeX","_logicSizeY", "_logicAngle", "_logicIsRectangle"];
+    private _logicArea = [_logic, _logicSizeX, _logicSizeY, _logicAngle, _logicIsRectangle];
+    private _logicSize = _logicSizeX max _logicSizeY;
+    private _logicSizeMin = _logicSizeX min _logicSizeY;
+    _logic setVariable ["logicSize", _logicSize];
 
     //check distance to nearest player if cache is inited
     private _isVisibleForPlayers = false;
@@ -40,7 +46,7 @@ if (_mode == "init") then {
         private _playableUnits = [[player], playableUnits] select isMultiplayer;
         {
             private _player = vehicle _x;
-            private _distance = ((_place distance _player) - _placeSize) max 0;
+            private _distance = ((_logic distance _player) - _logicSize) max 0;
             if (GVAR(cacheDistanceLand) > 0) then {
                 if (_distance < GVAR(cacheDistanceLand) && {_player iskindOf "Land"}) exitWith {_isVisibleForPlayers = true;};
                 if (_distance < GVAR(cacheDistanceLand) && {_player iskindOf "Ship"}) exitWith {_isVisibleForPlayers = true;};
@@ -56,20 +62,20 @@ if (_mode == "init") then {
 
     if (!_isVisibleForPlayers && {_cacheModule}) exitWith {GVAR(cacheModules) pushBack _logic;};
 
-    //Save data in resp trigger
+    //Save data in logic
     private _aliveUnits = [];
     private _aliveGroups = [];
 
-    _place setVariable [QGVAR(genSoldiers_unitCount), _unitCount];
-    _place setVariable [QGVAR(genSoldiers_aliveUnits), _aliveUnits];
-    _place setVariable [QGVAR(genSoldiers_aliveGroups), _aliveGroups];
+    _logic setVariable [QGVAR(genSoldiers_unitCount), _unitCount];
+    _logic setVariable [QGVAR(genSoldiers_aliveUnits), _aliveUnits];
+    _logic setVariable [QGVAR(genSoldiers_aliveGroups), _aliveGroups];
     //api
-    _place setVariable [QGVAR(genSoldiers_aliveUnitsCount), count _aliveUnits, true];
+    _logic setVariable [QGVAR(genSoldiers_aliveUnitsCount), count _aliveUnits, true];
 
     //Save data about this unit in parent respawn
     if (!isNil "_parentUnit") then {
         private _childUnits = _parentUnit getVariable [QGVAR(genSoldiers_children), []];
-        _childUnits pushback _place;
+        _childUnits pushback _logic;
         _parentUnit setVariable [QGVAR(genSoldiers_children), _childUnits];
     };
 
@@ -79,6 +85,7 @@ if (_mode == "init") then {
     //Start respawn
     private _group = grpNull;
     private _groupLeader = objNull;
+    private _groupVehicle = objNull;
     private _spawnCounter = 0;
     for "_spawnCounter" from 1 to _unitCount do {
         private _unitPosition = [];
@@ -88,25 +95,55 @@ if (_mode == "init") then {
             _group = createGroup _side;
             _aliveGroups pushback _group;
             _groupLeader = objNull;
+            _groupVehicle = objNull;
         };
         if (isNull _groupLeader) then {
             //There's no leader so generate position of new group leader
             private _goodPosition = false;
             while {!_goodPosition} do {
                 _goodPosition = true;
-                _unitPosition = _place getPos [random _placeSize, random 360];
-                if (!([_unitPosition, _place] call CBA_fnc_inArea)) then {_goodPosition = false;};
-                {if ([_unitPosition, _x] call CBA_fnc_inArea) then {_goodPosition = false;};} forEach _ignore;
+                _unitPosition = _logic getPos [random _logicSize, random 360];
+                if (!(_unitPosition inArea _logicArea)) then {_goodPosition = false;};
             };
         } else  {
-            _unitPosition = _groupLeader getPos [(1 + random 3), random 360];
+            if (_vehicle != "" && {!isNull _groupVehicle}) then {
+                _unitPosition = _groupVehicle getPos [(1 + random 3), random 360];
+            } else {
+                _unitPosition = _groupLeader getPos [(1 + random 3), random 360];
+            };
+        };
+        if (_vehicle != "" && {isNull _groupVehicle}) then {
+            private _logicRoads = _logic nearRoads _logicSize;
+            private _vehiclePosition = [];
+            private _vehicleDir = random 360;
+            if (count _logicRoads > 0) then {
+                private _goodPosition = false;
+                while {!_goodPosition} do {
+                    if (count _logicRoads > 0) then {
+                        _goodPosition = true;
+                        private _road = selectRandom _logicRoads;
+                        _vehiclePosition = getPos _road;
+                        _vehicleDir = getDir _road;
+                        if (!(_vehiclePosition inArea _logicArea)) then {
+                            _goodPosition = false;
+                            _logicRoads deleteAt (_logicRoads find _road);
+                        };
+                    } else {
+                        _vehiclePosition = _unitPosition;
+                    };
+                };
+            } else {
+                _vehiclePosition = _unitPosition;
+            };
+            _groupVehicle = createVehicle [_vehicle, _vehiclePosition, [], 0, "FORM"];
+            _groupVehicle setDir _vehicleDir;
         };
         _unit = _group createUnit [_class, _unitPosition, [], 0, "FORM"];
         _groupLeader = leader _group;
         _unit setVariable ["a3cs_generated", true, true];
         _unit setVariable [QGVAR(genSoldiers), true, true];
         _unit setVariable ["ACE_Name", name _unit, true];
-        _unit setVariable [QGVAR(genSoldiers_place), _place];
+        _unit setVariable [QGVAR(genSoldiers_logic), _logic];
         _unit setVariable [QGVAR(genSoldiers_group), _group];
         _aliveUnits pushback _unit;
         //Set skill level
@@ -114,42 +151,88 @@ if (_mode == "init") then {
         _unit setVariable [QGVAR(training), _training, true];
         //Set cache settings
         _unit setVariable [QGVAR(cacheUnit), _cacheSetting];
+        //Move unit in vehicle
+        if (_vehicle != "" && {!isNull _groupVehicle}) then {_unit moveInAny _groupVehicle;};
         //If limit is reached force next AI to spawn in new group
         if (count (units _group) >= _groupCount) then {_group = grpNull;};
     };
 
     //Save actual data in place
-    _place setVariable [QGVAR(genSoldiers_aliveUnits), _aliveUnits];
-    _place setVariable [QGVAR(genSoldiers_aliveGroups), _aliveGroups];
+    _logic setVariable [QGVAR(genSoldiers_aliveUnits), _aliveUnits];
+    _logic setVariable [QGVAR(genSoldiers_aliveGroups), _aliveGroups];
     //api
-    _place setVariable [QGVAR(genSoldiers_aliveUnitsCount), count _aliveUnits, true];
+    _logic setVariable [QGVAR(genSoldiers_aliveUnitsCount), count _aliveUnits, true];
 
     //Add waypoints
     if (_behaviour == "patrol") then {
         {
             private _group = _x;
-            private _waypointMaxCount = 4;
             private _waypointCounter = 0;
-            for "_waypointCounter" from 1 to _waypointMaxCount do {
-                private _waypointPosition = _place getPos [(random _placeSize), random 360];
-                private _waypoint = _group addWaypoint [_waypointPosition, 0];
-                _waypoint setWaypointType (["MOVE", "CYCLE"] select (_waypointCounter == _waypointMaxCount));
-                _waypoint setWaypointBehaviour "SAFE";
-                _waypoint setWaypointCombatMode "RED";
-                _waypoint setWaypointSpeed "LIMITED";
-                _waypoint setWaypointCompletionRadius 5;
+            private _lastAddedWaypoint = [];
+            if (count _patrolWaypoints > 0) then {
+                {
+                    private _markerPosition = getMarkerPos _x;
+                    private _waypoint = _group addWaypoint [_markerPosition, 0];
+                    _waypoint setWaypointType "MOVE";
+                    _waypoint setWaypointBehaviour "SAFE";
+                    _waypoint setWaypointCombatMode "RED";
+                    _waypoint setWaypointSpeed "LIMITED";
+                    _waypoint setWaypointFormation _formation;
+                    _waypoint setWaypointCompletionRadius 2;
+
+                    if ((_forEachIndex + 1) == count _patrolWaypoints) then {
+                        private _lastWaypoint = _group addWaypoint [_markerPosition, 0];
+                        _lastWaypoint setWaypointType "CYCLE";
+                        _lastWaypoint setWaypointBehaviour "SAFE";
+                        _lastWaypoint setWaypointCombatMode "RED";
+                        _lastWaypoint setWaypointSpeed "LIMITED";
+                        _lastWaypoint setWaypointFormation _formation;
+                        _lastWaypoint setWaypointCompletionRadius 2;
+                    };
+                } forEach _patrolWaypoints;
+            } else {
+                for "_waypointCounter" from 1 to _patrolWaypointCount do {
+                    private _waypointPosition = [];
+                    private _goodPosition = false;
+                    while {!_goodPosition} do {
+                        _goodPosition = true;
+                        _waypointPosition = _logic getPos [random _logicSize, random 360];
+                        if (!(_waypointPosition inArea _logicArea)) then {_goodPosition = false;};
+                        if (count _lastAddedWaypoint > 0) then {
+                            if ((_waypointPosition distance (waypointPosition _lastAddedWaypoint)) < (_logicSizeMin/3)) then {_goodPosition = false;};
+                        };
+                    };
+                    private _waypoint = _group addWaypoint [_waypointPosition, 0];
+                    _waypoint setWaypointType "MOVE";
+                    _waypoint setWaypointBehaviour "SAFE";
+                    _waypoint setWaypointCombatMode "RED";
+                    _waypoint setWaypointSpeed "LIMITED";
+                    _waypoint setWaypointFormation _formation;
+                    _waypoint setWaypointCompletionRadius 5;
+                    _lastAddedWaypoint = _waypoint;
+                    if (_waypointCounter == _patrolWaypointCount) then {
+                        private _lastWaypoint = _group addWaypoint [_waypointPosition, 0];
+                        _lastWaypoint setWaypointType "CYCLE";
+                        _lastWaypoint setWaypointBehaviour "SAFE";
+                        _lastWaypoint setWaypointCombatMode "RED";
+                        _lastWaypoint setWaypointSpeed "LIMITED";
+                        _lastWaypoint setWaypointFormation _formation;
+                        _lastWaypoint setWaypointCompletionRadius 2;
+                    };
+                };
             };
         } forEach _aliveGroups;
     };
     if (_behaviour == "defend") then {
         {
             private _group = _x;
-            private _waypointPosition = _place getPos [(random _placeSize), random 360];
+            private _waypointPosition = _logic getPos [(random _logicSize), random 360];
             private _waypoint = _group addWaypoint [_waypointPosition, 0];
             _waypoint setWaypointType "MOVE";
             _waypoint setWaypointBehaviour "COMBAT";
             _waypoint setWaypointCombatMode "RED";
             _waypoint setWaypointSpeed "NORMAL";
+            _waypoint setWaypointFormation _formation;
             _waypoint setWaypointCompletionRadius 30;
             _staticWeapons = _waypointPosition nearEntities ["StaticWeapon", 30];
             {
@@ -170,18 +253,19 @@ if (_mode == "init") then {
     if (_behaviour == "base") then {
         {
             private _group = _x;
-            private _waypointPosition = _place getPos [(random _placeSize), random 360];
+            private _waypointPosition = _logic getPos [(random _logicSize), random 360];
             private _waypoint = _group addWaypoint [_waypointPosition, 0];
             _waypoint setWaypointType "MOVE";
             _waypoint setWaypointBehaviour "SAFE";
             _waypoint setWaypointCombatMode "RED";
             _waypoint setWaypointSpeed "LIMITED";
+            _waypoint setWaypointFormation _formation;
             _waypoint setWaypointCompletionRadius 30;
         } forEach _aliveGroups;
     };
 
     //Set place as respawned
-    _place setVariable [QGVAR(genSoldiers_respawned), true, true];
+    _logic setVariable [QGVAR(genSoldiers_respawned), true, true];
 
     //Add groups in cache array
     if (GVAR(cacheInited)) then {GVAR(cacheGroups) append _aliveGroups;};

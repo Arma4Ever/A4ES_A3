@@ -1,17 +1,17 @@
 /*
  * Author: SzwedzikPL
- * Return count of alive units which were spawned on given trigger. Part of A3CS public API
+ * Return count of alive units which were spawned by given module. Part of A3CS public API
  */
 #include "script_component.hpp"
 
-params [["_place", objNull, [objNull]]];
+params [["_logic", objNull, [objNull]]];
 
-if(isNull _place || {!(_place isKindOf "EmptyDetector")}) exitWith {-1};
+if (isNull _logic) exitWith {-1};
 
 private _return = -1;
 
-if(_place getVariable [QEGVAR(mm,genSoldiers_respawned), false]) then {
-    _return = _place getVariable [QEGVAR(mm,genSoldiers_aliveUnitsCount), 0];
+if (_logic getVariable [QEGVAR(mm,genSoldiers_respawned), false]) then {
+    _return = _logic getVariable [QEGVAR(mm,genSoldiers_aliveUnitsCount), 0];
 };
 
 _return

@@ -46,7 +46,7 @@ if(({alive _x} count (units _group)) > 0) then {
     //no alive units in group, clean data
     GVAR(cacheGroups) deleteAt (GVAR(cacheGroups) find _group);
     if(!isMultiplayer) then {systemchat "Cache - Usuwam pusta grupe AI";};
-    {deleteWaypoint _x;} forEach (waypoints _group);
+    {deleteWaypoint [_group, 0];} forEach (waypoints _group);
     deleteGroup _group;
 };
 
@@ -55,7 +55,7 @@ if(isMultiplayer && {GVAR(cacheGroupIndex) == 0}) then {
     {
         private _group = _x;
         if(({alive _x} count (units _group)) > 0) then {
-            {deleteWaypoint _x;} forEach (waypoints _group);
+            {deleteWaypoint [_group, 0];} forEach (waypoints _group);
             deleteGroup _group;
             if(_group in GVAR(cacheGroups)) then {
                 GVAR(cacheGroups) deleteAt (GVAR(cacheGroups) find _group);

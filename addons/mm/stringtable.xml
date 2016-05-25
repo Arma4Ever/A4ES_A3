@@ -145,17 +145,11 @@
 			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Description">
 				<Original>Moduł generowania jednostek&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Place_DisplayName">
-				<Original>Obszar respawnu</Original>
-			</Key>
-			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Place_Description">
-				<Original>Nazwa triggera w którym mają się wygenerować jednostki</Original>
-			</Key>
 			<Key ID="STR_A3CS_MM_Module_GenSoldiers_ParentUnit_DisplayName">
 				<Original>Jednostka nadrzędna</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_GenSoldiers_ParentUnit_Description">
-				<Original>Nazwa triggera (obszaru respawnu) któremu wygenerowane jednostki ruszą z pomocą w przypadku ataku. Zostaw puste jeśli jednostka ma być samodzielna</Original>
+				<Original>Nazwa modułu któremu wygenerowane jednostki ruszą z pomocą w przypadku ataku. Zostaw puste jeśli jednostka ma być samodzielna</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_GenSoldiers_UnitCount_DisplayName">
 				<Original>Ilość AI</Original>
@@ -202,6 +196,12 @@
 			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Training_Elite_DisplayName">
 				<Original>Jednostki specjalne</Original>
 			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Vehicle_DisplayName">
+				<Original>Pojazd</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Vehicle_Description">
+				<Original>Klasa pojazdu który będzie wykorzystywany przez grupę do transportu i walki np. B_MRAP_01_F</Original>
+			</Key>
 			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Behaviour_DisplayName">
 				<Original>Zachowanie AI</Original>
 			</Key>
@@ -217,17 +217,58 @@
 			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Behaviour_Base_DisplayName">
 				<Original>Oczekiwanie w bazie</Original>
 			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_PatrolWaypointCount_DisplayName">
+				<Original>Waypointy patrolowe</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_PatrolWaypointCount_Description">
+				<Original>Ile waypointów ma zostać wygenerowanych dla każdej grupy w przypadku patrolu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_PatrolWaypoints_DisplayName">
+				<Original>Własne waypointy patrolowe</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_PatrolWaypoints_Description">
+				<Original>Tablica z nazwami markerów które określają pozycje waypointów po których mają chodzić wygenerowane grupy np. ["marker1", "marker2"]</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Formation_DisplayName">
+				<Original>Formacja</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Formation_Description">
+				<Original>Formacja używana przez grupy podczas poruszania się</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Formation_Column_DisplayName">
+				<Original>Kolumna</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Formation_StagColumn_DisplayName">
+				<Original>Kolumna schodkowa</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Formation_Wedge_DisplayName">
+				<Original>Strzała</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Formation_EchLeft_DisplayName">
+				<Original>Lewy eszelon</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Formation_EchRight_DisplayName">
+				<Original>Prawy eszelon</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Formation_Vee_DisplayName">
+				<Original>V</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Formation_Line_DisplayName">
+				<Original>Linia</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Formation_File_DisplayName">
+				<Original>Zwarta kolumna</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Formation_Diamond_DisplayName">
+				<Original>Diament</Original>
+			</Key>
+			
+			
 			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Script_DisplayName">
 				<Original>Skrypt jednostki</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Script_Description">
 				<Original>Skrypt który zostanie wykonany dla każdej wykonanej jednostki (np. _this setSkill 0.7)</Original>
-			</Key>
-			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Ignore_DisplayName">
-				<Original>Lista obszarów ignorowanych</Original>
-			</Key>
-			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Ignore_Description">
-				<Original>Tablica z triggerami wewnątrz podanego obszaru respawnu w których AI ma się nie respić aby wykluczyć np. wygenerowanie w budynkach lub w trudno dostępnych miejscach (np. [trig01,trig02])</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_GenSoldiers_CacheModule_DisplayName">
 				<Original>Cache modułu</Original>

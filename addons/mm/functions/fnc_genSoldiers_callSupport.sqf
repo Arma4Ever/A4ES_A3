@@ -6,12 +6,13 @@
 
 if(!isServer) exitWith {};
 
-params ["_childPlace", "_parentPlace"];
+params ["_childLogic", "_parentLogic"];
 
-private _childRespawned = _childPlace getVariable [QGVAR(genSoldiers_respawned), false];
+private _childRespawned = _childLogic getVariable [QGVAR(genSoldiers_respawned), false];
 if(!_childRespawned) exitWith {};
 
-private _childGroups = _childPlace getVariable [QGVAR(genSoldiers_aliveGroups), []];
+private _formation = _childLogic getvariable ["formation", "COLUMN"];
+private _childGroups = _childLogic getVariable [QGVAR(genSoldiers_aliveGroups), []];
 {
     private _group = _x;
     private _leader = leader _group;
@@ -36,14 +37,14 @@ private _childGroups = _childPlace getVariable [QGVAR(genSoldiers_aliveGroups), 
     } forEach _nearestVehicles;
 
     //Remove existing waypoints
-    {deleteWaypoint _x;} foreach (waypoints _group);
+    {deleteWaypoint [_group, 0];} foreach (waypoints _group);
 
     private _waypointCount = 0;
     private _waypoint = [];
 
     if(!isNull _useVehicle) then {
         _useVehicle setVariable [QGVAR(genSoldiers_usedByGroup), true];
-        _waypoint = _group addWaypoint [position _useVehicle, _waypointCount];
+        _waypoint = _group addWaypoint [position _useVehicle, 0, _waypointCount];
         _waypoint setWaypointType "GETIN";
         _waypoint setWaypointBehaviour "AWARE";
         _waypoint setWaypointCombatMode "RED";
@@ -51,9 +52,10 @@ private _childGroups = _childPlace getVariable [QGVAR(genSoldiers_aliveGroups), 
         _waypoint waypointAttachVehicle _useVehicle;
         _waypointCount = _waypointCount + 1;
     };
-    _waypoint = _group addWaypoint [position _parentPlace, _waypointCount];
+    _waypoint = _group addWaypoint [position _parentLogic, 0, _waypointCount];
     _waypoint setWaypointType "MOVE";
     _waypoint setWaypointBehaviour "AWARE";
     _waypoint setWaypointCombatMode "RED";
     _waypoint setWaypointSpeed "FULL";
+    _waypoint setWaypointFormation _formation;
 } forEach _childGroups;

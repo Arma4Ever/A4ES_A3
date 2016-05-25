@@ -4,14 +4,12 @@ class GVAR(module_genSoldiers): A3C_Module {
     displayName = CSTRING(Module_GenSoldiers_DisplayName);
     category = "a3cs_modules_ai";
     function = QUOTE(DFUNC(module_genSoldiers));
+    canSetArea = 1;
+    class AttributeValues {
+        size3[] = {50,50,-1};
+    };
 
     class Attributes: AttributesBase {
-        class place: Edit {
-            displayName = CSTRING(Module_GenSoldiers_Place_DisplayName);
-            tooltip = CSTRING(Module_GenSoldiers_Place_Description);
-            property = QGVAR(module_genSoldiers_place);
-            validate = "variable";
-        };
         class parentUnit: Edit {
             displayName = CSTRING(Module_GenSoldiers_ParentUnit_DisplayName);
             tooltip = CSTRING(Module_GenSoldiers_ParentUnit_Description);
@@ -63,6 +61,12 @@ class GVAR(module_genSoldiers): A3C_Module {
                 class elite {name = CSTRING(Module_GenSoldiers_Training_Elite_DisplayName); value = "elite"; default = 0;};
             };
         };
+        class vehicle: Edit {
+            displayName = CSTRING(Module_GenSoldiers_Vehicle_DisplayName);
+            tooltip = CSTRING(Module_GenSoldiers_Vehicle_Description);
+            property = QGVAR(module_genSoldiers_vehicle);
+            defaultValue = "''";
+        };
         class behaviour: Combo {
             displayName = CSTRING(Module_GenSoldiers_Behaviour_DisplayName);
             tooltip = CSTRING(Module_GenSoldiers_Behaviour_Description);
@@ -72,6 +76,36 @@ class GVAR(module_genSoldiers): A3C_Module {
                 class patrol {name = CSTRING(Module_GenSoldiers_Behaviour_Patrol_DisplayName); value = "patrol"; default = 1;};
                 class defend {name = CSTRING(Module_GenSoldiers_Behaviour_Defend_DisplayName); value = "defend"; default = 0;};
                 class base {name = CSTRING(Module_GenSoldiers_Behaviour_Base_DisplayName); value = "base"; default = 0;};
+            };
+        };
+        class patrolWaypointCount: Edit {
+            displayName = CSTRING(Module_GenSoldiers_PatrolWaypointCount_DisplayName);
+            tooltip = CSTRING(Module_GenSoldiers_PatrolWaypointCount_Description);
+            property = QGVAR(module_genSoldiers_patrolWaypointCount);
+            typeName = "NUMBER";
+            defaultValue = 4;
+        };
+        class patrolWaypoints: EditMulti3 {
+            displayName = CSTRING(Module_GenSoldiers_PatrolWaypoints_DisplayName);
+            tooltip = CSTRING(Module_GenSoldiers_PatrolWaypoints_Description);
+            property = QGVAR(module_genSoldiers_patrolWaypoints);
+            defaultValue = "'[]'";
+        };
+        class formation: Combo {
+            displayName = CSTRING(Module_GenSoldiers_Formation_DisplayName);
+            tooltip = CSTRING(Module_GenSoldiers_Formation_Description);
+            property = QGVAR(module_genSoldiers_formation);
+            defaultValue = "'COLUMN'";
+            class values {
+                class column {name = CSTRING(Module_GenSoldiers_Formation_Column_DisplayName); value = "COLUMN"; default = 1;};
+                class stagColumn {name = CSTRING(Module_GenSoldiers_Formation_StagColumn_DisplayName); value = "STAG COLUMN"; default = 0;};
+                class wedge {name = CSTRING(Module_GenSoldiers_Formation_Wedge_DisplayName); value = "WEDGE"; default = 0;};
+                class echLeft {name = CSTRING(Module_GenSoldiers_Formation_EchLeft_DisplayName); value = "ECH LEFT"; default = 0;};
+                class echRight {name = CSTRING(Module_GenSoldiers_Formation_EchRight_DisplayName); value = "ECH RIGHT"; default = 0;};
+                class vee {name = CSTRING(Module_GenSoldiers_Formation_Vee_DisplayName); value = "VEE"; default = 0;};
+                class line {name = CSTRING(Module_GenSoldiers_Formation_Line_DisplayName); value = "LINE"; default = 0;};
+                class file {name = CSTRING(Module_GenSoldiers_Formation_File_DisplayName); value = "FILE"; default = 0;};
+                class diamond {name = CSTRING(Module_GenSoldiers_Formation_Diamond_DisplayName); value = "DIAMOND"; default = 0;};
             };
         };
         class cache: Combo {
@@ -97,12 +131,6 @@ class GVAR(module_genSoldiers): A3C_Module {
             tooltip = CSTRING(Module_GenSoldiers_Script_Description);
             property = QGVAR(module_genSoldiers_script);
             defaultValue = "''";
-        };
-        class ignore: EditMulti3 {
-            displayName = CSTRING(Module_GenSoldiers_Ignore_DisplayName);
-            tooltip = CSTRING(Module_GenSoldiers_Ignore_Description);
-            property = QGVAR(module_genSoldiers_ignore);
-            defaultValue = "'[]'";
         };
         class ModuleDescription: ModuleDescription {};
     };

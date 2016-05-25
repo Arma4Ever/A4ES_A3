@@ -10,13 +10,12 @@ if(!isServer) exitWith {};
 
 {
     private _module = _x;
-    private _place = _module getVariable ["placeObj", objNull];
-    private _placeSize = _module getVariable ["placeSize", 0];
+    private _moduleSize = _module getVariable ["logicSize", 0];
     private _isVisibleForPlayers = false;
     private _playableUnits = [[player], playableUnits] select isMultiplayer;
     {
         private _player = vehicle _x;
-        private _distance = ((_place distance _player) - _placeSize) max 0;
+        private _distance = ((_module distance _player) - _moduleSize) max 0;
         if(GVAR(cacheDistanceLand) > 0) then {
             if(_distance < GVAR(cacheDistanceLand) && {_player iskindOf "Land"}) exitWith {_isVisibleForPlayers = true;};
             if(_distance < GVAR(cacheDistanceLand) && {_player iskindOf "Ship"}) exitWith {_isVisibleForPlayers = true;};
