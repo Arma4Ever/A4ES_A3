@@ -334,7 +334,7 @@ class ACE_Settings {
         //typeName: SCALAR
         //default value: 1
         //client: 0
-        value = 0.85;
+        value = 0.75;
     };
     class ace_medical_allowLitterCreation {
         //Enable Litter
