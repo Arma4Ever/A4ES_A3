@@ -14,6 +14,7 @@ _n = 0 spawn {
 
     private _obj = player;
     private _pos = getPos (vehicle _obj);
+    _pos set [2, 0];
 
     private _fog = "#particlesource" createVehicleLocal _pos;
     _fog setParticleParams [
