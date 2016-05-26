@@ -26,7 +26,7 @@ if(!_force) then {
 };
 
 if(!GVAR(debug3rdPersonEnabled)) then {
-    if(difficultyEnabled "3rdPersonView") exitWith {};
+    if(difficultyOption "thirdPersonView" > 0) exitWith {};
 
     missionNamespace setVariable [_actionVariable, 1];
     if(!_force) then {_buttonControl ctrlSetText format [_actionName, _actionValues select 1];};
