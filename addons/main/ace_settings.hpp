@@ -384,7 +384,7 @@ class ACE_Settings {
         //typeName: SCALAR
         //default value: 3
         //client: 0
-        value = 0;
+        value = 2;
     };
     class ace_medical_enableAdvancedWounds {
         //Enable Advanced wounds
@@ -559,7 +559,7 @@ class ACE_Settings {
         //typeName: SCALAR
         //default value: 1
         //client: 0
-        value = 1;
+        value = 0.8;
     };
     class ace_medical_preventInstaDeath {
         //Prevent instant death
