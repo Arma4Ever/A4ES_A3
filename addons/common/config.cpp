@@ -17,4 +17,5 @@ class CfgPatches {
 #include "CfgDebriefing.hpp"
 #include "CfgFunctions.hpp"
 #include "CfgDifficultyPresets.hpp"
+#include "CfgAILevelPresets.hpp"
 #include "dialogs.hpp"

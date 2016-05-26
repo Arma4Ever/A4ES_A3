@@ -1,6 +1,8 @@
 class CfgDifficultyPresets {
     defaultPreset = "Veteran";
     class Recruit {
+        levelAI = "AILevelHigh";
+        displayName = "A3C + 3 osoba";
         class Options {
             reducedDamage = 0;
             groupIndicators = 0;
@@ -25,6 +27,8 @@ class CfgDifficultyPresets {
         };
     };
     class Regular {
+        displayName = "A3C";
+        levelAI = "AILevelHigh";
         class Options {
             reducedDamage = 0;
             groupIndicators = 0;
@@ -49,6 +53,8 @@ class CfgDifficultyPresets {
         };
     };
     class Veteran {
+        displayName = "A3C";
+        levelAI = "AILevelHigh";
         class Options {
             reducedDamage = 0;
             groupIndicators = 0;
