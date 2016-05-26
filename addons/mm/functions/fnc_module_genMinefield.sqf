@@ -14,14 +14,14 @@ if(_mode == "init") then {
     if(!(_logic call FUNC(canExecuteModule))) exitWith {WARNING("genMinefield: blokuje wykonanie modulu");true};
 
     //Load module params
-    private _place = call compile (_logic getVariable ["place", ""]);
+    private _logicAreaParams = _logic getvariable "objectArea";
     private _mineClasses = call compile (_logic getvariable ["classes", ""]);
     private _mineCount = _logic getvariable ["mineCount", 0];
 
-    //Calc size of spawn place
-    private _placeShape = if ((triggerArea _place) select 3) then {"rectangle"} else {"ellipse"};
-    private _placeSize = ((triggerArea _place) select 0) max ((triggerArea _place) select 1);
-    _placeSize = if (_placeShape == "ellipse") then {_placeSize + (_placeSize/5)} else {_placeSize + (_placeSize/2)};
+    //Calc size of logic
+    _logicAreaParams params ["_logicSizeX","_logicSizeY", "_logicAngle", "_logicIsRectangle"];
+    private _logicArea = [_logic, _logicSizeX, _logicSizeY, _logicAngle, _logicIsRectangle];
+    private _logicSize = _logicSizeX max _logicSizeY;
 
     if(!isMultiplayer) then {systemchat format ["genMinefield - Generuje %1 min", _mineCount];};
 
@@ -31,8 +31,8 @@ if(_mode == "init") then {
         private _goodPosition = false;
         while {!_goodPosition} do {
             _goodPosition = true;
-            _minePosition = _place getPos [random _placeSize, random 360];
-            if (!([_minePosition, _place] call CBA_fnc_inArea)) then {_goodPosition = false;};
+            _minePosition = _logic getPos [random _logicSize, random 360];
+            if (!(_minePosition inArea _logicArea)) then {_goodPosition = false;};
         };
 
         private _mineClass = selectRandom _mineClasses;

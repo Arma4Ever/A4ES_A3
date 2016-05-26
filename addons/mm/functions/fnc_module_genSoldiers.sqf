@@ -106,9 +106,11 @@ if (_mode == "init") then {
                 if (!(_unitPosition inArea _logicArea)) then {_goodPosition = false;};
             };
         } else  {
-            if (_vehicle != "" && {!isNull _groupVehicle}) then {
+            if (!isNull _groupVehicle) then {
+                //if vehicle spawn at vehicle
                 _unitPosition = _groupVehicle getPos [(1 + random 3), random 360];
             } else {
+                //if no vehicle spawn at leader
                 _unitPosition = _groupLeader getPos [(1 + random 3), random 360];
             };
         };
@@ -152,7 +154,7 @@ if (_mode == "init") then {
         //Set cache settings
         _unit setVariable [QGVAR(cacheUnit), _cacheSetting];
         //Move unit in vehicle
-        if (_vehicle != "" && {!isNull _groupVehicle}) then {_unit moveInAny _groupVehicle;};
+        if (!isNull _groupVehicle) then {_unit moveInAny _groupVehicle;};
         //If limit is reached force next AI to spawn in new group
         if (count (units _group) >= _groupCount) then {_group = grpNull;};
     };

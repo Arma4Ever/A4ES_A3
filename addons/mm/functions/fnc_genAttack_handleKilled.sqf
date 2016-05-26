@@ -6,21 +6,21 @@
 
 params ["_unit"];
 
-if(!isServer) exitWith {_this remoteExecCall [QFUNC(genAttack_handleKilled), 2, false];};
+if (!isServer) exitWith {_this remoteExecCall [QFUNC(genAttack_handleKilled), 2, false];};
 
-private _unitPlace = _unit getVariable [QGVAR(genAttack_place), objNull];
+private _unitLogic = _unit getVariable [QGVAR(genAttack_logic), objNull];
 private _unitGroup = _unit getVariable [QGVAR(genAttack_group), grpNull];
-//Update alive units in place data
-private _alivePlaceUnits = _unitPlace getVariable [QGVAR(genAttack_aliveUnits), []];
-_alivePlaceUnits deleteAt (_alivePlaceUnits find _unit);
-_unitPlace setVariable [QGVAR(genAttack_aliveUnits), _alivePlaceUnits];
+//Update alive units in logic data
+private _aliveLogicUnits = _unitLogic getVariable [QGVAR(genAttack_aliveUnits), []];
+_aliveLogicUnits deleteAt (_aliveLogicUnits find _unit);
+_unitLogic setVariable [QGVAR(genAttack_aliveUnits), _aliveLogicUnits];
 //Remove group from alive if empty
 private _aliveUnits = {alive _x} count (units _unitGroup);
-if(isNull _unitGroup || _aliveUnits == 0) then {
-    private _alivePlaceGroups = _unitPlace getVariable [QGVAR(genAttack_aliveGroups), []];
-    _alivePlaceGroups deleteAt (_alivePlaceGroups find _unitGroup);
-    _unitPlace setVariable [QGVAR(genAttack_aliveGroups), _alivePlaceGroups];
+if (isNull _unitGroup || _aliveUnits == 0) then {
+    private _aliveLogicGroups = _unitLogic getVariable [QGVAR(genAttack_aliveGroups), []];
+    _aliveLogicGroups deleteAt (_aliveLogicGroups find _unitGroup);
+    _unitLogic setVariable [QGVAR(genAttack_aliveGroups), _aliveLogicGroups];
 };
 
 //Check if some units can be respawned
-_unitPlace call FUNC(genAttack_genUnits);
+_unitLogic call FUNC(genAttack_genUnits);

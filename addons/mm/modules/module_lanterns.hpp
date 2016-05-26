@@ -4,14 +4,12 @@ class GVAR(module_lanterns): A3C_Module {
     displayName = CSTRING(Module_Lanterns_DisplayName);
     category = "a3cs_modules_effects";
     function = QUOTE(DFUNC(module_lanterns));
+    canSetArea = 1;
+    class AttributeValues {
+        size3[] = {50,50,-1};
+    };
 
     class Attributes: AttributesBase {
-        class place: Edit {
-            displayName = CSTRING(Module_Lanterns_Place_DisplayName);
-            tooltip = CSTRING(Module_Lanterns_Place_Description);
-            property = QGVAR(module_lanterns_place);
-            defaultValue = "''";
-        };
         class mode: Combo {
             displayName = CSTRING(Module_Lanterns_Mode_DisplayName);
             tooltip = CSTRING(Module_Lanterns_Mode_Description);

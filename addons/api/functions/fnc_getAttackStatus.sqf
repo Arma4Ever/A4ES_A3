@@ -4,15 +4,15 @@
  */
 #include "script_component.hpp"
 
-params [["_place", objNull, [objNull]]];
+params [["_logic", objNull, [objNull]]];
 
-if(isNull _place || {!(_place isKindOf "EmptyDetector")}) exitWith {-1};
+if(isNull _logic) exitWith {-1};
 
 private _return = 0;
 
-if(_place getVariable [QEGVAR(mm,genAttack_started), false]) then {
+if(_logic getVariable [QEGVAR(mm,genAttack_started), false]) then {
     _return = 2;
-    if(_place getVariable [QEGVAR(mm,genAttack_active), false]) then {
+    if(_logic getVariable [QEGVAR(mm,genAttack_active), false]) then {
         _return = 1;
     };
 };

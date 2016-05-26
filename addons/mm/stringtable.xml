@@ -314,10 +314,10 @@
 			<Key ID="STR_A3CS_MM_Module_GenAttack_WaveCount_Description">
 				<Original>Ilość AI która zostanie wygenerowana jednocześnie</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_Module_GenAttack_GroupVehicle_DisplayName">
+			<Key ID="STR_A3CS_MM_Module_GenAttack_Vehicle_DisplayName">
 				<Original>Pojazd</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_Module_GenAttack_GroupVehicle_Description">
+			<Key ID="STR_A3CS_MM_Module_GenAttack_Vehicle_Description">
 				<Original>Klasa pojazdu który ma zostać użyty w ataku (jeden pojazd na każdą grupę, np. B_MRAP_01_F)</Original>
 			</Key>
 		</Container>
@@ -459,12 +459,6 @@
 			<Key ID="STR_A3CS_MM_Module_GenMinefield_Description">
 				<Original>Moduł generowania min&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_Module_GenMinefield_Place_DisplayName">
-				<Original>Obszar respawnu</Original>
-			</Key>
-			<Key ID="STR_A3CS_MM_Module_GenMinefield_Place_Description">
-				<Original>Nazwa triggera w którym mają się wygenerować miny</Original>
-			</Key>
 			<Key ID="STR_A3CS_MM_Module_GenMinefield_Classes_DisplayName">
 				<Original>Klasy min</Original>
 			</Key>
@@ -484,12 +478,6 @@
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_Lanterns_Description">
 				<Original>Moduł zarządzania latarniami na danym obszarze&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
-			</Key>
-			<Key ID="STR_A3CS_MM_Module_Lanterns_Place_DisplayName">
-				<Original>Obszar</Original>
-			</Key>
-			<Key ID="STR_A3CS_MM_Module_Lanterns_Place_Description">
-				<Original>Nazwa triggera na obszarze którego mają być zmienione latarnie</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_Lanterns_Mode_DisplayName">
 				<Original>Stan</Original>
@@ -622,12 +610,6 @@
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_FireArtillery_Description">
 				<Original>Moduł generowania ostrzału artylerii&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
-			</Key>
-			<Key ID="STR_A3CS_MM_Module_FireArtillery_Place_DisplayName">
-				<Original>Obszar ostrzału</Original>
-			</Key>
-			<Key ID="STR_A3CS_MM_Module_FireArtillery_Place_Description">
-				<Original>Nazwa triggera na obszarze którego ma być prowadzony ostrzał</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_FireArtillery_Ammo_DisplayName">
 				<Original>Rodzaj pocisków</Original>

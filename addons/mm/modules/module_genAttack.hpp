@@ -4,14 +4,12 @@ class GVAR(module_genAttack): A3C_Module {
     displayName = CSTRING(Module_GenAttack_DisplayName);
     category = "a3cs_modules_ai";
     function = QUOTE(DFUNC(module_genAttack));
+    canSetArea = 1;
+    class AttributeValues {
+        size3[] = {50,50,-1};
+    };
 
     class Attributes: AttributesBase {
-        class place: Edit {
-            displayName = CSTRING(Module_GenSoldiers_Place_DisplayName);
-            tooltip = CSTRING(Module_GenSoldiers_Place_Description);
-            property = QGVAR(module_genAttack_place);
-            validate = "variable";
-        };
         class attackTarget: Edit {
             displayName = CSTRING(Module_GenAttack_AttackTarget_DisplayName);
             tooltip = CSTRING(Module_GenAttack_AttackTarget_Description);
@@ -84,10 +82,27 @@ class GVAR(module_genAttack): A3C_Module {
                 class elite {name = CSTRING(Module_GenSoldiers_Training_Elite_DisplayName); value = "elite"; default = 0;};
             };
         };
-        class groupVehicle: Edit {
-            displayName = CSTRING(Module_GenAttack_GroupVehicle_DisplayName);
-            tooltip = CSTRING(Module_GenAttack_GroupVehicle_Description);
-            property = QGVAR(module_genAttack_groupVehicle);
+        class formation: Combo {
+            displayName = CSTRING(Module_GenSoldiers_Formation_DisplayName);
+            tooltip = CSTRING(Module_GenSoldiers_Formation_Description);
+            property = QGVAR(module_genAttack_formation);
+            defaultValue = "'COLUMN'";
+            class values {
+                class column {name = CSTRING(Module_GenSoldiers_Formation_Column_DisplayName); value = "COLUMN"; default = 1;};
+                class stagColumn {name = CSTRING(Module_GenSoldiers_Formation_StagColumn_DisplayName); value = "STAG COLUMN"; default = 0;};
+                class wedge {name = CSTRING(Module_GenSoldiers_Formation_Wedge_DisplayName); value = "WEDGE"; default = 0;};
+                class echLeft {name = CSTRING(Module_GenSoldiers_Formation_EchLeft_DisplayName); value = "ECH LEFT"; default = 0;};
+                class echRight {name = CSTRING(Module_GenSoldiers_Formation_EchRight_DisplayName); value = "ECH RIGHT"; default = 0;};
+                class vee {name = CSTRING(Module_GenSoldiers_Formation_Vee_DisplayName); value = "VEE"; default = 0;};
+                class line {name = CSTRING(Module_GenSoldiers_Formation_Line_DisplayName); value = "LINE"; default = 0;};
+                class file {name = CSTRING(Module_GenSoldiers_Formation_File_DisplayName); value = "FILE"; default = 0;};
+                class diamond {name = CSTRING(Module_GenSoldiers_Formation_Diamond_DisplayName); value = "DIAMOND"; default = 0;};
+            };
+        };
+        class vehicle: Edit {
+            displayName = CSTRING(Module_GenAttack_Vehicle_DisplayName);
+            tooltip = CSTRING(Module_GenAttack_Vehicle_Description);
+            property = QGVAR(module_genAttack_vehicle);
             defaultValue = "''";
         };
         class script: EditMulti3 {
@@ -95,12 +110,6 @@ class GVAR(module_genAttack): A3C_Module {
             tooltip = CSTRING(Module_GenSoldiers_Script_Description);
             property = QGVAR(module_genAttack_script);
             defaultValue = "''";
-        };
-        class ignore: EditMulti3 {
-            displayName = CSTRING(Module_GenSoldiers_Ignore_DisplayName);
-            tooltip = CSTRING(Module_GenSoldiers_Ignore_Description);
-            property = QGVAR(module_genAttack_ignore);
-            defaultValue = "'[]'";
         };
         class ModuleDescription: ModuleDescription {};
     };

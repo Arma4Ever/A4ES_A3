@@ -13,13 +13,13 @@ if(_mode == "init") then {
     if(isNull _logic || !_isActivated) exitWith {true};
     if(!(_logic call FUNC(canExecuteModule))) exitWith {WARNING("lanterns: blokuje wykonanie modulu");true};
 
-    private _place = call compile (_logic getVariable ["place", ""]);
+    private _logicAreaParams = _logic getvariable "objectArea";
     private _mode = _logic getVariable ["mode", "on"];
 
-    //Calc size of place
-    private _placeShape = if ((triggerArea _place) select 3) then {"rectangle"} else {"ellipse"};
-    private _placeSize = ((triggerArea _place) select 0) max ((triggerArea _place) select 1);
-    _placeSize = if (_placeShape == "ellipse") then {_placeSize + (_placeSize/5)} else {_placeSize + (_placeSize/2)};
+    //Calc size of logic
+    _logicAreaParams params ["_logicSizeX","_logicSizeY", "_logicAngle", "_logicIsRectangle"];
+    private _logicArea = [_logic, _logicSizeX, _logicSizeY, _logicAngle, _logicIsRectangle];
+    private _logicSize = _logicSizeX max _logicSizeY;
 
     private _damage = [0.92, 0] select (["off", "on"] find _mode);
 
@@ -57,10 +57,10 @@ if(_mode == "init") then {
     ];
 
     {
-        if([_x, _place] call CBA_fnc_inArea) then {
+        if(_x inArea _logicArea) then {
             if(damage _x < 1) then {_x setDamage _damage;};
         };
-    } forEach nearestObjects [_place, _lampClasses, _placeSize];
+    } forEach nearestObjects [_logic, _lampClasses, _logicSize];
 
     //Set as disposable if possible
     _logic call FUNC(setDisposable);

@@ -4,14 +4,12 @@ class GVAR(module_fireArtillery): A3C_Module {
     displayName = CSTRING(Module_FireArtillery_DisplayName);
     category = "a3cs_modules_support";
     function = QUOTE(DFUNC(module_fireArtillery));
+    canSetArea = 1;
+    class AttributeValues {
+        size3[] = {50,50,-1};
+    };
 
     class Attributes: AttributesBase {
-        class place: Edit {
-            displayName = CSTRING(Module_FireArtillery_Place_DisplayName);
-            tooltip = CSTRING(Module_FireArtillery_Place_Description);
-            property = QGVAR(module_fireArtillery_place);
-            defaultValue = "''";
-        };
         class ammo: Combo {
             displayName = CSTRING(Module_FireArtillery_Ammo_DisplayName);
             tooltip = CSTRING(Module_FireArtillery_Ammo_Description);
