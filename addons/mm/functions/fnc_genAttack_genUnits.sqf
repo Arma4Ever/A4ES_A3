@@ -116,8 +116,6 @@ for "_spawnCounter" from 1 to _unitCount do {
     _unit setVariable [QGVAR(cacheUnit), "never"];
     //Disable fleeing
     _group allowFleeing 0;
-    //Disable suppression
-    _unit disableAI "SUPPRESSION";
     //Move to vehicle if present
     if (!isNull _groupVehicle) then {_unit moveInAny _groupVehicle;};
     //If limit is reached force next AI to spawn in new group
