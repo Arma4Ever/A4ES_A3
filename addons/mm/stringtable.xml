@@ -499,12 +499,6 @@
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Description">
 				<Original>Moduł odtwarzający dźwięk&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
 			</Key>
-			<Key ID="STR_A3CS_MM_Module_PlaySound_Place_DisplayName">
-				<Original>Źródło dźwięku</Original>
-			</Key>
-			<Key ID="STR_A3CS_MM_Module_PlaySound_Place_Description">
-				<Original>Nazwa markera, nazwa obiektu lub tablica pozycji ASL który ma być źródłem dźwięku (np. marker1, obiekt1, [200,893,20])</Original>
-			</Key>
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_DisplayName">
 				<Original>Typ</Original>
 			</Key>
@@ -515,37 +509,76 @@
 				<Original>Własny</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Allahuakbar_DisplayName">
-				<Original>Allahu Akbar</Original>
+				<Original>Allahu Akbar (7s)</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Radiochatter_DisplayName">
-				<Original>Radio Chatter</Original>
+				<Original>Radio Chatter (578s)</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Arabmarket1_DisplayName">
-				<Original>Arabski targ #1</Original>
+				<Original>Arabski targ #1 (11s)</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Arabmarket2_DisplayName">
-				<Original>Arabski targ #2</Original>
+				<Original>Arabski targ #2 (15s)</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Arabmarket3_DisplayName">
-				<Original>Arabski targ #3</Original>
+				<Original>Arabski targ #3 (29s)</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Arabmarket4_DisplayName">
-				<Original>Arabski targ #4</Original>
+				<Original>Arabski targ #4 (29s)</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Arabmarket5_DisplayName">
-				<Original>Arabski targ #5</Original>
+				<Original>Arabski targ #5 (18s)</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Muslimpray1_DisplayName">
-				<Original>Muzułmańskie modlitwy #1</Original>
+				<Original>Muzułmańskie modlitwy #1 (12s)</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Muslimpray2_DisplayName">
-				<Original>Muzułmańskie modlitwy #2</Original>
+				<Original>Muzułmańskie modlitwy #2 (13s)</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Muslimpray3_DisplayName">
-				<Original>Muzułmańskie modlitwy #3</Original>
+				<Original>Muzułmańskie modlitwy #3 (14s)</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Muslimpray4_DisplayName">
-				<Original>Muzułmańskie modlitwy #4</Original>
+				<Original>Muzułmańskie modlitwy #4 (25s)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Battlefield1_DisplayName">
+				<Original>Pole bitwy #1 (609s)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Battlefield2_DisplayName">
+				<Original>Pole bitwy #2 (854s)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_BattlefieldExplosions1_DisplayName">
+				<Original>Eksplozje w oddali #1 (10s)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_BattlefieldExplosions2_DisplayName">
+				<Original>Eksplozje w oddali #2 (12s)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_BattlefieldExplosions3_DisplayName">
+				<Original>Eksplozje w oddali #3 (11s)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_BattlefieldExplosions4_DisplayName">
+				<Original>Eksplozje w oddali #4 (7s)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_BattlefieldExplosions5_DisplayName">
+				<Original>Eksplozje w oddali #5 (13s)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_BattlefieldFirefight1_DisplayName">
+				<Original>Strzały w oddali #1 (8s)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_BattlefieldFirefight2_DisplayName">
+				<Original>Strzały w oddali #2 (7s)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_BattlefieldFirefight3_DisplayName">
+				<Original>Strzały w oddali #3 (9s)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_BattlefieldJet1_DisplayName">
+				<Original>Przelot myśliwca #1 (14s)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_BattlefieldJet2_DisplayName">
+				<Original>Przelot myśliwca #2 (14s)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_BattlefieldJet3_DisplayName">
+				<Original>Przelot myśliwca #3 (27s)</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_PlaySound_SoundPath_DisplayName">
 				<Original>Ścieżka do pliku</Original>
@@ -583,6 +616,21 @@
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Loop_Description">
 				<Original>Zaznacz jeśli dźwięk ma być zapętlony (dla bardzo krótkich dźwięków ta opcja może spowodować zwiększone obciążenie sieci)</Original>
 			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_LoopCondition_DisplayName">
+				<Original>Warunek pętli</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_LoopCondition_Description">
+				<Original>Warunek odtwarzania dźwięku. W momencie w ktorym warunek zwróci nieprawdę pętla zostanie przerwana</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_PlayDelay_DisplayName">
+				<Original>Opóźnienie odtworzenia</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_PlayDelay_Description">
+				<Original>Czas jaki minie między uruchomieniem modułu a odtworzeniem dźwięku (dotyczy również każdego odtworzenia w pętli)</Original>
+			</Key>
+			
+			
+			
 		</Container>
 		<Container name="A3CS_MM_Module_MissionIntro">
 			<Key ID="STR_A3CS_MM_Module_MissionIntro_DisplayName">

@@ -13,7 +13,6 @@ if(_mode == "init") then {
     if(isNull _logic || !_isActivated) exitWith {true};
     if(!(_logic call FUNC(canExecuteModule))) exitWith {WARNING("playSound: blokuje wykonanie modulu");true};
 
-    private _source = _logic getVariable ["place", ""];
     private _soundArray = call compile (_logic getVariable ["sound", ""]);
     private _soundPath = _logic getVariable ["soundPath", ""];
     private _missionPath = (_logic getVariable ["missionPath", 0]) > 0;
@@ -21,25 +20,12 @@ if(_mode == "init") then {
     private _volume = _logic getVariable ["volume", 0];
     private _distance = _logic getVariable ["distance", 0];
     private _loop = (_logic getVariable ["loop", 0]) > 0;
+    private _loopCondition = compile (_logic getVariable ["loopCondition", "true"]);
+    private _playDelay = _logic getVariable ["playDelay", 0];
 
-    private _sourcePos = [0,0,0];
+    _playDelay = _playDelay + 0.001;
 
-    if(isNil {(call compile _source)}) then {
-        _sourcePos = markerPos _source;
-    } else {
-        private _sourceResult = call compile _source;
-        if(_sourceResult isEqualTypeAny [[], objNull]) then {
-            if(_sourceResult isEqualType objNull) then {
-                _sourcePos = getPosASL _sourceResult;
-            };
-            if(_sourceResult isEqualType []) then {
-                _sourcePos = _sourceResult;
-            };
-        } else {
-            "Podano niepoprawne zrodlo dzwieku" call BIS_fnc_error;
-        };
-    };
-
+    private _sourcePos = getPosASL _logic;
     _soundArray params ["_sound", "_soundDuration"];
 
     if(_sound == "own") then {
@@ -54,10 +40,12 @@ if(_mode == "init") then {
 
     TRACE_3("module_playSound3D",_soundPath,_soundDuration,_loop);
 
-    _soundDuration = _soundDuration + 0.5;
+    _soundDuration = _soundDuration + _playDelay;
     private _soundParams = [_soundPath, objNull, false, _sourcePos, _volume, 1, _distance];
 
-    [_soundParams, _loop, _soundDuration] call FUNC(playSound3D);
+    if (_loop && !(0 call _loopCondition)) exitWith {};
+
+    [DFUNC(playSound3D), [_soundParams, _loop, _loopCondition, _soundDuration], _playDelay] call CBA_fnc_waitAndExecute;
 
     //Set as disposable if possible
     _logic call FUNC(setDisposable);
