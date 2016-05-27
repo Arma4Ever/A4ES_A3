@@ -13,6 +13,12 @@
 	    <Key ID="STR_A3CS_MM_Side_Civilian">
             <Original>Cywile</Original>
         </Key>
+	    <Key ID="STR_A3CS_MM_Target_All">
+            <Original>Wszyscy</Original>
+        </Key>
+	    <Key ID="STR_A3CS_MM_Target_SyncedUnits">
+            <Original>Jednostki zsynchronizowane z modułem</Original>
+        </Key>
 	    <Key ID="STR_A3CS_MM_FactionClass_AI">
             <Original>AI</Original>
         </Key>
@@ -799,7 +805,7 @@
 				<Original>Grupa docelowa</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_CreateTask_TaskTarget_Description">
-				<Original>Grupa docelowa danego zadania. Może być to strona (np. west) lub tablica jednostek (np. [zolnierz1, zolnierz2])</Original>
+				<Original>Grupa docelowa danego zadania (komu zostanie przydzielone zadanie)</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_CreateTask_ShowNotification_DisplayName">
 				<Original>Wyświetl komunikat</Original>

@@ -24,11 +24,19 @@ class GVAR(module_createTask): A3C_Module {
             property = QGVAR(module_createTask_taskDesc);
             defaultValue = "''";
         };
-        class taskTarget: Edit {
+        class taskTarget: Combo {
             displayName = CSTRING(Module_CreateTask_TaskTarget_DisplayName);
             tooltip = CSTRING(Module_CreateTask_TaskTarget_Description);
             property = QGVAR(module_createTask_taskTarget);
-            defaultValue = "'west'";
+            defaultValue = "'0'";
+            class values {
+                class allunits {name = CSTRING(Target_All); value = "0"; default = 1;};
+                class syncedunits {name = CSTRING(Target_SyncedUnits); value = "synchronizedObjects _this"; default = 0;};
+                class blufor {name = CSTRING(Side_Blufor); value = "west"; default = 0;};
+                class opfor {name = CSTRING(Side_Opfor); value = "east"; default = 0;};
+                class indep {name = CSTRING(Side_Indep); value = "independent"; default = 0;};
+                class civ {name = CSTRING(Side_Civilian); value = "civilian"; default = 0;};
+            };
         };
         class showNotification: CheckboxNumber {
             displayName = CSTRING(Module_CreateTask_ShowNotification_DisplayName);
@@ -40,6 +48,7 @@ class GVAR(module_createTask): A3C_Module {
         class ModuleDescription: ModuleDescription {};
     };
     class ModuleDescription: ModuleDescription {
+        position = 1;
         description = CSTRING(Module_CreateTask_Description);
     };
 };
