@@ -26,6 +26,7 @@ class GVAR(module_genMinefield): A3C_Module {
         class ModuleDescription: ModuleDescription {};
     };
     class ModuleDescription: ModuleDescription {
+        position = 1;
         description = CSTRING(Module_GenMinefield_Description);
     };
 };

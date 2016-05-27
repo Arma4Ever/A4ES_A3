@@ -135,6 +135,7 @@ class GVAR(module_genSoldiers): A3C_Module {
         class ModuleDescription: ModuleDescription {};
     };
     class ModuleDescription: ModuleDescription {
+        position = 1;
         description = CSTRING(Module_GenSoldiers_Description);
     };
 };

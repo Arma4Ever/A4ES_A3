@@ -305,6 +305,7 @@ class GVAR(module_hideTerrainObjects): A3C_Module {
         class ModuleDescription: ModuleDescription {};
     };
     class ModuleDescription: ModuleDescription {
+        position = 1;
         description = CSTRING(Module_HideTerrainObjects_Description);
     };
 };
