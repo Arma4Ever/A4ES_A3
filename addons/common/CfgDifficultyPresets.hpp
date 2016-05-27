@@ -1,15 +1,15 @@
 class CfgDifficultyPresets {
     defaultPreset = "Veteran";
     class Recruit {
+        displayName = "A3C Debug";
         levelAI = "AILevelHigh";
-        displayName = "A3C + 3 osoba";
         class Options {
             reducedDamage = 0;
             groupIndicators = 0;
             friendlyTags = 0;
             enemyTags = 0;
             detectedMines = 0;
-            commands = 1;
+            commands = 0;
             waypoints = 0;
             weaponInfo = 1;
             stanceIndicator = 1;
@@ -21,7 +21,7 @@ class CfgDifficultyPresets {
             scoreTable = 1;
             deathMessages = 0;
             vonID = 0;
-            mapContent = 0;
+            mapContent = 1;
             autoReport = 0;
             multipleSaves = 0;
         };
@@ -35,7 +35,7 @@ class CfgDifficultyPresets {
             friendlyTags = 0;
             enemyTags = 0;
             detectedMines = 0;
-            commands = 1;
+            commands = 0;
             waypoints = 0;
             weaponInfo = 1;
             stanceIndicator = 1;
@@ -61,7 +61,7 @@ class CfgDifficultyPresets {
             friendlyTags = 0;
             enemyTags = 0;
             detectedMines = 0;
-            commands = 1;
+            commands = 0;
             waypoints = 0;
             weaponInfo = 1;
             stanceIndicator = 1;
