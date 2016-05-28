@@ -18,6 +18,7 @@ PREP(module_fogEffect);
 PREP(module_snowEffect);
 PREP(module_breathFog);
 PREP(module_lanterns);
+PREP(module_addAction);
 
 //other
 PREP(initHeadless);
@@ -42,6 +43,9 @@ PREP(fogEffect);
 PREP(snowEffect);
 PREP(breathFog);
 PREP(playSound3D);
+PREP(addActionExec);
+PREP(addActionGlobal);
+PREP(removeActionGlobal);
 
 PREP(checkUnconsciousness);
 

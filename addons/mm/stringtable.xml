@@ -500,7 +500,7 @@
 		</Container>
 		<Container name="A3CS_MM_Module_PlaySound">
 			<Key ID="STR_A3CS_MM_Module_PlaySound_DisplayName">
-				<Original>Dźwięki</Original>
+				<Original>Dźwięk</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Description">
 				<Original>Moduł odtwarzający dźwięk&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
@@ -870,6 +870,56 @@
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_HideTerrainObjects_Types_Description">
 				<Original>Zaznacz jeśli chcesz aby dany typ obiektów został ukryty</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_AddAction">
+			<Key ID="STR_A3CS_MM_Module_AddAction_DisplayName">
+				<Original>Akcja obiektu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_AddAction_Description">
+				<Original>Moduł dodający akcję do wybranego obiektu&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_AddAction_ActionObject_DisplayName">
+				<Original>Źródło akcji</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_AddAction_ActionObject_Description">
+				<Original>Nazwa obiektu/jednostki do której ma być podpięta akcja np. cywil1</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_AddAction_ActionName_DisplayName">
+				<Original>Nazwa akcji</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_AddAction_ActionName_Description">
+				<Original>Nazwa dodawanej akcji np. Podnieś szlaban</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_AddAction_ActionCodeLocal_DisplayName">
+				<Original>Kod akcji (lokalny)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_AddAction_ActionCodeLocal_Description">
+				<Original>Kod który zostanie wykonany po aktywowaniu akcji na komputerze osoby która aktywowała akcję</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_AddAction_ActionCodeGlobal_DisplayName">
+				<Original>Kod akcji (globalny)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_AddAction_ActionCodeGlobal_Description">
+				<Original>Kod który zostanie wykonany po aktywowaniu akcji na komputerach wszystkich graczy + na serwerze</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_AddAction_ActionCondition_DisplayName">
+				<Original>Warunek akcji</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_AddAction_ActionCondition_Description">
+				<Original>Warunek dostępności danej akcji. Do momentu kiedy warunek zwaraca prawdę akcja będzie dostepna w menu interakcji</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_AddAction_ActionTarget_DisplayName">
+				<Original>Grupa docelowa</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_AddAction_ActionTarget_Description">
+				<Original>Grupa docelowa dodawanej akcji (dla kogo ta akcja ma być dostępna)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_AddAction_ActionDisposable_DisplayName">
+				<Original>Akcja jednorazowa</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_AddAction_ActionDisposable_Description">
+				<Original>Czy akcja ma zostać usunięta po pierwszym wykonaniu</Original>
 			</Key>
 		</Container>
 	</Package>

@@ -60,7 +60,7 @@ class CfgVehicles {
     //----- Interaction
     //#include "modules\module_createDialog.hpp" //--todo: optimize, use ace_interact_menu
     //#include "modules\module_addDialogQuestion.hpp" //--todo: add code executed after asking question, optimize
-    //#include "modules\module_addAction.hpp" //--todo: write
+    #include "modules\module_addAction.hpp"
 
     //----- Support
     #include "modules\module_fireArtillery.hpp"

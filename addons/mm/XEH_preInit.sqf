@@ -4,6 +4,7 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
+GVAR(moduleAddActionID) = 0;
 GVAR(hiddenTerrainObjects) = [];
 GVAR(cacheEnabled) = true;
 GVAR(cacheInited) = false;
