@@ -19,4 +19,7 @@ class CfgFactionClasses {
     class a3cs_modules_tasks: a3cs_modules {
         displayName = CSTRING(FactionClass_Tasks);
     };
+    class a3cs_modules_objects: a3cs_modules {
+        displayName = CSTRING(FactionClass_Objects);
+    };
 };

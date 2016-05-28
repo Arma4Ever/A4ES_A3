@@ -2,7 +2,7 @@ class GVAR(module_genMinefield): A3C_Module {
     scope = 2;
     author = ECSTRING(common,A3C);
     displayName = CSTRING(Module_GenMinefield_DisplayName);
-    category = "a3cs_modules_effects";
+    category = "a3cs_modules_objects";
     function = QUOTE(DFUNC(module_genMinefield));
     canSetArea = 1;
     class AttributeValues {

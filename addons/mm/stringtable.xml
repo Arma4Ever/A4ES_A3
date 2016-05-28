@@ -34,6 +34,9 @@
 	    <Key ID="STR_A3CS_MM_FactionClass_Tasks">
             <Original>Zadania</Original>
         </Key>
+	    <Key ID="STR_A3CS_MM_FactionClass_Objects">
+            <Original>Zarządzanie obiektami</Original>
+        </Key>
 	    <Key ID="STR_A3CS_MM_Headless_Inited">
             <Original>Wszystkie AI zostały przekazane do Headless Clienta poprawnie</Original>
         </Key>
@@ -920,6 +923,26 @@
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_AddAction_ActionDisposable_Description">
 				<Original>Czy akcja ma zostać usunięta po pierwszym wykonaniu</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_MakeLoadable">
+			<Key ID="STR_A3CS_MM_Module_MakeLoadable_DisplayName">
+				<Original>Ładowanie obiektu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MakeLoadable_Description">
+				<Original>Moduł umożliwiający/blokujący ładowanie wybranych obiektów do pojazdów&lt;br /&gt;Zsynchronizuj moduł z każdym obiektem którego ma dotyczyć moduł&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MakeLoadable_Loadable_DisplayName">
+				<Original>Obiekt ładowalny</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MakeLoadable_Loadable_Description">
+				<Original>Czy obiekt ma być ładowalny. Odznacz jeśli obiekt ma mieć zablokowaną opcję ładowania do pojazdów.</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MakeLoadable_CargoSize_DisplayName">
+				<Original>Rozmiar w cargo</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MakeLoadable_CargoSize_Description">
+				<Original>Jak dużo miejsca ma zajmować obiekt w cargo pojazdu</Original>
 			</Key>
 		</Container>
 	</Package>

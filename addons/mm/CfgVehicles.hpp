@@ -46,7 +46,6 @@ class CfgVehicles {
     #include "modules\module_snowEffect.hpp"
     #include "modules\module_breathFog.hpp" //-- FIX!
     #include "modules\module_colorCorrections.hpp"
-    #include "modules\module_genMinefield.hpp"
     //#include "modules\module_genFlare.hpp" //--todo: write, option to set color and height
     //#include "modules\module_genFire.hpp" //--todo: write
     //#include "modules\module_genSmoke.hpp" //--todo: write
@@ -67,6 +66,10 @@ class CfgVehicles {
     //#include "modules\module_genCAS.hpp" //--todo: rewirte
     //#include "modules\module_genHeliSupportdrop.hpp" //--todo: rewirte
     //#include "modules\module_genSupplydrop.hpp" //--todo: rewirte
+
+    //----- Objects
+    #include "modules\module_genMinefield.hpp"
+    #include "modules\module_makeLoadable.hpp"
 
     //----- Tasks
     #include "modules\module_createTask.hpp"
