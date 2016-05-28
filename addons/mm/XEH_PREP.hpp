@@ -45,7 +45,6 @@ PREP(breathFog);
 PREP(playSound3D);
 PREP(addActionExec);
 PREP(addActionGlobal);
-PREP(removeActionGlobal);
 
 PREP(checkUnconsciousness);
 
