@@ -997,5 +997,79 @@
 				<Original>Kierunek obiektu podczas przeciągania (jeśli nie wiesz o co chodzi zostaw 0).</Original>
 			</Key>
 		</Container>
+		<Container name="A3CS_MM_Module_GenFire">
+			<Key ID="STR_A3CS_MM_Module_GenFire_DisplayName">
+				<Original>Generator ognia</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_Description">
+				<Original>Moduł generujący efekt ognia&lt;br /&gt;Zsynchronizuj moduł z każdym obiektem którego ma dotyczyć moduł&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_Duration_DisplayName">
+				<Original>Czas trwania efektu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_Duration_Description">
+				<Original>Czas w sekundach przez jaki efekt ma być widoczny (0 jeśli non-stop)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_ColorR_DisplayName">
+				<Original>Kolor efektu (R)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_ColorR_Description">
+				<Original>Ilość koloru czerwonego w kolorze efektu w przedziale 0 - 1 (gdzie 1 odpowiada wartości 255 w formacie RGB)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_ColorG_DisplayName">
+				<Original>Kolor efektu (G)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_ColorG_Description">
+				<Original>Ilość koloru zielonego kolorze efektu w przedziale 0 - 1 (gdzie 1 odpowiada wartości 255 w formacie RGB)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_ColorB_DisplayName">
+				<Original>Kolor efektu (B)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_ColorB_Description">
+				<Original>Ilość kologu niebieskiego w kolorze efektu w przedziale 0 - 1 (gdzie 1 odpowiada wartości 255 w formacie RGB)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_Damage_DisplayName">
+				<Original>Obrażenia od ognia</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_Damage_Description">
+				<Original>Ilość obrażeń jakie zostaną zadane jednostkom które zbliżą się do efektu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_EffectSize_DisplayName">
+				<Original>Rozmiar efektu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_EffectSize_Description">
+				<Original>Mnożnik rozmiaru efektu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_ParticleDensity_DisplayName">
+				<Original>Ilość cząsteczek</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_ParticleDensity_Description">
+				<Original>Ilość cząsteczek generowanych w ciągu 1 sekundy</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_ParticleLifetime_DisplayName">
+				<Original>Czas trwania cząsteczek</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_ParticleLifetime_Description">
+				<Original>Czas w sekundach przez jaki każda cząsteczka będzie widoczna</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_ParticleSize_DisplayName">
+				<Original>Rozmiar cząsteczek</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_ParticleSize_Description">
+				<Original>Rozmiaru każdej cząsteczki</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_ParticleSpeed_DisplayName">
+				<Original>Prędkość cząsteczek</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_ParticleSpeed_Description">
+				<Original>Prędkość z jaką mają poruszać się cząsteczki</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_ParticleDir_DisplayName">
+				<Original>Kierunek cząsteczek</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFire_ParticleDir_Description">
+				<Original>W jakim kierunku mają być obrócone cząsteczki w momencie utworzenia</Original>
+			</Key>
+		</Container>
 	</Package>
 </Project>

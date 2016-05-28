@@ -22,6 +22,7 @@ PREP(module_addAction);
 PREP(module_makeLoadable);
 PREP(module_makeCarryable);
 PREP(module_makeDraggable);
+PREP(module_genFire);
 
 //other
 PREP(initHeadless);
@@ -47,10 +48,11 @@ PREP(snowEffect);
 PREP(breathFog);
 PREP(playSound3D);
 PREP(addActionExec);
-PREP(addActionGlobal);
-PREP(makeLoadableGlobal);
-PREP(makeCarryableGlobal);
-PREP(makeDraggableGlobal);
+PREP(addActionLocal);
+PREP(makeLoadableLocal);
+PREP(makeCarryableLocal);
+PREP(makeDraggableLocal);
+PREP(genFireLocal);
 
 PREP(checkUnconsciousness);
 
