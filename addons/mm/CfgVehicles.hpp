@@ -46,7 +46,7 @@ class CfgVehicles {
     #include "modules\module_snowEffect.hpp"
     #include "modules\module_breathFog.hpp" //-- FIX!
     #include "modules\module_colorCorrections.hpp"
-    //#include "modules\module_genFlare.hpp" //--todo: write, option to set color and height
+    #include "modules\module_genFlare.hpp"
     #include "modules\module_genFire.hpp"
     #include "modules\module_genSmoke.hpp"
     #include "modules\module_lanterns.hpp"

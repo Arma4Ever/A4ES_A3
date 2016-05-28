@@ -24,6 +24,7 @@ PREP(module_makeCarryable);
 PREP(module_makeDraggable);
 PREP(module_genFire);
 PREP(module_genSmoke);
+PREP(module_genFlare);
 
 //other
 PREP(initHeadless);

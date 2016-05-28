@@ -1101,5 +1101,31 @@
 				<Original>Mnożnik przemieszczenia się efektu względem kierunku i prędkości wiatru</Original>
 			</Key>
 		</Container>
+		<Container name="A3CS_MM_Module_GenFlare">
+			<Key ID="STR_A3CS_MM_Module_GenFlare_DisplayName">
+				<Original>Generator flar</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFlare_Description">
+				<Original>Moduł generujący flarę&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł może być aktywowany wielokrotnie.</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFlare_Color_DisplayName">
+				<Original>Kolor</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFlare_Color_Description">
+				<Original>Kolor generowanej flary</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFlare_Color_White_DisplayName">
+				<Original>Biała flara</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFlare_Color_Green_DisplayName">
+				<Original>Zielona flara</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFlare_Color_Red_DisplayName">
+				<Original>Czerwona flara</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenFlare_Color_Yellow_DisplayName">
+				<Original>Żółta flara</Original>
+			</Key>
+		</Container>
 	</Package>
 </Project>
