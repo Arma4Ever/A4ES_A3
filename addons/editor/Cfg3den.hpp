@@ -53,4 +53,10 @@ class Cfg3DEN {
             };
         };
     };
+    class Trigger {
+        class AttributeCategories {
+            //Remove effects from triggers
+            delete Effects;
+        };
+    };
 };
