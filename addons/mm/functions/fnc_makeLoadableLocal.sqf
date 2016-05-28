@@ -1,6 +1,6 @@
 /*
  * Author: SzwedzikPL
- * makeLoadable global function
+ * makeLoadable local function
  */
 #include "script_component.hpp"
 

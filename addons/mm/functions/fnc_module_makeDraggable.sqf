@@ -21,7 +21,7 @@ if (_mode == "init") then {
 
     private _objects = (synchronizedObjects _logic) select {_x isKindOf "All"};
 
-    [_objects, _draggable, _dragOffset, _dragDir] remoteExecCall [QFUNC(makeDraggableGlobal), 0, true];
+    [_objects, _draggable, _dragOffset, _dragDir] remoteExecCall [QFUNC(makeDraggableLocal), 0, true];
 };
 // EDEN - When some attributes were changed (including position and rotation)
 if (_mode == "attributesChanged3DEN") then {};

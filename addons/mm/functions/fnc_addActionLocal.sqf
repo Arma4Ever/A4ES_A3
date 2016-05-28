@@ -1,6 +1,6 @@
 /*
  * Author: SzwedzikPL
- * Add action to object
+ * Adds action to object (local)
  */
 #include "script_component.hpp"
 

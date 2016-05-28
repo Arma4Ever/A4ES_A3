@@ -34,7 +34,7 @@ if (_mode == "init") then {
         [_actionID, _actionCodeLocal, _actionCodeGlobal, _actionTarget, _actionDisposable]
     ] call ace_interact_menu_fnc_createAction;
 
-    [_actionObject, _actionAction] remoteExecCall [QFUNC(addActionGlobal), _actionTarget, true];
+    [_actionObject, _actionAction] remoteExecCall [QFUNC(addActionLocal), _actionTarget, true];
 };
 // EDEN - When some attributes were changed (including position and rotation)
 if (_mode == "attributesChanged3DEN") then {};
