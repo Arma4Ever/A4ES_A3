@@ -18,4 +18,5 @@ class CfgPatches {
 #include "CfgFunctions.hpp"
 #include "CfgDifficultyPresets.hpp"
 #include "CfgAILevelPresets.hpp"
+#include "CfgAmmo.hpp"
 #include "dialogs.hpp"
