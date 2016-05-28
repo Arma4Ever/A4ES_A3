@@ -930,19 +930,45 @@
 				<Original>Ładowanie obiektu</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_MakeLoadable_Description">
-				<Original>Moduł umożliwiający/blokujący ładowanie wybranych obiektów do pojazdów&lt;br /&gt;Zsynchronizuj moduł z każdym obiektem którego ma dotyczyć moduł&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+				<Original>Moduł dodający/blokujący możliwość ładowania wybranych obiektów do pojazdów&lt;br /&gt;Zsynchronizuj moduł z każdym obiektem którego ma dotyczyć moduł&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_MakeLoadable_Loadable_DisplayName">
-				<Original>Obiekt ładowalny</Original>
+				<Original>Możliwość ładowania</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_MakeLoadable_Loadable_Description">
-				<Original>Czy obiekt ma być ładowalny. Odznacz jeśli obiekt ma mieć zablokowaną opcję ładowania do pojazdów.</Original>
+				<Original>Czy opcja załadowania ma być dostępna. Odznacz jeśli obiekt ma mieć zablokowaną opcję ładowania do pojazdów.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_MakeLoadable_CargoSize_DisplayName">
 				<Original>Rozmiar w cargo</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_MakeLoadable_CargoSize_Description">
 				<Original>Jak dużo miejsca ma zajmować obiekt w cargo pojazdu</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_MakeCarryable">
+			<Key ID="STR_A3CS_MM_Module_MakeCarryable_DisplayName">
+				<Original>Noszenie obiektu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MakeCarryable_Description">
+				<Original>Moduł dodający/blokujący możliwość noszenia wybranych obiektów&lt;br /&gt;Zsynchronizuj moduł z każdym obiektem którego ma dotyczyć moduł&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MakeCarryable_Carryable_DisplayName">
+				<Original>Możliwość noszenia</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MakeCarryable_Carryable_Description">
+				<Original>Czy opcja noszenia ma być dostępna. Odznacz jeśli obiekt ma mieć zablokowaną opcję noszenia.</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MakeCarryable_CarryOffset_DisplayName">
+				<Original>Pozycja podczas noszenia</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MakeCarryable_CarryOffset_Description">
+				<Original>Współrzędne pozycji obiektu podczas noszenia (jeśli nie wiesz o co chodzi zostaw [0,1,0]).</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MakeCarryable_CarryDir_DisplayName">
+				<Original>Kierunek podczas noszenia</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MakeCarryable_CarryDir_Description">
+				<Original>Kierunek obiektu podczas noszenia (jeśli nie wiesz o co chodzi zostaw 0).</Original>
 			</Key>
 		</Container>
 	</Package>

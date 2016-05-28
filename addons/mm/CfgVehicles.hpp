@@ -70,6 +70,7 @@ class CfgVehicles {
     //----- Objects
     #include "modules\module_genMinefield.hpp"
     #include "modules\module_makeLoadable.hpp"
+    #include "modules\module_makeCarryable.hpp"
 
     //----- Tasks
     #include "modules\module_createTask.hpp"

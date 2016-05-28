@@ -9,7 +9,7 @@ class GVAR(module_makeLoadable): A3C_Module {
         class loadable: CheckboxNumber {
             displayName = CSTRING(Module_MakeLoadable_Loadable_DisplayName);
             tooltip = CSTRING(Module_MakeLoadable_Loadable_Description);
-            property = QGVAR(module_makeLoadable_enable);
+            property = QGVAR(module_makeLoadable_loadable);
             typeName = "NUMBER";
             defaultValue = 1;
         };

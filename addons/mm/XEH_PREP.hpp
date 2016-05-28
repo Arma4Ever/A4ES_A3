@@ -20,6 +20,7 @@ PREP(module_breathFog);
 PREP(module_lanterns);
 PREP(module_addAction);
 PREP(module_makeLoadable);
+PREP(module_makeCarryable);
 
 //other
 PREP(initHeadless);
@@ -47,6 +48,7 @@ PREP(playSound3D);
 PREP(addActionExec);
 PREP(addActionGlobal);
 PREP(makeLoadableGlobal);
+PREP(makeCarryableGlobal);
 
 PREP(checkUnconsciousness);
 
