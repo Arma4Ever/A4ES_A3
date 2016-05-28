@@ -1000,7 +1000,7 @@
 				<Original>Generator ognia</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_GenFire_Description">
-				<Original>Moduł generujący efekt ognia&lt;br /&gt;Zsynchronizuj moduł z każdym obiektem którego ma dotyczyć moduł&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
+				<Original>Moduł generujący efekt ognia&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_GenFire_Duration_DisplayName">
 				<Original>Czas trwania efektu</Original>
@@ -1067,6 +1067,38 @@
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_GenFire_ParticleDir_Description">
 				<Original>W jakim kierunku mają być obrócone cząsteczki w momencie utworzenia</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_GenSmoke">
+			<Key ID="STR_A3CS_MM_Module_GenSmoke_DisplayName">
+				<Original>Generator dymu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSmoke_Description">
+				<Original>Moduł generujący efekt dymu&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSmoke_ColorA_DisplayName">
+				<Original>Kolor efektu (A)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSmoke_ColorA_Description">
+				<Original>Poziom przezroczystości (alpha) efektu w przedziale 0 - 1</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSmoke_EffectExpansion_DisplayName">
+				<Original>Zmienność prędkości</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSmoke_EffectExpansion_Description">
+				<Original>Mnożnik częstotliwości zmiany prędkości cząsteczek</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSmoke_ParticleLifting_DisplayName">
+				<Original>Prędkość wznoszenia</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSmoke_ParticleLifting_Description">
+				<Original>Prędkość z jaką cząsteczki mają się wznosić</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSmoke_WindEffect_DisplayName">
+				<Original>Zależność od wiatru</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSmoke_WindEffect_Description">
+				<Original>Mnożnik przemieszczenia się efektu względem kierunku i prędkości wiatru</Original>
 			</Key>
 		</Container>
 	</Package>

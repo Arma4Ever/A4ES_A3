@@ -23,6 +23,7 @@ PREP(module_makeLoadable);
 PREP(module_makeCarryable);
 PREP(module_makeDraggable);
 PREP(module_genFire);
+PREP(module_genSmoke);
 
 //other
 PREP(initHeadless);
@@ -53,6 +54,7 @@ PREP(makeLoadableLocal);
 PREP(makeCarryableLocal);
 PREP(makeDraggableLocal);
 PREP(genFireLocal);
+PREP(genSmokeLocal);
 
 PREP(checkUnconsciousness);
 

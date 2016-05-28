@@ -1,5 +1,5 @@
 /*
- * Author: SzwedzikPL
+ * Author: SzwedzikPL, Borivoj Hlava
  * Generate fire on machine
  */
 #include "script_component.hpp"
