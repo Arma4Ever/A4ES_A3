@@ -120,7 +120,7 @@
 				<Original>Ustawienia Cache</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_CacheSettings_Description">
-				<Original>Moduł ustawień systemu cache jednostek&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji</Original>
+				<Original>Moduł ustawień systemu cache jednostek&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_CacheSettings_Enable_DisplayName">
 				<Original>Włącz system</Original>
@@ -152,7 +152,7 @@
 				<Original>Generator AI</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Description">
-				<Original>Moduł generowania jednostek&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+				<Original>Moduł generowania jednostek&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_GenSoldiers_ParentUnit_DisplayName">
 				<Original>Jednostka nadrzędna</Original>
@@ -271,8 +271,6 @@
 			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Formation_Diamond_DisplayName">
 				<Original>Diament</Original>
 			</Key>
-			
-			
 			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Script_DisplayName">
 				<Original>Skrypt jednostki</Original>
 			</Key>
@@ -291,7 +289,7 @@
 				<Original>Generator ataków</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_GenAttack_Description">
-				<Original>Moduł generowania ataków&lt;br /&gt;Jeśli wielkość fali jest mniejsza niż limit AI, nowe jednostki zostaną wygenerowane w momencie, w którym wszystkie AI z poprzedniej fali polegną&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+				<Original>Moduł generowania ataków&lt;br /&gt;Jeśli wielkość fali jest mniejsza niż limit AI, nowe jednostki zostaną wygenerowane w momencie, w którym wszystkie AI z poprzedniej fali polegną&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_GenAttack_AttackTarget_DisplayName">
 				<Original>Cel ataku</Original>
@@ -335,7 +333,7 @@
 				<Original>Poddaj jednostkę</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_SurrenderUnit_Description">
-				<Original>Moduł poddawania jednostek&lt;br /&gt;Zsynchronizuj moduł z każdą jednostką której ma dotyczyć wybrana akcja&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+				<Original>Moduł poddawania jednostek&lt;br /&gt;Zsynchronizuj moduł z każdą jednostką której ma dotyczyć wybrana akcja&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_SurrenderUnit_Action_DisplayName">
 				<Original>Akcja</Original>
@@ -355,7 +353,7 @@
 				<Original>Zakuj jednostkę</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_HandcuffUnit_Description">
-				<Original>Moduł zakuwania jednostek&lt;br /&gt;Zsynchronizuj moduł z każdą jednostką która ma zostać zakuta&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+				<Original>Moduł zakuwania jednostek&lt;br /&gt;Zsynchronizuj moduł z każdą jednostką która ma zostać zakuta&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 		</Container>
 		<Container name="A3CS_MM_Module_SandStorm">
@@ -363,7 +361,7 @@
 				<Original>Burza piaskowa</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_SandStorm_Description">
-				<Original>Moduł dodający efekt burzy piaskowej&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji</Original>
+				<Original>Moduł dodający efekt burzy piaskowej&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 		</Container>
 		<Container name="A3CS_MM_Module_FogEffect">
@@ -371,7 +369,7 @@
 				<Original>Mgła</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_FogEffect_Description">
-				<Original>Moduł dodający efekt lekkiej mgły&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji</Original>
+				<Original>Moduł dodający efekt lekkiej mgły&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 		</Container>
 		<Container name="A3CS_MM_Module_SnowEffect">
@@ -379,7 +377,7 @@
 				<Original>Opady śniegu</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_SnowEffect_Description">
-				<Original>Moduł dodający efekt opadów śniegu&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji</Original>
+				<Original>Moduł dodający efekt opadów śniegu&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_SnowEffect_Type_DisplayName">
 				<Original>Typ opadów</Original>
@@ -402,7 +400,7 @@
 				<Original>Para z ust</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_BreathFog_Description">
-				<Original>Moduł dodający efekt pary z ust&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji</Original>
+				<Original>Moduł dodający efekt pary z ust&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 		</Container>
 		<Container name="A3CS_MM_Module_ColorCorrections">
@@ -410,7 +408,7 @@
 				<Original>Filtr kolorystyczny</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_ColorCorrections_Description">
-				<Original>Moduł nadający filtr kolorystyczny&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji</Original>
+				<Original>Moduł nadający filtr kolorystyczny&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_ColorCorrections_EffectType_DisplayName">
 				<Original>Typ efektu</Original>
@@ -466,7 +464,7 @@
 				<Original>Generator min</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_GenMinefield_Description">
-				<Original>Moduł generowania min&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+				<Original>Moduł generowania min&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_GenMinefield_Classes_DisplayName">
 				<Original>Klasy min</Original>
@@ -486,7 +484,7 @@
 				<Original>Latarnie</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_Lanterns_Description">
-				<Original>Moduł zarządzania latarniami na danym obszarze&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+				<Original>Moduł zarządzania latarniami na danym obszarze&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_Lanterns_Mode_DisplayName">
 				<Original>Stan</Original>
@@ -506,7 +504,7 @@
 				<Original>Dźwięk</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Description">
-				<Original>Moduł odtwarzający dźwięk&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+				<Original>Moduł odtwarzający dźwięk&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł może być aktywowany wielokrotnie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_DisplayName">
 				<Original>Typ</Original>
@@ -646,7 +644,7 @@
 				<Original>Intro</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_MissionIntro_Description">
-				<Original>Moduł ustawień intro&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji</Original>
+				<Original>Moduł ustawień intro&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_MissionIntro_Enable_DisplayName">
 				<Original>Uruchom w multiplayer</Original>
@@ -666,7 +664,7 @@
 				<Original>Ostrzał artylerii</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_FireArtillery_Description">
-				<Original>Moduł generowania ostrzału artylerii&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+				<Original>Moduł generowania ostrzału artylerii&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_FireArtillery_Ammo_DisplayName">
 				<Original>Rodzaj pocisków</Original>
@@ -725,7 +723,7 @@
 				<Original>CAS</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_GenCAS_Description">
-				<Original>Moduł generowania ostrzału lotniczego&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+				<Original>Moduł generowania ostrzału lotniczego&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_GenCAS_Place_DisplayName">
 				<Original>Cel ataku</Original>
@@ -784,7 +782,7 @@
 				<Original>Nowe zadanie</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_CreateTask_Description">
-				<Original>Moduł dodający nowe zadanie&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+				<Original>Moduł dodający nowe zadanie&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_CreateTask_TaskID_DisplayName">
 				<Original>ID zadania</Original>
@@ -822,7 +820,7 @@
 				<Original>Status zadania</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_SetTaskState_Description">
-				<Original>Moduł nadający nowy status zadania&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+				<Original>Moduł nadający nowy status zadania&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_SetTaskState_TaskID_DisplayName">
 				<Original>ID zadania</Original>
@@ -863,7 +861,7 @@
 				<Original>Ukryj obiekty mapy</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_HideTerrainObjects_Description">
-				<Original>Moduł ukrywający wybrane obiekty na mapie&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji</Original>
+				<Original>Moduł ukrywający wybrane obiekty na mapie&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_HideTerrainObjects_Distance_DisplayName">
 				<Original>Zasięg</Original>
@@ -880,7 +878,7 @@
 				<Original>Akcja obiektu</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_AddAction_Description">
-				<Original>Moduł dodający akcję do wybranego obiektu&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+				<Original>Moduł dodający akcję do wybranego obiektu&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_AddAction_ActionObject_DisplayName">
 				<Original>Źródło akcji</Original>
@@ -930,7 +928,7 @@
 				<Original>Ładowanie obiektu</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_MakeLoadable_Description">
-				<Original>Moduł dodający/blokujący możliwość ładowania wybranych obiektów do pojazdów&lt;br /&gt;Zsynchronizuj moduł z każdym obiektem którego ma dotyczyć moduł&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+				<Original>Moduł dodający/blokujący możliwość ładowania wybranych obiektów do pojazdów&lt;br /&gt;Zsynchronizuj moduł z każdym obiektem którego ma dotyczyć moduł&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_MakeLoadable_Loadable_DisplayName">
 				<Original>Możliwość ładowania</Original>
@@ -950,7 +948,7 @@
 				<Original>Noszenie obiektu</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_MakeCarryable_Description">
-				<Original>Moduł dodający/blokujący możliwość noszenia wybranych obiektów&lt;br /&gt;Zsynchronizuj moduł z każdym obiektem którego ma dotyczyć moduł&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+				<Original>Moduł dodający/blokujący możliwość noszenia wybranych obiektów&lt;br /&gt;Zsynchronizuj moduł z każdym obiektem którego ma dotyczyć moduł&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_MakeCarryable_Carryable_DisplayName">
 				<Original>Możliwość noszenia</Original>
@@ -976,7 +974,7 @@
 				<Original>Przeciąganie obiektu</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_MakeDraggable_Description">
-				<Original>Moduł dodający/blokujący możliwość przeciągania wybranych obiektów&lt;br /&gt;Zsynchronizuj moduł z każdym obiektem którego ma dotyczyć moduł&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+				<Original>Moduł dodający/blokujący możliwość przeciągania wybranych obiektów&lt;br /&gt;Zsynchronizuj moduł z każdym obiektem którego ma dotyczyć moduł&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_MakeDraggable_Draggable_DisplayName">
 				<Original>Możliwość przeciągania</Original>
