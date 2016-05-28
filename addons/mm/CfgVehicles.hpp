@@ -71,6 +71,7 @@ class CfgVehicles {
     #include "modules\module_genMinefield.hpp"
     #include "modules\module_makeLoadable.hpp"
     #include "modules\module_makeCarryable.hpp"
+    #include "modules\module_makeDraggable.hpp"
 
     //----- Tasks
     #include "modules\module_createTask.hpp"

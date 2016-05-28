@@ -971,5 +971,31 @@
 				<Original>Kierunek obiektu podczas noszenia (jeśli nie wiesz o co chodzi zostaw 0).</Original>
 			</Key>
 		</Container>
+		<Container name="A3CS_MM_Module_MakeDraggable">
+			<Key ID="STR_A3CS_MM_Module_MakeDraggable_DisplayName">
+				<Original>Przeciąganie obiektu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MakeDraggable_Description">
+				<Original>Moduł dodający/blokujący możliwość przeciągania wybranych obiektów&lt;br /&gt;Zsynchronizuj moduł z każdym obiektem którego ma dotyczyć moduł&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MakeDraggable_Draggable_DisplayName">
+				<Original>Możliwość przeciągania</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MakeDraggable_Draggable_Description">
+				<Original>Czy opcja przeciągania ma być dostępna. Odznacz jeśli obiekt ma mieć zablokowaną opcję ciągnięcia.</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MakeDraggable_DragOffset_DisplayName">
+				<Original>Pozycja podczas przeciągania</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MakeDraggable_DragOffset_Description">
+				<Original>Współrzędne pozycji obiektu podczas przeciągania (jeśli nie wiesz o co chodzi zostaw [0,1,0]).</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MakeDraggable_DragDir_DisplayName">
+				<Original>Kierunek podczas przeciągania</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_MakeDraggable_DragDir_Description">
+				<Original>Kierunek obiektu podczas przeciągania (jeśli nie wiesz o co chodzi zostaw 0).</Original>
+			</Key>
+		</Container>
 	</Package>
 </Project>

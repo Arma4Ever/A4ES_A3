@@ -21,6 +21,7 @@ PREP(module_lanterns);
 PREP(module_addAction);
 PREP(module_makeLoadable);
 PREP(module_makeCarryable);
+PREP(module_makeDraggable);
 
 //other
 PREP(initHeadless);
@@ -49,6 +50,7 @@ PREP(addActionExec);
 PREP(addActionGlobal);
 PREP(makeLoadableGlobal);
 PREP(makeCarryableGlobal);
+PREP(makeDraggableGlobal);
 
 PREP(checkUnconsciousness);
 
