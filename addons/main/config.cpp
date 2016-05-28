@@ -51,9 +51,6 @@ class CfgMods {
     };
 };
 
-#include "CfgWeapons.hpp"
-#include "CfgVehicles.hpp"
-
 /*
     Removed ACE modules:
     ace_advanced_ballistics.pbo

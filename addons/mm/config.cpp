@@ -17,6 +17,5 @@ class CfgPatches {
 #include "CfgSounds.hpp"
 #include "Cfg3den.hpp"
 #include "CfgFactionClasses.hpp"
-#include "CfgSurfaces.hpp"
 #include "ACE_Settings.hpp"
 #include "dialogs.hpp"

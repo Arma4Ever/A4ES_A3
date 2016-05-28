@@ -11,6 +11,7 @@ class CfgPatches {
     };
 };
 
+#include "CfgSurfaces.hpp"
 #include "CfgAISkill.hpp"
 
 class Mode_SemiAuto;
