@@ -21,6 +21,9 @@ if (_mode == "init") then {
     if (!(isClass (configfile >> "CfgMovesMaleSdr" >> "States" >> _anim))) exitWith {systemChat format ["Nie odnaleziono animacji: %1", _anim];};
     if (!(_units call _loopCondition)) exitWith {};
 
+    //Disable cache for this units - looks like not needed :D
+    //{_x setVariable [QGVAR(cacheUnit), "never"];} forEach _units;
+
     private _delay = if (time < 3) then {1.5} else {0};
 
     [DFUNC(doAnimationGlobal), [_units, _anim, _loopAnim, _loopCondition], _delay] call CBA_fnc_waitAndExecute;
