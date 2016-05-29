@@ -587,6 +587,12 @@
 			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_BattlefieldJet3_DisplayName">
 				<Original>Przelot myśliwca #3 (27s)</Original>
 			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Alarm1_DisplayName">
+				<Original>Alarm #1 (2s)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_PlaySound_Sound_Alarm2_DisplayName">
+				<Original>Alarm #2 (7s)</Original>
+			</Key>
 			<Key ID="STR_A3CS_MM_Module_PlaySound_SoundPath_DisplayName">
 				<Original>Ścieżka do pliku</Original>
 			</Key>

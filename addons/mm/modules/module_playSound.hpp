@@ -4,6 +4,7 @@ class GVAR(module_playSound): A3C_Module {
     displayName = CSTRING(Module_PlaySound_DisplayName);
     category = "a3cs_modules_effects";
     function = QUOTE(DFUNC(module_playSound));
+    portrait = "\a3\Modules_F_Curator\Data\portraitsound_ca.paa";
     disposable = 0;
 
     class Attributes: AttributesBase {
@@ -38,6 +39,8 @@ class GVAR(module_playSound): A3C_Module {
                 class battlefieldjet1 {name = CSTRING(Module_PlaySound_Sound_BattlefieldJet1_DisplayName); value = "['\a3\sounds_f\environment\ambient\battlefield\battlefield_jet1.wss',14]"; default = 0;};
                 class battlefieldjet2 {name = CSTRING(Module_PlaySound_Sound_BattlefieldJet2_DisplayName); value = "['\a3\sounds_f\environment\ambient\battlefield\battlefield_jet2.wss',14]"; default = 0;};
                 class battlefieldjet3 {name = CSTRING(Module_PlaySound_Sound_BattlefieldJet3_DisplayName); value = "['\a3\sounds_f\environment\ambient\battlefield\battlefield_jet3.wss',27]"; default = 0;};
+                class alarm1 {name = CSTRING(Module_PlaySound_Sound_Alarm1_DisplayName); value = "['\a3\sounds_f\sfx\alarm.wss',2]"; default = 0;};
+                class alarm2 {name = CSTRING(Module_PlaySound_Sound_Alarm2_DisplayName); value = "['\a3\sounds_f\sfx\alarm_BLUFOR.wss',7]"; default = 0;};
             };
         };
         class soundPath: Edit {
