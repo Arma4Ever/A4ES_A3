@@ -4,6 +4,7 @@ class GVAR(module_colorCorrections): A3C_Module {
     displayName = CSTRING(Module_ColorCorrections_DisplayName);
     category = "a3cs_modules_effects";
     function = QUOTE(DFUNC(module_colorCorrections));
+    portrait = "\a3\Modules_F_Curator\Data\portraitPostprocess_ca.paa";
     isTriggerActivated = 0;
     execIn3DEN = 1;
 

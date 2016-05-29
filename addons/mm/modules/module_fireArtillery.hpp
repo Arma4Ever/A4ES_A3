@@ -4,6 +4,7 @@ class GVAR(module_fireArtillery): A3C_Module {
     displayName = CSTRING(Module_FireArtillery_DisplayName);
     category = "a3cs_modules_support";
     function = QUOTE(DFUNC(module_fireArtillery));
+    portrait = "\a3\Modules_F_Curator\Data\portraitOrdnance_ca.paa";
     canSetArea = 1;
     class AttributeValues {
         size3[] = {50,50,-1};
