@@ -1127,5 +1127,31 @@
 				<Original>Żółta flara</Original>
 			</Key>
 		</Container>
+		<Container name="A3CS_MM_Module_DoAnimation">
+			<Key ID="STR_A3CS_MM_Module_DoAnimation_DisplayName">
+				<Original>Animacje jednostek</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_DoAnimation_Description">
+				<Original>Moduł odtwarzający animacje na wybranych jednostkach &lt;br /&gt;Zsynchronizuj moduł z każdą jednostką której ma dotyczyć moduł&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_DoAnimation_Anim_DisplayName">
+				<Original>Animacja</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_DoAnimation_Anim_Description">
+				<Original>Klasa animacji (np. AcinPercMstpSnonWnonDnon)</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_DoAnimation_LoopAnim_DisplayName">
+				<Original>Zapętl</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_DoAnimation_LoopAnim_Description">
+				<Original>Czy animacja ma być zapętlona</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_DoAnimation_LoopCondition_DisplayName">
+				<Original>Warunek pętli</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_DoAnimation_LoopCondition_Description">
+				<Original>W momencie gdy warunek zwróci nieprawdę pętla zostanie przerwana</Original>
+			</Key>
+		</Container>
 	</Package>
 </Project>

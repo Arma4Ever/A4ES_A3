@@ -25,6 +25,7 @@ PREP(module_makeDraggable);
 PREP(module_genFire);
 PREP(module_genSmoke);
 PREP(module_genFlare);
+PREP(module_doAnimation);
 
 //other
 PREP(initHeadless);
@@ -56,6 +57,7 @@ PREP(makeCarryableLocal);
 PREP(makeDraggableLocal);
 PREP(genFireLocal);
 PREP(genSmokeLocal);
+PREP(doAnimationGlobal);
 
 PREP(checkUnconsciousness);
 
