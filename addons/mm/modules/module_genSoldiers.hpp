@@ -75,6 +75,7 @@ class GVAR(module_genSoldiers): A3C_Module {
             class values {
                 class patrol {name = CSTRING(Module_GenSoldiers_Behaviour_Patrol_DisplayName); value = "patrol"; default = 1;};
                 class defend {name = CSTRING(Module_GenSoldiers_Behaviour_Defend_DisplayName); value = "defend"; default = 0;};
+                class defendAdvanced {name = CSTRING(Module_GenSoldiers_Behaviour_DefendAdvanced_DisplayName); value = "defendAdvanced"; default = 0;};
                 class base {name = CSTRING(Module_GenSoldiers_Behaviour_Base_DisplayName); value = "base"; default = 0;};
             };
         };

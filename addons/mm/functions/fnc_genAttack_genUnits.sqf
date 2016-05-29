@@ -97,11 +97,11 @@ for "_spawnCounter" from 1 to _unitCount do {
     };
     //Create vehicle is possible
     if (_vehicle != "" && {isNull _groupVehicle}) then {
-        _groupVehicle = createVehicle [_vehicle, _unitPosition, [], 0, "FORM"];
+        _groupVehicle = createVehicle [_vehicle, _unitPosition, [], 0, "NONE"];
         _groupVehicle setDir (_groupVehicle getDir _attackPosition);
     };
     //Gen unit
-    _unit = _group createUnit [_class, _unitPosition, [], 0, "FORM"];
+    _unit = _group createUnit [_class, _unitPosition, [], 0, "NONE"];
     _groupLeader = leader _group;
     _unit setVariable ["a3cs_generated", true, true];
     _unit setVariable [QGVAR(genAttack), true, true];

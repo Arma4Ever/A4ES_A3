@@ -137,10 +137,10 @@ if (_mode == "init") then {
             } else {
                 _vehiclePosition = _unitPosition;
             };
-            _groupVehicle = createVehicle [_vehicle, _vehiclePosition, [], 0, "FORM"];
+            _groupVehicle = createVehicle [_vehicle, _vehiclePosition, [], 0, "NONE"];
             _groupVehicle setDir _vehicleDir;
         };
-        _unit = _group createUnit [_class, _unitPosition, [], 0, "FORM"];
+        _unit = _group createUnit [_class, _unitPosition, [], 0, "NONE"];
         _groupLeader = leader _group;
         _unit setVariable ["a3cs_generated", true, true];
         _unit setVariable [QGVAR(genSoldiers), true, true];
@@ -252,6 +252,12 @@ if (_mode == "init") then {
             } forEach _staticWeapons;
         } forEach _aliveGroups;
     };
+    if (_behaviour == "defendAdvanced") then {
+        {
+            private _group = _x;
+            [_group, _group, _logicSize, 2, false] call CBA_fnc_taskDefend;
+        } forEach _aliveGroups;
+    };
     if (_behaviour == "base") then {
         {
             private _group = _x;
@@ -290,7 +296,11 @@ if (_mode == "init") then {
     };*/
 
     //Transfer groups to headless
-    [_aliveGroups] call FUNC(transferGroups);
+    if (_behaviour == "defendAdvanced") then {
+        [{_this call FUNC(transferGroups);}, [_aliveGroups], 30] call CBA_fnc_waitAndExecute;
+    } else {
+        [_aliveGroups] call FUNC(transferGroups);
+    };
 
     //Start debug if SP/Editor
     if (!isMultiplayer) then {

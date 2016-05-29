@@ -223,6 +223,9 @@
 			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Behaviour_Defend_DisplayName">
 				<Original>Obrona pozycji</Original>
 			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Behaviour_DefendAdvanced_DisplayName">
+				<Original>Obrona pozycji - zaawansowana (nie odpowiada na wezwania wsparcia)</Original>
+			</Key>
 			<Key ID="STR_A3CS_MM_Module_GenSoldiers_Behaviour_Base_DisplayName">
 				<Original>Oczekiwanie w bazie</Original>
 			</Key>
