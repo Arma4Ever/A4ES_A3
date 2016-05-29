@@ -1164,7 +1164,7 @@
 				<Original>Przeskok czasu</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_SkipTime_Time_Description">
-				<Original></Original>
+				<Original>Czas w godzinach o jaki zostanie przesunięta aktualna godzina</Original>
 			</Key>
 			<Key ID="STR_A3CS_MM_Module_SkipTime_Notification_DisplayName">
 				<Original>Pokaż informację</Original>
@@ -1174,6 +1174,47 @@
 			</Key>
 			<Key ID="STR_A3CS_MM_SkipTime_LaterInfo">
 				<Original>%1 godzin później...</Original>
+			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_GenAnimals">
+			<Key ID="STR_A3CS_MM_Module_GenAnimals_DisplayName">
+				<Original>Generator zwierząt</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAnimals_Description">
+				<Original>Moduł generowania zwierząt&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAnimals_Type_DisplayName">
+				<Original>Typ</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAnimals_Type_Description">
+				<Original>Typ zwierzęcia jakie mają być wygenerowane</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAnimals_Type_Sheep_DisplayName">
+				<Original>Owce</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAnimals_Type_Goats_DisplayName">
+				<Original>Kozy</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAnimals_Type_Hens_DisplayName">
+				<Original>Kury</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAnimals_Type_Dogs_DisplayName">
+				<Original>Psy</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAnimals_Type_Rabbit_DisplayName">
+				<Original>Króliki</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAnimals_Count_DisplayName">
+				<Original>Ilość</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAnimals_Count_Description">
+				<Original>Ile zwierząt ma zostac wygenerowanych</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAnimals_Script_DisplayName">
+				<Original>Skrypt zwierzęcia</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_GenAnimals_Script_Description">
+				<Original>Skrypt który zostanie wykonany dla każdego wygenerowanego zwierzęcia (np. _this allowDamage false)</Original>
 			</Key>
 		</Container>
 	</Package>

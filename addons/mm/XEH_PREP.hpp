@@ -27,6 +27,7 @@ PREP(module_genSmoke);
 PREP(module_genFlare);
 PREP(module_doAnimation);
 PREP(module_skipTime);
+PREP(module_genAnimals);
 
 //other
 PREP(initHeadless);

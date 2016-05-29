@@ -38,6 +38,7 @@ class CfgVehicles {
     #include "modules\module_genAttack.hpp"
     #include "modules\module_surrenderUnit.hpp"
     #include "modules\module_handcuffUnit.hpp"
+    #include "modules\module_genAnimals.hpp"
     //#include "modules\module_genParadrop.hpp" //--todo: rewirte
 
     //----- Effects
