@@ -29,9 +29,9 @@ if(_mode == "init") then {
     if(_timeCondition > 0 || _countCondition > 0 || (call _codeCondition)) then {
         if(!isMultiplayer) then {systemchat format ["fireArtillery - Rozpoczynam ostrzal"];};
         _logic setVariable [QGVAR(fireArtillery_active), true, true];
-        _logic setVariable [QGVAR(fireArtillery_startTime), ACE_time, true];
+        _logic setVariable [QGVAR(fireArtillery_startTime), CBA_missionTime, true];
         private _delay = [_minDelay, _maxDelay] call BIS_fnc_randomNum;
-        [DFUNC(fireArtillery_fireShell), _logic, _delay] call ace_common_fnc_waitAndExecute;
+        [DFUNC(fireArtillery_fireShell), _logic, _delay] call CBA_fnc_waitAndExecute;
     };
 
     //Set as disposable if possible

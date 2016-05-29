@@ -32,7 +32,7 @@ if (_mode == "init") then {
     //Start respawn
     _logic setVariable [QGVAR(genAttack_active), true, true];
     _logic setVariable [QGVAR(genAttack_started), true, true];
-    _logic setVariable [QGVAR(genAttack_startTime), ACE_time, true];
+    _logic setVariable [QGVAR(genAttack_startTime), CBA_missionTime, true];
     _logic call FUNC(genAttack_genUnits);
 
     //Set as disposable if possible

@@ -28,9 +28,9 @@ if(!freeLook && {GVAR(enableCursorNametag) || GVAR(enable3dNametag) == 2}) then 
 
 //freelok nametag
 if(freeLook && {GVAR(enable3dNametag) isEqualTo 1}) then {
-    if(ace_time - GVAR(nametagObjectsCacheTime) > 2) then {
+    if(CBA_missionTime - GVAR(nametagObjectsCacheTime) > 2) then {
         GVAR(nametagObjectsCache) = (positionCameraToWorld [0, 0, 0]) nearEntities ["Man", 10];
-        GVAR(nametagObjectsCacheTime) = ace_time;
+        GVAR(nametagObjectsCacheTime) = CBA_missionTime;
     };
     {
         private _target = _x;

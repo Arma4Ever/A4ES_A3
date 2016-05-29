@@ -23,7 +23,7 @@ private _startTime = _logic getVariable [QGVAR(fireArtillery_startTime), 0];
 private _shotsFired = _logic getVariable [QGVAR(fireArtillery_shotsFired), 0];
 
 //check time condition
-if(_timeCondition > 0 && {(ACE_time - _startTime) >= _timeCondition}) then {_active = false;};
+if(_timeCondition > 0 && {(CBA_missionTime - _startTime) >= _timeCondition}) then {_active = false;};
 //check count condition
 if(_countCondition > 0 && {_shotsFired >= _countCondition}) then {_active = false;};
 //check expression condition
@@ -72,7 +72,7 @@ _shotsFired = _shotsFired + 1;
 _logic setVariable [QGVAR(fireArtillery_shotsFired), _shotsFired];
 
 if((toLower _ammo) == "missile_agm_01_f") then {
-    [{_this setVectorUp [0, 0.902134, 0.430359]}, _shell, 0.02] call ace_common_fnc_waitAndExecute;
+    [{_this setVectorUp [0, 0.902134, 0.430359]}, _shell, 0.02] call CBA_fnc_waitAndExecute;
 };
 
 if(!isMultiplayer) then {
@@ -84,4 +84,4 @@ if(!isMultiplayer) then {
 
 //Send next fire mission
 private _delay = [_minDelay, _maxDelay] call BIS_fnc_randomNum;
-[DFUNC(fireArtillery_fireShell), _logic, _delay] call ace_common_fnc_waitAndExecute;
+[DFUNC(fireArtillery_fireShell), _logic, _delay] call CBA_fnc_waitAndExecute;

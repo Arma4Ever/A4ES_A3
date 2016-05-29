@@ -19,7 +19,7 @@ if(_effectType == 0) then {
         _sourceParent setParticleRandom [0,[30,30,20],[0,0,0],0,0.01,[0,0,0,0.1],0,0];
         _sourceParent setParticleCircle [0,[0,0,0]];
         _sourceParent setDropInterval 0.00001;
-    }, [], 1] call ace_common_fnc_waitAndExecute;
+    }, [], 1] call CBA_fnc_waitAndExecute;
 };
 //light storm
 if(_effectType == 1) then {
@@ -49,7 +49,7 @@ if(_effectType == 1) then {
         _sourceLightLeft setParticleCircle [0,[0,0,0]];
         _sourceLightLeft setParticleRandom [0,[40,40,.5],[0,0,0],0,0,[0,0,0,0],0,0];
         _sourceLightLeft setDropInterval 0.009;
-    }, [], 1] call ace_common_fnc_waitAndExecute;
+    }, [], 1] call CBA_fnc_waitAndExecute;
 };
 
 //med storm
@@ -80,5 +80,5 @@ if(_effectType == 2) then {
         _sourceLightLeft setParticleCircle [0,[0,0,0]];
         _sourceLightLeft setParticleRandom [0,[40,40,.5],[0,0,0],0,0,[0,0,0,0],0,0];
         _sourceLightLeft setDropInterval 0.007;
-    }, [], 1] call ace_common_fnc_waitAndExecute;
+    }, [], 1] call CBA_fnc_waitAndExecute;
 };

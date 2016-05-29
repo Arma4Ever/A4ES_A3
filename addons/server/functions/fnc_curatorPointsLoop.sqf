@@ -8,4 +8,4 @@ if(!isServer) exitWith {};
 
 {_x addCuratorPoints 1;} forEach allCurators;
 
-[FUNC(curatorPointsLoop), [], 60] call ace_common_fnc_waitAndExecute;
+[FUNC(curatorPointsLoop), [], 60] call CBA_fnc_waitAndExecute;

@@ -14,4 +14,4 @@ if (!isServer) exitWith {};
     };
 } foreach allPlayers;
 
-[DFUNC(resetScoreLoop), [], 30] call ace_common_fnc_waitAndExecute;
+[DFUNC(resetScoreLoop), [], 30] call CBA_fnc_waitAndExecute;

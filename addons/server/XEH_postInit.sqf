@@ -21,7 +21,7 @@ if (count allCurators > 0) then {
     [] call FUNC(curatorPointsLoop);
     [{
         {_x addCuratorAddons activatedAddons;} forEach allCurators;
-    }, [], 2] call ace_common_fnc_waitAndExecute;
+    }, [], 2] call CBA_fnc_waitAndExecute;
 };
 
 ["tagCreated", {
@@ -37,4 +37,4 @@ if (count allCurators > 0) then {
 [FUNC(onEachFrame), 0, []] call CBA_fnc_addPerFrameHandler;
 
 //Send nametag data after 2s
-[FUNC(sendNametagData), [], 2] call ace_common_fnc_waitAndExecute;
+[FUNC(sendNametagData), [], 2] call CBA_fnc_waitAndExecute;

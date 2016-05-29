@@ -54,4 +54,4 @@ if(!isServer) exitWith {};
     if(isPlayer _killer) then {
 
     };
-}, _this, 1] call ace_common_fnc_waitAndExecute;
+}, _this, 1] call CBA_fnc_waitAndExecute;

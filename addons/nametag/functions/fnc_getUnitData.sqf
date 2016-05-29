@@ -7,7 +7,7 @@
 params ["_target"];
 
 private _cacheTime = _target getVariable [QGVAR(getUnitDataCacheTime), 0];
-if((ace_time - _cacheTime) < 4 && {_cacheTime > 0}) exitWith {
+if((CBA_missionTime - _cacheTime) < 4 && {_cacheTime > 0}) exitWith {
     _target getVariable [QGVAR(getUnitDataCacheData), []]
 };
 
@@ -50,6 +50,6 @@ _returnArray append _colorArray;
 _returnArray pushBack _unitMapIcon;
 
 _target setVariable [QGVAR(getUnitDataCacheData), _returnArray];
-_target setVariable [QGVAR(getUnitDataCacheTime), ace_time];
+_target setVariable [QGVAR(getUnitDataCacheTime), CBA_missionTime];
 
 _returnArray

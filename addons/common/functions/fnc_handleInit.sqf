@@ -15,5 +15,5 @@ if(_unit in playableUnits) then {
         _unit addEventHandler ["HandleScore", {false}];
         //No rating - friendly fire ai fix
         _unit addEventHandler ["HandleRating", {0}];
-    }, [_unit], 1] call ace_common_fnc_waitAndExecute;
+    }, [_unit], 1] call CBA_fnc_waitAndExecute;
 };

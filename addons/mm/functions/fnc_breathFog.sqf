@@ -39,5 +39,5 @@ missionNamespace setVariable [QGVAR(breathFog), true];
         _fog setParticleRandom [2, [0, 0, 0], [0.25, 0.25, 0.25], 0, 0.4, [0, 0, 0, 0.1], 0, 0, 10];
         _fog setDropInterval 5;
         _source attachto [_unit, [0, 0.15, 0], "neck"];
-    }, _this, _time] call ace_common_fnc_waitAndExecute;
+    }, _this, _time] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addClassEventhandler;

@@ -38,7 +38,7 @@ private _logicArea = [_logic, _logicSizeX, _logicSizeY, _logicAngle, _logicIsRec
 private _logicSize = _logicSizeX max _logicSizeY;
 
 //check time condition
-if (_timeCondition > 0 && {(ACE_time - _startTime) >= _timeCondition}) then {_active = false;};
+if (_timeCondition > 0 && {(CBA_missionTime - _startTime) >= _timeCondition}) then {_active = false;};
 //check count condition
 if (_countCondition > 0 && {_genCount >= _countCondition}) then {_active = false;};
 //check expression condition

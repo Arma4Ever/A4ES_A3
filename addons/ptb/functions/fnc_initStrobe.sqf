@@ -16,5 +16,5 @@ _particle setDropInterval 0;
 GVAR(particleSources) pushback _particle;
 
 if((currentVisionMode ace_player) == 2) then {
-    [{_this setDropInterval 2;}, _particle, random 2] call ace_common_fnc_waitAndExecute;
+    [{_this setDropInterval 2;}, _particle, random 2] call CBA_fnc_waitAndExecute;
 };

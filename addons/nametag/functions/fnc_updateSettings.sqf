@@ -53,10 +53,10 @@ if(_option == "init" || _option == QGVAR(addSpecialItem)) then {
     if(GVAR(addSpecialItem) && isMultiplayer) then {
         if(GVAR(members) isEqualTo [[],[]]) then {
             QGVAR(members) addPublicVariableEventHandler {
-                [FUNC(addSpecialItem), [], 1] call ace_common_fnc_waitAndExecute;
+                [FUNC(addSpecialItem), [], 1] call CBA_fnc_waitAndExecute;
             };
         } else {
-            [FUNC(addSpecialItem), [], 1] call ace_common_fnc_waitAndExecute;
+            [FUNC(addSpecialItem), [], 1] call CBA_fnc_waitAndExecute;
         };
     };
 };

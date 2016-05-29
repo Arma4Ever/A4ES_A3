@@ -62,7 +62,7 @@ if (GVAR(currentApplicationPage) == 1) then {
     if(GVAR(settingReceiver)) then {
         private _markerSize = 48 * _mapSize;
         private _textSize = 0.07 * _mapSize;
-        private _time = ace_time;
+        private _time = CBA_missionTime;
 
         if(_time - GVAR(mapMarkersLastUpdate) >= GVAR(mapMarkersUpdateInterval)) then {
             GVAR(mapMarkersLastUpdate) = _time;

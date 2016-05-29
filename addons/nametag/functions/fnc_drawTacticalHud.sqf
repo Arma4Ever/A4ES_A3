@@ -38,7 +38,7 @@ if(GVAR(tacticalHudHidden)) then {
 };
 
 //refresh group data
-if(ace_time - GVAR(tacticalHudGroupDataRefreshTime) > 1 || {GVAR(tacticalHudGroupDataRefreshTime) isEqualTo 0}) then {
+if(CBA_missionTime - GVAR(tacticalHudGroupDataRefreshTime) > 1 || {GVAR(tacticalHudGroupDataRefreshTime) isEqualTo 0}) then {
     GVAR(tacticalHudGroupData) = [];
     {
         private _unit = _x;
@@ -47,7 +47,7 @@ if(ace_time - GVAR(tacticalHudGroupDataRefreshTime) > 1 || {GVAR(tacticalHudGrou
         private _index = (GVAR(tacticalHudGroupData) pushBack [_unit, _unitColorArma, _unitMapIcon, _unitName, _unitColorHex]);
         if(_unit isEqualTo ace_player) then {GVAR(tacticalHudGroupDataPlayerIndex) = _index};
     } forEach units ace_player;
-    GVAR(tacticalHudGroupDataRefreshTime) = ace_time;
+    GVAR(tacticalHudGroupDataRefreshTime) = CBA_missionTime;
 
     //showlist if enabled
     if(GVAR(enableTacticalHudLists)) then {
@@ -101,7 +101,7 @@ _tacticalMap drawIcon [
     0 //text shadow
 ];
 
-if(ace_time - GVAR(tacticalHudRadarUnitsCacheTime) > 1 || {GVAR(tacticalHudRadarUnitsCacheTime) isEqualTo 0}) then {
+if(CBA_missionTime - GVAR(tacticalHudRadarUnitsCacheTime) > 1 || {GVAR(tacticalHudRadarUnitsCacheTime) isEqualTo 0}) then {
     GVAR(tacticalHudRadarUnitsCache) = [];
     {
         _x params ["_unit"];
@@ -109,7 +109,7 @@ if(ace_time - GVAR(tacticalHudRadarUnitsCacheTime) > 1 || {GVAR(tacticalHudRadar
             GVAR(tacticalHudRadarUnitsCache) pushBack _x;
         };
     } forEach GVAR(tacticalHudGroupData);
-    GVAR(tacticalHudRadarUnitsCacheTime) = ace_time;
+    GVAR(tacticalHudRadarUnitsCacheTime) = CBA_missionTime;
 };
 
 {
