@@ -1153,5 +1153,28 @@
 				<Original>W momencie gdy warunek zwróci nieprawdę pętla zostanie przerwana</Original>
 			</Key>
 		</Container>
+		<Container name="A3CS_MM_Module_SkipTime">
+			<Key ID="STR_A3CS_MM_Module_SkipTime_DisplayName">
+				<Original>Przeskok czasu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SkipTime_Description">
+				<Original>Moduł przeskoku czasu&lt;br /&gt;&lt;br /&gt;Aby uruchomić moduł w wybranym momencie misji zsynchronizuj go z conajmniej jednym triggerem&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SkipTime_Time_DisplayName">
+				<Original>Przeskok czasu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SkipTime_Time_Description">
+				<Original></Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SkipTime_Notification_DisplayName">
+				<Original>Pokaż informację</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SkipTime_Notification_Description">
+				<Original>Czy podczas przeskoku ma być wyświetlony ekran z informacją o przeskoku</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_SkipTime_LaterInfo">
+				<Original>%1 godzin później...</Original>
+			</Key>
+		</Container>
 	</Package>
 </Project>

@@ -56,6 +56,7 @@ class CfgVehicles {
     //#include "modules\module_radioJamming.hpp" //--todo: write
     #include "modules\module_hideTerrainObjects.hpp"
     #include "modules\module_doAnimation.hpp"
+    #include "modules\module_skipTime.hpp"
 
     //----- Interaction
     //#include "modules\module_createDialog.hpp" //--todo: optimize, use ace_interact_menu

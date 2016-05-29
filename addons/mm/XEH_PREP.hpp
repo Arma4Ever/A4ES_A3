@@ -26,6 +26,7 @@ PREP(module_genFire);
 PREP(module_genSmoke);
 PREP(module_genFlare);
 PREP(module_doAnimation);
+PREP(module_skipTime);
 
 //other
 PREP(initHeadless);
@@ -58,6 +59,7 @@ PREP(makeDraggableLocal);
 PREP(genFireLocal);
 PREP(genSmokeLocal);
 PREP(doAnimationGlobal);
+PREP(skipTimeLocal);
 
 PREP(checkUnconsciousness);
 
