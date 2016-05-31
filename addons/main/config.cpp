@@ -8,7 +8,7 @@ class CfgPatches {
             #include "required_addons.hpp"
             "cba_main"
         };
-        author = "SzwedzikPL, ACE3 Team, Alduric, Chris, Wodzu, Samsung1702";
+        author[] = {"SzwedzikPL", "ACE3 Team", "Alduric", "Chris", "Wodzu", "Samsung1702"};
         authorUrl = "http://arma3coop.pl";
         VERSION_CONFIG;
     };
