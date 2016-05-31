@@ -5,7 +5,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"a3cs_common"};
-        author[] = {"SzwedzikPL"};
+        author = "SzwedzikPL";
         authorUrl = "http://arma3coop.pl";
         VERSION_CONFIG;
     };

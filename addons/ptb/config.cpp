@@ -5,7 +5,7 @@ class CfgPatches {
         weapons[] = {"ACE_IR_Strobe_Item"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"a3cs_common", "ace_attach"};
-        author[] = {"SzwedzikPL", "ACE3 Team"};
+        author = "SzwedzikPL, ACE3 Team";
         authorUrl = "http://arma3coop.pl";
         VERSION_CONFIG;
     };
