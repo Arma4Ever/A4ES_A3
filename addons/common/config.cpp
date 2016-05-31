@@ -5,8 +5,8 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"a3cs_main"};
-        author[] = {"SzwedzikPL", "ACE3 Team"};
-        authorUrl = "http://arma3coop.pl";
+        authors[] = {"SzwedzikPL", "ACE3 Team"};
+        AUTHOR_CONFIG;
         VERSION_CONFIG;
     };
 };

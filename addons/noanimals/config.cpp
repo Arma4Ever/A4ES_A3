@@ -5,8 +5,8 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"A3_Map_Stratis", "A3_Map_Altis"};
-        author[] = {"SzwedzikPL"};
-        authorUrl = "http://arma3coop.pl";
+        authors[] = {"SzwedzikPL"};
+        AUTHOR_CONFIG;
         VERSION_CONFIG;
     };
 };

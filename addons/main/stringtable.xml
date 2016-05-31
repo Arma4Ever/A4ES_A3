@@ -7,5 +7,11 @@
         <Key ID="STR_A3CS_Main_OpenConfigMenu">
             <Original>Ustawienia A3CS</Original>
         </Key>
+        <Key ID="STR_A3CS_Main_ModAuthor">
+            <Original>Arma3Coop.pl</Original>
+        </Key>
+        <Key ID="STR_A3CS_Main_ModAuthorURL">
+            <Original>http://arma3coop.pl</Original>
+        </Key>
     </Package>
 </Project>

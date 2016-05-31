@@ -13,3 +13,8 @@
 
 #define REQUIRED_VERSION 1.6
 #define REQUIRED_CBA_VERSION {2,4,0}
+
+#define AUTHOR_CONFIG \
+    author = "$STR_A3CS_Main_ModAuthor"; \
+    authorUrl = "$STR_A3CS_Main_ModAuthorURL"; \
+    url = "$STR_A3CS_Main_ModAuthorURL"
