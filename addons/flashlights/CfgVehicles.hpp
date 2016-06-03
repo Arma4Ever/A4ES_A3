@@ -21,7 +21,7 @@ class CfgVehicles {
             class Light_1 {
                 color[] = {1800,1500,1200};
                 ambient[] = {9,7.5,6};
-                intensity = 1.1;
+                intensity = 2.5;
                 size = 1;
                 innerAngle = 20;
                 outerAngle = 80;
@@ -57,7 +57,7 @@ class CfgVehicles {
             class Light_1 {
                 color[] = {1000,250,250};
                 ambient[] = {9,7.5,6};
-                intensity = 100;
+                intensity = 2.5;
                 size = 1;
                 innerAngle = 20;
                 outerAngle = 80;

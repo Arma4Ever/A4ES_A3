@@ -12,6 +12,6 @@ _attachedItem params ["_item", "_itemClass"];
 if (isNull _item) exitWith {};
 
 if (_item isKindOf QGVAR(personalFlashlight_base)) then {
-    _item attachTo [ace_player, [-0.05, 0, -0.12], "rightshoulder"];
+    _item attachTo [ace_player, [0, 0, -0.05], "leftshoulder"];
     _item setDir 90;
 };
