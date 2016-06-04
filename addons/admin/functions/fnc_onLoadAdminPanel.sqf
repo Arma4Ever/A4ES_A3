@@ -7,7 +7,7 @@
 
 disableSerialization;
 private _display = uiNamespace getVariable ["A3CS_adminPanel", displayNull];
-if(isNull _display) exitWith {};
+if (isNull _display) exitWith {};
 
 private _headerText = [localize LSTRING(AdminPanelSP), localize LSTRING(AdminPanel)] select (isMultiplayer);
 (_display displayCtrl IDC_ADMINPANEL_HEADER) ctrlSetText _headerText;
@@ -20,7 +20,7 @@ private _logsTypes = "getNumber (_x >> 'type') == 1" configClasses (configFile >
     private _logConfig = _x;
     private _logClass = configName _logConfig;
     private _canAccess = _logClass call FUNC(canAccessPanelModule);
-    if(_canAccess) then {
+    if (_canAccess) then {
         _logModuleName = getText (_logConfig >> "displayName");
         _availableLogs pushBack [_logModuleName, _logClass];
     };
@@ -40,11 +40,11 @@ private _actions = "getNumber (_x >> 'type') in [0,2,3]" configClasses (configFi
     private _actionConfig = _x;
     private _actionClass = configName _actionConfig;
     private _canAccess = _actionClass call FUNC(canAccessPanelModule);
-    if(_canAccess) then {
+    if (_canAccess) then {
         private _actionType = getNumber (_actionConfig >> "type");
         private _actionName = getText (_actionConfig >> "displayName");
         private _actionFunction = getText (_actionConfig >> "function");
-        if(_actionType isEqualTo 3) then {
+        if (_actionType isEqualTo 3) then {
             private _actionVariable = getText (_actionConfig >> "variable");
             private _actionVariableDefaultValue = getNumber (_actionConfig >> "defaultValue");
             private _moduleVariable = missionNamespace getVariable [_actionVariable, _actionVariableDefaultValue];
@@ -55,20 +55,20 @@ private _actions = "getNumber (_x >> 'type') in [0,2,3]" configClasses (configFi
         _availableActions pushBack [_actionClass, _actionType, _actionName, _actionCode];
     };
 } forEach _actions;
-private _actionButtons = [IDC_ADMINPANEL_PANELACTION_1,IDC_ADMINPANEL_PANELACTION_2,IDC_ADMINPANEL_PANELACTION_3,IDC_ADMINPANEL_PANELACTION_4];
+private _actionButtons = [IDC_ADMINPANEL_PANELACTION_1,IDC_ADMINPANEL_PANELACTION_2,IDC_ADMINPANEL_PANELACTION_3,IDC_ADMINPANEL_PANELACTION_4,IDC_ADMINPANEL_PANELACTION_5];
 private _activeActionButtons = [];
 GVAR(panelActiveButtons) = [];
 GVAR(panelActiveButtonsActions) = [];
 {
     _x params ["_actionClass", "_actionType", "_actionName", "_actionCode"];
-    if(_actionType == 0) then {
+    if (_actionType == 0) then {
         //EndMission
         (_display displayCtrl IDC_ADMINPANEL_PANELACTIONENDMISSION) ctrlSetText _actionName;
         (_display displayCtrl IDC_ADMINPANEL_PANELACTIONENDMISSION) buttonSetAction _actionCode;
     } else {
         //Other actions
         _activeButtonsCount = count GVAR(panelActiveButtons);
-        if(_activeButtonsCount < (count _actionButtons)) then {
+        if (_activeButtonsCount < (count _actionButtons)) then {
             _actionButton = _actionButtons select _activeButtonsCount;
             (_display displayCtrl _actionButton) ctrlSetText _actionName;
             (_display displayCtrl _actionButton) buttonSetAction _actionCode;

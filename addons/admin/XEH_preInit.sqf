@@ -6,5 +6,6 @@ ADDON = false;
 
 GVAR(debugCameraEnabled) = false;
 GVAR(debug3rdPersonEnabled) = false;
+GVAR(debugCuratorEnabled) = false;
 
 ADDON = true;

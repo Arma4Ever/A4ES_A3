@@ -82,6 +82,12 @@
 	    <Key ID="STR_A3CS_Admin_Module_Debug3rdPerson_Disable3rdPerson">
             <Original>Wyłącz tryb 3 osoby</Original>
         </Key>
+	    <Key ID="STR_A3CS_Admin_Module_DebugCurator_EnableCurator">
+            <Original>Aktywuj zeusa</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Admin_Module_DebugCurator_DisableCurator">
+            <Original>Wyłącz zeusa</Original>
+        </Key>
 	    <Key ID="STR_A3CS_Admin_Module_DebugCamera_EnableCamera">
             <Original>Włącz kamerę</Original>
         </Key>

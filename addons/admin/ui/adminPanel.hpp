@@ -79,7 +79,7 @@ class A3CS_adminPanel {
             text = "";
             x = X_PART(1);
             y = Y_PART(2.1);
-            w = W_PART(9.5);
+            w = W_PART(7.6);
             h = H_PART(1);
             animTextureNormal = "#(argb,8,8,3)color(0,0,0,0.9)";
             animTextureDisabled = "#(argb,8,8,3)color(0,0,0,0.8)";
@@ -103,19 +103,25 @@ class A3CS_adminPanel {
         class PanelAction_2: PanelAction_1 {
             idc = IDC_ADMINPANEL_PANELACTION_2;
             text = "";
-            x = X_PART(10.5);
+            x = X_PART(8.6);
             action = "";
         };
         class PanelAction_3: PanelAction_1 {
             idc = IDC_ADMINPANEL_PANELACTION_3;
             text = "";
-            x = X_PART(20);
+            x = X_PART(16.2);
             action = "";
         };
         class PanelAction_4: PanelAction_1 {
             idc = IDC_ADMINPANEL_PANELACTION_4;
             text = "";
-            x = X_PART(29.5);
+            x = X_PART(23.8);
+            action = "";
+        };
+        class PanelAction_5: PanelAction_1 {
+            idc = IDC_ADMINPANEL_PANELACTION_5;
+            text = "";
+            x = X_PART(31.4);
             action = "";
         };
         class LogList: A3CS_ui_listNBoxBase {

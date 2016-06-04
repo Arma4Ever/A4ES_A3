@@ -17,10 +17,13 @@ if (!isServer) exitWith {};
 }] call BIS_fnc_addStackedEventHandler;
 
 //Refresh curator points
+[] call FUNC(curatorPointsLoop);
 if (count allCurators > 0) then {
-    [] call FUNC(curatorPointsLoop);
     [{
-        {_x addCuratorAddons activatedAddons;} forEach allCurators;
+        {
+            private _curator = _x;
+            _curator addCuratorAddons (("true" configClasses (configFile >> "CfgPatches")) apply {toLower configName _x});
+        } forEach allCurators;
     }, [], 2] call CBA_fnc_waitAndExecute;
 };
 

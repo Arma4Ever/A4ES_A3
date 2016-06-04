@@ -4,7 +4,7 @@
  */
 #include "script_component.hpp"
 
-if(!isServer) exitWith {};
+if (!isServer) exitWith {};
 
 {_x addCuratorPoints 1;} forEach allCurators;
 

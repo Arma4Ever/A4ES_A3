@@ -11,9 +11,12 @@ PREP(getServerLogsData);
 PREP(loadPanelLogs);
 PREP(isServerAdmin);
 PREP(isAdmin);
+PREP(addAdminCurator);
+PREP(removeAdminCurator);
 
 PREP(moduleAdminMessages);
 PREP(moduleDebug3rdPerson);
 PREP(moduleDebugCamera);
 PREP(moduleDebugConsole);
 PREP(moduleEndMission);
+PREP(moduleDebugCurator);

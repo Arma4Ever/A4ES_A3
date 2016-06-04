@@ -64,7 +64,7 @@ if (tolower _logClass == "debuglogs") then {
     _totalObjects = count (allMissionObjects "All");
     _modulesGenAI = count (entities QEGVAR(mm,module_genSoldiers));
     _modulesGenAttack = count (entities QEGVAR(mm,module_genAttack));
-    _curatorCount = count allCurators;
+    _curatorCount = count (allCurators select {!(_x getVariable [QGVAR(adminCurator), false])});
 
     _logData = [
         _serverFPS,
@@ -108,7 +108,7 @@ if (tolower _logClass == "curatorlist") then {
             _curatorUnitName = "Brak operatora";
         };
         _logData pushBack [format ["#%1",_forEachIndex+1], _curatorUnitName];
-    } forEach allCurators;
+    } forEach (allCurators select {!(_x getVariable [QGVAR(adminCurator), false])});
 };
 
 [_logClass, _logData] remoteExecCall [QFUNC(loadPanelLogs), _client];
