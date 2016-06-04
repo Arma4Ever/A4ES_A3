@@ -37,6 +37,9 @@
 	    <Key ID="STR_A3CS_MM_FactionClass_Objects">
             <Original>Zarządzanie obiektami</Original>
         </Key>
+	    <Key ID="STR_A3CS_MM_FactionClass_Markers">
+            <Original>Markery</Original>
+        </Key>
 	    <Key ID="STR_A3CS_MM_Headless_Inited">
             <Original>Wszystkie AI zostały przekazane do Headless Clienta poprawnie</Original>
         </Key>
@@ -1225,6 +1228,82 @@
 			<Key ID="STR_A3CS_MM_Module_GenAnimals_Script_Description">
 				<Original>Skrypt który zostanie wykonany dla każdego wygenerowanego zwierzęcia (np. _this allowDamage false)</Original>
 			</Key>
+		</Container>
+		<Container name="A3CS_MM_Module_SupplyPoint">
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_DisplayName">
+				<Original>Punkty serwisowy</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_Description">
+				<Original>Moduł nadający danym obiektom funkcje serwisowe&lt;br /&gt;Zsynchronizuj moduł z każdym obiektem który ma być punktem serwisowym&lt;br /&gt;&lt;br /&gt;Moduł jest uruchamiany na starcie misji&lt;br /&gt;Moduł po aktywacji nie może być już aktywowany ponownie.</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_Range_DisplayName">
+				<Original>Zasięg</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_Range_Description">
+				<Original>Zasięg punktu serwisowego w metrach</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_RearmPoint_DisplayName">
+				<Original>Przezbrajanie</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_RearmPoint_Description">
+				<Original>Czy punkt serwisowy ma umożliwiać przezbrajanie pojazdów</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_RefuelPoint_DisplayName">
+				<Original>Tankowanie</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_RefuelPoint_Description">
+				<Original>Czy punkt serwisowy ma umożliwiać tankowanie pojazdów</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_RepairPoint_DisplayName">
+				<Original>Naprawianie</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_RepairPoint_Description">
+				<Original>Czy punkt serwisowy ma umożliwiać naprawianie pojazdów</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_Action_Actions_DisplayName">
+				<Original>Punkt serwisowy</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_Action_RearmVehicle_DisplayName">
+				<Original>Przezbrój pojazd</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_Action_RearmVehicle_Progress">
+				<Original>Przezbrajanie pojazdu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_Action_RearmVehicle_Success">
+				<Original>Pojazd został przezbrojony</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_Action_RearmVehicle_Fail">
+				<Original>Przezbrajanie pojazdu zostało przerwane</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_Action_RefuelVehicle_DisplayName">
+				<Original>Zatankuj pojazd</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_Action_RefuelVehicle_Progress">
+				<Original>Tankowanie pojazdu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_Action_RefuelVehicle_Success">
+				<Original>Pojazd został zatankowany</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_Action_RefuelVehicle_Fail">
+				<Original>Tankowanie pojazdu zostało przerwane</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_Action_RepairVehicle_DisplayName">
+				<Original>Napraw pojazd</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_Action_RepairVehicle_Progress">
+				<Original>Naprawianie pojazdu</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_Action_RepairVehicle_Success">
+				<Original>Pojazd został naprawiony</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_Action_RepairVehicle_Fail">
+				<Original>Naprawianie pojazdu zostało przerwane</Original>
+			</Key>
+			<Key ID="STR_A3CS_MM_Module_SupplyPoint_VehicleMustBeEmpty">
+				<Original>Pojazd musi być pusty!</Original>
+			</Key>
+			
+			
 		</Container>
 	</Package>
 </Project>

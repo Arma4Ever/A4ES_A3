@@ -22,4 +22,7 @@ class CfgFactionClasses {
     class a3cs_modules_objects: a3cs_modules {
         displayName = CSTRING(FactionClass_Objects);
     };
+    class a3cs_modules_markers: a3cs_modules {
+        displayName = CSTRING(FactionClass_Markers);
+    };
 };

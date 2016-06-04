@@ -69,6 +69,12 @@ class CfgVehicles {
     //#include "modules\module_genCAS.hpp" //--todo: rewirte
     //#include "modules\module_genHeliSupportdrop.hpp" //--todo: rewirte
     //#include "modules\module_genSupplydrop.hpp" //--todo: rewirte
+    #include "modules\module_supplyPoint.hpp"
+
+    //----- Markers
+    //#include "modules\module_createMarker.hpp"
+    //#include "modules\module_editMarker.hpp"
+    //#include "modules\module_deleteMarker.hpp"
 
     //----- Objects
     #include "modules\module_genMinefield.hpp"

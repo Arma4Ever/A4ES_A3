@@ -28,6 +28,7 @@ PREP(module_genFlare);
 PREP(module_doAnimation);
 PREP(module_skipTime);
 PREP(module_genAnimals);
+PREP(module_supplyPoint);
 
 //other
 PREP(initHeadless);
@@ -61,6 +62,10 @@ PREP(genFireLocal);
 PREP(genSmokeLocal);
 PREP(doAnimationGlobal);
 PREP(skipTimeLocal);
+PREP(supplyPoint_actions);
+PREP(supplyPoint_rearmVehicle);
+PREP(supplyPoint_refuelVehicle);
+PREP(supplyPoint_repairVehicle);
 
 PREP(checkUnconsciousness);
 
