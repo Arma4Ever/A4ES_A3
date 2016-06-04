@@ -10,6 +10,31 @@
 	    <Key ID="STR_A3CS_Vehicleactions_Actions_TurnVehicle">
             <Original>Obróć pojazd</Original>
         </Key>
+	    <Key ID="STR_A3CS_Vehicleactions_Actions_CheckVehicleDoc">
+            <Original>Sprawdź dokumenty pojazdu</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Vehicleactions_CheckVehicleDoc_Prems">
+            <Original>Uprawnienia: %1</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Vehicleactions_CheckVehicleDoc_MedicalVehicle">
+            <Original>Pojazd medyczny</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Vehicleactions_CheckVehicleDoc_RepairVehicle">
+            <Original>Pojazd naprawczy</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Vehicleactions_CheckVehicleDoc_RefuelVehicle">
+            <Original>Cysterna</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Vehicleactions_CheckVehicleDoc_FuelCargo">
+            <Original>Pojemność zbiornika: %1</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Vehicleactions_CheckVehicleDoc_FuelCargoInfo">
+            <Original>%1 litrów</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Vehicleactions_CheckVehicleDoc_CargoSpace">
+            <Original>Pojemność cargo: %1</Original>
+        </Key>
+		
 	    <Key ID="STR_A3CS_Vehicleactions_ToggleCollisionLights_DisplayName">
             <Original>Włącz/Wyłącz światła pozycyjne</Original>
         </Key>

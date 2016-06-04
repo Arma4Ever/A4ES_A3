@@ -14,6 +14,18 @@ GVAR(initializedClasses) pushBack _class;
 private _canDisassemble = (count getArray (configfile >> "CfgVehicles" >> _class >> "assembleInfo" >> "dissasembleTo") > 0);
 private _isUAV = getNumber (configfile >> "CfgVehicles" >> _class >> "isUav") > 0;
 private _isAir = _object isKindOf "Air";
+private _isMan = _object isKIndOf "Man";
+
+if (!_isMan) then {
+    private _checkDocAction = [
+        QGVAR(checkVehicleDoc),
+        localize LSTRING(Actions_CheckVehicleDoc),
+        "",
+        {_this call DFUNC(checkVehicleDoc)},
+        {true}
+    ] call ace_interact_menu_fnc_createAction;
+    [_class, 1, ["ACE_SelfActions"], _checkDocAction] call ace_interact_menu_fnc_addActionToClass;
+};
 
 if(_canDisassemble) then {
     if (_isUAV) then {

@@ -1,1 +1,2 @@
 PREP(initVehicle);
+PREP(checkVehicleDoc);
