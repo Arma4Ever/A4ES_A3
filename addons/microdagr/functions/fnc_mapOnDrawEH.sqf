@@ -27,7 +27,7 @@ if (GVAR(currentApplicationPage) == 1) then {
     _theMap ctrlMapAnimAdd [0, DUMMY_ZOOM, DUMMY_POS];
     ctrlMapAnimCommit _theMap;
     _size = 412 * _mapSize;
-    _theMap drawIcon [QUOTE(PATHTO_R(images\compass_starInverted.paa)), [1,1,1,1], DUMMY_POS, _size, _size, (-1 * (getDir ACE_player)), '', 0 ];
+    _theMap drawIcon [QUOTE(PATHTO_R(images\compass_starInverted.paa)), [1,1,1,1], DUMMY_POS, _size, _size, (-1 * (([ACE_player] call CBA_fnc_headDir) select 0)), '', 0 ];
     _theMap drawIcon [QUOTE(PATHTO_R(images\compass_needle.paa)), [0.533,0.769,0.76,1], DUMMY_POS, _size, _size, 0, '', 0 ];
 
     if (GVAR(currentWaypoint) != -1) then {
@@ -56,35 +56,35 @@ if (GVAR(currentApplicationPage) == 1) then {
         ctrlMapAnimCommit _theMap;
     };
     _size = 48 * _mapSize;
-    _theMap drawIcon [QUOTE(PATHTO_R(images\icon_self.paa)), [0.533,0.769,0.76,0.75], (getPosASL ACE_player), _size, _size, (getDir ACE_player), '', 0 ];
+    _theMap drawIcon [QUOTE(PATHTO_R(images\icon_self.paa)), [0.533,0.769,0.76,0.75], (getPosASL ACE_player), _size, _size, (([ACE_player] call CBA_fnc_headDir) select 0), '', 0 ];
 
     //--- EDIT
-    if(GVAR(settingReceiver)) then {
+    if (GVAR(settingReceiver)) then {
         private _markerSize = 48 * _mapSize;
         private _textSize = 0.07 * _mapSize;
         private _time = CBA_missionTime;
 
-        if(_time - GVAR(mapMarkersLastUpdate) >= GVAR(mapMarkersUpdateInterval)) then {
+        if (_time - GVAR(mapMarkersLastUpdate) >= GVAR(mapMarkersUpdateInterval)) then {
             GVAR(mapMarkersLastUpdate) = _time;
             GVAR(mapMarkersCache) = [];
             private _units = playableUnits;
-            if(!isMultiplayer) then {_units = [ace_player];};
+            if (!isMultiplayer) then {_units = [ace_player];};
             {
                 private _unit = _x;
                 private _markerParams = [];
                 //prosty nadajnik
-                if(_unit getVariable [QGVAR(simpleTransmitting), false] && GVAR(settingShowAllMarkers)) then {
+                if (_unit getVariable [QGVAR(simpleTransmitting), false] && GVAR(settingShowAllMarkers)) then {
                     private _markerPos = getPosASL _unit;
                     _markerParams = ["a3\ui_f\data\map\Markers\NATO\o_unknown.paa", [0,0,0,0.75], _markerPos, (_markerSize*0.6), (_markerSize*0.6), 0, "", 0, 0, "TahomaB", "right"];
                 };
                 //microdagr
-                if(_unit getVariable [QGVAR(transmitting), false]) then {
+                if (_unit getVariable [QGVAR(transmitting), false]) then {
                     private _markerName = _unit getvariable [QGVAR(transmittingMarkerName), ""];
                     private _markerData = [(_unit getvariable [QGVAR(transmittingMarkerIcon), 0]), _unit] call FUNC(getMarker);
                     private _markerPos = getPosASL _unit;
                     _markerParams = [(_markerData select 1), (_markerData select 2), _markerPos, _markerSize, _markerSize, 0, _markerName, 0, _textSize, "TahomaB", "right"];
                 };
-                if(count _markerParams > 0) then {
+                if (count _markerParams > 0) then {
                     GVAR(mapMarkersCache) pushback _markerParams;
                     _theMap drawIcon _markerParams;
                 };
@@ -92,7 +92,7 @@ if (GVAR(currentApplicationPage) == 1) then {
         } else {
             {
                 private _m = _x;
-                if((_m select 0) == "a3\ui_f\data\map\Markers\NATO\o_unknown.paa") then {
+                if ((_m select 0) == "a3\ui_f\data\map\Markers\NATO\o_unknown.paa") then {
                     _m set [3, (_markerSize*0.6)];
                     _m set [4, (_markerSize*0.6)];
                 } else {

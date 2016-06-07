@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Author: PabstMirror
  * Updates the display (several times a second) called from the pfeh
  *
@@ -47,9 +47,9 @@ case (APP_MODE_INFODISPLAY): {
 
         //Heading:
         _compassAngleText = if (GVAR(settingUseMils)) then {
-            [(floor ((6400 / 360) * (getDir ACE_player))), 4, 0] call CBA_fnc_formatNumber;
+            [(floor ((6400 / 360) * (([ACE_player] call CBA_fnc_headDir) select 0))), 4, 0] call CBA_fnc_formatNumber;
         } else {
-            ([(floor (getDir ACE_player)), 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
+            ([(floor (([ACE_player] call CBA_fnc_headDir) select 0)), 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
         };
         (_display displayCtrl IDC_MODEDISPLAY_HEADINGNUM) ctrlSetText _compassAngleText;
 
@@ -107,9 +107,9 @@ case (APP_MODE_INFODISPLAY): {
 case (APP_MODE_COMPASS): {
         //Heading:
         _compassAngleText = if (GVAR(settingUseMils)) then {
-            [(floor ((6400 / 360) * (getDir ACE_player))), 4, 0] call CBA_fnc_formatNumber;
+            [(floor ((6400 / 360) * (([ACE_player] call CBA_fnc_headDir) select 0))), 4, 0] call CBA_fnc_formatNumber;
         } else {
-            ([(floor (getDir ACE_player)), 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
+            ([(floor (([ACE_player] call CBA_fnc_headDir) select 0)), 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
         };
         (_display displayCtrl IDC_MODECOMPASS_HEADING) ctrlSetText _compassAngleText;
 
@@ -226,7 +226,7 @@ case (APP_MODE_SETUP): {
         _settingListBox lbSetSelectColorRight [4, [1, 1, 1, 1]];
 
         _settingListBox lbAdd localize "STR_A3CS_Microdagr_CallSign";
-        if(GVAR(settingMarkerName) != "") then {
+        if (GVAR(settingMarkerName) != "") then {
             _settingListBox lbSetTextRight [5, GVAR(settingMarkerName)];
         } else {
             _settingListBox lbSetTextRight [5, localize "STR_A3CS_Microdagr_CallSign_None"];
@@ -234,7 +234,7 @@ case (APP_MODE_SETUP): {
         _settingListBox lbSetSelectColorRight [5, [1, 1, 1, 1]];
 
         _settingListBox lbAdd localize "STR_A3CS_Microdagr_Icon";
-        if(GVAR(settingMarkerIcon) == 0) then {
+        if (GVAR(settingMarkerIcon) == 0) then {
             _settingListBox lbSetTextRight [6, localize "STR_A3CS_Microdagr_Icon_Auto"];
         } else {
             _settingListBoxMarker = [GVAR(settingMarkerIcon), ACE_player] call FUNC(getMarker);
