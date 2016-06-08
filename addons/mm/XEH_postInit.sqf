@@ -35,9 +35,9 @@ if (isServer) then {
 
 if (hasInterface) then {
     //Error when mission was created in 2D editor
-    if(missionVersion == 12 && {!((tolower missionName) in ["intro","intro1","intro_new"])}) then {
-        hint parseText format ["<t size='1.5' color='#FF0000'>%1</t><br/><t size='1.1' color='#FF0000'>%2</t>", localize LSTRING(MissionFrom2DEditor1), localize LSTRING(MissionFrom2DEditor2)];
-    };
+    //if(missionVersion == 12 && {!((tolower missionName) in ["intro","intro1","intro_new"])}) then {
+    //    hint parseText format ["<t size='1.5' color='#FF0000'>%1</t><br/><t size='1.1' color='#FF0000'>%2</t>", localize LSTRING(MissionFrom2DEditor1), localize LSTRING(MissionFrom2DEditor2)];
+    //};
 
     //PreInit character desc
     private _characterDesc = player getVariable [QGVAR(characterDesc), ""];
