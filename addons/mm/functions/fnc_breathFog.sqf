@@ -4,9 +4,9 @@
  */
 #include "script_component.hpp"
 
-if(!hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
-if(missionNamespace getVariable [QGVAR(breathFog), false]) exitWith {true};
+if (missionNamespace getVariable [QGVAR(breathFog), false]) exitWith {true};
 missionNamespace setVariable [QGVAR(breathFog), true];
 
 ["CAManBase", "init", {

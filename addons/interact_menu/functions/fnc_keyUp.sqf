@@ -21,7 +21,7 @@ if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
     (findDisplay 91919) closeDisplay 2;
 };
 
-if(GVAR(actionSelected)) then {
+if (GVAR(actionSelected)) then {
     this = GVAR(selectedTarget);
 
     private _player = ACE_Player;
@@ -47,7 +47,7 @@ if(GVAR(actionSelected)) then {
 ["interactMenuClosed", [GVAR(openedMenuType)]] call EFUNC(common,localEvent);
 
 //--- EDIT
-if(a3cs_interact_menu_useFlexiMenu) then {
+if (a3cs_interact_menu_useFlexiMenu) then {
     [{
         params ["_args", "_pfID"];
         if (!dialog) then {

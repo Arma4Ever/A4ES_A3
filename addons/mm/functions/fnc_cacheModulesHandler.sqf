@@ -6,7 +6,7 @@
 
 //BEGIN_COUNTER(cacheModulesHandler);
 
-if(!isServer) exitWith {};
+if (!isServer) exitWith {};
 
 {
     private _module = _x;
@@ -16,19 +16,19 @@ if(!isServer) exitWith {};
     {
         private _player = vehicle _x;
         private _distance = ((_module distance _player) - _moduleSize) max 0;
-        if(GVAR(cacheDistanceLand) > 0) then {
-            if(_distance < GVAR(cacheDistanceLand) && {_player iskindOf "Land"}) exitWith {_isVisibleForPlayers = true;};
-            if(_distance < GVAR(cacheDistanceLand) && {_player iskindOf "Ship"}) exitWith {_isVisibleForPlayers = true;};
+        if (GVAR(cacheDistanceLand) > 0) then {
+            if (_distance < GVAR(cacheDistanceLand) && {_player iskindOf "Land"}) exitWith {_isVisibleForPlayers = true;};
+            if (_distance < GVAR(cacheDistanceLand) && {_player iskindOf "Ship"}) exitWith {_isVisibleForPlayers = true;};
         };
-        if(GVAR(cacheDistanceHelicopters) > 0) then {
-            if(_distance < GVAR(cacheDistanceHelicopters) && {_player iskindOf "Helicopter"}) exitWith {_isVisibleForPlayers = true;};
+        if (GVAR(cacheDistanceHelicopters) > 0) then {
+            if (_distance < GVAR(cacheDistanceHelicopters) && {_player iskindOf "Helicopter"}) exitWith {_isVisibleForPlayers = true;};
         };
-        if(GVAR(cacheDistancePlanes) > 0) then {
-            if(_distance < GVAR(cacheDistancePlanes) && {_player iskindOf "Plane"}) exitWith {_isVisibleForPlayers = true;};
+        if (GVAR(cacheDistancePlanes) > 0) then {
+            if (_distance < GVAR(cacheDistancePlanes) && {_player iskindOf "Plane"}) exitWith {_isVisibleForPlayers = true;};
         };
     } forEach _playableUnits;
 
-    if(_isVisibleForPlayers && {(_module in GVAR(cacheModules))}) then {
+    if (_isVisibleForPlayers && {(_module in GVAR(cacheModules))}) then {
         //exec module
         GVAR(cacheModules) deleteAt (GVAR(cacheModules) find _module);
         private _function = getText (configFile >> "CfgVehicles" >> (typeof _module) >> "function");

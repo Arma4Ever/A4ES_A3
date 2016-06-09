@@ -22,8 +22,8 @@ _angles params ["_centerAngle", "_maxAngleSpan"];
 private _menuDepth = (count GVAR(menuDepthPath));
 
 //--- EDIT
-if(a3cs_interact_menu_useFlexiMenu) then {
-    if(tolower (_actionData select 0) == "ace_mainactions") then {_activeChildren = [];};
+if (a3cs_interact_menu_useFlexiMenu) then {
+    if (tolower (_actionData select 0) == "ace_mainactions") then {_activeChildren = [];};
 };
 //--- !EDIT
 
@@ -49,7 +49,7 @@ private _menuInSelectedPath = true;
 
 //Get text color settings string
 private _textSettings = GVAR(colorSelectedSettings);
-if(!_menuInSelectedPath) then {
+if (!_menuInSelectedPath) then {
     _textSettings = (GVAR(textSettingsMatrix) select (count _path)) select _menuDepth;
 };
 

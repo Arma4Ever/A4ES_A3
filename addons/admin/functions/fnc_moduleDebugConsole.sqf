@@ -6,16 +6,16 @@
 #include "\z\a3cs\addons\admin\ui\idcDebugConsole.hpp"
 
 private _access = "debugconsole" call FUNC(canAccessPanelModule);
-if(!_access) exitWith {hint localize LSTRING(NoAccess);};
+if (!_access) exitWith {hint localize LSTRING(NoAccess);};
 
 while {dialog} do {closeDialog 0;};
 
 private _dialog = createDialog "A3CS_debugConsole";
-if(!_dialog) exitWith {};
+if (!_dialog) exitWith {};
 
 disableSerialization;
 private _display = uiNamespace getVariable ["A3CS_debugConsole", displayNull];
-if(isNull _display) exitWith {};
+if (isNull _display) exitWith {};
 
 _display displayAddEventHandler ["Unload", {
     disableSerialization;

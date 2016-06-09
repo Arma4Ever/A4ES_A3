@@ -4,14 +4,14 @@
  */
 #include "script_component.hpp"
 
-if(!isServer) exitWith {true};
+if (!isServer) exitWith {true};
 params [["_mode", "", [""]], ["_input", [], [[]]]];
 
 // Module - init
-if(_mode == "init") then {
+if (_mode == "init") then {
     _input params [["_logic", objNull, [objNull]], ["_isActivated", false, [false]], ["_isCuratorPlaced", false, [false]]];
-    if(isNull _logic || !_isActivated) exitWith {true};
-    if(!(_logic call FUNC(canExecuteModule))) exitWith {WARNING("genCAS: blokuje wykonanie modulu");true};
+    if (isNull _logic || !_isActivated) exitWith {true};
+    if (!(_logic call FUNC(canExecuteModule))) exitWith {WARNING("genCAS: blokuje wykonanie modulu");true};
 
     //Load module params
     private _place = _logic getVariable ["place", ""];
@@ -22,7 +22,7 @@ if(_mode == "init") then {
     private _weaponIndex = _logic getVariable ["weaponIndex", 0];
 
     private _planeCfg = (configfile >> "cfgvehicles" >> _planeClass);
-    if(!isMultiplayer && !isclass _planeCfg) exitwith {systemchat format ["genCas - nieprawidlowa klasa samolotu %1", _planeClass];true};
+    if (!isMultiplayer && !isclass _planeCfg) exitwith {systemchat format ["genCas - nieprawidlowa klasa samolotu %1", _planeClass];true};
 
     //--- Detect gun
     _weaponTypes = switch _attackType do {
@@ -36,10 +36,10 @@ if(_mode == "init") then {
     private _weapons = [];
     private _wepIndex = 0;
     {
-        if((tolower ((_x call bis_fnc_itemType) select 1) in _weaponTypes)) then {
+        if ((tolower ((_x call bis_fnc_itemType) select 1) in _weaponTypes)) then {
             private _modes = getarray (configfile >> "cfgweapons" >> _x >> "modes");
             if (count _modes > 0) then {
-                if((((_attackType in [3,4]) && (count _weapons) == 0) && _attackType != 3) || (_wepIndex == _weaponIndex || _attackType == 2)) then {
+                if ((((_attackType in [3,4]) && (count _weapons) == 0) && _attackType != 3) || (_wepIndex == _weaponIndex || _attackType == 2)) then {
                     _mode = _modes select 0;
                     if (_mode == "this") then {_mode = _x;};
                     _weapons set [count _weapons, [_x, _mode]];
@@ -49,7 +49,7 @@ if(_mode == "init") then {
         };
     } foreach (getArray (_planeCfg >> "weapons"));
 
-    if(!isMultiplayer && count _weapons == 0) exitwith {systemChat format ["genCas - Brak wskazanego uzbrojenia w samolotcie %1",_planeClass];true};
+    if (!isMultiplayer && count _weapons == 0) exitwith {systemChat format ["genCas - Brak wskazanego uzbrojenia w samolotcie %1",_planeClass];true};
 
     //--- Generate pos
     private _posATL = getMarkerPos _place;
@@ -86,7 +86,7 @@ if(_mode == "init") then {
         if (!(tolower ((_x call bis_fnc_itemType) select 1) in (_weaponTypes + ["countermeasureslauncher"]))) then {_plane removeweapon _x;};
     } foreach _currentWeapons;
 
-    if(!isMultiplayer) then {
+    if (!isMultiplayer) then {
         systemChat "genCas - Rozpoczynam nalot";
         _plane spawn {
             private "_marker";
@@ -112,7 +112,7 @@ if(_mode == "init") then {
     //_offset = if (({_x == "bomblauncher"} count _weaponTypes > 0) && (_planeClass in ["IVORY_MIG29","su34_PL","su34"])) then {405} else {_offset}; //PAM
     //_offset = if (({_x == "bomblauncher"} count _weaponTypes > 0) && (_planeClass in ["LIB_P47","LIB_Ju87","LIB_FW190F8","LIB_P39","LIB_Pe2"])) then {325} else {_offset}; //IF
 
-    if(_attackType == 4) then {_offset = _offset + 5;};
+    if (_attackType == 4) then {_offset = _offset + 5;};
 
     private _fireProgress = 0;
 
@@ -139,15 +139,15 @@ if(_mode == "init") then {
                 private _planeDriver = driver _plane;
                 private _duration = 3;
                 private _time = time + _duration;
-                private _sleepTime = if({_x == "bomblauncher"} count _weaponTypes > 0) then {0.2} else {0.1};
-                private _shotlimit = if(_attackType == 4) then {1} else {99999};
+                private _sleepTime = if ({_x == "bomblauncher"} count _weaponTypes > 0) then {0.2} else {0.1};
+                private _shotlimit = if (_attackType == 4) then {1} else {99999};
                 private _shots = 0;
 
-                if(!isMultiplayer) then {systemChat "genCAS - rozpoczynam ostrzal";};
+                if (!isMultiplayer) then {systemChat "genCAS - rozpoczynam ostrzal";};
 
                 waituntil {
                     {
-                        if(_shots < _shotlimit) then {
+                        if (_shots < _shotlimit) then {
                             _planeDriver forceweaponfire _x;
                             _shots = _shots + 1;
                         };
@@ -167,12 +167,12 @@ if(_mode == "init") then {
     _plane flyinheight _alt;
     sleep 1;
 
-    if(alive _plane) then {
-        if(!isMultiplayer) then {systemChat "genCas - koniec nalotu";};
+    if (alive _plane) then {
+        if (!isMultiplayer) then {systemChat "genCas - koniec nalotu";};
         //flares
         _plane spawn {
             for "_x" from 1 to 10 do {
-                if(!alive _this) exitWith {true};
+                if (!alive _this) exitWith {true};
                  (driver _this) forceweaponfire ["CMFlareLauncher", "Single"];
                  sleep 3;
             };
@@ -189,19 +189,19 @@ if(_mode == "init") then {
         {deletevehicle _x} foreach _crew;
         deletegroup _group;
 
-        if(!isMultiplayer) then {systemChat "genCas - koniec lotu";};
+        if (!isMultiplayer) then {systemChat "genCas - koniec lotu";};
     };
 
     //Set as disposable if possible
     _logic call FUNC(setDisposable);
 };
 // EDEN - When some attributes were changed (including position and rotation)
-if(_mode == "attributesChanged3DEN") then {};
+if (_mode == "attributesChanged3DEN") then {};
 // EDEN - When added to the world (e.g., after undoing and redoing creation)
-if(_mode == "registeredToWorld3DEN") then {};
+if (_mode == "registeredToWorld3DEN") then {};
 // When removed from the world (i.e., by deletion or undoing creation)
-if(_mode == "unregisteredFromWorld3DEN") then {};
+if (_mode == "unregisteredFromWorld3DEN") then {};
 // EDEN - When connection to object changes (i.e., new one is added or existing one removed)
-if(_mode == "connectionChanged3DEN") then {};
+if (_mode == "connectionChanged3DEN") then {};
 
 true

@@ -4,9 +4,9 @@
  */
 #include "script_component.hpp"
 
-if(!hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
-if(missionNamespace getVariable [QGVAR(sandStorm), false]) exitWith {true};
+if (missionNamespace getVariable [QGVAR(sandStorm), false]) exitWith {true};
 missionNamespace setVariable [QGVAR(sandStorm), true];
 
 _n = 0 spawn {

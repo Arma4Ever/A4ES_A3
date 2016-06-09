@@ -15,14 +15,14 @@ private _mods = "";
 
 //Prepare client modlist
 {
-    if(isClass (configFile >> "CfgMods" >> _x)) then {
+    if (isClass (configFile >> "CfgMods" >> _x)) then {
         private _modCode = getText (configFile >> "CfgMods" >> _x >> "mod_code");
         private _modVersion = getText (configFile >> "CfgMods" >> _x >> "mod_version");
 
-        if(_modCode == "") then {_modCode = _x;};
-        if(_modVersion == "") then {_modVersion = 0;};
+        if (_modCode == "") then {_modCode = _x;};
+        if (_modVersion == "") then {_modVersion = 0;};
 
-        if(_mods != "") then {
+        if (_mods != "") then {
             _mods = format ["%1\\%2::%3", _mods, _modCode, _modVersion];
         } else {
             _mods = format ["%1::%2", _modCode, _modVersion];
@@ -38,12 +38,12 @@ private _display = findDisplay 0;
 private _displayCtrl = 19005;
 private _data = "";
 
-if(_mode == "log") then {
+if (_mode == "log") then {
     _displayCtrl = 19000;
     _data = format["?mode=log&name=%1&uid=%2&lang=%3&mods=%4",_nickname, _uid, _lang, _mods];
 };
 
-if(_mode == "mods") then {
+if (_mode == "mods") then {
     _data = format["?mode=mods&mods=%2",_nickname, _mods];
 };
 

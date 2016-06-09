@@ -6,7 +6,7 @@
 
 {
     private _source = _x;
-    if(isNull attachedTo _source) then {
+    if (isNull attachedTo _source) then {
         GVAR(particleSources) deleteAt (GVAR(particleSources) find _source);
         deleteVehicle _source;
     };

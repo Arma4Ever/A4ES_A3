@@ -4,7 +4,7 @@
  */
 #include "script_component.hpp"
 
-if(!isServer) exitWith {};
+if (!isServer) exitWith {};
 
 params [
     ["_soundParams", [], [[]], 7],
@@ -13,7 +13,7 @@ params [
     ["_soundDuration", 0, [0]]
 ];
 
-if((count _soundParams) != 7) exitWith {};
+if ((count _soundParams) != 7) exitWith {};
 
 if (!isMultiplayer) then {
     systemChat format ["Odtwarzam dzwiek: %1", _soundParams select 0];

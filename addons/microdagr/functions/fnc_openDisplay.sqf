@@ -78,7 +78,7 @@ if ((_oldShowMode == DISPLAY_MODE_CLOSED) && {GVAR(currentShowMode) != DISPLAY_M
         if ((isNull ACE_player) || {!alive ACE_player} || {ACE_player != _player} || {!("ACE_microDAGR" in (items ACE_player))} || {GVAR(currentShowMode) == DISPLAY_MODE_CLOSED}) then {
 
             //--- EDIT
-            if(!("ACE_microDAGR" in (items ace_player))) then {
+            if (!("ACE_microDAGR" in (items ace_player))) then {
                 //A3C Wylacz nadajnik i odbiornik
                 GVAR(settingTransmitter) = false;
                 GVAR(settingReceiver) = false;

@@ -8,7 +8,7 @@ params [["_includeServerAdmin", true, [true]]];
 
 private _admins = [];
 
-if(isMultiplayer) then {
+if (isMultiplayer) then {
     private _adminConfigs = "true" configClasses (configFile >> QGVAR(admins));
     private _allAdminsUIDs = [];
     {
@@ -16,11 +16,11 @@ if(isMultiplayer) then {
         _allAdminsUIDs pushBack _adminUID;
     } foreach _adminConfigs;
     {
-        if((getPlayerUID _x) in _allAdminsUIDs) then {_admins pushBack _x;};
+        if ((getPlayerUID _x) in _allAdminsUIDs) then {_admins pushBack _x;};
     } forEach allPlayers;
-    if(_includeServerAdmin) then {
+    if (_includeServerAdmin) then {
         _serverAdmin = missionNamespace getVariable [QGVAR(serverAdmin), objNull];
-        if(!isNull _serverAdmin) then {
+        if (!isNull _serverAdmin) then {
             _admins pushBackUnique _serverAdmin;
         };
     };

@@ -7,8 +7,8 @@
 //BEGIN_COUNTER(drawTacticalHud);
 
 //Hide hud if nessesary
-if(visibleMap || {isNull ace_player} || {!alive ace_player} || {!isNull curatorCamera} || {GVAR(displayInterrupt)} || {EGVAR(admin,debugCameraEnabled)}) exitWith {
-    if(!GVAR(tacticalHudHidden)) then {
+if (visibleMap || {isNull ace_player} || {!alive ace_player} || {!isNull curatorCamera} || {GVAR(displayInterrupt)} || {EGVAR(admin,debugCameraEnabled)}) exitWith {
+    if (!GVAR(tacticalHudHidden)) then {
         {_x ctrlSetPosition [0, 0, 0, 0];_x ctrlCommit 0;} foreach [
             uiNamespace getVariable [QGVAR(tacticalHudRadar), controlNull],
             uiNamespace getVariable [QGVAR(tacticalHudRadarBackground), controlNull],
@@ -21,7 +21,7 @@ if(visibleMap || {isNull ace_player} || {!alive ace_player} || {!isNull curatorC
 };
 
 //Show hud if hidden
-if(GVAR(tacticalHudHidden)) then {
+if (GVAR(tacticalHudHidden)) then {
     private _controls = [
         [uiNamespace getVariable [QGVAR(tacticalHudRadar), controlNull], uiNamespace getVariable [QGVAR(tacticalHudRadarPosition), [0,0,0,0]]],
         [uiNamespace getVariable [QGVAR(tacticalHudRadarBackground), controlNull], uiNamespace getVariable [QGVAR(tacticalHudRadarBackgroundPosition), [0,0,0,0]]],
@@ -38,19 +38,19 @@ if(GVAR(tacticalHudHidden)) then {
 };
 
 //refresh group data
-if(CBA_missionTime - GVAR(tacticalHudGroupDataRefreshTime) > 1 || {GVAR(tacticalHudGroupDataRefreshTime) isEqualTo 0}) then {
+if (CBA_missionTime - GVAR(tacticalHudGroupDataRefreshTime) > 1 || {GVAR(tacticalHudGroupDataRefreshTime) isEqualTo 0}) then {
     GVAR(tacticalHudGroupData) = [];
     {
         private _unit = _x;
         private _unitData = _unit call DFUNC(getUnitData);
         _unitData params ["_unitName", "", "", "_unitColorHex", "_unitColorArma", "_unitMapIcon"];
         private _index = (GVAR(tacticalHudGroupData) pushBack [_unit, _unitColorArma, _unitMapIcon, _unitName, _unitColorHex]);
-        if(_unit isEqualTo ace_player) then {GVAR(tacticalHudGroupDataPlayerIndex) = _index};
+        if (_unit isEqualTo ace_player) then {GVAR(tacticalHudGroupDataPlayerIndex) = _index};
     } forEach units ace_player;
     GVAR(tacticalHudGroupDataRefreshTime) = CBA_missionTime;
 
     //showlist if enabled
-    if(GVAR(enableTacticalHudLists)) then {
+    if (GVAR(enableTacticalHudLists)) then {
         private _listControls = [
             uiNamespace getVariable [QGVAR(tacticalHudListOne), controlNull],
             uiNamespace getVariable [QGVAR(tacticalHudListTwo), controlNull],
@@ -63,10 +63,10 @@ if(CBA_missionTime - GVAR(tacticalHudGroupDataRefreshTime) > 1 || {GVAR(tactical
         private _lastListIndex = 0;
         private _listText = "";
         {
-            if(_forEachIndex < _allListsMaxCount) then {
+            if (_forEachIndex < _allListsMaxCount) then {
                 _x params ["", "", "_unitMapIcon", "_unitName", "_unitColorHex"];
                 _listIndex = (floor (_forEachIndex / _oneListMaxCount));
-                if(!(_lastListIndex isEqualTo _listIndex)) then {
+                if (!(_lastListIndex isEqualTo _listIndex)) then {
                     //Add text to list control and start new text list
                     (_listControls select _lastListIndex) ctrlSetStructuredText parseText _listText;
                     _listText = "";
@@ -101,11 +101,11 @@ _tacticalMap drawIcon [
     0 //text shadow
 ];
 
-if(CBA_missionTime - GVAR(tacticalHudRadarUnitsCacheTime) > 1 || {GVAR(tacticalHudRadarUnitsCacheTime) isEqualTo 0}) then {
+if (CBA_missionTime - GVAR(tacticalHudRadarUnitsCacheTime) > 1 || {GVAR(tacticalHudRadarUnitsCacheTime) isEqualTo 0}) then {
     GVAR(tacticalHudRadarUnitsCache) = [];
     {
         _x params ["_unit"];
-        if(_unit distance ace_player <= GVAR(tacticalHudMaxDistance) && {!(_unit isEqualTo ace_player)}) then {
+        if (_unit distance ace_player <= GVAR(tacticalHudMaxDistance) && {!(_unit isEqualTo ace_player)}) then {
             GVAR(tacticalHudRadarUnitsCache) pushBack _x;
         };
     } forEach GVAR(tacticalHudGroupData);

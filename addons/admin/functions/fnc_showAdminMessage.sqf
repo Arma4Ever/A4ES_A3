@@ -5,7 +5,7 @@
 #include "script_component.hpp"
 
 params [["_author", "", [""]], ["_message", "", [""]]];
-if(_author == "" || _message == "") exitWith {};
+if (_author == "" || _message == "") exitWith {};
 
 private _messageTitle = format [localize LSTRING(Module_AdminMessages_MessageTitle), _author];
 ["a3cs_adminMessage", [_messageTitle, _message]] call bis_fnc_shownotification;

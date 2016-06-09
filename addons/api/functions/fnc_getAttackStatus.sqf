@@ -6,13 +6,13 @@
 
 params [["_logic", objNull, [objNull]]];
 
-if(isNull _logic) exitWith {-1};
+if (isNull _logic) exitWith {-1};
 
 private _return = 0;
 
-if(_logic getVariable [QEGVAR(mm,genAttack_started), false]) then {
+if (_logic getVariable [QEGVAR(mm,genAttack_started), false]) then {
     _return = 2;
-    if(_logic getVariable [QEGVAR(mm,genAttack_active), false]) then {
+    if (_logic getVariable [QEGVAR(mm,genAttack_active), false]) then {
         _return = 1;
     };
 };

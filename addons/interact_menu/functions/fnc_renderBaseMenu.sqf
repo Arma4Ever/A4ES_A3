@@ -22,7 +22,7 @@ _actionData params ["_actionName", "", "", "", "", "", "", "_positionCode", "_di
 
 
 // Obtain a 3D position for the action
-private _pos = if((count _this) > 2) then {
+private _pos = if ((count _this) > 2) then {
     _this select 2
 } else {
     //--- EDIT

@@ -60,8 +60,8 @@ private _fnc_renderNearbyActions = {
                 {
                     private _action = _x;
                     //--- EDIT
-                    if(a3cs_interact_menu_useFlexiMenu) then {
-                        if(tolower ((_action select 0) select 0) == "ace_mainactions") then {
+                    if (a3cs_interact_menu_useFlexiMenu) then {
+                        if (tolower ((_action select 0) select 0) == "ace_mainactions") then {
                             private _subActions = _action select 1;
                             private _code = compile "_this call a3cs_interact_menu_fnc_flexiMenuOpenInteractionMenu";
 

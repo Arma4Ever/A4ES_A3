@@ -14,47 +14,47 @@ private _actionSuccessText = "";
 private _actionClass = "";
 private _actionType = "";
 
-if(_type == "uniform") then {
+if (_type == "uniform") then {
     _gear = uniform ace_player;
     _actionClass = getText (configFile >> "CfgWeapons" >> _gear >> QGVAR(switchDivingUniform));
     _actionType = getText (configFile >> "CfgWeapons" >> _gear >> QGVAR(switchDivingUniformType));
 };
-if(_type == "vest") then {
+if (_type == "vest") then {
     _gear = vest ace_player;
     _actionClass = getText (configFile >> "CfgWeapons" >> _gear >> QGVAR(switchDivingVest));
     _actionType = getText (configFile >> "CfgWeapons" >> _gear >> QGVAR(switchDivingVestType));
 };
 
-if(_actionClass == "" || _actionType == "") exitWith {};
+if (_actionClass == "" || _actionType == "") exitWith {};
 
-if(_type == "uniform") then {
+if (_type == "uniform") then {
     _actionTime = 8;
-    if(_actionType == "diving") then {
+    if (_actionType == "diving") then {
         _actionProgressTitle = localize LSTRING(switchUniformProgress);
         _actionSuccessText = localize LSTRING(switchUniformSuccess);
         _actionFailureText = localize LSTRING(switchUniformFailure);
     };
-    if(_actionType == "normal") then {
+    if (_actionType == "normal") then {
         _actionProgressTitle = localize LSTRING(switchUniformBackProgress);
         _actionSuccessText = localize LSTRING(switchUniformBackSuccess);
         _actionFailureText = localize LSTRING(switchUniformBackFailure);
     };
 };
-if(_type == "vest") then {
+if (_type == "vest") then {
     _actionTime = 4;
-    if(_actionType == "diving") then {
+    if (_actionType == "diving") then {
         _actionProgressTitle = localize LSTRING(switchVestProgress);
         _actionSuccessText = localize LSTRING(switchVestSuccess);
         _actionFailureText = localize LSTRING(switchVestFailure);
     };
-    if(_actionType == "normal") then {
+    if (_actionType == "normal") then {
         _actionProgressTitle = localize LSTRING(switchVestBackProgress);
         _actionSuccessText = localize LSTRING(switchVestBackSuccess);
         _actionFailureText = localize LSTRING(switchVestBackFailure);
     };
 };
 
-if(_actionProgressTitle == "") exitWith {};
+if (_actionProgressTitle == "") exitWith {};
 
 //Check canInteractWith
 if (!([ace_player, objNull, []] call ace_common_fnc_canInteractWith)) exitWith {};

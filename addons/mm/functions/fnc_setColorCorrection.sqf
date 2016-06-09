@@ -4,7 +4,7 @@
  */
 #include "script_component.hpp"
 
-if(!hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 params ["_effectType"];
 
@@ -23,9 +23,9 @@ private _effectArray = switch _effectType do {
     case ("postapo"): {[1, 1, 0, [0.0, 0.0, 0.0, 0.0], [0.8*2, 0.5*2, 0.0, 0.7], [0.9, 0.9, 0.9, 0.0]]};
     default {[]};
 };
-if((count _effectArray) == 0) exitWith {true};
+if ((count _effectArray) == 0) exitWith {true};
 
-if(is3DEN) then {
+if (is3DEN) then {
     private _ppEffect = ppEffectCreate ["colorCorrections", 5];
     _ppEffect ppEffectEnable true;
     _ppEffect ppEffectAdjust _effectArray;

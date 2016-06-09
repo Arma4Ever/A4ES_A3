@@ -6,8 +6,8 @@
 
 params ["_LHDObject"];
 
-if(!isServer) exitWith {};
-if(!isClass (configFile >> "CfgVehicles" >> "Land_LHD_1")) exitWith {systemChat (localize LSTRING(NoA3MP));};
+if (!isServer) exitWith {};
+if (!isClass (configFile >> "CfgVehicles" >> "Land_LHD_1")) exitWith {systemChat (localize LSTRING(NoA3MP));};
 
 private _LHDDir = getDir _LHDObject;
 private _LHDPosition = getPosASL _LHDObject;
@@ -34,12 +34,12 @@ private _LHDArray = [
 
     {_LHDPart animate [_x, 1];} forEach _doors;
 
-    if(_class == "Land_LHD_house_2") then {
+    if (_class == "Land_LHD_house_2") then {
         //init lights on all clients
         private "_jipid";
         _jipid = [_LHDpart] remoteExec [QFUNC(initLights), 0, true];
 
-        if(!is3DEN) then {
+        if (!is3DEN) then {
             //gen floor on level 0
             {
                 private _floorOffset = _x;
@@ -70,7 +70,7 @@ private _LHDArray = [
 _LHDObject setVariable [QGVAR(parts), _LHDParts];
 
 //3DEN support
-if(is3DEN) then {
+if (is3DEN) then {
     _LHDObject removeAllEventHandlers "AttributesChanged3DEN";
     _LHDObject removeAllEventHandlers "RegisteredToWorld3DEN";
     _LHDObject removeAllEventHandlers "ConnectionChanged3DEN";
@@ -79,7 +79,7 @@ if(is3DEN) then {
         params ["_object"];
         private _LHDParts = _object getVariable [QGVAR(parts), []];
         private _nullCount = count (_LHDParts select {isNull _x});
-        if(count _LHDParts == 0 || _nullCount > 0) exitWith {_object call FUNC(initLHD);};
+        if (count _LHDParts == 0 || _nullCount > 0) exitWith {_object call FUNC(initLHD);};
 
         private _LHDPartsArray = [
             "Land_LHD_house_1","Land_LHD_house_2","Land_LHD_elev_R","Land_LHD_1",

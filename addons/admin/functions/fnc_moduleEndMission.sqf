@@ -8,16 +8,16 @@
 params [["_mode", "init", [""]]];
 
 private _access = "endmission" call FUNC(canAccessPanelModule);
-if(!_access) exitWith {hint localize LSTRING(NoAccess);};
+if (!_access) exitWith {hint localize LSTRING(NoAccess);};
 
-if(_mode == "init") then {
+if (_mode == "init") then {
     while {dialog} do {closeDialog 0;};
     private _dialog = createDialog "A3CS_ui_listBox";
-    if(!_dialog) exitWith {};
+    if (!_dialog) exitWith {};
 
     disableSerialization;
     private _display = uiNamespace getVariable ["A3CS_ui_listBox", displayNull];
-    if(isNull _display) exitWith {};
+    if (isNull _display) exitWith {};
 
     hint localize LSTRING(Module_EndMission_SelectMissionEnding);
 
@@ -35,14 +35,14 @@ if(_mode == "init") then {
     //Collect endings
     private _possibleEndings = [["a3c_endDefault", localize ELSTRING(Common,DefaultEnding)]];
     private _missionDebriefing = (missionConfigFile >> "CfgDebriefing");
-    if(isClass _missionDebriefing) then {
+    if (isClass _missionDebriefing) then {
         private _debriefings = "true" configClasses _missionDebriefing;
         {
             private _endingClass = configName _x;
             private _endingTitle = getText (_x >> "title");
             private _endingSubTitle = getText (_x >> "subtitle");
             private _endingDesc = _endingTitle;
-            if(_endingSubTitle != "") then {
+            if (_endingSubTitle != "") then {
                 _endingDesc = format ["%1 - %2", _endingTitle, _endingSubTitle];
             };
             _possibleEndings pushBack [_endingClass, _endingDesc];
@@ -60,14 +60,14 @@ if(_mode == "init") then {
         _controlList lnbSetData [[_index,0], _endingClass];
     } forEach _possibleEndings;
 };
-if(_mode == "end") then {
+if (_mode == "end") then {
     disableSerialization;
     private _display = uiNamespace getVariable ["A3CS_ui_listBox", displayNull];
-    if(isNull _display) exitWith {};
+    if (isNull _display) exitWith {};
 
     private _controlList = _display displayCtrl IDC_LISTBOX_LIST;
     _selected = lnbCurSelRow _controlList;
-    if(_selected < 0) then {_selected = 0;};
+    if (_selected < 0) then {_selected = 0;};
     private _endClass = _controlList lnbData [_selected, 0];
 
     hint "";

@@ -4,9 +4,9 @@
  */
 #include "script_component.hpp"
 
-if(!hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
-if(missionNamespace getVariable [QGVAR(fogEffect), false]) exitWith {true};
+if (missionNamespace getVariable [QGVAR(fogEffect), false]) exitWith {true};
 missionNamespace setVariable [QGVAR(fogEffect), true];
 
 _n = 0 spawn {

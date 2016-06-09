@@ -10,7 +10,7 @@
 private _weapon = currentWeapon ACE_player;
 private _class = (configFile >> "CfgWeapons" >> _weapon >> "a3cs_weaponActions");
 
-if(!isClass _class) exitWith {[]};
+if (!isClass _class) exitWith {[]};
 
 private _weaponActions = "true" configClasses _class;
 private _actions = [];

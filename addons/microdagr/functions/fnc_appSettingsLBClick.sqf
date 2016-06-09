@@ -46,11 +46,11 @@ switch (_itemClicked) do {
     	[APP_MODE_SETUP] call FUNC(saveCurrentAndSetNewMode);
 	};
     case (6): {
-        if(GVAR(settingMarkerIcon) == 0) then {
+        if (GVAR(settingMarkerIcon) == 0) then {
             GVAR(settingMarkerIcon) = 1;
         } else {
-            if(ace_microdagr_ctrlmodifer) then {
-                if(GVAR(settingMarkerIcon) % 4 == 0) then {
+            if (ace_microdagr_ctrlmodifer) then {
+                if (GVAR(settingMarkerIcon) % 4 == 0) then {
                     GVAR(settingMarkerIcon) = GVAR(settingMarkerIcon) - 3;
                 } else {
                      GVAR(settingMarkerIcon) = GVAR(settingMarkerIcon) + 1;
@@ -60,7 +60,7 @@ switch (_itemClicked) do {
             };
         };
 
-        if(GVAR(settingMarkerIcon) > 48) then {GVAR(settingMarkerIcon) = 0;};
+        if (GVAR(settingMarkerIcon) > 48) then {GVAR(settingMarkerIcon) = 0;};
 
         ACE_player setvariable [QGVAR(transmittingMarkerIcon), GVAR(settingMarkerIcon), true];
 

@@ -5,7 +5,7 @@
 #include "script_component.hpp"
 #include "\z\a3cs\addons\nametag\ui\idcTacticalHud.hpp"
 
-if(!hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 params ["_display"];
 
@@ -27,7 +27,7 @@ uiNamespace setVariable [QGVAR(tacticalHudListTwoPosition), ctrlPosition _contro
 uiNamespace setVariable [QGVAR(tacticalHudListThree),  _controlListThree];
 uiNamespace setVariable [QGVAR(tacticalHudListThreePosition), ctrlPosition _controlListThree];
 
-if(GVAR(enableTacticalHudBackground)) then {
+if (GVAR(enableTacticalHudBackground)) then {
     _controlMapBG ctrlSetText QUOTE(PATHTOF(data\tacticalhud_ca.paa));
 };
 private _mapSize = (ctrlPosition _controlMap) select 3;

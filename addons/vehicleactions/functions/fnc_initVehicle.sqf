@@ -8,7 +8,7 @@ params ["_object"];
 
 private _class = typeof _object;
 
-if(_class in GVAR(initializedClasses)) exitWith {};
+if (_class in GVAR(initializedClasses)) exitWith {};
 GVAR(initializedClasses) pushBack _class;
 
 private _canDisassemble = (count getArray (configfile >> "CfgVehicles" >> _class >> "assembleInfo" >> "dissasembleTo") > 0);
@@ -27,7 +27,7 @@ if (!_isMan) then {
     [_class, 1, ["ACE_SelfActions"], _checkDocAction] call ace_interact_menu_fnc_addActionToClass;
 };
 
-if(_canDisassemble) then {
+if (_canDisassemble) then {
     if (_isUAV) then {
         private _disassembleAction = [
             QGVAR(disassemble),

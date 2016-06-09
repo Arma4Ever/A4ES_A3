@@ -4,7 +4,7 @@
  */
 #include "script_component.hpp"
 
-if(!isServer) exitWith {};
+if (!isServer) exitWith {};
 params ["_group"];
 
 private _groupUnits = units _group;
@@ -15,11 +15,11 @@ private _cachedUnitCount = 0;
     private _canCache = true;
     private _unitSetting = _unit getVariable [QGVAR(cacheUnit), "always"];
     //check if unit should can be hidden
-    if(!isNull objectParent _unit) then {_canCache = false;};
-    if(_unitSetting == "never") then {_canCache = false;};
-    if(_unit == _groupLeader && {_unitSetting == "noifleader"}) then {_canCache = false;};
-    if(_unit getVariable [QGVAR(cached), false]) then {_canCache = false;};
-    if(_canCache) then {
+    if (!isNull objectParent _unit) then {_canCache = false;};
+    if (_unitSetting == "never") then {_canCache = false;};
+    if (_unit == _groupLeader && {_unitSetting == "noifleader"}) then {_canCache = false;};
+    if (_unit getVariable [QGVAR(cached), false]) then {_canCache = false;};
+    if (_canCache) then {
         private _cacheData = [getPosATL _unit, getDir _unit];
         _unit setVariable [QGVAR(cacheData), _cacheData];
         _unit setVariable [QGVAR(cached), true];
@@ -29,7 +29,7 @@ private _cachedUnitCount = 0;
     };
 } foreach _groupUnits;
 
-if(local _groupLeader) then {
+if (local _groupLeader) then {
     _group call FUNC(disableGroupAI);
 } else {
     _group remoteExecCall [QFUNC(disableGroupAI), _groupLeader, false];

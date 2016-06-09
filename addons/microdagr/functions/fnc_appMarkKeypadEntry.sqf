@@ -58,7 +58,7 @@ if (GVAR(currentApplicationPage) == APP_MODE_MARK) then { //--- EDIT
 
 //--- EDIT
 if (GVAR(currentApplicationPage) == APP_MODE_SETUP) then {
-    if(GVAR(newGroupName) == 0) exitWith {};
+    if (GVAR(newGroupName) == 0) exitWith {};
     switch (_keypadButton) do {
         case ("ok"): {
             GVAR(settingMarkerName) = _editText;

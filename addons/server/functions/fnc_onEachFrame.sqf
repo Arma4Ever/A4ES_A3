@@ -4,7 +4,7 @@
  */
 #include "script_component.hpp"
 
-if(GVAR(serverState) != getClientState) then {
+if (GVAR(serverState) != getClientState) then {
     GVAR(serverState) = getClientState;
 
     //get mission data
@@ -27,10 +27,10 @@ if(GVAR(serverState) != getClientState) then {
 
     _sql = _query call FUNC(queryDB);
 
-    if(GVAR(serverState) == "BRIEFING READ") then {
+    if (GVAR(serverState) == "BRIEFING READ") then {
         [localize LSTRING(Log_MissionStart)] call FUNC(missionLog);
     };
-    if(GVAR(serverState) == "LOGGED IN") then {
+    if (GVAR(serverState) == "LOGGED IN") then {
         [localize LSTRING(Log_MissionEnd)] call FUNC(missionLog);
     };
 };

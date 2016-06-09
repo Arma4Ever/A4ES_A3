@@ -12,11 +12,11 @@ private _vehicle = vehicle _player;
 while {dialog} do {closeDialog 0;};
 
 private _dialog = createDialog "A3CS_ui_listBox";
-if(!_dialog) exitWith {};
+if (!_dialog) exitWith {};
 
 disableSerialization;
 private _display = uiNamespace getVariable ["A3CS_ui_listBox", displayNull];
-if(isNull _display) exitWith {};
+if (isNull _display) exitWith {};
 
 private _vehicleCfg = (configFile >> "CfgVehicles" >> typeof _vehicle);
 private _vehicleDisplayName = getText (_vehicleCfg >> "displayName");
@@ -27,8 +27,8 @@ private _cargoSpace = getNumber (_vehicleCfg >> "ace_cargo_space");
 private _isMedicalVehicle = [_vehicle] call ace_repair_fnc_isRepairVehicle;
 private _isRepairVehicle = [_vehicle] call ace_medical_fnc_isMedicalVehicle;
 
-if(_isMedicalVehicle isEqualType 0) then {_isMedicalVehicle = _isMedicalVehicle > 0;};
-if(_isRepairVehicle isEqualType 0) then {_isRepairVehicle = _isRepairVehicle > 0;};
+if (_isMedicalVehicle isEqualType 0) then {_isMedicalVehicle = _isMedicalVehicle > 0;};
+if (_isRepairVehicle isEqualType 0) then {_isRepairVehicle = _isRepairVehicle > 0;};
 
 //set header title
 (_display displayCtrl IDC_LISTBOX_HEADER) ctrlSetText _vehicleDisplayName;

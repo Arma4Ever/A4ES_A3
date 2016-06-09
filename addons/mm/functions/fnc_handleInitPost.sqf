@@ -6,7 +6,7 @@
 
 params ["_unit"];
 
-if(is3DEN) exitWith {};
-if(!local _unit) exitWith {};
+if (is3DEN) exitWith {};
+if (!local _unit) exitWith {};
 
 _unit call FUNC(loadUnitSettings);

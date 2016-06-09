@@ -4,7 +4,7 @@
  */
 #include "script_component.hpp"
 
-if(!isServer) exitWith {};
+if (!isServer) exitWith {};
 
 [{
     params [["_victim", objNull, [objNull]], ["_killerVanilla", objNull, [objNull]]];
@@ -16,15 +16,15 @@ if(!isServer) exitWith {};
     private _killerName = localize LSTRING(Environment);
     private _killerWeapon = "";
 
-    if(!isNull _killer) then {
+    if (!isNull _killer) then {
         _killerName = ["AI", (_killer call EFUNC(common,getName))] select (isPlayer _killer);
-        if(_ammo != "") then {
+        if (_ammo != "") then {
             private _killerVehicle = vehicle _killer;
-            if((_killer isKindOf "CAManBase") && (_killerVehicle isEqualTo _killer)) then {
+            if ((_killer isKindOf "CAManBase") && (_killerVehicle isEqualTo _killer)) then {
                 //on foot
                 private _currentMagazine = currentMagazine _killer;
                 private _currentAmmo = getText (configFile >> "CfgMagazines" >> _currentMagazine >> "ammo");
-                if(_ammo == _currentAmmo) then {
+                if (_ammo == _currentAmmo) then {
                     private _currentWeapon = currentWeapon _killer;
                     _killerWeapon = getText (configFile >> "CfgWeapons" >> _currentWeapon >> "DisplayName");
                 } else {
@@ -36,7 +36,7 @@ if(!isServer) exitWith {};
             };
         };
 
-        if(_killerWeapon != "") then {
+        if (_killerWeapon != "") then {
             _killerName = format ["%1 (%2)", _killerName, _killerWeapon];
         };
     };
@@ -45,13 +45,13 @@ if(!isServer) exitWith {};
     TRACE_1("handleKilled",_logData);
 
     //Send dead log if victim is player
-    if(isPlayer _victim) then {
+    if (isPlayer _victim) then {
         private _Log = format [localize LSTRING(Log_WasKilledBy), _victimName, _killerName];
         _Log call FUNC(missionLog);
     };
 
     //Add kill score if killer is player?
-    if(isPlayer _killer) then {
+    if (isPlayer _killer) then {
 
     };
 }, _this, 1] call CBA_fnc_waitAndExecute;

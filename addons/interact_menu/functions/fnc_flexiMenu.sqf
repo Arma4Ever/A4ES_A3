@@ -23,7 +23,7 @@ if (typeName _params == typeName []) then {
 
 private ["_menuTitle", "_menuActionsList", "_menuOptions"];
 
-if(_target isKindOf "CAManBase") then {
+if (_target isKindOf "CAManBase") then {
 	_menuTitle = name _target;
 } else {
 	_menuTitle = getText (configFile >> "CfgVehicles" >> typeof _target >> "displayName");
@@ -34,7 +34,7 @@ _menuOptions = [_target, _player, _menuActionsList, []] call FUNC(flexiMenuGetOp
 
 _menus pushBack [["main", _menuTitle, _menuRsc], _menuOptions];
 
-if(_menuName != "main" && _menuName != "") then {
+if (_menuName != "main" && _menuName != "") then {
 	private ["_submenuData", "_submenuActionsList", "_submenuOptions"];
 
 	_submenuData = [_menuName] call FUNC(flexiMenuGetMenuData);

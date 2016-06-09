@@ -11,14 +11,14 @@ private _display = uiNamespace getVariable ['RscA3CSIntroEffect', displayNull];
 private _missionData =  call EFUNC(common,getMissionData);
 _missionData params ["_missionName", "_missionMap", "_missionAuthor"];
 private _players = count playableUnits; //allplayers is broken atm
-if(!isMultiplayer) then {_players = 1;};
+if (!isMultiplayer) then {_players = 1;};
 
 date params ["_year", "_month", "_day", "_hour", "_minute"];
 
-if(_month < 10) then {_month = format ["0%1", _month];};
-if(_day < 10) then {_day = format ["0%1", _day];};
-if(_hour < 10) then {_hour = format ["0%1", _hour];};
-if(_minute < 10) then {_minute = format ["0%1", _minute];};
+if (_month < 10) then {_month = format ["0%1", _month];};
+if (_day < 10) then {_day = format ["0%1", _day];};
+if (_hour < 10) then {_hour = format ["0%1", _hour];};
+if (_minute < 10) then {_minute = format ["0%1", _minute];};
 
 private _unitData = player call EFUNC(nametag,getUnitData);
 _unitData params ["_nickname", "_rankname"];
@@ -26,7 +26,7 @@ _unitData params ["_nickname", "_rankname"];
 private _playerName = format ["%1 %2", _rankname, _nickname];
 private _playerDesc = roleDescription player;
 private _unitDesc = format ["%1 - %2", _playerName, _playerDesc];
-if(_playerDesc == "") then {_unitDesc = _playerName;};
+if (_playerDesc == "") then {_unitDesc = _playerName;};
 
 //Title
 private _title = _display displayctrl IDC_RSCA3CINTROEFFECT_TITLE;

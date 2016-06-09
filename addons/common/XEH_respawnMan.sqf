@@ -6,7 +6,7 @@
 
 params ["_unit"];
 
-if(_unit in playableUnits) then {
+if (_unit in playableUnits) then {
     [{
         params ["_unit"];
         //Disable score - works only on server ?

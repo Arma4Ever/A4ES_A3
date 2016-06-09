@@ -6,9 +6,9 @@
 
 params ["_unit", "_visionMode"];
 
-if(_visionMode == 2) then {
+if (_visionMode == 2) then {
     //show all thermal effects
-    {[{if((currentVisionMode ace_player) == 2) then {_this setDropInterval 2;};}, _x, random 2] call CBA_fnc_waitAndExecute;} forEach GVAR(particleSources);
+    {[{if ((currentVisionMode ace_player) == 2) then {_this setDropInterval 2;};}, _x, random 2] call CBA_fnc_waitAndExecute;} forEach GVAR(particleSources);
 } else {
     //hide all thermal effects
     {_x setDropInterval 0;} forEach GVAR(particleSources);

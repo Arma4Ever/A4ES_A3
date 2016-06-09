@@ -13,28 +13,28 @@ if (!([ACE_player, objNull, []] call ace_common_fnc_canInteractWith)) exitWith {
 //Check action
 private _weapon = currentWeapon ACE_player;
 private _class = (configFile >> "CfgWeapons" >> _weapon >> "a3cs_weaponActions" >> _actionClass);
-if(!isClass _class) exitWith {};
+if (!isClass _class) exitWith {};
 
 private _actionSuccess = getText (_class >> "actionSuccess");
 private _actionFailure = getText (_class >> "actionFailure");
 private _actionWeapon = getText (_class >> "targetWeapon");
 
-if(_errorCode == 0) then {
+if (_errorCode == 0) then {
     private _weaponItems = [];
     private _addItem = {};
     private _removeItem = {};
 
-    if(_weapon == (primaryWeapon ACE_player)) then {
+    if (_weapon == (primaryWeapon ACE_player)) then {
         _weaponItems = primaryWeaponItems ACE_player;
         _addItem = {(_this select 0) addPrimaryWeaponItem (_this select 1);};
         _removeItem = {(_this select 0) removePrimaryWeaponItem (_this select 1);};
     };
-    if(_weapon == (handgunWeapon ACE_player)) then {
+    if (_weapon == (handgunWeapon ACE_player)) then {
         _weaponItems = handgunItems ACE_player;
         _addItem = {(_this select 0) addHandgunItem (_this select 1);};
         _removeItem = {(_this select 0) removeHandgunItem (_this select 1);};
     };
-    if(_weapon == (secondaryWeapon ACE_player)) then {
+    if (_weapon == (secondaryWeapon ACE_player)) then {
         _weaponItems = secondaryWeaponItems ACE_player;
         _addItem = {(_this select 0) addSecondaryWeaponItem (_this select 1);};
         _removeItem = {(_this select 0) removeSecondaryWeaponItem (_this select 1);};
@@ -51,13 +51,13 @@ if(_errorCode == 0) then {
     private _currentMagazine = currentMagazine ACE_player;
     private _currentMagazineAmmo = ACE_player ammo _actionWeapon;
 
-    if(_loadedMagazine == "") then {
-        if(_currentMagazine != "") then {
+    if (_loadedMagazine == "") then {
+        if (_currentMagazine != "") then {
             [ACE_player, _currentMagazine] call _removeItem;
             ACE_player addMagazine [_currentMagazine, _currentMagazineAmmo];
         };
     } else {
-        if(_currentMagazine != "") then {
+        if (_currentMagazine != "") then {
             ACE_player setAmmo [_actionWeapon, _loadedMagazineAmmo];
             ACE_player addMagazine [_currentMagazine, _currentMagazineAmmo];
         } else {

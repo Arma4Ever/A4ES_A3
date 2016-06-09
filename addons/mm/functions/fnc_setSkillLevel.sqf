@@ -4,13 +4,13 @@
  */
 #include "script_component.hpp"
 
-if(!local _unit) exitWith {};
+if (!local _unit) exitWith {};
 
 params ["_unit", "_training"];
 
 private _skillArray = [];
 
-if(_training == "militia") then {
+if (_training == "militia") then {
     _skillArray = [
         ["aimingAccuracy", 0.2],
         ["aimingSpeed", 0.2],
@@ -22,7 +22,7 @@ if(_training == "militia") then {
         ["spotTime", 1]
     ];
 };
-if(_training == "guards") then {
+if (_training == "guards") then {
     _skillArray = [
         ["aimingAccuracy", 0.4],
         ["aimingSpeed", 0.4],
@@ -34,7 +34,7 @@ if(_training == "guards") then {
         ["spotTime", 1]
     ];
 };
-if(_training == "conscripts") then {
+if (_training == "conscripts") then {
     _skillArray = [
         ["aimingAccuracy", 0.6],
         ["aimingSpeed", 0.6],
@@ -46,7 +46,7 @@ if(_training == "conscripts") then {
         ["spotTime", 1]
     ];
 };
-if(_training == "professional") then {
+if (_training == "professional") then {
     _skillArray = [
         ["aimingAccuracy", 0.8],
         ["aimingSpeed", 0.8],
@@ -58,7 +58,7 @@ if(_training == "professional") then {
         ["spotTime", 1]
     ];
 };
-if(_training == "elite") then {
+if (_training == "elite") then {
     _skillArray = [
         ["aimingAccuracy", 1],
         ["aimingSpeed", 1],

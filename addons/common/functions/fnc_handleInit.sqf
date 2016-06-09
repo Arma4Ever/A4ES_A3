@@ -8,7 +8,7 @@ params ["_unit"];
 
 _unit addEventHandler ["HitPart", {call FUNC(handleHitPart);}];
 
-if(_unit in playableUnits) then {
+if (_unit in playableUnits) then {
     [{
         params ["_unit"];
         //Disable score - works only on server ?

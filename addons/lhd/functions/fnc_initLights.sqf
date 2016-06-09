@@ -9,7 +9,7 @@
 params ["_object"];
 private ["_objectPos"];
 
-if(!hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 _objectPos = getPos _object;
 

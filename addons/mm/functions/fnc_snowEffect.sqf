@@ -4,15 +4,15 @@
  */
 #include "script_component.hpp"
 
-if(!hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 params ["_effectType"];
 
-if(missionNamespace getVariable [QGVAR(snowEffect), false]) exitWith {true};
+if (missionNamespace getVariable [QGVAR(snowEffect), false]) exitWith {true};
 missionNamespace setVariable [QGVAR(snowEffect), true];
 
 //flurry
-if(_effectType == 0) then {
+if (_effectType == 0) then {
     [{
         private _sourceParent = "#particleSource" createVehicleLocal (position player);
         _sourceParent setParticleParams [["\A3\data_f\ParticleEffects\Universal\Universal", 16,12,13,1], "","Billboard", 1, 7, [0,0,0], [0,0,0], 1, 0.0000001, 0.000, 1.7,[0.07],[[1,1,1,1]],[0,1], 0.2, 1.2, "", "", player];
@@ -22,7 +22,7 @@ if(_effectType == 0) then {
     }, [], 1] call CBA_fnc_waitAndExecute;
 };
 //light storm
-if(_effectType == 1) then {
+if (_effectType == 1) then {
     [{
         private _sourceParent = "#particleSource" createVehicleLocal (position player);
         _sourceParent setParticleParams [["a3\data_f\ParticleEffects\Universal\Universal.p3d",16,13,10,0],"","Billboard",1,8,[0,0,8],[0,0,-8],(.7),1.69,1,2,[.05],[[1,1,1,0],[1,1,1,.99]],[1000],.7,.3,"","", player];
@@ -53,7 +53,7 @@ if(_effectType == 1) then {
 };
 
 //med storm
-if(_effectType == 2) then {
+if (_effectType == 2) then {
     [{
         private _sourceParent = "#particleSource" createVehicleLocal (position player);
         _sourceParent setParticleParams [["a3\data_f\ParticleEffects\Universal\Universal.p3d",16,13,10,0],"","Billboard",1,8,[0,0,8],[0,0,-8],(.7),1.69,1,2,[.05],[[1,1,1,0],[1,1,1,.99]],[1000],.7,.3,"","", player];

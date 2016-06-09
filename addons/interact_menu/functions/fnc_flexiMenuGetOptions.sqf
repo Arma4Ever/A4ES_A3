@@ -9,7 +9,7 @@ private _menuAddedOptions = [];
     _x params ["_action", "_children", "_target"];
     _action params ["_actionID", "_actionName", "_actionIcon", "_actionAct", "_actionCond", "_actionChildrenScript", "_actionParams"];
 
-    if(isNil "_target") then {_target = _mainTarget;};
+    if (isNil "_target") then {_target = _mainTarget;};
 
     ace_interact_menu_selectedTarget = _target;
 
@@ -20,15 +20,15 @@ private _menuAddedOptions = [];
     GVAR(fleximenuOptionsData) pushBack _actionID;
     missionNamespace setVariable [format["a3cs_fleximenudata_%1", _actionID], [_actionName, _actionPath]];
 
-    if(_actionIcon == "") then {
+    if (_actionIcon == "") then {
         _actionIcon = QUOTE(\z\ace\addons\interaction\ui\dot_ca.paa);
     };
 
     private _actionActive = false;
-    if([_target, _player, _actionParams] call _actionCond) then {_actionActive = true;};
+    if ([_target, _player, _actionParams] call _actionCond) then {_actionActive = true;};
 
-    if(!(_actionID in _menuAddedOptions)) then {
-        if(count _children > 0 || str _actionChildrenScript != "{}") then {
+    if (!(_actionID in _menuAddedOptions)) then {
+        if (count _children > 0 || str _actionChildrenScript != "{}") then {
             _menuOptions pushback [
                 format ["%1 >",_actionName],
                 "",

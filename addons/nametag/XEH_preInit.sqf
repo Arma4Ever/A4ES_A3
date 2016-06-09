@@ -20,7 +20,7 @@ GVAR(tacticalHudRadarUnitsCacheTime) = 0;
 GVAR(nametagObjectsCache) = [];
 GVAR(nametagObjectsCacheTime) = 0;
 
-if(isNil QGVAR(members)) then {GVAR(members) = [[],[]];};
+if (isNil QGVAR(members)) then {GVAR(members) = [[],[]];};
 
 //Setting colors for getUnitData fnc
 missionNameSpace setVariable ["a3cs_nametag_colors_red", ["#ff8b8b", [1,0.54,0.54,1]]];

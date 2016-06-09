@@ -6,7 +6,7 @@
 
 params [["_class", "", [""]], ["_text", "", [""]]];
 
-if(_class == "") then {
+if (_class == "") then {
     _class = "";
 };
 

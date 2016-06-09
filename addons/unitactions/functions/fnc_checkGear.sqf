@@ -10,15 +10,15 @@ params ["_player", "_unit"];
 while {dialog} do {closeDialog 0;};
 
 private _dialog = createDialog "A3CS_ui_listBox";
-if(!_dialog) exitWith {};
+if (!_dialog) exitWith {};
 
 disableSerialization;
 private _display = uiNamespace getVariable ["A3CS_ui_listBox", displayNull];
-if(isNull _display) exitWith {};
+if (isNull _display) exitWith {};
 
 private _unitName = _unit call EFUNC(common,getName);
 
-if(isPlayer _unit && {!(_player isEqualTo _unit)}) then {
+if (isPlayer _unit && {!(_player isEqualTo _unit)}) then {
     private _playerName = _player call EFUNC(common,getName);
     private _hintText = format [localize LSTRING(CheckGear_Notification), _playerName];
     _hintText remoteExecCall ["hint", _unit];
@@ -75,13 +75,13 @@ private _listedGearClasses = [];
 {
     private _item = _x;
     private _index = -1;
-    if(!(_item in _listedGearClasses)) then {
+    if (!(_item in _listedGearClasses)) then {
         _listedGearClasses pushBack _item;
         private _config = configFile;
-        if(isClass (configFile >> "CfgGlasses" >> _item)) then {_config = (configFile >> "CfgGlasses" >> _item);};
-        if(isClass (configFile >> "CfgMagazines" >> _item)) then {_config = (configFile >> "CfgMagazines" >> _item);};
-        if(isClass (configFile >> "CfgWeapons" >> _item)) then {_config = (configFile >> "CfgWeapons" >> _item);};
-        if(getText (_config >> "displayName") != "") then {
+        if (isClass (configFile >> "CfgGlasses" >> _item)) then {_config = (configFile >> "CfgGlasses" >> _item);};
+        if (isClass (configFile >> "CfgMagazines" >> _item)) then {_config = (configFile >> "CfgMagazines" >> _item);};
+        if (isClass (configFile >> "CfgWeapons" >> _item)) then {_config = (configFile >> "CfgWeapons" >> _item);};
+        if (getText (_config >> "displayName") != "") then {
             private _name = getText (_config >> "displayName");
             private _picture = getText (_config >> "picture");
             private _count = ({_x == _item} count _allGear);

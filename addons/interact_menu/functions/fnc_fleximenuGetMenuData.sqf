@@ -2,7 +2,7 @@
 
 params ["_actionID"];
 
-if(_actionID == "main") exitWith {[]};
+if (_actionID == "main") exitWith {[]};
 
 private ["_menuData"];
 

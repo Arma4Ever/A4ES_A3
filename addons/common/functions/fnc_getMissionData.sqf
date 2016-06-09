@@ -5,7 +5,7 @@
 #include "script_component.hpp"
 
 private _missionName = briefingName;
-if(_missionName == "") then {_missionName = missionName;};
+if (_missionName == "") then {_missionName = missionName;};
 
 private _missionMap = getText (configFile >> "cfgWorlds" >> worldName >> "description");
 

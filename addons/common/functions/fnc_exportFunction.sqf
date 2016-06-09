@@ -16,11 +16,11 @@ private _codeArray = toArray str _function;
 private _codeLines = [];
 private _codeLine = [];
 {
-    if(_x == UTF8_EOL) then {
+    if (_x == UTF8_EOL) then {
         private _oneBefore = (_codeArray select (_forEachIndex-1));
-        if(_oneBefore == UTF8_EOL) then {
+        if (_oneBefore == UTF8_EOL) then {
             private _twoBefore = (_codeArray select (_forEachIndex-2));
-            if(_twoBefore != UTF8_EOL) then {
+            if (_twoBefore != UTF8_EOL) then {
                 _codeLine pushBack _x;
             };
         } else {

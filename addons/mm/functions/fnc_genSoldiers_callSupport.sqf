@@ -4,12 +4,12 @@
  */
 #include "script_component.hpp"
 
-if(!isServer) exitWith {};
+if (!isServer) exitWith {};
 
 params ["_childLogic", "_parentLogic"];
 
 private _childRespawned = _childLogic getVariable [QGVAR(genSoldiers_respawned), false];
-if(!_childRespawned) exitWith {};
+if (!_childRespawned) exitWith {};
 
 private _formation = _childLogic getvariable ["formation", "COLUMN"];
 private _childGroups = _childLogic getVariable [QGVAR(genSoldiers_aliveGroups), []];
@@ -22,18 +22,18 @@ private _childGroups = _childLogic getVariable [QGVAR(genSoldiers_aliveGroups), 
     {
         private _vehicle = _x;
         private _canGetIn = true;
-        if(!canMove _vehicle) then {_canGetIn = false;};
-        if(fuel _vehicle < 0.3) then {_canGetIn = false;};
-        if(count (crew _vehicle) > 0) then {_canGetIn = false;};
-        if(_vehicle getVariable [QGVAR(genSoldiers_usedByGroup), false]) then {_canGetIn = false;};
+        if (!canMove _vehicle) then {_canGetIn = false;};
+        if (fuel _vehicle < 0.3) then {_canGetIn = false;};
+        if (count (crew _vehicle) > 0) then {_canGetIn = false;};
+        if (_vehicle getVariable [QGVAR(genSoldiers_usedByGroup), false]) then {_canGetIn = false;};
         //Count seats
         private _vehicleSeats = 0;
-        if(getNumber (configFile >> "CfgVehicles" >> typeof _vehicle >> "hasDriver") > 0) then {_vehicleSeats = _vehicleSeats + 1;};
+        if (getNumber (configFile >> "CfgVehicles" >> typeof _vehicle >> "hasDriver") > 0) then {_vehicleSeats = _vehicleSeats + 1;};
         _vehicleSeats = (count (allTurrets [_vehicle, false])) + _vehicleSeats;
         _vehicleSeats = (getNumber (configFile >> "CfgVehicles" >> typeof _vehicle >> "transportSoldier")) + _vehicleSeats;
-        if(count (units _group) > _vehicleSeats) then {_canGetIn = false;};
+        if (count (units _group) > _vehicleSeats) then {_canGetIn = false;};
 
-        if(_canGetIn) then {_useVehicle = _vehicle;};
+        if (_canGetIn) then {_useVehicle = _vehicle;};
     } forEach _nearestVehicles;
 
     //Remove existing waypoints
@@ -42,7 +42,7 @@ private _childGroups = _childLogic getVariable [QGVAR(genSoldiers_aliveGroups), 
     private _waypointCount = 0;
     private _waypoint = [];
 
-    if(!isNull _useVehicle) then {
+    if (!isNull _useVehicle) then {
         _useVehicle setVariable [QGVAR(genSoldiers_usedByGroup), true];
         _waypoint = _group addWaypoint [position _useVehicle, 0, _waypointCount];
         _waypoint setWaypointType "GETIN";
