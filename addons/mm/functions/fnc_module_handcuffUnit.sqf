@@ -17,7 +17,7 @@ if(_mode == "init") then {
 
     [{
         params ["_units", "_setHandcuffed"];
-        {["SetHandcuffed", [_x], [_x, _setHandcuffed]] call ace_common_fnc_targetEvent;} forEach _units;
+        {["ace_captives_setHandcuffed", [_x], [_x, _setHandcuffed]] call CBA_fnc_targetEvent;} forEach _units;
     }, [_units, true]] call ace_common_fnc_runAfterSettingsInit;
 
     //Set as disposable if possible

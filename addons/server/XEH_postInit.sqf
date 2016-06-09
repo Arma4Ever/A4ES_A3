@@ -27,11 +27,11 @@ if (count allCurators > 0) then {
     }, [], 2] call CBA_fnc_waitAndExecute;
 };
 
-["tagCreated", {
+["ace_tagCreated", {
     params ["_tag", "_color", "_object", "_unit"];
     private _nickname = _unit call EFUNC(common,getName);
     [format [localize LSTRING(Log_PlayerUsedSpray), _nickname]] call FUNC(adminLog);
-}] call ace_common_fnc_addEventHandler;
+}] call CBA_fnc_addEventHandler;
 
 //Update game status in DB every 60s
 //[FUNC(updateGameStatus), 60, []] call CBA_fnc_addPerFrameHandler;

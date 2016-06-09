@@ -2,7 +2,7 @@
 
 if (!hasInterface) exitWith {};
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     // Register fire event handler
-    ["firedPlayer", DFUNC(handleFired)] call ace_common_fnc_addEventHandler;
-}] call ace_common_fnc_addEventHandler;
+    ["ace_firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;
+}] call CBA_fnc_addEventHandler;

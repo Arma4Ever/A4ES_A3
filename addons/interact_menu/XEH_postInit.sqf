@@ -2,7 +2,7 @@
 
 GVAR(fleximenuDef) call cba_fnc_flexiMenu_add;
 
-["interactMenuOpened", {
+["ace_interactMenuOpened", {
     if(GVAR(useFlexiMenu)) then {
         if(ace_interact_menu_openedMenuType == 1 || vehicle ace_player != ace_player) then {
         	//collect ace actions
@@ -23,4 +23,4 @@ GVAR(fleximenuDef) call cba_fnc_flexiMenu_add;
             GVAR(fleximenuDef) call cba_fnc_fleximenu_openMenuByDef;
         };
     };
-}] call ace_common_fnc_addEventHandler;
+}] call CBA_fnc_addEventHandler;

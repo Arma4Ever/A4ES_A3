@@ -7,7 +7,7 @@
 params ["_caller","_target"];
 
 if (local _target) then {
-    ["actionCheckDamageLocal", [_caller, _target]] call ace_common_fnc_localEvent;
+    [QGVAR(actionCheckDamageLocal), [_caller, _target]] call CBA_fnc_localEvent;
 } else {
-    ["actionCheckDamageLocal", _target, [_caller, _target]] call ace_common_fnc_targetEvent;
+    [QGVAR(actionCheckDamageLocal), _target, [_caller, _target]] call CBA_fnc_targetEvent;
 };

@@ -20,7 +20,7 @@ if (isServer) then {
     [FUNC(initCache), [], 5] call CBA_fnc_waitAndExecute;
 
     if (isMultiplayer) then {
-        [QGVAR(startWeaponSafety), []] call ace_common_fnc_globalEvent;
+        [QGVAR(startWeaponSafety), []] call CBA_fnc_globalEvent;
     };
 
     [{
@@ -28,7 +28,7 @@ if (isServer) then {
         private _enableMissionIntroSP = missionNamespace getVariable [QGVAR(enableMissionIntroSP), false];
 
         if ((isMultiplayer && _enableMissionIntro) || (!isMultiplayer && _enableMissionIntroSP)) then {
-            [QGVAR(showIntro), []] call ace_common_fnc_globalEvent;
+            [QGVAR(showIntro), []] call CBA_fnc_globalEvent;
         };
     }, [], 3] call CBA_fnc_waitAndExecute;
 };
@@ -43,7 +43,7 @@ if (hasInterface) then {
     private _characterDesc = player getVariable [QGVAR(characterDesc), ""];
     player createDiaryRecord ["Diary", [localize LSTRING(ObjectAttribute_Control_CharacterDesc_DisplayName), _characterDesc]];
 
-    ["SettingChanged", {
+    ["ace_settingChanged", {
         params ["_option"];
         if (_option == QGVAR(enableColorCorrectionsEffect)) then {
             private _ppEnabled = missionNamespace getVariable [QGVAR(colorCorrectionsEnabled), false];
@@ -52,5 +52,5 @@ if (hasInterface) then {
             _ppEffect ppEffectEnable GVAR(enableColorCorrectionsEffect);
             _ppEffect ppEffectCommit 0;
         };
-    }] call ace_common_fnc_addEventHandler;
+    }] call CBA_fnc_addEventHandler;
 };

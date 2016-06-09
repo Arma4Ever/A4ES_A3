@@ -12,12 +12,12 @@
 
 if (hasInterface) then {
     // Wait until the colors are defined before starting to draw the nametags
-    ["SettingsInitialized", {
+    ["ace_settingsInitialized", {
         ["init"] call FUNC(updateSettings);
-    }] call ace_common_fnc_addEventHandler;
+    }] call CBA_fnc_addEventHandler;
 
     // Change settings accordingly when they are changed
-    ["SettingChanged", {
+    ["ace_settingChanged", {
         _this call FUNC(updateSettings);
-    }] call ace_common_fnc_addEventHandler;
+    }] call CBA_fnc_addEventHandler;
 };
