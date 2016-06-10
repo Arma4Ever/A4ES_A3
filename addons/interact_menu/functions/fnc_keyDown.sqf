@@ -102,7 +102,7 @@ if (GVAR(openedMenuType) == 0) then {
     GVAR(startHoverTime) = -1000;
 };
 
-["interactMenuOpened", [_menuType]] call EFUNC(common,localEvent);
+["ace_interactMenuOpened", [_menuType]] call CBA_fnc_localEvent;
 
 //--- EDIT
 //move main interaction point to cursor by PabstMirror

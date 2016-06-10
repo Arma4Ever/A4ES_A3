@@ -21,14 +21,14 @@ if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
     (findDisplay 91919) closeDisplay 2;
 };
 
-if (GVAR(actionSelected)) then {
+if(GVAR(actionSelected)) then {
     this = GVAR(selectedTarget);
 
     private _player = ACE_Player;
     private _target = GVAR(selectedTarget);
 
     // Clear the conditions caches
-    ["clearConditionCaches", []] call EFUNC(common,localEvent);
+    [QGVAR(clearConditionCaches), []] call CBA_fnc_localEvent;
 
     // exit scope if selecting an action on key release is disabled
     if (!(GVAR(actionOnKeyRelease)) && !_calledByClicking) exitWith {};
@@ -40,11 +40,11 @@ if (GVAR(actionSelected)) then {
         [_target, _player, _actionData select 6] call (_actionData select 3);
 
         // Clear the conditions caches again if the action was performed
-        ["clearConditionCaches", []] call EFUNC(common,localEvent);
+        [QGVAR(clearConditionCaches), []] call CBA_fnc_localEvent;
     };
 };
 
-["interactMenuClosed", [GVAR(openedMenuType)]] call EFUNC(common,localEvent);
+["ace_interactMenuClosed", [GVAR(openedMenuType)]] call CBA_fnc_localEvent;
 
 //--- EDIT
 if (a3cs_interact_menu_useFlexiMenu) then {
@@ -62,6 +62,8 @@ if (a3cs_interact_menu_useFlexiMenu) then {
 };
 //--- EDIT
 
+//GVAR(keyDown) = false; //--- EDIT
+//GVAR(keyDownSelfAction) = false; //--- EDIT
 GVAR(openedMenuType) = -1;
 
 GVAR(expanded) = false;
