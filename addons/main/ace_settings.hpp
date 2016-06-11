@@ -148,6 +148,22 @@ class ACE_Settings {
         force = 1;
         value = 0;
     };
+    class ace_ui_ammoCount {
+        //Ammo Count
+        //Requires Soldier/Vehicle/Weapon Information.
+        //typeName: BOOL
+        //default value: 1
+        //client: 1
+        client = 0;
+    };
+    class ace_ui_throwableCount {
+        //Throwable Count
+        //Requires Soldier/Vehicle/Weapon Information.
+        //typeName: BOOL
+        //default value: 1
+        //client: 1
+        client = 0;
+    };
     //======================================//
     //                CONFIG                //
     //======================================//

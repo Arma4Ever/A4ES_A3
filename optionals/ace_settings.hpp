@@ -223,14 +223,14 @@ class ace_repair_displayTextOnRepair {
 };
 class ace_ui_ammoCount {
     //Ammo Count
-    //Requires Soldier/Vehicle/Weapons Information.
+    //Requires Soldier/Vehicle/Weapon Information.
     //typeName: BOOL
-    //default value: 0
+    //default value: 1
     //client: 1
 };
 class ace_ui_ammoType {
     //Ammo Type
-    //Requires Soldier/Vehicle/Weapons Information.
+    //Requires Soldier/Vehicle/Weapon Information.
     //typeName: BOOL
     //default value: 1
     //client: 1
@@ -243,7 +243,7 @@ class ace_ui_commandMenu {
 };
 class ace_ui_firingMode {
     //Firing Mode
-    //Requires Soldier/Vehicle/Weapons Information.
+    //Requires Soldier/Vehicle/Weapon Information.
     //typeName: BOOL
     //default value: 1
     //client: 1
@@ -254,9 +254,79 @@ class ace_ui_groupBar {
     //default value: 0
     //client: 1
 };
+class ace_ui_gunnerAmmoCount {
+    //Gunner Ammo Count
+    //Requires Soldier/Vehicle/Weapon Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_gunnerAmmoType {
+    //Gunner Ammo Type
+    //Requires Soldier/Vehicle/Weapon Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_gunnerFiringMode {
+    //Gunner Firing Mode
+    //Requires Soldier/Vehicle/Weapon Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_gunnerLaunchableCount {
+    //Gunner Launchable Count
+    //Requires Soldier/Vehicle/Weapon Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_gunnerLaunchableName {
+    //Gunner Launchable Type
+    //Requires Soldier/Vehicle/Weapon Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_gunnerMagCount {
+    //Gunner Magazine Count
+    //Requires Soldier/Vehicle/Weapon Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_gunnerWeaponLowerInfoBackground {
+    //Gunner Weapon Lower Info Background
+    //Requires Soldier/Vehicle/Weapon Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_gunnerWeaponName {
+    //Gunner Weapon Name
+    //Requires Soldier/Vehicle/Weapon Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_gunnerWeaponNameBackground {
+    //Gunner Weapon Name Background
+    //Requires Soldier/Vehicle/Weapon Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
+class ace_ui_gunnerZeroing {
+    //Gunner Zeroing
+    //Requires Soldier/Vehicle/Weapon Information.
+    //typeName: BOOL
+    //default value: 1
+    //client: 1
+};
 class ace_ui_magCount {
     //Magazine Count
-    //Requires Soldier/Vehicle/Weapons Information.
+    //Requires Soldier/Vehicle/Weapon Information.
     //typeName: BOOL
     //default value: 1
     //client: 1
@@ -269,35 +339,35 @@ class ace_ui_soldierVehicleWeaponInfo {
 };
 class ace_ui_staminaBar {
     //Stamina Bar
-    //Requires Soldier/Vehicle/Weapons Information.
+    //Requires Soldier/Vehicle/Weapon Information.
     //typeName: BOOL
     //default value: 1
     //client: 1
 };
 class ace_ui_stance {
     //Stance
-    //Requires Soldier/Vehicle/Weapons Information.
+    //Requires Soldier/Vehicle/Weapon Information.
     //typeName: BOOL
     //default value: 1
     //client: 1
 };
 class ace_ui_throwableCount {
     //Throwable Count
-    //Requires Soldier/Vehicle/Weapons Information.
+    //Requires Soldier/Vehicle/Weapon Information.
     //typeName: BOOL
     //default value: 1
     //client: 1
 };
 class ace_ui_throwableName {
     //Throwable Type
-    //Requires Soldier/Vehicle/Weapons Information.
+    //Requires Soldier/Vehicle/Weapon Information.
     //typeName: BOOL
     //default value: 1
     //client: 1
 };
 class ace_ui_vehicleAltitude {
     //Vehicle Altitude
-    //Requires Soldier/Vehicle/Weapons Information.
+    //Requires Soldier/Vehicle/Weapon Information.
     //typeName: BOOL
     //default value: 1
     //client: 1
@@ -310,42 +380,35 @@ class ace_ui_vehicleCompass {
 };
 class ace_ui_vehicleDamage {
     //Vehicle Damage
-    //Requires Soldier/Vehicle/Weapons Information.
+    //Requires Soldier/Vehicle/Weapon Information.
     //typeName: BOOL
     //default value: 1
     //client: 1
 };
 class ace_ui_vehicleFuelBar {
     //Vehicle Fuel Bar
-    //Requires Soldier/Vehicle/Weapons Information.
-    //typeName: BOOL
-    //default value: 1
-    //client: 1
-};
-class ace_ui_vehicleGunnerWeapon {
-    //Vehicle Gunner Weapon
-    //Requires Soldier/Vehicle/Weapons Information.
+    //Requires Soldier/Vehicle/Weapon Information.
     //typeName: BOOL
     //default value: 1
     //client: 1
 };
 class ace_ui_vehicleInfoBackground {
     //Vehicle Info Background
-    //Requires Soldier/Vehicle/Weapons Information.
+    //Requires Soldier/Vehicle/Weapon Information.
     //typeName: BOOL
     //default value: 1
     //client: 1
 };
 class ace_ui_vehicleName {
     //Vehicle Name
-    //Requires Soldier/Vehicle/Weapons Information.
+    //Requires Soldier/Vehicle/Weapon Information.
     //typeName: BOOL
     //default value: 1
     //client: 1
 };
 class ace_ui_vehicleNameBackground {
     //Vehicle Name Background
-    //Requires Soldier/Vehicle/Weapons Information.
+    //Requires Soldier/Vehicle/Weapon Information.
     //typeName: BOOL
     //default value: 1
     //client: 1
@@ -358,35 +421,35 @@ class ace_ui_vehicleRadar {
 };
 class ace_ui_vehicleSpeed {
     //Vehicle Speed
-    //Requires Soldier/Vehicle/Weapons Information.
+    //Requires Soldier/Vehicle/Weapon Information.
     //typeName: BOOL
     //default value: 1
     //client: 1
 };
 class ace_ui_weaponLowerInfoBackground {
     //Weapon Lower Info Background
-    //Requires Soldier/Vehicle/Weapons Information.
+    //Requires Soldier/Vehicle/Weapon Information.
     //typeName: BOOL
     //default value: 1
     //client: 1
 };
 class ace_ui_weaponName {
     //Weapon Name
-    //Requires Soldier/Vehicle/Weapons Information.
+    //Requires Soldier/Vehicle/Weapon Information.
     //typeName: BOOL
     //default value: 1
     //client: 1
 };
 class ace_ui_weaponNameBackground {
     //Weapon Name Background
-    //Requires Soldier/Vehicle/Weapons Information.
+    //Requires Soldier/Vehicle/Weapon Information.
     //typeName: BOOL
     //default value: 1
     //client: 1
 };
 class ace_ui_zeroing {
     //Zeroing
-    //Requires Soldier/Vehicle/Weapons Information.
+    //Requires Soldier/Vehicle/Weapon Information.
     //typeName: BOOL
     //default value: 1
     //client: 1
