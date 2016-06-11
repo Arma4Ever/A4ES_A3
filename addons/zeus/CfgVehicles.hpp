@@ -18,11 +18,7 @@ class CfgVehicles {
     class ModuleCurator_F: Module_F {
         class Attributes: AttributesBase {
             class Addons: Combo {
-                displayName = "$STR_A3_CfgVehicles_ModuleCurator_F_Arguments_Addons";
-                tooltip = "$STR_A3_CfgVehicles_ModuleCurator_F_Arguments_Addons_description";
-                property = "ModuleCurator_F_Addons";
-                defaultValue = 2;
-                typeName = "NUMBER";
+                defaultValue = 3;
                 class Values {
                     delete AllActive;
                     delete AllMission;
