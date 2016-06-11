@@ -19,7 +19,7 @@ if (_mode == "init") then {
 
     [{
         params ["_units", "_setSurrender"];
-        {["ace_captives_setSurrendered", [_x], [_x, _setSurrender]] call CBA_fnc_targetEvent;} forEach _units;
+        {["ace_captives_setSurrendered", [_x, _setSurrender], [_x]] call CBA_fnc_targetEvent;} forEach _units;
     }, [_units, _setSurrender]] call ace_common_fnc_runAfterSettingsInit;
 
     //Set as disposable if possible
