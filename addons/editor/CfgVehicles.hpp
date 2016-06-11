@@ -2,6 +2,7 @@ class CfgVehicles {
     class Logic;
     class Module_F;
     class ACE_Module;
+    class ace_zeus_moduleBase: Module_F {};
     #include "hidden_modules.hpp"
 
     class House_F;
