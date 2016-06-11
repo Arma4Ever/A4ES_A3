@@ -65,10 +65,13 @@
             <Original>Cały sprzęt</Original>
         </Key>
         <Key ID="STR_A3CS_Boxes_Medical_Crate_Basic">
-            <Original>Podstawowe medykamenty</Original>
+            <Original>Podstawowa skrzynka medyczna</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_Medical_Crate_Team">
+            <Original>Drużynowa skrzynka medyczna</Original>
         </Key>
         <Key ID="STR_A3CS_Boxes_Medical_Crate_Advanced">
-            <Original>Zaawansowane medykamenty</Original>
+            <Original>Zaawansowana skrzynka medyczna</Original>
         </Key>
         <Key ID="STR_A3CS_Boxes_Items_Crate_Basic">
             <Original>Podstawowy ekwipunek</Original>
@@ -79,8 +82,37 @@
         <Key ID="STR_A3CS_Boxes_Items_Crate_Extra">
             <Original>Dodatkowy ekwipunek</Original>
         </Key>
+        <Key ID="STR_A3CS_Boxes_Grenades_Crate_Basic">
+            <Original>Granaty podstawowe</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_Grenades_Crate_Advanced">
+            <Original>Granaty zaawansowany</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_Explosives_Crate">
+            <Original>Ładunki wybuchowe</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_Mortar_Crate_HE">
+            <Original>Amunicja moździeżowa (HE)</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_Mortar_Crate_Smoke">
+            <Original>Amunicja moździeżowa (Dymne)</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_Mortar_Crate_Illum">
+            <Original>Amunicja moździeżowa (Flary)</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_IED_Cache">
+            <Original>Skład IED</Original>
+        </Key>
         <Key ID="STR_A3CS_Boxes_Items_Crate_Sandbags">
             <Original>Worki z piaskiem</Original>
         </Key>
+        <Key ID="STR_A3CS_Boxes_Items_Crate_Vietnam">
+            <Original>Sprzęt (Vietnam)</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_Items_Crate_IIWS">
+            <Original>Sprzęt (IIWŚ)</Original>
+        </Key>
+		
+		
     </Package>
 </Project>

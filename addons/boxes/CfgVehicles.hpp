@@ -17,6 +17,7 @@ class CfgVehicles {
         transportMaxItems = 9001;
         transportMaxBackpacks = 9001;
         maximumload = 9001;
+        class SimpleObject;
         class TransportMagazines {};
         class TransportWeapons {};
         class TransportItems {};
@@ -54,8 +55,8 @@ class CfgVehicles {
         displayName = CSTRING(US_Launchers_Empty_DisplayName);
         scope = 2;
         scopeCurator = 2;
-		icon = "iconCrateLong";
-		model = "\A3\weapons_F\AmmoBoxes\USLaunchers";
+        icon = "iconCrateLong";
+        model = "\A3\weapons_F\AmmoBoxes\USLaunchers";
         ace_cargo_size = 1;
         ace_cargo_canLoad = 1;
         ace_dragging_canCarry = 0;
@@ -65,8 +66,8 @@ class CfgVehicles {
         displayName = CSTRING(US_Explosives_Empty_DisplayName);
         scope = 2;
         scopeCurator = 2;
-		icon = "iconCrateOrd";
-		model = "\A3\weapons_F\AmmoBoxes\Proxy_UsBasicExplosives";
+        icon = "iconCrateOrd";
+        model = "\A3\weapons_F\AmmoBoxes\Proxy_UsBasicExplosives";
         ace_cargo_size = 1;
         ace_cargo_canLoad = 1;
         ace_dragging_canCarry = 1;
@@ -93,7 +94,7 @@ class CfgVehicles {
         scopeCurator = 2;
         mapSize = 3.19;
         model = "\A3\Weapons_F_Bootcamp\Ammoboxes\Weaponsbox_02_F";
-		icon = "iconCrateWpns";
+        icon = "iconCrateWpns";
         ace_cargo_size = 2;
         ace_cargo_canLoad = 1;
         ace_dragging_canCarry = 0;
@@ -103,9 +104,9 @@ class CfgVehicles {
         displayName = CSTRING(Ammo_Cache_Empty_DisplayName);
         scope = 2;
         scopeCurator = 2;
-		mapSize = 3.19;
+        mapSize = 3.19;
         model = "\A3\Weapons_F_Bootcamp\Ammoboxes\Ammobox_02_F";
-		icon = "iconCrateAmmo";
+        icon = "iconCrateAmmo";
         ace_cargo_size = 2;
         ace_cargo_canLoad = 1;
         ace_dragging_canCarry = 0;
@@ -115,9 +116,9 @@ class CfgVehicles {
         displayName = CSTRING(Support_Cache_Empty_DisplayName);
         scope = 2;
         scopeCurator = 2;
-		mapSize = 3.19;
+        mapSize = 3.19;
         model = "\A3\Weapons_F_Bootcamp\Ammoboxes\Itembox_02_F";
-		icon = "iconCrateSupp";
+        icon = "iconCrateSupp";
         ace_cargo_size = 2;
         ace_cargo_canLoad = 1;
         ace_dragging_canCarry = 0;
@@ -270,9 +271,9 @@ class CfgVehicles {
         displayName = CSTRING(Cargo_Net_Empty_DisplayName);
         scope = 2;
         scopeCurator = 2;
-		mapSize = 1.51;
+        mapSize = 1.51;
         model = "\A3\Supplies_F_Heli\CargoNets\CargoNet_01_box_F";
-		icon = "iconObject_1x1";
+        icon = "iconObject_1x1";
         vehicleClass = "a3cs_crates_empty";
         accuracy = 1000;
         transportMaxWeapons = 9001;
@@ -299,7 +300,7 @@ class CfgVehicles {
         vehicleClass = "a3cs_crates_empty";
         hiddenSelectionsTextures[] = {"\z\a3cs\addons\main\data\empty.paa","A3\Weapons_F\Ammoboxes\data\AmmoVeh_CO.paa"};
         transportAmmo = 0;
-		supplyRadius = 0;
+        supplyRadius = 0;
         accuracy = 1000;
         transportMaxWeapons = 9001;
         transportMaxMagazines = 9001;
@@ -373,6 +374,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_SpraypaintBlue,8);
             MACRO_ADDITEM(ACE_SpraypaintGreen,8);
             MACRO_ADDITEM(ACE_SpraypaintRed,8);
+            MACRO_ADDITEM(ACE_SpraypaintBlack,8);
             //medical
             MACRO_ADDITEM(ACE_bodyBag,8);
             MACRO_ADDITEM(ACE_quikclot,8);
@@ -401,6 +403,7 @@ class CfgVehicles {
         };
         class TransportWeapons {
             MACRO_ADDWEAPON(ACE_Vector,8);
+            MACRO_ADDWEAPON(ACE_VectorDay,8);
             MACRO_ADDWEAPON(ACE_MX2A,8);
             MACRO_ADDWEAPON(ACE_Yardage450,8);
             //vanilla working stuff
@@ -420,9 +423,32 @@ class CfgVehicles {
         scopeCurator = 2;
         vehicleClass = "a3cs_crates";
         class TransportItems {
-            MACRO_ADDITEM(ACE_quikclot,256);
-            MACRO_ADDITEM(ACE_morphine,128);
-            MACRO_ADDITEM(ACE_epinephrine,128);
+            MACRO_ADDITEM(ACE_fieldDressing,40);
+            MACRO_ADDITEM(ACE_packingBandage,40);
+            MACRO_ADDITEM(ACE_elasticBandage,40);
+            MACRO_ADDITEM(ACE_quikclot,40);
+            MACRO_ADDITEM(ACE_tourniquet,20);
+            MACRO_ADDITEM(ACE_morphine,20);
+            MACRO_ADDITEM(ACE_epinephrine,20);
+        };
+    };
+    class GVAR(medical_crate_team): GVAR(medical_crate_empty) {
+        displayName = CSTRING(Medical_Crate_Team);
+        scope = 2;
+        scopeCurator = 2;
+        vehicleClass = "a3cs_crates";
+        class TransportItems {
+            MACRO_ADDITEM(ACE_fieldDressing,75);
+            MACRO_ADDITEM(ACE_packingBandage,75);
+            MACRO_ADDITEM(ACE_elasticBandage,75);
+            MACRO_ADDITEM(ACE_quikclot,75);
+            MACRO_ADDITEM(ACE_tourniquet,30);
+            MACRO_ADDITEM(ACE_morphine,30);
+            MACRO_ADDITEM(ACE_epinephrine,20);
+            MACRO_ADDITEM(ACE_adenosine,10);
+            MACRO_ADDITEM(ACE_salineIV_250,4);
+            MACRO_ADDITEM(ACE_salineIV_500,4);
+            MACRO_ADDITEM(ACE_surgicalKit,1);
         };
     };
     class GVAR(medical_crate_advanced): GVAR(medical_crate_empty) {
@@ -444,8 +470,8 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_plasmaIV,64);
             MACRO_ADDITEM(ACE_plasmaIV_250,64);
             MACRO_ADDITEM(ACE_plasmaIV_500,64);
-            MACRO_ADDITEM(ACE_personalAidKit,64);
-            MACRO_ADDITEM(ACE_surgicalKit,64);
+            MACRO_ADDITEM(ACE_personalAidKit,24);
+            MACRO_ADDITEM(ACE_surgicalKit,8);
         };
     };
     class GVAR(items_crate_basic): GVAR(base) {
@@ -474,6 +500,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_SpraypaintBlue,32);
             MACRO_ADDITEM(ACE_SpraypaintGreen,32);
             MACRO_ADDITEM(ACE_SpraypaintRed,32);
+            MACRO_ADDITEM(ACE_SpraypaintBlack,32);
             //vanilla working stuff
             MACRO_ADDITEM(ToolKit,8);
         };
@@ -517,6 +544,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_SpraypaintBlue,8);
             MACRO_ADDITEM(ACE_SpraypaintGreen,8);
             MACRO_ADDITEM(ACE_SpraypaintRed,8);
+            MACRO_ADDITEM(ACE_SpraypaintBlack,8);
             MACRO_ADDITEM(ACE_EntrenchingTool,32);
             //vanilla working stuff
             MACRO_ADDITEM(Laserbatteries,8);
@@ -543,10 +571,6 @@ class CfgVehicles {
         scopeCurator = 2;
         vehicleClass = "a3cs_crates";
         class TransportItems {
-            MACRO_ADDITEM(chemlight_green,32);
-            MACRO_ADDITEM(chemlight_red,32);
-            MACRO_ADDITEM(chemlight_yellow,32);
-            MACRO_ADDITEM(chemlight_blue,32);
             MACRO_ADDITEM(G_Combat,32);
             MACRO_ADDITEM(G_Lowprofile,32);
             MACRO_ADDITEM(G_Balaclava_blk,32);
@@ -563,6 +587,120 @@ class CfgVehicles {
             MACRO_ADDITEM(G_Shades_Green,32);
         };
     };
+    class GVAR(grenades_crate_basic): GVAR(base) {
+        displayName = CSTRING(Grenades_Crate_Basic);
+        scope = 2;
+        scopeCurator = 2;
+        vehicleClass = "a3cs_crates";
+        icon = "iconCrateGrenades";
+        model = "\A3\weapons_F\AmmoBoxes\AmmoBox_F";
+        hiddenSelections[] = {"Camo_Signs","Camo"};
+        hiddenSelectionsTextures[] = {"A3\Weapons_F\Ammoboxes\data\AmmoBox_signs_CA.paa","A3\Weapons_F\Ammoboxes\data\AmmoBox_CO.paa"};
+        class SimpleObject: SimpleObject {
+            animate[] = {{"Ammo_hide",1},{"AmmoOrd_hide",1},{"Grenades_hide",0},{"Support_hide",1}};
+            hide[] = {};
+            verticalOffset = 0;
+        };
+        editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Box_NATO_Grenades_F.jpg";
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(chemlight_green,32);
+            MACRO_ADDMAGAZINE(chemlight_red,32);
+            MACRO_ADDMAGAZINE(chemlight_yellow,32);
+            MACRO_ADDMAGAZINE(chemlight_blue,32);
+            MACRO_ADDMAGAZINE(ACE_HandFlare_Green,32);
+            MACRO_ADDMAGAZINE(ACE_HandFlare_Red,32);
+            MACRO_ADDMAGAZINE(ACE_HandFlare_White,32);
+            MACRO_ADDMAGAZINE(ACE_HandFlare_Yellow,32);
+            MACRO_ADDMAGAZINE(SmokeShellBlue,32);
+            MACRO_ADDMAGAZINE(SmokeShellGreen,32);
+            MACRO_ADDMAGAZINE(SmokeShellOrange,32);
+            MACRO_ADDMAGAZINE(SmokeShellPurple,32);
+            MACRO_ADDMAGAZINE(SmokeShellRed,32);
+            MACRO_ADDMAGAZINE(SmokeShellYellow,32);
+            MACRO_ADDMAGAZINE(SmokeShell,32);
+            MACRO_ADDMAGAZINE(HandGrenade,32);
+            MACRO_ADDMAGAZINE(ACE_M84,32);
+            MACRO_ADDMAGAZINE(B_IR_Grenade,32);
+        };
+    };
+    class GVAR(grenades_crate_advanced): GVAR(base) {
+        displayName = CSTRING(Grenades_Crate_Advanced);
+        scope = 2;
+        scopeCurator = 2;
+        vehicleClass = "a3cs_crates";
+        icon = "iconCrateGrenades";
+        model = "\A3\weapons_F\AmmoBoxes\AmmoBox_F";
+        hiddenSelections[] = {"Camo_Signs","Camo"};
+        hiddenSelectionsTextures[] = {"A3\Weapons_F\Ammoboxes\data\AmmoBox_signs_CA.paa","A3\Weapons_F\Ammoboxes\data\AmmoBox_CO.paa"};
+        class SimpleObject: SimpleObject {
+            animate[] = {{"Ammo_hide",1},{"AmmoOrd_hide",1},{"Grenades_hide",0},{"Support_hide",1}};
+            hide[] = {};
+            verticalOffset = 0;
+        };
+        editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Box_NATO_Grenades_F.jpg";
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(ACE_M84,32);
+            MACRO_ADDMAGAZINE(B_IR_Grenade,32);
+        };
+    };
+    class GVAR(explosives_crate): GVAR(base) {
+        displayName = CSTRING(Explosives_Crate);
+        scope = 2;
+        scopeCurator = 2;
+        vehicleClass = "a3cs_crates";
+        icon = "iconCrateOrd";
+        model = "\A3\weapons_F\AmmoBoxes\AmmoBox_F";
+        hiddenSelections[] = {"Camo_Signs","Camo"};
+        hiddenSelectionsTextures[] = {"A3\Weapons_F\Ammoboxes\data\AmmoBox_signs_CA.paa","A3\Weapons_F\Ammoboxes\data\AmmoBox_CO.paa"};
+        class SimpleObject: SimpleObject {
+            animate[] = {{"Ammo_hide",1},{"AmmoOrd_hide",0},{"Grenades_hide",1},{"Support_hide",1}};
+            hide[] = {};
+            verticalOffset = 0;
+        };
+        editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Box_NATO_AmmoOrd_F.jpg";
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(ATMine_Range_Mag,5);
+            MACRO_ADDMAGAZINE(APERSMine_Range_Mag,12);
+            MACRO_ADDMAGAZINE(APERSBoundingMine_Range_Mag,12);
+            MACRO_ADDMAGAZINE(SLAMDirectionalMine_Wire_Mag,12);
+            MACRO_ADDMAGAZINE(APERSTripMine_Wire_Mag,24);
+            MACRO_ADDMAGAZINE(ClaymoreDirectionalMine_Remote_Mag,24);
+            MACRO_ADDMAGAZINE(DemoCharge_Remote_Mag,24);
+            MACRO_ADDMAGAZINE(SatchelCharge_Remote_Mag,12);
+        };
+        class TransportItems {
+            MACRO_ADDITEM(ACE_Clacker,8);
+            MACRO_ADDITEM(ACE_M26_Clacker,8);
+            MACRO_ADDITEM(ACE_DefusalKit,8);
+            MACRO_ADDITEM(ACE_SpraypaintBlue,8);
+            MACRO_ADDITEM(ACE_SpraypaintGreen,8);
+            MACRO_ADDITEM(ACE_SpraypaintRed,8);
+            MACRO_ADDITEM(ACE_SpraypaintBlack,8);
+        };
+    };
+    class GVAR(ied_cache): GVAR(base) {
+        displayName = CSTRING(IED_Cache);
+        scope = 2;
+        scopeCurator = 2;
+        vehicleClass = "a3cs_crates";
+        mapSize = 3.19;
+        model = "\A3\Weapons_F_Bootcamp\Ammoboxes\Ammobox_02_F";
+        icon = "iconCrateAmmo";
+        ace_cargo_size = 2;
+        ace_cargo_canLoad = 1;
+        ace_dragging_canCarry = 0;
+        ace_dragging_canDrag = 0;
+        editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Box_FIA_Ammo_F.jpg";
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(IEDLandSmall_Remote_Mag,8);
+            MACRO_ADDMAGAZINE(IEDUrbanSmall_Remote_Mag,6);
+        };
+        class TransportItems {
+            MACRO_ADDITEM(ACE_Deadmanswitch,4);
+            MACRO_ADDITEM(ACE_Cellphone,2);
+            MACRO_ADDITEM(ACE_DefusalKit,2);
+        };
+    };
     class GVAR(items_crate_sandbags): GVAR(base) {
         displayName = CSTRING(Items_Crate_Sandbags);
         scope = 2;
@@ -570,6 +708,120 @@ class CfgVehicles {
         vehicleClass = "a3cs_crates";
         class TransportItems {
             MACRO_ADDITEM(ACE_Sandbag_empty,128);
+        };
+    };
+    class GVAR(mortar_crate_HE): GVAR(base) {
+        displayName = CSTRING(Mortar_Crate_HE);
+        scope = 2;
+        scopeCurator = 2;
+        vehicleClass = "a3cs_crates";
+        icon = "iconCrateAmmo";
+        model = "\A3\weapons_F\AmmoBoxes\USBasicAmmo";
+        ace_cargo_size = 1;
+        ace_cargo_canLoad = 1;
+        ace_dragging_canCarry = 1;
+        ace_dragging_carryPosition[] = {0,1.2,0};
+        ace_dragging_carryDirection = 0;
+        ace_dragging_canDrag = 1;
+        ace_dragging_dragPosition[] = {0,1.2,0};
+        ace_dragging_dragDirection = 0;
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_HE,12);
+        };
+        class TransportItems {
+            MACRO_ADDITEM(ACE_RangeTable_82mm,1);
+        };
+    };
+    class GVAR(mortar_crate_illum): GVAR(base) {
+        displayName = CSTRING(Mortar_Crate_Illum);
+        scope = 2;
+        scopeCurator = 2;
+        vehicleClass = "a3cs_crates";
+        icon = "iconCrateAmmo";
+        model = "\A3\weapons_F\AmmoBoxes\USBasicAmmo";
+        ace_cargo_size = 1;
+        ace_cargo_canLoad = 1;
+        ace_dragging_canCarry = 1;
+        ace_dragging_carryPosition[] = {0,1.2,0};
+        ace_dragging_carryDirection = 0;
+        ace_dragging_canDrag = 1;
+        ace_dragging_dragPosition[] = {0,1.2,0};
+        ace_dragging_dragDirection = 0;
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_Illum,12);
+        };
+        class TransportItems {
+            MACRO_ADDITEM(ACE_RangeTable_82mm,1);
+        };
+    };
+    class GVAR(mortar_crate_smoke): GVAR(base) {
+        displayName = CSTRING(Mortar_Crate_Smoke);
+        scope = 2;
+        scopeCurator = 2;
+        vehicleClass = "a3cs_crates";
+        icon = "iconCrateAmmo";
+        model = "\A3\weapons_F\AmmoBoxes\USBasicAmmo";
+        ace_cargo_size = 1;
+        ace_cargo_canLoad = 1;
+        ace_dragging_canCarry = 1;
+        ace_dragging_carryPosition[] = {0,1.2,0};
+        ace_dragging_carryDirection = 0;
+        ace_dragging_canDrag = 1;
+        ace_dragging_dragPosition[] = {0,1.2,0};
+        ace_dragging_dragDirection = 0;
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_Smoke,12);
+        };
+        class TransportItems {
+            MACRO_ADDITEM(ACE_RangeTable_82mm,1);
+        };
+    };
+    class GVAR(items_crate_vietnam): GVAR(base) {
+        displayName = CSTRING(Items_Crate_Vietnam);
+        scope = 2;
+        scopeCurator = 2;
+        vehicleClass = "a3cs_crates";
+        icon = "iconCrateAmmo";
+        model = "\A3\weapons_F\AmmoBoxes\USBasicAmmo";
+        ace_cargo_size = 1;
+        ace_cargo_canLoad = 1;
+        ace_dragging_canCarry = 1;
+        ace_dragging_carryPosition[] = {0,1.2,0};
+        ace_dragging_carryDirection = 0;
+        ace_dragging_canDrag = 1;
+        ace_dragging_dragPosition[] = {0,1.2,0};
+        ace_dragging_dragDirection = 0;
+        class TransportItems {
+            MACRO_ADDITEM(ACE_Flashlight_MX991,12);
+            MACRO_ADDITEM(ACE_Flashlight_KSF1,12);
+            MACRO_ADDITEM(ACE_Flashlight_XL50,12);
+            MACRO_ADDITEM(ACE_EntrenchingTool,24);
+            MACRO_ADDITEM(ACE_MapTools,4);
+            MACRO_ADDITEM(ACE_SpareBarrel,12);
+            MACRO_ADDITEM(ACE_bodyBag,24);
+            MACRO_ADDITEM(ACE_CableTie,32);
+        };
+    };
+    class GVAR(items_crate_iiws): GVAR(base) {
+        displayName = CSTRING(Items_Crate_IIWS);
+        scope = 2;
+        scopeCurator = 2;
+        vehicleClass = "a3cs_crates";
+        icon = "iconCrateAmmo";
+        model = "\A3\weapons_F\AmmoBoxes\USBasicAmmo";
+        ace_cargo_size = 1;
+        ace_cargo_canLoad = 1;
+        ace_dragging_canCarry = 1;
+        ace_dragging_carryPosition[] = {0,1.2,0};
+        ace_dragging_carryDirection = 0;
+        ace_dragging_canDrag = 1;
+        ace_dragging_dragPosition[] = {0,1.2,0};
+        ace_dragging_dragDirection = 0;
+        class TransportItems {
+            MACRO_ADDITEM(ACE_Flashlight_KSF1,4);
+            MACRO_ADDITEM(ACE_EntrenchingTool,24);
+            MACRO_ADDITEM(ACE_MapTools,4);
+            MACRO_ADDITEM(ACE_SpareBarrel,12);
         };
     };
 };
