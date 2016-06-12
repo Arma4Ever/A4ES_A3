@@ -34,13 +34,3 @@ class Extended_Killed_EventHandlers {
         };
     };
 };
-
-class Extended_DisplayLoad_EventHandlers {
-    // fix for preInit = 1 functions not being executed when entering 3den from main menu
-    class Display3DEN {
-        cba_xeh = "[] call CBA_fnc_preInit;";
-    };
-    class RscDisplayInterrupt {
-        cba_xeh_3denFix = "";
-    };
-};
