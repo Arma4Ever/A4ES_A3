@@ -62,6 +62,7 @@ PREP(genFireLocal);
 PREP(genSmokeLocal);
 PREP(doAnimationGlobal);
 PREP(skipTimeLocal);
+PREP(supplyPoint_local);
 PREP(supplyPoint_actions);
 PREP(supplyPoint_rearmVehicle);
 PREP(supplyPoint_refuelVehicle);

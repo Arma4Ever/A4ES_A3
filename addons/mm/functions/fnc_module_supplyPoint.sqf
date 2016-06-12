@@ -19,19 +19,7 @@ if (_mode == "init") then {
     private _repair = (_logic getVariable ["repairPoint", 0]) > 0;
     private _objects = (synchronizedObjects _logic) select {_x isKindOf "All"};
 
-    {
-        private _object = _x;
-        private _supplyPointAction = [
-            QGVAR(SupplyPointMainActions),
-            localize LSTRING(Module_SupplyPoint_Action_Actions_DisplayName),
-            "",
-            {},
-            {true},
-            DFUNC(supplyPoint_actions),
-            [_range, _rearm, _refuel, _repair]
-        ] call ace_interact_menu_fnc_createAction;
-        [_object, 0, ["ACE_MainActions"], _supplyPointAction] call ace_interact_menu_fnc_addActionToObject;
-    } foreach _objects;
+    [_rearm, _refuel, _repair, _range, _objects] remoteExecCall [QFUNC(supplyPoint_local), 0, true];
 
     //Set as disposable if possible
     _logic call FUNC(setDisposable);
