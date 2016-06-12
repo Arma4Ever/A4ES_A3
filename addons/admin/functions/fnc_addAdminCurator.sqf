@@ -14,7 +14,7 @@ if (!isMultiplayer) then {
     _canAccess = true;
 } else {
     private _adminUID = getPlayerUID _admin;
-    private _adminsConfig = (format ["(gettext (_x >> 'uid')) isEqualTo %1", _adminUID]) configClasses (configFile >> QGVAR(admins));
+    private _adminsConfig = (format ["(gettext (_x >> 'uid')) isEqualTo '%1'", _adminUID]) configClasses (configFile >> QGVAR(admins));
     if (count _adminsConfig > 0) then {
         private _adminConfig = _adminsConfig select 0;
         private _adminAllowedModules = (getArray (_adminConfig >> "allowedModules")) apply {tolower _x};
