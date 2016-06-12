@@ -813,10 +813,8 @@
 /* CBA */
 "cba_ai",
 "cba_arrays",
-"cba_cache_disable",
 "cba_common",
 "cba_diagnostic",
-"cba_diagnostics_xeh_disabled",
 "cba_ee",
 "cba_events",
 "CBA_Extended_EventHandlers",
