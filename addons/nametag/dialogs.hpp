@@ -2,16 +2,6 @@
 #include "\z\a3cs\addons\common\ui\define.hpp"
 #include "ui\idcTacticalHud.hpp"
 
-#define HIDDENMARKER(CLASSNAME) \
-    class CLASSNAME { \
-        icon = "#(argb,8,8,3)color(0,0,0,0)"; \
-        size = 0; \
-        importance = 0; \
-        coefMin = 0; \
-        coefMax = 0; \
-        color[] = {0,0,0,0}; \
-    }
-
 #define X_TACTICALHUD_OFFSET 19
 #define Y_TACTICALHUD_OFFSET 5.5
 
@@ -158,37 +148,254 @@ class RscTitles {
                     coefMin = 0;
                     coefMax = 0;
                 };
-                HIDDENMARKER(Waypoint);
-                HIDDENMARKER(WaypointCompleted);
-                HIDDENMARKER(CustomMark);
-                HIDDENMARKER(Command);
-                HIDDENMARKER(Bush);
-                HIDDENMARKER(Rock)
-                HIDDENMARKER(SmallTree);
-                HIDDENMARKER(Tree);
-                HIDDENMARKER(busstop);
-                HIDDENMARKER(fuelstation);
-                HIDDENMARKER(hospital);
-                HIDDENMARKER(church);
-                HIDDENMARKER(lighthouse);
-                HIDDENMARKER(power);
-                HIDDENMARKER(powersolar);
-                HIDDENMARKER(powerwave);
-                HIDDENMARKER(powerwind);
-                HIDDENMARKER(quay);
-                HIDDENMARKER(transmitter);
-                HIDDENMARKER(watertower);
-                HIDDENMARKER(Cross);
-                HIDDENMARKER(Chapel);
-                HIDDENMARKER(Shipwreck);
-                HIDDENMARKER(Bunker);
-                HIDDENMARKER(Fortress);
-                HIDDENMARKER(Fountain);
-                HIDDENMARKER(Ruin);
-                HIDDENMARKER(Stack);
-                HIDDENMARKER(Tourism);
-                HIDDENMARKER(ViewTower);
-                HIDDENMARKER(ActiveMarker);
+                class Waypoint {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class WaypointCompleted {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class CustomMark {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class Command {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class Bush {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class Rock {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class SmallTree {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class Tree {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class busstop {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class fuelstation {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class hospital {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class church {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class lighthouse {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class power {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class powersolar {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class powerwave {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class powerwind {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class quay {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class transmitter {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class watertower {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class Cross {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class Chapel {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class Shipwreck {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class Bunker {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class Fortress {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class Fountain {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class Ruin {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class Stack {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class Tourism {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class ViewTower {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
+                class ActiveMarker {
+                    icon = "#(argb,8,8,3)color(0,0,0,0)";
+                    size = 0;
+                    importance = 0;
+                    coefMin = 0;
+                    coefMax = 0;
+                    color[] = {0,0,0,0};
+                };
             };
             class tacticalHudRadarBackground: RscPicture {
                 idc = IDC_TACTICALHUD_RADARBG;
