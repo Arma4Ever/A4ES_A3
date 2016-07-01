@@ -13,6 +13,8 @@ if (_mode == "init") then {
     if (isNull _logic || !_isActivated) exitWith {true};
     if (!(_logic call FUNC(canExecuteModule))) exitWith {WARNING("fogEffect: blokuje wykonanie modulu");true};
 
+    missionNamespace setVariable [QGVAR(fogEffectActive), true, true];
+
     [] remoteExec [QFUNC(fogEffect), 0, true];
 
     //Set as disposable if possible

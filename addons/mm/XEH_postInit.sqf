@@ -52,5 +52,8 @@ if (hasInterface) then {
             _ppEffect ppEffectEnable GVAR(enableColorCorrectionsEffect);
             _ppEffect ppEffectCommit 0;
         };
+        if (_option == QGVAR(enableFogEffect)) then {
+            [] call FUNC(fogEffect);
+        };
     }] call CBA_fnc_addEventHandler;
 };
