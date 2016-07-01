@@ -166,7 +166,6 @@ class CBA_ModulePatrol: Module_F {scope = 1;scopeCurator = 0;};
 class CBA_ModuleDefend: Module_F {scope = 1;scopeCurator = 0;};
 class CBA_ModuleAttack: Module_F {scope = 1;scopeCurator = 0;};
 
-
 /* ACE Modules */
 
 class ACE_moduleAllowConfigExport: ACE_Module {scope = 1;};

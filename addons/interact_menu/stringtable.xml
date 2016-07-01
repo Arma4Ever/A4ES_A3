@@ -7,6 +7,9 @@
         <Key ID="STR_A3CS_Interact_Menu_Settings_MoveMainInteractionToCursor_DisplayName">
             <Original>Przesuwaj punkt interackji względem kursora</Original>
         </Key>
+        <Key ID="STR_A3CS_Interact_Menu_Action_Canceled">
+            <Original>Akcja została anulowana</Original>
+        </Key>
     </Package>
 </Project>
 

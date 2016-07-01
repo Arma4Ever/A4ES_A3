@@ -2,6 +2,8 @@
 
 params ["_target", "_player", "_menuActions"];
 
+if (!GVAR(useFlexiMenu)) exitWith {};
+
 _flexiMenuActions = +_menuActions;
 
 private _objectActions = [];

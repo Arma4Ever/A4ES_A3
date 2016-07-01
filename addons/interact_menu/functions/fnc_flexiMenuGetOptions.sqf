@@ -42,7 +42,7 @@ private _menuAddedOptions = [];
         } else {
             _menuOptions pushback [
                 _actionName,
-                [[_actionAct, [_target, _player, _actionParams], _actionID], {_this call FUNC(flexiMenuCallOption)}],
+                [[_actionAct, _actionCond, [_target, _player, _actionParams], _actionID], {_this call FUNC(flexiMenuCallOption)}],
                 _actionIcon,
                 "",
                 "",
