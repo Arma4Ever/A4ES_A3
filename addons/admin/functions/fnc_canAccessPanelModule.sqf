@@ -34,7 +34,19 @@ if (_module isEqualTo "adminpanel") then {
         } else {
             private _isAdmin = [] call FUNC(isAdmin);
             if (_isAdmin) then {
-                private _adminsConfig = "(gettext (_x >> 'uid')) isEqualTo (getPlayerUID player)" configClasses (configFile >> QGVAR(admins));
+                private _unitUID = getPlayerUID player;
+                if (_unitUID == "") then {
+                    private _profileUID = profilenamespace getVariable ["player_uid", "0"];
+                    private _adminsConfig = (format ["(gettext (_x >> 'uid')) isEqualTo '%1'", _profileUID]) configClasses (configFile >> QGVAR(admins));
+                    if (count _adminsConfig > 0) then {
+                        private _adminConfig = _adminsConfig select 0;
+                        private _isSuperAdmin = getNumber (_adminConfig >> "admin") > 0;
+                        if (_isSuperAdmin) then {
+                            _unitUID = _profileUID;
+                        };
+                    };
+                };
+                private _adminsConfig = (format ["(gettext (_x >> 'uid')) isEqualTo '%1'", _unitUID]) configClasses (configFile >> QGVAR(admins));
                 if (count _adminsConfig > 0) then {
                     private _adminConfig = _adminsConfig select 0;
                     private _adminAllowedModules = (getArray (_adminConfig >> "allowedModules")) apply {tolower _x};
