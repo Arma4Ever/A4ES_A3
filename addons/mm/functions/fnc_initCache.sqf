@@ -31,5 +31,5 @@ private _playableUnits = [[player], playableUnits] select isMultiplayer;
 GVAR(cacheGroupIndex) = 0;
 
 {systemChat localize LSTRING(Cache_Inited);} remoteExec ["BIS_fnc_call", 0];
-[FUNC(cacheGroupHandler), 0.2, []] call CBA_fnc_addPerFrameHandler;
+[FUNC(cacheGroupHandler), 0, []] call CBA_fnc_addPerFrameHandler;
 [FUNC(cacheModulesHandler), 1, []] call CBA_fnc_addPerFrameHandler;

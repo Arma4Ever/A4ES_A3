@@ -16,7 +16,6 @@ private _group = GVAR(cacheGroups) select GVAR(cacheGroupIndex);
 if (({alive _x} count (units _group)) > 0) then {
     private _leader = vehicle (leader _group);
     private _isVisibleForPlayers = false;
-    private _playableUnits = [[player], playableUnits] select isMultiplayer;
     {
         private _player = vehicle _x;
         private _distance = _leader distance _player;
@@ -30,7 +29,7 @@ if (({alive _x} count (units _group)) > 0) then {
         if (GVAR(cacheDistancePlanes) > 0) then {
             if (_distance < GVAR(cacheDistancePlanes) && {_player iskindOf "Plane"}) exitWith {_isVisibleForPlayers = true;};
         };
-    } forEach _playableUnits;
+    } forEach ([[player], playableUnits] select isMultiplayer);
 
     if (!_isVisibleForPlayers && {!(_group in GVAR(cachedGroups))}) then {
         //cache group
@@ -46,17 +45,15 @@ if (({alive _x} count (units _group)) > 0) then {
     //no alive units in group, clean data
     GVAR(cacheGroups) deleteAt (GVAR(cacheGroups) find _group);
     if (!isMultiplayer) then {systemchat "Cache - Usuwam pusta grupe AI";};
-    {deleteWaypoint [_group, 0];} forEach (waypoints _group);
-    deleteGroup _group;
+    [_group] remoteExecCall [QFUNC(deleteGroup), groupOwner _group];
 };
 
-if (isMultiplayer && {GVAR(cacheGroupIndex) == 0}) then {
+if (GVAR(cacheGroupIndex) == 0) then {
     //Check allgroups
     {
         private _group = _x;
         if (({alive _x} count (units _group)) > 0) then {
-            {deleteWaypoint [_group, 0];} forEach (waypoints _group);
-            deleteGroup _group;
+            [_group] remoteExecCall [QFUNC(deleteGroup), groupOwner _group];
             if (_group in GVAR(cacheGroups)) then {
                 GVAR(cacheGroups) deleteAt (GVAR(cacheGroups) find _group);
             };

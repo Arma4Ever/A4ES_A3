@@ -4,16 +4,16 @@
  */
 #include "script_component.hpp"
 
-if (!local _unit) exitWith {};
-
 params ["_unit", "_training"];
+
+if (!local _unit) exitWith {};
 
 private _skillArray = [];
 
 if (_training == "militia") then {
     _skillArray = [
-        ["aimingAccuracy", 0.2],
-        ["aimingSpeed", 0.2],
+        ["aimingAccuracy", 0.3],
+        ["aimingSpeed", 0.3],
         ["aimingShake", 1],
         ["commanding", 1],
         ["courage", 1],

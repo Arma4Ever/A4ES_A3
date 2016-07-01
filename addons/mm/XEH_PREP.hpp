@@ -40,6 +40,7 @@ PREP(cacheModulesHandler);
 PREP(setSkillLevel);
 PREP(disableGroupAI);
 PREP(enableGroupAI);
+PREP(deleteGroup);
 PREP(genSoldiers_callSupport);
 PREP(genSoldiers_handleKilled);
 PREP(genAttack_handleKilled);
