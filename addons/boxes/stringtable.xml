@@ -112,7 +112,14 @@
         <Key ID="STR_A3CS_Boxes_Items_Crate_IIWS">
             <Original>Sprzęt (IIWŚ)</Original>
         </Key>
-		
-		
+        <Key ID="STR_A3CS_Boxes_Category">
+            <Original>Skrzynie</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_Setting_PutItemsInNearestBox_DisplayName">
+            <Original>Przenoś sprzęt do najbliższej skrzyni</Original>
+        </Key>
+        <Key ID="STR_A3CS_Boxes_Setting_PutItemsInNearestBox_Description">
+            <Original>Automatycznie przenoś wyrzucany sprzęt do skrzyni jeśli znajduje się ona wystarczająco blisko</Original>
+        </Key>
     </Package>
 </Project>

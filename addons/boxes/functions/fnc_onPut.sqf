@@ -8,8 +8,10 @@ params ["_unit", "_container", "_item"];
 
 if (!hasInterface || !local _unit) exitWith {};
 
+if (!GVAR(putItemsInNearestBox)) exitWith {};
+
 if (typeOf _container == "GroundWeaponHolder") then {
-    private _nearestBox = nearestObjects [_unit, ["ReammoBox_F"], 5];
+    private _nearestBox = nearestObjects [_unit, ["ReammoBox_F"], 6];
     if (count _nearestBox > 0) then {
         private _result = false;
         private _targetBox = _nearestBox select 0;

@@ -55,6 +55,9 @@
 	    <Key ID="STR_A3CS_MM_Settings_EnableColorCorrectionsEffect_DisplayName">
             <Original>Włącz filtry kolorystyczne</Original>
         </Key>
+	    <Key ID="STR_A3CS_MM_Settings_EnableFogEffect_DisplayName">
+            <Original>Włącz efekt mgły</Original>
+        </Key>
 	    <Key ID="STR_A3CS_MM_MissionFrom2DEditor1">
             <Original>UWAGA!</Original>
         </Key>
