@@ -1,3 +1,4 @@
+
 DFUNC(appMarkKeypadEntry) = compileFinal preProcessFileLineNumbers "\z\a3cs\addons\microdagr\functions\fnc_appMarkKeypadEntry.sqf";//PREP(appMarkKeypadEntry);
 PREP(appMenuButtonConnectRangefinder);
 DFUNC(appSettingsLBClick) = compileFinal preProcessFileLineNumbers "\z\a3cs\addons\microdagr\functions\fnc_appSettingsLBClick.sqf";//PREP(appSettingsLBClick);
