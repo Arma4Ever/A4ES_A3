@@ -6,10 +6,18 @@
 
 if (!hasInterface) exitWith {};
 
-if (missionNamespace getVariable [QGVAR(fogEffect), false]) exitWith {true};
-missionNamespace setVariable [QGVAR(fogEffect), true];
+// exit if effect not active on server
+if (!(missionNamespace getVariable [QGVAR(fogEffectActive), false])) exitWith {true};
 
-_n = 0 spawn {
+// exit if effect is already activated
+private _handler = missionNamespace getVariable [QGVAR(fogEffectHandler), scriptNull];
+if (!isNull _handler) exitWith {true};
+
+// exit if client disabled effect
+if (!GVAR(enableFogEffect)) exitWith {true};
+
+// activate effect
+_handler = 0 spawn {
     sleep 0.5;
 
     private _obj = player;
@@ -36,10 +44,16 @@ _n = 0 spawn {
     _fog2 setParticleCircle [0.1, [0, 0, -0.12]];
     _fog2 setDropInterval 0.01;
 
-    while {true} do {
+    while {GVAR(enableFogEffect)} do {
         _pos = position vehicle ace_player;
-        _fog setpos _pos;
-        _fog2 setpos _pos;
+        _pos set [2, 0];
+
+        _fog setPosATL _pos;
+        _fog2 setPosATL _pos;
         sleep 1;
     };
+
+    deleteVehicle _fog;
+    deleteVehicle _fog2;
 };
+missionNamespace setVariable [QGVAR(fogEffectHandler), _handler];
