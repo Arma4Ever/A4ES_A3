@@ -34,7 +34,12 @@
 	    <Key ID="STR_A3CS_Vehicleactions_CheckVehicleDoc_CargoSpace">
             <Original>Pojemność cargo: %1</Original>
         </Key>
-		
+	    <Key ID="STR_A3CS_Vehicleactions_Action_KnockTank">
+            <Original>Zapukaj we właz</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Vehicleactions_KnockTankInfo">
+            <Original>Ktoś puka we właz...</Original>
+        </Key>
 	    <Key ID="STR_A3CS_Vehicleactions_ToggleCollisionLights_DisplayName">
             <Original>Włącz/Wyłącz światła pozycyjne</Original>
         </Key>

@@ -15,6 +15,7 @@ private _canDisassemble = (count getArray (configfile >> "CfgVehicles" >> _class
 private _isUAV = getNumber (configfile >> "CfgVehicles" >> _class >> "isUav") > 0;
 private _isAir = _object isKindOf "Air";
 private _isMan = _object isKIndOf "Man";
+private _isTank = _object isKIndOf "Tank";
 
 if (!_isMan) then {
     private _checkDocAction = [
@@ -25,6 +26,20 @@ if (!_isMan) then {
         {true}
     ] call ace_interact_menu_fnc_createAction;
     [_class, 1, ["ACE_SelfActions"], _checkDocAction] call ace_interact_menu_fnc_addActionToClass;
+};
+
+if (_isTank) then {
+    private _knockTankAction = [
+        QGVAR(knockTank),
+        localize LSTRING(Action_KnockTank),
+        "",
+        {
+            private _crew = (crew _target) select {isPlayer _x};
+            [] remoteExecCall [QFUNC(knockTank), _crew];
+        },
+        {alive _target && (vehicle _player) isEqualTo _player}
+    ] call ace_interact_menu_fnc_createAction;
+    [_class, 0, ["ACE_MainActions"], _knockTankAction] call ace_interact_menu_fnc_addActionToClass;
 };
 
 if (_canDisassemble) then {
