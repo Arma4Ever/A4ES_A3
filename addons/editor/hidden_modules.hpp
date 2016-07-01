@@ -160,8 +160,12 @@ class ModuleDiary_F: Module_F {scope = 1;scopeCurator = 0;};
 
 /* CBA Modules */
 
-class CBA_main_require: Module_F {scope = 1;};
-class SLX_XEH_Logic: Module_F {scope = 1;};
+class CBA_main_require: Module_F {scope = 1;scopeCurator = 0;};
+class SLX_XEH_Logic: Module_F {scope = 1;scopeCurator = 0;};
+class CBA_ModulePatrol: Module_F {scope = 1;scopeCurator = 0;};
+class CBA_ModuleDefend: Module_F {scope = 1;scopeCurator = 0;};
+class CBA_ModuleAttack: Module_F {scope = 1;scopeCurator = 0;};
+
 
 /* ACE Modules */
 
