@@ -1,4 +1,4 @@
-//==   ACE3 3.5.1.0   ==//
+//==   ACE3 3.6.0.0   ==//
 //======================================//
 //                CLIENT                //
 //======================================//
@@ -25,18 +25,12 @@ class ace_finger_indicatorForSelf {
     //default value: 1
     //client: 1
 };
-class ace_Gestures_showOnInteractionMenu {
+class ace_gestures_showOnInteractionMenu {
     //Show Gestures On Interaction Menu
     //Show gestures on the self interaction menu, or just use keybinds, or disable completely
     //typeName: SCALAR
     //default value: 2
     //values: ["Disabled","Just Keybinds","Keybinds + Interaction Menu"]
-    //client: 1
-};
-class ace_goggles_showInThirdPerson {
-    //Show Goggle Effects in Third Person
-    //typeName: BOOL
-    //default value: 0
     //client: 1
 };
 class ace_interact_menu_actionOnKeyRelease {
@@ -45,23 +39,16 @@ class ace_interact_menu_actionOnKeyRelease {
     //default value: 1
     //client: 1
 };
-class ace_interact_menu_addBuildingActions {
-    //Show actions for buildings
-    //Adds interaction actions for opening doors and mounting ladders on buildings. (Note: There is a performance cost when opening interaction menu, especially in towns)
-    //typeName: BOOL
-    //default value: 0
-    //client: 1
-};
 class ace_interact_menu_alwaysUseCursorInteraction {
     //Always display cursor for interaction
     //typeName: BOOL
-    //default value: 0
+    //default value: 1
     //client: 1
 };
 class ace_interact_menu_alwaysUseCursorSelfInteraction {
     //Always display cursor for self interaction
     //typeName: BOOL
-    //default value: 0
+    //default value: 1
     //client: 1
 };
 class ace_interact_menu_cursorKeepCentered {
@@ -97,18 +84,12 @@ class ace_interact_menu_shadowSetting {
 class ace_interact_menu_textSize {
     //Interaction Text Size
     //typeName: SCALAR
-    //default value: 2
+    //default value: 3
     //values: ["$str_very_small","$str_small","$str_medium","$str_large","$str_very_large"]
     //client: 1
 };
 class ace_interact_menu_useListMenu {
     //Display interaction menus as lists
-    //typeName: BOOL
-    //default value: 0
-    //client: 1
-};
-class ace_interaction_enableMagazinePassing {
-    //Show "pass magazine" interaction
     //typeName: BOOL
     //default value: 1
     //client: 1
@@ -121,50 +102,20 @@ class ace_inventory_inventoryDisplaySize {
     //values: ["$str_medium","$str_large","$str_very_large"]
     //client: 1
 };
+class ace_maptools_rotateModifierKey {
+    //Rotate Map Tools Key
+    //Modifier key to allow rotating map tools
+    //typeName: SCALAR
+    //default value: 1
+    //values: ["Disabled","ALT","CTRL","SHIFT"]
+    //client: 1
+};
 class ace_medical_litterSimulationDetail {
     //Litter Simulation Detail
     //Litter simulation detail level sets the number of litter items which will be locally spawned in the client. Excessive amounts in local areas could cause FPS lag, so this is a client only setting.
     //typeName: SCALAR
     //default value: 3
     //values: ["Off","Low","Medium","High","Ultra"]
-    //client: 1
-};
-class ace_medical_menu_openAfterTreatment {
-    //Re-open Medical menu
-    //Re-open the medical menu after succesful treatment
-    //typeName: BOOL
-    //default value: 1
-    //client: 1
-};
-class ace_medical_menu_useMenu {
-    //Use Medical menu
-    //If allowed by server, enable the option to use the Medical Menu through keybinding and interaction menu
-    //typeName: SCALAR
-    //default value: 0
-    //values: ["Disabled","Enabled","Vehicles only"]
-    //client: 1
-};
-class ace_medical_menuTypeStyle {
-    //Style of menu (Medical)
-    //Select the type of menu you prefer; default 3d selections or radial.
-    //typeName: SCALAR
-    //default value: 0
-    //values: ["Selections (3d)","Radial","Disabled"]
-    //client: 1
-};
-class ace_medical_painEffectType {
-    //Pain Effect Type
-    //typeName: SCALAR
-    //default value: 0
-    //values: ["Colour Flashing","Chromatic Aberration"]
-    //client: 1
-};
-class ace_missileguidance_enabled {
-    //Advanced Missile Guidance
-    //Advanced missile guidance, or AMG, provides multiple enhancements to missile locking and firing. It is also a framework required for missile weapon types.
-    //typeName: SCALAR
-    //default value: 2
-    //values: ["Off","Player Only","Player and AI"]
     //client: 1
 };
 class ace_movement_useImperial {
@@ -184,27 +135,6 @@ class ace_optionsmenu_showNewsOnMainMenu {
     //Show News on Main Menu
     //typeName: BOOL
     //default value: 1
-    //client: 1
-};
-class ace_overheating_displayTextOnJam {
-    //Display text on jam
-    //Display a notification whenever your weapon gets jammed
-    //typeName: BOOL
-    //default value: 1
-    //client: 1
-};
-class ace_overheating_showParticleEffects {
-    //Overheating Particle Effects
-    //Show particle effects when weapon overheats
-    //typeName: BOOL
-    //default value: 1
-    //client: 1
-};
-class ace_overheating_showParticleEffectsForEveryone {
-    //Overheating Particle Effects for everyone
-    //Show particle effects when other players weapon overheats
-    //typeName: BOOL
-    //default value: 0
     //client: 1
 };
 class ace_reload_displayText {
@@ -514,7 +444,7 @@ class ace_captives_requireSurrender {
     //Require surrendering
     //Require Players to surrender before they can be arrested
     //typeName: SCALAR
-    //default value: 1
+    //default value: 0
     //values: ["Disabled","Surrendering only","Surrendering or No weapon"]
     //client: 0
 };
@@ -570,7 +500,7 @@ class ace_explosives_requireSpecialist {
 class ace_finger_enabled {
     //Pointing Enabled
     //typeName: BOOL
-    //default value: 0
+    //default value: 1
     //client: 0
 };
 class ace_finger_maxRange {
@@ -580,9 +510,28 @@ class ace_finger_maxRange {
     //default value: 4
     //client: 0
 };
+class ace_goggles_showInThirdPerson {
+    //Show Goggle Effects in Third Person
+    //typeName: BOOL
+    //default value: 0
+    //client: 0
+};
 class ace_hitreactions_minDamageToTrigger {
     //typeName: SCALAR
     //default value: 0.1
+    //client: 0
+};
+class ace_interact_menu_addBuildingActions {
+    //Show actions for buildings
+    //Adds interaction actions for opening doors and mounting ladders on buildings. (Note: There is a performance cost when opening interaction menu, especially in towns)
+    //typeName: BOOL
+    //default value: 1
+    //client: 0
+};
+class ace_interaction_enableMagazinePassing {
+    //Show "pass magazine" interaction
+    //typeName: BOOL
+    //default value: 1
     //client: 0
 };
 class ace_interaction_enableTeamManagement {
@@ -679,7 +628,7 @@ class ace_map_gestures_maxRange {
     //Map Gesture Max Range
     //Max range between players to show the map gesture indicator [default: 7 meters]
     //typeName: SCALAR
-    //default value: 7
+    //default value: 8
     //client: 0
 };
 class ace_map_mapGlow {
@@ -718,7 +667,7 @@ class ace_map_mapShowCursorCoordinates {
     //client: 0
 };
 class ace_maptools_everyoneCanDrawOnBriefing {
-    //typeName: BOOL
+    //typeName:
     //default value: 1
     //client: 0
 };
@@ -726,7 +675,7 @@ class ace_medical_AIDamageThreshold {
     //AI Damage
     //What is the damage an AI can take before being killed?
     //typeName: SCALAR
-    //default value: 1
+    //default value: 0.75
     //client: 0
 };
 class ace_medical_allowDeadBodyMovement {
@@ -764,7 +713,7 @@ class ace_medical_consumeItem_PAK {
     //Remove PAK on use
     //Should PAK be removed on usage?
     //typeName: SCALAR
-    //default value: 0
+    //default value: 1
     //values: ["No","Yes"]
     //client: 0
 };
@@ -780,14 +729,14 @@ class ace_medical_delayUnconCaptive {
     //Delay cease fire of AI for unconsciousness
     //Delay cease fire of AI while player is unconscious for medical reasons.
     //typeName: SCALAR
-    //default value: 3
+    //default value: 2
     //client: 0
 };
 class ace_medical_enableAdvancedWounds {
     //Enable Advanced wounds
     //Allow reopening of bandaged wounds?
     //typeName: BOOL
-    //default value: "false"
+    //default value: 1
     //client: 0
 };
 class ace_medical_enableAirway {
@@ -832,7 +781,7 @@ class ace_medical_enableUnconsciousnessAI {
     //AI Unconsciousness
     //Allow AI to go unconscious
     //typeName: SCALAR
-    //default value: 1
+    //default value: 0
     //values: ["Disabled","50/50","Enabled"]
     //client: 0
 };
@@ -847,14 +796,14 @@ class ace_medical_healHitPointAfterAdvBandage {
     //Heal hitpoints
     //Heal fully bandaged hitpoints
     //typeName: BOOL
-    //default value: 0
+    //default value: 1
     //client: 0
 };
 class ace_medical_increaseTrainingInLocations {
     //Locations boost training
     //Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]
     //typeName: BOOL
-    //default value: 0
+    //default value: 1
     //client: 0
 };
 class ace_medical_keepLocalSettingsSynced {
@@ -868,7 +817,7 @@ class ace_medical_level {
     //Medical Level
     //What is the medical simulation level?
     //typeName: SCALAR
-    //default value: 1
+    //default value: 2
     //values: ["Disabled","Basic","Advanced"]
     //client: 0
 };
@@ -876,21 +825,21 @@ class ace_medical_litterCleanUpDelay {
     //Life time of litter objects
     //How long should litter objects stay? In seconds. -1 is forever.
     //typeName: SCALAR
-    //default value: 0
+    //default value: 1200
     //client: 0
 };
 class ace_medical_maxReviveTime {
     //Max Revive time
     //Max amount of seconds a unit can spend in revive state
     //typeName: SCALAR
-    //default value: 120
+    //default value: 0
     //client: 0
 };
 class ace_medical_medicSetting {
     //Medics setting
     //What is the level of detail prefered for medics?
     //typeName: SCALAR
-    //default value: 1
+    //default value: 2
     //values: ["Disabled","Normal","Advanced"]
     //client: 0
 };
@@ -931,6 +880,29 @@ class ace_medical_menu_maxRange {
     //default value: 3
     //client: 0
 };
+class ace_medical_menu_openAfterTreatment {
+    //Re-open Medical menu
+    //Re-open the medical menu after succesful treatment
+    //typeName: BOOL
+    //default value: 1
+    //client: 0
+};
+class ace_medical_menu_useMenu {
+    //Use Medical menu
+    //If allowed by server, enable the option to use the Medical Menu through keybinding and interaction menu
+    //typeName: SCALAR
+    //default value: 1
+    //values: ["Disabled","Enabled","Vehicles only"]
+    //client: 0
+};
+class ace_medical_menuTypeStyle {
+    //Style of menu (Medical)
+    //Select the type of menu you prefer; default 3d selections or radial.
+    //typeName: SCALAR
+    //default value: 2
+    //values: ["Selections (3d)","Radial","Disabled"]
+    //client: 0
+};
 class ace_medical_moveUnitsFromGroupOnUnconscious {
     //typeName: BOOL
     //default value: 0
@@ -943,25 +915,32 @@ class ace_medical_painCoefficient {
     //default value: 1
     //client: 0
 };
+class ace_medical_painEffectType {
+    //Pain Effect Type
+    //typeName: SCALAR
+    //default value: 0
+    //values: ["Colour Flashing","Chromatic Aberration"]
+    //client: 0
+};
 class ace_medical_painIsOnlySuppressed {
     //Pain suppression
     //Pain is only temporarily suppressed, not removed
     //typeName: BOOL
-    //default value: 1
+    //default value: 0
     //client: 0
 };
 class ace_medical_playerDamageThreshold {
     //Player Damage
     //What is the damage a player can take before being killed?
     //typeName: SCALAR
-    //default value: 1
+    //default value: 0.8
     //client: 0
 };
 class ace_medical_preventInstaDeath {
     //Prevent instant death
     //Have a unit move to unconscious instead of death
     //typeName: BOOL
-    //default value: 0
+    //default value: 1
     //client: 0
 };
 class ace_medical_remoteControlledAI {
@@ -999,7 +978,7 @@ class ace_medical_useLocation_PAK {
     //Locations PAK
     //Where can the PAK be used?
     //typeName: SCALAR
-    //default value: 3
+    //default value: 0
     //values: ["Anywhere","Medical vehicles","Medical facility","Vehicles & facility","Disabled"]
     //client: 0
 };
@@ -1007,7 +986,7 @@ class ace_medical_useLocation_SurgicalKit {
     //Locations Surgical Kit (Adv)
     //Where can the Surgical Kit be used?
     //typeName: SCALAR
-    //default value: 2
+    //default value: 0
     //values: ["Anywhere","Medical vehicles","Medical facility","Vehicles & facility","Disabled"]
     //client: 0
 };
@@ -1017,6 +996,14 @@ class ace_microdagr_mapDataAvailable {
     //typeName: SCALAR
     //default value: 2
     //values: ["None (Cannot use map view)","Topographical + Roads","Full Satellite + Buildings"]
+    //client: 0
+};
+class ace_missileguidance_enabled {
+    //Advanced Missile Guidance
+    //Advanced missile guidance, or AMG, provides multiple enhancements to missile locking and firing. It is also a framework required for missile weapon types.
+    //typeName: SCALAR
+    //default value: 2
+    //values: ["Off","Player Only","Player and AI"]
     //client: 0
 };
 class ace_mk6mortar_airResistanceEnabled {
@@ -1037,14 +1024,14 @@ class ace_mk6mortar_allowComputerRangefinder {
     //Allow Mk6 Computer
     //Show the Computer and Rangefinder (these NEED to be removed if you enable air resistance)
     //typeName: BOOL
-    //default value: 1
+    //default value: 0
     //client: 0
 };
 class ace_mk6mortar_useAmmoHandling {
     //Use Ammunition handling
     //Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader. Does not affect AI mortars.
     //typeName: BOOL
-    //default value: 0
+    //default value: 1
     //client: 0
 };
 class ace_nightvision_disableNVGsWithSights {
@@ -1052,6 +1039,13 @@ class ace_nightvision_disableNVGsWithSights {
     //Blocks the usage of night vision goggles whilst aiming down the sight.
     //typeName: BOOL
     //default value: 0
+    //client: 0
+};
+class ace_overheating_displayTextOnJam {
+    //Display text on jam
+    //Display a notification whenever your weapon gets jammed
+    //typeName: BOOL
+    //default value: 1
     //client: 0
 };
 class ace_overheating_enabled {
@@ -1068,11 +1062,25 @@ class ace_overheating_overheatingDispersion {
     //default value: 1
     //client: 0
 };
+class ace_overheating_showParticleEffects {
+    //Overheating Particle Effects
+    //Show particle effects when weapon overheats
+    //typeName: BOOL
+    //default value: 1
+    //client: 0
+};
+class ace_overheating_showParticleEffectsForEveryone {
+    //Overheating Particle Effects for everyone
+    //Show particle effects when other players weapon overheats
+    //typeName: BOOL
+    //default value: 0
+    //client: 0
+};
 class ace_overheating_unJamFailChance {
     //Chance of unjam failing
     //Probability that an unjam action might fail, requiring to be repeated.
     //typeName: SCALAR
-    //default value: 0.1
+    //default value: 0.05
     //client: 0
 };
 class ace_overheating_unJamOnreload {
@@ -1106,7 +1114,7 @@ class ace_repair_addSpareParts {
 };
 class ace_repair_autoShutOffEngineWhenStartingRepair {
     //typeName: BOOL
-    //default value: 0
+    //default value: 1
     //client: 0
 };
 class ace_repair_consumeItem_toolKit {
@@ -1121,7 +1129,7 @@ class ace_repair_engineerSetting_fullRepair {
     //Allow Full Repair
     //Who can perform a full repair on a vehicle?
     //typeName: SCALAR
-    //default value: 2
+    //default value: 1
     //values: ["Anyone","Engineer only","Repair Specialist only"]
     //client: 0
 };
@@ -1145,7 +1153,7 @@ class ace_repair_fullRepairLocation {
     //Full Repair Locations
     //At what locations can a vehicle be fully repaired?
     //typeName: SCALAR
-    //default value: 2
+    //default value: 3
     //values: ["Anywhere","Repair Vehicle only","Repair Facility only","Repair Facility or Vehicle","Disabled"]
     //client: 0
 };
@@ -1180,7 +1188,7 @@ class ace_respawn_removeDeadBodiesDisconnected {
     //Remove bodies?
     //Remove player bodies after disconnect?
     //typeName: BOOL
-    //default value: 1
+    //default value: 0
     //client: 0
 };
 class ace_respawn_savePreDeathGear {
@@ -1190,17 +1198,11 @@ class ace_respawn_savePreDeathGear {
     //default value: 0
     //client: 0
 };
-class ace_sitting_enable {
-    //Enable Sitting
-    //typeName: BOOL
-    //default value: 0
-    //client: 0
-};
 class ace_spectator_filterSides {
     //Side filter
     //Method of filtering spectatable sides.
     //typeName: SCALAR
-    //default value: 0
+    //default value: 3
     //values: ["Player side","Friendly sides","Hostile sides","All sides"]
     //client: 0
 };
@@ -1208,7 +1210,7 @@ class ace_spectator_filterUnits {
     //Unit filter
     //Method of filtering spectatable units.
     //typeName: SCALAR
-    //default value: 2
+    //default value: 3
     //values: ["No units","Only players","Playable Units","All units"]
     //client: 0
 };
@@ -1293,7 +1295,7 @@ class ace_vehiclelock_lockVehicleInventory {
     //Lock Vehicle Inventory
     //Locks the inventory of locked vehicles
     //typeName: BOOL
-    //default value: 0
+    //default value: 1
     //client: 0
 };
 class ace_vehiclelock_vehicleStartingLockState {
@@ -1321,7 +1323,7 @@ class ace_zeus_autoAddObjects {
     //Add Objects to Curator
     //Adds any spawned object to all curators in the mission
     //typeName: BOOL
-    //default value: 0
+    //default value: 1
     //client: 0
 };
 class ace_zeus_radioOrdnance {
@@ -1358,5 +1360,11 @@ class ace_zeus_zeusBird {
     //Spawn an eagle that follows the Zeus camera.
     //typeName: BOOL
     //default value: 0
+    //client: 0
+};
+class acex_sitting_enable {
+    //Enable Sitting
+    //typeName: BOOL
+    //default value: 1
     //client: 0
 };

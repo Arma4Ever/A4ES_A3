@@ -836,13 +836,6 @@ class ACE_Settings {
         //client: 0
         value = 0;
     };
-    class ace_sitting_enable {
-        //Enable Sitting
-        //typeName: BOOL
-        //default value: 0
-        //client: 0
-        value = 1;
-    };
     class ace_spectator_filterSides {
         //Side filter
         //Method of filtering spectatable sides.
@@ -981,5 +974,12 @@ class ACE_Settings {
         //default value: 0
         //client: 0
         value = 0;
+    };
+    class acex_sitting_enable {
+        //Enable Sitting
+        //typeName: BOOL
+        //default value: 0
+        //client: 0
+        value = 1;
     };
 };

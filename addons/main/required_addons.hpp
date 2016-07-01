@@ -786,7 +786,6 @@
 "ace_respawn",
 "ace_safemode",
 "ace_sandbag",
-"ace_sitting",
 "ace_slideshow",
 "ace_smallarms",
 "ace_spectator",
@@ -810,6 +809,9 @@
 "ace_zeus_medical",
 "asdg_jointmuzzles",
 "asdg_jointrails",
+/* ACEX */
+"acex_main",
+"acex_sitting",
 /* CBA */
 "cba_ai",
 "cba_arrays",

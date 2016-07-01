@@ -163,7 +163,7 @@ class ModuleDiary_F: Module_F {scope = 1;scopeCurator = 0;};
 class CBA_main_require: Module_F {scope = 1;};
 class SLX_XEH_Logic: Module_F {scope = 1;};
 
-/* ACE3 Modules */
+/* ACE Modules */
 
 class ACE_moduleAllowConfigExport: ACE_Module {scope = 1;};
 class ACE_ModuleBlueForceTracking: ACE_Module {scope = 1;};
@@ -187,7 +187,6 @@ class ACE_moduleAssignMedicalFacility: ACE_Module {scope = 1;};
 class ACE_moduleAssignMedicVehicle: ACE_Module {scope = 1;};
 class ACE_moduleAmbianceSound: ACE_Module {scope = 1;};
 class ace_viewdistance_ModuleSettings: ACE_Module {scope = 1;};
-class ACE_ModuleSitting: ACE_Module {scope = 1;};
 class ace_captives_ModuleSurrender: Module_F {scope = 1;};
 class ace_finger_moduleSettings: ACE_Module {scope = 1;};
 class ace_spectator_moduleSettings: ACE_Module {scope = 1;};
@@ -213,3 +212,7 @@ class ACE_moduleBasicMedicalSettings: ACE_Module {scope = 1;};
 class ACE_moduleEquipFRIES: ACE_Module {scope = 1;};
 class ace_ui_Module: ACE_Module {scope = 1;};
 class ace_zeus_moduleGlobalSetSkill: ace_zeus_moduleBase {scope = 1;scopeCurator = 0;};
+
+/* ACEX Modules */
+
+class ACEX_ModuleSitting: ACE_Module {scope = 1;};
