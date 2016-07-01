@@ -37,7 +37,7 @@
         if (a3cs_debug_markers && (isNull curatorCamera)) then {
             private _newDebugMarkers = [];
             {
-                private _marker = createMarkerLocal [((str _x) + (str time)), position _x];
+                private _marker = createMarkerLocal [((str _x) + (str CBA_missionTime)), position _x];
                 _marker setMarkerTypeLocal "mil_triangle";
                 _marker setMarkerColorLocal ([[side group _x, true] call BIS_fnc_sideColor, "ColorBlue"] select (_x == player));
                 _marker setMarkerSizeLocal [1, 1];
@@ -47,8 +47,8 @@
             {deleteMarkerLocal _x;} forEach _debugMarkers;
             _debugMarkers = _newDebugMarkers;
         };
-        if ((a3cs_debug_markers || a3cs_debug_3d) && {(time - _lastUnitsRefreshTime) > 5} && {!(isNull curatorCamera)}) then {
-            _lastUnitsRefreshTime = time;
+        if ((a3cs_debug_markers || a3cs_debug_3d) && {(CBA_missionTime - _lastUnitsRefreshTime) > 3} && {!(isNull curatorCamera)}) then {
+            _lastUnitsRefreshTime = CBA_missionTime;
             a3cs_debug_units = [];
             {
                 if ((ace_player distance _x) <= a3cs_debug_max_distance) then {a3cs_debug_units pushback _x;};
