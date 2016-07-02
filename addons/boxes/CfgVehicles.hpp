@@ -375,6 +375,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_SpraypaintGreen,8);
             MACRO_ADDITEM(ACE_SpraypaintRed,8);
             MACRO_ADDITEM(ACE_SpraypaintBlack,8);
+            MACRO_ADDITEM(ACE_VMH3,4);
             //medical
             MACRO_ADDITEM(ACE_bodyBag,8);
             MACRO_ADDITEM(ACE_quikclot,8);
@@ -546,6 +547,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_SpraypaintRed,8);
             MACRO_ADDITEM(ACE_SpraypaintBlack,8);
             MACRO_ADDITEM(ACE_EntrenchingTool,32);
+            MACRO_ADDITEM(ACE_VMH3,4);
             //vanilla working stuff
             MACRO_ADDITEM(Laserbatteries,8);
             MACRO_ADDITEM(ToolKit,8);
@@ -676,6 +678,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_SpraypaintGreen,8);
             MACRO_ADDITEM(ACE_SpraypaintRed,8);
             MACRO_ADDITEM(ACE_SpraypaintBlack,8);
+            MACRO_ADDITEM(ACE_VMH3,4);
         };
     };
     class GVAR(ied_cache): GVAR(base) {
