@@ -7,6 +7,12 @@
 	    <Key ID="STR_A3CS_Medical_Check_CheckDamage">
             <Original>Sprawdzanie obrażeń</Original>
         </Key>
+	    <Key ID="STR_A3CS_Medical_PAK_displayName">
+            <Original>Zestaw medyczny</Original>
+        </Key>
+	    <Key ID="STR_A3CS_Medical_Actions_UsePAK">
+            <Original>Użyj zestawu medycznego</Original>
+        </Key>
     </Package>
 </Project>
 

@@ -29,6 +29,7 @@ class ACE_Medical_Actions {
         };
         class PersonalAidKit: fieldDressing {
             allowedSelections[] = {"All"};
+            displayName = CSTRING(Actions_UsePAK);
             allowSelfTreatment = 1;
         };
     };

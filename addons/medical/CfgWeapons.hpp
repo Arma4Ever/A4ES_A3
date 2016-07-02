@@ -3,9 +3,9 @@ class CfgWeapons {
     class InventoryItem_Base_F;
     class ACE_personalAidKit: ACE_ItemCore {
         scope = 2;
-        displayName = "Zestaw medyczny";
+        displayName = CSTRING(PAK_displayName);
         class ItemInfo: InventoryItem_Base_F {
-            mass = 40;
+            mass = 30;
         };
     };
 };
