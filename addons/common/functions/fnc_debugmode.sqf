@@ -47,7 +47,7 @@
             {deleteMarkerLocal _x;} forEach _debugMarkers;
             _debugMarkers = _newDebugMarkers;
         };
-        if ((a3cs_debug_markers || a3cs_debug_3d) && {(CBA_missionTime - _lastUnitsRefreshTime) > 3} && {!(isNull curatorCamera)}) then {
+        if ((a3cs_debug_markers || a3cs_debug_3d) && {(CBA_missionTime - _lastUnitsRefreshTime) > 3} && {isNull curatorCamera}) then {
             _lastUnitsRefreshTime = CBA_missionTime;
             a3cs_debug_units = [];
             {
