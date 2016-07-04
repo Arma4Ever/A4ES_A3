@@ -23,6 +23,7 @@ if (count allCurators > 0) then {
         {
             private _curator = _x;
             _curator addCuratorAddons (("true" configClasses (configFile >> "CfgPatches")) apply {toLower configName _x});
+            _curator addCuratorEditableObjects [allMissionObjects "All", false];
         } forEach allCurators;
     }, [], 2] call CBA_fnc_waitAndExecute;
 };
