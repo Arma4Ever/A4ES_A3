@@ -1,8 +1,8 @@
-name = "Arma 3 Combat System 0.7.1";
+name = "Arma 3 Combat System 0.7.2";
 picture = "logo_a3cs_ca.paa";
 actionName = "Forum";
 action = "http://forum.arma3coop.pl";
-description = "Arma 3 Combat System 0.7.1";
+description = "Arma 3 Combat System 0.7.2";
 logo = "logo_a3cs_ca.paa";
 logoOver = "logo_a3cs_ca.paa";
 tooltip = "Arma 3 Combat System";
