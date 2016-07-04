@@ -32,7 +32,7 @@ if (!isServer) exitWith {};
         //exec module
         GVAR(cacheModules) deleteAt (GVAR(cacheModules) find _module);
         private _function = getText (configFile >> "CfgVehicles" >> (typeof _module) >> "function");
-        ["init",[_module,true,false]] spawn (missionNamespace getVariable [_function, {}]);
+        ["init", [_module,true,false]] spawn (missionNamespace getVariable [_function, {}]);
     };
 } forEach +GVAR(cacheModules);
 

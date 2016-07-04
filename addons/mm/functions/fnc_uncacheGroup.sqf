@@ -10,7 +10,6 @@ params ["_group"];
 private _groupUnits = units _group;
 private _groupLeader = leader _group;
 private _leaderIsCached = _groupLeader getVariable [QGVAR(cached), false];
-private _uncachedUnitCount = 0;
 
 {
     private _unit = _x;
@@ -21,7 +20,6 @@ private _uncachedUnitCount = 0;
         _unit hideObjectGlobal false;
         //_unit setDamage (damage _unit); //trigger unit
         _unit setVariable [QGVAR(cached), false, true];
-        _uncachedUnitCount = _uncachedUnitCount + 1;
         if (_leaderIsCached) then {
             //leader was cached so load cache data
             private _cacheData = _unit getVariable [QGVAR(cacheData), []];
@@ -40,10 +38,8 @@ private _uncachedUnitCount = 0;
     };
 } forEach _groupUnits;
 
-if (local _groupLeader) then {
+if (local _group) then {
     _group call FUNC(enableGroupAI);
 } else {
-    _group remoteExecCall [QFUNC(enableGroupAI), _groupLeader, false];
+    _group remoteExecCall [QFUNC(enableGroupAI), groupOwner _group, false];
 };
-
-_uncachedUnitCount

@@ -5,11 +5,11 @@
 #include "script_component.hpp"
 
 if (!isServer) exitWith {};
+
 params ["_group"];
 
 private _groupUnits = units _group;
 private _groupLeader = leader _group;
-private _cachedUnitCount = 0;
 {
     private _unit = _x;
     private _canCache = true;
@@ -25,14 +25,11 @@ private _cachedUnitCount = 0;
         _unit setVariable [QGVAR(cached), true];
         _unit enableSimulationGlobal false;
         _unit hideObjectGlobal true;
-        _cachedUnitCount = _cachedUnitCount + 1;
     };
 } foreach _groupUnits;
 
-if (local _groupLeader) then {
+if (local _group) then {
     _group call FUNC(disableGroupAI);
 } else {
-    _group remoteExecCall [QFUNC(disableGroupAI), _groupLeader, false];
+    _group remoteExecCall [QFUNC(disableGroupAI), groupOwner _group, false];
 };
-
-_cachedUnitCount

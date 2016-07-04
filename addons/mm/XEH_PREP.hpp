@@ -37,6 +37,7 @@ PREP(cacheGroup);
 PREP(uncacheGroup);
 PREP(cacheGroupHandler);
 PREP(cacheModulesHandler);
+PREP(cleanGroupsHandler);
 PREP(setSkillLevel);
 PREP(disableGroupAI);
 PREP(enableGroupAI);
