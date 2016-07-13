@@ -37,6 +37,7 @@ _effectiveness = _effectiveness * a3cs_medical_bandagingMultiplier;
 //--- EDIT
 
 // Figure out which injury for this bodypart is the best choice to bandage
+// TODO also use up the remainder on left over injuries
 private _mostEffectiveSpot = 0;
 private _effectivenessFound = -1;
 private _mostEffectiveInjury = _openWounds select 0;
@@ -92,13 +93,10 @@ private _impact = if ((_mostEffectiveInjury select 3) >= _effectivenessFound) th
 _mostEffectiveInjury set [ 3, ((_mostEffectiveInjury select 3) - _impact) max 0];
 _openWounds set [_mostEffectiveSpot, _mostEffectiveInjury];
 
-_target setVariable [QGVAR(openWounds), _openWounds, !USE_WOUND_EVENT_SYNC];
+_target setVariable [QGVAR(openWounds), _openWounds, true];
 
-if (USE_WOUND_EVENT_SYNC) then {
-    ["ace_medical_propagateWound", [_target, _mostEffectiveInjury]] call CBA_fnc_globalEvent;
-};
 // Handle the reopening of bandaged wounds
-if (_impact > 0 && {GVAR(enableAdvancedWounds)}) then {
+if (_impact > 0 && {GVAR(level) >= 2} && {GVAR(enableAdvancedWounds)}) then {
     [_target, _impact, _part, _mostEffectiveSpot, _mostEffectiveInjury, _bandage] call FUNC(handleBandageOpening);
 };
 
@@ -106,7 +104,7 @@ if (_impact > 0 && {GVAR(enableAdvancedWounds)}) then {
 // so that the body part functions normally and blood is removed from the uniform.
 // Arma combines left and right arms into a single body part (HitHands), same with left and right legs (HitLegs).
 // Arms are actually hands.
-if (GVAR(healHitPointAfterAdvBandage)) then {
+if (GVAR(healHitPointAfterAdvBandage) || {GVAR(level) < 2}) then {
     // Get the list of the wounds the target is currently suffering from.
     private _currentWounds = _target getVariable [QGVAR(openWounds), []];
 
