@@ -22,21 +22,53 @@ class RscHTML;
 class RscPicture;
 class RscVignette;
 class RscPictureKeepAspect;
+class RscActivePicture;
 class RscDisplayMain: RscStandardDisplay {
     onMouseMoving = "_this call A3C_infobox_fnc_initinfobox";
     class controls {
         delete ACE_news;
-        class GameLogo: RscPicture {
+        delete SpotlightBase;
+        delete Spotlight1;
+        delete Spotlight2;
+        delete Spotlight3;
+
+        class BackgroundSpotlight: RscPicture {
+            x = "0";
+            y = "0";
+            w = "0";
+            h = "0";
+        };
+        class BackgroundSpotlightLeft: BackgroundSpotlight {
+            x = "0";
+            y = "0";
+            w = "0";
+            h = "0";
+        };
+        class BackgroundSpotlightRight: BackgroundSpotlightLeft {
+            x = "0";
+            y = "0";
+            w = "0";
+            h = "0";
+        };
+
+        class Logo: RscActivePicture {
+            text = PATHTOF(data\a3c_splash_logo.paa);
+        };
+        class LogoApex: Logo {
+            text = PATHTOF(data\a3c_splash_logo.paa);
+        };
+
+        /*class GameLogo: RscPicture {
             idc = 1202;
             text = PATHTOF(data\a3c_splash_logo.paa);
             x = "1 *            (           ((safezoneW / safezoneH) min 1.2) / 40) +           (safezoneX)";
             y = "10.4 *             (           (           ((safezoneW / safezoneH) min 1.2) / 1.2) / 25) +            (safezoneY + safezoneH -            (           ((safezoneW / safezoneH) min 1.2) / 1.2))";
             w = "7.5 *          (           ((safezoneW / safezoneH) min 1.2) / 40)";
             h = "3.75 *             (           (           ((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-        };
+        };*/
         class News: RscControlsGroupNoScrollbars {
             x = "safezoneX + safezoneW - (16 *          (           ((safezoneW / safezoneH) min 1.2) / 40))";
-            y = "safezoneY + (1 *           (           (           ((safezoneW / safezoneH) min 1.2) / 1.2) / 25))";
+            y = "safezoneY + (6 *           (           (           ((safezoneW / safezoneH) min 1.2) / 1.2) / 25))";
             idc = 2300;
             w = "15 *           (           ((safezoneW / safezoneH) min 1.2) / 40)";
             h = "21.5 *             (           (           ((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
