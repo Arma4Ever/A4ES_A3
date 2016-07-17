@@ -6,7 +6,7 @@
 
 if (!isServer) exitWith {};
 if (is3DEN) exitWith {};
-if (!isMultiplayer && ((tolower missionName) in ["intro","intro1","intro_new"])) exitWith {};
+if (!isMultiplayer && ((tolower missionName) in ["intro", "intro1", "intro_new", "tanoa_intro1"])) exitWith {};
 
 //log mission name to add this to ignored
 TRACE_1("initCache: %1",missionName);

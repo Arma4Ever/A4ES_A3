@@ -9,6 +9,7 @@
 {false},
 [0, [false, false, false]], false] call CBA_fnc_addKeybind;
 
+if ((tolower missionName) in ["intro", "intro1", "intro_new", "tanoa_intro1"]) exitWith {};
 
 if (hasInterface) then {
     // Wait until the colors are defined before starting to draw the nametags
