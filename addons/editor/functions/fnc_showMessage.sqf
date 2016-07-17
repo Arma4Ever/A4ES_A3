@@ -13,11 +13,12 @@
     None
 */
 
-
 #include "\a3\3DEN\UI\resincl.inc"
 #define COMMIT_TIME 0.1
 
 if (is3DEN) then {
+    disableSerialization;
+
     params ["_text", ["_sleep", 1, [0]], ["_type", 0, [0]]];
 
     //--- Play sound

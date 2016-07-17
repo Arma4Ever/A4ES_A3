@@ -31,5 +31,8 @@
         <Key ID="STR_A3CS_Editor_gearClearItems_DisplayName">
             <Original>Wyczyść ekwipunek</Original>
         </Key>
+        <Key ID="STR_A3CS_Editor_ApexWarning">
+            <Original>Używasz elementów DLC Apex na mapie innej niż Tanoa!&lt;br /&gt;Osoby bez DLC Apex nie będą mogły uruchomić tej misji!</Original>
+        </Key>
     </Package>
 </Project>
