@@ -48,7 +48,7 @@ class Cfg3DEN {
             class Controls: Controls {
                 class Type: ctrlToolbox {
                     //disable virutal boxes
-                    strings[] = {"$STR_3den_attributes_ammobox_type_default"};
+                    //strings[] = {"$STR_3den_attributes_ammobox_type_default"};
                 };
             };
         };
@@ -57,6 +57,15 @@ class Cfg3DEN {
         class AttributeCategories {
             //Remove effects from triggers
             delete Effects;
+        };
+    };
+    //CBA preInit fix
+    class EventHandlers {
+        class ADDON {
+            OnMissionLoad = "[] call CBA_fnc_preInit;";
+            OnMissionNew = "[] call CBA_fnc_preInit;";
+            OnMissionPreview = "[] call CBA_fnc_preInit;";
+            OnMissionPreviewEnd = "[] call CBA_fnc_preInit;";
         };
     };
 };
