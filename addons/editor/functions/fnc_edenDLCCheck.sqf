@@ -71,7 +71,7 @@ private _publicObjects = [
     private _isPublic = (tolower (typeof _object)) in _publicObjects;
 
     if (!_isVehicle && !_isBox && !_isPublic) then {
-        private _dlc = getText (configfile >> "CfgVehicles" >> "Land_Boat_03_abandoned_cover_F" >> "DLC");
+        private _dlc = getText (configfile >> "CfgVehicles" >> (typeof _object) >> "DLC");
         if (_dlc == "Expansion") exitWith {
             _apexElements = true;
         };
