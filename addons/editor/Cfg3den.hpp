@@ -66,6 +66,7 @@ class Cfg3DEN {
             OnMissionNew = "[] call CBA_fnc_preInit;";
             OnMissionPreview = "[] call CBA_fnc_preInit;";
             OnMissionPreviewEnd = "[] call CBA_fnc_preInit;";
+            OnTerrainNew = "[] call CBA_fnc_preInit;";
         };
     };
 };
