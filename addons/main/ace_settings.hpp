@@ -167,6 +167,46 @@ class ACE_Settings {
     //======================================//
     //                CONFIG                //
     //======================================//
+    class ace_advanced_fatigue_enabled {
+        //Enabled
+        //Enables/disables Advanced Fatigue.
+        //typeName: BOOL
+        //default value: 1
+        //client: 0
+        value = 1;
+    };
+    class ace_advanced_fatigue_loadFactor {
+        //Load Factor
+        //Increases or decreases how much weight influences the players performance. Zero means equipment weight has no performance influence.
+        //typeName: SCALAR
+        //default value: 1
+        //client: 0
+        value = 0.4;
+    };
+    class ace_advanced_fatigue_performanceFactor {
+        //Performance Factor
+        //Influences the overall performance of all players with no custom factor. Higher means better.
+        //typeName: SCALAR
+        //default value: 1
+        //client: 0
+        value = 3;
+    };
+    class ace_advanced_fatigue_recoveryFactor {
+        //Recovery Factor
+        //Changes how fast the player recovers when resting. Higher is faster.
+        //typeName: SCALAR
+        //default value: 1
+        //client: 0
+        value = 2.5;
+    };
+    class ace_advanced_fatigue_terrainGradientFactor {
+        //Terrain Gradient Factor
+        //Sets how much steep terrain increases stamina loss. Higher means higher stamina loss.
+        //typeName: SCALAR
+        //default value: 1
+        //client: 0
+        value = 0.3;
+    };
     class ace_captives_allowHandcuffOwnSide {
         //Can handcuff own side
         //Can players cabletie units on their own side

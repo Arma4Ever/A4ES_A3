@@ -8,7 +8,6 @@ PREP(collectActiveActionTree);
 PREP(createAction);
 PREP(ctrlSetParsedTextCached);
 PREP(findActionNode);
-PREP(handlePlayerChanged);
 PREP(isSubPath);
 DFUNC(keyDown) = compileFinal preProcessFileLineNumbers "\z\a3cs\addons\interact_menu\functions\fnc_keyDown.sqf";//PREP(keyDown);
 DFUNC(keyUp) = compileFinal preProcessFileLineNumbers "\z\a3cs\addons\interact_menu\functions\fnc_keyUp.sqf";//PREP(keyUp);

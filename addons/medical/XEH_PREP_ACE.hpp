@@ -1,4 +1,3 @@
-
 PREP(actionCheckBloodPressure);
 PREP(actionCheckBloodPressureLocal);
 PREP(actionCheckPulse);
