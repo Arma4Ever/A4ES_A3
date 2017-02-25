@@ -5,14 +5,14 @@
 
 #define MAJOR 0
 #define MINOR 7
-#define PATCHLVL 7
+#define PATCHLVL 8
 #define BUILD 0
 
 #define VERSION MAJOR.MINOR.PATCHLVL
 #define VERSION_AR MAJOR,MINOR,PATCHLVL
 
-#define REQUIRED_VERSION 1.62
-#define REQUIRED_CBA_VERSION {3,0,0}
+#define REQUIRED_VERSION 1.66
+#define REQUIRED_CBA_VERSION {3,2,0}
 
 #define AUTHOR_CONFIG \
     author = "$STR_A3CS_Main_ModAuthor"; \
