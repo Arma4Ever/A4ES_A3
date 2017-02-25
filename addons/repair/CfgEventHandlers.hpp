@@ -32,6 +32,7 @@ class Extended_InitPost_EventHandlers {
     class Helicopter {
         class ace_repair {
             init = QUOTE(_this call DFUNC(addRepairActions));
+            exclude[] = {"ace_fastroping_helper", "ACE_friesBase"};
         };
     };
     class Plane {
