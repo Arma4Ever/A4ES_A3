@@ -718,7 +718,6 @@
 "A3_Weapons_F_Vests",
 "A3Data",
 /* ACE */
-"ace_advanced_fatigue",
 "ace_advanced_throwing",
 "ace_ai",
 "ace_aircraft",
