@@ -215,6 +215,9 @@ class ACE_moduleBasicMedicalSettings: ACE_Module {scope = 1;};
 class ACE_moduleEquipFRIES: ACE_Module {scope = 1;};
 class ace_ui_Module: ACE_Module {scope = 1;};
 class ace_zeus_moduleGlobalSetSkill: ace_zeus_moduleBase {scope = 1;scopeCurator = 0;};
+class ACE_ModuleTagging: ACE_Module {scope = 1;};
+class ace_advanced_fatigue_moduleSettings: ACE_Module {scope = 1;};
+class ace_advanced_throwing_Module: ACE_Module {scope = 1;};
 
 /* ACEX Modules */
 
