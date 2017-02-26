@@ -838,7 +838,6 @@
 "cba_jr",
 "cba_jr_prep",
 "cba_keybinding",
-"cba_linux",
 //"cba_main", - added to main class
 "cba_main_a3",
 "cba_network",
