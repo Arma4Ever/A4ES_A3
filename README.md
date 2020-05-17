@@ -20,5 +20,5 @@ Tools scripts and addons macros are based on [ACE3](https://github.com/acemod/AC
 ## License
 [MIT](https://github.com/SzwedzikPL/A3CS/blob/master/LICENSE.md)  
 The MIT license grant is not for Arma3Coop community logo designs.  
-License only applies to content of [this repository]((https://github.com/SzwedzikPL/A3CS), not external mods included during build process.  
+License only applies to content of [this repository](https://github.com/SzwedzikPL/A3CS), not external mods included during build process.  
 Elements of some addons may be available under different license, please check addon readme.
