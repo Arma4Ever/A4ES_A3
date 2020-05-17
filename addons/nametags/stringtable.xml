@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+    <Package name="NameTags">
+      <Key ID="STR_A3CS_NameTags_RankAttribute_DisplayName">
+          <English>Custom rank</English>
+          <Polish>Customowy stopień</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_RankAttribute_Tooltip">
+          <English>Custom unit rank, overrides vanilla rank.</English>
+          <Polish>Customowy stopień jednostki, nadpisuje stopień armowy.</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_RankAttribute_ValueNone">
+          <English>None (Use vanilla rank)</English>
+          <Polish>Brak (Użyj rangi armowej)</Polish>
+      </Key>
+    </Package>
+</Project>

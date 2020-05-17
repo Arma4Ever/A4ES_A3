@@ -20,7 +20,6 @@ IGNOREADDONS = [
     "medical",
     "microdagr",
     "mm",
-    "nametag",
     "noanimals",
     "ptb",
     "repair",
