@@ -15,7 +15,7 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [GRAD Trenches](https://github.com/gruppe-adler/grad_trenches)
 
 ## Credits
-Tools scripts and addons macros are based on [ACE3](https://github.com/acemod/ACE3) project.
+Tools scripts and addons macros are based on [ACE3](https://github.com/acemod/ACE3) and [CBA](https://github.com/CBATeam/CBA_A3) projects.
 
 ## License
 [MIT](https://github.com/SzwedzikPL/A3CS/blob/master/LICENSE.md)  
