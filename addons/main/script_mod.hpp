@@ -3,18 +3,18 @@
 #define MAINPREFIX z
 #define PREFIX a3cs
 
-#define MAJOR 0
-#define MINOR 7
-#define PATCHLVL 8
-#define BUILD 0
+#include "script_version.hpp"
 
-#define VERSION MAJOR.MINOR.PATCHLVL
-#define VERSION_AR MAJOR,MINOR,PATCHLVL
+#define VERSION     MAJOR.MINOR
+#define VERSION_STR MAJOR.MINOR.PATCHLVL.BUILD
+#define VERSION_AR  MAJOR,MINOR,PATCHLVL,BUILD
 
-#define REQUIRED_VERSION 1.66
-#define REQUIRED_CBA_VERSION {3,2,0}
+// MINIMAL required version for the Mod. Components can specify others..
+#define REQUIRED_VERSION 1.98
+#define REQUIRED_CBA_VERSION {3,15,1}
 
-#define AUTHOR_CONFIG \
-    author = "$STR_A3CS_Main_ModAuthor"; \
-    authorUrl = "$STR_A3CS_Main_ModAuthorURL"; \
-    url = "$STR_A3CS_Main_ModAuthorURL"
+#ifdef COMPONENT_BEAUTIFIED
+    #define COMPONENT_NAME QUOTE(A3CS - COMPONENT_BEAUTIFIED)
+#else
+    #define COMPONENT_NAME QUOTE(A3CS - COMPONENT)
+#endif
