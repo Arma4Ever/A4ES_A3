@@ -1,9 +1,0 @@
-PREP(addSpecialItem);
-PREP(drawNametag);
-PREP(drawNametag3d);
-PREP(getUnitData);
-PREP(getUnitCommunityData);
-PREP(onDraw3D);
-PREP(updateSettings);
-PREP(drawTacticalHud);
-PREP(onLoadTacticalHud);
