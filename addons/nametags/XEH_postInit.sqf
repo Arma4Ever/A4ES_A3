@@ -4,10 +4,12 @@
   call FUNC(onDrawSettingsChanged);
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(onSpeak), "OnSpeak", {
-  params ["_unit", "_isSpeaking"];
-  _unit setVariable [QGVAR(isSpeaking), _isSpeaking];
-}, ObjNull] call TFAR_fnc_addEventHandler;
+if !(isNil "TFAR_fnc_addEventHandler") then {
+  [QGVAR(onSpeak), "OnSpeak", {
+    params ["_unit", "_isSpeaking"];
+    _unit setVariable [QGVAR(isSpeaking), _isSpeaking];
+  }, ObjNull] call TFAR_fnc_addEventHandler;
+};
 
 ["CBA_teamColorChanged", {
     params ["_unit", "_team"];
