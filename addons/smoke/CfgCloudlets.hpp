@@ -1,18 +1,11 @@
 class CfgCloudlets {
     class Default;
 
-    class SmokeShellWhiteSmall;
-    class GVAR(SmokeShellWhiteFilled): SmokeShellWhiteSmall {
-        animationSpeedCoef = 0.75; //default 1
-        colorCoef[] = {"colorR", "colorG", "colorB", 3}; //default 1.8
-        sizeCoef = 2; //default 1
-        interval = 0.125; //default 0.2
-        lifeTime = 24; //default 14
-        moveVelocity[] = {0,0.1,0}; //default {0,0.3,0}
-        weight = 6.4; //default 1.26
-        volume = 5; //default 1
-        blockAIVisibility = 1;
-    };
+	class SmokeShellWhite: Default {
+        moveVelocity[]={0.2, 0.50000001, 0.1};
+        size[]={0.46, 4.5, 18};
+        MoveVelocityVar[]={0.7, 0.4, 0.7};
+	};
 
     class ObjectDestructionSmoke: Default {
         interval = 0.25; //0.18

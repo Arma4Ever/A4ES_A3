@@ -25,7 +25,6 @@ IGNOREADDONS = [
     "searchlight",
     "server",
     "skill",
-    "smoke",
     "stamina",
     "unitactions",
     "vehicleactions",
