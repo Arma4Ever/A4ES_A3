@@ -1,34 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
     <Package name="NameTags">
-      <Key ID="STR_A3CS_NameTags_Private">
-        <Original>Private</Original>
-        <Polish>Szeregowy</Polish>
-      </Key>
-      <Key ID="STR_A3CS_NameTags_Corporal">
-        <Original>Corporal</Original>
-        <Polish>Kapral</Polish>
-      </Key>
-      <Key ID="STR_A3CS_NameTags_Sergeant">
-        <Original>Sergeant</Original>
-        <Polish>Sierżant</Polish>
-      </Key>
-      <Key ID="STR_A3CS_NameTags_Lieutenant">
-        <Original>Lieutenant</Original>
-        <Polish>Podporucznik</Polish>
-      </Key>
-      <Key ID="STR_A3CS_NameTags_Captain">
-        <Original>Captain</Original>
-        <Polish>Kapitan</Polish>
-      </Key>
-      <Key ID="STR_A3CS_NameTags_Major">
-        <Original>Major</Original>
-        <Polish>Major</Polish>
-      </Key>
-      <Key ID="STR_A3CS_NameTags_Colonel">
-        <Original>Colonel</Original>
-        <Polish>Pułkownik</Polish>
-      </Key>
       <Key ID="STR_A3CS_NameTags_NoName">
           <Original>No name</Original>
           <Polish>Imię nieznane</Polish>

@@ -35,7 +35,7 @@
      // If still no rank data, fallback to vanilla ranks
      if (_rankName == "") then {
        private _rank = rank _unit;
-       _rankName = localize format [LSTRING(%1), _rank];
+       _rankName = localize format ["str_%1", _rank];
        _rankIcon = format ["a3\UI_F\data\GUI\Cfg\Ranks\%1_gs.paa", _rank];
      };
    };
