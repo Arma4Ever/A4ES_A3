@@ -30,7 +30,6 @@ IGNOREADDONS = [
     "unitactions",
     "vehicleactions",
     "weaponactions",
-    "zeus",
 ]
 ##########################
 
