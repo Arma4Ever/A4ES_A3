@@ -1,17 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
     <Package name="NameTags">
+      <Key ID="STR_A3CS_NameTags_Private">
+        <Original>Private</Original>
+        <Polish>Szeregowy</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Corporal">
+        <Original>Corporal</Original>
+        <Polish>Kapral</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Sergeant">
+        <Original>Sergeant</Original>
+        <Polish>Sierżant</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Lieutenant">
+        <Original>Lieutenant</Original>
+        <Polish>Podporucznik</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Captain">
+        <Original>Captain</Original>
+        <Polish>Kapitan</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Major">
+        <Original>Major</Original>
+        <Polish>Major</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Colonel">
+        <Original>Colonel</Original>
+        <Polish>Pułkownik</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_NoName">
+          <Original>No name</Original>
+          <Polish>Imię nieznane</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Module_DisplayName">
+          <Original>A3CS Name Tags</Original>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_show2DNameTag">
+          <Original>Show 2D tag</Original>
+          <Polish>Wyświetl tag 2D</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_show2DNameTag_Desc">
+          <Original>Show 2D tag on cursor</Original>
+          <Polish>Wyświetl tag 2D pod kursorem</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_show3DNameTag">
+          <Original>Show 3D tag</Original>
+          <Polish>Wyświetl tag 3D</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_show3DNameTag_Desc">
+          <Original>Show 3D tag above unit head</Original>
+          <Polish>Wyświetl tag 3D nad głowami jednostek</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_show3DNameTag_Freelook">
+          <Original>Only during freelook</Original>
+          <Polish>Tylko podczas rozglądania (domyślnie lewy alt)</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_show3DNameTag_OnCursor">
+          <Original>Only on cursor</Original>
+          <Polish>Tylko po najechaniu kursorem</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_show3DNameTag_Both">
+          <Original>In both cases</Original>
+          <Polish>W obu przypadkach</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_showSpeaking">
+          <Original>Show speaking</Original>
+          <Polish>Wyświetl ikonkę podczas mówienia</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_showSpeaking_Desc">
+          <Original>Show animation above unit head when speaking (TFAR)</Original>
+          <Polish>Wyświetl animację nad głową jednostki podczas mówienia (TFAR)</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_showLeaderIcon">
+          <Original>Show group leader icon</Original>
+          <Polish>Wyświetl ikonkę dowódcy drużyny</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_showLeaderIcon_Desc">
+          <Original>Show group leader icon above unit head</Original>
+          <Polish>Wyświetl ikonkę dowódcy drużyny na głową jednostki</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_2DNameTagPosition">
+          <Original>2D tag position on screen</Original>
+          <Polish>Miejsce wyświetlania taga 2D na ekranie</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_2DNameTagPosition_Center">
+          <Original>Screen center</Original>
+          <Polish>Środek ekranu</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_2DNameTagPosition_Bottom">
+          <Original>Screen bottom</Original>
+          <Polish>Dół ekranu</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_3DNameTagScale">
+          <Original>3D tag scale</Original>
+          <Polish>Wielkość taga 3D</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_3DNameTagScale_VerySmall">
+          <Original>Very small</Original>
+          <Polish>Bardzo mały</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_3DNameTagScale_Small">
+          <Original>Small</Original>
+          <Polish>Mały</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_3DNameTagScale_Normal">
+          <Original>Normal</Original>
+          <Polish>Normalny</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_3DNameTagScale_Big">
+          <Original>Big</Original>
+          <Polish>Duży</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_RankColor">
+          <Original>Rank color</Original>
+          <Polish>Kolor stopnia</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_DefaultNameColor">
+          <Original>Default name color</Original>
+          <Polish>Domyślny kolor nicków</Polish>
+      </Key>
+      <Key ID="STR_A3CS_NameTags_Settings_DefaultNameColor_Desc">
+          <Original>Name color if unit is not in any team</Original>
+          <Polish>Kolor nazwy jeśli jednostka nie nalezy do żadnej drużyny</Polish>
+      </Key>
       <Key ID="STR_A3CS_NameTags_RankAttribute_DisplayName">
-          <English>Custom rank</English>
-          <Polish>Customowy stopień</Polish>
+          <Original>Rank</Original>
+          <Polish>Stopień</Polish>
       </Key>
       <Key ID="STR_A3CS_NameTags_RankAttribute_Tooltip">
-          <English>Custom unit rank, overrides vanilla rank.</English>
+          <Original>Custom unit rank, overrides vanilla rank.</Original>
           <Polish>Customowy stopień jednostki, nadpisuje stopień armowy.</Polish>
       </Key>
       <Key ID="STR_A3CS_NameTags_RankAttribute_ValueNone">
-          <English>None (Use vanilla rank)</English>
-          <Polish>Brak (Użyj rangi armowej)</Polish>
+          <Original>None (Use vanilla rank)</Original>
+          <Polish>Brak (Użyj armowego stopnia)</Polish>
       </Key>
     </Package>
 </Project>

@@ -13,7 +13,6 @@ IGNOREADDONS = [
     "admin",
     "api",
     "boxes",
-    "common",
     "editor",
     "flashlights",
     "interact_menu",
