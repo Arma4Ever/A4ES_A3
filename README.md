@@ -13,6 +13,7 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [Enhanced Movement](https://forums.bohemia.net/forums/topic/174788-enhanced-movement/)
 - [Enhanced Movement Rework](https://github.com/SceptreOfficial/Enhanced-Movement-Rework)
 - [GRAD Trenches](https://github.com/gruppe-adler/grad_trenches)
+- [VET Unflipping](https://github.com/veteran29/vet_unflipping)
 
 ## Credits
 Tools scripts and addons macros are based on [ACE3](https://github.com/acemod/ACE3) and [CBA](https://github.com/CBATeam/CBA_A3) projects.
