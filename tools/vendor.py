@@ -13,5 +13,7 @@ VENDOR = {
     "@Enhanced Movement Rework": {},
     "@GRAD Trenches": {},
     "@VET_Unflipping": {},
-
+    "@The Mighty GAU-8 Avenger": {},
+    "@The Mighty GAU-8 Avenger - Less FX More Performance": {},
+    "@The Mighty GAU-8 Avenger - ACE": {},
 }

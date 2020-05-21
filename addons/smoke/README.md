@@ -6,4 +6,4 @@ Makes vanilla smoke grenades more useful
 - Lowers intervals of some vanilla smoke effects
 
 ## Credits
-Parts of this addon are based on [Splendid Smoke](https://github.com/Zabuzard/SplendidSmoke) by [Zabuzard](https://github.com/Zabuzard).
+Parts of this addon are based on [Splendid Smoke](https://github.com/Zabuzard/SplendidSmoke) by [Zabuza](https://github.com/Zabuzard).

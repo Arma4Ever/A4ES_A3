@@ -12,7 +12,7 @@ if (
   || {_target == ace_player}
   || {!(alive _target)}
   || {((side ace_player) getFriend (side _target)) < 0.6}
-  || {!(_target getVariable [QGVAR(showNameTag), _target call ace_common_fnc_isPlayer])}
+  || {!(_target getVariable [QGVAR(showNameTag), [_target, false] call ace_common_fnc_isPlayer])}
 ) exitWith {false};
 
 true

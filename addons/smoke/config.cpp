@@ -8,7 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"a3cs_common", "A3_Data_F_ParticleEffects"};
         author = ECSTRING(main,Author);
-        authors[] = {"Zabuzard", "SzwedzikPL"};
+        authors[] = {"Zabuza", "SzwedzikPL"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
