@@ -80,14 +80,17 @@ def main():
     addonspath = os.path.join(projectpath, "addons")
     vendorpath = os.path.join(projectpath, "vendor")
     vendorstats = []
+    vendormissing = []
 
     ### Copy vendor addons
 
     os.chdir(vendorpath)
 
-    for dir in os.listdir(vendorpath):
+    for dir in VENDOR.keys():
         vendorroot = os.path.join(vendorpath, dir)
-        if not os.path.isdir(vendorroot) or dir not in VENDOR:
+        if not os.path.isdir(vendorroot):
+            vendormissing.append(dir)
+            print("# Vendor mod {} not found\n".format(dir))
             continue
 
         copieddlls = 0
@@ -198,6 +201,12 @@ def main():
         print("      skipped {} addons.".format(stat[2]))
         print("      copied {} dlls.".format(stat[3]))
         print("      skipped {} dlls.".format(stat[4]))
+        print("")
+
+    if len(vendormissing):
+        print("  Missing vendor mods:")
+        for mod in vendormissing:
+            print("    {}".format(mod))
         print("")
 
     print("  A3CS build:")
