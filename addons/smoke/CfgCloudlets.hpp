@@ -2,9 +2,10 @@ class CfgCloudlets {
     class Default;
 
 	class SmokeShellWhite: Default {
-        moveVelocity[]={0.2, 0.50000001, 0.1};
-        size[]={0.46, 4.5, 18};
-        MoveVelocityVar[]={0.7, 0.4, 0.7};
+        interval = 0.055; // 0.03
+        moveVelocity[] = {0.2, 0.50000001, 0.1};
+        size[] = {0.46, 4.5, 18};
+        MoveVelocityVar[] = {0.7, 0.4, 0.7};
 	};
 
     class ObjectDestructionSmoke: Default {
