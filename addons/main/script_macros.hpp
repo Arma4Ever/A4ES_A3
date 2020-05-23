@@ -136,4 +136,9 @@
 
 #define ZEUS_ACTION_CONDITION ([_target, {QUOTE(QUOTE(ADDON)) in curatorAddons _this}, missionNamespace, QUOTE(QGVAR(zeusCheck)), 1E11, 'ace_interactMenuClosed'] call EFUNC(common,cachedCall))
 
+#define COMPILE_ACE_FILE(var1,var2) COMPILE_FILE_SYS(ace,var1,var2)
+#define ACE_MEDICAL_OVERRIDE(var1,var2) class DOUBLES(ace,var1) { \
+    init = QUOTE(if (getNumber (missionConfigFile >> QUOTE(QGVAR(disableSystem))) != 1) then {call COMPILE_ACE_FILE(var1,var2);};); \
+}
+
 #include "script_debug.hpp"
