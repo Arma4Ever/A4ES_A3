@@ -2,9 +2,8 @@
 
 ADDON = false;
 
+PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
-
-GVAR(bandagingMultiplier) = 2.2;
-GVAR(reopeningMultiplier) = 0.5;
+PREP_RECOMPILE_END;
 
 ADDON = true;

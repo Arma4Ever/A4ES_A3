@@ -1,2 +1,0 @@
-PREP(actionCheckDamage);
-PREP(actionCheckDamageLocal);

@@ -1,17 +1,17 @@
 #include "script_component.hpp"
+
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"a3cs_common"};
-        authors[] = {"SzwedzikPL", "ACE3 Team"};
-        AUTHOR_CONFIG;
+        author = ECSTRING(main,Author);
+        authors[] = {"SzwedzikPL"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
 #include "CfgEventHandlers.hpp"
-#include "ACE_Medical_Treatments.hpp"
-#include "CfgWeapons.hpp"
-#include "CfgVehicles.hpp"

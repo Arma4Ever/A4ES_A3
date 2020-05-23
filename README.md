@@ -1,5 +1,5 @@
 # Arma3Coop System
-A collection of mods providing necessary functionalities for Arma3Coop.pl community. This mod is distributed only among community members via private community repository.
+A collection of mods providing necessary functionalities for Arma3Coop.pl community. This mod is only distributed among community members via private community repository.
 
 ## Requirements
 - [CBA](https://github.com/CBATeam/CBA_A3)
