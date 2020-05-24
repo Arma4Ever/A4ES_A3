@@ -11,20 +11,14 @@ MAINPREFIX = "z"
 PREFIX = "a3cs_"
 IGNOREADDONS = [
     "admin",
-    "api",
     "boxes",
     "flashlights",
     "interact_menu",
     "microdagr",
-    "mm",
     "ptb",
-    "repair",
     "searchlight",
     "server",
     "stamina",
-    "unitactions",
-    "vehicleactions",
-    "weaponactions",
 ]
 ##########################
 
