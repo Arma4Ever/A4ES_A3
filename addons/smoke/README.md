@@ -1,9 +1,9 @@
-## a3cs_smoke
-Makes vanilla smoke grenades more useful
+# A3CS Smoke
+Makes vanilla smoke grenades more useful.
 
-## Changes
-- Changes effect type of SmokeShell
-- Lowers intervals of some vanilla smoke effects
+### Changes
+- Changes effect type of SmokeShell.
+- Lowers intervals of some vanilla smoke effects.
 
-## Credits
+### Credits
 Parts of this addon are based on [Splendid Smoke](https://github.com/Zabuzard/SplendidSmoke) by [Zabuza](https://github.com/Zabuzard).

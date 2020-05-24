@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+    <Package name="Dynamic_Simulation">
+      <Key ID="STR_A3CS_Dynamic_Simulation_Disable">
+          <Original>Disable dynamic simulation</Original>
+          <Polish>Wyłącz dynamiczną symulację</Polish>
+      </Key>
+      <Key ID="STR_A3CS_Dynamic_Simulation_Disable_Tooltip">
+          <Original>Disable dynamic simulation for this group</Original>
+          <Polish>Wyłącz dynamiczną symulację dla tej grupy</Polish>
+      </Key>
+    </Package>
+</Project>

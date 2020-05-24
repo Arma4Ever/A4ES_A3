@@ -1,7 +1,7 @@
-## a3cs_difficulty
+# A3CS Difficulty
 Setups AI skill and difficulty settings.
 
-## Changes
+### Changes
 - setups CfgAISkill.
 - setups CfgAILevelPresets.
 - setups CfgDifficultyPresets.

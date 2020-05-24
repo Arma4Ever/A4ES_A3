@@ -1,7 +1,7 @@
-## a3cs_nametags
+# A3CS Nametags
 Displays 2D and 3D unit name tags.
 
-## Changes
+### Changes
 - Adds 2D & 3D unit name tags.
 - Adds 3DEN rankCombo control.
 
