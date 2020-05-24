@@ -2,12 +2,8 @@
 
 ADDON = false;
 
+PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
-
-if (is3DEN) then {
-    add3DENEventHandler ["OnMissionLoad", {[] call FUNC(edenDLCCheck)}];
-    add3DENEventHandler ["OnMissionSave", {[] call FUNC(edenDLCCheck)}];
-    add3DENEventHandler ["OnMissionAutosave", {[] call FUNC(edenDLCCheck)}];
-};
+PREP_RECOMPILE_END;
 
 ADDON = true;
