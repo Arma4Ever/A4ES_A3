@@ -31,7 +31,6 @@ class CfgPatches {
 #include "ENH\gui\batchReplace.hpp"
 #include "ENH\gui\functionsViewer.hpp"
 #include "ENH\gui\actionCreator.hpp"
-#include "ENH\gui\credits.hpp"
 #include "ENH\gui\placementTools.hpp"
 #include "ENH\gui\scenarioAttributesManager.hpp"
 #include "ENH\gui\scenarioAttributesManagerTemplateData.hpp"

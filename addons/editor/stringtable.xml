@@ -3,29 +3,6 @@
   <Package name="Editor">
   </Package>
   <Package name="ENH">
-    <Key ID="STR_ENH_SOUNDVOLUME_DISPLAYNAME">
-      <Original>Volume (Sound)</Original>
-      <Polish>Głośność dźwieku</Polish>
-    </Key>
-    <Key ID="STR_ENH_MUSICVOLUME_DISPLAYNAME">
-      <Original>Volume (Music)</Original>
-      <Polish>Głośność muzyki</Polish>
-    </Key>
-    <Key ID="STR_ENH_TERRAINDETAIL_DISPLAYNAME">
-      <Original>Terrain Detail</Original>
-    </Key>
-    <Key ID="STR_ENH_RADIOVOLUME_DISPLAYNAME">
-      <Original>Volume (Radio)</Original>
-      <Polish>Głośność radia</Polish>
-    </Key>
-    <Key ID="STR_ENH_RANDOMMUSIC_DISPLAYNAME">
-      <Original>Random Music</Original>
-      <Polish>Losowa muzyka</Polish>
-    </Key>
-    <Key ID="STR_ENH_RANDOMMUSIC_TOOLTIP">
-      <Original>Will play randomly selected music at mission start. Input must look as follows: Classname_1 Classname_2 Classname_3 Classname_n.</Original>
-      <Polish>Będzie grało losowo wybraną muzyke podczas startu misji. Kod musi wyglądać następująco: Classname_1 Classname_2 Classname_3 Classname_n.</Polish>
-    </Key>
     <Key ID="STR_ENH_TOOLS_REMOVENVGS">
       <Original>Remove NVGs</Original>
       <Polish>Usuń noktowizje</Polish>
@@ -126,70 +103,6 @@
     <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_LANDDECAL">
       <Original>Land decal</Original>
     </Key>
-    <Key ID="STR_ENH_AIRDROP_CLASSES_DISPLAYNAME">
-      <Original>Classes</Original>
-      <Polish>Klasy</Polish>
-    </Key>
-    <Key ID="STR_ENH_AIRDROP_CONDITION_DISPLAYNAME">
-      <Original>Condition</Original>
-      <Polish>Warunek</Polish>
-    </Key>
-    <Key ID="STR_ENH_AIRDROP_CENTER_DISPLAYNAME">
-      <Original>Center Position</Original>
-      <Polish>Pozycja zrzutu</Polish>
-    </Key>
-    <Key ID="STR_ENH_AIRDROP_RADIUS_DISPLAYNAME">
-      <Original>Area Radius</Original>
-      <Polish>Promień strefy</Polish>
-    </Key>
-    <Key ID="STR_ENH_AIRDROP_CENTER_TOOLTIP">
-      <Original>Center of the drop zone.</Original>
-      <Polish>Centrum strefy zrzutu.</Polish>
-    </Key>
-    <Key ID="STR_ENH_AIRDROP_RADIUS_TOOLTIP">
-      <Original>Radius of the drop zone in metres.</Original>
-      <Polish>Promień strefy zrzutu w metrach.</Polish>
-    </Key>
-    <Key ID="STR_ENH_DYNAMICSKILL_BLUFORSKILL_DISPLAYNAME">
-      <Original>BLUFOR Skill Settings</Original>
-      <Polish>BLUFOR Ustawienia umiejętności</Polish>
-    </Key>
-    <Key ID="STR_ENH_DYNAMICSKILL_SKILLMIN_DISPLAYNAME">
-      <Original>Min. Skill</Original>
-      <Polish>Min. poz. umiejętności</Polish>
-    </Key>
-    <Key ID="STR_ENH_DYNAMICSKILL_SKILLAIMMIN_DISPLAYNAME">
-      <Original>Min. Aiming Skill</Original>
-      <Polish>Min. Celność</Polish>
-    </Key>
-    <Key ID="STR_ENH_DYNAMICSKILL_SKILLMAX_DISPLAYNAME">
-      <Original>Max. Skill</Original>
-      <Polish>Max. poz. umiejętnościl</Polish>
-    </Key>
-    <Key ID="STR_ENH_DYNAMICSKILL_SKILLAIMMAX_DISPLAYNAME">
-      <Original>Max. Aiming Skill</Original>
-      <Polish>Max. Celność</Polish>
-    </Key>
-    <Key ID="STR_ENH_DYNAMICSKILL_OPFORSKILL_DISPLAYNAME">
-      <Original>OPFOR Skill Settings</Original>
-      <Polish>OPFOR Ustawienia umiejętności</Polish>
-    </Key>
-    <Key ID="STR_ENH_DYNAMICSKILL_INDFORSKILL_DISPLAYNAME">
-      <Original>INDFOR Skill Settings</Original>
-      <Polish>INDFOR Ustawienia umiejętności</Polish>
-    </Key>
-    <Key ID="STR_ENH_DYNAMICSKILL_DESCRIPTION">
-      <Original>Calculates AI skill based on player count and set base values. Skill will be dynamically changed when a player connects or disconnects.</Original>
-      <Polish>Oblicza poziom umiejętności SI w zależności od liczby graczy i ustawionych wartości bazowych. Poziom umiejętności będzie zmieniał się dynamicznie w momencie łączenia i rozłączania się graczy.</Polish>
-    </Key>
-    <Key ID="STR_ENH_AIRDROP_DISPLAYNAME">
-      <Original>Airdrop</Original>
-      <Polish>Zrzut</Polish>
-    </Key>
-    <Key ID="STR_ENH_ATTRIBUTECATEGORY_DYNAMICSKILL">
-      <Original>Dynamic AI Skill Settings</Original>
-      <Polish>Ustawienia Dynamicznego poziomu umiejętności SI</Polish>
-    </Key>
     <Key ID="STR_ENH_CREDITS_HEADER">
       <Original>Contributors</Original>
       <Polish>Współtwórcy</Polish>
@@ -222,42 +135,6 @@
       <Original>Load template by double clicking. Delete it from list by pressing DELETE.</Original>
       <Polish>Załaduj szablon poprzez podwójne kliknięcie. Usuń go z listy poprzez naciśniecie DELETE.</Polish>
     </Key>
-    <Key ID="STR_ENH_AMBIENTFLYBY_SPEED_DISPLAYNAME">
-      <Original>Speed Mode</Original>
-      <Polish>Tryb szybki</Polish>
-    </Key>
-    <Key ID="STR_ENH_AMBIENTFLYBY_ITERATIONS_DISPLAYNAME">
-      <Original>Number of Flybys</Original>
-      <Polish>Liczba przelotów</Polish>
-    </Key>
-    <Key ID="STR_ENH_AMBIENTFLYBY_DELAY_DISPLAYNAME">
-      <Original>Delay</Original>
-      <Polish>Opóźnienie</Polish>
-    </Key>
-    <Key ID="STR_ENH_AMBIENTFLYBY_DELAY_TOOLTIP">
-      <Original>Delay until the first flyby starts and delay in between two flybys. Note that smaller values (n-&gt;0) will have a bigger impact on performance.</Original>
-      <Polish>Opóźnienie przed pierwszym przelotem oraz pomiędzy dwoma przelotami. Uwaga, mniejsze wartości (n-&gt;0) będą miały większy wpływ na wydajność. </Polish>
-    </Key>
-    <Key ID="STR_ENH_AMBIENTFLYBY_STARTPOSITION_DISPLAYNAME">
-      <Original>Starting Position</Original>
-      <Polish>Pozycja startowa.</Polish>
-    </Key>
-    <Key ID="STR_ENH_AMBIENTFLYBY_ENDPOSITION_DISPLAYNAME">
-      <Original>Ending Position</Original>
-      <Polish>Pozycja końcowa.</Polish>
-    </Key>
-    <Key ID="STR_ENH_AMBIENTFLYBY_SIDE_DISPLAYNAME">
-      <Polish>Strona</Polish>
-      <Original>Side</Original>
-    </Key>
-    <Key ID="STR_ENH_EDITABLEOBJZEUS_DISPLAYNAME">
-      <Original>Editable Objects (Zeus)</Original>
-      <Polish>Edytowalne obiekty (Zeus)</Polish>
-    </Key>
-    <Key ID="STR_ENH_EDITABLEOBJZEUS_TOOLTIP">
-      <Original>Checks all alive objects (except logics) every 60 seconds and makes them available for editing for all curators.\nIf no curators are in game, the attribute will not work.</Original>
-      <Polish>Sprawdza wszystkie żywe obiekty (oprócz logiki) co 60 sekund i sprawia że są edytowalne dla wszystkich kuratorów.\nJeżeli nie ma kuratorów w grze to atrybut nie będzie działać. </Polish>
-    </Key>
     <Key ID="STR_ENH_GROUPINDICATOR_DISPLAYNAME">
       <Original>Show Group Indicator</Original>
       <Polish>Pokazuje indykator grupy</Polish>
@@ -265,22 +142,6 @@
     <Key ID="STR_ENH_GROUPINDICATOR_TOOLTIP">
       <Original>Shows a group indicator at the right hand side of the screen.</Original>
       <Polish>Pokazuje indykator grupy po prawej stronie ekranu.</Polish>
-    </Key>
-    <Key ID="STR_ENH_MAPINDICATORS_FRIENDLYTEXT">
-      <Original>Don't show friendly units</Original>
-      <Polish>Nie pokazuj jednostek przyjaznych</Polish>
-    </Key>
-    <Key ID="STR_ENH_MAPINDICATORS_ENEMYTEXT">
-      <Original>Don't show hostile units</Original>
-      <Polish>Nie pokazuj jednostek wrogich</Polish>
-    </Key>
-    <Key ID="STR_ENH_MAPINDICATORS_MINESTEXT">
-      <Original>Don't show mines</Original>
-      <Polish>Nie pokazuj min</Polish>
-    </Key>
-    <Key ID="STR_ENH_MAPINDICATORS_PINGTEXT">
-      <Original>Don't show tactical ping</Original>
-      <Polish>Nie pokazuj sygnału taktycznego</Polish>
     </Key>
     <Key ID="STR_ENH_FORCEFLAG_DISPLAYNAME">
       <Original>Add Flag</Original>
@@ -864,72 +725,13 @@
       <Original>Session Time</Original>
       <Polish>Czas sesji</Polish>
     </Key>
-    <Key ID="STR_ENH_ESTABLISHINGSHOT_CENTERPOS_DISPLAYNAME">
-      <Original>Center Position</Original>
-      <Polish>Pozycja środkowa</Polish>
-    </Key>
     <Key ID="STR_ENH_ESTABLISHINGSHOT_CENTERPOS_TOOLTIP">
       <Original>The center position of the virtual UAV's orbit.</Original>
       <Polish>Pozycja środkowa orbity wirtualnego BSP</Polish>
     </Key>
-    <Key ID="STR_ENH_ESTABLISHINGSHOT_DISPLAYEDTEXT">
-      <Original>Displayed Text</Original>
-      <Polish>Wyświetlany tekst</Polish>
-    </Key>
     <Key ID="STR_ENH_ESTABLISHINGSHOT_ALTITUDE_DISPLAYNAME">
       <Original>Altitude</Original>
       <Polish>Wysokość</Polish>
-    </Key>
-    <Key ID="STR_ENH_ESTABLISHINGSHOT_RADIUS_DISPLAYNAME">
-      <Original>Radius of the Orbit</Original>
-      <Polish>Promień orbity</Polish>
-    </Key>
-    <Key ID="STR_ENH_ESTABLISHINGSHOT_VIEWINGANGLE_DISPLAYNAME">
-      <Original>Viewing Angle</Original>
-      <Polish>Kąt widzenia</Polish>
-    </Key>
-    <Key ID="STR_ENH_INTROTEXT_INTRODELAY_DISPLAYNAME">
-      <Original>Delay</Original>
-      <Polish>Opóźnienie</Polish>
-    </Key>
-    <Key ID="STR_ENH_INTROTEXT_INTRODELAY_TOOLTIP">
-      <Original>Defines how much time has to pass until the intro text is shown. Setting it to 0 will disable the intro.</Original>
-      <Polish>Określa jak dużo czasu musi minąć zanim wyświetli się tekst intro. Ustawienie 0 wyłączy intro.</Polish>
-    </Key>
-    <Key ID="STR_ENH_INTROTEXT_LINE1_DISPLAYNAME">
-      <Original>First Line</Original>
-      <Polish>Pierwsza linia</Polish>
-    </Key>
-    <Key ID="STR_ENH_INTROTEXT_LINE2_DISPLAYNAME">
-      <Original>Second Line</Original>
-      <Polish>Druga linia</Polish>
-    </Key>
-    <Key ID="STR_ENH_INTROTEXT_LINE3_DISPLAYNAME">
-      <Original>Third Line</Original>
-      <Polish>Trzecia linia</Polish>
-    </Key>
-    <Key ID="STR_ENH_INTROTEXT_INTROTYPE_DISPLAYNAME">
-      <Original>Intro Type</Original>
-    </Key>
-    <Key ID="STR_ENH_TERRAINGRID_GRASSDISABLED_DISPLAYNAME">
-      <Original>Grass disabled</Original>
-      <Polish>Trawa wyłączona</Polish>
-    </Key>
-    <Key ID="STR_ENH_TERRAINGRID_STANDARD_DISPLAYNAME">
-      <Original>Standard</Original>
-      <Polish>Standardowe</Polish>
-    </Key>
-    <Key ID="STR_ENH_TERRAINGRID_HIGH_DISPLAYNAME">
-      <Original>High</Original>
-      <Polish>Wysokie</Polish>
-    </Key>
-    <Key ID="STR_ENH_TERRAINGRID_ULTRA_DISPLAYNAME">
-      <Original>Ultra</Original>
-      <Polish>Ultra</Polish>
-    </Key>
-    <Key ID="STR_ENH_TERRAINGRID_VERYHIGH_DISPLAYNAME">
-      <Original>Very  High</Original>
-      <Polish>Bardzo wysokie</Polish>
     </Key>
     <Key ID="STR_ENH_FEATURETYPE_OBJECTVIEWDISTANCE_TEXT">
       <Original>Limit by Object View Distance</Original>
@@ -951,14 +753,6 @@
       <Original>Advanced Damage</Original>
       <Polish>Zaaawansowane uszkodzenia</Polish>
     </Key>
-    <Key ID="STR_ENH_ATTRIBUTECATEGORY_VOLUME">
-      <Original>Music, Sound &amp; Radio Settings</Original>
-      <Polish>Ustawienia muzyki, dźwieku &amp; radia</Polish>
-    </Key>
-    <Key ID="STR_ENH_ATTRIBUTECATEGORY_VISUALSETTINGS">
-      <Original>Visual Settings</Original>
-      <Polish>Ustawienia grafiki</Polish>
-    </Key>
     <Key ID="STR_ENH_ATTRIBUTECATEGORY_ADVANCEDSKILL">
       <Original>Advanced Skill Settings</Original>
       <Polish>Zaawansowane ustawienia skilla</Polish>
@@ -970,19 +764,6 @@
     <Key ID="STR_ENH_ATTRIBUTECATEGORY_UNITTRAITS">
       <Original>Unit Traits</Original>
       <Polish>Cechy jednostki</Polish>
-    </Key>
-    <Key ID="STR_ENH_AMBIENTFLYBY_DISPLAYNAME">
-      <Original>Ambient Flyby</Original>
-    </Key>
-    <Key ID="STR_ENH_ATTRIBUTECATEGORY_ESTABLISHINGSHOT">
-      <Original>Establishing Shot</Original>
-    </Key>
-    <Key ID="STR_ENH_ATTRIBUTECATEGORY_MAPINDICATORS">
-      <Original>Map Indicators</Original>
-    </Key>
-    <Key ID="STR_ENH_INTROTEXT_DISPLAYNAME">
-      <Original>Intro Text</Original>
-      <Polish>Tekst intro</Polish>
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR">
       <Original>Briefing Editor</Original>
@@ -1352,10 +1133,6 @@
       <Original>Kill Units (OPFOR)</Original>
       <Polish>Zabij jednostki (OPFOR)</Polish>
     </Key>
-    <Key ID="STR_ENH_FOLDER_ABOUT">
-      <Original>About 3den Enhanced</Original>
-      <Polish>O 3den Enhanced</Polish>
-    </Key>
     <Key ID="STR_ENH_FOLDER_WIKI">
       <Original>Community Wiki</Original>
       <Polish>Wiki społeczności</Polish>
@@ -1382,29 +1159,6 @@
     <Key ID="STR_ENH_FOLDER_GUI">
       <Original>GUI Tools</Original>
       <Polish>Narzędzia interfejsu</Polish>
-    </Key>
-    <Key ID="STR_ENH_ABOUT_CHANGELOG">
-      <Original>Changelog</Original>
-      <Polish>Changelog</Polish>
-    </Key>
-    <Key ID="STR_ENH_ABOUT_FORUMS">
-      <Original>Forums</Original>
-      <Polish>Forum</Polish>
-    </Key>
-    <Key ID="STR_ENH_ABOUT_STEAM">
-      <Original>Steam</Original>
-      <Polish>Steam</Polish>
-    </Key>
-    <Key ID="STR_ENH_ABOUT_TRANSLATION">
-      <Original>Help Translating (GitHub)</Original>
-      <Polish>Pomóż tłumaczyć (GitHub)</Polish>
-    </Key>
-    <Key ID="STR_ENH_ABOUT_FAQ">
-      <Original>FAQ</Original>
-      <Polish>FAQ</Polish>
-    </Key>
-    <Key ID="STR_ENH_ABOUT_CREDITS">
-      <Original>Credits</Original>
     </Key>
     <Key ID="STR_ENH_TOOLS_FUNCTIONSVIEWER">
       <Original>3den Enhanced Functions Viewer</Original>
@@ -1633,50 +1387,6 @@
       <Original>Log Mission Attributes to Clipboard</Original>
       <Polish>Zapisuje atrybuty misji do schowka</Polish>
     </Key>
-    <Key ID="STR_ENH_DYNAMICGROUPS_TOOLTIP">
-      <Original>Enable the Dynamic Groups system.</Original>
-      <Polish>Pozwala na system "Dynamicznych grup"</Polish>
-    </Key>
-    <Key ID="STR_ENH_DYNAMICGROUPS_DISPLAYNAME">
-      <Original>Dynamic Groups</Original>
-      <Polish>Dynamic Groups</Polish>
-    </Key>
-    <Key ID="STR_ENH_RESPAWNTICKETS_BLUFOR_DISPLAYNAME">
-      <Original>Respawn Tickets BLUFOR</Original>
-      <Polish>Punkty odrodzenia BLUFOR</Polish>
-    </Key>
-    <Key ID="STR_ENH_RESPAWNTICKETS_INDFOR_DISPLAYNAME">
-      <Original>Respawn Tickets INDFOR</Original>
-      <Polish>Punkty odrodzenia INDFOR</Polish>
-    </Key>
-    <Key ID="STR_ENH_RESPAWNTICKETS_OPFOR_DISPLAYNAME">
-      <Original>Respawn Tickets OPFOR</Original>
-      <Polish>Punkty odrodzenia OPFOR</Polish>
-    </Key>
-    <Key ID="STR_ENH_RESPAWNTICKETS_CIVFOR_DISPLAYNAME">
-      <Original>Respawn Tickets CIVFOR</Original>
-      <Polish>Punkty odrodzenia CYW</Polish>
-    </Key>
-    <Key ID="STR_ENH_SAVELOADOUT_DISPLAYNAME">
-      <Original>Save Loadout</Original>
-      <Polish>Zapisz wyposażenie</Polish>
-    </Key>
-    <Key ID="STR_ENH_SAVELOADOUT_TOOLTIP">
-      <Original>Restores the loadout on respawn.</Original>
-      <Polish>Przywraca wyposażenie podczas odrodzenia.</Polish>
-    </Key>
-    <Key ID="STR_ENH_VIEWDISTANCE_DISPLAYNAME">
-      <Original>View Distance</Original>
-      <Polish>Zasięg widoku</Polish>
-    </Key>
-    <Key ID="STR_ENH_VIEWDISTANCE_TOOLTIP">
-      <Original>Keep in mind that this setting can be limited bei either the server or the player's visual settings. Additionally, the object view distance cannot be higher than the view distance.</Original>
-      <Polish>Pamiętaj że to ustawienie może być limitowane przez ustawienia serwera lub gracza. Dodatkowo, zasięg rysowania obiektów nie może być większy niż zasięg widzenia.</Polish>
-    </Key>
-    <Key ID="STR_ENH_OBJVIEWDISTANCE_DISPLAYNAME">
-      <Original>Object View Distance</Original>
-      <Polish>Zasięg rysowania obiektów</Polish>
-    </Key>
     <Key ID="STR_ENH_DISABLEGRASS_DISPLAYNAME">
       <Original>Disable Grass</Original>
       <Polish>Wyłącz trawe</Polish>
@@ -1808,49 +1518,8 @@
       <Original>Reset</Original>
       <Polish>Reset</Polish>
     </Key>
-    <Key ID="STR_ENH_ESTABLISHINGSHOT_DIRECTION_DISPLAYNAME">
-      <Original>Rotational Direction</Original>
-    </Key>
-    <Key ID="STR_ENH_ESTABLISHINGSHOT_ANTICLOCKWISE">
-      <Original>Anti-Clockwise</Original>
-    </Key>
-    <Key ID="STR_ENH_ESTABLISHINGSHOT_CLOCKWISE">
-      <Original>Clockwise</Original>
-    </Key>
     <Key ID="STR_ENH_RESETANDDISABLE">
       <Original>Reset and Disable</Original>
-    </Key>
-    <Key ID="STR_ENH_AIRDROP_CONDITION_TOOLTIP">
-      <Original>This condition has to be become true during the mission for the airdrop to start.</Original>
-      <Polish>Ten warunek musi być spełniony w czasie misji aby zrzut się odbył.</Polish>
-    </Key>
-    <Key ID="STR_ENH_AIRDROP_CLASSES_TOOLTIP">
-      <Original>Classes of the soldiers which should be dropped in format:\nClassname_1 Classname_2 Classname_n.</Original>
-    </Key>
-    <Key ID="STR_ENH_AMBIENTFLYBY_CLASSES_TOOLTIP">
-      <Original>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: Classname_1 Classname_2 Classname_n.</Original>
-      <Polish>Nazwy klas pojazdów które powinny być użyte do przelotów. Jeżeli będzie wprowadzone więcej klas(&gt;1), za każdym razem jeden będzie wybrany losowo. Kod musi wyglądać tak: Classname_1 Classname_2 Classname_n.</Polish>
-    </Key>
-    <Key ID="STR_ENH_SIDE_DISPLAYNAME">
-      <Original>Side</Original>
-      <Polish>Strona</Polish>
-    </Key>
-    <Key ID="STR_ENH_AMBIENTFLYBY_CLASSES_DISPLAYNAME">
-      <Original>Type of Aircraft</Original>
-      <Polish>Typ samolotu</Polish>
-    </Key>
-    <Key ID="STR_ENH_SPEED_LIMITED">
-      <Original>Limited</Original>
-    </Key>
-    <Key ID="STR_ENH_SPEED_NORMAL">
-      <Original>Normal</Original>
-    </Key>
-    <Key ID="str_enh_speed_full">
-      <Original>Full</Original>
-    </Key>
-    <Key ID="STR_ENH_ALTITUDE_DISPLAYNAME">
-      <Original>Altitude</Original>
-      <Polish>Wysokość</Polish>
     </Key>
     <Key ID="STR_ENH_NAMEOBJECTS_NAME">
       <Original>Name</Original>
@@ -1859,25 +1528,9 @@
       <Original>Description</Original>
       <Polish>Opis</Polish>
     </Key>
-    <Key ID="STR_ENH_AIRDROP_DESCRIPTION">
-      <Original>Creates an airdrop. Units with given classes and side are dropped once the condition returns true. The created units are stored in 'ENH_Airdrop_Units' variable which is available on the server machine.</Original>
-    </Key>
-    <Key ID="STR_ENH_AMBIENTFLYBY_DESCRIPTION">
-      <Original>Spawns an air unit that moves from point A to point B, never engaging nor being engaged. It is set as captive and will despawn once it reaches its destination. Flybys can be stopped by setting 'ENH_AmbientFlyby_Enabled' to false on the server machine.</Original>
-    </Key>
-    <Key ID="STR_ENH_ESTABLISHINGSHOT_DESCRIPTION">
-      <Original>Plays a fake UAV observational sequence which serves as an establishing shot. See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</Original>
-    </Key>
-    <Key ID="STR_ENH_INTROTEXT_DESCRIPTION">
-      <Original>Shows an animated text. Can be used to display mission name. Can either be &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; or &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt;.</Original>
-    </Key>
     <Key ID="STR_ENH_GROUPMARKER_DESCRIPTION">
       <Original>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'ENH_GroupMarker_Update' in the group's namespace to false.</Original>
       <Polish>Pokazuje pozycje grupy na mapie. Pozycja jest aktualizowana co sekunde. Jeżeli grupa stanie się pusta, to marker zostanie usunięty. Aktualizacja może byc zatrzymana poprzez ustawienie zmiennej 'ENH_GroupMarker_Update' w 'namespace' na 'false'.</Polish>
-    </Key>
-    <Key ID="STR_ENH_MAPINDICATORS_DESCRIPTION">
-      <Original>Disables map indicators for friendly and hostile units, mines and tactical ping. Overwrites player's difficulty settings!</Original>
-      <Polish>Wyłącza indykator na mapie dla jednostek przyjaznych i wrogich, min i sygranłu taktycznego. Nadpisuje ustawienia trudności gracza!</Polish>
     </Key>
     <Key ID="STR_ENH_GROUPMARKER_TYPE">
       <Original>Type</Original>
@@ -1918,9 +1571,6 @@
     <Key ID="STR_ENH_STATUSBAR_ENTITYCOUNTER_DISPLAYNAME">
       <Original>Show Entity Counter</Original>
     </Key>
-    <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_DISPLAYNAME">
-      <Original>Mission Ending (Casualties)</Original>
-    </Key>
     <Key ID="STR_ENH_HOLDACTION_DISPLAYNAME">
       <Original>Hold Action</Original>
     </Key>
@@ -1929,18 +1579,6 @@
     </Key>
     <Key ID="STR_ENH_AMBIENTANIMATIONS_DESCRIPTION">
       <Original>Plays a selected animation set. The gear needs to be set up manually.</Original>
-    </Key>
-    <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_DESCRIPTION">
-      <Original>Ends the mission with custom ending if a certain count of entities of given side was killed. Can be used to fail mission for civilian casualties. In Multiplayer, the mission will be ended for all clients. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</Original>
-    </Key>
-    <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_DISPLAYNAME">
-      <Original>Threshold</Original>
-    </Key>
-    <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_TOOLTIP">
-      <Original>When the amount of killed entities of given side reaches the threshold, the mission is ended.</Original>
-    </Key>
-    <Key ID="STR_ENH_MISSIONENDING_ENDING_TOOLTIP">
-      <Original>Can be ending from config file or mission config (CfgDebriefing).</Original>
     </Key>
     <Key ID="STR_ENH_AMBIENTANIMATIONS_CANEDIT_DISPLAYNAME">
       <Original>Can Exit?</Original>
@@ -2178,9 +1816,6 @@
     <Key ID="STR_ENH_3DENCAM_HELPMOVETO">
       <Original>- To move to a selected position, double click on the entry</Original>
     </Key>
-    <Key ID="STR_ENH_FOLDER_3RDPARTYTOOLS">
-      <Original>Third Party Tools</Original>
-    </Key>
     <Key ID="STR_ENH_CONTEXTMENU_FIRSTPERSON">
       <Original>Move Camera to First Person View</Original>
     </Key>
@@ -2223,12 +1858,6 @@
     </Key>
     <Key ID="STR_ENH_TOOLS_TOGGLEDYNAMICSIMULATION">
       <Original>Toggle Dynamic Simulation</Original>
-    </Key>
-    <Key ID="STR_ENH_FOLDER_3RDPARTYTOOLS_NODEPENDENCIES">
-      <Original>Tools that don't create dependencies</Original>
-    </Key>
-    <Key ID="STR_ENH_FOLDER_3RDPARTYTOOLS_DEPENDENCIES">
-      <Original>Tools that create dependencies</Original>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_DELETECORPSE_DISPLAYNAME">
       <Original>Delete Corpses</Original>
@@ -2318,47 +1947,8 @@
     <Key ID="STR_ENH_RESPAWNTICKETS_TOOLTIP">
       <Original>Every unit can respawn as long as it hasn't run out of tickets.</Original>
     </Key>
-    <Key ID="STR_ENH_SPR_CANDIE_DISPLAYNAME">
-      <Original>Can Die?</Original>
-    </Key>
-    <Key ID="STR_ENH_SPR_CANDIE_TOOLTIP">
-      <Original>Units can instantly die by getting shot in the head.</Original>
-    </Key>
-    <Key ID="STR_ENH_SPR_DESCRIPTION">
-      <Original>Enables player and AI to respawn in single player scenarios. Only units with Single Player Respawn enabled in their attributes are affected. For multiplayer scenarios use the multiplayer respawn system.</Original>
-    </Key>
     <Key ID="STR_ENH_SPR_ENABLESPR">
       <Original>Enable Single Player Respawn</Original>
-    </Key>
-    <Key ID="STR_ENH_SPR_RULESET_RANDOMPOSITION_TOOLTIP">
-      <Original>All markers with the prefix 'respawn_SIDE' count as respawn positions. For example, OPFOR units can use all markers as respawn positions named respawn_east_xxx.\n\n* respawn_east - OPFOR respawn\n* respawn_west - BLUFOR respawn\n* respawn_guerilla - INDFOR respawn\n* respawn_civilian - CIVFOR respawn</Original>
-    </Key>
-    <Key ID="STR_ENH_SPR_RULESET_NEARESTPOSITION">
-      <Original>Respawn at nearest Respawn Position</Original>
-    </Key>
-    <Key ID="STR_ENH_SPR_RULESET_RANDOMPOSITION">
-      <Original>Respawn at random Respawn Position</Original>
-    </Key>
-    <Key ID="STR_ENH_SPR">
-      <Original>Single Player Respawn</Original>
-    </Key>
-    <Key ID="STR_ENH_MISSIONENDING_DESCRIPTION">
-      <Original>Create a custom Ending condition. If the condition returns true, the mission is ended for all player with the given settings. See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_endMission'&gt;BIS_fnc_endMission&lt;/a&gt; for a full documentation. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</Original>
-    </Key>
-    <Key ID="STR_ENH_MISSIONENDING_CATEGORY_DISPLAYNNAME">
-      <Original>Custom Mission Endings</Original>
-    </Key>
-    <Key ID="STR_ENH_MISSIONENDING_ENDING_DISPLAYNAME">
-      <Original>Ending</Original>
-    </Key>
-    <Key ID="STR_ENH_MISSIONENDING_WIN_DISPLAYNAME">
-      <Original>Win?</Original>
-    </Key>
-    <Key ID="STR_ENH_MISSIONENDING_CONDITION_TOOLTIP">
-      <Original>Condition which needs to return true for the ending to be executed. The condition is checked every 10 seconds on the server.</Original>
-    </Key>
-    <Key ID="STR_ENH_MISSIONENDING_PLAYMUSIC">
-      <Original>Play Music?</Original>
     </Key>
   </Package>
 </Project>
