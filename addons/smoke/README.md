@@ -7,3 +7,6 @@ Makes vanilla smoke grenades more useful.
 
 ### Credits
 Parts of this addon are based on [Splendid Smoke](https://github.com/Zabuzard/SplendidSmoke) by [Zabuza](https://github.com/Zabuzard).
+
+### License
+This addon is distributed under [Splendid Smoke GPLv3](https://github.com/Zabuzard/SplendidSmoke/blob/master/LICENSE) license.
