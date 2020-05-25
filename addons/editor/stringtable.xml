@@ -1,0 +1,2364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+  <Package name="Editor">
+  </Package>
+  <Package name="ENH">
+    <Key ID="STR_ENH_SOUNDVOLUME_DISPLAYNAME">
+      <Original>Volume (Sound)</Original>
+      <Polish>Głośność dźwieku</Polish>
+    </Key>
+    <Key ID="STR_ENH_MUSICVOLUME_DISPLAYNAME">
+      <Original>Volume (Music)</Original>
+      <Polish>Głośność muzyki</Polish>
+    </Key>
+    <Key ID="STR_ENH_TERRAINDETAIL_DISPLAYNAME">
+      <Original>Terrain Detail</Original>
+    </Key>
+    <Key ID="STR_ENH_RADIOVOLUME_DISPLAYNAME">
+      <Original>Volume (Radio)</Original>
+      <Polish>Głośność radia</Polish>
+    </Key>
+    <Key ID="STR_ENH_RANDOMMUSIC_DISPLAYNAME">
+      <Original>Random Music</Original>
+      <Polish>Losowa muzyka</Polish>
+    </Key>
+    <Key ID="STR_ENH_RANDOMMUSIC_TOOLTIP">
+      <Original>Will play randomly selected music at mission start. Input must look as follows: Classname_1 Classname_2 Classname_3 Classname_n.</Original>
+      <Polish>Będzie grało losowo wybraną muzyke podczas startu misji. Kod musi wyglądać następująco: Classname_1 Classname_2 Classname_3 Classname_n.</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_REMOVENVGS">
+      <Original>Remove NVGs</Original>
+      <Polish>Usuń noktowizje</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_EXPORTMISSIONPARAMETERS">
+      <Original>Export Mission Parameters</Original>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_REMOVEVESTS">
+      <Original>Remove Vests</Original>
+      <Polish>Usuń kamizelki</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGPATH_DISPLAYNAME">
+      <Original>Debug Path</Original>
+      <Polish>Ścieżka debugu</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGPATH_TOOLTIP">
+      <Original>Path of the unit will be marked by multiple arrows. Useful to find areas where AI might not be able to walk or drive. Do only use during mission creation.</Original>
+      <Polish>Ścieżka jednostki będzie zaznaczona przez strzałki. Użyteczne do znajdowania stref gdzie AI nie może przejść lub przejechać. Używać tylko w czasie tworzenia misji.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGPATH_MESSAGE">
+      <Original>Path debugging enabled for unit %1.</Original>
+      <Polish>Debug ścieżki ruchu włączony dla jednostki %1.</Polish>
+    </Key>
+    <Key ID="STR_ENH_CONTEXTMENU_LOG3DENIDS">
+      <Original>Log 3DEN Entity IDs to Clipboard</Original>
+      <Polish>Zapisz ID bytu 3DEN do schowka</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_BATCHREPLACE_ERROR">
+      <Original>No valid Classname!</Original>
+      <Polish>Brak poprawnych Classname!</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_FILLTEXTURELB_TOOLTIP">
+      <Original>Copy path with 'CTRL + C'.</Original>
+      <Polish>Skopiuj ścieżke przy pomocy "CTRL + C".</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_NAME">
+      <Original>NAME:</Original>
+      <Polish>NAZWA:</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_CLASS">
+      <Original>CLASS:</Original>
+      <Polish>KLASA:</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_VEHICLECLASS">
+      <Original>VEHICLE CLASS:</Original>
+      <Polish>KLASA POJAZDU:</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_KINDOF">
+      <Original>KIND OF:</Original>
+      <Polish>RODZAJ:</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_SIZE">
+      <Original>SIZE (Width, Length, Height):</Original>
+      <Polish>ROZMIAR(Szerokość, Długość, Wysokość):</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_SELECTIONNAMES">
+      <Original>SELECTION NAMES:</Original>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_PARENTS">
+      <Original>PARENTS:</Original>
+      <Polish>RODZICE:</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_OBJECTTYPE">
+      <Original>OBJECT TYPE:</Original>
+      <Polish>TYP OBIEKTU:</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_MATERIALS">
+      <Original>MATERIALS:</Original>
+      <Polish>MATERIAŁY:</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_MODELINFO">
+      <Original>MODEL INFO:</Original>
+      <Polish>MODEL INFO:</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_TEXTURES">
+      <Original>TEXTURES:</Original>
+      <Polish>TEKSTURY:</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_ANIMATIONNAMES">
+      <Original>ANIMATION NAMES:</Original>
+      <Polish>NAZWY ANIMACJI:</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_PRIMARY">
+      <Original>Normal object placed in Visitor, part of landscape</Original>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_NETWORK">
+      <Original>Road placed in Visitor, part of landscape</Original>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_TEMPORARY">
+      <Original>Temporary object (like tracks)</Original>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_TYPEVEHICLE">
+      <Original>Some entity added by game</Original>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_TYPETEMPVEHICLE">
+      <Original>Temporary entity</Original>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_LANDDECAL">
+      <Original>Land decal</Original>
+    </Key>
+    <Key ID="STR_ENH_AIRDROP_CLASSES_DISPLAYNAME">
+      <Original>Classes</Original>
+      <Polish>Klasy</Polish>
+    </Key>
+    <Key ID="STR_ENH_AIRDROP_CONDITION_DISPLAYNAME">
+      <Original>Condition</Original>
+      <Polish>Warunek</Polish>
+    </Key>
+    <Key ID="STR_ENH_AIRDROP_CENTER_DISPLAYNAME">
+      <Original>Center Position</Original>
+      <Polish>Pozycja zrzutu</Polish>
+    </Key>
+    <Key ID="STR_ENH_AIRDROP_RADIUS_DISPLAYNAME">
+      <Original>Area Radius</Original>
+      <Polish>Promień strefy</Polish>
+    </Key>
+    <Key ID="STR_ENH_AIRDROP_CENTER_TOOLTIP">
+      <Original>Center of the drop zone.</Original>
+      <Polish>Centrum strefy zrzutu.</Polish>
+    </Key>
+    <Key ID="STR_ENH_AIRDROP_RADIUS_TOOLTIP">
+      <Original>Radius of the drop zone in metres.</Original>
+      <Polish>Promień strefy zrzutu w metrach.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DYNAMICSKILL_BLUFORSKILL_DISPLAYNAME">
+      <Original>BLUFOR Skill Settings</Original>
+      <Polish>BLUFOR Ustawienia umiejętności</Polish>
+    </Key>
+    <Key ID="STR_ENH_DYNAMICSKILL_SKILLMIN_DISPLAYNAME">
+      <Original>Min. Skill</Original>
+      <Polish>Min. poz. umiejętności</Polish>
+    </Key>
+    <Key ID="STR_ENH_DYNAMICSKILL_SKILLAIMMIN_DISPLAYNAME">
+      <Original>Min. Aiming Skill</Original>
+      <Polish>Min. Celność</Polish>
+    </Key>
+    <Key ID="STR_ENH_DYNAMICSKILL_SKILLMAX_DISPLAYNAME">
+      <Original>Max. Skill</Original>
+      <Polish>Max. poz. umiejętnościl</Polish>
+    </Key>
+    <Key ID="STR_ENH_DYNAMICSKILL_SKILLAIMMAX_DISPLAYNAME">
+      <Original>Max. Aiming Skill</Original>
+      <Polish>Max. Celność</Polish>
+    </Key>
+    <Key ID="STR_ENH_DYNAMICSKILL_OPFORSKILL_DISPLAYNAME">
+      <Original>OPFOR Skill Settings</Original>
+      <Polish>OPFOR Ustawienia umiejętności</Polish>
+    </Key>
+    <Key ID="STR_ENH_DYNAMICSKILL_INDFORSKILL_DISPLAYNAME">
+      <Original>INDFOR Skill Settings</Original>
+      <Polish>INDFOR Ustawienia umiejętności</Polish>
+    </Key>
+    <Key ID="STR_ENH_DYNAMICSKILL_DESCRIPTION">
+      <Original>Calculates AI skill based on player count and set base values. Skill will be dynamically changed when a player connects or disconnects.</Original>
+      <Polish>Oblicza poziom umiejętności SI w zależności od liczby graczy i ustawionych wartości bazowych. Poziom umiejętności będzie zmieniał się dynamicznie w momencie łączenia i rozłączania się graczy.</Polish>
+    </Key>
+    <Key ID="STR_ENH_AIRDROP_DISPLAYNAME">
+      <Original>Airdrop</Original>
+      <Polish>Zrzut</Polish>
+    </Key>
+    <Key ID="STR_ENH_ATTRIBUTECATEGORY_DYNAMICSKILL">
+      <Original>Dynamic AI Skill Settings</Original>
+      <Polish>Ustawienia Dynamicznego poziomu umiejętności SI</Polish>
+    </Key>
+    <Key ID="STR_ENH_CREDITS_HEADER">
+      <Original>Contributors</Original>
+      <Polish>Współtwórcy</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_NVG_DISPLAYNAME">
+      <Original>Night Vision Goggles</Original>
+      <Polish>Gogle Noktowizyjne</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_LIGHTS_DISPLAYNAME">
+      <Original>Lights</Original>
+      <Polish>Latarka/źródło światła</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_GENERATESTEAMMISSIONDESCRIPTION">
+      <Original>Generate Steam Mission Description</Original>
+      <Polish>Wygeneruj Opis Misji Steam.</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_REMOVEGOGGLES">
+      <Original>Remove Goggles</Original>
+      <Polish>Usuń gogle</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_REMOVEHEADGEAR">
+      <Original>Remove Headgear</Original>
+      <Polish>Usuń nakrycie głowy</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_REMOVEWEAPONS">
+      <Original>Remove Weapons</Original>
+      <Polish>Usuń broń</Polish>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_LOADTEMPLATE_TOOLTIP">
+      <Original>Load template by double clicking. Delete it from list by pressing DELETE.</Original>
+      <Polish>Załaduj szablon poprzez podwójne kliknięcie. Usuń go z listy poprzez naciśniecie DELETE.</Polish>
+    </Key>
+    <Key ID="STR_ENH_AMBIENTFLYBY_SPEED_DISPLAYNAME">
+      <Original>Speed Mode</Original>
+      <Polish>Tryb szybki</Polish>
+    </Key>
+    <Key ID="STR_ENH_AMBIENTFLYBY_ITERATIONS_DISPLAYNAME">
+      <Original>Number of Flybys</Original>
+      <Polish>Liczba przelotów</Polish>
+    </Key>
+    <Key ID="STR_ENH_AMBIENTFLYBY_DELAY_DISPLAYNAME">
+      <Original>Delay</Original>
+      <Polish>Opóźnienie</Polish>
+    </Key>
+    <Key ID="STR_ENH_AMBIENTFLYBY_DELAY_TOOLTIP">
+      <Original>Delay until the first flyby starts and delay in between two flybys. Note that smaller values (n-&gt;0) will have a bigger impact on performance.</Original>
+      <Polish>Opóźnienie przed pierwszym przelotem oraz pomiędzy dwoma przelotami. Uwaga, mniejsze wartości (n-&gt;0) będą miały większy wpływ na wydajność. </Polish>
+    </Key>
+    <Key ID="STR_ENH_AMBIENTFLYBY_STARTPOSITION_DISPLAYNAME">
+      <Original>Starting Position</Original>
+      <Polish>Pozycja startowa.</Polish>
+    </Key>
+    <Key ID="STR_ENH_AMBIENTFLYBY_ENDPOSITION_DISPLAYNAME">
+      <Original>Ending Position</Original>
+      <Polish>Pozycja końcowa.</Polish>
+    </Key>
+    <Key ID="STR_ENH_AMBIENTFLYBY_SIDE_DISPLAYNAME">
+      <Polish>Strona</Polish>
+      <Original>Side</Original>
+    </Key>
+    <Key ID="STR_ENH_EDITABLEOBJZEUS_DISPLAYNAME">
+      <Original>Editable Objects (Zeus)</Original>
+      <Polish>Edytowalne obiekty (Zeus)</Polish>
+    </Key>
+    <Key ID="STR_ENH_EDITABLEOBJZEUS_TOOLTIP">
+      <Original>Checks all alive objects (except logics) every 60 seconds and makes them available for editing for all curators.\nIf no curators are in game, the attribute will not work.</Original>
+      <Polish>Sprawdza wszystkie żywe obiekty (oprócz logiki) co 60 sekund i sprawia że są edytowalne dla wszystkich kuratorów.\nJeżeli nie ma kuratorów w grze to atrybut nie będzie działać. </Polish>
+    </Key>
+    <Key ID="STR_ENH_GROUPINDICATOR_DISPLAYNAME">
+      <Original>Show Group Indicator</Original>
+      <Polish>Pokazuje indykator grupy</Polish>
+    </Key>
+    <Key ID="STR_ENH_GROUPINDICATOR_TOOLTIP">
+      <Original>Shows a group indicator at the right hand side of the screen.</Original>
+      <Polish>Pokazuje indykator grupy po prawej stronie ekranu.</Polish>
+    </Key>
+    <Key ID="STR_ENH_MAPINDICATORS_FRIENDLYTEXT">
+      <Original>Don't show friendly units</Original>
+      <Polish>Nie pokazuj jednostek przyjaznych</Polish>
+    </Key>
+    <Key ID="STR_ENH_MAPINDICATORS_ENEMYTEXT">
+      <Original>Don't show hostile units</Original>
+      <Polish>Nie pokazuj jednostek wrogich</Polish>
+    </Key>
+    <Key ID="STR_ENH_MAPINDICATORS_MINESTEXT">
+      <Original>Don't show mines</Original>
+      <Polish>Nie pokazuj min</Polish>
+    </Key>
+    <Key ID="STR_ENH_MAPINDICATORS_PINGTEXT">
+      <Original>Don't show tactical ping</Original>
+      <Polish>Nie pokazuj sygnału taktycznego</Polish>
+    </Key>
+    <Key ID="STR_ENH_FORCEFLAG_DISPLAYNAME">
+      <Original>Add Flag</Original>
+      <Polish>Dodaj flage</Polish>
+    </Key>
+    <Key ID="STR_ENH_FORCEFLAG_TOOLTIP">
+      <Original>Forces a flag texture onto a flag carrier (unit, vehicle or flag pole). No flag holder is required. </Original>
+      <Polish>Wymusza teksture flagi na nośnik flagi (jednostka, pojazd czy maszt). No flag holder is required.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DOSTOP_DISPLAYNAME">
+      <Original>Stay on position</Original>
+      <Polish>Zostań na pozycji</Polish>
+    </Key>
+    <Key ID="STR_ENH_DOSTOP_TOOLTIP">
+      <Original>Prevents AI from moving into formation at mission start. Deactivated in multiplayer!</Original>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_ENGINE1">
+      <Original>Engine #1</Original>
+      <Polish>Silnik #1</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_HULL">
+      <Original>Hull</Original>
+      <Polish>Kadłub</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_ENGINE2">
+      <Original>Engine #2</Original>
+      <Polish>Silnik #2</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_GUN">
+      <Original>Gun</Original>
+      <Polish>Uzbrojenie</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_FUELTANK1">
+      <Original>Fuel Tank #1</Original>
+      <Polish>Zbiornik paliwa #1</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_FUELTANK2">
+      <Original>Fuel Tank #2</Original>
+      <Polish>Zbiornik paliwa #2</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_TURRET">
+      <Original>Turret</Original>
+      <Polish>Wieża</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_WINDOWS1">
+      <Original>Window #1</Original>
+      <Polish>Okno #1</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_WINDOWS2">
+      <Original>Window #2</Original>
+      <Polish>Okno #2</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_WINDOWS3">
+      <Original>Window #3</Original>
+      <Polish>Okno #3</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_WINDOWS4">
+      <Original>Window #4</Original>
+      <Polish>Okno #4</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_WINDOWS5">
+      <Original>Window #5</Original>
+      <Polish>Okno #5</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_WINDOWS6">
+      <Original>Window #6</Original>
+      <Polish>Okno #6</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_WINDOWS7">
+      <Original>Window #7</Original>
+      <Polish>Okno #7</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_LFWHEEL">
+      <Original>1st axle left wheel</Original>
+      <Polish>1sza oś lewe koło</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_RFWHEEL">
+      <Original>1st axle right wheel</Original>
+      <Polish>1sza oś prawe koło</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_LF2WHEEL">
+      <Original>2nd axle left wheel</Original>
+      <Polish>2ga oś lewe koło</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_RF2WHEEL">
+      <Original>2nd axle right wheel</Original>
+      <Polish>2ga oś prawe koło</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_LMWHEEL">
+      <Original>3rd axle left wheel</Original>
+      <Polish>3cia oś lewe koło</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_RMWHEEL">
+      <Original>3rd axle right wheel</Original>
+      <Polish>3cia oś prawe koło</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_LBWHEEL">
+      <Original>4th axle left wheel</Original>
+      <Polish>4ta oś lewe koło</Polish>
+    </Key>
+    <Key ID="STR_ENH_GROUPMARKER_DISPLAYNAME">
+      <Original>Group Marker</Original>
+      <Polish>Marker grupy</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_RBWHEEL">
+      <Original>4th axle right wheel</Original>
+      <Polish>4ta oś prawe koło</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_BODY">
+      <Original>Body</Original>
+      <Polish>Karoseria</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_LTRACK">
+      <Original>Left track</Original>
+      <Polish>Lewa gąsienica</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_RTRACK">
+      <Original>Right track</Original>
+      <Polish>Prawa gąsienica</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_AVIONICS">
+      <Original>Avionics</Original>
+      <Polish>Awionika</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_MAINROTOR">
+      <Original>Main rotor</Original>
+      <Polish>Głowny rotor</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_TAILROTOR">
+      <Original>Tail Rotor</Original>
+      <Polish>Tylni rotor</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_LEFTAILERON">
+      <Original>Left Aileron</Original>
+      <Polish>Lewa lotka</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_LEFTRUDDER">
+      <Original>Left Rudder</Original>
+      <Polish>Lewy ster kierunku</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_RIGHTRUDDER">
+      <Original>Right Rudder</Original>
+      <Polish>Prawy ster kierunku</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_RIGHTAILERON">
+      <Original>Right Aileron</Original>
+      <Polish>Prawa lotka</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_RIGHTELEVATOR">
+      <Original>Right Elevator</Original>
+      <Polish>Prawy ster wysokości</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_LEFTELEVATOR">
+      <Original>Left Elevator</Original>
+      <Polish>Lewy ster wysokości</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_GEARLIGHTS">
+      <Original>Gear Lights</Original>
+      <Polish>Światło podwozia</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_ALLVEHICLES_TITLE">
+      <Original>Various Vehicles</Original>
+      <Polish>Różne pojazdy</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_LANDVEHICLES_TITLE">
+      <Original>Land Vehicles</Original>
+      <Polish>Pojazdy lądowe</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_AERONAUTICALVEHICLES_TITLE">
+      <Original>Aeronautical Vehicles</Original>
+      <Polish>Pojazdy powietrzne</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_ALLVEHICLES_DESCRIPTION">
+      <Original>Used by various vehicles.</Original>
+      <Polish>Używane przez różne pojazdy.</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_LANDVEHICLES_DESCRIPTION">
+      <Original>Used by land vehicles.</Original>
+      <Polish>Używane przez pojazdy lądowe.</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_AERONAUTICALVEHICLES_DESCRIPTION">
+      <Original>Used by aeronautical vehicles.</Original>
+      <Polish>Używane przez pojazdy powietrzne.</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_HEAD">
+      <Original>Head</Original>
+      <Polish>Głowa</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_FACE">
+      <Original>Face</Original>
+      <Polish>Twarz</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_NECK">
+      <Original>Neck</Original>
+      <Polish>Szyja</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_CHEST">
+      <Original>Chest</Original>
+      <Polish>Klatka</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_ARMS">
+      <Original>Arms</Original>
+      <Polish>Ramiona</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_HANDS">
+      <Original>Hands</Original>
+      <Polish>Dłonie</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_ABDOMEN">
+      <Original>Abdomen</Original>
+      <Polish>Brzuch</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_PELVIS">
+      <Original>Pelvis</Original>
+      <Polish>Miednica</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_DIAPHRAGM">
+      <Original>Diaphragm</Original>
+      <Polish>Przepona brzuszna</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_LEGS">
+      <Original>Legs</Original>
+      <Polish>Nogi</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADDGUNLIGHT_DISPLAYNAME">
+      <Original>Add Gun Light</Original>
+      <Polish>Dodaj latarkę na broń</Polish>
+    </Key>
+    <Key ID="STR_ENH_ADDGUNLIGHT_TOOLTIP">
+      <Original>Forces unit to have gun light turned on.</Original>
+      <Polish>Zmusza jednostkę do włączenia latarki na broni.</Polish>
+    </Key>
+    <Key ID="STR_ENH_ARSENAL_DISPLAYNAME">
+      <Original>Arsenal</Original>
+      <Polish>Arsenał</Polish>
+    </Key>
+    <Key ID="STR_ENH_ARSENAL_TOOLTIP">
+      <Original>Adds an Arsenal with all items to the object.</Original>
+      <Polish>Dodaje Arsenał z wszystkimi przedmiotami do obiektu</Polish>
+    </Key>
+    <Key ID="str_enh_allowsprinting_displayname">
+      <Original>Allow Sprinting</Original>
+      <Polish>Zezwól na sprint</Polish>
+    </Key>
+    <Key ID="STR_ENH_ALLOWSPRINTING_TOOLTIP">
+      <Original>Unit can't sprint if unchecked.</Original>
+      <Polish>Jednostka nie może sprintować jeżeli nie zaznaczone.</Polish>
+    </Key>
+    <Key ID="STR_ENH_CAPTIVE_TOOLTIP">
+      <Original>Unit will behave neutral and will join the civilian side.</Original>
+      <Polish>Jednostka będzie zachowywać się neutralnie i dołączy do strony cywilnej.</Polish>
+    </Key>
+    <Key ID="STR_ENH_ENABLEHEADLIGHTS_DISPLAYNAME">
+      <Original>Enable Headlights</Original>
+      <Polish>Włącz reflektory</Polish>
+    </Key>
+    <Key ID="STR_ENH_ENABLEHEADLIGHTS_TOOLTIP">
+      <Original>Will enable headlights of selected EMPTY vehicle.</Original>
+      <Polish>Włączy reflektory na zaznaczonych PUSTYCH pojazdach.</Polish>
+    </Key>
+    <Key ID="STR_ENH_ALLOWCREWIMMOBILE_DISPLAYNAME">
+      <Original>Immobilize crew</Original>
+      <Polish>Załoga zostaje w pojeździe</Polish>
+    </Key>
+    <Key ID="STR_ENH_ALLOWCREWIMMOBILE_TOOLTIP">
+      <Original>Crew stays in vehicle even thought the vehicle is disabled.</Original>
+      <Polish>Załoga zostaje w pojeździe nawet jeżeli pojazd jest niesprawny.</Polish>
+    </Key>
+    <Key ID="STR_ENH_AIMINGSHAKE_DISPLAYNAME">
+      <Original>Aiming Shake</Original>
+      <Polish>Stabilność celowania</Polish>
+    </Key>
+    <Key ID="STR_ENH_AIMINGSHAKE_TOOLTIP">
+      <Original>Affects how steadily the AI can hold a weapon (Higher value = less weapon sway).</Original>
+      <Polish>Wpływa na to jak stabilnie SI trzyma broń (Wyższa wartość = mniej "kołysania" się broni).</Polish>
+    </Key>
+    <Key ID="STR_ENH_AIMINGSPEED_DISPLAYNAME">
+      <Original>Aiming Speed</Original>
+      <Polish>Szybkość celownia</Polish>
+    </Key>
+    <Key ID="STR_ENH_AIMINGSPEED_TOOLTIP">
+      <Original>Affects how quickly the AI can rotate and stabilize its aim (Higher value = faster, less error).</Original>
+      <Polish>Wpływa na to jak szybko SI może się obrócić i ustabilizować na celu (Wyższa wartość = szybciej, i efektywniej)</Polish>
+    </Key>
+    <Key ID="STR_ENH_AIMINGACCURACY_DISPLAYNAME">
+      <Original>Aiming Accuracy</Original>
+      <Polish>Precyzyjność celownia</Polish>
+    </Key>
+    <Key ID="STR_ENH_AIMINGACCURACY_TOOLTIP">
+      <Original>Affects how precise an AI will shoot (Higher value = higher precision).</Original>
+      <Polish>Wpływa na to jak prezycyjnie SI będzie strzelało (Wyższa wartość = wyższa precyzja)</Polish>
+    </Key>
+    <Key ID="STR_ENH_COMMANDING_DISPLAYNAME">
+      <Original>Commanding</Original>
+      <Polish>Dowodzenie</Polish>
+    </Key>
+    <Key ID="STR_ENH_COMMANDING_TOOLTIP">
+      <Original>Affects how quickly recognized targets are shared with the group (Higher value = faster reporting).</Original>
+      <Polish>Wpływa na to jak szybko SI rozpozna cel i podzięli się informacją z grupą (Wyższa wartość = szybsze informowanie)</Polish>
+    </Key>
+    <Key ID="STR_ENH_COURAGE_DISPLAYNAME">
+      <Original>Courage</Original>
+      <Polish>Odwaga</Polish>
+    </Key>
+    <Key ID="STR_ENH_COURAGE_TOOLTIP">
+      <Original>Affects unit's subordinates' morale (Higher value = more courage).</Original>
+      <Polish>Wpływa na morale podwładnych (Wyższa wartość = więcej odwagi)</Polish>
+    </Key>
+    <Key ID="STR_ENH_GENERAL_DISPLAYNAME">
+      <Original>General</Original>
+      <Polish>Ogólne</Polish>
+    </Key>
+    <Key ID="STR_ENH_GENERAL_TOOLTIP">
+      <Original>Affects the AI's decision making.</Original>
+      <Polish>Wpływa na podejmowanie decyzji przez AI</Polish>
+    </Key>
+    <Key ID="STR_ENH_RELOADSPEED_DISPLAYNAME">
+      <Original>Reload Speed</Original>
+      <Polish>Szybkość przeładowania</Polish>
+    </Key>
+    <Key ID="STR_ENH_RELOADSPEED_TOOLTIP">
+      <Original>Affects the delay between switching or reloading a weapon. (Higher value = less delay).</Original>
+      <Polish>Wpływa na opóźnienie pomiędzy zmianą lub przeładowaniem broni. (Wyższa wartość = mniejsze opóźnienie).</Polish>
+    </Key>
+    <Key ID="STR_ENH_SPOTDISTANCE_DISPLAYNAME">
+      <Original>Spot Distance</Original>
+      <Polish>Zasięg wykrycia</Polish>
+    </Key>
+    <Key ID="STR_ENH_SPOTDISTANCE_TOOLTIP">
+      <Original>Affects the AI's ability to spot targets within it's visual or audible range and also affects the accuracy of the information (Higher value = better spotting, more accurate information).</Original>
+      <Polish> Wpływa na zdolność SI do wykrycia celów w zasięgu wzroku czy dźwieku i także wpływa na dokładność tej informacji. </Polish>
+    </Key>
+    <Key ID="STR_ENH_SPOTTIME_DISPLAYNAME">
+      <Original>Spot Time</Original>
+      <Polish>Czas wykrycia</Polish>
+    </Key>
+    <Key ID="STR_ENH_SPOTTIME_TOOLTIP">
+      <Original>Affects how quick the AI react to death, damage or observing an enemy (Higher value = quicker reaction).</Original>
+      <Polish>Wpływa na to jak szybko SI reaguje na śmierc, uszkodzenie czy zaobserwowanie przeciwnika (Wyższa wartość = szybsza reakcja).</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_MINEDETECTION_DISPLAYNAME">
+      <Original>Mine Detection</Original>
+      <Polish>Wykrycie min</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_WEAPONAIM_DISPLAYNAME">
+      <Original>Weapon Aim</Original>
+      <Polish>Celowanie</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_MOVE_DISPLAYNAME">
+      <Original>Move</Original>
+      <Polish>Ruch</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_MOVE_TOOLTIP">
+      <Original>Disables AI's ability to move.</Original>
+      <Polish>Wyłącza możliwość ruchu SI.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_TARGET_DISPLAYNAME">
+      <Original>Target</Original>
+      <Polish>Wybieranie celów</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_TARGET_TOOLTIP">
+      <Original>Disables AI's ability to target.</Original>
+      <Polish>Wyłącza mozliwość celowania przez SI.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_COVER_DISPLAYNAME">
+      <Original>Cover</Original>
+      <Polish>Krycie się</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_COVER_TOOLTIP">
+      <Original>Disables AI's ability to take cover.</Original>
+      <Polish>Wyłącza możliwość krycia się przez SI.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_AUTOTARGET_DISPLAYNAME">
+      <Original>Autotarget</Original>
+      <Polish>Automatyczny cel</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_AUTOTARGET_TOOLTIP">
+      <Original>Disables AI's ability automatically assign targets.</Original>
+      <Polish>Wyłącza zdolność do automatycznego przydzielania celów przez SI.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_ANIM_TOOLTIP">
+      <Original>Disables animations.</Original>
+      <Polish>Wyłącza animacje.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_ANIM_DISPLAYNAME">
+      <Original>Animation</Original>
+      <Polish>Animacja</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_FSM_TOOLTIP">
+      <Original>Disable the execution of AI behaviour scripts.</Original>
+      <Polish>Wyłącza wykonywanie skryptów zachowawczych SI.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_AIMINGERROR_DISPLAYNAME">
+      <Original>Aiming Error</Original>
+      <Polish>Błąd celowania</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_AIMINGERROR_TOOLTIP">
+      <Original>Prevents AI's aiming from being distracted by its shooting, moving, turning, reloading, hit, injury, fatigue, suppression or concealed/lost target.</Original>
+      <Polish>Zapobiega SI przed byciem rozproszonym przez strzelanie, przemieszczanie, obracanie, przeładowywanie, rany, zmęczenie. przygwożdżenie czy utratą widoku na cel. </Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_TEAMSWITCH_DISPLAYNAME">
+      <Original>Team Switch</Original>
+      <Polish>Zmiana strony</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_TEAMSWITCH_TOOLTIP">
+      <Original>AI disabled because of Team Switch.</Original>
+      <Polish>SI jest wyłączone z powodu "Zmiany strony".</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_RAYCASTS_DISPLAYNAME">
+      <Original>Raycasts</Original>
+      <Polish>Dzielenie się informacjami.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_RAYCASTS_TOOLTIP">
+      <Original>Disables visibility raycasts.</Original>
+      <Polish>Wyłącza zdolność SI do informowania swoich jednostek o wykrytych celach czy obiektach.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_SUPPRESSION_DISPLAYNAME">
+      <Original>Suppression</Original>
+      <Polish>Przygwożdżenie</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_SUPPRESSION_TOOLTIP">
+      <Original>Prevents AI from being suppressed.</Original>
+      <Polish>Zapobiega SI przed byciem przygwożdżonym.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_AUTOCOMBAT_DISPLAYNAME">
+      <Original>Autocombat</Original>
+      <Polish>Automatyczna walka</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_PATH_DISPLAYNAME">
+      <Original>Path</Original>
+      <Polish>Ścieżka</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_PATH_TOOLTIP">
+      <Original>Stops the AI’s movement but not the target alignment.</Original>
+      <Polish>Zatrzymuje ruch SI ale nie celowanie.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_AUTOCOMBAT_TOOLTIP">
+      <Original>Disables autonomous switching to COMBAT when in danger.</Original>
+      <Polish>Wyłącza automatyczną zmiane do "WALKI" w momencie zagrożenia.</Polish>
+    </Key>
+    <Key ID="STR_ENH_ENGINEON_DISPLAYNAME">
+      <Original>Engine on/off</Original>
+      <Polish>Silnik włączony/wyłączony</Polish>
+    </Key>
+    <Key ID="STR_ENH_LIMITSPEED_DISPLAYNAME">
+      <Original>Speed Limit</Original>
+      <Polish>Limit prędkość</Polish>
+    </Key>
+    <Key ID="STR_ENH_LIMITSPEED_TOOLTIP">
+      <Original>Limit speed of given vehicle or person to given value (in km/h). Does only work for AI controlled vehicles.</Original>
+      <Polish>Limituje prędkość danego pojazdu lub osoby do danej wartości (w km/h). Działa tylko w pojazdach kontrolowanych przez SI.</Polish>
+    </Key>
+    <Key ID="STR_ENH_MAKEHOSTAGE_DISPLAYNAME">
+      <Original>Make Hostage</Original>
+      <Polish>Stwórz jako zakładnik</Polish>
+    </Key>
+    <Key ID="STR_ENH_MAKEHOSTAGE_TOOLTIP">
+      <Original>Makes the unit a hostage and adds a 'Free Hostage' action. Whether the unit is still hostage can be checked with _unitName getVariable 'ENH_isHostage';</Original>
+      <Polish>Sprawia że jednostka staję się zakładnikiem i dodaje opcje 'Uwolnij zakładnika'. Czy jednostka jest dalej zakładnikiem można sprawdzić przy pomocy _unitName getVariable 'ENH_isHostage'; </Polish>
+    </Key>
+    <Key ID="STR_ENH_UNITTRAITS_MEDIC_DISPLAYNAME">
+      <Original>Is Medic?</Original>
+      <Polish>Jest medykiem?</Polish>
+    </Key>
+    <Key ID="STR_ENH_UNITTRAITS_MEDIC_TOOLTIP">
+      <Original>Defines whether the unit can fully heal other units.</Original>
+      <Polish>Definiuje czy jednostka może w pełni leczyć inne jednostki.</Polish>
+    </Key>
+    <Key ID="STR_ENH_UNITTRAITS_ENGINEER_DISPLAYNAME">
+      <Original>Is Engineer?</Original>
+      <Polish>Jest inżynierem?</Polish>
+    </Key>
+    <Key ID="STR_ENH_UNITTRAITS_ENGINEER_TOOLTIP">
+      <Original>Defines whether or not the unit can repair vehicles.</Original>
+      <Polish>Definiuje czy jednostka może lub nie naprawiać pojazdy</Polish>
+    </Key>
+    <Key ID="STR_ENH_UNITTRAITS_EXPLOSIVESPECIALIST_DISPLAYNAME">
+      <Original>Is Explosive Specialist?</Original>
+      <Polish>Jest saperem?</Polish>
+    </Key>
+    <Key ID="STR_ENH_UNITTRAITS_EXPLOSIVESPECIALIST_TOOLTIP">
+      <Original>Defines whether the unit can defuse explosives.</Original>
+      <Polish>Definiuje czy jednostka może rozbrajać ładunki wybuchowe.</Polish>
+    </Key>
+    <Key ID="STR_ENH_UNITTRAITS_UAVHACKER_DISPLAYNAME">
+      <Original>Is UAV Hacker?</Original>
+      <Polish>Czy jest hakerem BSP?</Polish>
+    </Key>
+    <Key ID="STR_ENH_UNITTRAITS_UAVHACKER_TOOLTIP">
+      <Original>Defines whether the unit can hack hostile UAVs.</Original>
+      <Polish>Definiuje czy jednostka może hakować wrogie BSP.</Polish>
+    </Key>
+    <Key ID="STR_ENH_CAMOUFLAGECOEF_DISPLAYNAME">
+      <Original>Camouflage Coefficent</Original>
+      <Polish>Współczynnik kamuflażu</Polish>
+    </Key>
+    <Key ID="STR_ENH_CAMOUFLAGECOEF_TOOLTIP">
+      <Original>The camouflage coefficent determines how easy an unit can be spotted by AI. A lower value means it's more difficult to spot it.</Original>
+      <Polish>Współczynnik kamuflażu określa jak łatwo jednostka może być wykryta przez SI. Mniejsza wartość oznacz iż jednostka jest trudniejsza do wykrycia.</Polish>
+    </Key>
+    <Key ID="STR_ENH_AUDIBLECOEF_DISPLAYNAME">
+      <Original>Audible Coefficient</Original>
+      <Polish>Współczynnik słyszalności</Polish>
+    </Key>
+    <Key ID="STR_ENH_AUDIBLECOEF_TOOLTIP">
+      <Original>The audible coefficient determines how easy a unit can be heard by AI. A lower value means it's more difficult to hear it.</Original>
+      <Polish>Współczynnik słyszalności określa jak łatwo SI może usłyszeć gracza. Im mniejsza wartość tym trudniej usłyszeć gracza. </Polish>
+    </Key>
+    <Key ID="STR_ENH_LOADCOEF_DISPLAYNAME">
+      <Original>Load Coefficient</Original>
+      <Polish>Wpływ obciążenia</Polish>
+    </Key>
+    <Key ID="STR_ENH_LOADCOEF_TOOLTIP">
+      <Original>The load coefficient determines how much influence the unit's loadout weight has on it's stamina. A higher value means the weight has a higher influence.</Original>
+      <Polish>Wpływ obciążenia ustala jak duży wpływ ma waga na stamine jednostki. Wyższa wartość oznacza większy wpływ wagi na stamine.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLENVGEQUIPMENT_TOOLTIP">
+      <Original>If enabled, night vision optics can no longer be used.</Original>
+      <Polish>Jeżeli włączone, optyka noktowizyjna nie może być używana.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLENVGEQUIPMENT_DISPLAYNAME">
+      <Original>Disable NVG Equipment</Original>
+      <Polish>Wyłącza wyposażenie noktowizyjne</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLETIEQUIPMENT_DISPLAYNAME">
+      <Original>Disable Thermal Optics</Original>
+      <Polish>Wyłącza optyke termowizyjną</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLETIEQUIPMENT_TOOLTIP">
+      <Original>If enabled, thermal optics can no longer be used.</Original>
+      <Polish>Jeżeli włączone, optyka termowizyjna nie może być używana.</Polish>
+    </Key>
+    <Key ID="STR_ENH_ALLOWFLEEING_DISPLAYNAME">
+      <Original>Fleeing Coefficient</Original>
+      <Polish>Tchórzostwo</Polish>
+    </Key>
+    <Key ID="STR_ENH_ALLOWFLEEING_TOOLTIP">
+      <Original>Sets the cowardice level (the lack of courage or bravery) of the unit. The more cowardice the unit has, the sooner it will start fleeing. 0 means maximum courage, while 1 means always fleeing.</Original>
+      <Polish>Ustawia poziom tchórzostwa (niedostatek odwagi czy męstwa) jednostki. Im więcej tchórzostwa posiada jednostka tym wcześniej zaczną uciekać. 0 oznacza maksymalną odwage, a 1 minimalną, czyli zawsze będą uciekać.</Polish>
+    </Key>
+    <Key ID="STR_ENH_SETMASS_DISPLAYNAME">
+      <Original>Unladen Weight</Original>
+      <Polish>Waga własna</Polish>
+    </Key>
+    <Key ID="STR_ENH_SETMASS_TOOLTIP">
+      <Original>Change the original mass value from 0% - 100%. Keep in mind that too low values can cause unwanted behaviour.</Original>
+      <Polish>Zmienia oryginalną wartość wagi od 0% - 100%. Pamietaj że zbyt mała wartość może przynieść niechciane zachowania. </Polish>
+    </Key>
+    <Key ID="STR_ENH_FORCEWALK_DISPLAYNAME">
+      <Original>Force Walking</Original>
+      <Polish>Wymuś chodzenie</Polish>
+    </Key>
+    <Key ID="STR_ENH_FEATURETYPE_DISPLAYNAME">
+      <Original>Visibility</Original>
+      <Polish>Widoczność</Polish>
+    </Key>
+    <Key ID="STR_ENH_FEATURETYPE_TOOLTIP">
+      <Original>Defines the visibility of the object.</Original>
+      <Polish>Określa widoczność obiektu.</Polish>
+    </Key>
+    <Key ID="STR_ENH_REMOVEFROMREMAINSCOLLECTOR_DISPLAYNAME">
+      <Original>Disable Deletion on Death</Original>
+      <Polish>Wyłącza usunięcie przy śmierci.</Polish>
+    </Key>
+    <Key ID="STR_ENH_REMOVEFROMREMAINSCOLLECTOR_TOOLTIP">
+      <Original>The object won't be deleted after death or destruction.</Original>
+      <Polish>Obiekt nie będzie usunięty przy śmierci lub zniszczeniu.</Polish>
+    </Key>
+    <Key ID="STR_ENH_NOTIFICATIONS_ACTIONPERFORMED">
+      <Original>Action performed!</Original>
+      <Polish>Akcja wykonana!</Polish>
+    </Key>
+    <Key ID="STR_ENH_NOTIFICATIONS_NOENTITIESSELECTED">
+      <Original>No entities selected. Action cancelled!</Original>
+    </Key>
+    <Key ID="STR_ENH_ENABLE">
+      <Original>Enable</Original>
+      <Polish>Włącz</Polish>
+    </Key>
+    <Key ID="STR_ENH_STATUSBAR_SESSIONTIMER_TOOLTIP">
+      <Original>Session Time</Original>
+      <Polish>Czas sesji</Polish>
+    </Key>
+    <Key ID="STR_ENH_ESTABLISHINGSHOT_CENTERPOS_DISPLAYNAME">
+      <Original>Center Position</Original>
+      <Polish>Pozycja środkowa</Polish>
+    </Key>
+    <Key ID="STR_ENH_ESTABLISHINGSHOT_CENTERPOS_TOOLTIP">
+      <Original>The center position of the virtual UAV's orbit.</Original>
+      <Polish>Pozycja środkowa orbity wirtualnego BSP</Polish>
+    </Key>
+    <Key ID="STR_ENH_ESTABLISHINGSHOT_DISPLAYEDTEXT">
+      <Original>Displayed Text</Original>
+      <Polish>Wyświetlany tekst</Polish>
+    </Key>
+    <Key ID="STR_ENH_ESTABLISHINGSHOT_ALTITUDE_DISPLAYNAME">
+      <Original>Altitude</Original>
+      <Polish>Wysokość</Polish>
+    </Key>
+    <Key ID="STR_ENH_ESTABLISHINGSHOT_RADIUS_DISPLAYNAME">
+      <Original>Radius of the Orbit</Original>
+      <Polish>Promień orbity</Polish>
+    </Key>
+    <Key ID="STR_ENH_ESTABLISHINGSHOT_VIEWINGANGLE_DISPLAYNAME">
+      <Original>Viewing Angle</Original>
+      <Polish>Kąt widzenia</Polish>
+    </Key>
+    <Key ID="STR_ENH_INTROTEXT_INTRODELAY_DISPLAYNAME">
+      <Original>Delay</Original>
+      <Polish>Opóźnienie</Polish>
+    </Key>
+    <Key ID="STR_ENH_INTROTEXT_INTRODELAY_TOOLTIP">
+      <Original>Defines how much time has to pass until the intro text is shown. Setting it to 0 will disable the intro.</Original>
+      <Polish>Określa jak dużo czasu musi minąć zanim wyświetli się tekst intro. Ustawienie 0 wyłączy intro.</Polish>
+    </Key>
+    <Key ID="STR_ENH_INTROTEXT_LINE1_DISPLAYNAME">
+      <Original>First Line</Original>
+      <Polish>Pierwsza linia</Polish>
+    </Key>
+    <Key ID="STR_ENH_INTROTEXT_LINE2_DISPLAYNAME">
+      <Original>Second Line</Original>
+      <Polish>Druga linia</Polish>
+    </Key>
+    <Key ID="STR_ENH_INTROTEXT_LINE3_DISPLAYNAME">
+      <Original>Third Line</Original>
+      <Polish>Trzecia linia</Polish>
+    </Key>
+    <Key ID="STR_ENH_INTROTEXT_INTROTYPE_DISPLAYNAME">
+      <Original>Intro Type</Original>
+    </Key>
+    <Key ID="STR_ENH_TERRAINGRID_GRASSDISABLED_DISPLAYNAME">
+      <Original>Grass disabled</Original>
+      <Polish>Trawa wyłączona</Polish>
+    </Key>
+    <Key ID="STR_ENH_TERRAINGRID_STANDARD_DISPLAYNAME">
+      <Original>Standard</Original>
+      <Polish>Standardowe</Polish>
+    </Key>
+    <Key ID="STR_ENH_TERRAINGRID_HIGH_DISPLAYNAME">
+      <Original>High</Original>
+      <Polish>Wysokie</Polish>
+    </Key>
+    <Key ID="STR_ENH_TERRAINGRID_ULTRA_DISPLAYNAME">
+      <Original>Ultra</Original>
+      <Polish>Ultra</Polish>
+    </Key>
+    <Key ID="STR_ENH_TERRAINGRID_VERYHIGH_DISPLAYNAME">
+      <Original>Very  High</Original>
+      <Polish>Bardzo wysokie</Polish>
+    </Key>
+    <Key ID="STR_ENH_FEATURETYPE_OBJECTVIEWDISTANCE_TEXT">
+      <Original>Limit by Object View Distance</Original>
+      <Polish>Limitowane przez zasięg rysowania obiektów</Polish>
+    </Key>
+    <Key ID="STR_ENH_FEATURETYPE_OBJECTVIEWDISTANCE_TOOLTIP">
+      <Original>Object is always visible within object view distance.</Original>
+      <Polish>Obiekt jest zawsze widoczny wewnątrz zasięgu rysowania obiektów.</Polish>
+    </Key>
+    <Key ID="STR_ENH_FEATURETYPE_TERRAINVIEWDISTANCE_TEXT">
+      <Original>Limit by Terrain View Distance</Original>
+      <Polish>Limitowane przez zasięg rysowania mapy.</Polish>
+    </Key>
+    <Key ID="STR_ENH_FEATURETYPE_TERRAINVIEWDISTANCE_TOOLTIP">
+      <Original>Object is always visible within terrain view distance.</Original>
+      <Polish>Obiekt jest zawsze widoczne wewnątrz zasięgu rysowania mapy.</Polish>
+    </Key>
+    <Key ID="STR_ENH_ATTRIBUTECATEGORY_ADVANCEDDAMAGE">
+      <Original>Advanced Damage</Original>
+      <Polish>Zaaawansowane uszkodzenia</Polish>
+    </Key>
+    <Key ID="STR_ENH_ATTRIBUTECATEGORY_VOLUME">
+      <Original>Music, Sound &amp; Radio Settings</Original>
+      <Polish>Ustawienia muzyki, dźwieku &amp; radia</Polish>
+    </Key>
+    <Key ID="STR_ENH_ATTRIBUTECATEGORY_VISUALSETTINGS">
+      <Original>Visual Settings</Original>
+      <Polish>Ustawienia grafiki</Polish>
+    </Key>
+    <Key ID="STR_ENH_ATTRIBUTECATEGORY_ADVANCEDSKILL">
+      <Original>Advanced Skill Settings</Original>
+      <Polish>Zaawansowane ustawienia skilla</Polish>
+    </Key>
+    <Key ID="STR_ENH_ATTRIBUTECATEGORY_DISABLEAI">
+      <Original>Disable AI Features</Original>
+      <Polish>Wyłącz funkcje SI</Polish>
+    </Key>
+    <Key ID="STR_ENH_ATTRIBUTECATEGORY_UNITTRAITS">
+      <Original>Unit Traits</Original>
+      <Polish>Cechy jednostki</Polish>
+    </Key>
+    <Key ID="STR_ENH_AMBIENTFLYBY_DISPLAYNAME">
+      <Original>Ambient Flyby</Original>
+    </Key>
+    <Key ID="STR_ENH_ATTRIBUTECATEGORY_ESTABLISHINGSHOT">
+      <Original>Establishing Shot</Original>
+    </Key>
+    <Key ID="STR_ENH_ATTRIBUTECATEGORY_MAPINDICATORS">
+      <Original>Map Indicators</Original>
+    </Key>
+    <Key ID="STR_ENH_INTROTEXT_DISPLAYNAME">
+      <Original>Intro Text</Original>
+      <Polish>Tekst intro</Polish>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR">
+      <Original>Briefing Editor</Original>
+      <Polish>Edytor odprawy</Polish>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_COLOUR">
+      <Original>Colour</Original>
+      <Polish>Kolor</Polish>
+    </Key>
+    <Key ID="STR_ENH_GROUPMARKER_COLOUR">
+      <Original>Colour</Original>
+      <Polish>Kolor</Polish>
+    </Key>
+    <Key ID="STR_ENH_3DENRADIO_CLEARPLAYLIST_TEXT">
+      <Original>Clear Playlist</Original>
+      <Polish>Wyczyść liste odtwarzania</Polish>
+    </Key>
+    <Key ID="STR_ENH_3DENRADIO_EXPORTPLAYLIST_TEXT">
+      <Original>Export</Original>
+      <Polish>Eksport</Polish>
+    </Key>
+    <Key ID="STR_ENH_3DENRADIO_IMPORTPLAYLIST_TEXT">
+      <Original>Import</Original>
+      <Polish>Import</Polish>
+    </Key>
+    <Key ID="STR_ENH_3DENRADIO_HEADLINE_TITLE">
+      <Original>Title</Original>
+      <Polish>Tytuł</Polish>
+    </Key>
+    <Key ID="STR_ENH_3DENRADIO_HEADLINE_DURATION">
+      <Original>Duration</Original>
+      <Polish>Czas trwania</Polish>
+    </Key>
+    <Key ID="STR_ENH_3DENRADIO_HEADLINE_THEME">
+      <Original>Theme</Original>
+      <Polish>Motyw</Polish>
+    </Key>
+    <Key ID="STR_ENH_3DENRADIO_HEADLINE_MOD">
+      <Original>Mod</Original>
+      <Polish>Mod</Polish>
+    </Key>
+    <Key ID="STR_ENH_3DENRADIO_HELP_TEXT">
+      <Original>Help</Original>
+      <Polish>Pomoc</Polish>
+    </Key>
+    <Key ID="STR_ENH_3DENRADIO_HELP_DESCRIPTION">
+      <Original>- Double left click on a listbox entry plays the song immediately\n- Add a song to your playlist by pressing SPACE\n- Copy the class name of a song to your clipboard by pressing CTRL + C\n- Remove an entry from the Playlist by selecting it and pressing DELETE</Original>
+      <Polish>- Podwójne kliknięcie LPM na pozycje z listy spowoduje odtworzenie piosenki\n-Dodaj piosenke do playlisty poprzez naciśniecie SPACE\n-Skopiuj "class name" piosenki do schowka przy użyciu CTRL + C\nUsuń pozycje z playlisty zaznaczając ją i klikając DELETE</Polish>
+    </Key>
+    <Key ID="STR_ENH_NAMEOBJECTS">
+      <Original>Name Objects</Original>
+      <Polish>Nazwij obiekt</Polish>
+    </Key>
+    <Key ID="STR_ENH_NAMEOBJECTS_REMOVENAME">
+      <Original>Remove Name</Original>
+      <Polish>Usuń nazwe</Polish>
+    </Key>
+    <Key ID="STR_ENH_NAMEOBJECTS_STARTINDEX">
+      <Original>Start Index</Original>
+      <Polish>Start index</Polish>
+    </Key>
+    <Key ID="STR_ENH_GARRISON_NOTIFICATION">
+      <Original>Not enough empty building positions, increase the radius or the coverage.</Original>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_FILLAREA_HEADER">
+      <Original>Fill Area </Original>
+      <Polish>Wypełnij strefe</Polish>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_HEADER">
+      <Original>Settings: Pattern Tools</Original>
+      <Polish>Ustawienia: Narzedzia wzorów</Polish>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_RADIUS">
+      <Original>Radius</Original>
+      <Polish>Promień</Polish>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_LINEPATTERN_HEADER">
+      <Original>Line Pattern</Original>
+      <Polish>Wzór liniowy</Polish>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_SPACING">
+      <Original>Spacing</Original>
+      <Polish>Odstęp</Polish>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_RECTANGLE_HEADER">
+      <Original>Rectangle Pattern</Original>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_A">
+      <Original>A</Original>
+      <Polish>A</Polish>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_B">
+      <Original>B</Original>
+      <Polish>B</Polish>
+    </Key>
+    <Key ID="STR_ENH_MODULEINFORMATION_DESCRIPTION">
+      <Original>Description:</Original>
+      <Polish>Opis:</Polish>
+    </Key>
+    <Key ID="STR_ENH_MODULEINFORMATION_POSITION">
+      <Original>Position:</Original>
+      <Polish>Pozycja:</Polish>
+    </Key>
+    <Key ID="STR_ENH_MODULEINFORMATION_DUPLICATE">
+      <Original>Duplicate:</Original>
+      <Polish>Duplikat:</Polish>
+    </Key>
+    <Key ID="STR_ENH_MODULEINFORMATION_DIRECTION">
+      <Original>Direction:</Original>
+      <Polish>Kierunek:</Polish>
+    </Key>
+    <Key ID="STR_ENH_MODULEINFORMATION_SYNC">
+      <Original>Can be synced with:</Original>
+      <Polish>Może być zsynchronizowany z:</Polish>
+    </Key>
+    <Key ID="STR_ENH_MODULEINFORMATION">
+      <Original>Module Information</Original>
+      <Polish>Informacja o module</Polish>
+    </Key>
+    <Key ID="STR_ENH_TEXTUREFINDER">
+      <Original>Texture Finder</Original>
+      <Polish>Wyszukiwarka tekstur</Polish>
+    </Key>
+    <Key ID="STR_ENH_TEXTUREFINDER_UPDATELIST">
+      <Original>Update List</Original>
+    </Key>
+    <Key ID="STR_ENH_TEXTUREFINDER_FILTERJPG">
+      <Original>Hide JPG</Original>
+    </Key>
+    <Key ID="STR_ENH_TEXTUREFINDER_FILTERPAA">
+      <Original>Hide PAA</Original>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_GRID_HEADER">
+      <Original>Grid Pattern</Original>
+      <Polish>Wzór siatki</Polish>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_NUMCOLUMNS">
+      <Original>#Colums</Original>
+      <Polish>#Kolumny</Polish>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_SPACINGX">
+      <Original>Spacing X</Original>
+      <Polish>Odstęp X</Polish>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_SPACINGY">
+      <Original>Spacing Y</Original>
+      <Polish>Odstęp Y</Polish>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_CENTRALANGLE">
+      <Original>Central Angle</Original>
+      <Polish>Kąt środkowy</Polish>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_INITIALANGLE">
+      <Original>Initial Angle</Original>
+      <Polish>Kąt początkowy</Polish>
+    </Key>
+    <Key ID="STR_ENH_BATCHREPLACE">
+      <Original>Batch Replace</Original>
+    </Key>
+    <Key ID="STR_ENH_BATCHREPLACE_REPLACE">
+      <Original>Replace</Original>
+      <Polish>Zamień</Polish>
+    </Key>
+    <Key ID="STR_ENH_BATCHREPLACE_REPLACEWITH">
+      <Original>Replace with:</Original>
+      <Polish>Zamień z:</Polish>
+    </Key>
+    <Key ID="STR_ENH_BATCHREPLACE_REPLACEWITH_TOOLTIP">
+      <Original>Example: Classname_1 Classname_2 Classname_n</Original>
+      <Polish>Przykład: Classname_1 Classname_2 Classname_n</Polish>
+    </Key>
+    <Key ID="STR_ENH_BATCHREPLACE_DESCRIPTION">
+      <Original>All selected objects will be replaced by the object types you enter in the edit box below randomly.</Original>
+      <Polish>Wszystkie zaznaczone obiekty bedą losowo zamienione przez typy obiektów które wpiszesz poniżej.</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONSVIEWER_SEARCH_TOOLTIP">
+      <Original>Press CTRL + F to directly jump into the search box.</Original>
+      <Polish>Nacisnij CTRL + F aby przejść do wyszukiwarki</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONSVIEWER_HEADER">
+      <Original>3den Enhanced Functions Viewer</Original>
+      <Polish>3den Enhanced Przeglądarka funkcji</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONSVIEWER_EXPANDALL_TEXT">
+      <Original>Expand All</Original>
+      <Polish>Rozwiń wszystko</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TEXT">
+      <Original>Copy Function</Original>
+      <Polish>Skopiuj funkcje</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TOOLTIP">
+      <Original>Copies the function's code, path and name to the clipboard. Can also be triggered by pressing CTRL + X.</Original>
+      <Polish>Kopiuje kod funkcji, ścieżke i nazwe do schowka. Może też być aktywowane przez CTRL + X.</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONSVIEWER_RECOMPILEALL_TEXT">
+      <Original>Recompile All</Original>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONSVIEWER_RECOMPILEALL_TOOLTIP">
+      <Original>Recompiles all functions. This may take a moment.</Original>h&gt;
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONSVIEWER_RECOMPILESELETECTED_TEXT">
+      <Original>Recompile Selected</Original>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONSVIEWER_RECOMPILESELETECTED_TOOLTIP">
+      <Original>Recompiles currently selected function.</Original>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONSVIEWER_FUNCTIONNAME_TOOLTIP">
+      <Original>Name of the function.</Original>
+      <Polish>Nazwa funkcji.</Polish>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONSVIEWER_FUNCTIONPATH_TOOLTIP">
+      <Original>Path which leads to script file.</Original>
+      <Polish>Ścieżka która prowadzi do pliku skryptu.</Polish>
+    </Key>
+    <Key ID="STR_ENH_PATROL_DISPLAYNAME">
+      <Original>Patrol</Original>
+      <Polish>Patrol</Polish>
+    </Key>
+    <Key ID="STR_ENH_PATROL_TOOLTIP">
+      <Original>Makes the group of the selected unit patrol an area. The value defines the max. distance between two patrol waypoints.\n\n0 deactivates the patrol.</Original>
+      <Polish>Sprawia że zaznaczona grupa będzie patrolował teren. Wartości definiuje maksymalny dystans pomiędzy dwoma punktami nawigacyjnymi patrolu. \n\n0 deaktywuje patrol</Polish>
+    </Key>
+    <Key ID="STR_ENH_LOCATIONLIST_CITIES">
+      <Original>Cities &amp; Villages</Original>
+      <Polish>Miasta i wioski</Polish>
+    </Key>
+    <Key ID="STR_ENH_LOCATIONLIST_AIRPORTS">
+      <Original>Airports</Original>
+      <Polish>Lotniska</Polish>
+    </Key>
+    <Key ID="STR_ENH_LOCATIONLIST_CHAPELS">
+      <Original>Chapels</Original>
+      <Polish>Kaplice</Polish>
+    </Key>
+    <Key ID="STR_ENH_LOCATIONLIST_FUELSTATIONS">
+      <Original>Fuel Stations</Original>
+      <Polish>Stacje benzynowe</Polish>
+    </Key>
+    <Key ID="STR_ENH_LOCATIONLIST_CHURCHES">
+      <Original>Churches</Original>
+      <Polish>Kościoły</Polish>
+    </Key>
+    <Key ID="STR_ENH_LOCATIONLIST_TRANSMITTERS">
+      <Original>Transmitters</Original>
+      <Polish>Nadajniki</Polish>
+    </Key>
+    <Key ID="STR_ENH_LOCATIONLIST_HOSPITALS">
+      <Original>Hospitals</Original>
+      <Polish>Szpitale</Polish>
+    </Key>
+    <Key ID="STR_ENH_LOCATIONLIST_SHIPWRECKS">
+      <Original>Shipwrecks</Original>
+      <Polish>Wraki statków</Polish>
+    </Key>
+    <Key ID="STR_ENH_LOCATIONLIST_POWERPRODUCTION">
+      <Original>Power Production</Original>
+      <Polish>Elektrownie</Polish>
+    </Key>
+    <Key ID="STR_ENH_LOCATIONLIST_UNKNOWN">
+      <Original>Unknown</Original>
+      <Polish>Nieznane</Polish>
+    </Key>
+    <Key ID="STR_ENH_SEARCHSTATE_PLEASEWAIT">
+      <Original>Still searching. Please wait.</Original>
+      <Polish>Ciągle szukam. Proszę czekać.</Polish>
+    </Key>
+    <Key ID="STR_ENH_UPDATEPROGRESSBAR">
+      <Original>Classes searched: #%1 of #%2 Textures found: #%3</Original>
+      <Polish>Klasy znalezione: #%1 of #%2 Tekstury znalezione: #%3</Polish>
+    </Key>
+    <Key ID="STR_ENH_MEASUREDISTANCE_DATA">
+      <Original>Distance 2D/3D: %1 / %2 m Travel Time (on foot): ~ %3 min</Original>
+      <Polish>Dystans 2D/3D: %1 / %2 m Czas podróży (na piechote): ~ %3 min</Polish>
+    </Key>
+    <Key ID="STR_ENH_MEASUREDISTANCE_SELECT2NDPOINT">
+      <Original>Select second point</Original>
+      <Polish>Zaznacz drugi punkt</Polish>
+    </Key>
+    <Key ID="STR_ENH_CAPTIVE_DISPLAYNAME">
+      <Original>Enable Captive Mode</Original>
+      <Polish>Włącz tryb "Jeniec"</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_DESCRIPTION">
+      <Original>These settings help you test your scenarios during preview. They will not be saved in the mission.sqm so they won't effect your scenario when you publish it. Disabled in multiplayer.</Original>
+      <Polish>Poniższe ustawienia pozwolą ci na łatwiejsze testowanie scenariusza. Atrybuty nie zapiszą się w mission.sqm więc nie wpłyną na twój scenariusz kiedy go opublikujesz. Ustawienia są wyłączone w trybie wieloosobowym.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_AWARENESS_DISPLAYNAME">
+      <Original>Show Level of Awareness</Original>
+      <Polish>Pokaż poziom świadomości</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_DRAWICONS_DISPLAYNAME">
+      <Original>Draw Unit Icons</Original>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_DRAWICONS_TOOLTIP">
+      <Original>Draws information of nearby units and vehicles.</Original>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_AWARENESS_TOOLTIP">
+      <Original>A graphic will show how much each side knows about the player during scenario preview.</Original>
+      <Polish>Tabela pokaże ci jak dużo strony konfliktu więdzą o graczu w czasie testowania.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_ZEUS_DISPLAYNAME">
+      <Original>Enable Zeus</Original>
+      <Polish>Włącz Zeusa</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_ARSENAL_DISPLAYNAME">
+      <Original>Enable Arsenal</Original>
+      <Polish>Włącz arsenał</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_GARAGE_DISPLAYNAME">
+      <Original>Enable Virtual Garage</Original>
+      <Polish>Włącz garaż</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_INVULNERABILITY_DISPLAYNAME">
+      <Original>Enable Invulnerability</Original>
+      <Polish>Włącz nieśmiertelność</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_STAMINA_DISPLAYNAME">
+      <Original>Disable Stamina</Original>
+      <Polish>Wyłącz stamine</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_FPS_DISPLAYNAME">
+      <Original>Show FPS</Original>
+      <Polish>Pokaż FPS</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_BULLETTRACKING_DISPLAYNAME">
+      <Original>Enable Bullet Tracking</Original>
+      <Polish>Włącz śledzenie toru lotu pocisku</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_BULLETTRACKING_TOOLTIP">
+      <Original>Activates bullet tracing for player unit during scenario preview.</Original>
+      <Polish>Włącza śledzenie pocisków dla postaci gracza w czasie testowania scenariusza.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_SHOWUNITS_DISPLAYNAME">
+      <Original>Show Units</Original>
+      <Polish>Pokaż jednostki</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_SHOWUNITS_TOOLTIP">
+      <Original>All units and their movement will be visible on the map during scenario preview.</Original>
+      <Polish>Wszystkie jednostki i ich ruchy będą widoczne na mapie w trakcie testowania.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_KILLBLUFOR_DISPLAYNAME">
+      <Original>Kill Units (BLUFOR)</Original>
+      <Polish>Zabij jednostki (BLUFOR)</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_KILLUNITS_TOOLTIP">
+      <Original>Adds an entry to the action menu during scenario preview which instantly kills all units of given side.</Original>
+      <Polish>Dodaje pozycje do menu akcji w czasie testowania scenariusza która natychmiastowo zabija wszystkie jednostki danej strony.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_KILLCIVFOR_DISPLAYNAME">
+      <Original>Kill Units (CIVFOR)</Original>
+      <Polish>Zabij jednostki (CIVFOR)</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_KILLCURSOR_DISPLAYNAME">
+      <Original>Kill Cursor Target</Original>
+      <Polish>Zabij jednostke na kursorze</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_KILLCURSOR_TOOLTIP">
+      <Original>Adds an entry to the action menu during scenario preview which instantly the unit the player is looking at.</Original>
+      <Polish>Dodaje pozycje do "action menu" w czasie testowania scenariusza która natychmiastowo zabija jednostkę na którą gracz patrzy.</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_KILLINDFOR_DISPLAYNAME">
+      <Original>Kill Units (INDFOR)</Original>
+      <Polish>Zabij jednostki (INDFOR)</Polish>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_KILLOPFOR_DISPLAYNAME">
+      <Original>Kill Units (OPFOR)</Original>
+      <Polish>Zabij jednostki (OPFOR)</Polish>
+    </Key>
+    <Key ID="STR_ENH_FOLDER_ABOUT">
+      <Original>About 3den Enhanced</Original>
+      <Polish>O 3den Enhanced</Polish>
+    </Key>
+    <Key ID="STR_ENH_FOLDER_WIKI">
+      <Original>Community Wiki</Original>
+      <Polish>Wiki społeczności</Polish>
+    </Key>
+    <Key ID="STR_ENH_FOLDER_COMMUNITY">
+      <Original>Community Help</Original>
+      <Polish>Pomoc społeczności</Polish>
+    </Key>
+    <Key ID="STR_ENH_FOLDER_UTILITIES">
+      <Original>Utilities</Original>
+      <Polish>Narzędzia</Polish>
+    </Key>
+    <Key ID="STR_ENH_FOLDER_PLACEMENTTOOLS">
+      <Original>Placement Tools</Original>
+      <Polish>Narzędzia ustawiania</Polish>
+    </Key>
+    <Key ID="STR_ENH_FOLDER_DEBUGTOOLS">
+      <Original>Debug Tools</Original>
+    </Key>
+    <Key ID="STR_ENH_FOLDER_LOADOUTTOOLS">
+      <Original>Loadout Tools</Original>
+      <Polish>Narzędzia wyposażenia</Polish>
+    </Key>
+    <Key ID="STR_ENH_FOLDER_GUI">
+      <Original>GUI Tools</Original>
+      <Polish>Narzędzia interfejsu</Polish>
+    </Key>
+    <Key ID="STR_ENH_ABOUT_CHANGELOG">
+      <Original>Changelog</Original>
+      <Polish>Changelog</Polish>
+    </Key>
+    <Key ID="STR_ENH_ABOUT_FORUMS">
+      <Original>Forums</Original>
+      <Polish>Forum</Polish>
+    </Key>
+    <Key ID="STR_ENH_ABOUT_STEAM">
+      <Original>Steam</Original>
+      <Polish>Steam</Polish>
+    </Key>
+    <Key ID="STR_ENH_ABOUT_TRANSLATION">
+      <Original>Help Translating (GitHub)</Original>
+      <Polish>Pomóż tłumaczyć (GitHub)</Polish>
+    </Key>
+    <Key ID="STR_ENH_ABOUT_FAQ">
+      <Original>FAQ</Original>
+      <Polish>FAQ</Polish>
+    </Key>
+    <Key ID="STR_ENH_ABOUT_CREDITS">
+      <Original>Credits</Original>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_FUNCTIONSVIEWER">
+      <Original>3den Enhanced Functions Viewer</Original>
+      <Polish>3den Enhanced Przeglądarka funkcji</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_COPYLOADOUTS">
+      <Original>Copy Loadout/s</Original>
+      <Polish>Skopiuj wyposażenie</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_APPLYLOADOUTS">
+      <Original>Apply Loadout/s</Original>
+      <Polish>Zastosuj wyposażenie</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_EXPORTLOADOUT_CONFIG">
+      <Original>Export Loadout (Config)</Original>
+      <Polish>Eksportuj wyposażenie (konfig)</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_EXPORTLOADOUT_CFGRESPAWNINVENTORY">
+      <Original>Export Loadout (CfgRespawnInventory)</Original>
+      <Polish>Eksportuj wyposażenie (CfgRespawnInventory)</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_CIRCULARPATTERN">
+      <Original>Circular Pattern</Original>
+      <Polish>Wzór kołowy</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_REVERSEDIRECTION">
+      <Original>Reverse Direction</Original>
+      <Polish>Odwróć kierunek</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_BRIEFINGEDITOR">
+      <Original>Briefing Editor</Original>
+      <Polish>Edytor odprawy</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_RANDOMDIR">
+      <Original>Randomise Direction</Original>
+      <Polish>Losowy kierunek</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_SWITCHTIME">
+      <Original>Switch Time</Original>
+      <Polish>Czas zmiany</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_ORIENTATENORTH">
+      <Original>Orientate North</Original>
+      <Polish>Orientuj na północ</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_ORIENTATESOUTH">
+      <Original>Orientate South</Original>
+      <Polish>Orientuj na południe</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_ORIENTATEEAST">
+      <Original>Orientate East</Original>
+      <Polish>Orientuj na wschód</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_ORIENTATEWEST">
+      <Original>Orientate West</Original>
+      <Polish>Orientuj na zachód</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_LINEPATTERN">
+      <Original>Linepattern</Original>
+      <Polish>Wzór liniowy</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_TOGGLEGRASS">
+      <Original>Toggle Grass</Original>
+      <Polish>Włącz trawe</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_GRIDPATTERN">
+      <Original>Grid Pattern</Original>
+      <Polish>Wzór siatkowy</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES">
+      <Original>Export GUI Base Classes (All)</Original>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_3DEN">
+      <Original>Export GUI Base Classes (Eden only)</Original>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_DEFAULT">
+      <Original>Export GUI Base Classes (Default)</Original>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_GUITESTGRIDS">
+      <Original>Open GUI Test Grids</Original>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_MOONPHASES">
+      <Original>Moon Phases</Original>
+      <Polish>Fazy księżyca</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_JUKEBOX">
+      <Original>Jukebox</Original>
+      <Polish>Maszyna grająca</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_PRINTCONFIG">
+      <Original>Print Config</Original>
+      <Polish>Wydrukuj konfig</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_RECOMPILEFUNCTIONS">
+      <Original>Recompile Functions</Original>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_CFGDISABLEDCOMMANDS">
+      <Original>CfgDisabled Commands Template Generator</Original>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_CLEARCHAT">
+      <Original>Clear Chat</Original>
+      <Polish>Wyczyść czat</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_BATCHREPLACE">
+      <Original>Batch Replace</Original>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_DELETEEMPTYLAYERS">
+      <Original>Delete Empty Layers</Original>
+      <Polish>Usuń puste warstwy</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_PRODUCTINFO">
+      <Original>Log Game Info</Original>
+      <Polish>Zapisz informacje o grze</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_SHOWMAPIDS">
+      <Original>Show Map IDs</Original>
+      <Polish>Pokaż ID mapy</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_BATCHNAMING">
+      <Original>Name Objects</Original>
+      <Polish>Nazwij obiekty</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_TOGGLESIMPLEOBJECT">
+      <Original>Toggle Simple Object</Original>
+      <Polish>Włącz "proste obiekty"</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_TOGGLESIMULATION">
+      <Original>Toggle Simulation</Original>
+    </Key>
+    <Key ID="STR_ENH_HELP_FUNCTIONSOVERVIEW">
+      <Original>Functions Overview</Original>
+      <Polish>Przegląd funkcji</Polish>
+    </Key>
+    <Key ID="STR_ENH_HELP_KKBLOG">
+      <Original>KK's Blog</Original>
+      <Polish>Blog KK</Polish>
+    </Key>
+    <Key ID="STR_ENH_HELP_KYLANIA">
+      <Original>Script Examples by Kylania</Original>
+      <Polish>Przykłady skryptów Kylania</Polish>
+    </Key>
+    <Key ID="STR_ENH_HELP_FOCKERSSCRIPTINGTUTORIAL">
+      <Original>Focker's Scripting Tutorial</Original>
+      <Polish>Poradnik skryptowania Fockera</Polish>
+    </Key>
+    <Key ID="STR_ENH_HELP_MISSIONCAMPAIGNGUIDE">
+      <Original>Guide: Mission &amp; Campaign making</Original>
+      <Polish>Poradnik: Tworzenie misji &amp; kampanii</Polish>
+    </Key>
+    <Key ID="STR_ENH_HELP_MISSIONPRESENTATION">
+      <Original>Mission Presentation</Original>
+      <Polish>Prezentacja misji</Polish>
+    </Key>
+    <Key ID="STR_ENH_HELP_FOXHOUNDINTERNATIONAL">
+      <Original>Scripting Examples by Foxhound International</Original>
+      <Polish>Przykłady skryptów przez Foxhound International</Polish>
+    </Key>
+    <Key ID="STR_ENH_HELP_SCRIPTINGBEGINNERS">
+      <Original>Scripting for Beginners</Original>
+      <Polish>Skryptowanie dla początkujących</Polish>
+    </Key>
+    <Key ID="STR_ENH_HELP_AICOMPILATION">
+      <Original>AI Compilation List by Gunter Severloh</Original>
+    </Key>
+    <Key ID="STR_ENH_HELP_CODEOPTIMISATION">
+      <Original>Code Optimisation</Original>
+      <Polish>Optymalizacja kodu</Polish>
+    </Key>
+    <Key ID="STR_ENH_CONTEXTMENU_LOGCLASS">
+      <Original>Log Class to Clipboard</Original>
+      <Polish>Zapisz klase do schowka</Polish>
+    </Key>
+    <Key ID="STR_ENH_CONTEXTMENU_GETMODULEINFORMATION">
+      <Original>Module Information</Original>
+      <Polish>Opis modułu</Polish>
+    </Key>
+    <Key ID="STR_ENH_CONTEXTMENU_GARRISON">
+      <Original>Garrison Buildings</Original>
+      <Polish>Obsadź budynki</Polish>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_CURRENTVALUE">
+      <Original>Current Value</Original>
+      <Polish>Aktualna wartość</Polish>
+    </Key>
+    <Key ID="STR_ENH_CONTEXTMENU_SETTRIGGEROWNERPLAYER">
+      <Original>Set Player as Trigger Owner</Original>
+      <Polish>Ustaw gracza jako właściciela wyzwalacza</Polish>
+    </Key>
+    <Key ID="STR_ENH_CONTEXTMENU_DELETECREW">
+      <Original>Delete Crew</Original>
+      <Polish>Usuń załoge</Polish>
+    </Key>
+    <Key ID="STR_ENH_CONTEXTMENU_GETSIZE">
+      <Original>Get Object's Size</Original>
+      <Polish>Zmierz rozmiar obiektu</Polish>
+    </Key>
+    <Key ID="STR_ENH_CONTEXTMENU_LOGPOSITIONS2D">
+      <Original>Log Positions (2D) to Clipboard</Original>
+      <Polish>Zapisz pozycje (2D) do schowka</Polish>
+    </Key>
+    <Key ID="STR_ENH_CONTEXTMENU_LOGFACTION">
+      <Original>Log Faction Names to Clipboard</Original>
+      <Polish>Zapisz nazwy frakcji do schowka</Polish>
+    </Key>
+    <Key ID="STR_ENH_CONTEXTMENU_LOGPOSITIONS3D">
+      <Original>Log Positions (3D) to Clipboard</Original>
+      <Polish>Zapisz pozycje (3D) do schowka</Polish>
+    </Key>
+    <Key ID="STR_ENH_CONTEXTMENU_SHOW3DENID">
+      <Original>Show 3DEN Entity ID</Original>
+      <Polish>Pokaż ID bytu 3DENa</Polish>
+    </Key>
+    <Key ID="STR_ENH_CONTEXTMENU_MEASUREDISTANCE">
+      <Original>Measure Distance</Original>
+      <Polish>Mierzenie odległości</Polish>
+    </Key>
+    <Key ID="STR_ENH_CONTEXTMENU_LOGOBJECTINFO">
+      <Original>Log Object Info</Original>
+      <Polish>Zapisuje informacje o obiekcie</Polish>
+    </Key>
+    <Key ID="STR_ENH_CONTEXTMENU_LOGGRIDPOSITION">
+      <Original>Log Grid Position to Clipboard</Original>
+      <Polish>Zapisuje pozycje geograficzną do schowka</Polish>
+    </Key>
+    <Key ID="STR_ENH_CONTEXTMENU_LOGMISSIONATTRIBUTES">
+      <Original>Log Mission Attributes to Clipboard</Original>
+      <Polish>Zapisuje atrybuty misji do schowka</Polish>
+    </Key>
+    <Key ID="STR_ENH_DYNAMICGROUPS_TOOLTIP">
+      <Original>Enable the Dynamic Groups system.</Original>
+      <Polish>Pozwala na system "Dynamicznych grup"</Polish>
+    </Key>
+    <Key ID="STR_ENH_DYNAMICGROUPS_DISPLAYNAME">
+      <Original>Dynamic Groups</Original>
+      <Polish>Dynamic Groups</Polish>
+    </Key>
+    <Key ID="STR_ENH_RESPAWNTICKETS_BLUFOR_DISPLAYNAME">
+      <Original>Respawn Tickets BLUFOR</Original>
+      <Polish>Punkty odrodzenia BLUFOR</Polish>
+    </Key>
+    <Key ID="STR_ENH_RESPAWNTICKETS_INDFOR_DISPLAYNAME">
+      <Original>Respawn Tickets INDFOR</Original>
+      <Polish>Punkty odrodzenia INDFOR</Polish>
+    </Key>
+    <Key ID="STR_ENH_RESPAWNTICKETS_OPFOR_DISPLAYNAME">
+      <Original>Respawn Tickets OPFOR</Original>
+      <Polish>Punkty odrodzenia OPFOR</Polish>
+    </Key>
+    <Key ID="STR_ENH_RESPAWNTICKETS_CIVFOR_DISPLAYNAME">
+      <Original>Respawn Tickets CIVFOR</Original>
+      <Polish>Punkty odrodzenia CYW</Polish>
+    </Key>
+    <Key ID="STR_ENH_SAVELOADOUT_DISPLAYNAME">
+      <Original>Save Loadout</Original>
+      <Polish>Zapisz wyposażenie</Polish>
+    </Key>
+    <Key ID="STR_ENH_SAVELOADOUT_TOOLTIP">
+      <Original>Restores the loadout on respawn.</Original>
+      <Polish>Przywraca wyposażenie podczas odrodzenia.</Polish>
+    </Key>
+    <Key ID="STR_ENH_VIEWDISTANCE_DISPLAYNAME">
+      <Original>View Distance</Original>
+      <Polish>Zasięg widoku</Polish>
+    </Key>
+    <Key ID="STR_ENH_VIEWDISTANCE_TOOLTIP">
+      <Original>Keep in mind that this setting can be limited bei either the server or the player's visual settings. Additionally, the object view distance cannot be higher than the view distance.</Original>
+      <Polish>Pamiętaj że to ustawienie może być limitowane przez ustawienia serwera lub gracza. Dodatkowo, zasięg rysowania obiektów nie może być większy niż zasięg widzenia.</Polish>
+    </Key>
+    <Key ID="STR_ENH_OBJVIEWDISTANCE_DISPLAYNAME">
+      <Original>Object View Distance</Original>
+      <Polish>Zasięg rysowania obiektów</Polish>
+    </Key>
+    <Key ID="STR_ENH_DISABLEGRASS_DISPLAYNAME">
+      <Original>Disable Grass</Original>
+      <Polish>Wyłącz trawe</Polish>
+    </Key>
+    <Key ID="STR_ENH_TIMEMULTIPLIER_DISPLAYNAME">
+      <Original>Time Multiplier</Original>
+      <Polish>Mnożnik czasu</Polish>
+    </Key>
+    <Key ID="STR_ENH_TIMEMULTIPLIER_TOOLTIP">
+      <Original>Set how fast the time will pass.</Original>
+      <Polish>Ustaw jak szybko ma płynąć czas.</Polish>
+    </Key>
+    <Key ID="STR_ENH_HELP_ARMANETEDENTUTORIAL">
+      <Original>Eden Editor Video Tuturial</Original>
+      <Polish>Eden- Poradnik Wideo</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_PLACEMENTTOOLS">
+      <Original>Placement Tools</Original>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_CIRCULAR_HEADER">
+      <Original>Circular Pattern</Original>
+      <Polish>Wzór kołowy</Polish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_ACTIONCREATOR">
+      <Original>Action Creator</Original>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_3DENRADIO">
+      <Original>3DEN Radio</Original>
+    </Key>
+    <Key ID="STR_ENH_3DENRADIO_SONG">
+      <Original>Song:</Original>
+    </Key>
+    <Key ID="STR_ENH_3DENRADIO_SORTBYTITLE">
+      <Original>Sort by Title</Original>
+    </Key>
+    <Key ID="STR_ENH_3DENRADIO_SORTBYDURATION">
+      <Original>Sort by Duration</Original>
+    </Key>
+    <Key ID="STR_ENH_3DENRADIO_SORTBYTHEME">
+      <Original>Sort by Theme</Original>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_SHOWTITLE">
+      <Original>Show Title</Original>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_HIDETITLE">
+      <Original>Hide Title</Original>
+    </Key>
+    <Key ID="STR_ENH_TEXTUREFINDER_FILTERALL">
+      <Original>PAA &amp; JPG</Original>
+    </Key>
+    <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_APPLYATTRIBUTE">
+      <Original>Apply Attribute</Original>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_TEMPLATES">
+      <Original>Templates</Original>
+      <Polish>Szablon</Polish>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_PATH">
+      <Original>Path</Original>
+      <Polish>Ścieżka</Polish>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_BRIEFINGTITLE">
+      <Original>Title</Original>
+      <Polish>Tytuł</Polish>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_TEXT">
+      <Original>Text</Original>
+      <Polish>Tekst</Polish>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_SUBJECT">
+      <Original>Subject</Original>
+      <Polish>Temat</Polish>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_ADDPICTURE">
+      <Original>Add Picture</Original>
+      <Polish>Dodaj zdjęcie</Polish>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_LINEBREAK">
+      <Original>Linebreak</Original>
+      <Polish>Następna linia</Polish>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_CREATETEMPLATE">
+      <Original>Create Template</Original>
+      <Polish>Stwórz szablon</Polish>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_MARKER">
+      <Original>Marker</Original>
+      <Polish>Marker</Polish>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_WIDTH">
+      <Original>Width</Original>
+      <Polish>Szerokość</Polish>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_HEIGHT">
+      <Original>Height</Original>
+      <Polish>Wysokość</Polish>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_PICTURE">
+      <Original>Picture</Original>
+      <Polish>Zdjęcie</Polish>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_EXPRESSION">
+      <Original>Expression</Original>
+      <Polish>Ekspresja</Polish>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_SIZE">
+      <Original>Size</Original>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_TAGS">
+      <Original>TAGs</Original>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_ADDTAG">
+      <Original>Add TAG</Original>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_EXPORT">
+      <Original>Export</Original>
+      <Polish>Eksport</Polish>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_FONT">
+      <Original>Font</Original>
+    </Key>
+    <Key ID="STR_ENH_BRIEFINGEDITOR_TEXT_TOOLTIP">
+      <Original>This is the raw text used in 'createDiaryRecord'. It can also be used inside the 'Create Task' module to change the appearance of your tasks.</Original>
+    </Key>
+    <Key ID="STR_ENH_HELP_MISSIONOPTIMISATION">
+      <Original>Mission Optimisation</Original>
+    </Key>
+    <Key ID="STR_ENH_RESET">
+      <Original>Reset</Original>
+      <Polish>Reset</Polish>
+    </Key>
+    <Key ID="STR_ENH_ESTABLISHINGSHOT_DIRECTION_DISPLAYNAME">
+      <Original>Rotational Direction</Original>
+    </Key>
+    <Key ID="STR_ENH_ESTABLISHINGSHOT_ANTICLOCKWISE">
+      <Original>Anti-Clockwise</Original>
+    </Key>
+    <Key ID="STR_ENH_ESTABLISHINGSHOT_CLOCKWISE">
+      <Original>Clockwise</Original>
+    </Key>
+    <Key ID="STR_ENH_RESETANDDISABLE">
+      <Original>Reset and Disable</Original>
+    </Key>
+    <Key ID="STR_ENH_AIRDROP_CONDITION_TOOLTIP">
+      <Original>This condition has to be become true during the mission for the airdrop to start.</Original>
+      <Polish>Ten warunek musi być spełniony w czasie misji aby zrzut się odbył.</Polish>
+    </Key>
+    <Key ID="STR_ENH_AIRDROP_CLASSES_TOOLTIP">
+      <Original>Classes of the soldiers which should be dropped in format:\nClassname_1 Classname_2 Classname_n.</Original>
+    </Key>
+    <Key ID="STR_ENH_AMBIENTFLYBY_CLASSES_TOOLTIP">
+      <Original>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: Classname_1 Classname_2 Classname_n.</Original>
+      <Polish>Nazwy klas pojazdów które powinny być użyte do przelotów. Jeżeli będzie wprowadzone więcej klas(&gt;1), za każdym razem jeden będzie wybrany losowo. Kod musi wyglądać tak: Classname_1 Classname_2 Classname_n.</Polish>
+    </Key>
+    <Key ID="STR_ENH_SIDE_DISPLAYNAME">
+      <Original>Side</Original>
+      <Polish>Strona</Polish>
+    </Key>
+    <Key ID="STR_ENH_AMBIENTFLYBY_CLASSES_DISPLAYNAME">
+      <Original>Type of Aircraft</Original>
+      <Polish>Typ samolotu</Polish>
+    </Key>
+    <Key ID="STR_ENH_SPEED_LIMITED">
+      <Original>Limited</Original>
+    </Key>
+    <Key ID="STR_ENH_SPEED_NORMAL">
+      <Original>Normal</Original>
+    </Key>
+    <Key ID="str_enh_speed_full">
+      <Original>Full</Original>
+    </Key>
+    <Key ID="STR_ENH_ALTITUDE_DISPLAYNAME">
+      <Original>Altitude</Original>
+      <Polish>Wysokość</Polish>
+    </Key>
+    <Key ID="STR_ENH_NAMEOBJECTS_NAME">
+      <Original>Name</Original>
+    </Key>
+    <Key ID="STR_ENH_DESCRIPTION">
+      <Original>Description</Original>
+      <Polish>Opis</Polish>
+    </Key>
+    <Key ID="STR_ENH_AIRDROP_DESCRIPTION">
+      <Original>Creates an airdrop. Units with given classes and side are dropped once the condition returns true. The created units are stored in 'ENH_Airdrop_Units' variable which is available on the server machine.</Original>
+    </Key>
+    <Key ID="STR_ENH_AMBIENTFLYBY_DESCRIPTION">
+      <Original>Spawns an air unit that moves from point A to point B, never engaging nor being engaged. It is set as captive and will despawn once it reaches its destination. Flybys can be stopped by setting 'ENH_AmbientFlyby_Enabled' to false on the server machine.</Original>
+    </Key>
+    <Key ID="STR_ENH_ESTABLISHINGSHOT_DESCRIPTION">
+      <Original>Plays a fake UAV observational sequence which serves as an establishing shot. See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</Original>
+    </Key>
+    <Key ID="STR_ENH_INTROTEXT_DESCRIPTION">
+      <Original>Shows an animated text. Can be used to display mission name. Can either be &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; or &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt;.</Original>
+    </Key>
+    <Key ID="STR_ENH_GROUPMARKER_DESCRIPTION">
+      <Original>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'ENH_GroupMarker_Update' in the group's namespace to false.</Original>
+      <Polish>Pokazuje pozycje grupy na mapie. Pozycja jest aktualizowana co sekunde. Jeżeli grupa stanie się pusta, to marker zostanie usunięty. Aktualizacja może byc zatrzymana poprzez ustawienie zmiennej 'ENH_GroupMarker_Update' w 'namespace' na 'false'.</Polish>
+    </Key>
+    <Key ID="STR_ENH_MAPINDICATORS_DESCRIPTION">
+      <Original>Disables map indicators for friendly and hostile units, mines and tactical ping. Overwrites player's difficulty settings!</Original>
+      <Polish>Wyłącza indykator na mapie dla jednostek przyjaznych i wrogich, min i sygranłu taktycznego. Nadpisuje ustawienia trudności gracza!</Polish>
+    </Key>
+    <Key ID="STR_ENH_GROUPMARKER_TYPE">
+      <Original>Type</Original>
+    </Key>
+    <Key ID="STR_ENH_GROUPMARKER_SHOWGROUPSIZE">
+      <Original>Show Group Size</Original>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONSVIEWER_NUMFUNCTIONS_TOOLTIP">
+      <Original>Number of Functions</Original>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONSVIEWER_FULL">
+      <Original>Full</Original>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONSVIEWER_CATEGORIES">
+      <Original>Categories</Original>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONSVIEWER_FUNCTIONS">
+      <Original>Functions</Original>
+    </Key>
+    <Key ID="STR_ENH_FUNCTIONSVIEWER_BIKI">
+      <Original>OPEN ON BIKI</Original>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_RADIOPROTOCOL_DISPLAYNAME">
+      <Original>Radio Protocol</Original>
+    </Key>
+    <Key ID="STR_ENH_DISABLEAI_RADIOPROTOCOL_TOOLTIP">
+      <Original>Stops AI from talking and texting while still being able to issue orders.</Original>
+    </Key>
+    <Key ID="STR_ENH_PARACHUTE_DISPLAYNAME">
+      <Original>Start in Parachute</Original>
+    </Key>
+    <Key ID="STR_ENH_PARACHUTE_TOOLTIP">
+      <Original>When activated the unit will start the mission in a parachute. Start height is always 150 m.</Original>
+    </Key>
+    <Key ID="STR_ENH_HELP_MULTIPLAYERSCRIPTING">
+      <Original>Multiplayer Scripting</Original>
+    </Key>
+    <Key ID="STR_ENH_STATUSBAR_ENTITYCOUNTER_DISPLAYNAME">
+      <Original>Show Entity Counter</Original>
+    </Key>
+    <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_DISPLAYNAME">
+      <Original>Mission Ending (Casualties)</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_DISPLAYNAME">
+      <Original>Hold Action</Original>
+    </Key>
+    <Key ID="STR_ENH_GROUPMARKER_TEXT">
+      <Original>Text</Original>
+    </Key>
+    <Key ID="STR_ENH_AMBIENTANIMATIONS_DESCRIPTION">
+      <Original>Plays a selected animation set. The gear needs to be set up manually.</Original>
+    </Key>
+    <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_DESCRIPTION">
+      <Original>Ends the mission with custom ending if a certain count of entities of given side was killed. Can be used to fail mission for civilian casualties. In Multiplayer, the mission will be ended for all clients. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</Original>
+    </Key>
+    <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_DISPLAYNAME">
+      <Original>Threshold</Original>
+    </Key>
+    <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_TOOLTIP">
+      <Original>When the amount of killed entities of given side reaches the threshold, the mission is ended.</Original>
+    </Key>
+    <Key ID="STR_ENH_MISSIONENDING_ENDING_TOOLTIP">
+      <Original>Can be ending from config file or mission config (CfgDebriefing).</Original>
+    </Key>
+    <Key ID="STR_ENH_AMBIENTANIMATIONS_CANEDIT_DISPLAYNAME">
+      <Original>Can Exit?</Original>
+    </Key>
+    <Key ID="STR_ENH_AMBIENTANIMATIONS_CANEDIT_TOOLTIP">
+      <Original>If enabled, the unit will exit the animation when in danger.</Original>
+    </Key>
+    <Key ID="STR_ENH_AMBIENTANIMATIONS_ATTACH_DISPLAYNAME">
+      <Original>Attach?</Original>
+    </Key>
+    <Key ID="STR_ENH_AMBIENTANIMATIONS_ATTACH_TOOLTIP">
+      <Original>If enabled, the unit will be attached to an invisible logic. Only enable this option if you need to place the unit on top of a wall or close to an other object.</Original>
+    </Key>
+    <Key ID="STR_ENH_AMBIENTANIMATIONS_ANIMATION_DISPLAYNAME">
+      <Original>Animation</Original>
+      <Polish>Animacja</Polish>
+    </Key>
+    <Key ID="STR_ENH_AMBIENTANIMATIONS_DISPLAYNAME">
+      <Original>Ambient Animations</Original>
+      <Polish>Animacje</Polish>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_DESCRIPTION">
+      <Original>Adds a hold action to this entity. Once the action was completed it's removed for all clients. For a detailed description of this attribute see: &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_holdActionAdd'&gt;BIS_fnc_holdActionAdd&lt;/a&gt;.</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_NAME_DISPLAYNAME">
+      <Original>Name</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_ICONIDLE_DISPLAYNAME">
+      <Original>Icon Idle</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_ICONPROGRESS_DISPLAYNAME">
+      <Original>Icon Progress</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_CONDITIONSHOW_DISPLAYNAME">
+      <Original>Condition Show</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_CONDITIONSHOW_TOOLTIP">
+      <Original>Condition for the action to be shown. Passed arguments are:\n_target, _this (caller).</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_CONDITIONPROGRESS_DISPLAYNAME">
+      <Original>Condition Progress</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_CONDITIONPROGRESS_TOOLTIP">
+      <Original>Condition for the action to progress. Passed arguments are:\n_target, _caller, _actionID.</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_CODESTART_DISPLAYNAME">
+      <Original>Code Start</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_CODESTART_TOOLTIP">
+      <Original>Code executed when action starts.  Passed arguments are:\n_target, _caller, _actionID.</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_CODEPROGRESS_DISPLAYNAME">
+      <Original>Code Progress</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_CODEPROGRESS_TOOLTIP">
+      <Original>Code executed on every progress tick. Passed arguments are:\n_target, _caller, _actionID, _progress, _maxProgress.</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_CODECOMPLETE_DISPLAYNAME">
+      <Original>Code Complete</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_CODECOMPLETE_TOOLTIP">
+      <Original>Code executed on completion. Passed arguments are:\n_target, _caller, _actionID.</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_CODEINTERRUPT_DISPLAYNAME">
+      <Original>Code Interrupt</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_CODEINTERRUPT_TOOLTIP">
+      <Original>Code executed when action is interrupted. Passed arguments are:\n_target, _caller, _actionID.</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_DURATION_DISPLAYNAME">
+      <Original>Duration</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_PRIORITY_DISPLAYNAME">
+      <Original>Priority</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_SHOWUNCONSCIOUSY_DISPLAYNAME">
+      <Original>Show when Unconscious?</Original>
+    </Key>
+    <Key ID="STR_ENH_HOLDACTION_SHOWWINDOW_DISPLAYNAME">
+      <Original>Show Window</Original>
+    </Key>
+    <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_TEMPLATES">
+      <Original>Templates</Original>
+    </Key>
+    <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_ATTRIBUTES">
+      <Original>Attributes</Original>
+    </Key>
+    <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_DELETETEMPLATE">
+      <Original>Delete Template</Original>
+    </Key>
+    <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_CREATETEMPLATE">
+      <Original>Create Template from Scenario</Original>
+    </Key>
+    <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_APPLYTEMPLATE">
+      <Original>Apply Template</Original>
+    </Key>
+    <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_EXPORT">
+      <Original>Export</Original>
+      <Polish>Eksport</Polish>
+    </Key>
+    <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA_DESCRIPTION">
+      <Original>Template Description</Original>
+    </Key>
+    <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA_TITLE">
+      <Original>Title</Original>
+    </Key>
+    <Key ID="STR_ENH_YES">
+      <Original>Yes</Original>
+    </Key>
+    <Key ID="STR_ENH_NO">
+      <Original>No</Original>
+    </Key>
+    <Key ID="STR_ENH_AMBIENTANIMATIONS_UNARMED">
+      <Original>Unarmed:</Original>
+    </Key>
+    <Key ID="STR_ENH_CONTEXTMENU_LOGCLASSESSTRING">
+      <Original>Log Classes as String to Clipboard</Original>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_DRAWBUILDINGPOSITIONS">
+      <Original>Toggle Drawing of Building Positions</Original>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_SCENARIOATTRIBUTESMANAGER">
+      <Original>Scenario Attributes Manager</Original>
+    </Key>
+    <Key ID="STR_ENH_FOLDER_MISCELLANEOUS">
+      <Original>Miscellaneous Tools</Original>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_ORIENTATION">
+      <Original>Orientation</Original>
+    </Key>
+    <Key ID="STR_ENH_GARRISON_STANCE">
+      <Original>Stance</Original>
+    </Key>
+    <Key ID="STR_ENH_GARRISON_STANCE_AUTO">
+      <Original>Auto</Original>
+    </Key>
+    <Key ID="STR_ENH_GARRISON_STANCE_CROUCH">
+      <Original>Crouch</Original>
+    </Key>
+    <Key ID="STR_ENH_GARRISON_COVERAGE">
+      <Original>Coverage</Original>
+      <Polish>Pokrycie budynków</Polish>
+    </Key>
+    <Key ID="STR_ENH_GARRISON_10PERCENT">
+      <Original>10 %</Original>
+    </Key>
+    <Key ID="STR_ENH_GARRISON_25PERCENT">
+      <Original>25 %</Original>
+    </Key>
+    <Key ID="STR_ENH_GARRISON_50PERCENT">
+      <Original>50 %</Original>
+    </Key>
+    <Key ID="STR_ENH_GARRISON_100PERCENT">
+      <Original>100 %</Original>
+    </Key>
+    <Key ID="STR_ENH_GARRISON_HEADER">
+      <Original>Garrison Buildings</Original>
+      <Polish>Obsadź budynki</Polish>
+    </Key>
+    <Key ID="STR_ENH_GARRISON_STANCE_STAND">
+      <Original>Stand</Original>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_SCRIPTCOMMANDS">
+      <Original>Script Commands</Original>
+    </Key>
+    <Key ID="STR_ENH_CONTEXTMENU_CREATEEXTRACTION">
+      <Original>Create Extraction</Original>
+    </Key>
+    <Key ID="STR_ENH_EXTRACTION_LAYER">
+      <Original>Extraction</Original>
+    </Key>
+    <Key ID="STR_ENH_EXTRACTION_TRIGGERSMOKETEXT">
+      <Original>Mark LZ</Original>
+    </Key>
+    <Key ID="STR_ENH_EXTRACTION_TRIGGERSTARTEXTRACTIONTEXT">
+      <Original>Start Extraction</Original>
+    </Key>
+    <Key ID="STR_ENH_EXTRACTION_CALLEXTRACTIONMSG">
+      <Original>%2, this is %1. Requesting immediate extraction at grid position %3, over.</Original>
+    </Key>
+    <Key ID="STR_ENH_EXTRACTION_EXTRACTIONCONFIRMEDMSG">
+      <Original>%1 this is %2, coordinates received. Standby, over.</Original>
+    </Key>
+    <Key ID="STR_ENH_EXTRACTION_HEADER">
+      <Original>Extraction Creator</Original>
+    </Key>
+    <Key ID="STR_ENH_EXTRACTION_SHOWRADIOCHAT">
+      <Original>Show Radio Chat?</Original>
+    </Key>
+    <Key ID="STR_ENH_EXTRACTION_CALLSIGNREQUESTER">
+      <Original>Call Sign Requester</Original>
+    </Key>
+    <Key ID="STR_ENH_EXTRACTION_CALLSIGNTRANSPORT">
+      <Original>Call Sign Transport</Original>
+    </Key>
+    <Key ID="STR_ENH_EXTRACTION_CONDITIONSTART">
+      <Original>Condition Start</Original>
+    </Key>
+    <Key ID="STR_ENH_EXTRACTION_CONDITIONSTART_TOOLTIP">
+      <Original>Condition for the extraction to start. By default the variable ENH_Extraction_Start has to be set to true. Leave empty if you want to start it by a trigger.</Original>
+    </Key>
+    <Key ID="STR_ENH_EXTRACTION_GRENADETYPE">
+      <Original>Grenade Type</Original>
+    </Key>
+    <Key ID="STR_ENH_EXTRACTION_GRENADETYPE_TOOLTIP">
+      <Original>The landing zone is marked by this grenade type.</Original>
+    </Key>
+    <Key ID="STR_ENH_CONDITION">
+      <Original>Condition</Original>
+    </Key>
+    <Key ID="STR_ENH_EXTRACTION_CONDITION_TOOLTIP">
+      <Original>This condition has to become true for the vehicle to move to the end waypoint. By default all alive units in player's group have to be inside the pick up vehicle.</Original>
+    </Key>
+    <Key ID="STR_ENH_EXTRACTION_GRIDPOSITION">
+      <Original>Grid Position</Original>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_DRAWDLCICONS">
+      <Original>Toggle Drawing of DLC Icons</Original>
+    </Key>
+    <Key ID="STR_ENH_3DENCAM_DESCRIPTION">
+      <Original>Description...</Original>
+    </Key>
+    <Key ID="STR_ENH_3DENCAM_WRONGWORLD">
+      <Original>Incorrect world!</Original>
+    </Key>
+    <Key ID="STR_ENH_3DENCAM_SAVE">
+      <Original>Save</Original>
+    </Key>
+    <Key ID="STR_ENH_3DENCAM_HEADER">
+      <Original>3DEN Camera Positions</Original>
+    </Key>
+    <Key ID="STR_ENH_3DENCAM_HELPDELETE">
+      <Original>- To delete an entry press the DELETE key</Original>
+    </Key>
+    <Key ID="STR_ENH_3DENCAM_HELPMOVETO">
+      <Original>- To move to a selected position, double click on the entry</Original>
+    </Key>
+    <Key ID="STR_ENH_FOLDER_3RDPARTYTOOLS">
+      <Original>Third Party Tools</Original>
+    </Key>
+    <Key ID="STR_ENH_CONTEXTMENU_FIRSTPERSON">
+      <Original>Move Camera to First Person View</Original>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_CONTROLTYPES">
+      <Original>View Control Types</Original>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_CONTROLSTYLES">
+      <Original>View Control Styles</Original>
+    </Key>
+    <Key ID="STR_ENH_RADIO_PLAYLIST_TEXT">
+      <Original>Playlist</Original>
+      <Polish>Lista odtwarzania</Polish>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_RESETCENTER_TOOLTIP">
+      <Original>Reset Center.</Original>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP">
+      <Original>Sets the size of the increment when clicking the arrows next to the sliders.</Original>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_3DENCAM">
+      <Original>3DEN Camera Positions</Original>
+    </Key>
+    <Key ID="STR_ENH_OPTIONS">
+      <Original>Options</Original>
+    </Key>
+    <Key ID="STR_ENH_DEBUG_OPTIONS">
+      <Original>Debug Options</Original>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_TOGGLEAIFEATURES">
+      <Original>Toggle AI Features</Original>
+    </Key>
+    <Key ID="STR_ENH_TOGGLEAIFEATURES_NOTIFICATION">
+      <Original>AI features %1.</Original>
+    </Key>
+    <Key ID="STR_ENH_DISABLED">
+      <Original>disabled</Original>
+    </Key>
+    <Key ID="STR_ENH_ENABLED">
+      <Original>enabled</Original>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_TOGGLEDYNAMICSIMULATION">
+      <Original>Toggle Dynamic Simulation</Original>
+    </Key>
+    <Key ID="STR_ENH_FOLDER_3RDPARTYTOOLS_NODEPENDENCIES">
+      <Original>Tools that don't create dependencies</Original>
+    </Key>
+    <Key ID="STR_ENH_FOLDER_3RDPARTYTOOLS_DEPENDENCIES">
+      <Original>Tools that create dependencies</Original>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_DELETECORPSE_DISPLAYNAME">
+      <Original>Delete Corpses</Original>
+    </Key>
+    <Key ID="STR_ENH_VARIABLEVIEWER_HEADER">
+      <Original>Variable Viewer</Original>
+    </Key>
+    <Key ID="STR_ENH_VARIABLEVIEWER_VARIABLEVALUE">
+      <Original>Variable Value</Original>
+    </Key>
+    <Key ID="STR_ENH_VARIABLEVIEWER_VARIABLENAME">
+      <Original>Variable Name</Original>
+    </Key>
+    <Key ID="STR_ENH_VARIABLEVIEWER_VARIABLETYPE">
+      <Original>Variable Type</Original>
+    </Key>
+    <Key ID="STR_ENH_VARIABLEVIEWER_HIDEFUNCTIONS">
+      <Original>Hide Functions</Original>
+    </Key>
+    <Key ID="STR_ENH_VARIABLEVIEWER_DELETE">
+      <Original>Delete</Original>
+    </Key>
+    <Key ID="STR_ENH_VARIABLEVIEWER_SET_NEW">
+      <Original>Set/New</Original>
+    </Key>
+    <Key ID="STR_ENH_VARIABLEVIEWER_CONFIRM_MSG_HEADER">
+      <Original>Confirm</Original>
+    </Key>
+    <Key ID="STR_ENH_VARIABLEVIEWER_CONFIRM_MSG">
+      <Original>Are you sure?</Original>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_DISPLAYNAME">
+      <Original>Show Waypoints</Original>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_TOOLTIP">
+      <Original>Shows the waypoints of all groups on the map.</Original>
+    </Key>
+    <Key ID="STR_ENH_COLLAPSEASSETBROWSER">
+      <Original>Collapse Asset Browser on Start</Original>
+    </Key>
+    <Key ID="STR_ENH_COLLAPSEENTITYLIST">
+      <Original>Collapse Entity List on Start</Original>
+    </Key>
+    <Key ID="STR_ENH_INTERFACE">
+      <Original>Interface</Original>
+    </Key>
+    <Key ID="STR_ENH_SHOWRIGHTPANEL">
+      <Original>Show Right Panel on Start</Original>
+    </Key>
+    <Key ID="STR_ENH_SHOWLEFTPANEL">
+      <Original>Show Left Panel on Start</Original>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_NORECOIL">
+      <Original>Disable Weapon Recoil</Original>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_NOSWAY">
+      <Original>Disable Weapon Sway</Original>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_NORELOAD">
+      <Original>Disable Reload Time</Original>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_UNLIMITEDAMMO">
+      <Original>Enable Unlimited Ammunition</Original>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_DRAWVIEWDIRECTION">
+      <Original>Draw View Direction</Original>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_DRAWVIEWDIRECTION_TOOLTIP">
+      <Original>Draws the view- and aiming position of nearby units.</Original>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_TELEPORT">
+      <Original>Teleport</Original>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_TELEPORT_TOOLTIP">
+      <Original>Allows for teleportation in 3D scene. Player is always teleported to the position at the center of the screen.</Original>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_SKIPTIME">
+      <Original>Skip Time</Original>
+    </Key>
+    <Key ID="STR_ENH_DEBUGOPTIONS_TIMEMULTIPLIER">
+      <Original>Time Multiplier</Original>
+    </Key>
+    <Key ID="STR_ENH_RESPAWNTICKETS_DISPLAYNAME">
+      <Original>Respawn Tickets</Original>
+      <Polish>Punkty odrodzenia</Polish>
+    </Key>
+    <Key ID="STR_ENH_RESPAWNTICKETS_TOOLTIP">
+      <Original>Every unit can respawn as long as it hasn't run out of tickets.</Original>
+    </Key>
+    <Key ID="STR_ENH_SPR_CANDIE_DISPLAYNAME">
+      <Original>Can Die?</Original>
+    </Key>
+    <Key ID="STR_ENH_SPR_CANDIE_TOOLTIP">
+      <Original>Units can instantly die by getting shot in the head.</Original>
+    </Key>
+    <Key ID="STR_ENH_SPR_DESCRIPTION">
+      <Original>Enables player and AI to respawn in single player scenarios. Only units with Single Player Respawn enabled in their attributes are affected. For multiplayer scenarios use the multiplayer respawn system.</Original>
+    </Key>
+    <Key ID="STR_ENH_SPR_ENABLESPR">
+      <Original>Enable Single Player Respawn</Original>
+    </Key>
+    <Key ID="STR_ENH_SPR_RULESET_RANDOMPOSITION_TOOLTIP">
+      <Original>All markers with the prefix 'respawn_SIDE' count as respawn positions. For example, OPFOR units can use all markers as respawn positions named respawn_east_xxx.\n\n* respawn_east - OPFOR respawn\n* respawn_west - BLUFOR respawn\n* respawn_guerilla - INDFOR respawn\n* respawn_civilian - CIVFOR respawn</Original>
+    </Key>
+    <Key ID="STR_ENH_SPR_RULESET_NEARESTPOSITION">
+      <Original>Respawn at nearest Respawn Position</Original>
+    </Key>
+    <Key ID="STR_ENH_SPR_RULESET_RANDOMPOSITION">
+      <Original>Respawn at random Respawn Position</Original>
+    </Key>
+    <Key ID="STR_ENH_SPR">
+      <Original>Single Player Respawn</Original>
+    </Key>
+    <Key ID="STR_ENH_MISSIONENDING_DESCRIPTION">
+      <Original>Create a custom Ending condition. If the condition returns true, the mission is ended for all player with the given settings. See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_endMission'&gt;BIS_fnc_endMission&lt;/a&gt; for a full documentation. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</Original>
+    </Key>
+    <Key ID="STR_ENH_MISSIONENDING_CATEGORY_DISPLAYNNAME">
+      <Original>Custom Mission Endings</Original>
+    </Key>
+    <Key ID="STR_ENH_MISSIONENDING_ENDING_DISPLAYNAME">
+      <Original>Ending</Original>
+    </Key>
+    <Key ID="STR_ENH_MISSIONENDING_WIN_DISPLAYNAME">
+      <Original>Win?</Original>
+    </Key>
+    <Key ID="STR_ENH_MISSIONENDING_CONDITION_TOOLTIP">
+      <Original>Condition which needs to return true for the ending to be executed. The condition is checked every 10 seconds on the server.</Original>
+    </Key>
+    <Key ID="STR_ENH_MISSIONENDING_PLAYMUSIC">
+      <Original>Play Music?</Original>
+    </Key>
+  </Package>
+</Project>

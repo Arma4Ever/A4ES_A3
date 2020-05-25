@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"a3cs_common"};
+        requiredAddons[] = {"a3cs_common", "A3_3DEN", "A3_Data_F_Sams_Loadorder"};
         author = ECSTRING(main,Author);
         authors[] = {"3DEN Enhanced Team", "R3vo", "SzwedzikPL"};
         url = ECSTRING(main,URL);
@@ -14,5 +14,29 @@ class CfgPatches {
     };
 };
 
+#include "defines.hpp"
+
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
+#include "Cfg3DEN.hpp"
+#include "display3DEN.hpp"
+
+// 3DEN Enhanced
+#include "ENH\CfgFunctions.hpp"
+#include "ENH\gui\briefingEditor.hpp"
+#include "ENH\gui\3DENRadio.hpp"
+#include "ENH\gui\nameObjects.hpp"
+#include "ENH\gui\moduleInformation.hpp"
+#include "ENH\gui\textureFinder.hpp"
+#include "ENH\gui\batchReplace.hpp"
+#include "ENH\gui\functionsViewer.hpp"
+#include "ENH\gui\actionCreator.hpp"
+#include "ENH\gui\credits.hpp"
+#include "ENH\gui\placementTools.hpp"
+#include "ENH\gui\scenarioAttributesManager.hpp"
+#include "ENH\gui\scenarioAttributesManagerTemplateData.hpp"
+#include "ENH\gui\garrison.hpp"
+#include "ENH\gui\extraction.hpp"
+#include "ENH\gui\3DENCameraPositions.hpp"
+#include "ENH\gui\variableViewer.hpp"
+#include "ENH\gui\display3DENPublishMIssionSelectImage.hpp"
