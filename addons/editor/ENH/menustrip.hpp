@@ -101,7 +101,7 @@ class ENH_ToggleDrawDLCIcons {
     shortcuts[] = {INPUT_ALT_OFFSET + DIK_I};
 };
 // Vanilla
-class FunctionsViewer//Overwrites the default function viewer {
+class FunctionsViewer {
     action = "findDisplay 313 createDisplay 'ENH_FunctionsViewer'";
     data = "";
     opensNewWindow = 1;

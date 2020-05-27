@@ -87,14 +87,6 @@ class CfgFunctions {
 		};
 		class AttributeControls {
             file = PATHTOF(ENH\functions\attributeControls);
-			class ambientAnimations_onAttributeLoad;
-			class ambientAnimations_onAttributeSave;
-			class ambientAnimations_onButtonDown;
-			class featureType_onAttributeLoad;
-			class featureType_onAttributeSave;
-			class holdAction_onAttributeLoad;
-			class holdAction_onAttributeSave;
-			class holdAction_onButtonDown;
 			class timeMultiplier_onAttributeLoad;
 			class timeMultiplier_onAttributeSave;
 		};
