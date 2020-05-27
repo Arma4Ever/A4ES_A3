@@ -21,11 +21,6 @@ class Display3DEN {
             		"ENH_FirstPerson"
             	};
             };
-            class ConnectParent {
-            	items[] += {
-            		"ENH_TriggerOwnerPlayer",
-            	};
-            };
 
 			#include "ENH\contextMenu.hpp"
 		};
