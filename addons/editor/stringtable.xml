@@ -3,17 +3,6 @@
   <Package name="Editor">
   </Package>
   <Package name="ENH">
-    <Key ID="STR_ENH_TOOLS_REMOVENVGS">
-      <Original>Remove NVGs</Original>
-      <Polish>Usuń noktowizje</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_EXPORTMISSIONPARAMETERS">
-      <Original>Export Mission Parameters</Original>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_REMOVEVESTS">
-      <Original>Remove Vests</Original>
-      <Polish>Usuń kamizelki</Polish>
-    </Key>
     <Key ID="STR_ENH_DEBUGPATH_DISPLAYNAME">
       <Original>Debug Path</Original>
       <Polish>Ścieżka debugu</Polish>
@@ -114,26 +103,6 @@
     <Key ID="STR_ENH_DISABLEAI_LIGHTS_DISPLAYNAME">
       <Original>Lights</Original>
       <Polish>Latarka/źródło światła</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_GENERATESTEAMMISSIONDESCRIPTION">
-      <Original>Generate Steam Mission Description</Original>
-      <Polish>Wygeneruj Opis Misji Steam.</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_REMOVEGOGGLES">
-      <Original>Remove Goggles</Original>
-      <Polish>Usuń gogle</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_REMOVEHEADGEAR">
-      <Original>Remove Headgear</Original>
-      <Polish>Usuń nakrycie głowy</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_REMOVEWEAPONS">
-      <Original>Remove Weapons</Original>
-      <Polish>Usuń broń</Polish>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_LOADTEMPLATE_TOOLTIP">
-      <Original>Load template by double clicking. Delete it from list by pressing DELETE.</Original>
-      <Polish>Załaduj szablon poprzez podwójne kliknięcie. Usuń go z listy poprzez naciśniecie DELETE.</Polish>
     </Key>
     <Key ID="STR_ENH_GROUPINDICATOR_DISPLAYNAME">
       <Original>Show Group Indicator</Original>
@@ -765,53 +734,9 @@
       <Original>Unit Traits</Original>
       <Polish>Cechy jednostki</Polish>
     </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR">
-      <Original>Briefing Editor</Original>
-      <Polish>Edytor odprawy</Polish>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_COLOUR">
-      <Original>Colour</Original>
-      <Polish>Kolor</Polish>
-    </Key>
     <Key ID="STR_ENH_GROUPMARKER_COLOUR">
       <Original>Colour</Original>
       <Polish>Kolor</Polish>
-    </Key>
-    <Key ID="STR_ENH_3DENRADIO_CLEARPLAYLIST_TEXT">
-      <Original>Clear Playlist</Original>
-      <Polish>Wyczyść liste odtwarzania</Polish>
-    </Key>
-    <Key ID="STR_ENH_3DENRADIO_EXPORTPLAYLIST_TEXT">
-      <Original>Export</Original>
-      <Polish>Eksport</Polish>
-    </Key>
-    <Key ID="STR_ENH_3DENRADIO_IMPORTPLAYLIST_TEXT">
-      <Original>Import</Original>
-      <Polish>Import</Polish>
-    </Key>
-    <Key ID="STR_ENH_3DENRADIO_HEADLINE_TITLE">
-      <Original>Title</Original>
-      <Polish>Tytuł</Polish>
-    </Key>
-    <Key ID="STR_ENH_3DENRADIO_HEADLINE_DURATION">
-      <Original>Duration</Original>
-      <Polish>Czas trwania</Polish>
-    </Key>
-    <Key ID="STR_ENH_3DENRADIO_HEADLINE_THEME">
-      <Original>Theme</Original>
-      <Polish>Motyw</Polish>
-    </Key>
-    <Key ID="STR_ENH_3DENRADIO_HEADLINE_MOD">
-      <Original>Mod</Original>
-      <Polish>Mod</Polish>
-    </Key>
-    <Key ID="STR_ENH_3DENRADIO_HELP_TEXT">
-      <Original>Help</Original>
-      <Polish>Pomoc</Polish>
-    </Key>
-    <Key ID="STR_ENH_3DENRADIO_HELP_DESCRIPTION">
-      <Original>- Double left click on a listbox entry plays the song immediately\n- Add a song to your playlist by pressing SPACE\n- Copy the class name of a song to your clipboard by pressing CTRL + C\n- Remove an entry from the Playlist by selecting it and pressing DELETE</Original>
-      <Polish>- Podwójne kliknięcie LPM na pozycje z listy spowoduje odtworzenie piosenki\n-Dodaj piosenke do playlisty poprzez naciśniecie SPACE\n-Skopiuj "class name" piosenki do schowka przy użyciu CTRL + C\nUsuń pozycje z playlisty zaznaczając ją i klikając DELETE</Polish>
     </Key>
     <Key ID="STR_ENH_NAMEOBJECTS">
       <Original>Name Objects</Original>
@@ -1047,100 +972,6 @@
       <Original>Enable Captive Mode</Original>
       <Polish>Włącz tryb "Jeniec"</Polish>
     </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_DESCRIPTION">
-      <Original>These settings help you test your scenarios during preview. They will not be saved in the mission.sqm so they won't effect your scenario when you publish it. Disabled in multiplayer.</Original>
-      <Polish>Poniższe ustawienia pozwolą ci na łatwiejsze testowanie scenariusza. Atrybuty nie zapiszą się w mission.sqm więc nie wpłyną na twój scenariusz kiedy go opublikujesz. Ustawienia są wyłączone w trybie wieloosobowym.</Polish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_AWARENESS_DISPLAYNAME">
-      <Original>Show Level of Awareness</Original>
-      <Polish>Pokaż poziom świadomości</Polish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_DRAWICONS_DISPLAYNAME">
-      <Original>Draw Unit Icons</Original>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_DRAWICONS_TOOLTIP">
-      <Original>Draws information of nearby units and vehicles.</Original>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_AWARENESS_TOOLTIP">
-      <Original>A graphic will show how much each side knows about the player during scenario preview.</Original>
-      <Polish>Tabela pokaże ci jak dużo strony konfliktu więdzą o graczu w czasie testowania.</Polish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_ZEUS_DISPLAYNAME">
-      <Original>Enable Zeus</Original>
-      <Polish>Włącz Zeusa</Polish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_ARSENAL_DISPLAYNAME">
-      <Original>Enable Arsenal</Original>
-      <Polish>Włącz arsenał</Polish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_GARAGE_DISPLAYNAME">
-      <Original>Enable Virtual Garage</Original>
-      <Polish>Włącz garaż</Polish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_INVULNERABILITY_DISPLAYNAME">
-      <Original>Enable Invulnerability</Original>
-      <Polish>Włącz nieśmiertelność</Polish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_STAMINA_DISPLAYNAME">
-      <Original>Disable Stamina</Original>
-      <Polish>Wyłącz stamine</Polish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_FPS_DISPLAYNAME">
-      <Original>Show FPS</Original>
-      <Polish>Pokaż FPS</Polish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_BULLETTRACKING_DISPLAYNAME">
-      <Original>Enable Bullet Tracking</Original>
-      <Polish>Włącz śledzenie toru lotu pocisku</Polish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_BULLETTRACKING_TOOLTIP">
-      <Original>Activates bullet tracing for player unit during scenario preview.</Original>
-      <Polish>Włącza śledzenie pocisków dla postaci gracza w czasie testowania scenariusza.</Polish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_SHOWUNITS_DISPLAYNAME">
-      <Original>Show Units</Original>
-      <Polish>Pokaż jednostki</Polish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_SHOWUNITS_TOOLTIP">
-      <Original>All units and their movement will be visible on the map during scenario preview.</Original>
-      <Polish>Wszystkie jednostki i ich ruchy będą widoczne na mapie w trakcie testowania.</Polish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_KILLBLUFOR_DISPLAYNAME">
-      <Original>Kill Units (BLUFOR)</Original>
-      <Polish>Zabij jednostki (BLUFOR)</Polish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_KILLUNITS_TOOLTIP">
-      <Original>Adds an entry to the action menu during scenario preview which instantly kills all units of given side.</Original>
-      <Polish>Dodaje pozycje do menu akcji w czasie testowania scenariusza która natychmiastowo zabija wszystkie jednostki danej strony.</Polish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_KILLCIVFOR_DISPLAYNAME">
-      <Original>Kill Units (CIVFOR)</Original>
-      <Polish>Zabij jednostki (CIVFOR)</Polish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_KILLCURSOR_DISPLAYNAME">
-      <Original>Kill Cursor Target</Original>
-      <Polish>Zabij jednostke na kursorze</Polish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_KILLCURSOR_TOOLTIP">
-      <Original>Adds an entry to the action menu during scenario preview which instantly the unit the player is looking at.</Original>
-      <Polish>Dodaje pozycje do "action menu" w czasie testowania scenariusza która natychmiastowo zabija jednostkę na którą gracz patrzy.</Polish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_KILLINDFOR_DISPLAYNAME">
-      <Original>Kill Units (INDFOR)</Original>
-      <Polish>Zabij jednostki (INDFOR)</Polish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_KILLOPFOR_DISPLAYNAME">
-      <Original>Kill Units (OPFOR)</Original>
-      <Polish>Zabij jednostki (OPFOR)</Polish>
-    </Key>
-    <Key ID="STR_ENH_FOLDER_WIKI">
-      <Original>Community Wiki</Original>
-      <Polish>Wiki społeczności</Polish>
-    </Key>
-    <Key ID="STR_ENH_FOLDER_COMMUNITY">
-      <Original>Community Help</Original>
-      <Polish>Pomoc społeczności</Polish>
-    </Key>
     <Key ID="STR_ENH_FOLDER_UTILITIES">
       <Original>Utilities</Original>
       <Polish>Narzędzia</Polish>
@@ -1149,36 +980,9 @@
       <Original>Placement Tools</Original>
       <Polish>Narzędzia ustawiania</Polish>
     </Key>
-    <Key ID="STR_ENH_FOLDER_DEBUGTOOLS">
-      <Original>Debug Tools</Original>
-    </Key>
-    <Key ID="STR_ENH_FOLDER_LOADOUTTOOLS">
-      <Original>Loadout Tools</Original>
-      <Polish>Narzędzia wyposażenia</Polish>
-    </Key>
-    <Key ID="STR_ENH_FOLDER_GUI">
-      <Original>GUI Tools</Original>
-      <Polish>Narzędzia interfejsu</Polish>
-    </Key>
     <Key ID="STR_ENH_TOOLS_FUNCTIONSVIEWER">
       <Original>3den Enhanced Functions Viewer</Original>
       <Polish>3den Enhanced Przeglądarka funkcji</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_COPYLOADOUTS">
-      <Original>Copy Loadout/s</Original>
-      <Polish>Skopiuj wyposażenie</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_APPLYLOADOUTS">
-      <Original>Apply Loadout/s</Original>
-      <Polish>Zastosuj wyposażenie</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_EXPORTLOADOUT_CONFIG">
-      <Original>Export Loadout (Config)</Original>
-      <Polish>Eksportuj wyposażenie (konfig)</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_EXPORTLOADOUT_CFGRESPAWNINVENTORY">
-      <Original>Export Loadout (CfgRespawnInventory)</Original>
-      <Polish>Eksportuj wyposażenie (CfgRespawnInventory)</Polish>
     </Key>
     <Key ID="STR_ENH_TOOLS_CIRCULARPATTERN">
       <Original>Circular Pattern</Original>
@@ -1188,17 +992,9 @@
       <Original>Reverse Direction</Original>
       <Polish>Odwróć kierunek</Polish>
     </Key>
-    <Key ID="STR_ENH_TOOLS_BRIEFINGEDITOR">
-      <Original>Briefing Editor</Original>
-      <Polish>Edytor odprawy</Polish>
-    </Key>
     <Key ID="STR_ENH_TOOLS_RANDOMDIR">
       <Original>Randomise Direction</Original>
       <Polish>Losowy kierunek</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_SWITCHTIME">
-      <Original>Switch Time</Original>
-      <Polish>Czas zmiany</Polish>
     </Key>
     <Key ID="STR_ENH_TOOLS_ORIENTATENORTH">
       <Original>Orientate North</Original>
@@ -1220,25 +1016,9 @@
       <Original>Linepattern</Original>
       <Polish>Wzór liniowy</Polish>
     </Key>
-    <Key ID="STR_ENH_TOOLS_TOGGLEGRASS">
-      <Original>Toggle Grass</Original>
-      <Polish>Włącz trawe</Polish>
-    </Key>
     <Key ID="STR_ENH_TOOLS_GRIDPATTERN">
       <Original>Grid Pattern</Original>
       <Polish>Wzór siatkowy</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES">
-      <Original>Export GUI Base Classes (All)</Original>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_3DEN">
-      <Original>Export GUI Base Classes (Eden only)</Original>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_DEFAULT">
-      <Original>Export GUI Base Classes (Default)</Original>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_GUITESTGRIDS">
-      <Original>Open GUI Test Grids</Original>
     </Key>
     <Key ID="STR_ENH_TOOLS_MOONPHASES">
       <Original>Moon Phases</Original>
@@ -1248,34 +1028,12 @@
       <Original>Jukebox</Original>
       <Polish>Maszyna grająca</Polish>
     </Key>
-    <Key ID="STR_ENH_TOOLS_PRINTCONFIG">
-      <Original>Print Config</Original>
-      <Polish>Wydrukuj konfig</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_RECOMPILEFUNCTIONS">
-      <Original>Recompile Functions</Original>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_CFGDISABLEDCOMMANDS">
-      <Original>CfgDisabled Commands Template Generator</Original>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_CLEARCHAT">
-      <Original>Clear Chat</Original>
-      <Polish>Wyczyść czat</Polish>
-    </Key>
     <Key ID="STR_ENH_TOOLS_BATCHREPLACE">
       <Original>Batch Replace</Original>
     </Key>
     <Key ID="STR_ENH_TOOLS_DELETEEMPTYLAYERS">
       <Original>Delete Empty Layers</Original>
       <Polish>Usuń puste warstwy</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_PRODUCTINFO">
-      <Original>Log Game Info</Original>
-      <Polish>Zapisz informacje o grze</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_SHOWMAPIDS">
-      <Original>Show Map IDs</Original>
-      <Polish>Pokaż ID mapy</Polish>
     </Key>
     <Key ID="STR_ENH_TOOLS_BATCHNAMING">
       <Original>Name Objects</Original>
@@ -1287,45 +1045,6 @@
     </Key>
     <Key ID="STR_ENH_TOOLS_TOGGLESIMULATION">
       <Original>Toggle Simulation</Original>
-    </Key>
-    <Key ID="STR_ENH_HELP_FUNCTIONSOVERVIEW">
-      <Original>Functions Overview</Original>
-      <Polish>Przegląd funkcji</Polish>
-    </Key>
-    <Key ID="STR_ENH_HELP_KKBLOG">
-      <Original>KK's Blog</Original>
-      <Polish>Blog KK</Polish>
-    </Key>
-    <Key ID="STR_ENH_HELP_KYLANIA">
-      <Original>Script Examples by Kylania</Original>
-      <Polish>Przykłady skryptów Kylania</Polish>
-    </Key>
-    <Key ID="STR_ENH_HELP_FOCKERSSCRIPTINGTUTORIAL">
-      <Original>Focker's Scripting Tutorial</Original>
-      <Polish>Poradnik skryptowania Fockera</Polish>
-    </Key>
-    <Key ID="STR_ENH_HELP_MISSIONCAMPAIGNGUIDE">
-      <Original>Guide: Mission &amp; Campaign making</Original>
-      <Polish>Poradnik: Tworzenie misji &amp; kampanii</Polish>
-    </Key>
-    <Key ID="STR_ENH_HELP_MISSIONPRESENTATION">
-      <Original>Mission Presentation</Original>
-      <Polish>Prezentacja misji</Polish>
-    </Key>
-    <Key ID="STR_ENH_HELP_FOXHOUNDINTERNATIONAL">
-      <Original>Scripting Examples by Foxhound International</Original>
-      <Polish>Przykłady skryptów przez Foxhound International</Polish>
-    </Key>
-    <Key ID="STR_ENH_HELP_SCRIPTINGBEGINNERS">
-      <Original>Scripting for Beginners</Original>
-      <Polish>Skryptowanie dla początkujących</Polish>
-    </Key>
-    <Key ID="STR_ENH_HELP_AICOMPILATION">
-      <Original>AI Compilation List by Gunter Severloh</Original>
-    </Key>
-    <Key ID="STR_ENH_HELP_CODEOPTIMISATION">
-      <Original>Code Optimisation</Original>
-      <Polish>Optymalizacja kodu</Polish>
     </Key>
     <Key ID="STR_ENH_CONTEXTMENU_LOGCLASS">
       <Original>Log Class to Clipboard</Original>
@@ -1399,120 +1118,12 @@
       <Original>Set how fast the time will pass.</Original>
       <Polish>Ustaw jak szybko ma płynąć czas.</Polish>
     </Key>
-    <Key ID="STR_ENH_HELP_ARMANETEDENTUTORIAL">
-      <Original>Eden Editor Video Tuturial</Original>
-      <Polish>Eden- Poradnik Wideo</Polish>
-    </Key>
     <Key ID="STR_ENH_TOOLS_PLACEMENTTOOLS">
       <Original>Placement Tools</Original>
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_CIRCULAR_HEADER">
       <Original>Circular Pattern</Original>
       <Polish>Wzór kołowy</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_ACTIONCREATOR">
-      <Original>Action Creator</Original>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_3DENRADIO">
-      <Original>3DEN Radio</Original>
-    </Key>
-    <Key ID="STR_ENH_3DENRADIO_SONG">
-      <Original>Song:</Original>
-    </Key>
-    <Key ID="STR_ENH_3DENRADIO_SORTBYTITLE">
-      <Original>Sort by Title</Original>
-    </Key>
-    <Key ID="STR_ENH_3DENRADIO_SORTBYDURATION">
-      <Original>Sort by Duration</Original>
-    </Key>
-    <Key ID="STR_ENH_3DENRADIO_SORTBYTHEME">
-      <Original>Sort by Theme</Original>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_SHOWTITLE">
-      <Original>Show Title</Original>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_HIDETITLE">
-      <Original>Hide Title</Original>
-    </Key>
-    <Key ID="STR_ENH_TEXTUREFINDER_FILTERALL">
-      <Original>PAA &amp; JPG</Original>
-    </Key>
-    <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_APPLYATTRIBUTE">
-      <Original>Apply Attribute</Original>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_TEMPLATES">
-      <Original>Templates</Original>
-      <Polish>Szablon</Polish>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_PATH">
-      <Original>Path</Original>
-      <Polish>Ścieżka</Polish>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_BRIEFINGTITLE">
-      <Original>Title</Original>
-      <Polish>Tytuł</Polish>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_TEXT">
-      <Original>Text</Original>
-      <Polish>Tekst</Polish>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_SUBJECT">
-      <Original>Subject</Original>
-      <Polish>Temat</Polish>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_ADDPICTURE">
-      <Original>Add Picture</Original>
-      <Polish>Dodaj zdjęcie</Polish>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_LINEBREAK">
-      <Original>Linebreak</Original>
-      <Polish>Następna linia</Polish>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_CREATETEMPLATE">
-      <Original>Create Template</Original>
-      <Polish>Stwórz szablon</Polish>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_MARKER">
-      <Original>Marker</Original>
-      <Polish>Marker</Polish>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_WIDTH">
-      <Original>Width</Original>
-      <Polish>Szerokość</Polish>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_HEIGHT">
-      <Original>Height</Original>
-      <Polish>Wysokość</Polish>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_PICTURE">
-      <Original>Picture</Original>
-      <Polish>Zdjęcie</Polish>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_EXPRESSION">
-      <Original>Expression</Original>
-      <Polish>Ekspresja</Polish>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_SIZE">
-      <Original>Size</Original>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_TAGS">
-      <Original>TAGs</Original>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_ADDTAG">
-      <Original>Add TAG</Original>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_EXPORT">
-      <Original>Export</Original>
-      <Polish>Eksport</Polish>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_FONT">
-      <Original>Font</Original>
-    </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_TEXT_TOOLTIP">
-      <Original>This is the raw text used in 'createDiaryRecord'. It can also be used inside the 'Create Task' module to change the appearance of your tasks.</Original>
-    </Key>
-    <Key ID="STR_ENH_HELP_MISSIONOPTIMISATION">
-      <Original>Mission Optimisation</Original>
     </Key>
     <Key ID="STR_ENH_RESET">
       <Original>Reset</Original>
@@ -1564,9 +1175,6 @@
     </Key>
     <Key ID="STR_ENH_PARACHUTE_TOOLTIP">
       <Original>When activated the unit will start the mission in a parachute. Start height is always 150 m.</Original>
-    </Key>
-    <Key ID="STR_ENH_HELP_MULTIPLAYERSCRIPTING">
-      <Original>Multiplayer Scripting</Original>
     </Key>
     <Key ID="STR_ENH_STATUSBAR_ENTITYCOUNTER_DISPLAYNAME">
       <Original>Show Entity Counter</Original>
@@ -1660,31 +1268,6 @@
     <Key ID="STR_ENH_HOLDACTION_SHOWWINDOW_DISPLAYNAME">
       <Original>Show Window</Original>
     </Key>
-    <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_TEMPLATES">
-      <Original>Templates</Original>
-    </Key>
-    <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_ATTRIBUTES">
-      <Original>Attributes</Original>
-    </Key>
-    <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_DELETETEMPLATE">
-      <Original>Delete Template</Original>
-    </Key>
-    <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_CREATETEMPLATE">
-      <Original>Create Template from Scenario</Original>
-    </Key>
-    <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_APPLYTEMPLATE">
-      <Original>Apply Template</Original>
-    </Key>
-    <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_EXPORT">
-      <Original>Export</Original>
-      <Polish>Eksport</Polish>
-    </Key>
-    <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA_DESCRIPTION">
-      <Original>Template Description</Original>
-    </Key>
-    <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA_TITLE">
-      <Original>Title</Original>
-    </Key>
     <Key ID="STR_ENH_YES">
       <Original>Yes</Original>
     </Key>
@@ -1699,9 +1282,6 @@
     </Key>
     <Key ID="STR_ENH_TOOLS_DRAWBUILDINGPOSITIONS">
       <Original>Toggle Drawing of Building Positions</Original>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_SCENARIOATTRIBUTESMANAGER">
-      <Original>Scenario Attributes Manager</Original>
     </Key>
     <Key ID="STR_ENH_FOLDER_MISCELLANEOUS">
       <Original>Miscellaneous Tools</Original>
@@ -1819,12 +1399,6 @@
     <Key ID="STR_ENH_CONTEXTMENU_FIRSTPERSON">
       <Original>Move Camera to First Person View</Original>
     </Key>
-    <Key ID="STR_ENH_TOOLS_CONTROLTYPES">
-      <Original>View Control Types</Original>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_CONTROLSTYLES">
-      <Original>View Control Styles</Original>
-    </Key>
     <Key ID="STR_ENH_RADIO_PLAYLIST_TEXT">
       <Original>Playlist</Original>
       <Polish>Lista odtwarzania</Polish>
@@ -1841,59 +1415,11 @@
     <Key ID="STR_ENH_OPTIONS">
       <Original>Options</Original>
     </Key>
-    <Key ID="STR_ENH_DEBUG_OPTIONS">
-      <Original>Debug Options</Original>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_TOGGLEAIFEATURES">
-      <Original>Toggle AI Features</Original>
-    </Key>
-    <Key ID="STR_ENH_TOGGLEAIFEATURES_NOTIFICATION">
-      <Original>AI features %1.</Original>
-    </Key>
     <Key ID="STR_ENH_DISABLED">
       <Original>disabled</Original>
     </Key>
     <Key ID="STR_ENH_ENABLED">
       <Original>enabled</Original>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_TOGGLEDYNAMICSIMULATION">
-      <Original>Toggle Dynamic Simulation</Original>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_DELETECORPSE_DISPLAYNAME">
-      <Original>Delete Corpses</Original>
-    </Key>
-    <Key ID="STR_ENH_VARIABLEVIEWER_HEADER">
-      <Original>Variable Viewer</Original>
-    </Key>
-    <Key ID="STR_ENH_VARIABLEVIEWER_VARIABLEVALUE">
-      <Original>Variable Value</Original>
-    </Key>
-    <Key ID="STR_ENH_VARIABLEVIEWER_VARIABLENAME">
-      <Original>Variable Name</Original>
-    </Key>
-    <Key ID="STR_ENH_VARIABLEVIEWER_VARIABLETYPE">
-      <Original>Variable Type</Original>
-    </Key>
-    <Key ID="STR_ENH_VARIABLEVIEWER_HIDEFUNCTIONS">
-      <Original>Hide Functions</Original>
-    </Key>
-    <Key ID="STR_ENH_VARIABLEVIEWER_DELETE">
-      <Original>Delete</Original>
-    </Key>
-    <Key ID="STR_ENH_VARIABLEVIEWER_SET_NEW">
-      <Original>Set/New</Original>
-    </Key>
-    <Key ID="STR_ENH_VARIABLEVIEWER_CONFIRM_MSG_HEADER">
-      <Original>Confirm</Original>
-    </Key>
-    <Key ID="STR_ENH_VARIABLEVIEWER_CONFIRM_MSG">
-      <Original>Are you sure?</Original>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_DISPLAYNAME">
-      <Original>Show Waypoints</Original>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_TOOLTIP">
-      <Original>Shows the waypoints of all groups on the map.</Original>
     </Key>
     <Key ID="STR_ENH_COLLAPSEASSETBROWSER">
       <Original>Collapse Asset Browser on Start</Original>
@@ -1909,36 +1435,6 @@
     </Key>
     <Key ID="STR_ENH_SHOWLEFTPANEL">
       <Original>Show Left Panel on Start</Original>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_NORECOIL">
-      <Original>Disable Weapon Recoil</Original>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_NOSWAY">
-      <Original>Disable Weapon Sway</Original>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_NORELOAD">
-      <Original>Disable Reload Time</Original>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_UNLIMITEDAMMO">
-      <Original>Enable Unlimited Ammunition</Original>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_DRAWVIEWDIRECTION">
-      <Original>Draw View Direction</Original>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_DRAWVIEWDIRECTION_TOOLTIP">
-      <Original>Draws the view- and aiming position of nearby units.</Original>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_TELEPORT">
-      <Original>Teleport</Original>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_TELEPORT_TOOLTIP">
-      <Original>Allows for teleportation in 3D scene. Player is always teleported to the position at the center of the screen.</Original>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_SKIPTIME">
-      <Original>Skip Time</Original>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_TIMEMULTIPLIER">
-      <Original>Time Multiplier</Original>
     </Key>
     <Key ID="STR_ENH_RESPAWNTICKETS_DISPLAYNAME">
       <Original>Respawn Tickets</Original>

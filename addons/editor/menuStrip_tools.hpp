@@ -4,9 +4,6 @@ class Tools
 	{
 		"ENH_Folder_Utilities",
 		"ENH_Folder_Placement",
-		"ENH_Folder_Debug",
-		"ENH_Folder_Loadout",
-		"ENH_Folder_GUI",
 		"ENH_Folder_Miscellaneous"
 	};
 };
@@ -27,70 +24,20 @@ class ENH_Folder_Placement
 		"ENH_OrientateWest"
 	};
 };
-class ENH_Folder_Debug
-{
-	text = $STR_ENH_FOLDER_DEBUGTOOLS;
-	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
-	items[] +=
-	{
-		"ENH_ProductInfo",
-		"ENH_RecompileFunctions",
-		"ENH_ToggleMapIDs",
-		"ENH_ClearChat"
-	};
-};
-class ENH_Folder_Loadout
-{
-	text = $STR_ENH_FOLDER_LOADOUTTOOLS;
-	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
-	items[] +=
-	{
-		"ENH_CopyLoadout",
-		"ENH_ApplyLoadout",
-		"ENH_ExportLoadoutConfig",
-		"ENH_ExportLoadoutCfgRespawnInventory",
-		"ENH_RemoveNVGs",
-		"ENH_RemoveVests",
-		"ENH_RemoveGoggles",
-		"ENH_RemoveHeadgear",
-		"ENH_RemoveWeapons"
-	};
-};
-class ENH_Folder_GUI
-{
-	text = $STR_ENH_FOLDER_GUI;
-	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
-	items[] +=
-	{
-		"ENH_ExportGUIBaseClassesAll",
-		"ENH_ExportGUIBaseClassesDefault",
-		"ENH_ExportGUIBaseClasses3DEN",
-		"ENH_GUITestGrids",
-		"ENH_ControlStyles",
-		"ENH_ControlTypes"
-	};
-};
 class ENH_Folder_Utilities
 {
 	text = $STR_ENH_FOLDER_UTILITIES;
 	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
 	items[] +=
 	{
-		"ENH_CfgDisabledCommands",
 		"ENH_Jukebox",
 		"ENH_MoonPhases",
-		"ENH_PrintConfig",
 		"ENH_ScriptCommands",
 		"Separator",
-		"ENH_3DENRadio",
-		"ENH_ActionCreator",
 		"ENH_BatchReplace",
-		"ENH_BriefingEditor",
 		"ENH_NameObjects",
-		"ENH_ScenarioAttributesManager",
 		"ENH_TextureFinder",
-		"ENH_3DENCamPositions",
-		"ENH_VariableViewer"
+		"ENH_3DENCamPositions"
 	};
 };
 class ENH_Folder_Miscellaneous
@@ -100,16 +47,10 @@ class ENH_Folder_Miscellaneous
 	items[] +=
 	{
 		"ENH_DeleteEmptyLayers",
-		"ENH_ExportMissionParameters",
-		"ENH_GenerateSteamMissionDescription",
-		"ENH_SwitchTime",
-		"ENH_ToggleGrass",
 		"ENH_ToggleSimpleObject",
 		"ENH_ToggleSimulation",
-		"ENH_ToggleDynamicSimulation",
 		"ENH_ToggleDrawBuildingPositions",
-		"ENH_ToggleDrawDLCIcons",
-		"ENH_ToggleAIFeatures"
+		"ENH_ToggleDrawDLCIcons"
 	};
 };
 //Utilities
@@ -125,50 +66,10 @@ class ENH_Jukebox
 	action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_jukebox.sqf'";
 	opensNewWindow = 1;
 };
-class ENH_PrintConfig
-{
-	text = $STR_ENH_TOOLS_PRINTCONFIG;
-	action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_printConfig.sqf'";
-	opensNewWindow = 1;
-};
-class ENH_CfgDisabledCommands
-{
-	text = $STR_ENH_TOOLS_CFGDISABLEDCOMMANDS;
-	action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_cfgDisabledCommands.sqf'";
-	opensNewWindow = 1;
-};
 class ENH_ScriptCommands
 {
 	text = $STR_ENH_TOOLS_SCRIPTCOMMANDS;
 	action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_scriptCommands.sqf'";
-	opensNewWindow = 1;
-};
-class ENH_BriefingEditor
-{
-	text = $STR_ENH_TOOLS_BRIEFINGEDITOR;
-	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\whiteboard_ca.paa";
-	action = "findDisplay 313 createDisplay 'ENH_briefingEditor'";
-	shortcuts[] = {INPUT_ALT_OFFSET + DIK_B};
-	opensNewWindow = 1;
-};
-class ENH_3DENRadio
-{
-	text = $STR_ENH_TOOLS_3DENRADIO;
-	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\radio_ca.paa";
-	action = "findDisplay 313 createDisplay 'ENH_3DENRadio'";
-	shortcuts[] = {INPUT_ALT_OFFSET + DIK_M};
-	opensNewWindow = 1;
-};
-class ENH_ActionCreator
-{
-	text = $STR_ENH_TOOLS_ACTIONCREATOR;
-	action = "findDisplay 313 createDisplay 'ENH_ActionCreator'";
-	opensNewWindow = 1;
-};
-class ENH_ScenarioAttributesManager
-{
-	text = $STR_ENH_TOOLS_SCENARIOATTRIBUTESMANAGER;
-	action = "findDisplay 313 createDisplay 'ENH_ScenarioAttributesManager'";
 	opensNewWindow = 1;
 };
 class ENH_BatchReplace
@@ -201,32 +102,12 @@ class ENH_3DENCamPositions
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_U};
 	opensNewWindow = 1;
 };
-class ENH_VariableViewer
-{
-	text = "Variable Viewer";
-	picture = "A3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\free.paa";
-	action = "findDisplay 313 createDisplay 'ENH_VariableViewer'";
-	opensNewWindow = 1;
-};
 //Miscellaneous
 class ENH_DeleteEmptyLayers
 {
 	text = $STR_ENH_TOOLS_DELETEEMPTYLAYERS;
 	picture = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_delete_ca.paa";
 	action = "call ENH_fnc_deleteEmptyLayers";
-};
-class ENH_SwitchTime
-{
-	text = $STR_ENH_TOOLS_SWITCHTIME;
-	picture = "\A3\ui_f\data\igui\cfg\actions\settimer_ca.paa";
-	action = "call ENH_fnc_switchTime";
-	shortcuts[] = {INPUT_ALT_OFFSET + DIK_UP};
-};
-class ENH_ToggleGrass
-{
-	text = $STR_ENH_TOOLS_TOGGLEGRASS;
-	action = "[] spawn ENH_fnc_toggleGrass";
-	shortcuts[] = {INPUT_ALT_OFFSET + DIK_DOWN};
 };
 class ENH_ToggleSimpleObject
 {
@@ -242,13 +123,6 @@ class ENH_ToggleSimulation
 	action = "[['Object'],'enableSimulation'] call ENH_fnc_toggleAttribute";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_E};
 };
-class ENH_ToggleDynamicSimulation
-{
-	text = $STR_ENH_TOOLS_TOGGLEDYNAMICSIMULATION;
-	picture = "";
-	action = "[['Object','Group'],'dynamicSimulation'] call ENH_fnc_toggleAttribute";
-	shortcuts[] = {INPUT_ALT_OFFSET + DIK_D};
-};
 class ENH_ToggleDrawBuildingPositions
 {
 	text = $STR_ENH_TOOLS_DRAWBUILDINGPOSITIONS;
@@ -260,22 +134,6 @@ class ENH_ToggleDrawDLCIcons
 	text = $STR_ENH_TOOLS_DRAWDLCICONS;
 	action = "call ENH_fnc_toggleDrawDLCIcons";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_I};
-};
-class ENH_ToggleAIFeatures
-{
-	text = $STR_ENH_TOOLS_TOGGLEAIFEATURES;
-	action = "call ENH_fnc_toggleAIFeatures";
-};
-class ENH_GenerateSteamMissionDescription
-{
-	text = $STR_ENH_TOOLS_GENERATESTEAMMISSIONDESCRIPTION;
-	action = "[] spawn ENH_fnc_generateSteamMissionDescription";
-	opensNewWindow = 1;
-};
-class ENH_ExportMissionParameters
-{
-	text = $STR_ENH_TOOLS_EXPORTMISSIONPARAMETERS;
-	action = "copyToClipboard loadFile '3denEnhanced\missionParameters.hpp'; ['ENH_DataCopied'] call BIS_fnc_3DENNotification";
 };
 //Vanilla
 class FunctionsViewer//Overwrites the default function viewer
@@ -343,116 +201,4 @@ class ENH_OrientateWest: ENH_OrientateNorth
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\letters\W_ca.paa";
 	action = "270 call ENH_fnc_setOrientation";
 	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_NUMPAD4};
-};
-//Loadout Tools
-class ENH_CopyLoadout
-{
-	text = $STR_ENH_TOOLS_COPYLOADOUTS;
-	action = "'copy' call ENH_fnc_loadoutTool";
-	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_C};
-};
-class ENH_ApplyLoadout: ENH_copyLoadout
-{
-	text = $STR_ENH_TOOLS_APPLYLOADOUTS;
-	action = "'apply' call ENH_fnc_loadoutTool";
-	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_A};
-};
-class ENH_ExportLoadoutCfgRespawnInventory
-{
-	text = $STR_ENH_TOOLS_EXPORTLOADOUT_CFGRESPAWNINVENTORY;
-	action = "false call ENH_fnc_exportLoadout";
-};
-class ENH_ExportLoadoutConfig
-{
-	text = $STR_ENH_TOOLS_EXPORTLOADOUT_CONFIG;
-	action = "true call ENH_fnc_exportLoadout";
-};
-class ENH_RemoveNVGs
-{
-	text = $STR_ENH_TOOLS_REMOVENVGS;
-	action = "2 call ENH_fnc_removeGear";
-	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_N};
-};
-class ENH_RemoveVests
-{
-	text = $STR_ENH_TOOLS_REMOVEVESTS;
-	action = "3 call ENH_fnc_removeGear";
-};
-class ENH_RemoveGoggles
-{
-	text = $STR_ENH_TOOLS_REMOVEGOGGLES;
-	action = "0 call ENH_fnc_removeGear";
-	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_G};
-};
-class ENH_RemoveHeadgear
-{
-	text = $STR_ENH_TOOLS_REMOVEHEADGEAR;
-	action = "1 call ENH_fnc_removeGear";
-	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_H};
-};
-class ENH_RemoveWeapons
-{
-	text = $STR_ENH_TOOLS_REMOVEWEAPONS;
-	action = "4 call ENH_fnc_removeGear";
-	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_W};
-};
-//GUI
-class ENH_ExportGUIBaseClassesAll
-{
-	text = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES;
-	action = "'' call BIS_fnc_exportGUIBaseClasses; ['ENH_DataCopied'] call BIS_fnc_3DENNotification";
-};
-class ENH_ExportGUIBaseClassesDefault
-{
-	text = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES_DEFAULT;
-	action = "'Default' call BIS_fnc_exportGUIBaseClasses; ['ENH_DataCopied'] call BIS_fnc_3DENNotification";
-};
-class ENH_ExportGUIBaseClasses3DEN
-{
-	text = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES_3DEN;
-	action = "'3DEN' call BIS_fnc_exportGUIBaseClasses; ['ENH_DataCopied'] call BIS_fnc_3DENNotification";
-};
-class ENH_GUITestGrids
-{
-	text = $STR_ENH_TOOLS_GUITESTGRIDS;
-	action = "findDisplay 313 createDisplay 'RscTestGrids'";
-	opensNewWindow = 1;
-};
-class ENH_ControlStyles
-{
-	text = $STR_ENH_TOOLS_CONTROLSTYLES;
-	action = "findDisplay 313 createDisplay 'RscTestControlStyles'";
-	opensNewWindow = 1;
-};
-class ENH_ControlTypes
-{
-	text = $STR_ENH_TOOLS_CONTROLTYPES;
-	action = "findDisplay 313 createDisplay 'RscTestControlTypes'";
-	opensNewWindow = 1;
-};
-//Debug Tools
-class ENH_ToggleMapIDs
-{
-	text = $STR_ENH_TOOLS_SHOWMAPIDS;
-	picture = PATHTOF(ENH\data\icon_id.paa);
-	action = "call ENH_fnc_toggleMapIDs";
-};
-class ENH_ProductInfo
-{
-	text = $STR_ENH_TOOLS_PRODUCTINFO;
-	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\intel_ca.paa";
-	action = "call ENH_fnc_productInfo";
-};
-class ENH_RecompileFunctions
-{
-	text = $STR_ENH_TOOLS_RECOMPILEFUNCTIONS;
-	picture = "\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\functions_ca.paa";
-	action = "1 call BIS_fnc_recompile; ['ENH_actionPerformed'] call BIS_fnc_3DENNotification";
-	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_R};
-};
-class ENH_ClearChat
-{
-	text = $STR_ENH_TOOLS_CLEARCHAT;
-	action = "clearRadio";
-	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_C};
 };

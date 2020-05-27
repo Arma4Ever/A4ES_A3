@@ -21,13 +21,11 @@ class Cfg3DEN {
 			onMissionPreviewEnd = "call ENH_fnc_EH_onMissionPreviewEnd";
 			onMissionLoad = "call ENH_fnc_EH_onMissionLoad";
 			onMissionNew = "call ENH_fnc_EH_onMissionNew";
-			onMissionPreview = "call ENH_fnc_EH_onMissionPreview";
 			onSelectionChange = "call ENH_fnc_EH_onSelectionChange";
 		};
 	};
 	class Attributes
 	{
-		// Base class templates
 		class Default;
 		class Title: Default
 		{
@@ -39,12 +37,9 @@ class Cfg3DEN {
 		#include "ENH\controls\timeMultiplier.hpp"
 		#include "ENH\controls\featureType.hpp"
 		#include "ENH\controls\ambientAnimations.hpp"
-		#include "ENH\controls\establishingShot.hpp"
-		#include "ENH\controls\mapIndicators.hpp"
 		#include "ENH\controls\groupMarker.hpp"
 		#include "ENH\controls\holdAction.hpp"
 		#include "ENH\controls\taskPatrol.hpp"
-		#include "ENH\controls\debugOptions.hpp"
 	};
  	class Mission
 	{
@@ -56,7 +51,7 @@ class Cfg3DEN {
 				{
 					class Attributes
 					{
-						#include "ENH\attributesEditor\debugOptions.hpp"
+
 					};
 				};
 				#include "ENH\attributesEditor\interface.hpp"

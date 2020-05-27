@@ -13,14 +13,8 @@
    BOOLEAN: true
 */
 
-//Enable 3den Radio
-'ONLOAD' call ENH_fnc_3DENRadio_toggleRadio;
-
 //Enable session timer
 [] spawn ENH_fnc_sessionTimer;
-
-//Initialize ambient animations
-call ENH_fnc_initAmbientAnimationsInEditor;
 
 //Collapse left tree view (entity list). A small delay is needed to let the list fully load first
 if (profileNamespace getVariable ['ENH_CollapseEntityList',false]) then

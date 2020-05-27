@@ -14,9 +14,7 @@ class Display3DEN
 		{
             class Items
 			{
-				// items[] += {};
 				#include "menuStrip_tools.hpp"
-				#include "menuStrip_help.hpp"
 			};
 		};
 	};
