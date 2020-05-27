@@ -24,12 +24,9 @@ class CfgPatches {
 // 3DEN Enhanced
 #include "ENH\CfgFunctions.hpp"
 #include "ENH\gui\nameObjects.hpp"
-#include "ENH\gui\moduleInformation.hpp"
 #include "ENH\gui\textureFinder.hpp"
 #include "ENH\gui\batchReplace.hpp"
 #include "ENH\gui\functionsViewer.hpp"
 #include "ENH\gui\placementTools.hpp"
 #include "ENH\gui\garrison.hpp"
-#include "ENH\gui\extraction.hpp"
-#include "ENH\gui\3DENCameraPositions.hpp"
 #include "ENH\gui\display3DENPublishMIssionSelectImage.hpp"

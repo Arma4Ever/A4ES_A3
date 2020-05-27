@@ -6,12 +6,6 @@ class CfgFunctions {
 			class garrison_onLoad;
 			class garrison_garrison;
 		};
-		class Extraction {
-            file = PATHTOF(ENH\functions\GUI\extraction);
-			class extraction_onLoad;
-			class extraction_onCheckedChanged;
-			class extraction_setup;
-		};
 		class TextureFinder {
             file = PATHTOF(ENH\functions\GUI\TextureFinder);
 			class textureFinder_updateProgressbar;
@@ -53,20 +47,6 @@ class CfgFunctions {
 			class nameObjects_onLoad;
 			class nameObjects_name;
 		};
-		class ModuleInformation {
-            file = PATHTOF(ENH\functions\GUI\moduleInformation);
-			class moduleInformation_onLoad;
-		};
-		class 3DENCam {
-            file = PATHTOF(ENH\functions\GUI\3DENCam);
-			class 3DENCam_updateList;
-			class 3DENCam_deleteEntry;
-			class 3DENCam_get3DENCameraParameters;
-			class 3DENCam_set3DENCameraParameters;
-			class 3DENCam_onKillFocus;
-			class 3DENCam_onSetFocus;
-			class 3DENCam_saveList;
-		};
 		class Misc {
             file = PATHTOF(ENH\functions\Misc);
 			class measureDistance;
@@ -78,7 +58,6 @@ class CfgFunctions {
 			class exportWithLB;
 			class 3denNotificationNoSound;
 			class locationList;
-			class initAmbientAnimationsInEditor;
 			class toggleDrawBuildingPositions;
 			class toggleDrawDLCIcons;
 			class toggleAttribute;
@@ -90,10 +69,7 @@ class CfgFunctions {
             file = PATHTOF(ENH\functions\log);
 			class logPositions3D;
 			class logPositions2D;
-			class logObjectInfo;
-			class logFactions;
 			class logGridPosition;
-			class log3DENIDs;
 			class logClassesString;
 		};
 		class Debug {

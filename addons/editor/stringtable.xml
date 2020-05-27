@@ -15,10 +15,6 @@
       <Original>Path debugging enabled for unit %1.</Original>
       <Polish>Debug ścieżki ruchu włączony dla jednostki %1.</Polish>
     </Key>
-    <Key ID="STR_ENH_CONTEXTMENU_LOG3DENIDS">
-      <Original>Log 3DEN Entity IDs to Clipboard</Original>
-      <Polish>Zapisz ID bytu 3DEN do schowka</Polish>
-    </Key>
     <Key ID="STR_ENH_FUNCTIONS_BATCHREPLACE_ERROR">
       <Original>No valid Classname!</Original>
       <Polish>Brak poprawnych Classname!</Polish>
@@ -26,71 +22,6 @@
     <Key ID="STR_ENH_FUNCTIONS_FILLTEXTURELB_TOOLTIP">
       <Original>Copy path with 'CTRL + C'.</Original>
       <Polish>Skopiuj ścieżke przy pomocy "CTRL + C".</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_NAME">
-      <Original>NAME:</Original>
-      <Polish>NAZWA:</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_CLASS">
-      <Original>CLASS:</Original>
-      <Polish>KLASA:</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_VEHICLECLASS">
-      <Original>VEHICLE CLASS:</Original>
-      <Polish>KLASA POJAZDU:</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_KINDOF">
-      <Original>KIND OF:</Original>
-      <Polish>RODZAJ:</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_SIZE">
-      <Original>SIZE (Width, Length, Height):</Original>
-      <Polish>ROZMIAR(Szerokość, Długość, Wysokość):</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_SELECTIONNAMES">
-      <Original>SELECTION NAMES:</Original>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_PARENTS">
-      <Original>PARENTS:</Original>
-      <Polish>RODZICE:</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_OBJECTTYPE">
-      <Original>OBJECT TYPE:</Original>
-      <Polish>TYP OBIEKTU:</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_MATERIALS">
-      <Original>MATERIALS:</Original>
-      <Polish>MATERIAŁY:</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_MODELINFO">
-      <Original>MODEL INFO:</Original>
-      <Polish>MODEL INFO:</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_TEXTURES">
-      <Original>TEXTURES:</Original>
-      <Polish>TEKSTURY:</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_ANIMATIONNAMES">
-      <Original>ANIMATION NAMES:</Original>
-      <Polish>NAZWY ANIMACJI:</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_PRIMARY">
-      <Original>Normal object placed in Visitor, part of landscape</Original>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_NETWORK">
-      <Original>Road placed in Visitor, part of landscape</Original>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_TEMPORARY">
-      <Original>Temporary object (like tracks)</Original>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_TYPEVEHICLE">
-      <Original>Some entity added by game</Original>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_TYPETEMPVEHICLE">
-      <Original>Temporary entity</Original>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_LANDDECAL">
-      <Original>Land decal</Original>
     </Key>
     <Key ID="STR_ENH_CREDITS_HEADER">
       <Original>Contributors</Original>
@@ -784,30 +715,6 @@
       <Original>B</Original>
       <Polish>B</Polish>
     </Key>
-    <Key ID="STR_ENH_MODULEINFORMATION_DESCRIPTION">
-      <Original>Description:</Original>
-      <Polish>Opis:</Polish>
-    </Key>
-    <Key ID="STR_ENH_MODULEINFORMATION_POSITION">
-      <Original>Position:</Original>
-      <Polish>Pozycja:</Polish>
-    </Key>
-    <Key ID="STR_ENH_MODULEINFORMATION_DUPLICATE">
-      <Original>Duplicate:</Original>
-      <Polish>Duplikat:</Polish>
-    </Key>
-    <Key ID="STR_ENH_MODULEINFORMATION_DIRECTION">
-      <Original>Direction:</Original>
-      <Polish>Kierunek:</Polish>
-    </Key>
-    <Key ID="STR_ENH_MODULEINFORMATION_SYNC">
-      <Original>Can be synced with:</Original>
-      <Polish>Może być zsynchronizowany z:</Polish>
-    </Key>
-    <Key ID="STR_ENH_MODULEINFORMATION">
-      <Original>Module Information</Original>
-      <Polish>Informacja o module</Polish>
-    </Key>
     <Key ID="STR_ENH_TEXTUREFINDER">
       <Original>Texture Finder</Original>
       <Polish>Wyszukiwarka tekstur</Polish>
@@ -1062,10 +969,6 @@
       <Original>Current Value</Original>
       <Polish>Aktualna wartość</Polish>
     </Key>
-    <Key ID="STR_ENH_CONTEXTMENU_SETTRIGGEROWNERPLAYER">
-      <Original>Set Player as Trigger Owner</Original>
-      <Polish>Ustaw gracza jako właściciela wyzwalacza</Polish>
-    </Key>
     <Key ID="STR_ENH_CONTEXTMENU_DELETECREW">
       <Original>Delete Crew</Original>
       <Polish>Usuń załoge</Polish>
@@ -1078,10 +981,6 @@
       <Original>Log Positions (2D) to Clipboard</Original>
       <Polish>Zapisz pozycje (2D) do schowka</Polish>
     </Key>
-    <Key ID="STR_ENH_CONTEXTMENU_LOGFACTION">
-      <Original>Log Faction Names to Clipboard</Original>
-      <Polish>Zapisz nazwy frakcji do schowka</Polish>
-    </Key>
     <Key ID="STR_ENH_CONTEXTMENU_LOGPOSITIONS3D">
       <Original>Log Positions (3D) to Clipboard</Original>
       <Polish>Zapisz pozycje (3D) do schowka</Polish>
@@ -1093,10 +992,6 @@
     <Key ID="STR_ENH_CONTEXTMENU_MEASUREDISTANCE">
       <Original>Measure Distance</Original>
       <Polish>Mierzenie odległości</Polish>
-    </Key>
-    <Key ID="STR_ENH_CONTEXTMENU_LOGOBJECTINFO">
-      <Original>Log Object Info</Original>
-      <Polish>Zapisuje informacje o obiekcie</Polish>
     </Key>
     <Key ID="STR_ENH_CONTEXTMENU_LOGGRIDPOSITION">
       <Original>Log Grid Position to Clipboard</Original>
@@ -1324,77 +1219,8 @@
     <Key ID="STR_ENH_TOOLS_SCRIPTCOMMANDS">
       <Original>Script Commands</Original>
     </Key>
-    <Key ID="STR_ENH_CONTEXTMENU_CREATEEXTRACTION">
-      <Original>Create Extraction</Original>
-    </Key>
-    <Key ID="STR_ENH_EXTRACTION_LAYER">
-      <Original>Extraction</Original>
-    </Key>
-    <Key ID="STR_ENH_EXTRACTION_TRIGGERSMOKETEXT">
-      <Original>Mark LZ</Original>
-    </Key>
-    <Key ID="STR_ENH_EXTRACTION_TRIGGERSTARTEXTRACTIONTEXT">
-      <Original>Start Extraction</Original>
-    </Key>
-    <Key ID="STR_ENH_EXTRACTION_CALLEXTRACTIONMSG">
-      <Original>%2, this is %1. Requesting immediate extraction at grid position %3, over.</Original>
-    </Key>
-    <Key ID="STR_ENH_EXTRACTION_EXTRACTIONCONFIRMEDMSG">
-      <Original>%1 this is %2, coordinates received. Standby, over.</Original>
-    </Key>
-    <Key ID="STR_ENH_EXTRACTION_HEADER">
-      <Original>Extraction Creator</Original>
-    </Key>
-    <Key ID="STR_ENH_EXTRACTION_SHOWRADIOCHAT">
-      <Original>Show Radio Chat?</Original>
-    </Key>
-    <Key ID="STR_ENH_EXTRACTION_CALLSIGNREQUESTER">
-      <Original>Call Sign Requester</Original>
-    </Key>
-    <Key ID="STR_ENH_EXTRACTION_CALLSIGNTRANSPORT">
-      <Original>Call Sign Transport</Original>
-    </Key>
-    <Key ID="STR_ENH_EXTRACTION_CONDITIONSTART">
-      <Original>Condition Start</Original>
-    </Key>
-    <Key ID="STR_ENH_EXTRACTION_CONDITIONSTART_TOOLTIP">
-      <Original>Condition for the extraction to start. By default the variable ENH_Extraction_Start has to be set to true. Leave empty if you want to start it by a trigger.</Original>
-    </Key>
-    <Key ID="STR_ENH_EXTRACTION_GRENADETYPE">
-      <Original>Grenade Type</Original>
-    </Key>
-    <Key ID="STR_ENH_EXTRACTION_GRENADETYPE_TOOLTIP">
-      <Original>The landing zone is marked by this grenade type.</Original>
-    </Key>
-    <Key ID="STR_ENH_CONDITION">
-      <Original>Condition</Original>
-    </Key>
-    <Key ID="STR_ENH_EXTRACTION_CONDITION_TOOLTIP">
-      <Original>This condition has to become true for the vehicle to move to the end waypoint. By default all alive units in player's group have to be inside the pick up vehicle.</Original>
-    </Key>
-    <Key ID="STR_ENH_EXTRACTION_GRIDPOSITION">
-      <Original>Grid Position</Original>
-    </Key>
     <Key ID="STR_ENH_TOOLS_DRAWDLCICONS">
       <Original>Toggle Drawing of DLC Icons</Original>
-    </Key>
-    <Key ID="STR_ENH_3DENCAM_DESCRIPTION">
-      <Original>Description...</Original>
-    </Key>
-    <Key ID="STR_ENH_3DENCAM_WRONGWORLD">
-      <Original>Incorrect world!</Original>
-    </Key>
-    <Key ID="STR_ENH_3DENCAM_SAVE">
-      <Original>Save</Original>
-    </Key>
-    <Key ID="STR_ENH_3DENCAM_HEADER">
-      <Original>3DEN Camera Positions</Original>
-    </Key>
-    <Key ID="STR_ENH_3DENCAM_HELPDELETE">
-      <Original>- To delete an entry press the DELETE key</Original>
-    </Key>
-    <Key ID="STR_ENH_3DENCAM_HELPMOVETO">
-      <Original>- To move to a selected position, double click on the entry</Original>
     </Key>
     <Key ID="STR_ENH_CONTEXTMENU_FIRSTPERSON">
       <Original>Move Camera to First Person View</Original>
@@ -1408,9 +1234,6 @@
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP">
       <Original>Sets the size of the increment when clicking the arrows next to the sliders.</Original>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_3DENCAM">
-      <Original>3DEN Camera Positions</Original>
     </Key>
     <Key ID="STR_ENH_OPTIONS">
       <Original>Options</Original>
