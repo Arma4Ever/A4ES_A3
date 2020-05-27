@@ -142,10 +142,6 @@
       <Original>4th axle left wheel</Original>
       <Polish>4ta oś lewe koło</Polish>
     </Key>
-    <Key ID="STR_ENH_GROUPMARKER_DISPLAYNAME">
-      <Original>Group Marker</Original>
-      <Polish>Marker grupy</Polish>
-    </Key>
     <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_RBWHEEL">
       <Original>4th axle right wheel</Original>
       <Polish>4ta oś prawe koło</Polish>
@@ -665,10 +661,6 @@
       <Original>Unit Traits</Original>
       <Polish>Cechy jednostki</Polish>
     </Key>
-    <Key ID="STR_ENH_GROUPMARKER_COLOUR">
-      <Original>Colour</Original>
-      <Polish>Kolor</Polish>
-    </Key>
     <Key ID="STR_ENH_NAMEOBJECTS">
       <Original>Name Objects</Original>
       <Polish>Nazwij obiekt</Polish>
@@ -810,14 +802,6 @@
     <Key ID="STR_ENH_FUNCTIONSVIEWER_FUNCTIONPATH_TOOLTIP">
       <Original>Path which leads to script file.</Original>
       <Polish>Ścieżka która prowadzi do pliku skryptu.</Polish>
-    </Key>
-    <Key ID="STR_ENH_PATROL_DISPLAYNAME">
-      <Original>Patrol</Original>
-      <Polish>Patrol</Polish>
-    </Key>
-    <Key ID="STR_ENH_PATROL_TOOLTIP">
-      <Original>Makes the group of the selected unit patrol an area. The value defines the max. distance between two patrol waypoints.\n\n0 deactivates the patrol.</Original>
-      <Polish>Sprawia że zaznaczona grupa będzie patrolował teren. Wartości definiuje maksymalny dystans pomiędzy dwoma punktami nawigacyjnymi patrolu. \n\n0 deaktywuje patrol</Polish>
     </Key>
     <Key ID="STR_ENH_LOCATIONLIST_CITIES">
       <Original>Cities &amp; Villages</Original>
@@ -1034,16 +1018,6 @@
       <Original>Description</Original>
       <Polish>Opis</Polish>
     </Key>
-    <Key ID="STR_ENH_GROUPMARKER_DESCRIPTION">
-      <Original>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'ENH_GroupMarker_Update' in the group's namespace to false.</Original>
-      <Polish>Pokazuje pozycje grupy na mapie. Pozycja jest aktualizowana co sekunde. Jeżeli grupa stanie się pusta, to marker zostanie usunięty. Aktualizacja może byc zatrzymana poprzez ustawienie zmiennej 'ENH_GroupMarker_Update' w 'namespace' na 'false'.</Polish>
-    </Key>
-    <Key ID="STR_ENH_GROUPMARKER_TYPE">
-      <Original>Type</Original>
-    </Key>
-    <Key ID="STR_ENH_GROUPMARKER_SHOWGROUPSIZE">
-      <Original>Show Group Size</Original>
-    </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_NUMFUNCTIONS_TOOLTIP">
       <Original>Number of Functions</Original>
     </Key>
@@ -1076,9 +1050,6 @@
     </Key>
     <Key ID="STR_ENH_HOLDACTION_DISPLAYNAME">
       <Original>Hold Action</Original>
-    </Key>
-    <Key ID="STR_ENH_GROUPMARKER_TEXT">
-      <Original>Text</Original>
     </Key>
     <Key ID="STR_ENH_AMBIENTANIMATIONS_DESCRIPTION">
       <Original>Plays a selected animation set. The gear needs to be set up manually.</Original>

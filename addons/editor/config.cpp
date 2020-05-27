@@ -6,7 +6,12 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"a3cs_common", "A3_3DEN", "A3_Data_F_Sams_Loadorder"};
+        requiredAddons[] = {
+            "a3cs_common",
+            "ace_arsenal",
+            "A3_3DEN",
+            "A3_Data_F_Sams_Loadorder"
+        };
         author = ECSTRING(main,Author);
         authors[] = {"3DEN Enhanced Team", "R3vo", "SzwedzikPL"};
         url = ECSTRING(main,URL);
@@ -29,4 +34,3 @@ class CfgPatches {
 #include "ENH\gui\functionsViewer.hpp"
 #include "ENH\gui\placementTools.hpp"
 #include "ENH\gui\garrison.hpp"
-#include "ENH\gui\display3DENPublishMIssionSelectImage.hpp"

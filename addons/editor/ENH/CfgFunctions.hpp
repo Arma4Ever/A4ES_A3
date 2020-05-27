@@ -87,9 +87,6 @@ class CfgFunctions {
 		};
 		class AttributeControls {
             file = PATHTOF(ENH\functions\attributeControls);
-			class groupMarker_onAttributeLoad;
-			class groupMarker_onAttributeSave;
-			class groupMarker_onButtonDown;
 			class ambientAnimations_onAttributeLoad;
 			class ambientAnimations_onAttributeSave;
 			class ambientAnimations_onButtonDown;
@@ -100,8 +97,6 @@ class CfgFunctions {
 			class holdAction_onButtonDown;
 			class timeMultiplier_onAttributeLoad;
 			class timeMultiplier_onAttributeSave;
-			class taskPatrol_onAttributeLoad;
-			class taskPatrol_onAttributeSave;
 		};
 	};
 };
