@@ -115,9 +115,15 @@ def main():
             if file[-3:] != "pbo":
                 continue
 
-            if "ignoreaddons" in vendorconfig:
-                addon = file[:-4]
-                if addon in vendorconfig["ignoreaddons"]:
+            addon = file[:-4]
+            if "blacklist" in vendorconfig:
+                if addon in vendorconfig["blacklist"]:
+                    skipped += 1
+                    print("  Skipping {}.".format(file))
+                    continue
+
+            if "whitelist" in vendorconfig:
+                if addon not in vendorconfig["whitelist"]:
                     skipped += 1
                     print("  Skipping {}.".format(file))
                     continue

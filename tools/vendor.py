@@ -1,9 +1,9 @@
 VENDOR = {
     "@ACE": {
-        "ignoreaddons": ["ace_advanced_fatigue", "ace_hearing", "ace_nametags"],
+        "blacklist": ["ace_advanced_fatigue", "ace_hearing", "ace_nametags"],
     },
     "@ACEX": {
-        "ignoreaddons": ["acex_volume", "acex_viewrestriction"],
+        "blacklist": ["acex_volume", "acex_viewrestriction"],
     },
     "@LAMBS_Danger.fsm": {},
     "@LAMBS_Suppression": {},
