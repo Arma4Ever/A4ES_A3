@@ -18,7 +18,6 @@ IGNOREADDONS = [
     "ptb",
     "searchlight",
     "server",
-    "stamina",
 ]
 ##########################
 
