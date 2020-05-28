@@ -18,5 +18,6 @@ VENDOR = {
     "@The Mighty GAU-8 Avenger": {},
     "@The Mighty GAU-8 Avenger - Less FX More Performance": {},
     "@The Mighty GAU-8 Avenger - ACE": {},
-    "@Zombies and Demons": {}
+    "@Zombies and Demons": {},
+    "@RSPN Cave Systems for Eden": {},
 }
