@@ -20,4 +20,8 @@ VENDOR = {
     "@The Mighty GAU-8 Avenger - ACE": {},
     "@Zombies and Demons": {},
     "@RSPN Cave Systems for Eden": {},
+    "@Eden Extended Objects": {},
+    "@O&T Expansion Eden": {},
+    "@Metis Nature": {},
+    "@Camofaces": {},
 }

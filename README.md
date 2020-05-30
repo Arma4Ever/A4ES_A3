@@ -19,6 +19,10 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [Mighty Gau-8 Avenger](https://github.com/Zabuzard/MightyGau-8Avenger)
 - [Zombies and Demons](https://steamcommunity.com/sharedfiles/filedetails/?id=501966277) (with permission from author)
 - [RSPN Cave Systems for Eden](https://steamcommunity.com/sharedfiles/filedetails/?id=1678490017)
+- [O&T Expansion Eden](https://steamcommunity.com/sharedfiles/filedetails/?id=1923321700)
+- [Metis Nature](https://steamcommunity.com/sharedfiles/filedetails/?id=1951690856)
+- [Eden Extended Objects](https://steamcommunity.com/sharedfiles/filedetails/?id=882231372)
+- [Camofaces](https://steamcommunity.com/sharedfiles/filedetails/?id=346665985)
 
 ## Credits
 Authors of external mods.  
