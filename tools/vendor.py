@@ -1,6 +1,6 @@
 VENDOR = {
     "@ACE": {
-        "blacklist": ["ace_advanced_fatigue", "ace_hearing", "ace_nametags"],
+        "blacklist": ["ace_advanced_fatigue", "ace_hearing", "ace_nametags", "ace_sandbag"],
     },
     "@ACEX": {
         "blacklist": ["acex_volume", "acex_viewrestriction"],

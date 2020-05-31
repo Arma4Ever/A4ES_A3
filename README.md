@@ -3,7 +3,6 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 
 ## Requirements
 - [CBA](https://github.com/CBATeam/CBA_A3)
-- [Task Force Radio](https://github.com/michail-nikolaev/task-force-arma-3-radio)
 
 ## Build process includes external mods:
 - [ACE3](https://github.com/acemod/ACE3)
