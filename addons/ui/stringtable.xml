@@ -9,5 +9,9 @@
             <Original>Hides game HUD for making screenshots/videos.</Original>
             <Polish>Ukrywa HUD gry by umożliwić robienie zrzutów ekranu lub nagrywanie filmów.</Polish>
         </Key>
+        <Key ID="STR_A3CS_UI_ScreenshotModeDisabled">
+            <Original>Screenshot mode disabled</Original>
+            <Polish>Tryb zdjęć wyłączony</Polish>
+        </Key>
     </Package>
 </Project>
