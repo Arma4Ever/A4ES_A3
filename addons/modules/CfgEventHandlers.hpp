@@ -16,3 +16,9 @@ class Extended_PostInit_EventHandlers {
         init = QUOTE(call COMPILE_FILE(XEH_postInit));
     };
 };
+
+class Extended_DisplayLoad_EventHandlers {
+    class Display3DENEditAttributes {
+        ADDON = QUOTE(_this call FUNC(display3DENEditAttributes_onLoad));
+    };
+};

@@ -1,17 +1,6 @@
 class Cfg3DEN {
 	class Notifications {
-		class ENH_DataCopied {
-			isWarning = 0;
-			text = $STR_A3_RSCDISPLAYARSENAL_MESSAGE_CLIPBOARD;
-		};
-		class ENH_ActionPerformed {
-			isWarning = 0;
-			text = $STR_ENH_NOTIFICATIONS_ACTIONPERFORMED;
-		};
-		class ENH_NoEntitiesSelected{
-			isWarning = 1;
-			text = $STR_ENH_NOTIFICATIONS_NOENTITIESSELECTED;
-		};
+        #include "ENH\notifications.hpp"
 	};
 	class EventHandlers {
 		class ENH {
@@ -21,6 +10,45 @@ class Cfg3DEN {
 			onMissionNew = "call ENH_fnc_EH_onMissionNew";
 			onSelectionChange = "call ENH_fnc_EH_onSelectionChange";
 		};
+        class ADDON {
+            onUndo = "diag_log '3DEN event: onUndo';";
+			onRedo = "diag_log '3DEN event: onRedo';";
+			onHistoryChange = "diag_log '3DEN event: onHistoryChange';";
+			onWidgetToggle = "diag_log '3DEN event: onWidgetToggle';";
+			onWidgetNone = "diag_log '3DEN event: onWidgetNone';";
+			onWidgetTranslation = "diag_log '3DEN event: onWidgetTranslation';";
+			onWidgetRotation = "diag_log '3DEN event: onWidgetRotation';";
+			onWidgetScale = "diag_log '3DEN event: onWidgetScale';";
+			onWidgetArea = "diag_log '3DEN event: onWidgetArea';";
+			onGridChange = "diag_log '3DEN event: onGridChange';";
+			onMoveGridToggle = "diag_log '3DEN event: onMoveGridToggle';";
+			onRotateGridToggle = "diag_log '3DEN event: onRotateGridToggle';";
+			onScaleGridToggle = "diag_log '3DEN event: onScaleGridToggle';";
+			onVerticalToggle = "diag_log '3DEN event: onVerticalToggle';";
+			onSurfaceSnapToggle = "diag_log '3DEN event: onSurfaceSnapToggle';";
+			onWorkspacePartSwitch = "diag_log '3DEN event: onWorkspacePartSwitch';";
+			onModeChange = "diag_log '3DEN event: onModeChange';";
+			onSubmodeChange = "diag_log '3DEN event: onSubmodeChange';";
+			onMapOpened = "diag_log '3DEN event: onMapOpened';";
+			onMapClosed = "diag_log '3DEN event: onMapClosed';";
+			onSearchEdit = "diag_log '3DEN event: onSearchEdit';";
+			onSearchCreate = "diag_log '3DEN event: onSearchCreate';";
+			onMissionListChange = "diag_log '3DEN event: onMissionListChange';";
+			onMissionPreview = "diag_log '3DEN event: onMissionPreview';";
+			onMissionPreviewEnd = "diag_log '3DEN event: onMissionPreviewEnd';";
+			init = "diag_log '3DEN event: init';";
+			onTerrainNew = "diag_log '3DEN event: onTerrainNew';";
+			onMissionNew = "diag_log '3DEN event: onMissionNew';";
+			onMissionLoad = "diag_log '3DEN event: onMissionLoad';";
+			onMissionAutosave = "diag_log '3DEN event: onMissionAutosave';";
+			onMessage = "diag_log '3DEN event: onMessage';";
+			onServerToggle = "diag_log '3DEN event: onServerToggle';";
+			onEntityMenu = "diag_log '3DEN event: onEntityMenu';";
+			onSelectionChange = "diag_log '3DEN event: onSelectionChange';";
+			onConnectingStart = "diag_log '3DEN event: onConnectingStart';";
+			onConnectingEnd = "diag_log '3DEN event: onConnectingEnd';";
+			onTogglePlaceEmptyVehicle = "diag_log '3DEN event: onTogglePlaceEmptyVehicle';";
+        };
 	};
 	class Attributes {
 		class Default;
@@ -29,7 +57,8 @@ class Cfg3DEN {
 				class Title;
 			};
 		};
-		#include "ENH\controls\timeMultiplier.hpp"
+
+        #include "ENH\controls\timeMultiplier.hpp"
 	};
  	class Mission {
 		class Preferences {
