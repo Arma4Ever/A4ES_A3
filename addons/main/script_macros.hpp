@@ -104,8 +104,6 @@
     #define PREP(fncName) [QPATHTOF(functions\DOUBLES(fnc,fncName).sqf), QFUNC(fncName)] call CBA_fnc_compileFunction
 #endif
 
-#define PREP_MODULE(folder) [] call compile preprocessFileLineNumbers QPATHTOF(folder\__PREP__.sqf)
-
 #define ACE_isHC (!hasInterface && !isDedicated)
 
 #define IDC_STAMINA_BAR 193
@@ -140,5 +138,11 @@
 #define ACE_MEDICAL_OVERRIDE(var1,var2) class DOUBLES(ace,var1) { \
     init = QUOTE(if (getNumber (missionConfigFile >> QUOTE(QGVAR(disableSystem))) != 1) then {call COMPILE_ACE_FILE(var1,var2);};); \
 }
+
+#ifdef DISABLE_COMPILE_CACHE
+    #define PREP_MODULE(moduleName,fncName) DFUNC(DOUBLES(moduleName,fncName) = compile preprocessFileLineNumbers QPATHTOF(modules\moduleName\functions\DOUBLES(fnc,fncName).sqf)
+#else
+    #define PREP_MODULE(moduleName,fncName) [QPATHTOF(modules\moduleName\functions\DOUBLES(fnc,fncName).sqf), QFUNC(DOUBLES(moduleName,fncName))] call CBA_fnc_compileFunction
+#endif
 
 #include "script_debug.hpp"
