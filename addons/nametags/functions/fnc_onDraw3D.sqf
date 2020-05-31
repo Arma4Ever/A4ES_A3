@@ -4,7 +4,7 @@
  * Handler for draw3D mission EH
  */
 
-if (GVAR(displayInterrupt) || {isNull ACE_player} || {!alive ACE_player} || {vehicle ace_player != ace_player}) exitWith {
+if (GVAR(displayInterrupt) || {isNull ACE_player} || {!alive ACE_player} || {vehicle ace_player != ace_player} || {EGVAR(ui,screenshotModeEnabled)}) exitWith {
   call FUNC(clear2DNameTag);
 };
 

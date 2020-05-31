@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+    <Package name="UI">
+        <Key ID="STR_A3CS_UI_ToggleScreenshotMode">
+            <Original>Toogle screenshot mode</Original>
+            <Polish>Włącz/Wyłącz tryb zdjęć</Polish>
+        </Key>
+        <Key ID="STR_A3CS_UI_ToggleScreenshotMode_Tooltip">
+            <Original>Hides game HUD for making screenshots/videos.</Original>
+            <Polish>Ukrywa HUD gry by umożliwić robienie zrzutów ekranu lub nagrywanie filmów.</Polish>
+        </Key>
+    </Package>
+</Project>
