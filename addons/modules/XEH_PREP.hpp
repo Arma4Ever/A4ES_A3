@@ -8,6 +8,7 @@ PREP(initWarnings);
 PREP(moduleDescription_attributeLoad);
 PREP(moduleShortDescription_attributeLoad);
 PREP(moduleWarnings_attributeLoad);
+PREP(refreshModuleWarnings);
 PREP(refreshReactiveAttributes);
 PREP(setEntityWarnings);
 PREP(setupInitialModuleVars);

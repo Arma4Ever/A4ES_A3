@@ -17,9 +17,13 @@ private _configHierarchy = configHierarchy _config;
 private _moduleConfig = _configHierarchy select (count _configHierarchy - 3);
 
 _moduleConfig call {
-
+  
 };
+
+// Update module values
+GVAR(dynamicAttributesModule) setVariable [QGVAR(moduleValues), GVAR(dynamicAttributesValues)];
 
 INFO_1("Triggering initial refresh of reactive attributes (attributes: %1).",str count GVAR(reactiveAttributes));
 
+// Trigger initial refresh of attributes
 call FUNC(refreshReactiveAttributes);

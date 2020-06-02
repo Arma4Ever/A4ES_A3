@@ -25,11 +25,10 @@ GVAR(dynamicAttributesModule) setVariable [QGVAR(moduleValues), GVAR(dynamicAttr
 call FUNC(refreshReactiveAttributes);
 
 // Validate module
-private _warnings = [
+GVAR(dynamicAttributesModuleWarnings) = [
   GVAR(dynamicAttributesModule),
   GVAR(dynamicAttributesValues)
 ] call FUNC(validateEntity);
 
-GVAR(dynamicAttributesModuleWarnings) = _warnings;
-
-//TODO Trigger description refresh
+// Trigger module warnings refresh
+call FUNC(refreshModuleWarnings);

@@ -27,19 +27,19 @@ if !(_selected isEqualTo [[],[],[],[],[]] && {(count _modules) isEqualTo 1}) exi
   };
 };
 
+GVAR(dynamicAttributesEnabled) = true;
 GVAR(dynamicAttributesModule) = _modules # 0;
 
 private _entityIDVarName = str get3DENEntityID GVAR(dynamicAttributesModule);
 private _warningsData = GVAR(warningsData) getVariable [_entityIDVarName, [[]]];
 _warningsData params ["_warnings"];
 
-GVAR(dynamicAttributesEnabled) = true;
 GVAR(dynamicAttributesModuleWarnings) = _warnings;
 GVAR(reactiveAttributes) = [];
 GVAR(dynamicAttributesValues) = false call CBA_fnc_createNamespace;
 
 // Remove old values namespace from module
-private _moduleValues = _module getVariable QGVAR(moduleValues);
+private _moduleValues = GVAR(dynamicAttributesModule) getVariable QGVAR(moduleValues);
 if !(isNil "_moduleValues") then {
   _moduleValues call CBA_fnc_deleteNamespace;
 };
@@ -56,6 +56,8 @@ _display displayAddEventHandler ["onUnload", {
 
   GVAR(dynamicAttributesEnabled) = nil;
   GVAR(dynamicAttributesModule) = nil;
+  GVAR(dynamicAttributesModuleWarnings) = nil;
+  GVAR(updateModuleWarningsParams) = nil;
   GVAR(reactiveAttributes) = nil;
   GVAR(dynamicAttributesValues) = nil;
 }];

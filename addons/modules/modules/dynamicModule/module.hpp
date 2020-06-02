@@ -8,8 +8,8 @@ class GVAR(dynamicModule): GVAR(base) {
     GVAR(validator) = QFUNC(dynamicModule_validate);
 
     class Attributes: AttributesBase {
-        class GVAR(moduleShortDescription) {};
-        class GVAR(moduleWarnings) {};
+        class GVAR(moduleShortDescription): GVAR(moduleShortDescription) {};
+        class GVAR(moduleWarnings): GVAR(moduleWarnings) {};
 
         class useParam: GVAR(dynamicCombo) {
             displayName = "Use param";
