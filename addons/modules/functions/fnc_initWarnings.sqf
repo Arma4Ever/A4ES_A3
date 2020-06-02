@@ -11,7 +11,6 @@ private _display = findDisplay IDD_DISPLAY3DEN;
 private _warningsTree = _display displayCtrl IDC_DISPLAY3DEN_PANELLEFT_WARNINGS_TREE;
 
 INFO("Warnings init start.");
-BEGIN_COUNTER(GVAR(initWarnings));
 
 // Setup vars
 GVAR(warningsEntities) = [];
@@ -33,5 +32,4 @@ private _modules = all3DENEntities # 3;
   _x call FUNC(handleModuleInit);
 } forEach _modules;
 
-END_COUNTER(GVAR(initWarnings));
 INFO_1("Warnings init finished (entities: %1).",str count _modules);

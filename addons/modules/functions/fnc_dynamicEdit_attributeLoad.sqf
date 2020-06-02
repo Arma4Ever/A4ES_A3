@@ -14,4 +14,6 @@ if (typename _value != typename '') then {
 _control ctrlSetText _value;
 
 // Init dynamic control
-[_this, _config, _value] call FUNC(initDynamicAttribute);
+[_this, _config, _value, {
+  //TODO: Observer for edit control
+}, []] call FUNC(initDynamicAttribute);

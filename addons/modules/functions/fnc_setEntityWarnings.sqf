@@ -49,7 +49,7 @@ if !(_warnings isEqualTo []) then {
   };
 
   // Clear current entity warnings tree
-  for "_i" from 0 to ((_warningsTree tvCount _path) - 1) do {
+  for "_i" from 0 to ((_warningsTree tvCount [_index]) - 1) do {
     _warningsTree tvDelete [_index, _i];
   };
 
