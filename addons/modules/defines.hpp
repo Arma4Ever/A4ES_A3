@@ -2,6 +2,8 @@
 #include "\a3\3DEN\UI\macroexecs.inc"
 #include "\a3\ui_f\hpp\definedikcodes.inc"
 
+#include "controlDefines.hpp"
+
 //Control types
 #ifndef CT_COMBO
 #define CT_COMBO            4

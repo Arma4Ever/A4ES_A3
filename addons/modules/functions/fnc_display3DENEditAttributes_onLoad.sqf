@@ -5,33 +5,51 @@
  */
 params ["_display"];
 
-private _modules = get3DENSelected "logic";
+private _selected = get3DENSelected "";
+private _modules = _selected deleteAt 3;
 
-INFO_1("Loading display3DENEditAttributes, modules count: %1",count _modules);
+// Close display if user is editing more than one module
+if !(_selected isEqualTo [[],[],[],[],[]] && {(count _modules) isEqualTo 1}) exitWith {
+  INFO_2("Closing display3DENEditAttributes (selected: %1 modules count: %2).",str _selected,str count _modules);
 
-// Exit if user is editing more than one module at a time
-if !((count _modules) isEqualTo 1) exitWith {};
+  // Close display
+  _display closeDisplay 0;
 
-GVAR(dynamicControlsEnabled) = true;
-GVAR(dynamicControlsModule) = _modules # 0;
-GVAR(dynamicControls) = [];
-GVAR(dynamicControlsValues) = false call CBA_fnc_createNamespace;
+  // Show error message in next frame
+  0 spawn {
+    sleep 0.001;
+    [
+      localize LSTRING(EditingMultipleModulesError_Message),
+      localize LSTRING(EditingMultipleModulesError_Title),
+      false,
+      'OK'
+    ] call BIS_fnc_3DENShowMessage;
+  };
+};
 
-// Clear are global variables on display unload
+GVAR(dynamicAttributesEnabled) = true;
+GVAR(dynamicAttributesModule) = _modules # 0;
+GVAR(reactiveAttributes) = [];
+GVAR(dynamicAttributesValues) = false call CBA_fnc_createNamespace;
+
+// Remove old values namespace from module
+private _moduleValues = _module getVariable QGVAR(moduleValues);
+if !(isNil "_moduleValues") then {
+  _moduleValues call CBA_fnc_deleteNamespace;
+};
+
+INFO_1("Loading display3DENEditAttributes (module: '%1').",typeof GVAR(dynamicAttributesModule));
+
+// Cleanup vars on display unload
 _display displayAddEventHandler ["onUnload", {
-  GVAR(dynamicControlsEnabled) = nil;
-  GVAR(dynamicControlsModule) = nil;
-  GVAR(dynamicControls) = nil;
-  GVAR(dynamicControlsValues) call CBA_fnc_deleteNamespace;
-  GVAR(dynamicControlsValues) = nil;
-}];
+  INFO_1("Unloading display3DENEditAttributes (module: '%1').",typeof GVAR(dynamicAttributesModule));
 
-// Use EachFrame mission EH for exec in next frame
-// CBA_fnc_execNextFrame doesn't work in 3DEN
-GVAR(dynamicControls_nextFrameHandler) = addMissionEventHandler ["EachFrame", {
-  INFO_1("Initial refresh of reactive controls, count: %1",str count GVAR(reactiveDynamicControls));
-  TRACE_1("Initial refresh of reactive controls",count GVAR(reactiveDynamicControls));
+  if (isNil QGVAR(dynamicAttributesEnabled)) exitWith {};
 
-  call FUNC(refreshDynamicControls);
-  removeMissionEventHandler ["EachFrame", GVAR(dynamicControls_nextFrameHandler)];
+  GVAR(dynamicAttributesModule) setVariable [QGVAR(moduleValues), GVAR(dynamicAttributesValues)];
+
+  GVAR(dynamicAttributesEnabled) = nil;
+  GVAR(dynamicAttributesModule) = nil;
+  GVAR(reactiveAttributes) = nil;
+  GVAR(dynamicAttributesValues) = nil;
 }];

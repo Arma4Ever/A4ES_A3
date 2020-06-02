@@ -13,10 +13,13 @@ private _attributeSaveFunction = _controlGroup getVariable QGVAR(attributeSaveFu
 private _configName = configName _config;
 private _parsedValue = _controlGroup call _attributeSaveFunction;
 
-LOG_2("Updating dynamic attribute '%1' with value %2",_configName,_parsedValue);
+LOG_2("Updating dynamic attribute '%1' (value: %2).",_configName,str _parsedValue);
 
 // Update control value
 GVAR(dynamicAttributesValues) setVariable [_configName, _parsedValue];
+
+// Update module values
+GVAR(dynamicAttributesModule) setVariable [QGVAR(moduleValues), GVAR(dynamicAttributesValues)];
 
 // Trigger refresh of reactive attributes
 call FUNC(refreshReactiveAttributes);

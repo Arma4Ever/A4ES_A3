@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+    <Package name="Modules">
+        <Key ID="STR_A3CS_Modules_Warnings">
+            <Original>Warnings</Original>
+            <Polish>Ostrzeżenia</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Modules_WarningsInfo">
+            <Original>Entities with warnings: %1</Original>
+            <Polish>Podmioty z ostrzeżeniami: %1</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Modules_EditingMultipleModulesError_Title">
+            <Original>Uwaga</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_EditingMultipleModulesError_Message">
+            <Original>Możesz edytować tylko jeden moduł jednocześnie.</Original>
+        </Key>
+    </Package>
+</Project>
