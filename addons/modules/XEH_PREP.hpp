@@ -3,6 +3,7 @@ PREP(display3DENEditAttributes_onLoad);
 PREP(dynamicCombo_attributeLoad);
 PREP(dynamicEdit_attributeLoad);
 PREP(handleModuleInit);
+PREP(handleWarningsTreeClick);
 PREP(initDynamicAttribute);
 PREP(initWarnings);
 PREP(moduleDescription_attributeLoad);
@@ -11,9 +12,9 @@ PREP(moduleWarnings_attributeLoad);
 PREP(refreshModuleWarnings);
 PREP(refreshReactiveAttributes);
 PREP(setEntityWarnings);
-PREP(setupInitialModuleVars);
 PREP(switchLeftPanelTab);
 PREP(updateDynamicAttribute);
+PREP(updateModuleValues);
 PREP(updateWarningsTabUI);
 PREP(validateEntity);
 

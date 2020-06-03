@@ -8,6 +8,9 @@ params ["_display"];
 private _selected = get3DENSelected "";
 private _modules = _selected deleteAt 3;
 
+// Exit if modules are not edited
+if (_modules isEqualTo []) exitWith {};
+
 // Close display if user is editing more than one module
 if !(_selected isEqualTo [[],[],[],[],[]] && {(count _modules) isEqualTo 1}) exitWith {
   INFO_2("Closing display3DENEditAttributes (selected: %1 modules count: %2).",str _selected,str count _modules);
@@ -30,34 +33,31 @@ if !(_selected isEqualTo [[],[],[],[],[]] && {(count _modules) isEqualTo 1}) exi
 GVAR(dynamicAttributesEnabled) = true;
 GVAR(dynamicAttributesModule) = _modules # 0;
 
-private _entityIDVarName = str get3DENEntityID GVAR(dynamicAttributesModule);
-private _warningsData = GVAR(warningsData) getVariable [_entityIDVarName, [[]]];
-_warningsData params ["_warnings"];
-
-GVAR(dynamicAttributesModuleWarnings) = _warnings;
-GVAR(reactiveAttributes) = [];
-GVAR(dynamicAttributesValues) = false call CBA_fnc_createNamespace;
-
-// Remove old values namespace from module
-private _moduleValues = GVAR(dynamicAttributesModule) getVariable QGVAR(moduleValues);
-if !(isNil "_moduleValues") then {
-  _moduleValues call CBA_fnc_deleteNamespace;
-};
-
 INFO_1("Loading display3DENEditAttributes (module: '%1').",typeof GVAR(dynamicAttributesModule));
 
+GVAR(allAttributesControls) = [];
+GVAR(reactiveAttributes) = [];
+GVAR(dynamicAttributesValues) = GVAR(dynamicAttributesModule) getVariable [QGVAR(moduleValues), (false call CBA_fnc_createNamespace)];
+
 // Cleanup vars on display unload
-_display displayAddEventHandler ["onUnload", {
+_display displayAddEventHandler ["unload", {
   INFO_1("Unloading display3DENEditAttributes (module: '%1').",typeof GVAR(dynamicAttributesModule));
 
   if (isNil QGVAR(dynamicAttributesEnabled)) exitWith {};
 
-  GVAR(dynamicAttributesModule) setVariable [QGVAR(moduleValues), GVAR(dynamicAttributesValues)];
+  // Update module values & revalidate in next frame
+  GVAR(dynamicAttributesModule) spawn {
+    sleep 0.001;
+    _this call FUNC(updateModuleValues);
+  };
 
+  // Cleanup variables
   GVAR(dynamicAttributesEnabled) = nil;
   GVAR(dynamicAttributesModule) = nil;
-  GVAR(dynamicAttributesModuleWarnings) = nil;
   GVAR(updateModuleWarningsParams) = nil;
+  GVAR(allAttributesControls) = nil;
   GVAR(reactiveAttributes) = nil;
   GVAR(dynamicAttributesValues) = nil;
+  GVAR(attributesListHeight) = nil;
+  GVAR(attributesCategoryHeight) = nil;
 }];

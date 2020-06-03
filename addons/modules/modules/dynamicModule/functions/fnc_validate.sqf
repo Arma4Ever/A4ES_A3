@@ -7,17 +7,27 @@
 params ["_module", "_values"];
 
 private _useParam = _values getVariable ["useParam", 0];
+private _warnings = [];
 
-if (_useParam isEqualTo 0) exitWith {
-  [["useParam 0 warning", "Module has no use in current configuration"]]
+if (_useParam isEqualTo 0) then {
+  _warnings pushBack [
+    "Module has no use",
+    "Module has no use in current configuration",
+    "useParam"
+  ];
+  _warnings pushBack [
+    "Module has no use 2",
+    "Module has no use in current configuration 2",
+    "useParam"
+  ];
 };
 
-if (_useParam isEqualTo 1) exitWith {
-  ["useParam 1 warning"]
+if (_useParam isEqualTo 1) then {
+  _warnings pushBack [
+    "Module has no use",
+    "Module has no use in current configuration",
+    "useParam"
+  ];
 };
 
-if (_useParam isEqualTo 2) exitWith {
-  ["useParam 2 warning"]
-};
-
-[]
+_warnings

@@ -139,6 +139,9 @@
     init = QUOTE(if (getNumber (missionConfigFile >> QUOTE(QGVAR(disableSystem))) != 1) then {call COMPILE_ACE_FILE(var1,var2);};); \
 }
 
+#define QQPATHTOF(var1) QUOTE(QPATHTOF(var1))
+#define QQPATHTOEF(var1,var2) QUOTE(QPATHTOEF(var1,var2))
+
 #ifdef DISABLE_COMPILE_CACHE
     #define PREP_MODULE(moduleName,fncName) DFUNC(DOUBLES(moduleName,fncName) = compile preprocessFileLineNumbers QPATHTOF(modules\moduleName\functions\DOUBLES(fnc,fncName).sqf)
 #else

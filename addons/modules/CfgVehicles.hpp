@@ -41,14 +41,14 @@ class CfgVehicles {
         /*
          * Validator code, should return array of warnings (or empty array if none)
          *
-         * Warnings can be returned in 2 formats:
-         * ["Warning one", "Warning two", etc...]
-         * or
-         * [["Warning one title", "Warning one description"], "Warning two", etc...]
+         * Warnings should be returned in format:
+         * [["Warning one title", "Warning one description", "attribute_class"], etc...]
          *
-         * Note: If format with description is used, warnings tree in 3DEN left
-         * panel will only show title, description will be shown only inside
-         * module attributes dialog (edit attributes).
+         * Note: Warning description is optional, use empty string if no description.
+         *
+         * Note: Attribute_class is a warning source. In case warning source is
+         * not attribute (ie. warning about module synchrnizations) you can use
+         * empty string.
          */
         GVAR(validator) = "";
 
@@ -85,6 +85,14 @@ class CfgVehicles {
             };
             class EditMulti5: Default {
                 control = "EditMulti5";
+            };
+            class GVAR(subCategory) {
+                control = QGVAR(subCategory);
+                property = QGVAR(subCategory);
+            };
+            class GVAR(subCategoryWithDescription) {
+                control = QGVAR(subCategoryWithDescription);
+                property = QGVAR(subCategoryWithDescription);
             };
             class GVAR(moduleShortDescription) {
                 control = QGVAR(moduleShortDescription);

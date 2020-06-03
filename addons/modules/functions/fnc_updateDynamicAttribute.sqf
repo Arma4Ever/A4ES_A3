@@ -13,7 +13,7 @@ private _attributeSaveFunction = _controlGroup getVariable QGVAR(attributeSaveFu
 private _configName = configName _config;
 private _parsedValue = _controlGroup call _attributeSaveFunction;
 
-LOG_2("Updating dynamic attribute '%1' (value: %2).",_configName,str _parsedValue);
+INFO_2("Updating dynamic attribute '%1' (value: %2).",_configName,str _parsedValue);
 
 // Update control value
 GVAR(dynamicAttributesValues) setVariable [_configName, _parsedValue];
@@ -25,10 +25,12 @@ GVAR(dynamicAttributesModule) setVariable [QGVAR(moduleValues), GVAR(dynamicAttr
 call FUNC(refreshReactiveAttributes);
 
 // Validate module
-GVAR(dynamicAttributesModuleWarnings) = [
+private _warnings = [
   GVAR(dynamicAttributesModule),
-  GVAR(dynamicAttributesValues)
+  GVAR(dynamicAttributesValues),
+  // Don't update warnings, this is just validation of temporary values
+  false
 ] call FUNC(validateEntity);
 
 // Trigger module warnings refresh
-call FUNC(refreshModuleWarnings);
+[_warnings] call FUNC(refreshModuleWarnings);

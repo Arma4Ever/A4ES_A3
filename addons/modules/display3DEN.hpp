@@ -71,9 +71,8 @@ class Display3DEN {
 							sizeEx = "3.96 * (1 / (getResolution select 3)) * pixelGrid * 0.5";
 							font = "RobotoCondensedLight";
 							colorBorder[] = {0, 0, 0, 0};
-                            onTreeSelChanged = "false";
-                			onTreeDblClick = "false";
-                            //['select',_this] call bis_fnc_3DENListLocations;
+                            onTreeSelChanged = QUOTE([ARR_2(_this,false)] call FUNC(handleWarningsTreeClick));
+                			onTreeDblClick = QUOTE([ARR_2(_this,true)] call FUNC(handleWarningsTreeClick));
 							disableKeyboardSearch = 1;
 							expandOnDoubleclick = 0;
 						};

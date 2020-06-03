@@ -11,7 +11,7 @@ INFO_1("Refreshing reactive attributes started (attributes: %1).",str count GVAR
   private _condition = _controlGroup getVariable QGVAR(conditionActive);
   private _state = (GVAR(dynamicAttributesValues) call _condition) isEqualTo true;
 
-  LOG_3("Refreshing reactive attribute '%1' (condition: '%2' active: %3).",ctrlClassName _controlGroup,str _condition,str _state);
+  INFO_3("Refreshing reactive attribute '%1' (condition: '%2' active: %3).",ctrlClassName _controlGroup,str _condition,str _state);
 
   private _fade = [0.75, 0] select _state;
 

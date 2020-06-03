@@ -16,7 +16,7 @@ INFO("Warnings init start.");
 GVAR(warningsEntities) = [];
 
 // Setup namespaces
-GVAR(warningsData) = false call CBA_fnc_createNamespace;
+GVAR(allWarnings) = false call CBA_fnc_createNamespace;
 GVAR(validatorsCache) = false call CBA_fnc_createNamespace;
 
 // Clear warnings tree

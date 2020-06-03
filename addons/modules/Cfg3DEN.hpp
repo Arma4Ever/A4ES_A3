@@ -4,36 +4,73 @@ class Cfg3DEN {
 		class Title: Default {
 			class Controls {
 				class Title;
+                class GVAR(description): ctrlStructuredText {
+                    idc = 702;
+                    x = "48 * (pixelW * pixelGrid * 0.50)";
+                    y = "5 * (pixelH * pixelGrid * 	0.50)";
+                    w = "82 * (pixelW * pixelGrid * 0.50)";
+                    h = "0";
+                    colorBackground[] = {1,1,1,0};
+                    shadow = 0;
+                    class Attributes {
+                        color = "#999999";
+                        size = 1;
+                        align = "left";
+                        colorLink = "#c2c2c2";
+                        font = "RobotoCondensedLight";
+                    };
+                };
 			};
 		};
-        class Combo: Title {};
-        class Edit: Title {};
-        class ModuleInfo: Default {};
-
-        class GVAR(moduleShortDescription): ModuleInfo {
-            attributeLoad = QUOTE(_this call FUNC(moduleShortDescription_attributeLoad));
+        class Combo: Title {
+            class Controls: Controls {
+				class Title: Title {};
+                class Value: ctrlCombo {};
+                class GVAR(description): GVAR(description) {};
+			};
+        };
+        class Edit: Title {
+            class Controls: Controls {
+				class Title: Title {};
+                class Value: ctrlEdit {};
+                class GVAR(description): GVAR(description) {};
+			};
         };
 
+        class ModuleInfo: Default {};
+        class SubCategory: Default {};
+    	class SubCategoryDesc1: SubCategory {};
+        class GVAR(subCategory): SubCategory {};
+        class GVAR(subCategoryWithDescription): SubCategoryDesc1 {};
+        class GVAR(moduleShortDescription): SubCategoryDesc1 {
+            attributeLoad = QUOTE(_this call FUNC(moduleShortDescription_attributeLoad));
+        };
+        class GVAR(moduleDescription): ModuleInfo {
+            attributeLoad = QUOTE(_this call FUNC(moduleDescription_attributeLoad));
+        };
         class GVAR(moduleWarnings): ModuleInfo {
             attributeLoad = QUOTE(_this call FUNC(moduleWarnings_attributeLoad));
-            attributeSave = "";
-            h = "5 * 	5 * (pixelH * pixelGrid * 	0.50)";
+            h = "5 * 	5 * (pixelH * pixelGrid * 0.50)";
             class Controls {
                 delete TitleCustom;
                 class Group: ctrlControlsGroup {
                     idc = 101;
-                    x = "5 * (pixelW * pixelGrid * 	0.50)";
+                    x = "5 * (pixelW * pixelGrid * 0.50)";
                     y = "0";
-                    w = "(	48 + 	82 - 5) * (pixelW * pixelGrid * 	0.50)";
-                    h = "5 * 	5 * (pixelH * pixelGrid * 	0.50)";
+                    w = "(	48 + 82 - 5) * (pixelW * pixelGrid * 0.50)";
+                    h = "5 * 5 * (pixelH * pixelGrid * 0.50)";
+
+                    class ScrollBar {
+                        scrollSpeed = 0;
+                    };
                     class Controls {
                         class Text: ctrlStructuredText {
                             idc = 100;
-                            size = "5.5 * (1 / (getResolution select 3)) * pixelGrid * 0.5";
+                            size = "3.96 * (1 / (getResolution select 3)) * pixelGrid * 0.5";
                             y = "0";
-                            w = "(	48 + 	82 - 5) * (pixelW * pixelGrid * 	0.50)";
-                            h = "5 * 	5 * (pixelH * pixelGrid * 	0.50)";
-                            colorBackground[]={0,0,0,0.25};
+                            w = "(48 + 82 - 5) * (pixelW * pixelGrid * 0.50)";
+                            h = "5 * 5 * (pixelH * pixelGrid * 	0.50)";
+                            colorBackground[]={0,0,0,0};
                         };
                     };
                 };
@@ -42,15 +79,25 @@ class Cfg3DEN {
 
         class GVAR(dynamicCombo): Combo {
 			attributeLoad = QUOTE(_this call FUNC(dynamicCombo_attributeLoad));
-        };
 
+            class Controls: Controls {
+				class Title: Title {
+                    DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE_PROPERTIES;
+                };
+                class Value: Value {};
+                class GVAR(description): GVAR(description) {};
+			};
+        };
         class GVAR(dynamicEdit): Edit {
 			attributeLoad = QUOTE(_this call FUNC(dynamicEdit_attributeLoad));
+            class Controls: Controls {
+				class Title: Title {
+                    DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE_PROPERTIES;
+                };
+                class Value: Value {};
+                class GVAR(description): GVAR(description) {};
+			};
 		};
-
-        class GVAR(moduleDescription): ModuleInfo {
-            attributeLoad = QUOTE(_this call FUNC(moduleDescription_attributeLoad));
-        };
 	};
     class EventHandlers {
         class ADDON {

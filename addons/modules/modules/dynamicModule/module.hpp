@@ -13,6 +13,7 @@ class GVAR(dynamicModule): GVAR(base) {
 
         class useParam: GVAR(dynamicCombo) {
             displayName = "Use param";
+            GVAR(description) = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
             property = QGVAR(useParam);
             typeName = "NUMBER";
             defaultValue = 0;
@@ -54,6 +55,7 @@ class GVAR(dynamicModule): GVAR(base) {
         };
         class param3: GVAR(dynamicEdit) {
             displayName = "Param3";
+            GVAR(description) = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
             property = QGVAR(param3);
             defaultValue = "''";
             GVAR(conditionActive) = QUOTE((_this getVariable 'useParam') isEqualTo 3);

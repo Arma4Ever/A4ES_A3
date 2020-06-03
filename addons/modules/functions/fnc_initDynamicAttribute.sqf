@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "\z\a3cs\addons\modules\controlDefines.hpp"
 /*
  * Author: SzwedzikPL
  * Init dynamic attribute
@@ -62,5 +63,34 @@ if (_isReactive) then {
   // Register attribute as reactive
   GVAR(reactiveAttributes) pushBackUnique _controlGroup;
 };
+
+private _controlTitle = _controlGroup controlsGroupCtrl IDC_DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE;
+private _titleText = format ["%1%2", "%1", getText (_config >> "displayName")];
+_controlTitle ctrlSetStructuredText parseText format [_titleText, ""];
+
+_controlTitle setVariable [QGVAR(attributeTitle), _titleText];
+_controlTitle setVariable [QGVAR(attributeClass), configName _config];
+
+private _controlDescription = _controlGroup controlsGroupCtrl IDC_DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_DESC;
+
+private _description = getText (_config >> QGVAR(description));
+
+_controlDescription ctrlSetStructuredText parseText _description;
+private _descHeight = ctrlTextHeight _controlDescription;
+
+// Update description control height
+private _controlDescriptionPos = ctrlPosition _controlDescription;
+_controlDescriptionPos set [3, _descHeight];
+_controlDescription ctrlSetPosition _controlDescriptionPos;
+_controlDescription ctrlCommit 0;
+
+// Update control group height
+private _controlGroupPos = ctrlPosition _controlGroup;
+_controlGroupPos set [3, (_controlGroupPos # 3) + _descHeight];
+_controlGroup ctrlSetPosition _controlGroupPos;
+_controlGroup ctrlCommit 0;
+
+// Add control group to controls list
+GVAR(allAttributesControls) pushBackUnique [_controlGroup, (ctrlPosition _controlGroup # 1)];
 
 LOG_5("Inited dynamic attribute '%1' (observeValue: %2 isReactive: %3 parsedValue: %4 condition active: '%5').",_configName,str _observeValue,str _isReactive,str _parsedValue,_conditionActive);

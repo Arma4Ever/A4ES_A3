@@ -12,19 +12,19 @@ private _entityIDVarName = str _entityID;
 private _warningsTree = (findDisplay IDD_DISPLAY3DEN) displayCtrl IDC_DISPLAY3DEN_PANELLEFT_WARNINGS_TREE;
 
 // Get entity warning data
-private _warningsData = GVAR(warningsData) getVariable [_entityIDVarName, [[]]];
-_warningsData params ["_currentWarnings"];
+private _currentWarnings = GVAR(allWarnings) getVariable [_entityIDVarName, []];
 
 // Exit if new warnings are the same as current warnings
 if (_currentWarnings isEqualTo _warnings) exitWith {
   INFO_4("Setting entity '%1' (ID: %2) warnings skipped. New warnings are equal to current warnings (%3 = %4).",typeof _entity,_entityIDVarName,str _warnings,str _currentWarnings);
 };
 
-INFO_4("Setting entity '%1' (ID: %2) warnings to %3 (data: %4).",typeof _entity,_entityIDVarName,str _warnings,str _warningsData);
+INFO_3("Setting entity '%1' (ID: %2) warnings to %3.",typeof _entity,_entityIDVarName,str _warnings);
 
+// Find current warning index if exists on tree
 private _index = -1;
-
-for "_i" from 0 to ((_warningsTree tvCount []) - 1) do {
+private _treeRootElements = (_warningsTree tvCount []) - 1;
+for "_i" from 0 to _treeRootElements do {
   if ((_warningsTree tvValue [_i]) isEqualTo _entityID) exitWith {
     _index = _i;
   };
@@ -49,28 +49,26 @@ if !(_warnings isEqualTo []) then {
   };
 
   // Clear current entity warnings tree
-  for "_i" from 0 to ((_warningsTree tvCount [_index]) - 1) do {
-    _warningsTree tvDelete [_index, _i];
+  private _treeWarningsCount = (_warningsTree tvCount [_index]) - 1;
+  for "_i" from 0 to _treeWarningsCount do {
+    _warningsTree tvDelete [_index, 0];
   };
 
   // Add entity warnings to warnings tree
   {
-    private _warning = _x;
-    // Use warning title if warning has description
-    if (_warning isEqualType []) then {
-      _warning = _warning # 0;
-    };
-
+    _x params ["_warning", ["_description", ""]];
     private _warningIndex = _warningsTree tvAdd [[_index], _warning];
-    _warningsTree tvSetPicture [[_index, _warningIndex], QPATHTOF(data\leftpanel\warning.paa)];
-    _warningsTree tvSetValue [[_index, _warningIndex], _entityID];
+    private _path = [_index, _warningIndex];
+    _warningsTree tvSetPicture [_path, QPATHTOF(data\leftpanel\warning.paa)];
+    _warningsTree tvSetValue [_path, _entityID];
+    _warningsTree tvSetTooltip [_path, _description];
   } forEach _warnings;
 
   // Expand updated warning tree
   _warningsTree tvExpand [_index];
 
-  // Update warnings data
-  GVAR(warningsData) setVariable [_entityIDVarName, [_warnings]];
+  // Update warnings
+  GVAR(allWarnings) setVariable [_entityIDVarName, _warnings];
 
   // Update entities list
   GVAR(warningsEntities) pushBackUnique _entityID;
@@ -80,12 +78,15 @@ if !(_warnings isEqualTo []) then {
     _warningsTree tvDelete [_index];
   };
 
-  // Cleanup warnings data
-  GVAR(warningsData) setVariable [_entityIDVarName, nil];
+  // Cleanup warnings
+  GVAR(allWarnings) setVariable [_entityIDVarName, nil];
 
   // Update entities list
   GVAR(warningsEntities) deleteAt (GVAR(warningsEntities) find _entityID);
 };
+
+// Sort entities by name
+_warningsTree tvSort [[], false];
 
 // Update warnings tab UI
 call FUNC(updateWarningsTabUI);
