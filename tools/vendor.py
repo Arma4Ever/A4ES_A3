@@ -3,7 +3,7 @@ VENDOR = {
         "blacklist": ["ace_advanced_fatigue", "ace_hearing", "ace_nametags", "ace_sandbag"],
     },
     "@ACEX": {
-        "blacklist": ["acex_volume", "acex_viewrestriction"],
+        "blacklist": ["acex_volume", "acex_viewrestriction", "acex_headless"],
     },
     "@LAMBS_Danger.fsm": {},
     "@LAMBS_Suppression": {},
