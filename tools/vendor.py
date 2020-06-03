@@ -23,5 +23,5 @@ VENDOR = {
     "@Eden Extended Objects": {},
     "@O&T Expansion Eden": {},
     "@Metis Nature": {},
-    "@Camofaces": {},
+    # "@Camofaces": {},
 }
