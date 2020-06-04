@@ -18,6 +18,7 @@ IGNOREADDONS = [
     "ptb",
     "searchlight",
     "server",
+    "camofaces",
 ]
 ##########################
 

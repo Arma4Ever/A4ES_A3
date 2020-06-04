@@ -17,6 +17,7 @@ class GVAR(dynamicModule): GVAR(base) {
             property = QGVAR(useParam);
             typeName = "NUMBER";
             defaultValue = 0;
+            GVAR(insertValues) = QFUNC(dynamicModule_insertValues);
             class values {
                 class usenone {
                     name = "None";

@@ -12,7 +12,7 @@ private _controlGroupClass = ctrlClassName _controlGroup;
 
 // Exit if framework disabled for this display
 if (isNil QGVAR(dynamicAttributesEnabled)) exitWith {
-  LOG_1("Skipping init of dynamic attribute '%1' (framework disabled for current display).",_configName);
+  INFO_1("Skipping init of dynamic attribute '%1' (framework disabled for current display).",_configName);
 };
 private _observeValue = (getNumber (_config >> QGVAR(observeValue))) isEqualTo 1;
 private _parsedValue = '';
@@ -22,7 +22,7 @@ if (_observeValue) then {
 
   // Exit if there's no attributeSave function in control's config
   if (_attributeSaveFunction isEqualTo "") then {
-    LOG_1("Missing attributeSave property in dynamic attribute '%1'.",_configName);
+    INFO_1("Missing attributeSave property in dynamic attribute '%1'.",_configName);
 
     // Use simple return as save attribute function
     _attributeSaveFunction = "_value";
@@ -93,4 +93,4 @@ _controlGroup ctrlCommit 0;
 // Add control group to controls list
 GVAR(allAttributesControls) pushBackUnique [_controlGroup, (ctrlPosition _controlGroup # 1)];
 
-LOG_5("Inited dynamic attribute '%1' (observeValue: %2 isReactive: %3 parsedValue: %4 condition active: '%5').",_configName,str _observeValue,str _isReactive,str _parsedValue,_conditionActive);
+INFO_5("Inited dynamic attribute '%1' (observeValue: %2 isReactive: %3 parsedValue: %4 condition active: '%5').",_configName,str _observeValue,str _isReactive,str _parsedValue,_conditionActive);

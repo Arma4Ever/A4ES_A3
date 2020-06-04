@@ -15,5 +15,8 @@
         <Key ID="STR_A3CS_Modules_EditingMultipleModulesError_Message">
             <Original>Możesz edytować tylko jeden moduł jednocześnie.</Original>
         </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Title">
+            <Original>Właściwości: %1</Original>
+        </Key>
     </Package>
 </Project>

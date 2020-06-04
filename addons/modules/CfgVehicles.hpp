@@ -38,6 +38,22 @@ class CfgVehicles {
         // Dialog displayed when the module is placed or double-clicked by zeus
 		curatorInfoType = "";
 
+        // Set to 1 if module execution should be persistent for all JIP players
+        isPersistent = 0;
+
+        /*
+        Area properties:
+
+        canSetArea = 0;
+		canSetAreaHeight = 0;
+		canSetAreaShape = 0;
+
+		class AttributeValues {
+            size3[] = {5, 5, -1};
+            isRectangle = 0;
+		};
+        */
+
         /*
          * Validator code, should return array of warnings (or empty array if none)
          *
@@ -134,6 +150,12 @@ class CfgVehicles {
             // Short module description shown above module attributes
             // Note: This will be parsed as structured text
             shortDescription = "";
+
+            // Info about importance of module position. If module position do
+            // not matter leave empty string - proper info will be added
+            // in description
+            // Note: This will be parsed as structured text
+            positionInfo = "";
 
             /*
              * List of objects module can be synced with

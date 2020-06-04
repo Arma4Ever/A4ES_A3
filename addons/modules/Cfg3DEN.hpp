@@ -36,8 +36,17 @@ class Cfg3DEN {
                 class GVAR(description): GVAR(description) {};
 			};
         };
+        class ModuleInfo: Default {
+			class Controls {
+				class TitleCustom: ctrlStatic {};
+				class Group: ctrlControlsGroup {
+					class Controls {
+                        class Text: ctrlStructuredText {};
+                    };
+				};
+			};
+		};
 
-        class ModuleInfo: Default {};
         class SubCategory: Default {};
     	class SubCategoryDesc1: SubCategory {};
         class GVAR(subCategory): SubCategory {};
@@ -45,8 +54,23 @@ class Cfg3DEN {
         class GVAR(moduleShortDescription): SubCategoryDesc1 {
             attributeLoad = QUOTE(_this call FUNC(moduleShortDescription_attributeLoad));
         };
+
         class GVAR(moduleDescription): ModuleInfo {
             attributeLoad = QUOTE(_this call FUNC(moduleDescription_attributeLoad));
+            class Controls: Controls {
+				class TitleCustom: TitleCustom {
+                    idc = IDC_DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE;
+					text = "";
+                    colorBackground[] = {0, 0, 0, 0.25};
+				};
+				class Group: Group {
+                    class Controls: Controls {
+                        class Text: Text {
+                            colorBackground[] = {0, 0, 0, 0.15};
+                        };
+                    };
+                };
+			};
         };
         class GVAR(moduleWarnings): ModuleInfo {
             attributeLoad = QUOTE(_this call FUNC(moduleWarnings_attributeLoad));

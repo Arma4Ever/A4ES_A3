@@ -8,50 +8,96 @@ private _control = _this controlsGroupCtrl 100;
 
 private _options = [];
 
-//TODO!
-private _insertOptions = _config >> QGVAR(insertOptions);
-
-_cfgValues = _config >> 'Values';
-
-if (isclass _cfgValues) then {
+// Read options from attribute config
+private _attributeValuesConfig = _config >> 'Values';
+if (isClass _attributeValuesConfig) then {
   {
-    _lbadd = _control lbadd gettext (_x >> 'name');
-    if (isnumber (_x >> 'value')) then {
-      _valueConfig = getnumber (_x >> 'value');
-      _control lbsetdata [_lbadd,str _valueConfig];
-      _control lbsetvalue [_lbadd,_valueConfig];
+    private ["_optionValue"];
+
+    if (isNumber (_x >> 'value')) then {
+      _optionValue = getNumber (_x >> 'value');
     } else {
-      _control lbsetdata [_lbadd,gettext (_x >> 'value')];
+      _optionValue = getText (_x >> 'value');
     };
 
-    _control lbsetpicture [_lbadd,gettext (_x >> 'picture')];
-    _control lbsetpictureright [_lbadd,gettext (_x >> 'pictureRight')];
-    _control lbsettooltip [_lbadd,gettext (_x >> 'tooltip')];
-    if (getnumber (_x >> 'default') > 0) then {
-      _control lbsetcursel _lbadd;
-    };
-  } foreach configproperties [_cfgValues,'isclass _x'];
+    _options pushback [
+      getText (_x >> 'name'),
+      _optionValue,
+      !((getNumber (_x >> 'default')) isEqualTo 0),
+      getText (_x >> 'tooltip'),
+      getText (_x >> 'picture'),
+      getText (_x >> 'pictureRight')
+    ];
+  } foreach configProperties [_attributeValuesConfig, 'isClass _x'];
 };
 
-if (lbsize _control == 0) then {
+// Get options from insert function
+private _insertFunctionName = getText (_config >> QGVAR(insertValues));
+if !(_insertFunctionName isEqualTo "") then {
+  private _insertFunction = missionNamespace getVariable [_insertFunctionName, ''];
+  if (_insertFunction isEqualType {}) then {
+    private _insertOptions = GVAR(dynamicAttributesModule) call _insertFunction;
+    if (_insertOptions isEqualType []) then {
+      _options append _insertOptions;
+    } else {
+      ERROR_3("InsertValues function of '%1' attribute returned type '%2' ('%3' expected).",configName _config,typeName _insertOptions,typeName []);
+    };
+  } else {
+    ERROR_2("Missing insertValues function of attribute '%1' (function name '%2')",configName _config,_insertFunctionName);
+  };
+};
+
+// Add options to control
+{
+  _x params [
+    ["_name", ""], ["_value", 0], ["_isDefault", false],
+    ["_tooltip", ""], ["_picture", ""], ["_pictureRight", ""]
+  ];
+
+  private _option = _control lbAdd _name;
+  if (_value isEqualType 0) then {
+    _control lbSetData [_option, str _value];
+    _control lbSetValue [_option, _value];
+  } else {
+    _control lbSetData [_option, _value];
+  };
+
+  _control lbSettooltip [_option, _tooltip];
+  _control lbSetPicture [_option, _picture];
+  _control lbSetPictureRight [_option, _pictureRight];
+
+  if (_isDefault) then {
+    _control lbSetCurSel _option;
+  };
+} forEach _options;
+
+// Add enable/disable options if options are empty
+if ((lbSize _control) isEqualTo 0) then {
   {
-    _lbAdd = _control lbadd _x;
-    _control lbsetvalue [_lbAdd,1 - _foreachindex];
-    _control lbsetdata [_lbAdd,str (1 - _foreachindex)];
-  } foreach [localize 'str_enabled', localize 'str_disabled'];
+    private _option = _control lbAdd _x;
+    private _value = 1 - _forEachIndex;
+    _control lbSetValue [_option, _value];
+    _control lbSetData [_option, str _value];
+  } forEach [localize 'str_enabled', localize 'str_disabled'];
 };
 
-if (_value isequaltype true) then {
+// Normalize control value
+if (_value isEqualType true) then {
   _value = [0,1] select _value;
 } else {
-  if (_value isequaltype '') then {
+  if (_value isEqualType '') then {
     _value = tolower _value;
   };
 };
 
-for '_i' from 0 to (lbsize _control - 1) do {
-  if (_value in [parsenumber (_control lbdata _i), tolower (_control lbdata _i), _control lbvalue _i]) exitwith {
-    _control lbsetcursel _i;
+// Select option with current value
+for '_i' from 0 to (lbSize _control - 1) do {
+  if (_value in [
+    parseNumber (_control lbData _i),
+    toLower (_control lbData _i),
+    _control lbValue _i
+  ]) exitwith {
+    _control lbSetCurSel _i;
   };
 };
 

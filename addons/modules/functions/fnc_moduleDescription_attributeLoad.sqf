@@ -1,23 +1,49 @@
 #include "script_component.hpp"
+#include "\z\a3cs\addons\modules\controlDefines.hpp"
 /*
  * Author: Bohemia Interactive, SzwedzikPL
  * 3DEN moduleDescription attributeLoad handler
  */
 
-// Exit if framework disabled for this display
-if (isNil QGVAR(dynamicAttributesEnabled)) exitWith {
-  LOG_1("Skipping init of dynamic attribute '%1' (framework disabled for current display).",_configName);
-  _inited
-};
+ // Exit if framework disabled for this display
+ if (isNil QGVAR(dynamicAttributesEnabled)) exitWith {
+   INFO_1("Skipping init of dynamic attribute '%1' (framework disabled for current display).",configName _config);
+ };
 
+// Setup config vars
 private _configHierarchy = configHierarchy _config;
 private _moduleConfig = _configHierarchy select (count _configHierarchy - 3);
+private _moduleDescriptionConfig = _moduleConfig >> QGVAR(moduleDescription);
 
-// TEMP: use bi module description
-[_this, _config] call bis_fnc_3DENModuleDescription;
+// Setup controls vars
+private _descriptionTitle =  _this controlsGroupCtrl IDC_DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE;
+private _descriptionGroup = _this controlsGroupCtrl 101;
+private _controlText = _descriptionGroup controlsGroupCtrl 100;
 
-// Update module values
-GVAR(dynamicAttributesModule) setVariable [QGVAR(moduleValues), GVAR(dynamicAttributesValues)];
+// Setup description title bar
+private _moduleName = getText (configFile >> "CfgVehicles" >> (typeOf GVAR(dynamicAttributesModule)) >> "displayName");
+_descriptionTitle ctrlSetText format [
+  localize LSTRING(ModuleDescription_Title),
+  _moduleName
+];
+_descriptionTitle ctrlSetTextColor [0.75, 0.75, 0.75, 1];
+
+// Setup description text
+/*
+Info
+
+description
+triggers
+canSyncWith
+schemas
+positionInfo
+canSetArea
+*/
+
+// ================================================
+// Module description is last loaded element
+// Use it to trigger ala "postInit" framework stuff
+// ================================================
 
 // Add control to controls list
 GVAR(allAttributesControls) pushBackUnique [_this, (ctrlPosition _this # 1)];

@@ -21,7 +21,7 @@ if (_specialIcon != "") then {
     _icon = format [QPATHTOF(ui\soundwave%1.paa), (floor random 10) min 9];
   } else {
     if (_isLeader && {GVAR(showLeaderIcon)}) then {
-      _icon = "\A3\Ui_f\data\igui\Cfg\cursors\leader_ca.paa";
+      _icon = "\a3\3den\data\attributes\namesound\special_ca.paa";
     };
   };
 };
