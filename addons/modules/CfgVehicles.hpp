@@ -38,9 +38,6 @@ class CfgVehicles {
         // Dialog displayed when the module is placed or double-clicked by zeus
 		curatorInfoType = "";
 
-        // Set to 1 if module execution should be persistent for all JIP players
-        isPersistent = 0;
-
         /*
         Area properties:
 

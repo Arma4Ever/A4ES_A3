@@ -10,7 +10,9 @@ params ["_module"];
 _module addEventHandler ["ConnectionChanged3DEN", {
     params ["_module"];
     INFO_2("Module '%1' (ID: %2) ConnectionChanged3DEN.",typeof _module,str get3DENEntityID _module);
-    _module call FUNC(validateEntity);
+
+    private _moduleValues = _module getVariable QGVAR(moduleValues);
+    [_module, _moduleValues] call FUNC(validateEntity);
 }];
 
 // Add RegisteredToWorld3DEN handler
@@ -19,7 +21,7 @@ _module addEventHandler ["RegisteredToWorld3DEN", {
     INFO_2("Module '%1' (ID: %2) RegisteredToWorld3DEN.",typeof _module,str get3DENEntityID _module);
 
     // Setup module variables because tmp vars are lost during unregistration
-    _moduleValues = _module call FUNC(updateModuleValues);
+    _module call FUNC(updateModuleValues);
 }];
 
 // Add UnregisteredFromWorld3DEN handler
@@ -34,4 +36,4 @@ _module addEventHandler ["UnregisteredFromWorld3DEN", {
 }];
 
 // Setup module variables
-private _moduleValues = _module call FUNC(updateModuleValues);
+_module call FUNC(updateModuleValues);

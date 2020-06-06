@@ -5,7 +5,7 @@
  * Validates entity and updates entity warnings
  */
 
-params ["_entity", "_values", ["_updateWarnings", true, [true]]];
+params ["_entity", ["_values", locationNull, [locationNull]], ["_updateWarnings", true, [true]]];
 
 private _className = typeOf _entity;
 private _validatorName = GVAR(validatorsCache) getVariable _className;

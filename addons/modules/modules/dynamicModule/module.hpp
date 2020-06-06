@@ -68,11 +68,14 @@ class GVAR(dynamicModule): GVAR(base) {
         shortDescription = "This is test dynamic module. This is simple description.";
         description = "Full detailed module description...";
         canSyncWith[] = {
-            {"module", "A"},
-            {"module", "B"}
+            "<anyUnit>",
+            "<anyVehicle>",
+            "<anyPlane>",
+            "<anyObject>",
+            {"module", QGVAR(dynamicModule)},
+            {"module", QGVAR(dynamicModule)}
         };
-        schemas[] = {
-            QPATHTOF(modules\dynamicModuledata\data\schema.jpg)
-        };
+        syncRequired = 1;
+        schema = QPATHTOF(modules\dynamicModule\data\schema.jpg);
     };
 };

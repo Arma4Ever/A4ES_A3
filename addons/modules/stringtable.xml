@@ -16,7 +16,103 @@
             <Original>Możesz edytować tylko jeden moduł jednocześnie.</Original>
         </Key>
         <Key ID="STR_A3CS_Modules_ModuleDescription_Title">
-            <Original>Właściwości: %1</Original>
+            <Original>Szczegóły</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Triggers_Active_Title">
+            <Original>Triggery są obsługiwane</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Triggers_Active_Desc">
+            <Original>Moduł może być zsynchronizowany z triggerem aby opóźnić jego wykonanie. Domyślnie moduł uruchomi się na starcie misji, po zsynchronizowaniu zsynchronizowaniu modułu z tiggerem, moduł uruchomi się dopiero w momencie aktywacji tiggera.</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Triggers_Inactive_Title">
+            <Original>Triggery nie są obsługiwane</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Triggers_Inactive_Desc">
+            <Original>Moduł uruchomi się na starcie misji.</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Triggers_TriggerNotSynced_Info">
+            <Original>Aktualnie moduł nie jest zsynchronizowany z żadnym triggerem - moduł uruchomi się na starcie misji.</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Triggers_TriggerSynced_Info">
+            <Original>Aktualnie moduł jest zsynchronizowany z triggerem - moduł uruchomi się po aktywacji triggera.</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Env_Title">
+            <Original>Środowisko wykonania</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Env_Server_Title">
+            <Original>serwer</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Env_Server_Desc">
+            <Original>Moduł po uruchomieniu wykona się tylko na serwerze.</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Env_Global_Title">
+            <Original>globalnie</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Env_Global_Desc">
+            <Original>Moduł po uruchomieniu wykona się globalnie - na serwerze oraz u wszystkich graczy.</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Env_GlobalJIP_Title">
+            <Original>globalnie + JIP</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Env_GlobalJIP_Desc">
+            <Original>Moduł po uruchomieniu wykona się globalnie - na serwerze oraz u wszystkich graczy + wykona się również u każdego gracza dołączającego do rozgrywki.</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Position_Active_Title">
+            <Original>Pozycja modułu ma znaczenie</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Position_Inactive_Title">
+            <Original>Pozycja modułu nie ma znaczenia</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Area_Active_Title">
+            <Original>Moduł wspiera oznaczanie obszaru</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Area_Active_Desc">
+            <Original>Ten moduł jest modułem obszarowym czyli pozwala określić obszar jego działania. Obszar działania modułu jest widoczny podczas podglądu w edytorze. Aby zmienić rozmiar obszaru możesz ustawić jego długość i szerekość w zakładce tranformacji powyżej lub użyć na module widgetu skalowania.</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Area_Inactive_Title">
+            <Original>Moduł nie wspiera oznaczania obszaru</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Area_Inactive_Desc">
+            <Original></Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_is3DEN_Active_Title">
+            <Original>Efekt jest widoczny w edytorze</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_is3DEN_Active_Desc">
+            <Original>Efekt działania modułu jest widoczny bezpośrednio w edytorze. Pamiętaj, że w przypadku niektórych modułów efekt widoczny w edytorze może być niepełny i mieć charater czysto pomocniczy. Zawsze sprawdzaj ostateczny efekt widczony po uruchomieniu misji.</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_is3DEN_Inactive_Title">
+            <Original>Efekt nie jest widoczny w edytorze</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_is3DEN_Inactive_Desc">
+            <Original>Efekt działania modułu nie jest widoczny bezpośrednio w edytorze, aby go zobaczyć musisz uruchomić misję.</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_Active_Title">
+            <Original>Moduł może być zsynchronizowany z innymi elemetami</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_Inactive_Title">
+            <Original>Moduł nie wspiera synchronizacji z innymi elemetami</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_AnyUnit">
+            <Original>Dowolna jednostka</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_AnyVehicle">
+            <Original>Dowolony pojazd</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_AnyPlane">
+            <Original>Dowolony samolot</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_AnyObject">
+            <Original>Dowolny obiekt</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_Modules">
+            <Original>Moduły</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_SyncRequiredInfo">
+            <Original>Do poprawnego działania moduł wymaga synchronizacji z conajmniej jednym z wymienionych wyżej elementów.</Original>
+        </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_Schema_Title">
+            <Original>Schemat użycia</Original>
         </Key>
     </Package>
 </Project>
