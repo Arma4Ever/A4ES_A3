@@ -105,6 +105,9 @@
         <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_AnyObject">
             <Original>Dowolny obiekt</Original>
         </Key>
+        <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_ElementsListTitle">
+            <Original>Moduł może być zsynchronizowany z następującymi elementami</Original>
+        </Key>
         <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_Modules">
             <Original>Moduły</Original>
         </Key>

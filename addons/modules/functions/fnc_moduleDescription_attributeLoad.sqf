@@ -231,7 +231,7 @@ if (_canSyncWithSupported) then {
 
   _syncDesc = format [
     "%1:<br/>",
-    "Moduł może być zsynchronizowany z następującymi elementami"
+    localize LSTRING(ModuleDescription_canSyncWith_ElementsListTitle)
   ];
 
   {
