@@ -109,4 +109,4 @@ _attributesCategoryPos set [3, GVAR(attributesCategoryHeight) + _warningsHeight]
 _attributesCategory ctrlSetPosition _attributesCategoryPos;
 _attributesCategory ctrlCommit 0;
 
-INFO_1('Module warnings refreshed (height: %1 all controls count: %2).',str _warningsHeight,str count GVAR(allAttributesControls));
+LOG_1('Module warnings refreshed (height: %1 all controls count: %2).',str _warningsHeight,str count GVAR(allAttributesControls));

@@ -10,7 +10,7 @@ disableserialization;
 private _display = findDisplay IDD_DISPLAY3DEN;
 private _warningsTree = _display displayCtrl IDC_DISPLAY3DEN_PANELLEFT_WARNINGS_TREE;
 
-INFO("Warnings init start.");
+LOG("Warnings init start.");
 
 // Setup vars
 GVAR(warningsEntities) = [];
@@ -32,4 +32,4 @@ private _modules = all3DENEntities # 3;
   _x call FUNC(handleModuleInit);
 } forEach _modules;
 
-INFO_1("Warnings init finished (entities: %1).",str count _modules);
+LOG_1("Warnings init finished (entities: %1).",str count _modules);

@@ -9,7 +9,7 @@ params ["_module"];
 // Add ConnectionChanged3DEN handler
 _module addEventHandler ["ConnectionChanged3DEN", {
     params ["_module"];
-    INFO_2("Module '%1' (ID: %2) ConnectionChanged3DEN.",typeof _module,str get3DENEntityID _module);
+    LOG_2("Module '%1' (ID: %2) ConnectionChanged3DEN.",typeof _module,str get3DENEntityID _module);
 
     private _moduleValues = _module getVariable QGVAR(moduleValues);
     [_module, _moduleValues] call FUNC(validateEntity);
@@ -18,7 +18,7 @@ _module addEventHandler ["ConnectionChanged3DEN", {
 // Add RegisteredToWorld3DEN handler
 _module addEventHandler ["RegisteredToWorld3DEN", {
     params ["_module"];
-    INFO_2("Module '%1' (ID: %2) RegisteredToWorld3DEN.",typeof _module,str get3DENEntityID _module);
+    LOG_2("Module '%1' (ID: %2) RegisteredToWorld3DEN.",typeof _module,str get3DENEntityID _module);
 
     // Setup module variables because tmp vars are lost during unregistration
     _module call FUNC(updateModuleValues);
@@ -30,7 +30,7 @@ _module addEventHandler ["UnregisteredFromWorld3DEN", {
    // Use cached entityID, on UnregisteredFromWorld3DEN get3DENEntityID returns -1
    private _entityID = _module getVariable QGVAR(entityID);
 
-   INFO_2("Module '%1' (ID: %2) UnregisteredFromWorld3DEN.",typeof _module,str _entityID);
+   LOG_2("Module '%1' (ID: %2) UnregisteredFromWorld3DEN.",typeof _module,str _entityID);
    // Clear module warnings
    [_module, []] call FUNC(setEntityWarnings);
 }];

@@ -7,7 +7,7 @@
 
  // Exit if framework disabled for this display
  if (isNil QGVAR(dynamicAttributesEnabled)) exitWith {
-   INFO_1("Skipping init of dynamic attribute '%1' (framework disabled for current display).",configName _config);
+   LOG_1("Skipping init of dynamic attribute '%1' (framework disabled for current display).",configName _config);
  };
 
 // Setup config vars
@@ -350,7 +350,7 @@ GVAR(attributesListHeight) = (ctrlPosition _attributesListControl) # 3;
 GVAR(attributesCategoryHeight) = (ctrlPosition _attributesCategory) # 3;
 
 // Trigger initial refresh of attributes
-INFO_1("Triggering initial refresh of reactive attributes (attributes: %1).",str count GVAR(reactiveAttributes));
+LOG_1("Triggering initial refresh of reactive attributes (attributes: %1).",str count GVAR(reactiveAttributes));
 call FUNC(refreshReactiveAttributes);
 
 // Get current module warnings
@@ -358,5 +358,5 @@ private _entityIDVarName = str (get3DENEntityID GVAR(dynamicAttributesModule));
 private _warnings = GVAR(allWarnings) getVariable [_entityIDVarName, []];
 
 // Trigger module warnings update
-INFO_1("Triggering initial refresh of module warnings (warnings: %1).",str _warnings);
+LOG_1("Triggering initial refresh of module warnings (warnings: %1).",str _warnings);
 [_warnings] call FUNC(refreshModuleWarnings);

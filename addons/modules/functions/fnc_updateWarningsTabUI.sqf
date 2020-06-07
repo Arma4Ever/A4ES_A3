@@ -35,4 +35,4 @@ _warningsTabInfo ctrlSetStructuredText parseText format [
   ]
 ];
 
-INFO_1("Warnings tab UI updated (entities: %1).",str _entitiesCount);
+LOG_1("Warnings tab UI updated (entities: %1).",str _entitiesCount);

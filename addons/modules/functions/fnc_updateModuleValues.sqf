@@ -51,7 +51,7 @@ private _valuesList = '';
 {
   _valuesList = format ['%1%2 = %3 ', _valuesList, _x, _moduleValues getVariable _x];
 } forEach (allVariables _moduleValues);
-INFO_4("Module '%1' (ID: %2) values updated (values: '%3' validate: %4).",typeof _module,str get3DENEntityID _module,_valuesList,str _validate);
+LOG_4("Module '%1' (ID: %2) values updated (values: '%3' validate: %4).",typeof _module,str get3DENEntityID _module,_valuesList,str _validate);
 #endif
 
 if (_validate) then {

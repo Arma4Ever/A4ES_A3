@@ -13,7 +13,7 @@ if (_modules isEqualTo []) exitWith {};
 
 // Close display if user is editing more than one module
 if !(_selected isEqualTo [[],[],[],[],[]] && {(count _modules) isEqualTo 1}) exitWith {
-  INFO_2("Closing display3DENEditAttributes (selected: %1 modules count: %2).",str _selected,str count _modules);
+  LOG_2("Closing display3DENEditAttributes (selected: %1 modules count: %2).",str _selected,str count _modules);
 
   // Close display
   _display closeDisplay 0;
@@ -33,7 +33,7 @@ if !(_selected isEqualTo [[],[],[],[],[]] && {(count _modules) isEqualTo 1}) exi
 GVAR(dynamicAttributesEnabled) = true;
 GVAR(dynamicAttributesModule) = _modules # 0;
 
-INFO_1("Loading display3DENEditAttributes (module: '%1').",typeof GVAR(dynamicAttributesModule));
+LOG_1("Loading display3DENEditAttributes (module: '%1').",typeof GVAR(dynamicAttributesModule));
 
 GVAR(allAttributesControls) = [];
 GVAR(reactiveAttributes) = [];
@@ -41,7 +41,7 @@ GVAR(dynamicAttributesValues) = GVAR(dynamicAttributesModule) getVariable [QGVAR
 
 // Cleanup vars on display unload
 _display displayAddEventHandler ["unload", {
-  INFO_1("Unloading display3DENEditAttributes (module: '%1').",typeof GVAR(dynamicAttributesModule));
+  LOG_1("Unloading display3DENEditAttributes (module: '%1').",typeof GVAR(dynamicAttributesModule));
 
   if (isNil QGVAR(dynamicAttributesEnabled)) exitWith {};
 

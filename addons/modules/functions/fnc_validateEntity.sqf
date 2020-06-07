@@ -26,7 +26,7 @@ private _validator = missionNamespace getVariable [_validatorName, ''];
 
 // Exit without warnings if entity has no validator
 if !(_validator isEqualType {}) exitWith {
-  INFO_2("Validating entity '%1' aborted - no validator (tried '%2').",_className,_validatorName);
+  LOG_2("Validating entity '%1' aborted - no validator (tried '%2').",_className,_validatorName);
   []
 };
 
@@ -35,7 +35,7 @@ private _valuesList = '';
 {
   _valuesList = format ['%1%2 = %3 ', _valuesList, _x, _values getVariable _x];
 } forEach (allVariables _values);
-INFO_5("Validating entity '%1' (validator: '%2' values: '%3' read from cache: %4 update warnings: %5).",_className,_validatorName,_valuesList,str _validatorFromCache,str _updateWarnings);
+LOG_5("Validating entity '%1' (validator: '%2' values: '%3' read from cache: %4 update warnings: %5).",_className,_validatorName,_valuesList,str _validatorFromCache,str _updateWarnings);
 #endif
 // Validate entity
 private _warnings = [_entity, _values] call _validator;
@@ -46,7 +46,7 @@ if !(_warnings isEqualType []) exitWith {
   []
 };
 
-INFO_3("Entity '%1' validated - warnings = %2 (updateWarnings: %3)",_className,str _warnings,str _updateWarnings);
+LOG_3("Entity '%1' validated - warnings = %2 (updateWarnings: %3)",_className,str _warnings,str _updateWarnings);
 
 if (_updateWarnings) then {
   // Set entity warnings

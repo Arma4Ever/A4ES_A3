@@ -16,10 +16,10 @@ private _currentWarnings = GVAR(allWarnings) getVariable [_entityIDVarName, []];
 
 // Exit if new warnings are the same as current warnings
 if (_currentWarnings isEqualTo _warnings) exitWith {
-  INFO_4("Setting entity '%1' (ID: %2) warnings skipped. New warnings are equal to current warnings (%3 = %4).",typeof _entity,_entityIDVarName,str _warnings,str _currentWarnings);
+  LOG_4("Setting entity '%1' (ID: %2) warnings skipped. New warnings are equal to current warnings (%3 = %4).",typeof _entity,_entityIDVarName,str _warnings,str _currentWarnings);
 };
 
-INFO_3("Setting entity '%1' (ID: %2) warnings to %3.",typeof _entity,_entityIDVarName,str _warnings);
+LOG_3("Setting entity '%1' (ID: %2) warnings to %3.",typeof _entity,_entityIDVarName,str _warnings);
 
 // Find current warning index if exists on tree
 private _index = -1;

@@ -13,7 +13,7 @@ private _attributeSaveFunction = _controlGroup getVariable QGVAR(attributeSaveFu
 private _configName = configName _config;
 private _parsedValue = _controlGroup call _attributeSaveFunction;
 
-INFO_2("Updating dynamic attribute '%1' (value: %2).",_configName,str _parsedValue);
+LOG_2("Updating dynamic attribute '%1' (value: %2).",_configName,str _parsedValue);
 
 // Update control value
 GVAR(dynamicAttributesValues) setVariable [_configName, _parsedValue];
