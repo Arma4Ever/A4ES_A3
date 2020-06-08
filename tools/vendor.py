@@ -1,6 +1,14 @@
+import os
+
 VENDOR = {
     "@ACE": {
         "blacklist": ["ace_advanced_fatigue", "ace_hearing", "ace_nametags", "ace_sandbag"],
+        "optionals": [
+            os.path.join("@ace_nocrosshair", "addons", "ace_nocrosshair.pbo"),
+            os.path.join("@ace_nouniformrestrictions", "addons", "ace_nouniformrestrictions.pbo"),
+            os.path.join("@ace_particles", "addons", "ace_particles.pbo"),
+            os.path.join("@ace_tracers", "addons", "ace_tracers.pbo"),
+        ],
     },
     "@ACEX": {
         "blacklist": ["acex_volume", "acex_viewrestriction", "acex_headless"],

@@ -132,6 +132,24 @@ def main():
                 print("  Skipping {}.".format(file))
 
         print("")
+
+        if "optionals" in vendorconfig:
+            for file in vendorconfig["optionals"]:
+                filepath = os.path.join(vendorroot, "optionals", file)
+                filename = os.path.basename(file)
+                if not os.path.isfile(filepath):
+                    continue
+
+                vendoraddons.append(filename)
+
+                if copy_vendor_file(filepath, addonspath):
+                    copied += 1
+
+                    print("# Copying {}.".format(filename))
+                else:
+                    skipped += 1
+                    print("  Skipping {}.".format(filename))
+            print("")
         vendorstats.append((dir[1:], copied, skipped, copieddlls, skippedlls))
 
     ### Build A3CS
