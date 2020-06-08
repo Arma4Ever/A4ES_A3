@@ -7,3 +7,12 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 ADDON = true;
+
+if !(is3DEN) exitWith {};
+
+["CAManBase", "init", {
+  _this spawn {
+    sleep 0.001;
+    _this call FUNC(updateDynamicSimulation);
+  };
+}, true, [], true] call CBA_fnc_addClassEventHandler;

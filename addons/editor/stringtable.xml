@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
   <Package name="Editor">
+    <Key ID="STR_A3CS_Editor_DisableDynamicSimulation">
+        <Original>Wyłącz dynamiczną symulację</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableDynamicSimulation_Tooltip">
+        <Original>Wyłącz dynamiczną symulację tej grupy. Grupy z wyłączoną dynamiczną symulacją będą symulowane cały czas, niezależnie od odległości od graczy.</Original>
+    </Key>
   </Package>
   <Package name="ENH">
     <Key ID="STR_ENH_FUNCTIONS_BATCHREPLACE_ERROR">

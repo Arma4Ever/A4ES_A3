@@ -11,6 +11,12 @@ class Cfg3DEN {
 			onSelectionChange = "call ENH_fnc_EH_onSelectionChange";
 		};
         class ADDON {
+            onMissionNew = QUOTE(_this call FUNC(handleMissionNew));
+            onMissionLoad = QUOTE(_this call FUNC(handleMissionLoad));
+			onConnectingEnd = QUOTE(_this call FUNC(handleConnectingEnd));
+        };
+        #ifdef DEBUG_MODE_FULL
+        class DOUBLES(ADDON,debug) {
             onUndo = "diag_log '3DEN event: onUndo';";
 			onRedo = "diag_log '3DEN event: onRedo';";
 			onHistoryChange = "diag_log '3DEN event: onHistoryChange';";
@@ -49,6 +55,7 @@ class Cfg3DEN {
 			onConnectingEnd = "diag_log '3DEN event: onConnectingEnd';";
 			onTogglePlaceEmptyVehicle = "diag_log '3DEN event: onTogglePlaceEmptyVehicle';";
         };
+        #endif
 	};
 	class Attributes {
 		class Default;
@@ -57,6 +64,12 @@ class Cfg3DEN {
 				class Title;
 			};
 		};
+        class Checkbox;
+        class GVAR(enableDynamicSimulation): Checkbox {
+            w = "0";
+            h = "0";
+        };
+
 
         #include "ENH\controls\timeMultiplier.hpp"
 	};
@@ -82,7 +95,19 @@ class Cfg3DEN {
 		class AttributeCategories {
 			class State {
 				class Attributes {
-
+                    class dynamicSimulation {
+                        control = QGVAR(enableDynamicSimulation);
+                    };
+                    class GVAR(disableDynamicSimulation) {
+                        property = QGVAR(disableDynamicSimulation);
+						control = "Checkbox";
+                        displayName = CSTRING(DisableDynamicSimulation);
+						tooltip = CSTRING(DisableDynamicSimulation_Tooltip);
+						expression = QUOTE(if (is3DEN) then {_this call FUNC(updateDynamicSimulation);};);
+						defaultValue = "false";
+                        typeName = "BOOL";
+						wikiType = "[[Bool]]";
+                    };
 				};
 			};
 		};
@@ -90,16 +115,6 @@ class Cfg3DEN {
 	class Object {
 		class AttributeCategories {
 			class StateSpecial {
-				class Attributes {
-
-				};
-			};
-			class Inventory {
-				class Attributes {
-
-				};
-			};
-			class State {
 				class Attributes {
 
 				};
