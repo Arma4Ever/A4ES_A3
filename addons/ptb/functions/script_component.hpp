@@ -1,1 +1,0 @@
-#include "\z\a3cs\addons\ptb\script_component.hpp"
