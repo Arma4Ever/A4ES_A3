@@ -12,7 +12,7 @@
 
 private _garbageCollectionSetuped = "GarbageCollection" get3DENMissionAttribute QGVAR(garbageCollectionSetuped);
 
-// Setup garbage collector default settings if not setuped yet
+// Setup garbage collector & dynamic sim default settings if not setuped yet
 if !(_garbageCollectionSetuped) then {
   "GarbageCollection" set3DENMissionAttribute ["MinPlayerDistance", 300];
   "GarbageCollection" set3DENMissionAttribute ["CorpseLimit", 20];
@@ -21,5 +21,12 @@ if !(_garbageCollectionSetuped) then {
   "GarbageCollection" set3DENMissionAttribute ["WreckLimit", 8];
   "GarbageCollection" set3DENMissionAttribute ["WreckRemovalMinTime", 300];
   "GarbageCollection" set3DENMissionAttribute ["WreckRemovalMaxTime", 3600];
+
+  "GarbageCollection" set3DENMissionAttribute ["DynSimDistGroup", 800];
+  "GarbageCollection" set3DENMissionAttribute ["DynSimDistVehicle", 1300];
+  "GarbageCollection" set3DENMissionAttribute ["DynSimDistProp", 50];
+  "GarbageCollection" set3DENMissionAttribute ["DynSimDistEmptyVehicle", 350];
+  "GarbageCollection" set3DENMissionAttribute ["DynSimMovingCoef", 1.5];
+
   "GarbageCollection" set3DENMissionAttribute [QGVAR(garbageCollectionSetuped), true];
 };
