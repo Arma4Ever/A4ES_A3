@@ -7,6 +7,9 @@
     <Key ID="STR_A3CS_Editor_DisableDynamicSimulation_Tooltip">
         <Original>Wyłącz dynamiczną symulację tej grupy. Grupy z wyłączoną dynamiczną symulacją będą symulowane cały czas, niezależnie od odległości od graczy.</Original>
     </Key>
+    <Key ID="STR_A3CS_Editor_Scenario_AttributeCategory_States_displayName">
+        <Original>Konsola deweloperska</Original>
+    </Key>
   </Package>
   <Package name="ENH">
     <Key ID="STR_ENH_FUNCTIONS_BATCHREPLACE_ERROR">

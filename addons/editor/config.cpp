@@ -25,6 +25,7 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "Cfg3DEN.hpp"
 #include "display3DEN.hpp"
+#include "display3DENSave.hpp"
 
 // 3DEN Enhanced
 #include "ENH\CfgFunctions.hpp"

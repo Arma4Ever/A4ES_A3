@@ -65,38 +65,140 @@ class Cfg3DEN {
 			};
 		};
         class Checkbox;
-        class GVAR(enableDynamicSimulation): Checkbox {
+        class GVAR(hiddenCheckbox): Checkbox {
             w = "0";
             h = "0";
         };
 
+        class Combo;
+        class GVAR(hiddenCombo): Checkbox {
+            w = "0";
+            h = "0";
+        };
 
         #include "ENH\controls\timeMultiplier.hpp"
 	};
  	class Mission {
-		class Preferences {
-			class AttributeCategories {
-				class Misc {
-					class Attributes {
-
-					};
-				};
-				#include "ENH\attributesEditor\interface.hpp"
-			};
-		};
-		class Intel {
+        class Intel {
 			class AttributeCategories {
 				#include "ENH\attributesMission\timeMultiplier.hpp"
 			};
 		};
+        class Scenario {
+            class AttributeCategories {
+                delete Overview;
+                delete OverviewLocked;
+                delete Unlock;
+                delete Init;
 
+                class States {
+					displayName = CSTRING(Scenario_AttributeCategory_States_displayName);
+					class Attributes {
+						class Briefing {
+							control = QGVAR(hiddenCheckbox);
+						};
+						class Debriefing {
+							control = QGVAR(hiddenCheckbox);
+						};
+						class Saving {
+							control = QGVAR(hiddenCheckbox);
+						};
+						class ShowMap {
+							control = QGVAR(hiddenCheckbox);
+						};
+						class ShowCompass {
+							control = QGVAR(hiddenCheckbox);
+						};
+						class ShowWatch {
+							control = QGVAR(hiddenCheckbox);
+						};
+						class ShowGPS {
+							control = QGVAR(hiddenCheckbox);
+						};
+						class ShowHUD {
+							control = QGVAR(hiddenCheckbox);
+						};
+						class ShowUAVFeed {
+							control = QGVAR(hiddenCheckbox);
+						};
+						class ForceRotorLibSimulation {
+							control = QGVAR(hiddenCheckbox);
+						};
+					};
+				};
+                class Misc {
+                    class Attributes {
+                        class Binarize {
+                            control = QGVAR(hiddenCheckbox);
+                        };
+                    };
+                };
+            };
+        };
+        class Multiplayer {
+            class AttributeCategories {
+                delete Tasks;
+                delete Revive;
+
+                class Lobby {
+                    class Attributes {
+                        class DisabledAI {
+                            control = QGVAR(hiddenCheckbox);
+                        };
+                        class JoinUnassigned {
+                            control = QGVAR(hiddenCheckbox);
+                        };
+                    };
+                };
+            };
+        };
+        class GarbageCollection {
+            class AttributeCategories {
+                class GarbageCollection {
+                    collapsed = 0;
+                    class Attributes {
+                        class CorpseManagerMode {
+                            control = QGVAR(hiddenCombo);
+                        };
+                        class WreckManagerMode {
+                            control = QGVAR(hiddenCombo);
+                        };
+                        class GVAR(garbageCollectionSetuped) {
+                            property = QGVAR(garbageCollectionSetuped);
+							control = QGVAR(hiddenCheckbox);
+                            defaultValue = "false";
+                        };
+                    };
+                };
+                class DynamicSimulation {
+                    class Attributes {
+                        class DynSimEnabled {
+                            control = QGVAR(hiddenCheckbox);
+                        };
+                    };
+                };
+            };
+        };
+
+		class Preferences {
+			class AttributeCategories {
+                class Saving {
+                    class Attributes {
+                        class Binarize {
+                            control = QGVAR(hiddenCheckbox);
+                        };
+                    };
+                };
+				#include "ENH\attributesEditor\interface.hpp"
+			};
+		};
 	};
 	class Group {
 		class AttributeCategories {
 			class State {
 				class Attributes {
                     class dynamicSimulation {
-                        control = QGVAR(enableDynamicSimulation);
+                        control = QGVAR(hiddenCheckbox);
                     };
                     class GVAR(disableDynamicSimulation) {
                         property = QGVAR(disableDynamicSimulation);
