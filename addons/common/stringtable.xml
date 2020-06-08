@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="ACE">
+<Project name="A3CS">
     <Package name="Common">
       <Key ID="STR_A3CS_Common_Yes">
           <Original>Yes</Original>
@@ -8,14 +8,6 @@
       <Key ID="STR_A3CS_Common_No">
           <Original>No</Original>
           <Polish>Nie</Polish>
-      </Key>
-      <Key ID="STR_A3CS_Common_FixInvisibleGear">
-          <Original>A3CS Refresh gear</Original>
-          <Polish>A3CS Odśwież sprzęt</Polish>
-      </Key>
-      <Key ID="STR_A3CS_Common_FixInvisibleGear_Tooltip">
-        <Original>Refresh gear to fix invisible uniform/vest etc.</Original>
-        <Polish>Odśwież sprzęt aby naprawić bug z niewidzialnym mundurem/kamizelką itp.</Polish>
       </Key>
     </Package>
 </Project>
