@@ -6,8 +6,6 @@ VENDOR = {
         "optionals": [
             os.path.join("@ace_nocrosshair", "addons", "ace_nocrosshair.pbo"),
             os.path.join("@ace_nouniformrestrictions", "addons", "ace_nouniformrestrictions.pbo"),
-            os.path.join("@ace_particles", "addons", "ace_particles.pbo"),
-            os.path.join("@ace_tracers", "addons", "ace_tracers.pbo"),
         ],
     },
     "@ACEX": {
