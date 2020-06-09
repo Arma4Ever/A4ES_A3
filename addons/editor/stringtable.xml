@@ -10,6 +10,12 @@
     <Key ID="STR_A3CS_Editor_Scenario_AttributeCategory_States_displayName">
         <Original>Konsola deweloperska</Original>
     </Key>
+    <Key ID="STR_A3CS_Editor_IncompatibleModsDetected_Title">
+        <Original>Wykryto niekompatybilne mody</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_IncompatibleModsDetected_Message">
+        <Original>Wyłącz %1 i uruchom grę ponownie. Jeśli brakuje Ci jakichś funkcjonalności w edytorze daj nam o tym znać na forum.</Original>
+    </Key>
   </Package>
   <Package name="ENH">
     <Key ID="STR_ENH_FUNCTIONS_BATCHREPLACE_ERROR">

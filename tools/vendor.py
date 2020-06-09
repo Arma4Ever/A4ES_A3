@@ -27,7 +27,9 @@ VENDOR = {
     "@Zombies and Demons": {},
     "@RSPN Cave Systems for Eden": {},
     "@Eden Extended Objects": {},
-    "@O&T Expansion Eden": {},
+    "@O&T Expansion Eden": {
+        "blacklist": ["expEden_static_ssDM"],
+    },
     "@Metis Nature": {},
     # "@Camofaces": {},
 }

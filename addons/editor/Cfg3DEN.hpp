@@ -3,6 +3,8 @@ class Cfg3DEN {
         #include "ENH\notifications.hpp"
 	};
 	class EventHandlers {
+        delete Eden_Extended_Objects_Handlers;
+        
 		class ENH {
 			onTerrainNew = "call ENH_fnc_EH_onTerrainNew";
 			onMissionPreviewEnd = "call ENH_fnc_EH_onMissionPreviewEnd";

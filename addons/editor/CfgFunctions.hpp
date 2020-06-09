@@ -1,4 +1,6 @@
 class CfgFunctions {
+    delete SCAR_EEO;
+
 	class 3denEnhanced {
 		tag = "ENH";
 		class Garrison {

@@ -9,6 +9,7 @@ class CfgPatches {
         requiredAddons[] = {
             "a3cs_common",
             "ace_arsenal",
+            "Eden_Extended_Objects",
             "A3_3DEN",
             "A3_Data_F_Sams_Loadorder"
         };
@@ -25,13 +26,13 @@ enableTargetDebug = 1;
 #include "defines.hpp"
 
 #include "CfgEventHandlers.hpp"
+#include "CfgFunctions.hpp"
 #include "CfgVehicles.hpp"
 #include "Cfg3DEN.hpp"
 #include "display3DEN.hpp"
 #include "display3DENSave.hpp"
 
 // 3DEN Enhanced
-#include "ENH\CfgFunctions.hpp"
 #include "ENH\gui\nameObjects.hpp"
 #include "ENH\gui\textureFinder.hpp"
 #include "ENH\gui\batchReplace.hpp"
