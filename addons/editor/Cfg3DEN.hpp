@@ -14,6 +14,8 @@ class Cfg3DEN {
             onMissionNew = QUOTE(_this call FUNC(handleMissionNew));
             onMissionLoad = QUOTE(_this call FUNC(handleMissionLoad));
 			onConnectingEnd = QUOTE(_this call FUNC(handleConnectingEnd));
+            onMissionPreview = QUOTE(GVAR(isEditorPreview) = true;);
+            onMissionPreviewEnd = QUOTE(GVAR(isEditorPreview) = false;);
         };
         #ifdef DEBUG_MODE_FULL
         class DOUBLES(ADDON,debug) {
@@ -94,6 +96,8 @@ class Cfg3DEN {
                 class States {
 					displayName = CSTRING(Scenario_AttributeCategory_States_displayName);
 					class Attributes {
+                        delete EnableTargetDebug;
+
 						class Briefing {
 							control = QGVAR(hiddenCheckbox);
 						};

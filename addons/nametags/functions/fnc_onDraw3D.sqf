@@ -14,12 +14,12 @@ if (freeLook) then {
 
   call FUNC(clear2DNameTag);
 
-  private _targetsData = [[], DFUNC(getAreaTargets), ace_player, QGVAR(areaTargetsCache), 1] call ace_common_fnc_cachedCall;
+  private _targetsData = [[], DFUNC(getAreaTargets), ace_player, QGVAR(areaTargetsCache), 1] call ACEFUNC(common,cachedCall);
   {_x call FUNC(draw3DNameTag)} forEach _targetsData;
 } else {
   if (!GVAR(show2DNameTag) && {GVAR(show3DNameTag) != 2} && {GVAR(show3DNameTag) != 3}) exitWith {};
 
-  private _targetData = [[], DFUNC(getCursorTarget), ace_player, QGVAR(cursorTargetCache), 0.25] call ace_common_fnc_cachedCall;
+  private _targetData = [[], DFUNC(getCursorTarget), ace_player, QGVAR(cursorTargetCache), 0.25] call ACEFUNC(common,cachedCall);
   // Don't show cursor nametag while aiming
   if (isNil "_targetData" || {cameraView == "gunner"}) exitWith {
     call FUNC(clear2DNameTag);

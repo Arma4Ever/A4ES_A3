@@ -19,6 +19,9 @@ class CfgPatches {
     };
 };
 
+// Enable target debug
+enableTargetDebug = 1;
+
 #include "defines.hpp"
 
 #include "CfgEventHandlers.hpp"
