@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
-    <Package name="Common">
-      <Key ID="STR_A3CS_Common_Yes">
-          <Original>Yes</Original>
-          <Polish>Tak</Polish>
-      </Key>
-      <Key ID="STR_A3CS_Common_No">
-          <Original>No</Original>
-          <Polish>Nie</Polish>
-      </Key>
-    </Package>
+  <Package name="Common">
+    <Key ID="STR_A3CS_Common_Yes">
+      <Original>Yes</Original>
+      <Polish>Tak</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Common_No">
+      <Original>No</Original>
+      <Polish>Nie</Polish>
+    </Key>
+  </Package>
 </Project>

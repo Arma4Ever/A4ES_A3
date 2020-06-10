@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
-    <Package name="Mission">
-      <Key ID="STR_A3CS_Mission_FixInvisibleGear">
-          <Original>A3CS Refresh gear</Original>
-          <Polish>A3CS Odśwież sprzęt</Polish>
-      </Key>
-      <Key ID="STR_A3CS_Mission_FixInvisibleGear_Tooltip">
-        <Original>Refresh gear to fix invisible uniform/vest.</Original>
-        <Polish>Odśwież sprzęt aby naprawić bug z niewidzialnym mundurem/kamizelką.</Polish>
-      </Key>
-    </Package>
+  <Package name="Mission">
+    <Key ID="STR_A3CS_Mission_FixInvisibleGear">
+      <Original>A3CS Refresh gear</Original>
+      <Polish>A3CS Odśwież sprzęt</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Mission_FixInvisibleGear_Tooltip">
+      <Original>Refresh gear to fix invisible uniform/vest.</Original>
+      <Polish>Odśwież sprzęt aby naprawić bug z niewidzialnym mundurem/kamizelką.</Polish>
+    </Key>
+  </Package>
 </Project>

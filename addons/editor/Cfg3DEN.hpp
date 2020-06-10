@@ -4,7 +4,7 @@ class Cfg3DEN {
 	};
 	class EventHandlers {
         delete Eden_Extended_Objects_Handlers;
-        
+
 		class ENH {
 			onTerrainNew = "call ENH_fnc_EH_onTerrainNew";
 			onMissionPreviewEnd = "call ENH_fnc_EH_onMissionPreviewEnd";
@@ -70,6 +70,12 @@ class Cfg3DEN {
 		};
         class Checkbox;
         class GVAR(hiddenCheckbox): Checkbox {
+            w = "0";
+            h = "0";
+        };
+
+        class Edit;
+        class GVAR(hiddenEdit): Edit {
             w = "0";
             h = "0";
         };

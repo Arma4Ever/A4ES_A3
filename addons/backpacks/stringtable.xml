@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
-    <Package name="Backpacks">
-      <Key ID="STR_A3CS_Backpacks_InvisibleBackpack">
-          <Original>Invisible backpack</Original>
-          <Polish>Niewidzialny plecak</Polish>
-      </Key>
-    </Package>
+  <Package name="Backpacks">
+    <Key ID="STR_A3CS_Backpacks_InvisibleBackpack">
+      <Original>Invisible backpack</Original>
+      <Polish>Niewidzialny plecak</Polish>
+    </Key>
+  </Package>
 </Project>

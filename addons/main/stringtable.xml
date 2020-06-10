@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
-    <Package name="Main">
-        <Key ID="STR_A3CS_Main_Author">
-            <English>SzwedzikPL and respectful authors of included external mods</English>
-            <Polish>SzwedzikPL oraz autorzy załączonych modów zewnętrznych</Polish>
-        </Key>
-        <Key ID="STR_A3CS_Main_URL">
-            <Original>https://arma3coop.pl/</Original>
-        </Key>
-    </Package>
+  <Package name="Main">
+    <Key ID="STR_A3CS_Main_Author">
+      <Original>SzwedzikPL and respectful authors of included external mods</Original>
+      <Polish>SzwedzikPL oraz autorzy załączonych modów zewnętrznych</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Main_URL">
+      <Original>https://arma3coop.pl/</Original>
+    </Key>
+  </Package>
 </Project>
