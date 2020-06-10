@@ -1,8 +1,8 @@
 class CfgMPGameTypes {
     class GVAR(Coop) {
         id = 200;
-		name = CSTRING(Coop_name);
-		shortcut = CSTRING(Coop_shortcut);
+		name = "Coop";
+		shortcut = "Coop";
         description = "";
 		picture = "";
 
@@ -18,10 +18,20 @@ class CfgMPGameTypes {
     };
     class GVAR(CoopRespawn) {
         id = 199;
-        name = "";
-		shortcut = "";
-		description = "";
+        name = "Coop + Respawn";
+		shortcut = "CoopRespawn";
+        description = "";
 		picture = "";
+
+        class GVAR(rules) {
+            general[] = {
+                "Gracze vs AI",
+                "Respawn po śmierci",
+                "Może zawierać sloty zeusa"
+            };
+            limitations[] = {};
+            warnings[] = {};
+        };
     };
     class GVAR(TvT) {
         id = 198;

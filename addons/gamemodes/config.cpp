@@ -16,6 +16,7 @@ class CfgPatches {
 
 class ctrlCombo;
 class ctrlStructuredText;
+class ctrlControlsGroup;
 
 #include "CfgEventHandlers.hpp"
 #include "CfgMPGameTypes.hpp"

@@ -13,27 +13,53 @@ class Cfg3DEN {
 			};
 		};
         class GVAR(gameType): Combo {
-            attributeLoad = QUOTE(_this call FUNC(gameType_attributeLoad););
-
+            attributeLoad = QUOTE(_this call FUNC(gameType_attributeLoad));
+            h = "6 * 5 * (pixelH * pixelGrid * 	0.50)";
 			class Controls: Controls {
 				class Title: Title {};
 				class Value: Value {};
-                class GVAR(description): ctrlStructuredText {
+                class Group: ctrlControlsGroup {
+    				idc = 102;
+                    x = "48 * (pixelW * pixelGrid * 0.50)";
+                    y = "5 * (pixelH * pixelGrid * 	0.50)";
+                    w = "82 * (pixelW * pixelGrid * 0.50)";
+    				h = "4 * 5 * (pixelH * pixelGrid * 0.50)";
+    				class Controls {
+    					class Text: ctrlStructuredText {
+    						idc = 103;
+    						size=  "3.96 * (1 / (getResolution select 3)) * pixelGrid * 0.5";
+    						w = "82 * (pixelW * pixelGrid * 0.50)";
+    						h = "4 * 5 * (pixelH * pixelGrid * 0.50)";
+                            colorBackground[] = {0, 0, 0, 0};
+                            shadow = 0;
+                            class Attributes {
+                                color = "#ffffff";
+                                size = 1;
+                                align = "left";
+                                colorLink = "#c2c2c2";
+                                font = "RobotoCondensedLight";
+                            };
+    					};
+    				};
+    			};
+
+
+                /* class GVAR(description): ctrlStructuredText {
                     idc = 702;
                     x = "48 * (pixelW * pixelGrid * 0.50)";
                     y = "5 * (pixelH * pixelGrid * 	0.50)";
                     w = "82 * (pixelW * pixelGrid * 0.50)";
-                    h = "0";
+                    h = "4 * 5 * (pixelH * pixelGrid * 0.50)";
                     colorBackground[] = {1,1,1,0};
                     shadow = 0;
                     class Attributes {
-                        color = "#FFFFFF";
+                        color = "#ffffff";
                         size = 1;
                         align = "left";
                         colorLink = "#c2c2c2";
                         font = "RobotoCondensedLight";
                     };
-                };
+                }; */
 			};
 		};
 	};
