@@ -1,4 +1,10 @@
 class Cfg3DEN {
+    class EventHandlers {
+        class ADDON {
+            onMissionNew = QUOTE(_this call FUNC(setupDefaultGameMode));
+            onMissionLoad = QUOTE(_this call FUNC(setupDefaultGameMode));
+        };
+    };
 	class Attributes {
 		class Default;
 		class Title: Default {
@@ -14,7 +20,9 @@ class Cfg3DEN {
 		};
         class GVAR(gameType): Combo {
             attributeLoad = QUOTE(_this call FUNC(gameType_attributeLoad));
-            h = "6 * 5 * (pixelH * pixelGrid * 	0.50)";
+            attributeSave = QUOTE(_this call FUNC(gameType_attributeSave));
+
+            h = "12 * 5 * (pixelH * pixelGrid * 0.50)";
 			class Controls: Controls {
 				class Title: Title {};
 				class Value: Value {};
@@ -23,17 +31,17 @@ class Cfg3DEN {
                     x = "48 * (pixelW * pixelGrid * 0.50)";
                     y = "5 * (pixelH * pixelGrid * 	0.50)";
                     w = "82 * (pixelW * pixelGrid * 0.50)";
-    				h = "4 * 5 * (pixelH * pixelGrid * 0.50)";
+    				h = "11 * 5 * (pixelH * pixelGrid * 0.50)";
     				class Controls {
     					class Text: ctrlStructuredText {
     						idc = 103;
     						size=  "3.96 * (1 / (getResolution select 3)) * pixelGrid * 0.5";
     						w = "82 * (pixelW * pixelGrid * 0.50)";
-    						h = "4 * 5 * (pixelH * pixelGrid * 0.50)";
+    						h = "11 * 5 * (pixelH * pixelGrid * 0.50)";
                             colorBackground[] = {0, 0, 0, 0};
                             shadow = 0;
                             class Attributes {
-                                color = "#ffffff";
+                                color = "#d8d8d8";
                                 size = 1;
                                 align = "left";
                                 colorLink = "#c2c2c2";
@@ -42,24 +50,6 @@ class Cfg3DEN {
     					};
     				};
     			};
-
-
-                /* class GVAR(description): ctrlStructuredText {
-                    idc = 702;
-                    x = "48 * (pixelW * pixelGrid * 0.50)";
-                    y = "5 * (pixelH * pixelGrid * 	0.50)";
-                    w = "82 * (pixelW * pixelGrid * 0.50)";
-                    h = "4 * 5 * (pixelH * pixelGrid * 0.50)";
-                    colorBackground[] = {1,1,1,0};
-                    shadow = 0;
-                    class Attributes {
-                        color = "#ffffff";
-                        size = 1;
-                        align = "left";
-                        colorLink = "#c2c2c2";
-                        font = "RobotoCondensedLight";
-                    };
-                }; */
 			};
 		};
 	};
@@ -82,7 +72,8 @@ class Cfg3DEN {
 							control = QGVAR(gameType);
 							displayName = "$STR_3DEN_Multiplayer_Attribute_GameType_displayName";
 							tooltip = "$STR_3DEN_Multiplayer_Attribute_GameType_tooltip";
-							defaultValue = 0;
+                            typeName = "STRING";
+							defaultValue = "''";
 						};
 					};
 				};
