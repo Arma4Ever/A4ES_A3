@@ -9,7 +9,7 @@ params ["_squad"];
 // Exit if not on server
 if !(isServer) exitWith {};
 
-LOG_2("Deleting squad %1 (squad unit: %2)",str _squad,str (_squad call FUNC(getSquadUnits)));
+LOG_2("Deleting squad %1 (squad units: %2)",str _squad,str (_squad call FUNC(getSquadUnits)));
 
 // Delete squad
 _squad call CBA_fnc_deleteNamespace;

@@ -9,7 +9,7 @@ params ["_unit"];
 // Exit if not server
 if !(isServer) exitWith {};
 
-LOG_1("Hanling killed event (unit: %1)",str _unit);
+LOG_1("Handling killed event (unit: %1)",str _unit);
 
 private _squad = _unit call FUNC(getUnitSquad);
 
@@ -25,7 +25,7 @@ if ((count _squadUnits) isEqualTo 1) then {
   _unit addEventHandler ["deleted", {
     params ["_unit"];
 
-    LOG_1("Hanling deleted event (unit: %1)",str _unit);
+    LOG_1("Handling deleted event (unit: %1)",str _unit);
 
     private _squad = _unit call FUNC(getUnitSquad);
     if (isNull _squad) exitWith {};
