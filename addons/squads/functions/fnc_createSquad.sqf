@@ -9,25 +9,24 @@ params [["_baseGroup", grpNull]];
 // Exit if not called on server
 if !(isServer) exitWith {locationNull};
 
+LOG_1("Creating new squad (baseGroup: %1)",str _baseGroup);
+
 private _squad = true call CBA_fnc_createNamespace;
 
 // Setup squad based on given group
 if !(isNull _baseGroup) then {
-  _squad setVariable [QGVAR(group), _baseGroup, true];
-  _squad setVariable [QGVAR(units), _units, true];
-  _squad setVariable [QGVAR(leader), leader _baseGroup, true];
+  _squad setVariable ["units", _units, true];
+  _squad setVariable ["leader", leader _baseGroup, true];
 
   // Update squad on group units
   {
     _x setVariable [QGVAR(squad), _squad, true];
+    LOG_2("Assigning unit %1 to created squad (baseGroup: %2)",str _x,str _baseGroup);
   } forEach _units;
 
-  // Save squad in group
-  _baseGroup setVariable [QGVAR(squad), _squad, true];
+  // Save group-squad references for server
+  _squad setVariable [QGVAR(group), _baseGroup];
+  _baseGroup setVariable [QGVAR(squad), _squad];
 };
-
-_squads = missionNamespace getVariable [QGVAR(allSquads), []];
-_squads pushBack _squad;
-missionNamespace setVariable [QGVAR(allSquads), _squads];
 
 _squad

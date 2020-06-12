@@ -7,4 +7,4 @@
 params ["_squad"];
 
 if (isNull _squad) exitWith {objNull};
-_squad getVariable [QGVAR(leader), objNull]
+_squad getVariable ["leader", objNull]

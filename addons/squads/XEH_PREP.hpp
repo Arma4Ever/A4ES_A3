@@ -1,1 +1,20 @@
 
+PREP(canBecomeSquadLeader);
+PREP(canJoinSquad);
+PREP(canLeaveSquad);
+PREP(canRemoveUnitFromSquad);
+PREP(createSquad);
+PREP(deleteSquad);
+PREP(getSquadLeader);
+PREP(getUnitSquad);
+PREP(handleKilled);
+PREP(handleKilledClient);
+PREP(handleRespawn);
+PREP(handleRespawnClient);
+PREP(isLeader);
+PREP(joinSquad);
+PREP(joinSquadClient);
+PREP(leaveSquad);
+PREP(leaveSquadClient);
+PREP(setSquadLeader);
+PREP(setSquadLeaderClient);

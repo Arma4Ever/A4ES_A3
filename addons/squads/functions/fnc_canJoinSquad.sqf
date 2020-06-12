@@ -12,5 +12,7 @@ private _targetSquad = _target call FUNC(getUnitSquad);
 alive _target
 && {!(_target getVariable ["ACE_isUnconscious", false])}
 && {(side group _unit) isEqualTo (side group _target)}
-&& {!(_unitSquad isEqualTo _targetSquad)}
-&& {!(isNull _targetSquad)}
+&& {
+  !(_unitSquad isEqualTo _targetSquad)
+  || {isNull _unitSquad && {isNull _targetSquad}}
+}

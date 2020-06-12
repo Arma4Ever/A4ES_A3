@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: SzwedzikPL
- * Checks if given unit can become squad leader
+ * Checks if a given unit is a squad leader
  */
 
 params ["_unit"];
@@ -11,4 +11,4 @@ if (isNull _squad) exitWith {false};
 
 private _leader = _squad call FUNC(getSquadLeader);
 
-!(_leader isEqualTo _unit)
+_unit isEqualTo _leader

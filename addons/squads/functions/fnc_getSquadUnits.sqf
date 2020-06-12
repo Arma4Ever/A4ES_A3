@@ -7,4 +7,4 @@
 params ["_squad"];
 
 if (isNull _squad) exitWith {[]};
-_squad getVariable [QGVAR(units), []]
+_squad getVariable ["units", []]

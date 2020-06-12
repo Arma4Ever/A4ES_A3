@@ -4,46 +4,41 @@
  * Joins unit to given squad
  */
 
-params ["_unit", "_newSquad"];
+params ["_unit", "_target"];
 
 // Exit if not server or null squad
-if (!isServer || isNull _newSquad) exitWith {};
+if (!isServer) exitWith {};
 
 private _currentSquad = _unit call FUNC(getUnitSquad);
 private _updatedSquads = [];
 
 // Update current unit squad
 if !(isNull _currentSquad) then {
-  // Update squad units
-  private _currentSquadUnits = _currentSquad getVariable [QGVAR(units), []];
-  _currentSquadUnits = _currentSquadUnits - [_unit];
-
-  if (_currentSquadUnits isEqualTo []) then {
-    // Delete empty squad
-    _currentSquad call FUNC(deleteSquad);
-  } else {
-    // Update squad units if squad is not empty
-    _currentSquad setVariable [QGVAR(units), _currentSquadUnits, true];
-
-    // Update squad leader if leaving unit was one
-    private _currentSquadLeader = _currentSquad getVariable [QGVAR(leader), objNull];
-    if (_currentSquadLeader isEqualTo _unit) then {
-      private _newSquadLeader = _currentSquadUnits # 0;
-      _currentSquad setVariable [QGVAR(leader), _newSquadLeader, true];
-    };
-
+  // Add squad to updated squads if squad was not deleted after unit leaving
+  if !(_unit call FUNC(leaveSquad)) then {
     _updatedSquads pushBack _currentSquad;
   };
+};
+
+private _newSquad = _unit call FUNC(getUnitSquad);
+private _newSquadUnits = _newSquad getVariable ["units", []];
+
+// Create new squad if target has no squad
+if (isNull _newSquad) then {
+  _newSquad = call FUNC(createSquad);
+  _newSquad setVariable ["leader", _target, true];
+  _newSquadUnits = [_target];
 };
 
 // Set unit squad
 _unit setVariable [QGVAR(squad), _newSquad, true];
 
-// Update new unit squad
-private _newSquadUnits = _newSquad getVariable [QGVAR(units), []];
+// Update squad units
 _newSquadUnits pushback _unit;
-_newSquad setVariable [QGVAR(units), _newSquadUnits, true];
+_newSquad setVariable ["units", _newSquadUnits, true];
 _updatedSquads pushBack _newSquad;
+
+LOG_3("Unit %1 joined squad of %2 (updated squads: %3)",str _unit,str _target,str _updatedSquads);
 
 // Send event for clients
 [QGVAR(squadsUpdated), _updatedSquads] call CBA_fnc_globalEvent;
