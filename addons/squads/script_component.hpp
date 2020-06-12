@@ -1,5 +1,5 @@
-#define COMPONENT squadradar
-#define COMPONENT_BEAUTIFIED Squad radar
+#define COMPONENT squads
+#define COMPONENT_BEAUTIFIED Squads
 #include "\z\a3cs\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

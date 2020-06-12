@@ -1,4 +1,4 @@
-# A3CS Squad Radar
+# A3CS Squad radar
 Adds squad radar UI.
 
 ### Changes
