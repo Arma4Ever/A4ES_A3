@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"a3cs_main"};
+        requiredAddons[] = {"a3cs_main", "A3_Data_F"};
         author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL"};
         url = ECSTRING(main,URL);
@@ -15,3 +15,4 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgDifficultyPresets.hpp"

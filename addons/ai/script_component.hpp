@@ -1,5 +1,5 @@
-#define COMPONENT difficulty
-#define COMPONENT_BEAUTIFIED Difficulty
+#define COMPONENT ai
+#define COMPONENT_BEAUTIFIED AI
 #include "\z\a3cs\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
