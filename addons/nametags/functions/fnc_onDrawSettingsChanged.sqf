@@ -4,6 +4,9 @@
  * Handles draw settings change event
  */
 
+// Exit if no interface
+if !(hasInterface) exitWith {};
+
 if (isNil QGVAR(drawHandler) && {GVAR(show3DNameTag) != 0 || {GVAR(show2DNameTag)}}) then {
   GVAR(drawHandler) = addMissionEventHandler ["Draw3D", {
     _this call FUNC(onDraw3D);

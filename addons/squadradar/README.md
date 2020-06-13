@@ -2,9 +2,8 @@
 Adds squad radar UI.
 
 ### Changes
+- Adds map based squad radar UI.
+- Adds a3cs_squads based squad memberlist UI.
 
 ### Credits
-Parts of this addon are either inspired by or forked from [DUI - Squad Radar](https://github.com/diwako/diwako_dui) project.
-
-### License
-Addon is distributed under [DUI - Squad Radar APL-SA](https://github.com/diwako/diwako_dui/blob/master/license.txt) license.
+Some radar textures (data/radar) are inspired by [DUI - Squad Radar](https://github.com/diwako/diwako_dui) project.

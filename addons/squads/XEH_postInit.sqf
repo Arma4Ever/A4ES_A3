@@ -1,5 +1,9 @@
 #include "script_component.hpp"
 
+// Exit if it's main menu intro
+if (EGVAR(common,isMainMenu)) exitWith {};
+
+
 if !(isServer) exitWith {};
 
 // Add server event handlers

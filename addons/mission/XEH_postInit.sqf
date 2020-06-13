@@ -1,6 +1,7 @@
 #include "script_component.hpp"
 
-if !(hasInterface) exitWith {};
+// Exit if no interface or it's main menu intro
+if (!hasInterface || EGVAR(common,isMainMenu)) exitWith {};
 
 // Disable all channels except global & side
 for "_i" from 2 to 15 do {

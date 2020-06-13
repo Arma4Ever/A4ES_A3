@@ -1,29 +1,22 @@
 #include "script_component.hpp"
 
+// Exit if it's main menu intro
+if (EGVAR(common,isMainMenu)) exitWith {};
+
 ["CBA_settingsInitialized", {
   call FUNC(onDrawSettingsChanged);
 }] call CBA_fnc_addEventHandler;
 
-if !(isNil "TFAR_fnc_addEventHandler") then {
-  [QGVAR(onSpeak), "OnSpeak", {
-    params ["_unit", "_isSpeaking"];
-    _unit setVariable [QGVAR(isSpeaking), _isSpeaking];
-  }, ObjNull] call TFAR_fnc_addEventHandler;
-};
+[QGVAR(onSpeak), "OnSpeak", {
+  params ["_unit", "_isSpeaking"];
+  diag_log format ["%1 isSpeaking %2", _unit, str _isSpeaking];
+  _unit setVariable [QGVAR(isSpeaking), _isSpeaking];
+}, ObjNull] call TFAR_fnc_addEventHandler;
 
 ["CBA_teamColorChanged", {
     params ["_unit", "_team"];
 
-    private _color = ([
-        [[1.00, 1.00, 1.00], '#ffffff'],
-        [[1.00, 0.67, 0.67], '#ffabab'],
-        [[0.67, 1.00, 0.67], '#abffab'],
-        [[0.67, 0.67, 1.00], '#ababff'],
-        [[1.00, 1.00, 0.67], '#ffffab']
-    ] select (
-        (["MAIN", "RED", "GREEN", "BLUE", "YELLOW"] find ([_team] param [0, "MAIN"])) max 0
-    ));
-
+    private _color = _team call EFUNC(common,getTeamColor);
     _unit setVariable [QGVAR(unitColor), _color];
 }] call CBA_fnc_addEventHandler;
 
