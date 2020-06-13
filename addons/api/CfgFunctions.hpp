@@ -1,6 +1,12 @@
 class CfgFunctions {
     class A3CS {
-        class test {
+        class ai {
+            //API_FNC(setAISkill);
+        };
+        class nametags {
+            //TODO
+        };
+        class squads {
             API_FNC(isSquadLeader);
             //API_FNC(isInSquad); ?
             //API_FNC(getUnitSquad);

@@ -15,7 +15,7 @@ private _updatedSquads = [];
 // Update current unit squad
 if !(isNull _currentSquad) then {
   // Add squad to updated squads if squad was not deleted after unit leaving
-  if !(_unit call FUNC(leaveSquad)) then {
+  if !([_unit, false] call FUNC(leaveSquad)) then {
     _updatedSquads pushBack _currentSquad;
   };
 };

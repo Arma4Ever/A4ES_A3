@@ -4,7 +4,7 @@
  * Removes given unit from current squad
  */
 
-params ["_unit"];
+params ["_unit", ["_sendUpdateEvent", true, [true]]];
 
 // Exit if not server
 if (!isServer) exitWith {false};
@@ -32,6 +32,11 @@ if (_squadUnits isEqualTo []) then {
   if (_squadLeader isEqualTo _unit) then {
     private _newSquadLeader = _squadUnits # 0;
     _squad setVariable ["leader", _newSquadLeader, true];
+  };
+
+  // Send squads update event
+  if (_sendUpdateEvent) then {
+    [QGVAR(squadsUpdated), [_squad]] call CBA_fnc_globalEvent;
   };
 };
 
