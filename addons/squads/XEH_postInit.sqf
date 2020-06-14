@@ -14,7 +14,8 @@ if !(isServer) exitWith {};
 [QGVAR(killed), DFUNC(handleKilled)] call CBA_fnc_addEventHandler;
 [QGVAR(respawn), DFUNC(handleRespawn)] call CBA_fnc_addEventHandler;
 
-// Parse playable units groups in next frame
+// Parse playable units groups one second after start
+// We're giving some time for things like ace setName etc.
 [{
   private _units = [[player], playableUnits] select isMultiplayer;
   private _parsedGroups = [];
@@ -30,4 +31,4 @@ if !(isServer) exitWith {};
   } forEach _units;
 
   _squads call FUNC(triggerSquadChanged);
-}, []] call CBA_fnc_execNextFrame;
+}, [], 1] call CBA_fnc_waitAndExecute;
