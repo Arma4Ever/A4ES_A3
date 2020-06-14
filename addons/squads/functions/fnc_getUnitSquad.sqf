@@ -1,9 +1,9 @@
 #include "script_component.hpp"
 /*
  * Author: SzwedzikPL
- * Returns unit squad or locationNull if no squad
+ * Returns unit squad or objNull if no squad
  */
 
 params ["_unit"];
 
-_unit getVariable [QGVAR(squad), locationNull]
+_unit getVariable [QGVAR(squad), objNull]

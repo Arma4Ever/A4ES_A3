@@ -9,5 +9,7 @@ ADDON = true;
 #include "initSettings.sqf"
 
 GVAR(enabled) = false;
-GVAR(currentSquad) = locationNull;
+GVAR(currentSquad) = objNull;
+GVAR(currentSquadUnits) = [];
 GVAR(memberslistColumns) = [];
+GVAR(lastSpecialStateUnits) = [];

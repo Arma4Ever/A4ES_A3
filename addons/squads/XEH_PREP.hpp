@@ -1,11 +1,13 @@
 
+PREP(areInSameSquad);
 PREP(canBecomeSquadLeader);
 PREP(canJoinSquad);
 PREP(canLeaveSquad);
-PREP(canRemoveUnitFromSquad);
+PREP(canRemoveFromSquad);
 PREP(createSquad);
 PREP(deleteSquad);
 PREP(getSquadLeader);
+PREP(getSquadUnits);
 PREP(getUnitSquad);
 PREP(handleKilled);
 PREP(handleKilledClient);

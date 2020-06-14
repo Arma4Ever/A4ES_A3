@@ -4,15 +4,16 @@
  * Handles settings change event
  */
 
-LOG_2("Settings changed (enable: %1 enabled: %2)",str GVAR(enable),str GVAR(enabled));
+LOG_3("Settings changed (enable: %1 enabled: %2 currentSquad %3)",str GVAR(enable),str GVAR(enabled),str GVAR(currentSquad));
 
-if (GVAR(enable) && !GVAR(enabled)) exitWith {
-  QGVAR(RscRadar) cutRsc [QGVAR(RscRadar), "PLAIN", 0, false];
-};
-
-if ((!GVAR(enable) || {isNull GVAR(currentSquad)) && GVAR(enabled)) exitWith {
+if ((!GVAR(enable) || {isNull GVAR(currentSquad)}) && GVAR(enabled)) exitWith {
   LOG_3("Unloading radar (enable: %1 enabled: %2 curretSquad: %3)",str GVAR(enable),str GVAR(enabled),str GVAR(currentSquad));
   QGVAR(RscRadar) cutText ["", "PLAIN"];
+  GVAR(enabled) = false;
+};
+
+if (GVAR(enable) && !GVAR(enabled) && {!(isNull GVAR(currentSquad))}) then {
+  QGVAR(RscRadar) cutRsc [QGVAR(RscRadar), "PLAIN", 0, false];
 };
 
 private _display = uiNamespace getVariable [QGVAR(rscRadar), displayNull];

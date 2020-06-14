@@ -41,7 +41,7 @@ if (_squadUnits isEqualTo []) then {
 };
 
 // Reset unit squad
-_unit setVariable [QGVAR(squad), locationNull, true];
+_unit setVariable [QGVAR(squad), objNull, true];
 
 if (_sendChangedEvent) then {
   // Send squad change event to leaving player

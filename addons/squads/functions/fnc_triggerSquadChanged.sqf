@@ -7,11 +7,13 @@
 private _targets = [];
 
 {
-  if (_x isEqualType objNull) then {
-    _targets pushBack _x;
-  } else {
+  if (_x isKindOf "CBA_NamespaceDummy") then {
     _targets append (_x call FUNC(getSquadUnits));
+  } else {
+    _targets pushBack _x;
   };
 } forEach _this;
 
-[QGVAR(squadChanged), 0, _targets] call CBA_fnc_targetEvent;
+LOG_1("Triggering squad changed event for targets: %1",str _targets);
+
+[QGVAR(squadChanged), [], _targets] call CBA_fnc_targetEvent;

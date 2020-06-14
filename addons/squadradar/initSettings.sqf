@@ -32,19 +32,19 @@
 ] call CBA_settings_fnc_init;
 
 [
-    GVAR(radarBackgroundOpacity), "SLIDER",
+    QGVAR(radarBackgroundOpacity), "SLIDER",
     ["Widocznosc tla radaru", "Poziom widocznosci tla radaru (0 = 0%, 1 = 100%)"],
     LSTRING(Settings_Addon),
     [0, 1, 0.75, 2],
     2,
     {_this call FUNC(onSettingsChanged);}
-] call CBA_fnc_addSetting;
+] call CBA_settings_fnc_init;
 
 [
-    GVAR(memberlistColumnWidthScale), "SLIDER",
+    QGVAR(memberlistColumnWidthScale), "SLIDER",
     ["Szerokosc kolumn listy czlonkow zespolu", "Szerokosc kolumn na liscie czlonkow druzyny (0 = 0%, 1 = 100%, 2 = 200%)"],
     LSTRING(Settings_Addon),
     [0, 2, 1, 2],
     2,
     {_this call FUNC(onSettingsChanged);}
-] call CBA_fnc_addSetting;
+] call CBA_settings_fnc_init;

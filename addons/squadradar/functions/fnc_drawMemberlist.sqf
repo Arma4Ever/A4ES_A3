@@ -6,7 +6,7 @@
 
 params [["_refreshMembersCache", false, [false]]];
 
-LOG_1("Drawing memberlist (refeshCache: %1)",str _refreshCache);
+LOG_1("Drawing memberlist (refreshMembersCache: %1)",str _refreshMembersCache);
 BEGIN_COUNTER(drawMemberlist);
 
 if (_refreshMembersCache) then {

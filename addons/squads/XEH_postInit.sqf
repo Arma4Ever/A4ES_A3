@@ -3,6 +3,7 @@
 // Exit if it's main menu intro
 if (EGVAR(common,isMainMenu)) exitWith {};
 
+// TODO: client events?
 
 if !(isServer) exitWith {};
 
@@ -13,13 +14,20 @@ if !(isServer) exitWith {};
 [QGVAR(killed), DFUNC(handleKilled)] call CBA_fnc_addEventHandler;
 [QGVAR(respawn), DFUNC(handleRespawn)] call CBA_fnc_addEventHandler;
 
-// Parse playable units groups
-private _parsedGroups = [];
+// Parse playable units groups in next frame
+[{
+  private _units = [[player], playableUnits] select isMultiplayer;
+  private _parsedGroups = [];
+  private _squads = [];
 
-{
-  private _group = group _x;
-  if !(_group in _parsedGroups) then {
-    private _squad = _group call FUNC(createSquad);
-    _parsedGroups pushBack _group;
-  };
-} forEach playableUnits;
+  {
+    private _group = group _x;
+    if !(_group in _parsedGroups) then {
+      private _squad = _group call FUNC(createSquad);
+      _squads pushback _squad;
+      _parsedGroups pushBack _group;
+    };
+  } forEach _units;
+
+  _squads call FUNC(triggerSquadChanged);
+}, []] call CBA_fnc_execNextFrame;

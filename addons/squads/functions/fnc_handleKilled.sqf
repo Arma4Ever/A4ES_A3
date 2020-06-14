@@ -22,8 +22,10 @@ private _squadUnits = _squad call FUNC(getSquadUnits);
 if ((count _squadUnits) isEqualTo 1) then {
   _squad call FUNC(deleteSquad);
 } else {
-  //trigger squad change ?
+  // Trigger squad change for members to refresh icons
+  [_squad] call FUNC(triggerSquadChanged);
 
+  // Add deleted handler in case of need of dummy unit
   _unit addEventHandler ["deleted", {
     params ["_unit"];
 

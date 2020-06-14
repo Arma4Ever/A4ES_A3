@@ -9,7 +9,6 @@ if (EGVAR(common,isMainMenu)) exitWith {};
 
 [QGVAR(onSpeak), "OnSpeak", {
   params ["_unit", "_isSpeaking"];
-  diag_log format ["%1 isSpeaking %2", _unit, str _isSpeaking];
   _unit setVariable [QGVAR(isSpeaking), _isSpeaking];
 }, ObjNull] call TFAR_fnc_addEventHandler;
 
