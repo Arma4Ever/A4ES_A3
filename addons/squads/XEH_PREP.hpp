@@ -18,3 +18,4 @@ PREP(leaveSquad);
 PREP(leaveSquadClient);
 PREP(setSquadLeader);
 PREP(setSquadLeaderClient);
+PREP(triggerSquadChanged);

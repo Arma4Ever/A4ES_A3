@@ -10,13 +10,13 @@ params ["_unit", "_target"];
 if (!isServer) exitWith {};
 
 private _currentSquad = _unit call FUNC(getUnitSquad);
-private _updatedSquads = [];
+private _changedSquads = [];
 
 // Update current unit squad
 if !(isNull _currentSquad) then {
-  // Add squad to updated squads if squad was not deleted after unit leaving
+  // Add squad to changed squads if squad was not deleted after unit leaving
   if !([_unit, false] call FUNC(leaveSquad)) then {
-    _updatedSquads pushBack _currentSquad;
+    _changedSquads pushBack _currentSquad;
   };
 };
 
@@ -36,9 +36,9 @@ _unit setVariable [QGVAR(squad), _newSquad, true];
 // Update squad units
 _newSquadUnits pushback _unit;
 _newSquad setVariable ["units", _newSquadUnits, true];
-_updatedSquads pushBack _newSquad;
+_changedSquads pushBack _newSquad;
 
-LOG_3("Unit %1 joined squad of %2 (updated squads: %3)",str _unit,str _target,str _updatedSquads);
+LOG_3("Unit %1 joined squad of %2 (changed squads: %3)",str _unit,str _target,str _changedSquads);
 
 // Send event for clients
-[QGVAR(squadsUpdated), _updatedSquads] call CBA_fnc_globalEvent;
+_changedSquads call FUNC(triggerSquadChanged);

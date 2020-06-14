@@ -16,5 +16,5 @@ if (isNull _squad) exitWith {};
 
 _squad setVariable ["leader", _unit, true];
 
-// Send event for clients
-[QGVAR(squadsUpdated), [_squad]] call CBA_fnc_globalEvent;
+// Send event for all squad members
+[_squad] call FUNC(triggerSquadChanged);

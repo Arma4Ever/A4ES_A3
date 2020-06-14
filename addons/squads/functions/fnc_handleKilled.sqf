@@ -22,6 +22,8 @@ private _squadUnits = _squad call FUNC(getSquadUnits);
 if ((count _squadUnits) isEqualTo 1) then {
   _squad call FUNC(deleteSquad);
 } else {
+  //trigger squad change ?
+
   _unit addEventHandler ["deleted", {
     params ["_unit"];
 
@@ -30,7 +32,7 @@ if ((count _squadUnits) isEqualTo 1) then {
     private _squad = _unit call FUNC(getUnitSquad);
     if (isNull _squad) exitWith {};
 
-    //TODO: create dummy unit
-    //TODO: save squadradar name & icon for dummy unit
+    // TODO: create dummy unit
+    // TODO: save squadradar name, icon & baseIcon for dummy unit
   }];
 };

@@ -4,7 +4,7 @@
  * Removes given unit from current squad
  */
 
-params ["_unit", ["_sendUpdateEvent", true, [true]]];
+params ["_unit", ["_sendChangedEvent", true, [true]]];
 
 // Exit if not server
 if (!isServer) exitWith {false};
@@ -35,12 +35,17 @@ if (_squadUnits isEqualTo []) then {
   };
 
   // Send squads update event
-  if (_sendUpdateEvent) then {
-    [QGVAR(squadsUpdated), [_squad]] call CBA_fnc_globalEvent;
+  if (_sendChangedEvent) then {
+    [_squad] call FUNC(triggerSquadChanged);
   };
 };
 
 // Reset unit squad
 _unit setVariable [QGVAR(squad), locationNull, true];
+
+if (_sendChangedEvent) then {
+  // Send squad change event to leaving player
+  [_unit] call FUNC(triggerSquadChanged);
+};
 
 _squadDeleted
