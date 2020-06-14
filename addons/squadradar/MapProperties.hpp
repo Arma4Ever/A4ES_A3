@@ -1,4 +1,4 @@
-mapOrientation = 1;
+mapOrientation = 0;
 drawObjects = 0;
 drawLocations = 0;
 showMarkers = 0;

@@ -10,6 +10,7 @@ ADDON = true;
 
 GVAR(enabled) = false;
 GVAR(currentSquad) = objNull;
+GVAR(radarPos) = [0,0,0];
 GVAR(currentSquadUnits) = [];
 GVAR(currentSquadUnitsRadar) = [];
 GVAR(memberslistColumns) = [];
