@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+  <Package name="Squadradar">
+    <Key ID="STR_A3CS_Squadradar_Settings_Addon">
+      <Original>A3CS Squad Radar</Original>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_radarBackground_Blured">
+      <Original>Ciemne z rozmytą krawędzią</Original>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_radarBackground_Sharp">
+      <Original>Ciemne z ostrą krawędzią</Original>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_radarBackground_Border">
+      <Original>Ciemne z jasnym obramowaniem</Original>
+    </Key>
+  </Package>
+</Project>
