@@ -2,9 +2,9 @@
 #define COMPONENT_BEAUTIFIED Squad radar
 #include "\z\a3cs\addons\main\script_mod.hpp"
 
-// #define DEBUG_MODE_FULL
+#define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
-// #define ENABLE_PERFORMANCE_COUNTERS
+#define ENABLE_PERFORMANCE_COUNTERS
 
 #include "\z\a3cs\addons\main\script_macros.hpp"
 
@@ -14,6 +14,7 @@
 
 #define RADAR_MAX_UNIT_DISTANCE 26
 #define RADAR_FADE_MIN_UNIT_DISTANCE 22
+#define RADAR_SPECIALSTATEUNITS_UPDATE_INTERVAL 1;
 
 #define HIDE_MAP_MARKER(markerClass) class markerClass {\
     icon = "#(argb,8,8,3)color(0,0,0,0)"; \

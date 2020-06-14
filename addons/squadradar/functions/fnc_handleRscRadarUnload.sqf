@@ -4,6 +4,10 @@
  * Handles RscRadar onUnload event
  */
 
-// TODO: cleanup cache PFH
+LOG("Unloading RscRadar");
 
 GVAR(enabled) = false;
+
+//cleanup?
+
+LOG("RscRadar unloaded");

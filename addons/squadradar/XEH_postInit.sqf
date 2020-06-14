@@ -7,30 +7,29 @@ if (!hasInterface || EGVAR(common,isMainMenu)) exitWith {};
   call FUNC(onSettingsChanged);
 }] call CBA_fnc_addEventHandler;
 
-[QEGVAR(squads,squadsUpdated), {
-  private _currentSquad = ace_player call EFUNC(squads,getUnitSquad);
-  if (isNull _currentSquad) exitWith {};
+[QEGVAR(squads,squadChanged), {
+  LOG("squadChanged");
 
-  {
-    if (_x isEqualTo _currentSquad) exitWith {
-      true call FUNC(drawMemberlist);
-    };
-  } forEach _this;
+  // Init radar if not enabled because of null squad before
+  if (GVAR(enable) && !GVAR(enabled)) exitWith {
+    call FUNC(onSettingsChanged);
+  };
+
+  // Refresh members cache & redraw memberlist
+  true call FUNC(drawMemberlist);
 }] call CBA_fnc_addEventHandler;
 
-private _handleSoftUpdate = {
+private _handleUnitStatusUpdate = {
   params ["_unit"];
 
-  private _unitSquad = _unit call EFUNC(squads,getUnitSquad);
-  if (isNull _unitSquad) exitWith {};
+  // Exit if units are not in same squad
+  if !([ace_player, _unit] call EFUNC(squads,areInSameSquad)) exitWith {};
 
-  private _currentSquad = ace_player call EFUNC(squads,getUnitSquad);
-  if (isNull _currentSquad) exitWith {};
-
-  if (_unitSquad isEqualTo _currentSquad) then {
+  if ((_unit distance2D ace_player) < RADAR_MAX_UNIT_DISTANCE) then {
     false call FUNC(drawMemberlist);
   };
 };
 
-[QGVAR(onSpeak), "OnSpeak", _handleSoftUpdate, ObjNull] call TFAR_fnc_addEventHandler;
-["CBA_teamColorChanged", _handleSoftUpdate] call CBA_fnc_addEventHandler;
+[QGVAR(onSpeak), "OnSpeak", _handleUnitStatusUpdate, ObjNull] call TFAR_fnc_addEventHandler;
+["CBA_teamColorChanged", _handleUnitStatusUpdate] call CBA_fnc_addEventHandler;
+["ace_unconscious", _handleUnitStatusUpdate] call CBA_fnc_addEventHandler;
