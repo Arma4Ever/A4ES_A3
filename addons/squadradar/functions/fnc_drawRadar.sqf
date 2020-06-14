@@ -24,20 +24,23 @@ private _playerDir = getDir ace_player;
       _iconDir = 0;
     };
 
-    private _color = (_x getVariable [QEGVAR(nametags,unitColor), [[1,1,1]]]) # 0;
+    private _color = (_x getVariable [
+      QGVAR(iconColor),
+      _x getVariable [QEGVAR(nametags,unitColor), [[1,1,1]]]
+    ]) # 0;
     _color set [3, linearConversion [RADAR_FADE_MIN_UNIT_DISTANCE, RADAR_MAX_UNIT_DISTANCE, _distance, 1, 0, true]];
 
     _control drawIcon [
       _icon,
       _color,
       position _x,
-      18,
-      18,
+      20,
+      20,
       _iconDir,
       ""
     ];
   };
-} forEach GVAR(currentSquadUnits);
+} forEach GVAR(currentSquadUnitsRadar);
 
 // redraw memberlist if units with special states changed
 if !(GVAR(lastSpecialStateUnits) isEqualTo _specialStateUnits) then {

@@ -11,5 +11,6 @@ ADDON = true;
 GVAR(enabled) = false;
 GVAR(currentSquad) = objNull;
 GVAR(currentSquadUnits) = [];
+GVAR(currentSquadUnitsRadar) = [];
 GVAR(memberslistColumns) = [];
 GVAR(lastSpecialStateUnits) = [];

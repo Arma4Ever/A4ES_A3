@@ -14,6 +14,16 @@ if (!hasInterface || EGVAR(common,isMainMenu)) exitWith {};
   GVAR(currentSquad) = ace_player call EFUNC(squads,getUnitSquad);
   GVAR(currentSquadUnits) = GVAR(currentSquad) call EFUNC(squads,getSquadUnits);
 
+  // Sort squad units by rank
+  GVAR(currentSquadUnits) = [GVAR(currentSquadUnits), [], {
+      (_x call EFUNC(nametags,getUnitRank)) # 2
+  }, "DESCEND"] call BIS_fnc_sortBy;
+
+  // Save special sorted version for radar where player is always LAST
+  GVAR(currentSquadUnitsRadar) = +GVAR(currentSquadUnits);
+  GVAR(currentSquadUnitsRadar) = GVAR(currentSquadUnitsRadar) - [ace_player];
+  GVAR(currentSquadUnitsRadar) pushBack ace_player;
+
   // Init radar if not enabled because of null squad before
   if (GVAR(enable) && !GVAR(enabled) && !(isNull GVAR(currentSquad))) exitWith {
     call FUNC(onSettingsChanged);

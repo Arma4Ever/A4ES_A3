@@ -8,6 +8,7 @@
 
  private _rankName = _unit getVariable [QGVAR(rankName), ""];
  private _rankIcon = _unit getVariable [QGVAR(rankIcon), ""];
+ private _rankImportance = _unit getVariable [QGVAR(rankImportance), ""];
 
  if (_rankName == "") then {
    private _rankClass = _unit getVariable [
@@ -22,6 +23,7 @@
 
      _rankName = getText (_rankConfig >> 'name');
      _rankIcon = getText (_rankConfig >> 'icon');
+     _rankImportance = getNumber (_rankConfig >> 'importance');
    };
 
    // If no rank class or wrong class
@@ -31,6 +33,8 @@
      private _unitCfg = configFile >> "CfgVehicles" >> typeof _unit;
      _rankName = getText (_unitCfg >> "a3cs_nametag_rankname");
      _rankIcon = getText (_unitCfg >> "a3cs_nametag_rankicon");
+     // From this point use vanilla rank importance
+     _rankImportance = rankId _unit;
 
      // If still no rank data, fallback to vanilla ranks
      if (_rankName == "") then {
@@ -43,6 +47,7 @@
    // Save rank name & icon
    _unit setVariable [QGVAR(rankName), _rankName];
    _unit setVariable [QGVAR(rankIcon), _rankIcon];
+   _unit setVariable [QGVAR(rankImportance), _rankImportance];
  };
 
-[_rankName, _rankIcon]
+[_rankName, _rankIcon, _rankImportance]
