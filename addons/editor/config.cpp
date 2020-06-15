@@ -11,7 +11,8 @@ class CfgPatches {
             "ace_arsenal",
             "Eden_Extended_Objects",
             "A3_3DEN",
-            "A3_Data_F_Sams_Loadorder"
+            "A3_Data_F_Sams_Loadorder",
+            "a3_expEden"
         };
         author = ECSTRING(main,Author);
         authors[] = {"3DEN Enhanced Team", "R3vo", "SzwedzikPL"};
@@ -29,6 +30,7 @@ enableTargetDebug = 1;
 #include "CfgFunctions.hpp"
 #include "CfgVehicles.hpp"
 #include "Cfg3DEN.hpp"
+#include "CfgAddons.hpp"
 #include "display3DEN.hpp"
 #include "display3DENSave.hpp"
 
