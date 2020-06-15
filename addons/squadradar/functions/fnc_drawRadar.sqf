@@ -12,7 +12,7 @@ private _cameraDirVector = (positionCameraToWorld [0, 0, 1]) vectorDiff (positio
 private _cameraDir = (_cameraDirVector # 0) atan2 (_cameraDirVector # 1);
 
 {
-  _x params ["_unit", "_icon", "_color", "_isSpecialState"];
+  _x params ["_unit", "_icon", "_color", "_showSpecialState"];
 
   private _distance = _unit distance ace_player;
   private _unitRelPos = GVAR(radarPos) getPos [_distance, ((ace_player getDir _unit) - _cameraDir)];
@@ -24,13 +24,25 @@ private _cameraDir = (_cameraDirVector # 0) atan2 (_cameraDirVector # 1);
     _icon,
     _color,
     _unitRelPos,
-    20,
-    20,
+    GVAR(radarIconSize),
+    GVAR(radarIconSize),
     // Don't rotate special state icons
     // Use if instead of [] select x because all elements of [] are calculated before select
-    if !(_isSpecialState) then {((getDir _unit) - _cameraDir)} else {0},
+    if !(_showSpecialState) then {((getDir _unit) - _cameraDir)} else {0},
     ""
   ];
-} forEach GVAR(radarDrawCache);
+} forEach (GVAR(radarDrawCache) # 1);
+
+private _playerData = GVAR(radarDrawCache) # 0;
+
+_control drawIcon [
+  _playerData # 0,
+  _playerData # 1,
+  GVAR(radarPos),
+  GVAR(radarIconSize),
+  GVAR(radarIconSize),
+  ((getDir ace_player) - _cameraDir),
+  ""
+];
 
 END_COUNTER(drawRadar);

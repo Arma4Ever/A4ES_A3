@@ -1,25 +1,36 @@
 #include "script_component.hpp"
 /*
  * Author: SzwedzikPL
- * Refreshes squad members cache
+ * Refreshes members cache
  */
 
 LOG("Refreshing members cache");
 
 BEGIN_COUNTER(refreshMembersCache);
 
-// Update base icons base on units traits and functions
-{
-  private _icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+// Build squad members cache
+GVAR(membersCache) = GVAR(currentSquadUnits) apply {
+  private _baseIcon = _x getVariable [QGVAR(baseIcon), ""];
+  private _icon = _baseIcon;
+  private _color = _x getVariable [QEGVAR(nametags,unitColor), [[1, 1, 1], "#ffffff"]];
+  private _iconColor = _color;
+  private _isSpecialState = false;
 
-  if (_x call EFUNC(squads,isLeader)) then {
-    _icon = "\a3\3den\data\attributes\namesound\special_ca.paa";
+  if (_x getVariable ["ACE_isUnconscious", false] || {!(alive _x)}) then {
+    _icon = "\a3\3den\data\cfgwaypoints\support_ca.paa";
+    _iconColor = [[0.82, 0.15, 0.15], "#d22727"];
+    _isSpecialState = true;
   };
 
-  _x setVariable [QGVAR(baseIcon), _icon];
-} forEach GVAR(currentSquadUnits);
+  if (_x getVariable [QEGVAR(nametags,isSpeaking), false]) then {
+    _icon = "\a3\ui_f\data\igui\rscingameui\rscdisplaychannel\mutevon_ca.paa";
+    _isSpecialState = true;
+  };
 
-BEGIN_COUNTER(refreshMembersCache);
+  [_x, [_baseIcon, _icon], [_color, _iconColor], _isSpecialState, false]
+};
 
-// Refesh members data cache
-call FUNC(refreshMembersStateCache);
+END_COUNTER(refreshMembersCache);
+
+// Refeesh draw cache
+call FUNC(refreshDrawCache);

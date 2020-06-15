@@ -48,7 +48,7 @@ class RscTitles {
             class memberlist: RscControlsGroupNoScrollbars {
                 idc = IDC_RSCRADAR_MEMBERLIST;
                 x = "0.5 + (pixelW * 64)";
-                y = "safeZoneY + safeZoneH - (pixelH * 138)";
+                y = "safeZoneY + safeZoneH - (pixelH * 130)";
                 w = "(safeZoneW / 2) - (pixelW * 64)";
                 h = "pixelH * 128";
                 shadow = 0;

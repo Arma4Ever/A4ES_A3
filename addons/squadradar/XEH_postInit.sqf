@@ -19,11 +19,6 @@ if (!hasInterface || EGVAR(common,isMainMenu)) exitWith {};
       (_x call EFUNC(nametags,getUnitRank)) # 2
   }, "DESCEND"] call BIS_fnc_sortBy;
 
-  // Sort squad units for radar where player is always LAST
-  GVAR(currentSquadUnitsRadar) = +GVAR(currentSquadUnits);
-  GVAR(currentSquadUnitsRadar) = GVAR(currentSquadUnitsRadar) - [ace_player];
-  GVAR(currentSquadUnitsRadar) pushBack ace_player;
-
   // Update radar
   call FUNC(onSettingsChanged);
 }] call CBA_fnc_addEventHandler;
@@ -34,8 +29,8 @@ private _handleUnitStatusUpdate = {
   // Exit if units are not in same squad
   if !([ace_player, _unit] call EFUNC(squads,areInSameSquad)) exitWith {};
 
-  // Refesh members state cache
-  call FUNC(refreshMembersStateCache);
+  // Refesh members cache
+  call FUNC(refreshMembersCache);
 
   // Redraw memberlist if unit in range
   if ((_unit distance2D ace_player) < RADAR_MAX_UNIT_DISTANCE) then {
