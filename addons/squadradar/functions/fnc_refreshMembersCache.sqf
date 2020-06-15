@@ -6,6 +6,9 @@
 
 LOG("Refreshing members cache");
 
+BEGIN_COUNTER(refreshMembersCache);
+
+// Update base icons base on units traits and functions
 {
   private _icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
 
@@ -16,4 +19,7 @@ LOG("Refreshing members cache");
   _x setVariable [QGVAR(baseIcon), _icon];
 } forEach GVAR(currentSquadUnits);
 
-call FUNC(refreshMembersStateIcons);
+BEGIN_COUNTER(refreshMembersCache);
+
+// Refesh members data cache
+call FUNC(refreshMembersStateCache);

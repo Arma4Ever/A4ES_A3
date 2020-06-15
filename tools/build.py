@@ -203,12 +203,17 @@ def main():
     print("  Vendos:")
 
     for stat in vendorstats:
-        print("    {}:".format(stat[0]))
-        print("      copied {} addons.".format(stat[1]))
-        print("      skipped {} addons.".format(stat[2]))
-        print("      copied {} dlls.".format(stat[3]))
-        print("      skipped {} dlls.".format(stat[4]))
-        print("")
+        if stat[1] > 0 or stat[3] > 0:
+            print("    {}:".format(stat[0]))
+            print("      copied {} addons.".format(stat[1]))
+            print("      skipped {} addons.".format(stat[2]))
+            print("      copied {} dlls.".format(stat[3]))
+            print("      skipped {} dlls.".format(stat[4]))
+        else:
+            print("    {}:".format(stat[0]))
+            print("      skipped all.")
+    
+    print("")
 
     if len(vendormissing):
         print("  Missing vendor mods:")

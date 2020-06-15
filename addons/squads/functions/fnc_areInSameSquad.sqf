@@ -13,7 +13,7 @@ private _firstUnit = _this deleteAt 0;
 
 private _squad = _firstUnit call FUNC(getUnitSquad);
 // Exit early if first unit squad is null
-if (isNull _baseSquad) exitWith {false};
+if (isNull _squad) exitWith {false};
 
 private _squadUnits = _squad call FUNC(getSquadUnits);
 

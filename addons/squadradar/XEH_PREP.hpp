@@ -4,4 +4,5 @@ PREP(drawRadar);
 PREP(handleRscRadarLoad);
 PREP(onSettingsChanged);
 PREP(refreshMembersCache);
-PREP(refreshMembersStateIcons);
+PREP(refreshMembersStateCache);
+PREP(refreshRadarDrawCache);
