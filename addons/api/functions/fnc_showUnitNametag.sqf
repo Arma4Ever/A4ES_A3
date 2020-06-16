@@ -1,13 +1,13 @@
 #include "script_component.hpp"
 /***
-	Autor: SzwedzikPL
+  Autor: SzwedzikPL
 
-	Opis:
+  Opis:
       Deklaruje czy nametag jednostki AI powinien być widoczny dla graczy
       Efekt funkcji będzie widoczny jedynie dla jednostek AI, nametag graczy
       jest zawsze widoczny
 
-	Parametry:
+  Parametry:
       _unit - Jednostka która ma być sprawdzona <OBJECT>
       _showNametag - Czy nametag jednostki powinien być widoczny dla graczy (opcjonalny, domyślnie: true) <BOOLEAN>
       _isGlobal - Czy wartośc powinna być ustawiona globalnie czy tylko dla klienta
@@ -15,8 +15,8 @@
       INFO: Jeśli deklaracja jest globalna nie ma potrzeby wykonywać funkcji na każdym komputerze,
       wystarczy ją wykonać np. tylko na serwerze
 
-	Zwraca:
-	    Nic <NIL>
+  Zwraca:
+      Nic <NIL>
 
   Przykład:
       // Pokaż nametag jednostki AI dla wszystkich graczy

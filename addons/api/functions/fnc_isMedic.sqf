@@ -1,11 +1,11 @@
 #include "script_component.hpp"
 /***
-	Autor: SzwedzikPL
+  Autor: SzwedzikPL
 
-	Opis:
+  Opis:
       Sprawdza czy dana jednostka jest medykiem
 
-	Parametry:
+  Parametry:
       _unit - Jednostka która ma być sprawdzona <OBJECT>
       _minClass - Klasa medyka, 1 - zwykły medyk lub doktor, 2 - doktor (opcjonalny, domyślnie: 1) <NUMBER>
       _useLocationBoost - Czy lokalizacja ma być brana pod uwagę (opcjonalny, domyślnie: false) <BOOLEAN>
@@ -14,8 +14,8 @@
           Parametr _useLocationBoost pozwala wziąć to pod uwagę jeśli istnieje
           taka potrzeba.
 
-	Zwraca:
-	    true jeśli jednostka jest medykiem danej klasy, false jeśli nie jest <BOOLEAN>
+  Zwraca:
+      true jeśli jednostka jest medykiem danej klasy, false jeśli nie jest <BOOLEAN>
 
   Przykład:
       private _jestMedykiem = mojaJednostka call A3CS_fnc_isMedic;

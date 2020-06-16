@@ -1,15 +1,15 @@
 #include "script_component.hpp"
 /***
-	Autor: SzwedzikPL
+  Autor: SzwedzikPL
 
-	Opis:
+  Opis:
       Sprawdza czy dana jednostka jest liderem swojej grupy
 
-	Parametry:
+  Parametry:
       _unit - Jednostka która ma być sprawdzona <OBJECT>
 
-	Zwraca:
-	    true jeśli jednostka jest liderem swojej grupy, false jeśli nie jest <BOOLEAN>
+  Zwraca:
+      true jeśli jednostka jest liderem swojej grupy, false jeśli nie jest <BOOLEAN>
 
   Przykład:
       private _jestLiderem = mojaJednostka call A3CS_fnc_isSquadLeader;
