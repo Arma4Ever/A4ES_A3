@@ -3,12 +3,10 @@
   Autor: SzwedzikPL
 
   Opis:
-      Deklaruje czy nametag jednostki AI powinien być widoczny dla graczy
-      Efekt funkcji będzie widoczny jedynie dla jednostek AI, nametag graczy
-      jest zawsze widoczny
+      Deklaruje czy nametag jednostki powinien być widoczny dla graczy
 
   Parametry:
-      _unit - Jednostka która ma być sprawdzona <OBJECT>
+      _unit - Jednostka której dotyczy ustawienie <OBJECT>
       _showNametag - Czy nametag jednostki powinien być widoczny dla graczy (opcjonalny, domyślnie: true) <BOOLEAN>
       _isGlobal - Czy wartośc powinna być ustawiona globalnie czy tylko dla klienta
       na którym została wykonana funkcja (opcjonalny, domyślnie: true) <BOOLEAN>
