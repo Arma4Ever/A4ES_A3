@@ -15,7 +15,7 @@ private _playerData = [];
 private _unitsData = [];
 
 {
-  _x params ["_unit", "_icons", "_colors", "_isSpecialState"];
+  _x params ["_unit", "_icons", "_colors", "_isSpecialState", "_showSpecialState", "_checkFOV"];
 
   if (_unit isEqualTo ace_player) then {
     private _color = (_colors # 0) # 0;
@@ -24,18 +24,23 @@ private _unitsData = [];
     private _distance = _unit distance ace_player;
     private _showSpecialState = false;
     if ((_distance < RADAR_MAX_UNIT_DISTANCE) && {_isSpecialState}) then {
-      private _camDirVector = getCameraViewDirection ace_player;
-      private _camDir = (_camDirVector # 0) atan2 (_camDirVector # 1);
-      if (_camDir < 0) then {_camDir = 360 + _camDir};
-      private _camDirDiff = abs (_camDir - (ace_player getDir _unit));
+      if (_checkFOV) then {
+        private _camDirVector = getCameraViewDirection ace_player;
+        private _camDir = (_camDirVector # 0) atan2 (_camDirVector # 1);
+        if (_camDir < 0) then {_camDir = 360 + _camDir};
+        private _camDirDiff = abs (_camDir - (ace_player getDir _unit));
 
-      if (_camDirDiff < 46) then {
-        private _intersections = lineIntersectsSurfaces [eyePos ace_player, (getPosASL _unit) vectorAdd [0, 0, 0.5], ace_player, _unit];
+        if (_camDirDiff < 46) then {
+          private _intersections = lineIntersectsSurfaces [eyePos ace_player, (getPosASL _unit) vectorAdd [0, 0, 0.5], ace_player, _unit];
 
-        if (_intersections isEqualTo []) then {
-          _showSpecialState = true;
-          _specialStateUnits pushBack _unit;
+          if (_intersections isEqualTo []) then {
+            _showSpecialState = true;
+            _specialStateUnits pushBack _unit;
+          };
         };
+      } else {
+        _showSpecialState = true;
+        _specialStateUnits pushBack _unit;
       };
     };
 
