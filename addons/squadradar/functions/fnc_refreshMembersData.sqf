@@ -10,25 +10,25 @@ BEGIN_COUNTER(refreshMembersData);
 
 // Update base icons base on units traits and functions
 {
-  private _icon = switch true do {
-      case (_x call EFUNC(squads,isLeader)): {
+  _x setVariable [
+    QGVAR(baseIcon),
+    _x call {
+      if (_this call EFUNC(squads,isLeader)) exitWith {
         "\a3\ui_f\data\map\vehicleicons\iconManLeader_ca.paa"
       };
-      case (_x call EFUNC(medical,isMedic)): {
+      if (_this call EFUNC(medical,isMedic)) exitWith {
         "\a3\ui_f\data\map\vehicleicons\iconManMedic_ca.paa"
       };
-      case (_x call ACEFUNC(common,isEngineer)): {
+      if (_this call ACEFUNC(common,isEngineer)) exitWith {
         "\a3\ui_f\data\map\vehicleicons\iconManEngineer_ca.paa"
       };
-      case (_x call ACEFUNC(common,isEOD)): {
+      if (_this call ACEFUNC(common,isEOD)) exitWith {
         "\a3\ui_f\data\map\vehicleicons\iconManExplosive_ca.paa"
       };
-      default {
-        "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa"
-      };
-  };
 
-  _x setVariable [QGVAR(baseIcon), _icon];
+      "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa"
+    }
+  ];
 } forEach GVAR(currentSquadUnits);
 
 END_COUNTER(refreshMembersData);

@@ -16,6 +16,7 @@
 #define RADAR_MAX_UNIT_DISTANCE 22
 #define RADAR_FADE_MIN_UNIT_DISTANCE 20
 #define RADAR_SPECIALSTATEUNITS_UPDATE_INTERVAL 1;
+#define MEMBERLIST_COLUMN_ROWS 6
 
 #define HIDE_MAP_MARKER(markerClass) class markerClass {\
     icon = "#(argb,8,8,3)color(0,0,0,0)"; \

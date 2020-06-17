@@ -33,10 +33,11 @@ private _cameraDir = (_cameraDirVector # 0) atan2 (_cameraDirVector # 1);
 } forEach (GVAR(radarDrawCache) # 1);
 
 private _playerData = GVAR(radarDrawCache) # 0;
+_playerData params ["_icon", "_color"];
 
 _control drawIcon [
-  _playerData # 0,
-  _playerData # 1,
+  _icon,
+  _color,
   GVAR(radarPos),
   GVAR(radarIconSize),
   GVAR(radarIconSize),

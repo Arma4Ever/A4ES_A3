@@ -14,19 +14,17 @@ if (_refreshMembersData) then {
 
 BEGIN_COUNTER(drawMemberlist);
 
-private _listMaxCount = 6;
-
 private _display = uiNamespace getVariable [QGVAR(rscRadar), displayNull];
 private _controlMemberlist = _display displayCtrl IDC_RSCRADAR_MEMBERLIST;
 private _columns = _controlMemberlist getVariable [QGVAR(columns), []];
 private _usedColumnWidthScale = _controlMemberlist getVariable [QGVAR(columnWidthScale), 0];
-private _columnsMaxIndex = (ceil ((count GVAR(currentSquadUnits)) / _listMaxCount)) - 1;
+private _requiredColumnCount = ceil ((count GVAR(currentSquadUnits)) / MEMBERLIST_COLUMN_ROWS);
 #ifdef DEBUG_MODE_FULL
 private _columnsRebuilded = false;
 #endif
 
 if !(
-  (count _columns) isEqualTo (_columnsMaxIndex + 1) &&
+  (count _columns) isEqualTo _requiredColumnCount &&
   _usedColumnWidthScale isEqualTo GVAR(memberlistColumnWidthScale)
 ) then {
   private _columnWidth = (pixelW * 130) * GVAR(memberlistColumnWidthScale);
@@ -34,7 +32,7 @@ if !(
 
   {ctrlDelete _x;} forEach _columns;
   _columns = [];
-  for "_i" from 0 to _columnsMaxIndex do {
+  for "_i" from 0 to (_requiredColumnCount - 1) do {
     private _column = _display ctrlCreate ["RscStructuredText", -1, _controlMemberlist];
     _column ctrlSetPosition [
       _columnWidth * _i,
@@ -64,26 +62,22 @@ private _nameSize = 1 * GVAR(uiHScale);
 
 {
   _x params ["_unit", "_icons", "_colors", "_isSpecialState", "_showSpecialState"];
-
-  private _textColor = (_colors # 0) # 1;
-
-
-  private _iconColor = (_colors select (_isSpecialState && _showSpecialState)) # 1;
+  private _useSpecialState = (_isSpecialState && _showSpecialState);
 
   (_columnTexts # _columnIndex) pushBack format [
     "<t color='%1' size='%2' shadow='%3' valign='middle'><img image='%4' shadow='%3' size='%5' color='%6'/> %7</t>",
     [(_colors # 0) # 1, GVAR(memberlistOpacity)] call FUNC(hexToHexWithAlpha),
     _nameSize,
     GVAR(memberlistTextShadow),
-    _icons select (_isSpecialState && _showSpecialState),
+    _icons select _useSpecialState,
     _iconSize,
     [
-      (_colors select (_isSpecialState && _showSpecialState)) # 1,
+      (_colors select _useSpecialState) # 1,
       GVAR(memberlistOpacity)
     ] call FUNC(hexToHexWithAlpha),
     _unit getVariable ["ACE_Name", localize ELSTRING(nametags,NoName)]
   ];
-  if (((_forEachIndex + 1) % _listMaxCount) isEqualTo 0) then {
+  if (((_forEachIndex + 1) % MEMBERLIST_COLUMN_ROWS) isEqualTo 0) then {
     _columnIndex = _columnIndex + 1;
   };
 } forEach GVAR(membersCache);

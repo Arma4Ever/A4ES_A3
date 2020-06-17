@@ -9,6 +9,7 @@ ADDON = true;
 #include "initSettings.sqf"
 
 GVAR(settingsInitialized) = false;
+
 GVAR(enable) = false;
 GVAR(enabled) = false;
 GVAR(currentSquad) = objNull;
