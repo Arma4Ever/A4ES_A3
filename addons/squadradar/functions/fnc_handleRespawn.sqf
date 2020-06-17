@@ -9,5 +9,7 @@
 
   if !(_unit isEqualTo ace_player) exitWith {};
 
-  // WIP
+  LOG("Handling respawn event");
+
+  true call FUNC(updateUI);
 }, _this] call CBA_fnc_execNextFrame;

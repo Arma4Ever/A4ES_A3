@@ -31,7 +31,7 @@ BEGIN_COUNTER(refreshMembersData);
   _x setVariable [QGVAR(baseIcon), _icon];
 } forEach GVAR(currentSquadUnits);
 
-BEGIN_COUNTER(refreshMembersData);
+END_COUNTER(refreshMembersData);
 
 // Refesh members cache
 call FUNC(refreshMembersCache);

@@ -33,12 +33,14 @@ if (!hasInterface || EGVAR(common,isMainMenu)) exitWith {};
 ["unit", {
   // Trigger squads changed event on unit change & update UI
   [{
+    LOG("Unit event");
     [QEGVAR(squads,squadChanged), []] call CBA_fnc_localEvent;
   }, []] call CBA_fnc_execNextFrame;
 }] call CBA_fnc_addPlayerEventHandler;
 
 ["vehicle", {
-  call FUNC(updateUI);
+  LOG("Vehicle event");
+  false call FUNC(updateUI);
 }] call CBA_fnc_addPlayerEventHandler;
 
 [QEGVAR(squads,squadChanged), {
@@ -51,7 +53,7 @@ if (!hasInterface || EGVAR(common,isMainMenu)) exitWith {};
   }, "DESCEND"] call BIS_fnc_sortBy;
 
   // Update UI
-  call FUNC(updateUI);
+  true call FUNC(updateUI);
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(onSpeak), "OnSpeak", DFUNC(handleUnitStatusUpdate), ObjNull] call TFAR_fnc_addEventHandler;
@@ -63,6 +65,6 @@ if (!hasInterface || EGVAR(common,isMainMenu)) exitWith {};
 
   // Update ui if player unconsciousness status changes
   if (_unit isEqualTo ace_player) then {
-    call FUNC(updateUI);
+    false call FUNC(updateUI);
   };
 }] call CBA_fnc_addEventHandler;

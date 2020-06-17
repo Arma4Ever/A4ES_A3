@@ -19,7 +19,7 @@ private _unitsData = [];
 
   if (_unit isEqualTo ace_player) then {
     private _color = (_colors # 0) # 0;
-    _playerData = [_icons # 0, [_color # 0, _color # 1, _color # 2, 1]];
+    _playerData = [_icons # 0, [_color # 0, _color # 1, _color # 2, GVAR(radarIconsOpacity)]];
   } else {
     private _distance = _unit distance ace_player;
     private _showSpecialState = false;

@@ -15,15 +15,14 @@ private _cameraDir = (_cameraDirVector # 0) atan2 (_cameraDirVector # 1);
   _x params ["_unit", "_icon", "_color", "_showSpecialState"];
 
   private _distance = _unit distance ace_player;
-  private _unitRelPos = GVAR(radarPos) getPos [_distance, ((ace_player getDir _unit) - _cameraDir)];
 
   // Fade icons on edges
-  _color set [3, linearConversion [RADAR_FADE_MIN_UNIT_DISTANCE, RADAR_MAX_UNIT_DISTANCE, _distance, 1, 0, true]];
+  _color set [3, linearConversion [RADAR_FADE_MIN_UNIT_DISTANCE, RADAR_MAX_UNIT_DISTANCE, _distance, GVAR(radarIconsOpacity), 0, true]];
 
   _control drawIcon [
     _icon,
     _color,
-    _unitRelPos,
+    GVAR(radarPos) getPos [_distance, ((ace_player getDir _unit) - _cameraDir)],
     GVAR(radarIconSize),
     GVAR(radarIconSize),
     // Don't rotate special state icons

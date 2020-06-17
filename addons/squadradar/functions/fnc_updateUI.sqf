@@ -11,9 +11,12 @@ LOG_3("Updating UI (settingsChanged: %1 enable: %2 enabled: %3 currentSquad %4)"
 if (_settingsChanged) then {
   // Update scale vars
   private _resolution = getResolution;
-  GVAR(uiScale) = 0.55 / (_resolution # 5);
-  GVAR(uiHScale) = 900 / (_resolution # 1);
-  GVAR(radarIconSize) = 16 * GVAR(uiScale);
+  private _screenHeight = _resolution # 1;
+  private _uiScale = _resolution # 5;
+  GVAR(uiScale) = 0.55 / _uiScale;
+  GVAR(uiHScale) = 900 / _screenHeight;
+  GVAR(mapZoomScale) = _screenHeight / 900;
+  GVAR(radarIconSize) = 15 * GVAR(uiScale);
 };
 
 // Remove RscRadar
@@ -49,12 +52,13 @@ if (_settingsChanged) then {
 // Termine which UI elements should be visible
 private _isUnconscious = ace_player getVariable ["ACE_isUnconscious", false];
 private _showRadar = (
-  GVAR(enableRadar)
+  GVAR(showRadar)
   && {!GVAR(displayInterrupt)}
-  && {!((vehicle ace_player) isEqualTo ace_player)}
+  && {(vehicle ace_player) isEqualTo ace_player}
   && {!_isUnconscious}
+  && {alive ace_player}
 );
-private _showMemberlist = (GVAR(enableMemberlist) && {!GVAR(displayInterrupt)} && {!_isUnconscious});
+private _showMemberlist = (GVAR(showMemberlist) && {!GVAR(displayInterrupt)} && {!_isUnconscious} && {alive ace_player});
 
 // Update visiblity
 _ctrlRadar ctrlShow _showRadar;

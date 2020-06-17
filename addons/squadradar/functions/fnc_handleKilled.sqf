@@ -8,5 +8,7 @@ params ["_unit"];
 
 if !(_unit isEqualTo ace_player) exitWith {};
 
+LOG("Handling killed event");
+
 // Update UI if player is dead
 false call FUNC(updateUI);

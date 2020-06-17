@@ -1,2 +1,3 @@
 
+PREP(colorToHex);
 PREP(getTeamColor);

@@ -8,6 +8,7 @@ PREP(handleRespawn);
 PREP(handleRscRadarLoad);
 PREP(handleSettingsChanged);
 PREP(handleUnitStatusUpdate);
+PREP(hexToHexWithAlpha);
 PREP(refreshDrawCache);
 PREP(refreshMembersCache);
 PREP(refreshMembersData);

@@ -4,14 +4,96 @@
     <Key ID="STR_A3CS_Squadradar_Settings_Addon">
       <Original>A3CS Squad Radar</Original>
     </Key>
-    <Key ID="STR_A3CS_Squadradar_Settings_radarBackground_Blured">
-      <Original>Ciemne z rozmytą krawędzią</Original>
+    <Key ID="STR_A3CS_Squadradar_Settings_OpacityTooltip">
+      <Original>0 = 0%, 1 = 100%</Original>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_enable">
+      <Original>Enable</Original>
+      <Polish>Włącz</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_enable_Tooltip">
+      <Original>Enable squad radar</Original>
+      <Polish>Włącz radar drużynowy</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_showRadar">
+      <Original>Show radar</Original>
+      <Polish>Pokaż radar</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_showRadar_Tooltip">
+      <Original>Show radar with your squad members positions near you</Original>
+      <Polish>Pokaż radar z pozycjami członków Twojej drużyny wokół Ciebie</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_showMemberlist">
+      <Original>Show squad members</Original>
+      <Polish>Pokaż członków drużyny</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_showMemberlist_Tooltip">
+      <Original>Show list of your squad members</Original>
+      <Polish>Pokaż listę członków Twojej drużyny</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_showSpecialStates">
+      <Original>Show special states icons</Original>
+      <Polish>Pokazuj ikonki stanów specjalnych</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_showSpecialStates_Tooltip">
+      <Original>Show special states like talks with TFAR or dead/unconscious</Original>
+      <Polish>Pokazuj stany specjalne jak mówi przez TFAR lub martwy/nieprzytomny</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_radarBackground">
+      <Original>Radar background</Original>
+      <Polish>Tło radaru</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_radarBackground_Tooltip">
+      <Original>Radar background texture</Original>
+      <Polish>Tekstura tła radaru</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_radarBackground_Blurred">
+      <Original>Dark with blurred edge</Original>
+      <Polish>Ciemne z rozmytą krawędzią</Polish>
     </Key>
     <Key ID="STR_A3CS_Squadradar_Settings_radarBackground_Sharp">
-      <Original>Ciemne z ostrą krawędzią</Original>
+      <Original>Dark with sharp edge</Original>
+      <Polish>Ciemne z ostrą krawędzią</Polish>
     </Key>
     <Key ID="STR_A3CS_Squadradar_Settings_radarBackground_Border">
-      <Original>Ciemne z jasnym obramowaniem</Original>
+      <Original>Dark with light border</Original>
+      <Polish>Ciemne z jasnym obramowaniem</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_radarBackgroundOpacity">
+      <Original>Radar background opacity</Original>
+      <Polish>Widoczność tła radaru</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_radarIconsOpacity">
+      <Original>Radar icons opacity</Original>
+      <Polish>Widoczność ikon radaru</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_memberlistOpacity">
+      <Original>Squad members opacity</Original>
+      <Polish>Widoczność listy członków drużyny radaru</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_memberlistColumnWidthScale">
+      <Original>Squad members columns width</Original>
+      <Polish>Szerokość kolumn listy członków drużyny</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_memberlistColumnWidthScale_Tooltip">
+      <Original>0 = 0%, 1 = 100%, 2 = 200%)</Original>
+    </Key>
+
+    <Key ID="STR_A3CS_Squadradar_Settings_memberlistTextShadow">
+      <Original>Squad members text shadow</Original>
+      <Polish>Cień tekstu listy członków drużyny</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_memberlistTextShadow_Tooltip">
+      <Original>Shadow type used on squad members list text</Original>
+      <Polish>Wersja cienia tekstu listy członków drużyny</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_memberlistTextShadow_Classic">
+      <Original>Classic (light shadow under text)</Original>
+      <Polish>Klasyczny (lekki cień pod tekstem)</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_memberlistTextShadow_Outline">
+      <Original>Outline (strong shadow, outline around text characters)</Original>
+      <Polish>Zarys (mocny cień, zarys wokół liter)</Polish>
     </Key>
   </Package>
 </Project>
