@@ -78,7 +78,6 @@
     <Key ID="STR_A3CS_Squadradar_Settings_memberlistColumnWidthScale_Tooltip">
       <Original>0 = 0%, 1 = 100%, 2 = 200%)</Original>
     </Key>
-
     <Key ID="STR_A3CS_Squadradar_Settings_memberlistTextShadow">
       <Original>Squad members text shadow</Original>
       <Polish>Cień tekstu listy członków drużyny</Polish>
@@ -94,6 +93,78 @@
     <Key ID="STR_A3CS_Squadradar_Settings_memberlistTextShadow_Outline">
       <Original>Outline (strong shadow, outline around text characters)</Original>
       <Polish>Zarys (mocny cień, zarys wokół liter)</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Attributes_baseIconClass">
+      <Original>Squad radar icon</Original>
+      <Polish>Ikona na radarze drużyny</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Attributes_baseIconClass_Tooltip">
+      <Original>Unit icon visible on squad radar</Original>
+      <Polish>Ikona jednostki wyświetlana na radarze drużyny</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_iconClasses_auto">
+      <Original>Auto</Original>
+      <Polish>Automatyczna</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_iconClasses_auto_Tooltip">
+      <Original>Selects icon automatically (supported cases: squad leader, medic, engineer, eod)</Original>
+      <Polish>Wybiera ikonę automatycznie (obsługiwane przypadki: dowódca drużyny, medyk, inżynier, saper)</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_iconClasses_rifleman">
+      <Original>Rifleman</Original>
+      <Polish>Strzelec</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_iconClasses_grenadier">
+      <Original>Grenadier</Original>
+      <Polish>Grenadier</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_iconClasses_mg">
+      <Original>Machine gunner</Original>
+      <Polish>Strzelec MG</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_iconClasses_ammobearer">
+      <Original>Ammo bearer</Original>
+      <Polish>Amunicyjny</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_iconClasses_at">
+      <Original>Anti-tank</Original>
+      <Polish>Strzelec AT</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_iconClasses_medic">
+      <Original>Medic</Original>
+      <Polish>Medyk</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_iconClasses_rto">
+      <Original>RTO</Original>
+      <Polish>RTO</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_iconClasses_marksman">
+      <Original>Marksman</Original>
+      <Polish>Strzelec wyborowy</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_iconClasses_engineer">
+      <Original>Engineer</Original>
+      <Polish>Inżynier</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_iconClasses_eod">
+      <Original>EOD</Original>
+      <Polish>Saper</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_iconClasses_squadleader">
+      <Original>Squad leader</Original>
+      <Polish>Dowódca drużyny</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_iconClasses_sectionleader">
+      <Original>Section leader</Original>
+      <Polish>Dowódca sekcji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_iconClasses_officer">
+      <Original>Officer</Original>
+      <Polish>Oficer</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_iconClasses_civilian">
+      <Original>Civilian (consultant/contractor/translator etc.)</Original>
+      <Polish>Cywil (konsultant/kontraktor/tłumacz itp.)</Polish>
     </Key>
   </Package>
 </Project>
