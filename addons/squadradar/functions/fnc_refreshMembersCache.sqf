@@ -8,6 +8,8 @@ LOG("Refreshing members cache");
 
 BEGIN_COUNTER(refreshMembersCache);
 
+private _showSpecialStates = GVAR(showSpecialStates);
+
 // Build squad members cache
 GVAR(membersCache) = GVAR(currentSquadUnits) apply {
   private _icon = "";
@@ -15,12 +17,12 @@ GVAR(membersCache) = GVAR(currentSquadUnits) apply {
   private _isSpecialState = false;
   private _checkFOV = false;
 
-  if (GVAR(showSpecialStates)) then {
+  if (_showSpecialStates) then {
     if (
       (_x getVariable ["ACE_isUnconscious", false] || !(alive _x)) &&
       {(ace_player call EFUNC(medical,isMedic))}
     ) exitWith {
-      _icon = "\a3\3den\data\cfgwaypoints\support_ca.paa";
+      _icon = "\a3\ui_f\data\map\vehicleicons\pictureheal_ca.paa";
       _iconColor = [[0.82, 0.15, 0.15], "#d22727"];
       _isSpecialState = true;
       _checkFOV = true;
@@ -31,11 +33,10 @@ GVAR(membersCache) = GVAR(currentSquadUnits) apply {
     };
     if (_x getVariable [QGVAR(hasCustomSpecialIcon), false]) exitWith {
       private _customSpecialIconData = _x getVariable [QGVAR(customSpecialIcon), []];
-      _customSpecialIconData params ["_customIcon", "_customIconColor", "_custonIconCheckFOV"];
-      _icon = _customIcon;
-      _iconColor = _customIconColor;
+      _icon = _customSpecialIconData # 0;
+      _iconColor = _customSpecialIconData # 1;
       _isSpecialState = true;
-      _checkFOV = _custonIconCheckFOV;
+      _checkFOV = _customSpecialIconData # 2;
     };
   };
 

@@ -45,6 +45,15 @@ class RscTitles {
                 #include "MapProperties.hpp"
             };
 
+            class fingerPointers: RscControlsGroupNoScrollbars {
+                idc = IDC_RSCRADAR_FINGER_POINTERS;
+                x = "0.5 - (pixelW * 64)";
+                y = "safeZoneY + safeZoneH - (pixelH * 138)";
+                w = "pixelW * 128";
+                h = "pixelH * 128";
+                shadow = 0;
+            };
+
             class memberlist: RscControlsGroupNoScrollbars {
                 idc = IDC_RSCRADAR_MEMBERLIST;
                 x = "0.5 + (pixelW * 64)";

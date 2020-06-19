@@ -19,15 +19,16 @@ private _controlMemberlist = _display displayCtrl IDC_RSCRADAR_MEMBERLIST;
 private _columns = _controlMemberlist getVariable [QGVAR(columns), []];
 private _usedColumnWidthScale = _controlMemberlist getVariable [QGVAR(columnWidthScale), 0];
 private _requiredColumnCount = ceil ((count GVAR(currentSquadUnits)) / MEMBERLIST_COLUMN_ROWS);
+private _columnWidthScale = GVAR(memberlistColumnWidthScale);
 #ifdef DEBUG_MODE_FULL
 private _columnsRebuilded = false;
 #endif
 
 if !(
   (count _columns) isEqualTo _requiredColumnCount &&
-  _usedColumnWidthScale isEqualTo GVAR(memberlistColumnWidthScale)
+  _usedColumnWidthScale isEqualTo _columnWidthScale
 ) then {
-  private _columnWidth = (pixelW * 130) * GVAR(memberlistColumnWidthScale);
+  private _columnWidth = (pixelW * 130) * _columnWidthScale;
   private _columnHeight = pixelH * 128;
 
   {ctrlDelete _x;} forEach _columns;
@@ -48,43 +49,42 @@ if !(
   };
   _controlMemberlist setVariable [QGVAR(columns), _columns];
   // Save used column width scale
-  _controlMemberlist setVariable [QGVAR(columnWidthScale), GVAR(memberlistColumnWidthScale)];
+  _controlMemberlist setVariable [QGVAR(columnWidthScale), _columnWidthScale];
   #ifdef DEBUG_MODE_FULL
   _columnsRebuilded = true;
   #endif
 };
 
-private _columnTexts = _columns apply {[]};
-private _columnIndex = 0;
-
 private _iconSize = 0.9 * GVAR(uiHScale);
 private _nameSize = 1 * GVAR(uiHScale);
+private _memberlistOpacity = GVAR(memberlistOpacity);
+private _memberlistTextShadow = GVAR(memberlistTextShadow);
 
+private _columnTexts = [];
+private _columnIndex = 0;
 {
   _x params ["_unit", "_icons", "_colors", "_isSpecialState", "_showSpecialState"];
   private _useSpecialState = (_isSpecialState && _showSpecialState);
 
-  (_columnTexts # _columnIndex) pushBack format [
+  _columnTexts pushBack format [
     "<t color='%1' size='%2' shadow='%3' valign='middle'><img image='%4' shadow='%3' size='%5' color='%6'/> %7</t>",
-    [(_colors # 0) # 1, GVAR(memberlistOpacity)] call FUNC(hexToHexWithAlpha),
+    [(_colors # 0) # 1, _memberlistOpacity] call FUNC(hexToHexWithAlpha),
     _nameSize,
-    GVAR(memberlistTextShadow),
+    _memberlistTextShadow,
     _icons select _useSpecialState,
     _iconSize,
     [
       (_colors select _useSpecialState) # 1,
-      GVAR(memberlistOpacity)
+      _memberlistOpacity
     ] call FUNC(hexToHexWithAlpha),
     _unit getVariable ["ACE_Name", localize ELSTRING(nametags,NoName)]
   ];
   if (((_forEachIndex + 1) % MEMBERLIST_COLUMN_ROWS) isEqualTo 0) then {
+    (_columns # _columnIndex) ctrlSetStructuredText parseText (_columnTexts joinString "<br/>");
+    _columnTexts = [];
     _columnIndex = _columnIndex + 1;
   };
 } forEach GVAR(membersCache);
-
-{
-  (_columns # _forEachIndex) ctrlSetStructuredText parseText (_x joinString "<br/>");
-} forEach _columnTexts;
 
 LOG_1("Memberlist drawn (rebuilded columns: %1)",str _columnsRebuilded);
 

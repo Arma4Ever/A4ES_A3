@@ -44,8 +44,8 @@ private _unitsData = [];
     // Update members cache for memberlist draw
     _x set [4, _showSpecialState];
 
-    // Max distance for sprinting unit is 1.25m in 0.25 seconds
-    if (_distance < (RADAR_MAX_UNIT_DISTANCE + 1)) then {
+    // Max distance for sprinting unit (without gear) is 1.7m in 0.25 seconds
+    if (_distance < (RADAR_MAX_UNIT_DISTANCE + 0.85)) then {
       _unitsData pushBack [
         _unit,
         _icons select _showSpecialState,

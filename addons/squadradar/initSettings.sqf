@@ -37,9 +37,18 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(showFingerPointers), "CHECKBOX",
+    [LSTRING(Settings_showFingerPointers), LSTRING(Settings_showFingerPointers_Tooltip)],
+    LSTRING(Settings_Addon),
+    true,
+    2,
+    {_this call FUNC(handleSettingsChanged);}
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(radarBackground), "LIST",
     [LSTRING(Settings_radarBackground), LSTRING(Settings_radarBackground_Tooltip)],
-    LSTRING(Settings_Addon),
+    [LSTRING(Settings_Addon), "str_a3_rscdisplaygameoptions_buttongui"],
     [
       [
         "",
@@ -61,7 +70,7 @@
 [
     QGVAR(radarBackgroundOpacity), "SLIDER",
     [LSTRING(Settings_radarBackgroundOpacity), LSTRING(Settings_OpacityTooltip)],
-    LSTRING(Settings_Addon),
+    [LSTRING(Settings_Addon), LSTRING(Settings_GUI)],
     [0, 1, 0.75, 2],
     2,
     {_this call FUNC(handleSettingsChanged);}
@@ -70,7 +79,7 @@
 [
     QGVAR(radarIconsOpacity), "SLIDER",
     [LSTRING(Settings_radarIconsOpacity), LSTRING(Settings_OpacityTooltip)],
-    LSTRING(Settings_Addon),
+    [LSTRING(Settings_Addon), LSTRING(Settings_GUI)],
     [0, 1, 1, 2],
     2,
     {_this call FUNC(handleSettingsChanged);}
@@ -79,7 +88,7 @@
 [
     QGVAR(memberlistOpacity), "SLIDER",
     [LSTRING(Settings_memberlistOpacity), LSTRING(Settings_OpacityTooltip)],
-    LSTRING(Settings_Addon),
+    [LSTRING(Settings_Addon), LSTRING(Settings_GUI)],
     [0, 1, 1, 2],
     2,
     {_this call FUNC(handleSettingsChanged);}
@@ -88,7 +97,7 @@
 [
     QGVAR(memberlistColumnWidthScale), "SLIDER",
     [LSTRING(Settings_memberlistColumnWidthScale), LSTRING(Settings_memberlistColumnWidthScale_Tooltip)],
-    LSTRING(Settings_Addon),
+    [LSTRING(Settings_Addon), LSTRING(Settings_GUI)],
     [0, 2, 1, 2],
     2,
     {_this call FUNC(handleSettingsChanged);}
@@ -97,7 +106,7 @@
 [
     QGVAR(memberlistTextShadow), "LIST",
     [LSTRING(Settings_memberlistTextShadow), LSTRING(Settings_memberlistTextShadow_Tooltip)],
-    LSTRING(Settings_Addon),
+    [LSTRING(Settings_Addon), LSTRING(Settings_GUI)],
     [
       [
         0,
@@ -112,4 +121,12 @@
     ],
     2,
     {_this call FUNC(handleSettingsChanged);}
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(fingerPointerColor), "COLOR",
+    [LSTRING(Settings_fingerPointerColor), LSTRING(Settings_fingerPointerColor_Tooltip)],
+    [LSTRING(Settings_Addon), LSTRING(Settings_GUI)],
+    [1, 0.65, 0, 0.65],
+    2
 ] call CBA_settings_fnc_init;

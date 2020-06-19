@@ -6,6 +6,10 @@ ADDON = false;
 
 ADDON = true;
 
+if (isNil QGVAR(isEditorPreview)) then {
+  GVAR(isEditorPreview) = false;
+};
+
 if !(is3DEN) exitWith {};
 
 // Check for incompatible 3DEN mods

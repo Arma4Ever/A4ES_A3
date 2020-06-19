@@ -21,7 +21,6 @@ class Cfg3DEN {
                             text = CSTRING(iconClasses_auto);
                             data = "";
                             tooltip = CSTRING(iconClasses_auto_Tooltip);
-
                         };
                     };
                     class ItemsConfig {

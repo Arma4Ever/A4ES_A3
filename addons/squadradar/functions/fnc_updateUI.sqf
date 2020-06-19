@@ -16,7 +16,7 @@ if (_settingsChanged) then {
   GVAR(uiScale) = 0.55 / _uiScale;
   GVAR(uiHScale) = 900 / _screenHeight;
   GVAR(mapZoomScale) = _screenHeight / 900;
-  GVAR(radarIconSize) = 15 * GVAR(uiScale);
+  GVAR(radarIconSize) = RADAR_BASE_ICON_SIZE * GVAR(uiScale);
 };
 
 // Remove RscRadar
@@ -41,6 +41,7 @@ if (isNull _display) exitWith {
 
 private _ctrlRadar = _display displayCtrl IDC_RSCRADAR_RADAR;
 private _ctrlRadarBg = _display displayCtrl IDC_RSCRADAR_RADARBG;
+private _ctrlFingerPointers = _display displayCtrl IDC_RSCRADAR_FINGER_POINTERS;
 private _ctrlMemberlist = _display displayCtrl IDC_RSCRADAR_MEMBERLIST;
 
 // Update radar background
@@ -60,12 +61,52 @@ private _showRadar = (
 );
 private _showMemberlist = (GVAR(showMemberlist) && {!GVAR(displayInterrupt)} && {!_isUnconscious} && {alive ace_player});
 
-// Update visiblity
-_ctrlRadar ctrlShow _showRadar;
-_ctrlRadarBg ctrlShow _showRadar;
-_ctrlMemberlist ctrlShow _showMemberlist;
+// Jamming vars
+private _jamRadar = ace_player getVariable [QGVAR(jamRadar), false];
+private _jamMemberlist = ace_player getVariable [QGVAR(jamMemberlist), false];
+private _jamAnimation = ace_player getVariable [QGVAR(jamAnimation), false];
 
-LOG_2("UI elements updated (showRadar: %1 showMemberlist: %2)",str _showRadar,str _showMemberlist);
+// Radar jamming
+if (_jamRadar) then {
+  if (GVAR(radarJammed)) exitWith {};
+  if (_jamAnimation && _showRadar) then {
+    [[_ctrlRadar, _ctrlRadarBg, _ctrlFingerPointers], QUOTE(!GVAR(radarJammed))] call FUNC(animateJamming);
+  } else {
+    _ctrlRadar ctrlShow false;
+    _ctrlRadarBg ctrlShow false;
+    _ctrlFingerPointers ctrlShow false;
+  };
+  GVAR(radarJammed) = true;
+} else {
+  if !(GVAR(radarJammed)) exitWith {};
+  GVAR(radarJammed) = false;
+};
+
+// Memberlist jamming
+if (_jamMemberlist) then {
+  if (GVAR(memberlistJammed)) exitWith {};
+  if (_jamAnimation && _showMemberlist) then {
+    [[_ctrlMemberlist], QUOTE(!GVAR(memberlistJammed))] call FUNC(animateJamming);
+  } else {
+    _ctrlMemberlist ctrlShow false;
+  };
+  GVAR(memberlistJammed) = true;
+} else {
+  if !(GVAR(memberlistJammed)) exitWith {};
+  GVAR(memberlistJammed) = false;
+};
+
+// Update visiblity
+if !(GVAR(radarJammed)) then {
+  _ctrlRadar ctrlShow _showRadar;
+  _ctrlRadarBg ctrlShow _showRadar;
+  _ctrlFingerPointers ctrlShow _showRadar;
+};
+if !(GVAR(memberlistJammed)) then {
+  _ctrlMemberlist ctrlShow _showMemberlist;
+};
+
+LOG_4("UI elements updated (showRadar: %1 showMemberlist: %2 radarJammed: %3 memberlistJammed: %4)",str _showRadar,str _showMemberlist,str GVAR(radarJammed),str GVAR(memberlistJammed));
 
 // Refresh members cache & redraw memberlist in case of column with change
 // or initial draw

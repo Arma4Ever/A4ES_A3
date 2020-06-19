@@ -15,3 +15,6 @@ class CfgPatches {
 };
 
 #include "CfgFunctions.hpp"
+#ifdef DEBUG_MODE_FULL
+#include "CfgEventHandlers.hpp"
+#endif

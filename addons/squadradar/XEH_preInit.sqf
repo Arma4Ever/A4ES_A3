@@ -11,6 +11,8 @@ ADDON = true;
 GVAR(settingsInitialized) = false;
 
 GVAR(enable) = false;
+GVAR(showFingerPointers) = false;
+
 GVAR(enabled) = false;
 GVAR(currentSquad) = objNull;
 GVAR(currentSquadUnits) = [];
@@ -23,5 +25,7 @@ GVAR(radarDrawCachePFH) = -1;
 GVAR(radarMembersCache) = [];
 GVAR(radarDrawCache) = [];
 GVAR(lastSpecialStateUnits) = [];
+GVAR(radarJammed) = false;
+GVAR(memberlistJammed) = false;
 
 GVAR(memberslistColumns) = [];

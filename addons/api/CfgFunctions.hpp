@@ -6,6 +6,11 @@ class CfgFunctions {
         class nametags {
             API_FNC(showUnitNametag);
         };
+        class squadradar {
+            API_FNC(jamSquadRadar);
+            API_FNC(resetSquadRadarIcon);
+            API_FNC(setSquadRadarIcon);
+        };
         class squads {
             API_FNC(isSquadLeader);
             //API_FNC(isInSquad); ?

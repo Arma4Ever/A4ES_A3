@@ -4,6 +4,10 @@
     <Key ID="STR_A3CS_Squadradar_Settings_Addon">
       <Original>A3CS Squad Radar</Original>
     </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_GUI">
+      <Original>GUI</Original>
+      <Polish>Wygląd</Polish>
+    </Key>
     <Key ID="STR_A3CS_Squadradar_Settings_OpacityTooltip">
       <Original>0 = 0%, 1 = 100%</Original>
     </Key>
@@ -39,6 +43,14 @@
       <Original>Show special states like talks with TFAR or dead/unconscious</Original>
       <Polish>Pokazuj stany specjalne jak mówi przez TFAR lub martwy/nieprzytomny</Polish>
     </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_showFingerPointers">
+      <Original>Show finger pointers</Original>
+      <Polish>Pokazuj wskazania palcem</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_showFingerPointers_Tooltip">
+      <Original>Show finger pointer icon on radar</Original>
+      <Polish>Pokazuj wskazania palcem na tarczy radaru</Polish>
+    </Key>
     <Key ID="STR_A3CS_Squadradar_Settings_radarBackground">
       <Original>Radar background</Original>
       <Polish>Tło radaru</Polish>
@@ -66,6 +78,14 @@
     <Key ID="STR_A3CS_Squadradar_Settings_radarIconsOpacity">
       <Original>Radar icons opacity</Original>
       <Polish>Widoczność ikon radaru</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_fingerPointerColor">
+      <Original>Finger pointer color</Original>
+      <Polish>Kolor wskaznika wskazania palcem</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_fingerPointerColor_Tooltip">
+      <Original>Finger pointer texture color</Original>
+      <Polish>Kolor tekstury wskaznika wskazania palcem</Polish>
     </Key>
     <Key ID="STR_A3CS_Squadradar_Settings_memberlistOpacity">
       <Original>Squad members opacity</Original>

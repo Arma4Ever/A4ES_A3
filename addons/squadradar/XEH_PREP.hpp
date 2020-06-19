@@ -1,8 +1,10 @@
 
+PREP(animateJamming);
 PREP(displayLoad);
 PREP(displayUnload);
 PREP(drawMemberlist);
 PREP(drawRadar);
+PREP(handleFinger);
 PREP(handleKilled);
 PREP(handleRespawn);
 PREP(handleRscRadarLoad);
