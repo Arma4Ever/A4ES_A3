@@ -14,4 +14,7 @@ if ((isNull _unitSquad) || {isNull _targetSquad}) exitWith {false};
 private _unitSquadLeader = _unitSquad call FUNC(getSquadLeader);
 
 (_unitSquad isEqualTo _targetSquad)
-&& {(_unitSquadLeader isEqualTo _unit) || {!alive _target}}
+&& {
+  (_unitSquadLeader isEqualTo _unit)
+  || {!alive _target}
+}

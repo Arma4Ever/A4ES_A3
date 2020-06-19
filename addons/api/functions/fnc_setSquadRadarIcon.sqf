@@ -2,7 +2,42 @@
 /***
   Autor: SzwedzikPL
 
-  WIP
+  Opis:
+      Zmienia ikonkę podanych jednostek na radarze drużynowym. Efekt działania
+      tej funkcji można cofnąć/wyłączyć poprzez użycie A3CS_fnc_resetSquadRadarIcon
+
+  Parametry:
+      _units - lista jednostek których ikony chcemy zmienić <ARRAY>
+      _icon - <STRING>
+      _iconFromMission (opcjonalny, domyślnie: false) <BOOLEAN>
+      _isGlobal (opcjonalny, domyślnie: true) <BOOLEAN>
+      _isSpecial (opcjonalny, domyślnie: false) <BOOLEAN>
+      _iconColor (opcjonalny, domyślnie: [1,1,1] - biały) <ARRAY>
+      _checkFOV (opcjonalny, domyślnie: false) <BOOLEAN>
+
+  Zwraca:
+      Nic <NIL>
+
+  Przykład:
+      //
+      [
+        [umb1, umb2],
+        "folder_w_misji\umbrella.paa",
+        true,
+        false,
+        false
+      ] call A3CS_fnc_setSquadRadarIcon;
+
+      //
+      [
+        [umb1],
+        "folder_w_misji\biohazard.paa",
+        true,
+        false,
+        true,
+        [209/255, 196/255, 15/255],
+        true
+      ] call A3CS_fnc_setSquadRadarIcon;
 ***/
 
 params [

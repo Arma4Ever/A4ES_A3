@@ -11,4 +11,4 @@ if (isNull _squad) exitWith {false};
 
 private _squadUnits = _squad call FUNC(getSquadUnits);
 
-!(_squadUnits isEqualTo [])
+(count _squadUnits) > 1

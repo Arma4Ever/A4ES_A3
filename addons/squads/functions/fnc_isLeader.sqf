@@ -6,6 +6,8 @@
 
 params ["_unit"];
 
+if (isNull _unit) exitWith {false};
+
 private _squad = _unit call FUNC(getUnitSquad);
 if (isNull _squad) exitWith {false};
 

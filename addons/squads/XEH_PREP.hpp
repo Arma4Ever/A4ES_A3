@@ -1,7 +1,9 @@
 
+PREP(addRemoveFromSquadActions);
 PREP(areInSameSquad);
 PREP(canBecomeSquadLeader);
 PREP(canJoinSquad);
+PREP(canJoinTeam)
 PREP(canLeaveSquad);
 PREP(canRemoveFromSquad);
 PREP(createSquad);
@@ -13,11 +15,14 @@ PREP(handleKilled);
 PREP(handleKilledClient);
 PREP(handleRespawn);
 PREP(handleRespawnClient);
+PREP(hasSquad);
+PREP(isInSquad);
 PREP(isLeader);
 PREP(joinSquad);
 PREP(joinSquadClient);
 PREP(leaveSquad);
 PREP(leaveSquadClient);
+PREP(modifyJoinSquadAction);
 PREP(setSquadLeader);
 PREP(setSquadLeaderClient);
 PREP(triggerSquadChanged);

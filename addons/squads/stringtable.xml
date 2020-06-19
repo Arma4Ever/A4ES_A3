@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+  <Package name="Squads">
+    <Key ID="STR_A3CS_Squads_JoinSquad">
+      <Original>Join group</Original>
+      <Polish>Dołącz do grupy</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squads_RemoveFromSquad">
+      <Original>Remove from group</Original>
+      <Polish>Usuń z grupy</Polish>
+    </Key>
+  </Package>
+</Project>

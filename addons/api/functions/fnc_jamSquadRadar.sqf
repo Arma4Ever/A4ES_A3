@@ -2,7 +2,31 @@
 /***
   Autor: SzwedzikPL
 
-  WIP
+  Opis:
+      Zakłóca działanie radaru drużynowego
+
+  Parametry:
+      _units - lista jednostek których radar chcemy zakłócać <ARRAY>
+      _jamRadar - czy radar (tarcza radaru) ma być zakłócana (opcjonalny, domyślnie: true) <BOOLEAN>
+      _jamMemberlist - czy lista członków drużyny ma być zakłócana (opcjonalny, domyślnie: true) <BOOLEAN>
+      _animate - czy przejście w tryb zakłócania ma być animowane (opcjonalny, domyślnie: true) <BOOLEAN>
+      _isGlobal - czy efekt tej funkcji ma być transmitowany przez sieć (opcjonalny, domyślnie: true) <BOOLEAN>
+      INFO: jeśli efekt działania funkcji nie jest globalny (_isGlobal = false) funkcja musi być <BOOLEAN>
+      wykonana na komputerze gracza którego dotyczy. Dodatkowo jeśli efekt nie jest globalny
+      informacja o zakłócaniu nie będzie dostępna dla graczy dołączających w trakcie gry (JIP)
+      więc sam musisz zadbać o obsługę takiego przypadku jeśli zdecydujesz się na taki wariant.
+      Warto nadmienić również, że jeśli efekt działania nie jest globalny funkcja jest dużo
+      lżejsza w grze multiplayer gdyż żadne dane nie są transmitowane sieciowo!
+
+  Zwraca:
+      Nic <NIL>
+
+  Przykład:
+      // Zakłóca radar i listę członków drużyny wszystkim graczom na serwerze globalnie
+      [playableUnits] call A3CS_fnc_jamSquadRadar;
+
+      // Zakłóca radar i listę członków drużyny lokalnie (np. część initu misji lub triggera)
+      [[player], true, true, true, false] call A3CS_fnc_jamSquadRadar;
 ***/
 
 params [
