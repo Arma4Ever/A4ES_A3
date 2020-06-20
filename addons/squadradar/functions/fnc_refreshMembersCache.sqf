@@ -9,6 +9,8 @@ LOG("Refreshing members cache");
 BEGIN_COUNTER(refreshMembersCache);
 
 private _showSpecialStates = GVAR(showSpecialStates);
+private _showHelpToEveryone = GVAR(showHelpToEveryone);
+private _checkHelpFOV = !GVAR(disableHelpIconFOVCheck);
 
 // Build squad members cache
 GVAR(membersCache) = GVAR(currentSquadUnits) apply {
@@ -20,12 +22,12 @@ GVAR(membersCache) = GVAR(currentSquadUnits) apply {
   if (_showSpecialStates) then {
     if (
       (_x getVariable ["ACE_isUnconscious", false] || !(alive _x)) &&
-      {(ace_player call EFUNC(medical,isMedic))}
+      {(ace_player call EFUNC(medical,isMedic)) || _showHelpToEveryone}
     ) exitWith {
       _icon = "\a3\ui_f\data\map\vehicleicons\pictureheal_ca.paa";
       _iconColor = [[0.82, 0.15, 0.15], "#d22727"];
       _isSpecialState = true;
-      _checkFOV = true;
+      _checkFOV = _checkHelpFOV;
     };
     if (_x getVariable [QEGVAR(nametags,isSpeaking), false]) exitWith {
       _icon = "\a3\ui_f\data\igui\rscingameui\rscdisplaychannel\mutevon_ca.paa";

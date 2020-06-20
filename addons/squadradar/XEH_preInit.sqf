@@ -8,6 +8,10 @@ ADDON = true;
 
 #include "initSettings.sqf"
 
+GVAR(disabledInMission) = getMissionConfigValue [QGVAR(disableSquadRadar), false];
+GVAR(showHelpToEveryone) = getMissionConfigValue [QGVAR(showHelpIconToEveryone), false];
+GVAR(disableHelpIconFOVCheck) = getMissionConfigValue [QGVAR(disableHelpIconFOVCheck), false];
+
 GVAR(settingsInitialized) = false;
 
 GVAR(enable) = false;

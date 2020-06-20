@@ -33,6 +33,47 @@ class Cfg3DEN {
         };
     };
 
+    class Mission {
+        class Scenario {
+            class AttributeCategories {
+                class Misc {
+                    class Attributes {
+                        class GVAR(subCategory) {
+							data = "AttributeSystemSubcategory";
+							control = "SubCategory";
+                            displayName = CSTRING(AttributeCategory);
+							description = "";
+						};
+                        class GVAR(disableSquadRadar) {
+							property = QGVAR(disableSquadRadar);
+							control = "Checkbox";
+							displayName = CSTRING(Attributes_disableSquadRadar);
+							tooltip = CSTRING(Attributes_disableSquadRadar_Tooltip);
+                            typeName = "BOOL";
+                            defaultValue = "false";
+						};
+                        class GVAR(showHelpIconToEveryone) {
+							property = QGVAR(showHelpIconToEveryone);
+							control = "Checkbox";
+							displayName = CSTRING(Attributes_showHelpIconToEveryone);
+							tooltip = CSTRING(Attributes_showHelpIconToEveryone_Tooltip);
+                            typeName = "BOOL";
+                            defaultValue = "false";
+						};
+                        class GVAR(disableHelpIconFOVCheck) {
+							property = QGVAR(disableHelpIconFOVCheck);
+							control = "Checkbox";
+							displayName = CSTRING(Attributes_disableHelpIconFOVCheck);
+							tooltip = CSTRING(Attributes_disableHelpIconFOVCheck_Tooltip);
+                            typeName = "BOOL";
+                            defaultValue = "false";
+						};
+                    };
+                };
+            };
+        };
+	};
+
 	class Object {
         class AttributeCategories {
             class State {

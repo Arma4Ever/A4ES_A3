@@ -20,7 +20,7 @@ if (_settingsChanged) then {
 };
 
 // Remove RscRadar
-if ((!GVAR(enable) || !GVAR(showCurrentSquad)) && GVAR(enabled)) exitWith {
+if ((!GVAR(enable) || !GVAR(showCurrentSquad) || GVAR(disabledInMission)) && GVAR(enabled)) exitWith {
   LOG("Unloading radar");
   QGVAR(RscRadar) cutText ["", "PLAIN"];
   GVAR(enabled) = false;
@@ -28,7 +28,7 @@ if ((!GVAR(enable) || !GVAR(showCurrentSquad)) && GVAR(enabled)) exitWith {
 };
 
 // Create RscRadar
-if (GVAR(enable) && !GVAR(enabled) && GVAR(showCurrentSquad)) then {
+if (GVAR(enable) && !GVAR(enabled) && GVAR(showCurrentSquad) && !GVAR(disabledInMission)) then {
   QGVAR(RscRadar) cutRsc [QGVAR(RscRadar), "PLAIN", 0, false];
   GVAR(drawCachePFH) = [DFUNC(refreshDrawCache), 0.25, []] call CBA_fnc_addPerFrameHandler;
 };

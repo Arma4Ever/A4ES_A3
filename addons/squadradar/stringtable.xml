@@ -186,5 +186,33 @@
       <Original>Civilian (consultant/contractor/translator etc.)</Original>
       <Polish>Cywil (konsultant/kontraktor/tłumacz itp.)</Polish>
     </Key>
+    <Key ID="STR_A3CS_Squadradar_AttributeCategory">
+      <Original>Squad radar</Original>
+      <Polish>Radar drużynowy</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Attributes_disableSquadRadar">
+      <Original>Disable squad radar</Original>
+      <Polish>Wyłącz radar drużynowy</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Attributes_disableSquadRadar_Tooltip">
+      <Original>Disables squad radar for all players</Original>
+      <Polish>Wyłącza radar drużynowy wszystkim graczom</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Attributes_showHelpIconToEveryone">
+      <Original>Show help icon to everyone</Original>
+      <Polish>Pokaż ikonę pomocy wszystkim</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Attributes_showHelpIconToEveryone_Tooltip">
+      <Original>Show help icon on squad radar to every squad member (instead of just to medic)</Original>
+      <Polish>Pokaż ikonę pomocy na radarze drużynowym każdemu członkowi drużyny (zamiast tylko medykowi)</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Attributes_disableHelpIconFOVCheck">
+      <Original>Show help icon in range</Original>
+      <Polish>Pokaż ikonę pomocy w zasięgu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Attributes_disableHelpIconFOVCheck_Tooltip">
+      <Original>Disables line of sight checks for help icon (icon will be visible as soon as unit will be in radar range)</Original>
+      <Polish>Wyłącza sprawdzanie linii wzroku dla ikony pomocy (ikona pojawi się jak tylko jednostka znajdzie się w zasięgu radaru)</Polish>
+    </Key>
   </Package>
 </Project>
