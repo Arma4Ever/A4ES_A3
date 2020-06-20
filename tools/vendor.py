@@ -31,5 +31,8 @@ VENDOR = {
         "blacklist": ["expEden_static_ssDM"],
     },
     "@Metis Nature": {},
+    '@Mocap': {
+        "whitelist": ["MOCAP_mov"],
+    },
     # "@Camofaces": {},
 }

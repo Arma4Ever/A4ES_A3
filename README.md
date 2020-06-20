@@ -23,6 +23,7 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [Metis Nature](https://steamcommunity.com/sharedfiles/filedetails/?id=1951690856)
 - [Eden Extended Objects](https://steamcommunity.com/sharedfiles/filedetails/?id=882231372)
 - [Camofaces](https://steamcommunity.com/sharedfiles/filedetails/?id=346665985)
+- [MOCAP Melee](https://www.armaholic.com/page.php?id=27262)
 
 ## Credits
 Authors of external mods.  
