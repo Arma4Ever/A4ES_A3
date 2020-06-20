@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+  <Package name="Medical">
+    <Key ID="STR_A3CS_Medical_DisableSystem">
+      <Original>Disable medical system</Original>
+      <Polish>Wyłącz system medyczny</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Medical_DisableSystem_Tooltip">
+      <Original>Disables ACE medical system. All features of medical system will not work, but medical items will still be availble (but without any use in game). This will NOT enable vanilla medical system. If you disable ACE medical system you'll need to provide healing mechanics on your own (script in mission).</Original>
+      <Polish>Wyłącza system medyczny ACE. Wszystkie funkcje systemu medycznego nie będą działać, ale itemy medyczne wciąż będą dostępne (ale beż żadnych funkcji). Wyłączenie systemu medycznego NIE włączy vanilla systemu medycznego. Jeśli wyłączysz system medyczny będziesz musiał dostarczyć opcję leczenia samodzielnie (jako skrypt w misji).</Polish>
+    </Key>
+  </Package>
+</Project>
