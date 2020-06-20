@@ -3,7 +3,7 @@ PREP(addRemoveFromSquadActions);
 PREP(areInSameSquad);
 PREP(canBecomeSquadLeader);
 PREP(canJoinSquad);
-PREP(canJoinTeam)
+PREP(canJoinTeam);
 PREP(canLeaveSquad);
 PREP(canRemoveFromSquad);
 PREP(createSquad);

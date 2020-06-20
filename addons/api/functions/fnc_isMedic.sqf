@@ -25,14 +25,10 @@
 
 params [
   ["_unit", objNull, [objNull]],
-  ["_minClass", 1, [1]],
+  ["_minClass", 1, [0]],
   ["_useLocationBoost", false, [false]]
 ];
 
 if (isNull _unit) exitWith {false};
 
-if (_useLocationBoost) exitWith {
-  [_unit, _minClass] call ACEFUNC(medical_treatment,isMedic)
-};
-
-[_unit, _minClass] call EFUNC(medical,isMedic)
+_this call EFUNC(medical,isMedic)

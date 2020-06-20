@@ -20,23 +20,29 @@ if !(isNull _currentSquad) then {
   };
 };
 
-private _newSquad = _unit call FUNC(getUnitSquad);
-private _newSquadUnits = _newSquad getVariable ["units", []];
+private _targetSquad = _target call FUNC(getUnitSquad);
+private _targetSquadUnits = _targetSquad getVariable ["units", []];
 
 // Create new squad if target has no squad
-if (isNull _newSquad) then {
-  _newSquad = call FUNC(createSquad);
-  _newSquad setVariable ["leader", _target, true];
-  _newSquadUnits = [_target];
+if (isNull _targetSquad) then {
+  _targetSquad = [] call FUNC(createSquad);
+  _targetSquad setVariable [
+    "leader",
+    [_unit, _target] call EFUNC(nametags,selectHighestRankUnit),
+    true
+  ];
+  // Set target unit squad
+  _target setVariable [QGVAR(squad), _targetSquad, true];
+  _targetSquadUnits = [_target];
 };
 
 // Set unit squad
-_unit setVariable [QGVAR(squad), _newSquad, true];
+_unit setVariable [QGVAR(squad), _targetSquad, true];
 
 // Update squad units
-_newSquadUnits pushback _unit;
-_newSquad setVariable ["units", _newSquadUnits, true];
-_changedSquads pushBack _newSquad;
+_targetSquadUnits pushback _unit;
+_targetSquad setVariable ["units", _targetSquadUnits, true];
+_changedSquads pushBack _targetSquad;
 
 LOG_3("Unit %1 joined squad of %2 (changed squads: %3)",str _unit,str _target,str _changedSquads);
 

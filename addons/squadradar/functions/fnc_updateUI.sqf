@@ -20,7 +20,7 @@ if (_settingsChanged) then {
 };
 
 // Remove RscRadar
-if ((!GVAR(enable) || {isNull GVAR(currentSquad)}) && GVAR(enabled)) exitWith {
+if ((!GVAR(enable) || !GVAR(showCurrentSquad)) && GVAR(enabled)) exitWith {
   LOG("Unloading radar");
   QGVAR(RscRadar) cutText ["", "PLAIN"];
   GVAR(enabled) = false;
@@ -28,7 +28,7 @@ if ((!GVAR(enable) || {isNull GVAR(currentSquad)}) && GVAR(enabled)) exitWith {
 };
 
 // Create RscRadar
-if (GVAR(enable) && !GVAR(enabled) && {!(isNull GVAR(currentSquad))}) then {
+if (GVAR(enable) && !GVAR(enabled) && GVAR(showCurrentSquad)) then {
   QGVAR(RscRadar) cutRsc [QGVAR(RscRadar), "PLAIN", 0, false];
   GVAR(drawCachePFH) = [DFUNC(refreshDrawCache), 0.25, []] call CBA_fnc_addPerFrameHandler;
 };
@@ -55,11 +55,18 @@ private _isUnconscious = ace_player getVariable ["ACE_isUnconscious", false];
 private _showRadar = (
   GVAR(showRadar)
   && {!GVAR(displayInterrupt)}
+  && {!EGVAR(ui,screenshotModeEnabled)}
   && {(vehicle ace_player) isEqualTo ace_player}
   && {!_isUnconscious}
   && {alive ace_player}
 );
-private _showMemberlist = (GVAR(showMemberlist) && {!GVAR(displayInterrupt)} && {!_isUnconscious} && {alive ace_player});
+private _showMemberlist = (
+  GVAR(showMemberlist)
+  && {!GVAR(displayInterrupt)}
+  && {!EGVAR(ui,screenshotModeEnabled)}
+  && {!_isUnconscious}
+  && {alive ace_player}
+);
 
 // Jamming vars
 private _jamRadar = ace_player getVariable [QGVAR(jamRadar), false];

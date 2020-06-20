@@ -4,10 +4,9 @@
  * Adds action for leader remove from squad self menu action
  */
 
-params ["", "", "_parameters"];
-_parameters params ["_unit"];
+params ["", "_player"];
 
-private _squad = _unit call FUNC(getUnitSquad);
+private _squad = _player call FUNC(getUnitSquad);
 if (isNull _squad) exitWith {[]};
 
 private _units = _squad call FUNC(getSquadUnits);
@@ -16,7 +15,21 @@ if ((count _units) < 2) exitWith {[]};
 private _actions = [];
 
 {
-  // Add remove action
+  private _name = _x call EFUNC(common,getUnitName);
+
+  _actions pushback [
+    [
+      format ["%1_%2", QGVAR(removeFromSquad), _name],
+      _name,
+      _x getVariable [QEGVAR(squadradar,baseIcon), ""],
+      {
+        _target call FUNC(leaveSquadClient);
+      },
+      {true}
+    ] call ACEFUNC(interact_menu,createAction),
+    [],
+    _x
+  ];
   false
 } count _units;
 

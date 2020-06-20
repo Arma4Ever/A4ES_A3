@@ -16,6 +16,7 @@ GVAR(showFingerPointers) = false;
 GVAR(enabled) = false;
 GVAR(currentSquad) = objNull;
 GVAR(currentSquadUnits) = [];
+GVAR(showCurrentSquad) = false;
 
 GVAR(displayInterrupt) = false;
 GVAR(interruptingDisplays) = [];

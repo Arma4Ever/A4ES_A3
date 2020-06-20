@@ -11,4 +11,6 @@ PREP(getUnitRank);
 PREP(onDraw3D);
 PREP(onDrawSettingsChanged);
 PREP(ranksComboAttributeLoad);
+PREP(selectHighestRankUnit);
 PREP(shouldShowNameTag);
+PREP(sortUnitsByRank);

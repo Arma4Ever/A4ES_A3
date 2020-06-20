@@ -13,5 +13,9 @@
       <Original>None</Original>
       <Polish>Brak</Polish>
     </Key>
+    <Key ID="STR_A3CS_Common_NoName">
+      <Original>No name</Original>
+      <Polish>Imię nieznane</Polish>
+    </Key>
   </Package>
 </Project>

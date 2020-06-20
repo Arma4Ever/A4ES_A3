@@ -54,12 +54,17 @@ if (!hasInterface || EGVAR(common,isMainMenu)) exitWith {};
 
 [QEGVAR(squads,squadChanged), {
   GVAR(currentSquad) = ace_player call EFUNC(squads,getUnitSquad);
-  GVAR(currentSquadUnits) = GVAR(currentSquad) call EFUNC(squads,getSquadUnits);
 
-  // Sort squad units by rank
-  GVAR(currentSquadUnits) = [GVAR(currentSquadUnits), [], {
-      (_x call EFUNC(nametags,getUnitRank)) # 2
-  }, "DESCEND"] call BIS_fnc_sortBy;
+  if (isNull GVAR(currentSquad)) then {
+    GVAR(currentSquadUnits) = [];
+    GVAR(showCurrentSquad) = false;
+  } else {
+    private _squadUnits = GVAR(currentSquad) call EFUNC(squads,getSquadUnits);
+
+    // Sort squad units by rank descending
+    GVAR(currentSquadUnits) = [_squadUnits, 0] call EFUNC(nametags,sortUnitsByRank);
+    GVAR(showCurrentSquad) = (count GVAR(currentSquadUnits)) >= 2;
+  };
 
   // Update UI
   true call FUNC(updateUI);
@@ -79,6 +84,12 @@ if (!hasInterface || EGVAR(common,isMainMenu)) exitWith {};
   };
 }] call CBA_fnc_addEventHandler;
 
+// ACE Finger
 ["ace_finger_fingered", {
   _this call FUNC(handleFinger);
+}] call CBA_fnc_addEventHandler;
+
+// UI screenshot mode
+[QEGVAR(ui,screenshotModeToggled), {
+  false call FUNC(updateUI);
 }] call CBA_fnc_addEventHandler;

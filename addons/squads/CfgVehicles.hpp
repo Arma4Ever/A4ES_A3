@@ -11,29 +11,25 @@ class CfgVehicles {
                         showDisabled = 0;
                     };
                     class ACE_AssignTeamGreen {
-                        displayName = CSTRING(AssignTeamGreen);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
                         showDisabled = 0;
                     };
                     class ACE_AssignTeamBlue {
-                        displayName = CSTRING(AssignTeamBlue);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
                         showDisabled = 0;
                     };
                     class ACE_AssignTeamYellow {
-                        displayName = CSTRING(AssignTeamYellow);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
                         showDisabled = 0;
                     };
                     class ACE_UnassignTeam {
-                        displayName = CSTRING(LeaveTeam);
-                        condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {assignedTeam _target != 'MAIN'});
+                        condition = QUOTE(([ARR_2(_player,_target)] call DFUNC(canJoinTeam)) && {(assignedTeam _target) != 'MAIN'});
                         showDisabled = 0;
                     };
                 };
 
                 class ACE_JoinGroup {
-                    displayName = CSTRING(JoinGroup);
+                    displayName = CSTRING(JoinSquad);
                     condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinSquad));
                     statement = QUOTE([ARR_2(_player,_target)] call DFUNC(joinSquadClient));
                     modifierFunction = QUOTE(_this call FUNC(modifyJoinSquadAction));
@@ -71,7 +67,7 @@ class CfgVehicles {
                     showDisabled = 0;
                 };
                 class ACE_LeaveTeam {
-                    condition = QUOTE(_player call DFUNC(hasSquad) && {assignedTeam _player != 'MAIN'});
+                    condition = QUOTE((_player call DFUNC(hasSquad)) && {(assignedTeam _player) != 'MAIN'});
                     showDisabled = 0;
                 };
                 class ACE_BecomeLeader {
@@ -86,9 +82,9 @@ class CfgVehicles {
                 };
 
                 class GVAR(removeFromSquad) {
-                    displayName = CSTRING(RemoveFromSquad);
+                    displayName = CSTRING(RemoveSquadMember);
                     condition = QUOTE(_player call DFUNC(isLeader));
-                    statement = ""
+                    statement = "";
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
                     icon = QPATHTOF(data\remove_from_squad.paa);

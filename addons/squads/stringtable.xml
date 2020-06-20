@@ -9,5 +9,9 @@
       <Original>Remove from group</Original>
       <Polish>Usuń z grupy</Polish>
     </Key>
+    <Key ID="STR_A3CS_Squads_RemoveSquadMember">
+      <Original>Remove group member</Original>
+      <Polish>Usuń członka grupy</Polish>
+    </Key>
   </Package>
 </Project>

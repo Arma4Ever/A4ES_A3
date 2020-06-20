@@ -30,8 +30,11 @@ if (_squadUnits isEqualTo []) then {
   // Update squad leader if leaving unit was one
   private _squadLeader = _squad getVariable ["leader", objNull];
   if (_squadLeader isEqualTo _unit) then {
-    private _newSquadLeader = _squadUnits # 0;
-    _squad setVariable ["leader", _newSquadLeader, true];
+    _squad setVariable [
+      "leader",
+      _squadUnits call EFUNC(nametags,selectHighestRankUnit),
+      true
+    ];
   };
 
   // Send squads update event

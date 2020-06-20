@@ -6,7 +6,10 @@
 
 params ["_target", "_player", "", "_actionData"];
 
-private _actionText = format ["%1: %2", localize LSTRING(JoinSquad), groupID group _target];
-TRACE_3("",_target,group _target,_actionText);
+private _squad = _target call FUNC(getUnitSquad);
+if (isNull _squad) exitWith {};
 
-_actionData set [1, _actionText];
+private _squadName = _squad getVariable ["name", ""];
+if !(_squadName isEqualTo "") then {
+  _actionData set [1, format ["%1: %2", localize LSTRING(JoinSquad), _squadName]];
+};

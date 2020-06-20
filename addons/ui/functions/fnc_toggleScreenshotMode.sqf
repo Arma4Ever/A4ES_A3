@@ -18,3 +18,5 @@ if (GVAR(screenshotModeEnabled)) then {
   showHUD [false, false, false, false, false, false, false, false, false, false];
   GVAR(screenshotModeEnabled) = true;
 };
+
+[QGVAR(screenshotModeToggled), [GVAR(screenshotModeEnabled)]] call CBA_fnc_localEvent;

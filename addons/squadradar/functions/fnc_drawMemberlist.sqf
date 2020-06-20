@@ -20,6 +20,7 @@ private _columns = _controlMemberlist getVariable [QGVAR(columns), []];
 private _usedColumnWidthScale = _controlMemberlist getVariable [QGVAR(columnWidthScale), 0];
 private _requiredColumnCount = ceil ((count GVAR(currentSquadUnits)) / MEMBERLIST_COLUMN_ROWS);
 private _columnWidthScale = GVAR(memberlistColumnWidthScale);
+
 #ifdef DEBUG_MODE_FULL
 private _columnsRebuilded = false;
 #endif
@@ -77,7 +78,7 @@ private _columnIndex = 0;
       (_colors select _useSpecialState) # 1,
       _memberlistOpacity
     ] call FUNC(hexToHexWithAlpha),
-    _unit getVariable ["ACE_Name", localize ELSTRING(nametags,NoName)]
+    _unit call EFUNC(common,getUnitName)
   ];
   if (((_forEachIndex + 1) % MEMBERLIST_COLUMN_ROWS) isEqualTo 0) then {
     (_columns # _columnIndex) ctrlSetStructuredText parseText (_columnTexts joinString "<br/>");
@@ -85,6 +86,11 @@ private _columnIndex = 0;
     _columnIndex = _columnIndex + 1;
   };
 } forEach GVAR(membersCache);
+
+// Add remaining units texts to last column
+if !(_columnTexts isEqualTo []) then {
+  (_columns # _columnIndex) ctrlSetStructuredText parseText (_columnTexts joinString "<br/>");
+};
 
 LOG_1("Memberlist drawn (rebuilded columns: %1)",str _columnsRebuilded);
 
