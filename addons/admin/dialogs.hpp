@@ -1,8 +1,4 @@
 
-#include "\z\a3cs\addons\common\ui\define.hpp"
-#include "ui\idcAdminPanel.hpp"
-#include "ui\idcDebugConsole.hpp"
-
 class RscTitle;
 class RscHTML;
 class RscText;
@@ -13,11 +9,16 @@ class RscButtonMenuCancel;
 class RscStandardDisplay;
 class RscControlsGroupNoScrollbars;
 class RscXSliderH;
-class A3CS_ui_buttonBase;
-class A3CS_ui_backgroundBase;
-class A3CS_ui_comboBoxBase;
-class A3CS_ui_staticBase;
-class A3CS_ui_listNBoxBase;
+class RscListbox;
+class ctrlEdit;
+class RscCombo;
+
+#include "ui\define.hpp"
+#include "ui\idcListBox.hpp"
+#include "ui\idcEditBox.hpp"
+#include "ui\baseDialogs.hpp"
+#include "ui\idcAdminPanel.hpp"
+#include "ui\idcDebugConsole.hpp"
 
 #include "ui\openAdminPanel.hpp"
 #include "ui\adminPanel.hpp"

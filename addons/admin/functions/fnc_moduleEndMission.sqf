@@ -3,7 +3,7 @@
  * Toggle debug camera
  */
 #include "script_component.hpp"
-#include "\z\a3cs\addons\common\ui\idcListBox.hpp"
+#include "\z\a3cs\addons\admin\ui\idcListBox.hpp"
 
 params [["_mode", "init", [""]]];
 

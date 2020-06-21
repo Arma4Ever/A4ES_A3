@@ -3,7 +3,7 @@
  * Admin panel messages module
  */
 #include "script_component.hpp"
-#include "\z\a3cs\addons\common\ui\idcEditBox.hpp"
+#include "\z\a3cs\addons\admin\ui\idcEditBox.hpp"
 
 params [["_targetClass", "", [""]]];
 

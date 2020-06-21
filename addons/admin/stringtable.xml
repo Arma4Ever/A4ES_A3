@@ -1,188 +1,245 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
-    <Package name="Admin">
-	    <Key ID="STR_A3CS_Admin_NoAccess">
-            <Original>Brak dostępu</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_AdminPanel">
-            <Original>Panel admina</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_AdminPanelSP">
-            <Original>Panel debugowy</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_SelectLogsLabel">
-            <Original>Wyświetl logi:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_MissionDataLabel">
-            <Original>Dane misji</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_RefreshLogs">
-            <Original>Odśwież logi</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_NoLogs">
-            <Original>Brak logów</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_LoadingLogs">
-            <Original>Wczytywanie logów...</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_MissionData_MissionName">
-            <Original>Nazwa misji:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_MissionData_MissionAuthor">
-            <Original>Autor:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_MissionData_MapName">
-            <Original>Mapa:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_MissionData_TimeElapsed">
-            <Original>Czas trwania:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_MissionData_Slots">
-            <Original>Sloty:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_MissionData_OnlineAdmins">
-            <Original>Admini online:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_MissionData_ServerAdmin">
-            <Original>Admin serwera:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_EndMission_DisplayName">
-            <Original>Zakończ misję</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_EndMission_SelectMissionEnding">
-            <Original>Wybierz typ zakończenia misji</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_EndMission_EndMissionLog">
-            <Original>Admin %1 zakonczyl misje</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_AdminMessages_DisplayName">
-            <Original>Komunikaty</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_AdminMessages_Header">
-            <Original>Komunikaty administratora</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_AdminMessages_InputLabel">
-            <Original>Treść:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_AdminMessages_SendToAdmins">
-            <Original>Wyślij do adminów</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_AdminMessages_SendToAll">
-            <Original>Wyślij do wszystkich</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_AdminMessages_MessageTitle">
-            <Original>Admin: %1</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugConsole_DisplayName">
-            <Original>Konsola</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_Debug3rdPerson_Enable3rdPerson">
-            <Original>Włącz tryb 3 osoby</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_Debug3rdPerson_Disable3rdPerson">
-            <Original>Wyłącz tryb 3 osoby</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugCurator_EnableCurator">
-            <Original>Aktywuj zeusa</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugCurator_DisableCurator">
-            <Original>Wyłącz zeusa</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugCamera_EnableCamera">
-            <Original>Włącz kamerę</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugCamera_DisableCamera">
-            <Original>Wyłącz kamerę</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_DisplayName">
-            <Original>Logi debugowe</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_ServerFPS">
-            <Original>FPS serwera:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_HeadlessOnline">
-            <Original>Headless Client:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalAICount">
-            <Original>Liczba AI:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalGroupCount">
-            <Original>Liczba grup:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_WestGroupCount">
-            <Original>Liczba grup (BLUFOR):</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_EastGroupCount">
-            <Original>Liczba grup (OPFOR):</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_GreenGroupCount">
-            <Original>Liczba grup (INDEP):</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_CivGroupCount">
-            <Original>Liczba grup (CIV):</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_GeneratedAICount">
-            <Original>Liczba wygenerowanych AI:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_AIOnServer">
-            <Original>Liczba AI na serwerze:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_AIOnHC">
-            <Original>Liczba AI na Headless Cliencie:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_CachedAI">
-            <Original>Liczba ukrytych AI (cache):</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_UncachedAI">
-            <Original>Liczba odkrytych AI (cache):</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_WaypointsCount">
-            <Original>Liczba waypointów:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalVehicleCount">
-            <Original>Liczba pojazdów:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalObjectCount">
-            <Original>Liczba obiektów:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_ModuleGenAICount">
-            <Original>Liczba generatorów AI:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_ModuleGenAttackCount">
-            <Original>Liczba generatorów ataku:</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_DebugLogs_CuratorCount">
-            <Original>Liczba mistrzów gry (zeus):</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_PlayersList_DisplayName">
-            <Original>Lista graczy</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_AdminList_DisplayName">
-            <Original>Lista adminów</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_AdminList_Admin">
-            <Original>Administrator</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_AdminList_ServerAdmin">
-            <Original>Administrator serwera</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_PlayersList_UnitDesc">
-            <Original>Czas gry: %1 || Żywy: %2</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_ActiveScripts_DisplayName">
-            <Original>Aktywne skrypty</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_ActiveScriptsServer_DisplayName">
-            <Original>Aktywne skrypty (server)</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_MissionLogs_DisplayName">
-            <Original>Logi z misji</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_AdminLogs_DisplayName">
-            <Original>Logi z misji (admin)</Original>
-        </Key>
-	    <Key ID="STR_A3CS_Admin_Module_CuratorList_DisplayName">
-            <Original>Lista zeusów</Original>
-        </Key>
-    </Package>
+  <Package name="Admin">
+    <Key ID="STR_A3CS_Common_Yes">
+      <Original>Tak</Original>
+    </Key>
+    <Key ID="STR_A3CS_Common_No">
+      <Original>Nie</Original>
+    </Key>
+    <Key ID="STR_A3CS_Common_Close">
+      <Original>Zamknij</Original>
+    </Key>
+    <Key ID="STR_A3CS_Common_Refresh">
+      <Original>Odśwież</Original>
+    </Key>
+    <Key ID="STR_A3CS_Common_None">
+      <Original>Brak</Original>
+    </Key>
+    <Key ID="STR_A3CS_Common_Enable">
+      <Original>Włącz</Original>
+    </Key>
+    <Key ID="STR_A3CS_Common_Enabled">
+      <Original>Włączone</Original>
+    </Key>
+    <Key ID="STR_A3CS_Common_EnabledShort">
+      <Original>Wł</Original>
+    </Key>
+    <Key ID="STR_A3CS_Common_Disable">
+      <Original>Wyłącz</Original>
+    </Key>
+    <Key ID="STR_A3CS_Common_Disabled">
+      <Original>Wyłączone</Original>
+    </Key>
+    <Key ID="STR_A3CS_Common_DisabledShort">
+      <Original>Wył</Original>
+    </Key>
+    <Key ID="STR_A3CS_Common_A3C">
+      <Original>Arma3Coop.pl</Original>
+    </Key>
+    <Key ID="STR_A3CS_Common_A3CS">
+      <Original>Arma 3 Combat System</Original>
+    </Key>
+    <Key ID="STR_A3CS_Common_A3CS_Authors">
+      <Original>ACE3 Team &amp; Arma3Coop.pl</Original>
+    </Key>
+    <Key ID="STR_A3CS_Common_A3CS_Description">
+      <Original>Arma 3 Combat System jest nakładką na Advanced Combat Environment 3 zapewniajaca grupie Arma3Coop niezbędne do gry elementy.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_DefaultEnding">
+      <Original>Zakończenie domyślne</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_EndDefault_Title">
+      <Original>Misja zakończona</Original>
+    </Key>
+
+
+
+
+
+
+    <Key ID="STR_A3CS_Admin_NoAccess">
+      <Original>Brak dostępu</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_AdminPanel">
+      <Original>Panel admina</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_AdminPanelSP">
+      <Original>Panel debugowy</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_SelectLogsLabel">
+      <Original>Wyświetl logi:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_MissionDataLabel">
+      <Original>Dane misji</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_RefreshLogs">
+      <Original>Odśwież logi</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_NoLogs">
+      <Original>Brak logów</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_LoadingLogs">
+      <Original>Wczytywanie logów...</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_MissionData_MissionName">
+      <Original>Nazwa misji:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_MissionData_MissionAuthor">
+      <Original>Autor:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_MissionData_MapName">
+      <Original>Mapa:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_MissionData_TimeElapsed">
+      <Original>Czas trwania:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_MissionData_Slots">
+      <Original>Sloty:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_MissionData_OnlineAdmins">
+      <Original>Admini online:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_MissionData_ServerAdmin">
+      <Original>Admin serwera:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_EndMission_DisplayName">
+      <Original>Zakończ misję</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_EndMission_SelectMissionEnding">
+      <Original>Wybierz typ zakończenia misji</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_EndMission_EndMissionLog">
+      <Original>Admin %1 zakonczyl misje</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_AdminMessages_DisplayName">
+      <Original>Komunikaty</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_AdminMessages_Header">
+      <Original>Komunikaty administratora</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_AdminMessages_InputLabel">
+      <Original>Treść:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_AdminMessages_SendToAdmins">
+      <Original>Wyślij do adminów</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_AdminMessages_SendToAll">
+      <Original>Wyślij do wszystkich</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_AdminMessages_MessageTitle">
+      <Original>Admin: %1</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugConsole_DisplayName">
+      <Original>Konsola</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_Debug3rdPerson_Enable3rdPerson">
+      <Original>Włącz tryb 3 osoby</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_Debug3rdPerson_Disable3rdPerson">
+      <Original>Wyłącz tryb 3 osoby</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugCurator_EnableCurator">
+      <Original>Aktywuj zeusa</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugCurator_DisableCurator">
+      <Original>Wyłącz zeusa</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugCamera_EnableCamera">
+      <Original>Włącz kamerę</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugCamera_DisableCamera">
+      <Original>Wyłącz kamerę</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_DisplayName">
+      <Original>Logi debugowe</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_ServerFPS">
+      <Original>FPS serwera:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_HeadlessOnline">
+      <Original>Headless Client:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalAICount">
+      <Original>Liczba AI:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalGroupCount">
+      <Original>Liczba grup:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_WestGroupCount">
+      <Original>Liczba grup (BLUFOR):</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_EastGroupCount">
+      <Original>Liczba grup (OPFOR):</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_GreenGroupCount">
+      <Original>Liczba grup (INDEP):</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_CivGroupCount">
+      <Original>Liczba grup (CIV):</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_GeneratedAICount">
+      <Original>Liczba wygenerowanych AI:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_AIOnServer">
+      <Original>Liczba AI na serwerze:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_AIOnHC">
+      <Original>Liczba AI na Headless Cliencie:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_CachedAI">
+      <Original>Liczba ukrytych AI (cache):</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_UncachedAI">
+      <Original>Liczba odkrytych AI (cache):</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_WaypointsCount">
+      <Original>Liczba waypointów:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalVehicleCount">
+      <Original>Liczba pojazdów:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalObjectCount">
+      <Original>Liczba obiektów:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_ModuleGenAICount">
+      <Original>Liczba generatorów AI:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_ModuleGenAttackCount">
+      <Original>Liczba generatorów ataku:</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_CuratorCount">
+      <Original>Liczba mistrzów gry (zeus):</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_PlayersList_DisplayName">
+      <Original>Lista graczy</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_AdminList_DisplayName">
+      <Original>Lista adminów</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_AdminList_Admin">
+      <Original>Administrator</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_AdminList_ServerAdmin">
+      <Original>Administrator serwera</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_PlayersList_UnitDesc">
+      <Original>Czas gry: %1 || Żywy: %2</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_ActiveScripts_DisplayName">
+      <Original>Aktywne skrypty</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_ActiveScriptsServer_DisplayName">
+      <Original>Aktywne skrypty (server)</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_MissionLogs_DisplayName">
+      <Original>Logi z misji</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_AdminLogs_DisplayName">
+      <Original>Logi z misji (admin)</Original>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_CuratorList_DisplayName">
+      <Original>Lista zeusów</Original>
+    </Key>
+  </Package>
 </Project>

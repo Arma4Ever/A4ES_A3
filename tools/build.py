@@ -10,7 +10,6 @@ from vendor import VENDOR
 MAINPREFIX = "z"
 PREFIX = "a3cs_"
 IGNOREADDONS = [
-    "admin",
     "camofaces",
 ]
 ##########################
@@ -212,7 +211,7 @@ def main():
         else:
             print("    {}:".format(stat[0]))
             print("      skipped all.")
-    
+
     print("")
 
     if len(vendormissing):
