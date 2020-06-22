@@ -13,6 +13,8 @@ PREP(isServerAdmin);
 PREP(isAdmin);
 PREP(addAdminCurator);
 PREP(removeAdminCurator);
+PREP(secondsToTime);
+PREP(getMissionData);
 
 PREP(moduleAdminMessages);
 PREP(moduleDebug3rdPerson);

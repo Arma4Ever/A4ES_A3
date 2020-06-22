@@ -37,7 +37,7 @@ if (!(_targetClass in _targetClasses)) then {
     private _display = uiNamespace getVariable ["A3CS_ui_editBox", displayNull];
     if (isNull _display) exitWith {};
 
-    private _playerName = player call EFUNC(common,getName);
+    private _playerName = player call EFUNC(common,getUnitName);
 
     private _message = ctrlText (_display displayCtrl IDC_EDITBOX_TEXTINPUT);
     if (_targetClass == "public") then {

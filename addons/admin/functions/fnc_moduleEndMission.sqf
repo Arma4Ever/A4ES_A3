@@ -33,7 +33,7 @@ if (_mode == "init") then {
     (_display displayCtrl IDC_LISTBOX_BUTTON3) buttonSetAction QUOTE('end' call FUNC(moduleEndMission));
 
     //Collect endings
-    private _possibleEndings = [["a3c_endDefault", localize ELSTRING(Common,DefaultEnding)]];
+    private _possibleEndings = [["a3c_endDefault", localize LSTRING(DefaultEnding)]];
     private _missionDebriefing = (missionConfigFile >> "CfgDebriefing");
     if (isClass _missionDebriefing) then {
         private _debriefings = "true" configClasses _missionDebriefing;
@@ -73,7 +73,7 @@ if (_mode == "end") then {
     hint "";
     closeDialog 0;
 
-    _dbLog = format [localize LSTRING(Module_EndMission_EndMissionLog), player call EFUNC(common,getName)];
-    _dbLog remoteExecCall [QEFUNC(server,missionLog), 2, false];
+    //_dbLog = format [localize LSTRING(Module_EndMission_EndMissionLog), player call EFUNC(common,getUnitName)];
+    //_dbLog remoteExecCall [QEFUNC(server,missionLog), 2, false];
     [_endClass, true, true, true, false] remoteExec ["BIS_fnc_endMission", 0, true];
 };

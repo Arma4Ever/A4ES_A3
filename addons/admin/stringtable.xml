@@ -1,63 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
   <Package name="Admin">
-    <Key ID="STR_A3CS_Common_Yes">
-      <Original>Tak</Original>
-    </Key>
-    <Key ID="STR_A3CS_Common_No">
-      <Original>Nie</Original>
-    </Key>
-    <Key ID="STR_A3CS_Common_Close">
-      <Original>Zamknij</Original>
-    </Key>
-    <Key ID="STR_A3CS_Common_Refresh">
-      <Original>Odśwież</Original>
-    </Key>
-    <Key ID="STR_A3CS_Common_None">
-      <Original>Brak</Original>
-    </Key>
-    <Key ID="STR_A3CS_Common_Enable">
-      <Original>Włącz</Original>
-    </Key>
-    <Key ID="STR_A3CS_Common_Enabled">
-      <Original>Włączone</Original>
-    </Key>
-    <Key ID="STR_A3CS_Common_EnabledShort">
-      <Original>Wł</Original>
-    </Key>
-    <Key ID="STR_A3CS_Common_Disable">
-      <Original>Wyłącz</Original>
-    </Key>
-    <Key ID="STR_A3CS_Common_Disabled">
-      <Original>Wyłączone</Original>
-    </Key>
-    <Key ID="STR_A3CS_Common_DisabledShort">
-      <Original>Wył</Original>
-    </Key>
-    <Key ID="STR_A3CS_Common_A3C">
-      <Original>Arma3Coop.pl</Original>
-    </Key>
-    <Key ID="STR_A3CS_Common_A3CS">
-      <Original>Arma 3 Combat System</Original>
-    </Key>
-    <Key ID="STR_A3CS_Common_A3CS_Authors">
-      <Original>ACE3 Team &amp; Arma3Coop.pl</Original>
-    </Key>
-    <Key ID="STR_A3CS_Common_A3CS_Description">
-      <Original>Arma 3 Combat System jest nakładką na Advanced Combat Environment 3 zapewniajaca grupie Arma3Coop niezbędne do gry elementy.</Original>
-    </Key>
     <Key ID="STR_A3CS_Admin_DefaultEnding">
       <Original>Zakończenie domyślne</Original>
     </Key>
     <Key ID="STR_A3CS_Admin_EndDefault_Title">
       <Original>Misja zakończona</Original>
     </Key>
-
-
-
-
-
-
     <Key ID="STR_A3CS_Admin_NoAccess">
       <Original>Brak dostępu</Original>
     </Key>

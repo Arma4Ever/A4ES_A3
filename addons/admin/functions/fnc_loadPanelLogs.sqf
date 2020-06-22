@@ -69,8 +69,8 @@ if (tolower _logClass == "playerslist") then {
     private _players = (allPlayers - entities "HeadlessClient_F");
     {
         private _unit = _x;
-        private _unitName = _unit call EFUNC(common,getName);
-        private _unitTimeOnServer = (time - (_unit getVariable [QGVAR(enterTime), time])) call EFUNC(common,secondsToTime);
+        private _unitName = _unit call EFUNC(common,getUnitName);
+        private _unitTimeOnServer = (time - (_unit getVariable [QGVAR(enterTime), time])) call FUNC(secondsToTime);
         private _unitAlive = [localize ELSTRING(common,No), localize ELSTRING(common,Yes)] select (alive _unit);
         private _unitDesc = format [localize LSTRING(Module_PlayersList_UnitDesc), _unitTimeOnServer, _unitAlive];
         _controlLogs lnbAddRow [_unitName, _unitDesc];
@@ -82,7 +82,7 @@ if (tolower _logClass == "adminlist") then {
     private _serverAdminIncluded = false;
     {
         private _unit = _x;
-        private _unitName = _unit call EFUNC(common,getName);
+        private _unitName = _unit call EFUNC(common,getUnitName);
         private _unitDesc = localize LSTRING(Module_AdminList_Admin);
         if (!_serverAdminIncluded && {_unit isEqualTo _serverAdmin}) then {
             _unitDesc = format ["%1 + %2", localize LSTRING(Module_AdminList_Admin), localize LSTRING(Module_AdminList_ServerAdmin)];
@@ -91,7 +91,7 @@ if (tolower _logClass == "adminlist") then {
         _controlLogs lnbAddRow [_unitName, _unitDesc];
     } foreach _admins;
     if (!_serverAdminIncluded && {!isNull _serverAdmin}) then {
-        private _unitName = _serverAdmin call EFUNC(common,getName);
+        private _unitName = _serverAdmin call EFUNC(common,getUnitName);
         private _unitDesc = localize LSTRING(Module_AdminList_ServerAdmin);
         _controlLogs lnbAddRow [_unitName, _unitDesc];
     };

@@ -103,7 +103,7 @@ if (tolower _logClass == "adminlogs") then {
 if (tolower _logClass == "curatorlist") then {
     {
         private _curatorUnit = getAssignedCuratorUnit _x;
-        private _curatorUnitName = _curatorUnit call EFUNC(common,getName);
+        private _curatorUnitName = _curatorUnit call EFUNC(common,getUnitName);
         if (isNull _curatorUnit) then {
             _curatorUnitName = "Brak operatora";
         };

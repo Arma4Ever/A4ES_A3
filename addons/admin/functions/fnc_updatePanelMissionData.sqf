@@ -15,7 +15,7 @@ _missionConstData = missionNamespace getVariable [QGVAR(missionConstData), []];
 
 if ((count _missionConstData) isEqualTo 0) then {
     //first run, collect constant data
-    private _basicData = call EFUNC(common,getMissionData);
+    private _basicData = call FUNC(getMissionData);
     _basicData params ["_missionName", "_missionMap", "_missionAuthor"];
     _missionConstData pushBack [localize LSTRING(MissionData_MissionName), _missionName];
     _missionConstData pushBack [localize LSTRING(MissionData_MissionAuthor), _missionAuthor];
@@ -30,7 +30,7 @@ _missionData pushBack _missionName;
 _missionData pushBack _missionAuthor;
 _missionData pushBack _missionMap;
 
-_missionTime = time call EFUNC(common,secondsToTime);
+_missionTime = time call FUNC(secondsToTime);
 _missionData pushBack [localize LSTRING(MissionData_TimeElapsed), _missionTime];
 
 if (isMultiplayer) then {
@@ -38,7 +38,7 @@ if (isMultiplayer) then {
     private _slots = count playableUnits;
     private _admins = count (false call FUNC(getOnlineAdmins));
     private _serverAdmin = missionNamespace getVariable [QGVAR(serverAdmin), objNull];
-    private _serverAdminName = _serverAdmin call EFUNC(common,getName);
+    private _serverAdminName = _serverAdmin call EFUNC(common,getUnitName);
     if (isNull _serverAdmin || !(isPlayer _serverAdmin)) then {_serverAdminName = localize ELSTRING(common,None);};
     _missionData pushBack [localize LSTRING(MissionData_Slots), format ["%1/%2", _players, _slots]];
     _missionData pushBack [localize LSTRING(MissionData_OnlineAdmins), str _admins];

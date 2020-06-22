@@ -17,5 +17,9 @@
       <Original>No name</Original>
       <Polish>Imię nieznane</Polish>
     </Key>
+    <Key ID="STR_A3CS_Common_Close">
+      <Original>Close</Original>
+      <Polish>Zamknij</Polish>
+    </Key>
   </Package>
 </Project>
