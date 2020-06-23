@@ -37,6 +37,9 @@ if (!hasInterface || EGVAR(common,isMainMenu)) exitWith {};
 #endif
 
 ["unit", {
+  // Hide current squad for now
+  GVAR(showCurrentSquad) = false;
+
   // Trigger squads changed event on unit change & update UI
   [{
     [QEGVAR(squads,squadChanged), []] call CBA_fnc_localEvent;

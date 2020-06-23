@@ -6,7 +6,7 @@
 
 params [["_settingsChanged", false, [false]]];
 
-LOG_3("Updating UI (settingsChanged: %1 enable: %2 enabled: %3 currentSquad %4)",str _settingsChanged,str GVAR(enable),str GVAR(enabled),str GVAR(currentSquad));
+LOG_3("Updating UI (settingsChanged: %1 enable: %2 enabled: %3 showCurrentSquad %4)",str _settingsChanged,str GVAR(enable),str GVAR(enabled),str GVAR(showCurrentSquad));
 
 if (_settingsChanged) then {
   // Update scale vars
