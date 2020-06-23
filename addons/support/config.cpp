@@ -19,7 +19,6 @@ class RscTitle;
 class RscListBox;
 class RscControlsGroup;
 class RscMapControl;
-class RscPicture;
 class RscButtonMenu;
 class RscButtonMenuCancel;
 
