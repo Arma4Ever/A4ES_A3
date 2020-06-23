@@ -42,9 +42,18 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(2DNameTagShowTraits), "CHECKBOX",
+    // LSTRING(2DNameTagShowTraits)
+    "Wyswietlaj uprawnienia jednostki na nametagu 2D",
+    LSTRING(Settings_Addon),
+    true,
+    2
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(2DNameTagPosition), "LIST",
     [LSTRING(Settings_2DNameTagPosition)],
-    [LSTRING(Settings_Addon), "str_a3_rscdisplaygameoptions_buttongui"],
+    LSTRING(Settings_Addon),
     [
       [0, 1], [
         LSTRING(Settings_2DNameTagPosition_Center),
@@ -56,8 +65,8 @@
 
 [
     QGVAR(3DNameTagScale), "LIST",
-    [LSTRING(Settings_3DNameTagScale)],
-    [LSTRING(Settings_Addon), "str_a3_rscdisplaygameoptions_buttongui"],
+    LSTRING(Settings_3DNameTagScale),
+    LSTRING(Settings_Addon),
     [
       [0.7, 0.8, 0.9, 1], [
         LSTRING(Settings_3DNameTagScale_VerySmall),
@@ -66,21 +75,5 @@
         LSTRING(Settings_3DNameTagScale_Big)
       ], 2
     ],
-    2
-] call CBA_settings_fnc_init;
-
-[
-    QGVAR(rankColor), "COLOR",
-    LSTRING(Settings_RankColor),
-    [LSTRING(Settings_Addon), "str_a3_rscdisplaygameoptions_buttongui"],
-    [1, 1, 1],
-    2
-] call CBA_settings_fnc_init;
-
-[
-    QGVAR(defaultNameColor), "COLOR",
-    [LSTRING(Settings_DefaultNameColor), LSTRING(Settings_DefaultNameColor_Desc)],
-    [LSTRING(Settings_Addon), "str_a3_rscdisplaygameoptions_buttongui"],
-    [1, 1, 1],
     2
 ] call CBA_settings_fnc_init;

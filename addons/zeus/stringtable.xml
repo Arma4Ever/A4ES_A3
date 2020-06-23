@@ -4,8 +4,8 @@
     <Key ID="STR_A3CS_Zeus_Addon">
       <Original>A3CS Zeus</Original>
     </Key>
-    <Key ID="STR_A3CS_Zeus_Addon">
-      <Original>Show player icons during remote controll</Original>
+    <Key ID="STR_A3CS_Zeus_showPlayersIcons">
+      <Original>Show player icons during remote control</Original>
       <Polish>Pokaż ikony gracza podczas zdalnej kontroli</Polish>
     </Key>
     <Key ID="STR_A3CS_Zeus_addCuratorEditableObject">

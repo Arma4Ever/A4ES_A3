@@ -1,6 +1,8 @@
 #include "script_component.hpp"
 
 if (hasInterface) then {
+  #include "initKeybinds.sqf"
+
   ["unit", {
     // Exit if player is not curator
     if (isNull (getAssignedCuratorLogic player)) exitWith {};

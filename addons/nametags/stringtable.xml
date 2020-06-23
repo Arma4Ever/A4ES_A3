@@ -34,19 +34,23 @@
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_showSpeaking">
       <Original>Show speaking</Original>
-      <Polish>Wyświetl ikonkę podczas mówienia</Polish>
+      <Polish>Wyświetl ikonkę mówienia</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_showSpeaking_Desc">
-      <Original>Show animation above unit head when speaking (TFAR)</Original>
-      <Polish>Wyświetl animację nad głową jednostki podczas mówienia (TFAR)</Polish>
+      <Original>Show animation above unit head when speaking (TFAR) on 3D tag</Original>
+      <Polish>Wyświetl animację nad głową jednostki podczas mówienia (TFAR) na tagu 3D</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_showLeaderIcon">
       <Original>Show group leader icon</Original>
       <Polish>Wyświetl ikonkę dowódcy drużyny</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_showLeaderIcon_Desc">
-      <Original>Show group leader icon above unit head</Original>
-      <Polish>Wyświetl ikonkę dowódcy drużyny na głową jednostki</Polish>
+      <Original>Show group leader icon above unit head on 3D tag</Original>
+      <Polish>Wyświetl ikonkę dowódcy drużyny na tagu 3D</Polish>
+    </Key>
+    <Key ID="STR_A3CS_NameTags_Settings_2DNameTagShowTraits">
+      <Original>Show unit traits on 2D tag</Original>
+      <Polish>Wyświetl uprawnienia jednostki na tagu 2D</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_2DNameTagPosition">
       <Original>2D tag position on screen</Original>
@@ -79,18 +83,6 @@
     <Key ID="STR_A3CS_NameTags_Settings_3DNameTagScale_Big">
       <Original>Big</Original>
       <Polish>Duży</Polish>
-    </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_RankColor">
-      <Original>Rank color</Original>
-      <Polish>Kolor stopnia</Polish>
-    </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_DefaultNameColor">
-      <Original>Default name color</Original>
-      <Polish>Domyślny kolor nicków</Polish>
-    </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_DefaultNameColor_Desc">
-      <Original>Name color if unit is not in any team</Original>
-      <Polish>Kolor nazwy jeśli jednostka nie nalezy do żadnej drużyny</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_RankAttribute_DisplayName">
       <Original>Rank</Original>

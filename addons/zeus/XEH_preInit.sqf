@@ -4,8 +4,6 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
-#include "initKeybinds.sqf"
-
 GVAR(pointsResetPFH) = -1;
 GVAR(playersIconsDraw) = -1;
 

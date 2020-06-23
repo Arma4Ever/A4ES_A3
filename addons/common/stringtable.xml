@@ -21,5 +21,33 @@
       <Original>Close</Original>
       <Polish>Zamknij</Polish>
     </Key>
+    <Key ID="STR_A3CS_Common_Rank">
+      <Original>Rank</Original>
+      <Polish>Ranga</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Common_Traits">
+      <Original>Traits</Original>
+      <Polish>Uprawnienia</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Common_Medic">
+      <Original>Medic</Original>
+      <Polish>Medyk</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Common_Doctor">
+      <Original>Doctor</Original>
+      <Polish>Doktor</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Common_Engineer">
+      <Original>Engineer</Original>
+      <Polish>Inżynier</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Common_AdvEngineer">
+      <Original>Advanced engineer</Original>
+      <Polish>Zaawansowany inżynier</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Common_EOD">
+      <Original>EOD</Original>
+      <Polish>Saper</Polish>
+    </Key>
   </Package>
 </Project>

@@ -18,12 +18,17 @@ if (_specialIcon != "") then {
   _icon = _specialIcon;
 };
 
-private _type = ["PLAIN", "PLAIN DOWN"] select GVAR(2DNameTagPosition);
+private _margin = ["", "<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>"] select GVAR(2DNameTagPosition);
+private _traits = "";
+if (GVAR(2DNameTagShowTraits)) then {
+  _traits = (_unit call EFUNC(common,getUnitTraitsNames)) joinString ", ";
+};
+
 
 QGVAR(2DNameTag) cutText [
-  format [
-    QUOTE(<t align='center' font=QUOTE(QUOTE(NAMETAG_2D_FONT))><t shadow='2' color='%1' size=QUOTE(QUOTE(NAMETAG_2D_NAME_SIZE))>%2</t><br/><t shadow='2' size=QUOTE(QUOTE(NAMETAG_2D_RANK_SIZE))>%3 <img image='%4'/></t></t>),
-    _unitColor # 1, _unitName, _unitRankName, _icon
-  ], _type, NAMETAG_2D_FADE_IN, false, true
+  _margin + format [
+    QUOTE(<t align='center' font=QUOTE(QUOTE(NAMETAG_2D_FONT))><t shadow='2' color='%1' size=QUOTE(QUOTE(NAMETAG_2D_NAME_SIZE))>%2</t><br/><t shadow='2' size=QUOTE(QUOTE(NAMETAG_2D_RANK_SIZE))>%3 <img image='%4'/></t><br/><t size='1.15' color='#d1d1d1'>%5</t></t>),
+    _unitColor # 1, _unitName, _unitRankName, _icon, _traits
+  ], "PLAIN", NAMETAG_2D_FADE_IN, false, true
 ];
 QGVAR(2DNameTag) cutFadeOut NAMETAG_2D_INIT_FADE_OUT;
