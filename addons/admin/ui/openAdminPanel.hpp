@@ -36,10 +36,18 @@ class A3CS_openAdminPanel : A3CS_ui_buttonBase {
     animTexturePressed = "#(argb,8,8,3)color(1,1,1,1)";
     color2[] = {0,0,0,1};
     color[] = {1,1,1,1};
-    //colorBackground2[] = {0.75,0.75,0.75,1};
-    //colorBackground[] = {0,0,0,0.8};
-    colorBackground[] = {1, 0.647, 0, 0.5};
-    colorBackground2[] = {1, 0.647, 0, 0.5};
+    colorBackground[] = {
+        "(profilenamespace getvariable ['GUI_BCG_RGB_R', 0.13])",
+        "(profilenamespace getvariable ['GUI_BCG_RGB_G', 0.54])",
+        "(profilenamespace getvariable ['GUI_BCG_RGB_B', 0.21])",
+        "(profilenamespace getvariable ['GUI_BCG_RGB_A', 0.8])"
+    };
+    colorBackground2[] = {
+        "(profilenamespace getvariable ['GUI_BCG_RGB_R', 0.13])",
+        "(profilenamespace getvariable ['GUI_BCG_RGB_G', 0.54])",
+        "(profilenamespace getvariable ['GUI_BCG_RGB_B', 0.21])",
+        "(profilenamespace getvariable ['GUI_BCG_RGB_A', 0.8])"
+    };
     colorBackgroundFocused[] = {1, 1, 1, 0};
     colorDisabled[] = {1,1,1,0.25};
     colorFocused[] = {0,0,0,1};

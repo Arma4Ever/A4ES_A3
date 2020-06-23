@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+  <Package name="Support">
+    <Key ID="STR_A3CS_Support_Title">
+      <Original>Support</Original>
+      <Polish>Wsparcie</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Support_SendMission">
+      <Original>Send mission</Original>
+      <Polish>Wyślij misję</Polish>
+    </Key>
+  </Package>
+</Project>
