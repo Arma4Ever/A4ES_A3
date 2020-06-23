@@ -16,6 +16,111 @@
     <Key ID="STR_A3CS_Editor_IncompatibleModsDetected_Message">
       <Original>Wyłącz %1 i uruchom grę ponownie. Jeśli brakuje Ci jakichś funkcjonalności w edytorze daj nam o tym znać na forum.</Original>
     </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI">
+      <Original>Wyłącz funkcję AI</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_TARGET">
+      <Original>TARGET</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_TARGET_Tooltip">
+      <Original>Wyłącza obserwację celów przez AI i wskazywanie celów przez dowódcę.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_AUTOTARGET">
+      <Original>AUTOTARGET</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_AUTOTARGET_Tooltip">
+      <Original>Wyłącza samodzielne szukanie celów i obserwację podejrzanych obiektów.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_MOVE">
+      <Original>MOVE</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_MOVE_Tooltip">
+      <Original>Wyłącza możliwość poruszania się przez AI (dotyczy również pojazdu jeśli jednostka jest kierowcą). UWAGA! Ta opcja wyłącza poruszanie się jednostki niezależnie od sytuacji. Jesli chcesz powstrzymać jednostę przed ruszeniem do formacji na starcie misji ale umożliwić poruszanie się podczas walki użyć opcji "Zatrzymaj (doStop)".</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_ANIM">
+      <Original>ANIM</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_ANIM_Tooltip">
+      <Original>Wyłącza możliwość zmiany animacji przez AI.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_TEAMSWITCH">
+      <Original>TEAMSWITCH</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_TEAMSWITCH_Tooltip">
+      <Original>Wyłącza możliwość zmiany drużyny przez AI.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_FSM">
+      <Original>FSM</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_FSM_Tooltip">
+      <Original>Wyłącza uruchamianie skryptów zachowań i reakcji AI.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_WEAPONAIM">
+      <Original>WEAPONAIM</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_WEAPONAIM_Tooltip">
+      <Original>Wyłącza celowanie przez AI.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_AIMINGERROR">
+      <Original>AIMINGERROR</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_AIMINGERROR_Tooltip">
+      <Original>Wyłącza pogarszanie celności AI ze względu na przygwożdżenie, poruszanie się, rany itp.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_SUPPRESSION">
+      <Original>SUPPRESSION</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_SUPPRESSION_Tooltip">
+      <Original>Wyłącza możliwość przygwożdżenia AI.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_CHECKVISIBLE">
+      <Original>CHECKVISIBLE</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_CHECKVISIBLE_Tooltip">
+      <Original>Wyłącza sprawdzanie widoczności celów.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_COVER">
+      <Original>COVER</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_COVER_Tooltip">
+      <Original>Wyłącza szukanie i wykorzystywanie obiektów jako osłony.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_AUTOCOMBAT">
+      <Original>AUTOCOMBAT</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_AUTOCOMBAT_Tooltip">
+      <Original>Wyłącza automatyczne przełączanie się AI w tryb walki w przypadku zagrożenia.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_PATH">
+      <Original>PATH</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_PATH_Tooltip">
+      <Original>Wyłącza wyszukiwanie scieżek (path finding) co efektywnie unieruchamia AI.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_MINEDETECTION">
+      <Original>MINEDETECTION</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_MINEDETECTION_Tooltip">
+      <Original>Wyłącza wykrywanie min przez AI.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_NVG">
+      <Original>NVG</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_NVG_Tooltip">
+      <Original>Wyłącza zakładanie noktowizji przez AI.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_LIGHTS">
+      <Original>LIGHTS</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_LIGHTS_Tooltip">
+      <Original>Wyłącza używanie reflektorów i świateł kolizyjnych w pojazdach przez AI.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_RADIOPROTOCOL">
+      <Original>RADIOPROTOCOL</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_DisableAI_RADIOPROTOCOL_Tooltip">
+      <Original>Wyłącza możliwość komunikacji AI ale nie wydawanie rozkazów.</Original>
+    </Key>
   </Package>
   <Package name="ENH">
     <Key ID="STR_ENH_FUNCTIONS_BATCHREPLACE_ERROR">
