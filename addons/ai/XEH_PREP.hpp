@@ -1,2 +1,3 @@
 
-PREP(setSkillLevel);
+PREP(getSkillInfo);
+PREP(skill_onLoad);
