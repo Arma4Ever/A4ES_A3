@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: SzwedzikPL
- * Adds all playable units to curator
+ * Handles curator module init
  */
 
 params ["_curator"];

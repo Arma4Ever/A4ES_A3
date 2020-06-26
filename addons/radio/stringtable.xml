@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+  <Package name="Zeus">
+    <Key ID="STR_A3CS_Zeus_Addon">
+      <Original>A3CS Zeus</Original>
+    </Key>
+    <Key ID="STR_A3CS_Zeus_showPlayersIcons">
+      <Original>Show player icons during remote control</Original>
+      <Polish>Pokaż ikony gracza podczas zdalnej kontroli</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Zeus_addCuratorEditableObject">
+      <Original>Dodaj do obiektów zeusa</Original>
+    </Key>
+    <Key ID="STR_A3CS_Zeus_addCuratorEditableObject_Tooltip">
+      <Original>Dodaje obiekt do edytowalnych obiektów każdego zeusa na starcie misji.</Original>
+    </Key>
+  </Package>
+</Project>

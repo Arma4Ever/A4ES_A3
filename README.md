@@ -24,6 +24,7 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [Eden Extended Objects](https://steamcommunity.com/sharedfiles/filedetails/?id=882231372)
 - [Camofaces](https://steamcommunity.com/sharedfiles/filedetails/?id=346665985)
 - [MOCAP Melee](https://www.armaholic.com/page.php?id=27262)
+- [TFAR Animations](https://steamcommunity.com/sharedfiles/filedetails/?id=2141020863)
 
 ## Credits
 Authors of external mods.  
