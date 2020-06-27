@@ -21,6 +21,14 @@
       <Original>Close</Original>
       <Polish>Zamknij</Polish>
     </Key>
+    <Key ID="STR_A3CS_Common_Add">
+      <Original>Add</Original>
+      <Polish>Dodaj</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Common_Remove">
+      <Original>Remove</Original>
+      <Polish>Usuń</Polish>
+    </Key>
     <Key ID="STR_A3CS_Common_Rank">
       <Original>Rank</Original>
       <Polish>Ranga</Polish>

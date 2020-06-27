@@ -121,6 +121,9 @@
     <Key ID="STR_A3CS_Editor_DisableAI_RADIOPROTOCOL_Tooltip">
       <Original>Wyłącza możliwość komunikacji AI ale nie wydawanie rozkazów.</Original>
     </Key>
+    <Key ID="STR_A3CS_Editor_roleDescription_Tooltip">
+      <Original>Opis roli w grze wieloosobowej widoczny w lobby trybu wieloosobowego. Jeśli nie zostanie zdefiniowana, przypisana zostanie domyślna nazwa jednostki. UWAGA! Aby zmienić nazwę drużyny w lobby w opisie roli *dowódcy drużyny* dodaj "@Nazwa druzyny" np. "Dowódca drużyny@Charlie". Poza tym przypadkiem nie używaj "@" w opisie roli!</Original>
+    </Key>
   </Package>
   <Package name="ENH">
     <Key ID="STR_ENH_FUNCTIONS_BATCHREPLACE_ERROR">

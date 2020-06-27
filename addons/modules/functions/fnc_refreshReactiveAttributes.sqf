@@ -13,11 +13,7 @@ LOG_1("Refreshing reactive attributes started (attributes: %1).",str count GVAR(
 
   LOG_3("Refreshing reactive attribute '%1' (condition: '%2' active: %3).",ctrlClassName _controlGroup,str _condition,str _state);
 
-  private _fade = [0.75, 0] select _state;
-
-  _controlGroup ctrlEnable _state;
-  _controlGroup ctrlSetFade _fade;
-  _controlGroup ctrlcommit 0;
+  _controlGroup ctrlShow _state;
 } forEach GVAR(reactiveAttributes);
 
 LOG("Refreshing reactive attributes finished.");

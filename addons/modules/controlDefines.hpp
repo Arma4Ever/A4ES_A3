@@ -9,7 +9,7 @@
 #define IDC_DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE    701
 #define IDC_DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_DESC     702
 
-#define DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE_PROPERTIES \
+#define DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE_PROPERTIES(alignDir) \
     idc = IDC_DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE; \
     type = 13; \
     size = "4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5"; \
@@ -18,7 +18,8 @@
     class Attributes { \
         color = "#FFFFFF"; \
         size = 1; \
-        align = "right"; \
+        align = QUOTE(alignDir); \
+        valign = "middle"; \
         colorLink = "#c2c2c2"; \
         font = "RobotoCondensedLight"; \
     }

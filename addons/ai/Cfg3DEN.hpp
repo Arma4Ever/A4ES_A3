@@ -27,8 +27,8 @@ class Cfg3DEN {
                 class Edit: Edit {};
                 class EGVAR(modules,description): EGVAR(modules,description) {
                     idc = 105;
-                    y = "5 * (pixelH * pixelGrid * 	0.50)";
-                    h = "5 * (pixelH * pixelGrid * 	0.50)";
+                    y = "5.5 * (pixelH * pixelGrid * 0.50)";
+                    h = "4.5 * (pixelH * pixelGrid * 0.50)";
                 };
             };
         };

@@ -13,7 +13,7 @@ if (typename _value != typename '') then {
 
 _control ctrlSetText _value;
 
-// Init dynamic control
-[_this, _config, _value, {
+// Init dynamic attribute
+private _initData = [_this, _config, _value, {
   //TODO: Observer for edit control
-}, []] call FUNC(initDynamicAttribute);
+}, _control] call FUNC(initDynamicAttribute);

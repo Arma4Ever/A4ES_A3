@@ -34,11 +34,11 @@ if (_observeValue) then {
   // Parse value
   _parsedValue = [_this, _attributeSaveFunction] call {
     params ["_params", "_fnc"];
-    private _controlGroup = _params select 0;
+    private _controlGroup = _params # 0;
 
     // Do not use private to allow access from attributeSave function
-    _config = _params select 1;
-    _value = _params select 2;
+    _config = _params # 1;
+    _value = _params # 2;
 
     // Return parsed value
     _controlGroup call _fnc

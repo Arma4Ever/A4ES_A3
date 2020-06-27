@@ -66,8 +66,6 @@ class CfgVehicles {
         GVAR(validator) = "";
 
         class AttributesBase: AttributesBase {
-            //delete ModuleDescription;
-
             /*
              * Supported properties in attributes (besides vanilla ones):
              *
@@ -93,12 +91,6 @@ class CfgVehicles {
              * conditions check of all attributes)
              */
 
-            class EditMulti3: Default {
-                control = "EditMulti3";
-            };
-            class EditMulti5: Default {
-                control = "EditMulti5";
-            };
             class GVAR(subCategory) {
                 control = QGVAR(subCategory);
                 property = QGVAR(subCategory);
@@ -115,21 +107,45 @@ class CfgVehicles {
                 control = QGVAR(moduleWarnings);
                 property = QGVAR(moduleWarnings);
             };
+            class GVAR(moduleDescription) {
+                control = QGVAR(moduleDescription);
+                property = QGVAR(moduleDescription);
+            };
+
             class GVAR(dynamicCombo): Combo {
                 control = QGVAR(dynamicCombo);
-                GVAR(activeCondition) = "";
                 // Observe combo value by default
                 GVAR(observeValue) = 1;
             };
             class GVAR(dynamicEdit): Edit {
                 control = QGVAR(dynamicEdit);
-                GVAR(activeCondition) = "";
-                // Do not observe edit value by default
-                GVAR(observeValue) = 0;
             };
-            class GVAR(moduleDescription) {
-                control = QGVAR(moduleDescription);
-                property = QGVAR(moduleDescription);
+            class GVAR(dynamicCheckbox): Checkbox {
+                control = QGVAR(dynamicCheckbox);
+                // Observe checkbox value by default
+                GVAR(observeValue) = 1;
+            };
+
+            //CodeMulti5 for init
+
+            class GVAR(dynamicToolboxSide) {
+                control = QGVAR(dynamicToolboxSide);
+                typeName = "NUMBER";
+            };
+            class GVAR(dynamicToolboxUnitPos) {
+                control = QGVAR(dynamicToolboxUnitPos);
+                typeName = "NUMBER";
+            };
+            class GVAR(dynamicSkillSlider) {
+                control = QGVAR(dynamicSkillSlider);
+                typeName = "NUMBER";
+            };
+
+            class EditMulti3: Default {
+                control = "EditMulti3";
+            };
+            class EditMulti5: Default {
+                control = "EditMulti5";
             };
         };
 
@@ -187,64 +203,6 @@ class CfgVehicles {
         };
     };
 
-    class GVAR(standardModule): Module_F {
-        scope = 2;
-        author = ECSTRING(main,Author);
-        displayName = "Standard module";
-        category = QGVAR(test);
-        function = "";
-
-        class Attributes: AttributesBase {
-            class useParam: Combo {
-                displayName = "Use param";
-                property = QGVAR(useParam);
-                typeName = "NUMBER";
-                defaultValue = 0;
-                class values {
-                    class usenone {
-                        name = "None";
-                        value = 0;
-                        default = 1;
-                    };
-                    class useparam1 {
-                        name = "Use param 1";
-                        value = 1;
-                        default = 0;
-                    };
-                    class useparam2 {
-                        name = "Use param 2";
-                        value = 2;
-                        default = 0;
-                    };
-                    class useparam3 {
-                        name = "Use param 3";
-                        value = 3;
-                        default = 0;
-                    };
-                };
-            };
-
-            class param1: Edit {
-                displayName = "Param1";
-                property = QGVAR(param1);
-                defaultValue = "''";
-            };
-            class param2: Edit {
-                displayName = "Param2";
-                property = QGVAR(param2);
-                defaultValue = "''";
-            };
-            class param3: Edit {
-                displayName = "Param3";
-                property = QGVAR(param3);
-                defaultValue = "''";
-            };
-            class ModuleDescription: ModuleDescription {};
-        };
-        class ModuleDescription: ModuleDescription {
-            description = "Standard module description. Values below tell little to nothing...";
-        };
-    };
-
     #include "modules\dynamicModule\module.hpp"
+    #include "modules\genSoldiers\module.hpp"
 };

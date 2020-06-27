@@ -22,6 +22,15 @@ class Cfg3DEN {
                 };
 			};
 		};
+        class Type: Title {
+			class Controls: Controls {
+				class Title: Title {};
+				class Search: ctrlEdit {};
+				class SearchButton: ctrlButtonSearch {};
+				class Value: ctrlTree {};
+                class GVAR(description): GVAR(description) {};
+			};
+		};
         class Combo: Title {
             class Controls: Controls {
 				class Title: Title {};
@@ -36,6 +45,38 @@ class Cfg3DEN {
                 class GVAR(description): GVAR(description) {};
 			};
         };
+        class Toolbox: Title {
+			class Controls: Controls {
+				class Title: Title {};
+				class Value: ctrlToolbox {};
+                class GVAR(description): GVAR(description) {};
+			};
+		};
+        class Checkbox: Title {
+			class Controls: Controls {
+				class Title: Title {};
+				class Value: ctrlCheckboxBaseline {};
+                class GVAR(description): GVAR(description) {};
+			};
+		};
+        class Slider: Title {
+			class Controls: Controls {
+				class Title: Title {};
+				class Value: ctrlXSliderH {};
+				class Edit: ctrlEdit {};
+                class GVAR(description): GVAR(description) {};
+			};
+		};
+        class Skill: Slider {
+            class Controls: Controls {
+                class Title: Title {};
+                class Value: Value {};
+                class Edit: Edit {};
+                class GVAR(description): GVAR(description) {};
+            };
+        };
+
+
         class ModuleInfo: Default {
 			class Controls {
 				class TitleCustom: ctrlStatic {};
@@ -55,79 +96,21 @@ class Cfg3DEN {
             attributeLoad = QUOTE(_this call FUNC(moduleShortDescription_attributeLoad));
         };
 
-        class GVAR(moduleDescription): ModuleInfo {
-            attributeLoad = QUOTE(_this call FUNC(moduleDescription_attributeLoad));
-            h = "5 * (pixelH * pixelGrid * 0.50)";
-            class Controls: Controls {
-				class TitleCustom: TitleCustom {
-                    idc = IDC_DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE;
-					text = CSTRING(ModuleDescription_Title);
-                    colorText[] = {0.75, 0.75, 0.75, 1};
-                    colorShadow[] = {0, 0, 0, 0};
-                    colorBackground[] = {0, 0, 0, 0.25};
-                    h = "5 * (pixelH * pixelGrid * 0.50)";
-				};
-				class Group: Group {
-                    h = "0";
-                    class Controls: Controls {
-                        class Text: Text {
-                            colorBackground[] = {0, 0, 0, 0.15};
-                            h = "0";
-                        };
-                    };
-                };
-			};
-        };
-        class GVAR(moduleWarnings): ModuleInfo {
-            attributeLoad = QUOTE(_this call FUNC(moduleWarnings_attributeLoad));
-            h = "5 * 	5 * (pixelH * pixelGrid * 0.50)";
-            class Controls {
-                delete TitleCustom;
-                class Group: ctrlControlsGroup {
-                    idc = 101;
-                    x = "5 * (pixelW * pixelGrid * 0.50)";
-                    y = "0";
-                    w = "(	48 + 82 - 5) * (pixelW * pixelGrid * 0.50)";
-                    h = "5 * 5 * (pixelH * pixelGrid * 0.50)";
+        #include "attributes\moduleDescription.hpp"
+        #include "attributes\moduleWarnings.hpp"
 
-                    class ScrollBar {
-                        scrollSpeed = 0;
-                    };
-                    class Controls {
-                        class Text: ctrlStructuredText {
-                            idc = 100;
-                            size = "3.96 * (1 / (getResolution select 3)) * pixelGrid * 0.5";
-                            y = "0";
-                            w = "(48 + 82 - 5) * (pixelW * pixelGrid * 0.50)";
-                            h = "5 * 5 * (pixelH * pixelGrid * 	0.50)";
-                            colorBackground[]={0,0,0,0};
-                        };
-                    };
-                };
-            };
-        };
+        #include "attributes\dynamicEdit.hpp"
+        #include "attributes\dynamicCombo.hpp"
+        #include "attributes\dynamicCheckbox.hpp"
+        #include "attributes\dynamicToolbox.hpp"
 
-        class GVAR(dynamicCombo): Combo {
-			attributeLoad = QUOTE(_this call FUNC(dynamicCombo_attributeLoad));
+        #include "attributes\dynamicClassSelect.hpp"
+        #include "attributes\dynamicToolboxSide.hpp"
+        #include "attributes\dynamicToolboxUnitPos.hpp"
+        #include "attributes\dynamicSkillSlider.hpp"
 
-            class Controls: Controls {
-				class Title: Title {
-                    DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE_PROPERTIES;
-                };
-                class Value: Value {};
-                class GVAR(description): GVAR(description) {};
-			};
-        };
-        class GVAR(dynamicEdit): Edit {
-			attributeLoad = QUOTE(_this call FUNC(dynamicEdit_attributeLoad));
-            class Controls: Controls {
-				class Title: Title {
-                    DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE_PROPERTIES;
-                };
-                class Value: Value {};
-                class GVAR(description): GVAR(description) {};
-			};
-		};
+        #include "modules\genSoldiers\attributes\source.hpp"
+        #include "modules\genSoldiers\attributes\classListMode.hpp"
 	};
     class EventHandlers {
         class ADDON {

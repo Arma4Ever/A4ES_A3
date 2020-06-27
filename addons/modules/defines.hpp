@@ -51,6 +51,7 @@ class ctrlButtonPictureKeepAspect;
 class ctrlStructuredText;
 class ctrlCombo;
 class ctrlCheckbox;
+class ctrlCheckboxBaseline;
 class ctrlXSliderH;
 class ctrlControlsGroup;
 class ctrlControlsGroupNoScrollbars;

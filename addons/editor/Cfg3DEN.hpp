@@ -228,9 +228,19 @@ class Cfg3DEN {
 	};
 	class Object {
 		class AttributeCategories {
+            class Control {
+				class Attributes {
+					class Description {
+						tooltip = CSTRING(roleDescription_Tooltip);
+					};
+				};
+			};
 			class StateSpecial {
 				class Attributes {
                     delete EnableRevive;
+
+                    // Do stop
+                    // Force flashlight
 				};
 			};
             class GVAR(disableAI) {
