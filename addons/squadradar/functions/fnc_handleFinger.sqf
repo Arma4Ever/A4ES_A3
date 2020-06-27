@@ -35,7 +35,19 @@ private _cameraDirVector = (positionCameraToWorld [0, 0, 1]) vectorDiff (positio
 private _cameraDir = (_cameraDirVector # 0) atan2 (_cameraDirVector # 1);
 _pointer ctrlSetAngle [(ace_player getDir _fingerPos) - _cameraDir, 0.5, 0.5];
 
+// Add fade anim
 [
+  {
+    params ["_pointer"];
+    _pointer ctrlSetFade 1;
+    _pointer ctrlCommit 0.5;
+  },
+  [_pointer],
+  1.5
+] call CBA_fnc_waitAndExecute;
+
+[
+  // Update pointer on each frame until timeout
   {
     params ["_pointer", "_fingerPos"];
     private _cameraDirVector = (positionCameraToWorld [0, 0, 1]) vectorDiff (positionCameraToWorld [0, 0, 0]);
@@ -49,6 +61,7 @@ _pointer ctrlSetAngle [(ace_player getDir _fingerPos) - _cameraDir, 0.5, 0.5];
   {},
   [_pointer, _fingerPos],
   2,
+  // Remove control on timeout
   {
     params ["_pointer"];
     ctrlDelete _pointer;
