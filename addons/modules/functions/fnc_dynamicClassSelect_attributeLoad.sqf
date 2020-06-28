@@ -11,7 +11,6 @@ private _ctrlAssetsTreeNotfBar = _this controlsGroupCtrl 503;
 private _ctrlClassList = _this controlsGroupCtrl 101;
 private _ctrlClassAddButton = _this controlsGroupCtrl 121;
 private _ctrlClassAddNotf = _this controlsGroupCtrl 122;
-private _ctrlClassListModeTitle = _this controlsGroupCtrl 103;
 private _ctrlRemoveFromListButton = _this controlsGroupCtrl 104;
 private _ctrlArrowLeft = _this controlsGroupCtrl 393101;
 private _ctrlArrowRight = _this controlsGroupCtrl 393102;
@@ -105,6 +104,21 @@ _ctrlRemoveFromListButton ctrlAddEventHandler ["buttonClick", {
 
   [_ctrlClassList, _curSelRow] call FUNC(dynamicClassSelect_removeClassFromList);
 }];
+
+// Handle arrowLeft click (decrease selected classname weight)
+_ctrlArrowLeft ctrlAddEventHandler ["buttonClick", {
+  params ["_control"];
+
+
+}];
+
+// Handle arrowRight click (increase selected classname weight)
+_ctrlArrowRight ctrlAddEventHandler ["buttonClick", {
+  params ["_control"];
+
+
+}];
+
 
 // Update labels
 _this call FUNC(dynamicClassSelect_updateUI);

@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: SzwedzikPL
- * Updates dynamic attribute value & triggers reactive attributes update
+ * Updates dynamic attribute value & triggers attributes update
  */
 params ["_controlGroup"];
 
@@ -21,9 +21,6 @@ GVAR(dynamicAttributesValues) setVariable [_configName, _parsedValue];
 // Update module values
 GVAR(dynamicAttributesModule) setVariable [QGVAR(moduleValues), GVAR(dynamicAttributesValues)];
 
-// Trigger refresh of reactive attributes
-call FUNC(refreshReactiveAttributes);
-
 // Validate module
 private _warnings = [
   GVAR(dynamicAttributesModule),
@@ -34,3 +31,8 @@ private _warnings = [
 
 // Trigger module warnings refresh
 [_warnings] call FUNC(refreshModuleWarnings);
+
+// Trigger refresh of attributes
+call FUNC(refreshAttributes);
+
+// Call onValuesChanged handlers

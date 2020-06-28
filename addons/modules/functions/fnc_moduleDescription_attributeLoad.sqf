@@ -338,20 +338,16 @@ private _groupTextHeight = _controlTextHeight + (5 * (pixelH * pixelGrid * 0.50)
 } forEach [_this, _attributesListControl, _attributesCategory];
 
 // Add control to controls list
-GVAR(allAttributesControls) pushBackUnique [_this, (ctrlPosition _this # 1)];
+GVAR(allAttributesControls) pushBackUnique _this;
 
 // ================================================
 // Module description is last loaded element
 // Use it to trigger ala "postInit" framework stuff
 // ================================================
 
-// Save original heights of attributes list and category
-GVAR(attributesListHeight) = (ctrlPosition _attributesListControl) # 3;
-GVAR(attributesCategoryHeight) = (ctrlPosition _attributesCategory) # 3;
-
-// Trigger initial refresh of attributes
-LOG_1("Triggering initial refresh of reactive attributes (attributes: %1).",str count GVAR(reactiveAttributes));
-call FUNC(refreshReactiveAttributes);
+// Save attributes list and category controls in ui namespace
+uiNamespace setVariable [QGVAR(currentModuleAttributesList), _attributesListControl];
+uiNamespace setVariable [QGVAR(currentModuleAttributesCategory), _attributesCategory];
 
 // Get current module warnings
 private _entityIDVarName = str (get3DENEntityID GVAR(dynamicAttributesModule));
@@ -360,3 +356,9 @@ private _warnings = GVAR(allWarnings) getVariable [_entityIDVarName, []];
 // Trigger module warnings update
 LOG_1("Triggering initial refresh of module warnings (warnings: %1).",str _warnings);
 [_warnings] call FUNC(refreshModuleWarnings);
+
+// Trigger initial refresh of attributes
+LOG_1("Triggering initial refresh of attributes (count: %1).",str count GVAR(allAttributesControls));
+call FUNC(refreshAttributes);
+
+// Initial call of values changed handler

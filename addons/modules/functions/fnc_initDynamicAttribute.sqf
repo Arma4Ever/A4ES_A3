@@ -59,9 +59,6 @@ private _isReactive = !(_conditionActive isEqualTo "");
 if (_isReactive) then {
   // Save compiled condition
   _controlGroup setVariable [QGVAR(conditionActive), compile _conditionActive];
-
-  // Register attribute as reactive
-  GVAR(reactiveAttributes) pushBackUnique _controlGroup;
 };
 
 private _controlTitle = _controlGroup controlsGroupCtrl IDC_DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE;
@@ -71,10 +68,9 @@ _controlTitle ctrlSetStructuredText parseText format [_titleText, ""];
 _controlTitle setVariable [QGVAR(attributeTitle), _titleText];
 _controlTitle setVariable [QGVAR(attributeClass), configName _config];
 
+// Update description
 private _controlDescription = _controlGroup controlsGroupCtrl IDC_DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_DESC;
-
 private _description = getText (_config >> QGVAR(description));
-
 _controlDescription ctrlSetStructuredText parseText _description;
 private _descHeight = ctrlTextHeight _controlDescription;
 
@@ -91,6 +87,6 @@ _controlGroup ctrlSetPosition _controlGroupPos;
 _controlGroup ctrlCommit 0;
 
 // Add control group to controls list
-GVAR(allAttributesControls) pushBackUnique [_controlGroup, (ctrlPosition _controlGroup # 1)];
+GVAR(allAttributesControls) pushBackUnique _controlGroup;
 
 LOG_5("Inited dynamic attribute '%1' (observeValue: %2 isReactive: %3 parsedValue: %4 condition active: '%5').",_configName,str _observeValue,str _isReactive,str _parsedValue,_conditionActive);

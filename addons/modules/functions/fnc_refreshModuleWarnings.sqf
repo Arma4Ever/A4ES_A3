@@ -6,13 +6,8 @@
  */
 params ["_warnings"];
 
-// This should never happen in any case but check... just in case :P
-if (isNil QGVAR(updateModuleWarningsParams)) exitWith {
-  ERROR_1("Missing '%1' variable.",QGVAR(updateModuleWarningsParams));
-};
-
 // Get warnings control params
-GVAR(updateModuleWarningsParams) params ["_controlGroup", "_controlTextGroup", "_controlText"];
+GVAR(moduleWarningsParams) params ["_controlGroup", "_controlTextGroup", "_controlText"];
 
 private _text = "";
 private _warningsHeight = 0;
@@ -48,7 +43,7 @@ private _warningSources = [];
 
 if (_hasWarnings) then {
   // Get new control height
-  _warningsHeight = (ctrlTextHeight _controlText) + (1 * 5 * (pixelH * pixelGrid *	0.50));
+  _warningsHeight = (ctrlTextHeight _controlText) + (5 * (pixelH * pixelGrid * 0.50));
 
   // Prepare warning sources
   {
@@ -65,48 +60,8 @@ if (_hasWarnings) then {
   _controlPos set [3, _warningsHeight];
   _x ctrlSetPosition _controlPos;
   _x ctrlCommit 0;
-} forEach GVAR(updateModuleWarningsParams);
+} forEach GVAR(moduleWarningsParams);
 
-// Update all attribute controls
-{
-  _x params ["_controlGroup", "_originalY"];
+GVAR(moduleWarningsSources) = _warningSources;
 
-  private _controlTitle = _controlGroup controlsGroupCtrl IDC_DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE;
-
-  // Update attribute title if available
-  if !(isNull _controlTitle) then {
-    private _configName = _controlTitle getVariable [QGVAR(attributeClass), ""];
-    private _titleFormat = _controlTitle getVariable [QGVAR(attributeTitle), ""];
-    private _titleText = format [
-      _titleFormat,
-      [
-        "",
-        "<img color='#cd2323' image='\z\a3cs\addons\modules\data\leftpanel\warning.paa'/> "
-      ] select (_configName in _warningSources)
-    ];
-
-    _controlTitle ctrlSetStructuredText parseText _titleText;
-  };
-
-  private _controlPos = ctrlPosition _controlGroup;
-  _controlPos set [1, _originalY + _warningsHeight];
-  _controlGroup ctrlSetPosition _controlPos;
-  _controlGroup ctrlCommit 0;
-} forEach GVAR(allAttributesControls);
-
-private _attributesListControl = ctrlParentControlsGroup _controlGroup;
-private _attributesCategory = ctrlParentControlsGroup _attributesListControl;
-
-// Update attributes list height
-private _attributesListPos = ctrlPosition _attributesListControl;
-_attributesListPos set [3, GVAR(attributesListHeight) + _warningsHeight];
-_attributesListControl ctrlSetPosition _attributesListPos;
-_attributesListControl ctrlCommit 0;
-
-// Update attributes category height
-private _attributesCategoryPos = ctrlPosition _attributesCategory;
-_attributesCategoryPos set [3, GVAR(attributesCategoryHeight) + _warningsHeight];
-_attributesCategory ctrlSetPosition _attributesCategoryPos;
-_attributesCategory ctrlCommit 0;
-
-LOG_1('Module warnings refreshed (height: %1 all controls count: %2).',str _warningsHeight,str count GVAR(allAttributesControls));
+LOG_1('Module warnings refreshed (height: %1).',str _warningsHeight);

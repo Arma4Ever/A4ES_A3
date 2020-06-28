@@ -16,7 +16,7 @@ class Cfg3DEN {
 			};
 		};
         class Skill: Slider {
-            onLoad = QUOTE(_this call FUNC(skill_onLoad););
+            attributeLoad = QUOTE(_this call FUNC(skill_attributeLoad););
             h = "10 * (pixelH * pixelGrid * 0.50)";
 
             class Controls: Controls {
@@ -37,9 +37,16 @@ class Cfg3DEN {
         class AttributeCategories {
             class State {
                 class Attributes {
-                    class Skill {
+                    delete Skill;
+
+                    class GVAR(skill) {
 						displayName = CSTRING(skill_displayName);
 						tooltip = CSTRING(skill_tooltip);
+                        control = "Skill";
+                        property = QGVAR(skill);
+                        typeName = "NUMBER";
+                        defaultValue = "0.5";
+                        expression = "_this setSkill _value;";
 					};
                 };
             };

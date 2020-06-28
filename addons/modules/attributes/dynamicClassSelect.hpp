@@ -107,7 +107,7 @@ class GVAR(dynamicClassSelect): Type {
             colorBackground[] = {0.12549, 0.505882, 0.313726, 1};
         };
         class ListTitle: ctrlStatic {
-            idc = -1;
+            idc = 107;
             x="5 * (pixelW * pixelGrid * 	0.50)";
             y = "16 * 5 * (pixelH * pixelGrid * 	0.50)";
             w="(48 + 82 - 5) * (pixelW * pixelGrid * 	0.50)";

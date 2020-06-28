@@ -36,7 +36,6 @@ GVAR(dynamicAttributesModule) = _modules # 0;
 LOG_1("Loading display3DENEditAttributes (module: '%1').",typeof GVAR(dynamicAttributesModule));
 
 GVAR(allAttributesControls) = [];
-GVAR(reactiveAttributes) = [];
 GVAR(dynamicAttributesValues) = GVAR(dynamicAttributesModule) getVariable [QGVAR(moduleValues), (false call CBA_fnc_createNamespace)];
 
 // Cleanup vars on display unload
@@ -54,10 +53,11 @@ _display displayAddEventHandler ["unload", {
   // Cleanup variables
   GVAR(dynamicAttributesEnabled) = nil;
   GVAR(dynamicAttributesModule) = nil;
-  GVAR(updateModuleWarningsParams) = nil;
+  GVAR(moduleWarningsParams) = nil;
+  GVAR(moduleWarningsSources) = nil;
   GVAR(allAttributesControls) = nil;
-  GVAR(reactiveAttributes) = nil;
   GVAR(dynamicAttributesValues) = nil;
-  GVAR(attributesListHeight) = nil;
-  GVAR(attributesCategoryHeight) = nil;
+
+  uiNamespace setVariable [QGVAR(currentModuleAttributesList), nil];
+  uiNamespace setVariable [QGVAR(currentModuleAttributesCategory), nil];
 }];

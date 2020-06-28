@@ -76,6 +76,7 @@ class GVAR(genSoldiers): GVAR(base) {
             defaultValue = '[]';
             GVAR(assetsTypes[]) = {"CAManBase"};
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(source)) isEqualTo 0);
+            GVAR(onValuesChanged) = QFUNC(dynamicClassSelect_updateUI);
         };
 
         class GVAR(groupCount): GVAR(dynamicEdit) {

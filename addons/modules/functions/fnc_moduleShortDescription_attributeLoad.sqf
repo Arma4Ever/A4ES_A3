@@ -49,5 +49,5 @@ if !(_description isEqualTo "") then {
   _x ctrlCommit 0;
 } forEach [_controlDescGroup, _controlGroup];
 
-// Note: short description can't to be in GVAR(allAttributesControls) because
-// it's above warnings in attributes UI so this control should not change
+// Add control group to controls list
+GVAR(allAttributesControls) pushBack _this;

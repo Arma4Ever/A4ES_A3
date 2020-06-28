@@ -1,3 +1,3 @@
 
 PREP(getSkillInfo);
-PREP(skill_onLoad);
+PREP(skill_attributeLoad);
