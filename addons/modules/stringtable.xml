@@ -36,6 +36,30 @@
     <Key ID="STR_A3CS_Modules_ModuleDescription_Triggers_TriggerSynced_Info">
       <Original>Aktualnie moduł jest zsynchronizowany z triggerem - moduł uruchomi się po aktywacji triggera.</Original>
     </Key>
+    <Key ID="STR_A3CS_Modules_ModuleDescription_isDisposable_Active_Title">
+      <Original>Moduł nie wspiera reaktywacji</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ModuleDescription_isDisposable_Active_Desc">
+      <Original>Moduł po aktywowaniu nie może być już aktywowany ponownie.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ModuleDescription_isDisposable_Inactive_Title">
+      <Original>Moduł wspiera reaktywację</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ModuleDescription_isDisposable_Inactive_Desc">
+      <Original>Moduł po aktywowaniu może być deaktywowany i aktywowany ponownie np. przez powtarzalny trigger.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ModuleDescription_deactivationDisablesEffect_Active_Title">
+      <Original>Deaktywacja modułu wyłącza efekt</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ModuleDescription_deactivationDisablesEffect_Active_Desc">
+      <Original>Jeśli zsynchronizowany z modułem trigger zostanie deaktywowany efekt działania modułu przestanie być widoczny/mieć miejsce.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ModuleDescription_deactivationDisablesEffect_Inactive_Title">
+      <Original>Deaktywacja modułu nie wyłącza efektu</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ModuleDescription_deactivationDisablesEffect_Inactive_Desc">
+      <Original>Jeśli zsynchronizowany z modułem trigger zostanie deaktywowany efekt działania modułu nie przestanie być widoczny/mieć miejsce.</Original>
+    </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_Env_Title">
       <Original>Środowisko wykonania</Original>
     </Key>
@@ -113,6 +137,12 @@
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_SyncRequiredInfo">
       <Original>Do poprawnego działania moduł wymaga synchronizacji z conajmniej jednym z wymienionych wyżej elementów.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ModuleDescription_apiFunctions_Title">
+      <Original>Funkcje API związane z modułem</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ModuleDescription_apiFunctions_Desc">
+      <Original>Wszystkie funkcje API są widoczne w przeglądarce funkcji edytora (%1) lub na &lt;a href="https://github.com/SzwedzikPL/A3CS/wiki"&gt;Wiki A3CS&lt;/a&gt;.</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_Schema_Title">
       <Original>Schemat użycia</Original>

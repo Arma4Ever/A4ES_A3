@@ -25,10 +25,13 @@ private _isGlobal = getNumber (_moduleConfig >> "isGlobal");
 private _canSetArea = (getNumber (_moduleConfig >> "canSetArea")) > 0;
 private _descriptionText = getText (_moduleDescriptionConfig >> "description");
 private _is3DEN = (getNumber (_moduleDescriptionConfig >> "is3DEN")) > 0;
+private _isDisposable = (getNumber (_moduleDescriptionConfig >> "isDisposable")) > 0;
+private _deactivationDisablesEffect = (getNumber (_moduleDescriptionConfig >> "deactivationDisablesEffect")) > 0;
 private _positionInfo = getText (_moduleDescriptionConfig >> "positionInfo");
 private _positionMatters = !(_positionInfo isEqualTo "");
 private _canSyncWith = getArray (_moduleDescriptionConfig >> "canSyncWith");
 private _syncRequired = (getNumber (_moduleDescriptionConfig >> "syncRequired")) > 0;
+private _apiFunctions = getArray (_moduleDescriptionConfig >> "apiFunctions");
 private _schema = getText (_moduleDescriptionConfig >> "schema");
 
 // Check module connections
@@ -48,6 +51,7 @@ private _colorText = '#969696';
 private _iconColor = [_colorText, '#2d9b4c'];
 private _stringType = ['Inactive', 'Active'];
 private _text = format ["<t color='%1' shadow='0' size='1.1'>", _colorText];
+private _sectionTitle = "<t size='1.2' color='#d8d8d8' valign='middle' font='RobotoCondensedBold'>%1</t><br/>";
 
 // Description text
 if !(_descriptionText isEqualTo "") then {
@@ -55,51 +59,91 @@ if !(_descriptionText isEqualTo "") then {
 };
 
 // Trigger section
-_text = _text + format [
-  "%1 %2%3%4",
+_text = _text + ([
   format [
-    "<img size='1.5' color='#2d9b4c' image='\a3\3den\data\displays\display3den\panelright\modetriggers_ca.paa'/>",
+    "<img size='1.5' color='%1' image='\a3\3den\data\displays\display3den\panelright\modetriggers_ca.paa'/> ",
     _iconColor select _isTriggerActivated
   ],
   format [
-    "<t size='1.2' color='#d8d8d8' valign='middle' font='RobotoCondensedBold'>%1</t><br/>",
+    _sectionTitle,
     localize format [
       LSTRING(ModuleDescription_Triggers_%1_Title),
       _stringType select _isTriggerActivated
     ]
   ],
-  format [
-    "%1<br /><br />",
+  [
     localize format [
       LSTRING(ModuleDescription_Triggers_%1_Desc),
       _stringType select _isTriggerActivated
-    ]
-  ],
-  format [
-    "%1",
-    [
-      "",
-      format [
-        "<img color='%1' image='%2'/> %3<br/><br/>",
-        _iconColor select _isSyncedWithTrigger,
-        [
-          "\a3\3den\data\controlsgroups\tutorial\close_ca.paa",
-          "\a3\3den\data\controls\ctrlmenu\picturecheckboxenabled_ca.paa"
-        ] select _isSyncedWithTrigger,
-        localize format [
-          LSTRING(ModuleDescription_Triggers_Trigger%1_Info),
-          ["NotSynced", "Synced"] select _isSyncedWithTrigger
-        ]
+    ],
+    "<br/><br/>"
+  ] joinString "",
+  [
+    "",
+    format [
+      "<img color='%1' image='%2'/> %3<br/><br/>",
+      _iconColor select _isSyncedWithTrigger,
+      [
+        "\a3\3den\data\controlsgroups\tutorial\close_ca.paa",
+        "\a3\3den\data\controls\ctrlmenu\picturecheckboxenabled_ca.paa"
+      ] select _isSyncedWithTrigger,
+      localize format [
+        LSTRING(ModuleDescription_Triggers_Trigger%1_Info),
+        ["NotSynced", "Synced"] select _isSyncedWithTrigger
       ]
-    ] select _isTriggerActivated
-  ]
-];
+    ]
+  ] select _isTriggerActivated
+] joinString "");
 
+if (_isTriggerActivated) then {
+  // Disposable section
+  _text = _text + ([
+    format [
+      "<img size='1.5' color='%1' image='\a3\3den\data\cfgwaypoints\cycle_ca.paa'/> ",
+      _iconColor select !_isDisposable
+    ],
+    format [
+      _sectionTitle,
+      localize format [
+        LSTRING(ModuleDescription_isDisposable_%1_Title),
+        _stringType select _isDisposable
+      ]
+    ],
+    format [
+      "%1<br/><br/>",
+      localize format [
+        LSTRING(ModuleDescription_isDisposable_%1_Desc),
+        _stringType select _isDisposable
+      ]
+    ]
+  ] joinString "");
+
+  // Deactivation Disables Effect section
+  _text = _text + ([
+    format [
+      "<img size='1.5' color='%1' image='\a3\3den\data\cfgwaypoints\dismiss_ca.paa'/> ",
+      _iconColor select _deactivationDisablesEffect
+    ],
+    format [
+      _sectionTitle,
+      localize format [
+        LSTRING(ModuleDescription_deactivationDisablesEffect_%1_Title),
+        _stringType select _deactivationDisablesEffect
+      ]
+    ],
+    format [
+      "%1<br/><br/>",
+      localize format [
+        LSTRING(ModuleDescription_deactivationDisablesEffect_%1_Desc),
+        _stringType select _deactivationDisablesEffect
+      ]
+    ]
+  ] joinString "");
+};
 
 // Execution env section
-_text = _text + format [
-  "%1 %2%3",
-  "<img size='1.5' image='\a3\3den\data\displays\display3den\statusbar\server_ca.paa'/>",
+_text = _text + ([
+  "<img size='1.5' image='\a3\3den\data\displays\display3den\statusbar\server_ca.paa'/> ",
   format [
     "<t size='1.2' color='#d8d8d8' valign='middle' font='RobotoCondensedBold'>%1: %2</t><br/>",
     localize LSTRING(ModuleDescription_Env_Title),
@@ -109,23 +153,22 @@ _text = _text + format [
     ]
   ],
   format [
-    "%1<br /><br />",
+    "%1<br/><br/>",
     localize format [
       LSTRING(ModuleDescription_Env_%1_Desc),
       ['Server', 'Global', 'GlobalJIP'] select _isGlobal
     ]
   ]
-];
+] joinString "");
 
 // Position section
-_text = _text + format [
-  "%1 %2%3",
+_text = _text + ([
   format [
-    "<img size='1.5' color='%1' image='\a3\3den\data\displays\display3den\toolbar\widget_global_ca.paa'/>",
+    "<img size='1.5' color='%1' image='\a3\3den\data\displays\display3den\toolbar\widget_global_ca.paa'/> ",
     _iconColor select _positionMatters
   ],
   format [
-    "<t size='1.2' color='#d8d8d8' valign='middle' font='RobotoCondensedBold'>%1</t><br/>",
+    _sectionTitle,
     localize format [
       LSTRING(ModuleDescription_Position_%1_Title),
       _stringType select _positionMatters
@@ -141,17 +184,16 @@ _text = _text + format [
       ]
     ] select _positionMatters
   ]
-];
+] joinString "");
 
 // Area section
-_text = _text + format [
-  "%1 %2%3",
+_text = _text + ([
   format [
-    "<img size='1.5' color='%1' image='\a3\3den\data\displays\display3den\panelright\submode_marker_area_ca.paa'/>",
+    "<img size='1.5' color='%1' image='\a3\3den\data\displays\display3den\panelright\submode_marker_area_ca.paa'/> ",
     _iconColor select _canSetArea
   ],
   format [
-    "<t size='1.2' color='#d8d8d8' valign='middle' font='RobotoCondensedBold'>%1</t><br/>",
+    _sectionTitle,
     localize format [
       LSTRING(ModuleDescription_Area_%1_Title),
       _stringType select _canSetArea
@@ -167,17 +209,16 @@ _text = _text + format [
       ]
     ] select _canSetArea
   ]
-];
+] joinString "");
 
 // Effect in 3DEN section
-_text = _text + format [
-  "%1 %2%3",
+_text = _text + ([
   format [
-    "<img size='1.5' color='%1' image='\a3\3den\data\cfgwaypoints\seekanddestroy_ca.paa'/>",
+    "<img size='1.5' color='%1' image='\a3\3den\data\cfgwaypoints\seekanddestroy_ca.paa'/> ",
     _iconColor select _is3DEN
   ],
   format [
-    "<t size='1.2' color='#d8d8d8' valign='middle' font='RobotoCondensedBold'>%1</t><br/>",
+    _sectionTitle,
     localize format [
       LSTRING(ModuleDescription_is3DEN_%1_Title),
       _stringType select _is3DEN
@@ -190,7 +231,7 @@ _text = _text + format [
       _stringType select _is3DEN
     ]
   ]
-];
+] joinString "");
 
 // Prepare canSyncWith elements
 private _syncDesc = "";
@@ -229,10 +270,10 @@ if (_canSyncWithSupported) then {
     [_categories, _category, _categoryElements] call CBA_fnc_hashSet;
   } forEach _canSyncWith;
 
-  _syncDesc = format [
-    "%1:<br/>",
-    localize LSTRING(ModuleDescription_canSyncWith_ElementsListTitle)
-  ];
+  _syncDesc = [
+    localize LSTRING(ModuleDescription_canSyncWith_ElementsListTitle),
+    ":<br/>"
+  ] joinString "";
 
   {
     private _category = _x;
@@ -270,45 +311,72 @@ if (_canSyncWithSupported) then {
   } forEach ["main", "module"];
 
   if (_syncRequired) then {
-    _syncDesc = _syncDesc + format [
-      "<br/>%1 %2<br/>",
-      "<img size='1.2' color='#cd2323' image='\a3\3den\data\cfgwaypoints\sentry_ca.paa'/>",
-      localize LSTRING(ModuleDescription_canSyncWith_SyncRequiredInfo)
-    ];
+    _syncDesc = _syncDesc + ([
+      "<br/>",
+      "<img size='1.2' color='#cd2323' image='\a3\3den\data\cfgwaypoints\sentry_ca.paa'/> ",
+      localize LSTRING(ModuleDescription_canSyncWith_SyncRequiredInfo),
+      "<br/>"
+    ] joinString "");
   };
 };
 
 // canSyncWith section
-_text = _text + format [
-  "%1 %2%3",
+_text = _text + ([
   format [
-    "<img size='1.5' color='%1' image='\a3\3den\data\cfg3den\history\connectitems_ca.paa'/>",
+    "<img size='1.5' color='%1' image='\a3\3den\data\cfg3den\history\connectitems_ca.paa'/> ",
     _iconColor select _canSyncWithSupported
   ],
   format [
-    "<t size='1.2' color='#d8d8d8' valign='middle' font='RobotoCondensedBold'>%1</t><br/>",
+    _sectionTitle,
     localize format [
       LSTRING(ModuleDescription_canSyncWith_%1_Title),
       _stringType select _canSyncWithSupported
     ]
   ],
   format ["%1<br/>", _syncDesc]
-];
+] joinString "");
+
+if !(_apiFunctions isEqualTo []) then {
+  _text = _text + ([
+    "<img size='1.5' image='\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\functions_ca.paa'/> ",
+    format [
+      _sectionTitle,
+      localize LSTRING(ModuleDescription_apiFunctions_Title)
+    ],
+    (_apiFunctions apply {
+      [
+        format ["<t font='RobotoCondensedBold'>%1</t> - ", _x # 0],
+        _x # 1
+      ] joinString ""
+    }) joinString "<br/>",
+    "<br/><br/>",
+    "<img size='1.2' color='#cd2323' image='\a3\3den\data\cfgwaypoints\sentry_ca.paa'/> ",
+    format [
+      localize LSTRING(ModuleDescription_apiFunctions_Desc),
+      [
+        localize "STR_3DEN_Display3DEN_MenuBar_Tools_text",
+        " / ",
+        localize "STR_3DEN_Display3DEN_MenuBar_FunctionsViewer_text"
+      ] joinString ""
+    ],
+    "<br/><br/>"
+  ] joinString "");
+};
 
 // Schema section
 if !(_schema isEqualTo "") then {
-  _text = _text + format [
-    "%1 %2%3",
-    "<img size='1.5' image='\a3\3den\data\cfg3den\group\iconcustomcomposition_ca.paa'/>",
+  _text = _text + ([
+    "<img size='1.5' image='\a3\3den\data\cfg3den\group\iconcustomcomposition_ca.paa'/> ",
     format [
-      "<t size='1.2' color='#d8d8d8' valign='middle' font='RobotoCondensedBold'>%1</t><br/><br/>",
+      _sectionTitle,
       localize LSTRING(ModuleDescription_Schema_Title)
     ],
+    //"<br/>"
     format [
       "<t align='center'><img size='15' color='' shadow='0' image='%1'/></t><br/><br/>",
       _schema
     ]
-  ];
+  ] joinString "");
 };
 
 _text = _text + '</t>';

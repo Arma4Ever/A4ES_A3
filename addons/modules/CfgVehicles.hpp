@@ -153,6 +153,9 @@ class CfgVehicles {
             // Same as isDisposable above, except it is just for info in module description
             isDisposable = 1;
 
+            // Set 1 if module effect is hidden/deactivated upon synced trigger deactivation
+            deactivationDisablesEffect = 0;
+
             // Same as is3DEN above, except it is just for info in module description
             is3DEN = 0;
 
@@ -200,6 +203,9 @@ class CfgVehicles {
 
             // List of photos (textures, jpg or paa) with module sync schemas
             schemas[] = {};
+
+            // API functions related to this module, in format {{"name", "desc"}, {"name", "desc"}}
+            apiFunctions[] = {};
         };
     };
 

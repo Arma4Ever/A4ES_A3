@@ -6,12 +6,9 @@ class GVAR(genSoldiers): GVAR(base) {
     editorPreview = "\A3\EditorPreviews_F_Exp\Data\CfgVehicles\C_Man_casual_3_F.jpg";
     category = QGVAR(AI);
     function = QFUNC(genSoldiers_module);
-
     GVAR(validator) = QFUNC(genSoldiers_validate);
-
     canSetArea = 1;
     canSetAreaShape = 1;
-
     class AttributeValues {
         size3[] = {25, 25, -1};
         isRectangle = 0;
