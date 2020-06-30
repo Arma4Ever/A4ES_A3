@@ -25,6 +25,7 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [Camofaces](https://steamcommunity.com/sharedfiles/filedetails/?id=346665985)
 - [MOCAP Melee](https://www.armaholic.com/page.php?id=27262)
 - [TFAR Animations](https://steamcommunity.com/sharedfiles/filedetails/?id=2141020863)
+- Modified version of [JSHK Contamination Gear](https://steamcommunity.com/sharedfiles/filedetails/?id=1738216191)
 
 ## Credits
 Authors of external mods.  

@@ -6,7 +6,18 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"a3cs_common"};
+        requiredAddons[] = {
+            "a3cs_common",
+            "A3_Characters_F",
+            "A3_Characters_F_Exp",
+            "A3_Characters_F_Enoch",
+            "A3_Characters_F_Orange_Facewear",
+            "A3_Characters_F_Enoch_Facewear",
+            "A3_Characters_F_Enoch_Headgear",
+            "A3_Characters_F_Exp_Headgear",
+            "JSHK_contam_gear_suits",
+            "JSHK_contam_gear_masks"
+        };
         author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL"};
         url = ECSTRING(main,URL);
@@ -15,3 +26,5 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgWeapons.hpp"
+#include "CfgGlasses.hpp"

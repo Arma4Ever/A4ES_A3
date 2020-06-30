@@ -35,5 +35,6 @@ VENDOR = {
         "whitelist": ["MOCAP_mov"],
     },
     "@TFAR Animations": {},
+    "JSHK_Contamination_Gear": {}
     # "@Camofaces": {},
 }
