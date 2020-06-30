@@ -52,13 +52,13 @@
       <Original>Deaktywacja modułu wyłącza efekt</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_deactivationDisablesEffect_Active_Desc">
-      <Original>Jeśli zsynchronizowany z modułem trigger zostanie deaktywowany efekt działania modułu przestanie być widoczny/mieć miejsce.</Original>
+      <Original>Jeśli zsynchronizowany z modułem trigger zostanie deaktywowany efekt działania modułu zostanie wyłączony (zniknie lub przestanie działać).</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_deactivationDisablesEffect_Inactive_Title">
       <Original>Deaktywacja modułu nie wyłącza efektu</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_deactivationDisablesEffect_Inactive_Desc">
-      <Original>Jeśli zsynchronizowany z modułem trigger zostanie deaktywowany efekt działania modułu nie przestanie być widoczny/mieć miejsce.</Original>
+      <Original>Jeśli zsynchronizowany z modułem trigger zostanie deaktywowany efekt działania modułu nie zostanie wyłączony.</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_Env_Title">
       <Original>Środowisko wykonania</Original>
@@ -79,7 +79,7 @@
       <Original>globalnie + JIP</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_Env_GlobalJIP_Desc">
-      <Original>Moduł po uruchomieniu wykona się globalnie - na serwerze oraz u wszystkich graczy + wykona się również u każdego gracza dołączającego do rozgrywki.</Original>
+      <Original>Moduł po uruchomieniu wykona się globalnie - na serwerze oraz u wszystkich graczy + wykona się również u każdego gracza dołączającego do rozgrywki w trakcie jej trwania.</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_Position_Active_Title">
       <Original>Pozycja modułu ma znaczenie</Original>

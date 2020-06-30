@@ -371,7 +371,6 @@ if !(_schema isEqualTo "") then {
       _sectionTitle,
       localize LSTRING(ModuleDescription_Schema_Title)
     ],
-    //"<br/>"
     format [
       "<t align='center'><img size='15' color='' shadow='0' image='%1'/></t><br/><br/>",
       _schema
