@@ -67,6 +67,7 @@ class ctrlStaticPicture;
 class ctrlStaticMulti;
 class ctrlStaticTitle;
 class ctrlStaticLine;
+class ctrlStaticOverlay;
 class ctrlTree;
 class ctrlListbox;
 class ctrlListNBox;

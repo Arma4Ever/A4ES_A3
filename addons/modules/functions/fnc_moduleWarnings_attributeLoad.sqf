@@ -18,5 +18,8 @@ GVAR(moduleWarningsParams) = [_this, _ctrlTextGroup, _ctrlText];
   _x ctrlCommit 0;
 } forEach GVAR(moduleWarningsParams);
 
+// Save config reference in control group
+_this setVariable [QGVAR(attributeConfig), _config];
+
 // Add control group to controls list
 GVAR(allAttributesControls) pushBack _this;

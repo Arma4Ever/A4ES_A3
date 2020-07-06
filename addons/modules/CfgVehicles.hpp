@@ -103,6 +103,10 @@ class CfgVehicles {
                 control = QGVAR(moduleShortDescription);
                 property = QGVAR(moduleShortDescription);
             };
+            class GVAR(moduleSubCategory) {
+                control = QGVAR(moduleSubCategory);
+                property = QGVAR(moduleSubCategory);
+            };
             class GVAR(moduleWarnings) {
                 control = QGVAR(moduleWarnings);
                 property = QGVAR(moduleWarnings);
@@ -117,35 +121,54 @@ class CfgVehicles {
                 // Observe combo value by default
                 GVAR(observeValue) = 1;
             };
+
             class GVAR(dynamicEdit): Edit {
                 control = QGVAR(dynamicEdit);
             };
+            class GVAR(dynamicEditMulti3): Edit {
+                control = QGVAR(dynamicEditMulti3);
+            };
+            class GVAR(dynamicEditMulti5): Edit {
+                control = QGVAR(dynamicEditMulti5);
+            };
+            class GVAR(dynamicEditCode): Edit {
+                control = QGVAR(dynamicEditCode);
+                validate = "";
+            };
+            class GVAR(dynamicEditCodeMulti3): Edit {
+                control = QGVAR(dynamicEditCodeMulti3);
+                validate = "";
+            };
+            class GVAR(dynamicEditCodeMulti5): Edit {
+                control = QGVAR(dynamicEditCodeMulti5);
+                validate = "";
+            };
+
             class GVAR(dynamicCheckbox): Checkbox {
                 control = QGVAR(dynamicCheckbox);
                 // Observe checkbox value by default
                 GVAR(observeValue) = 1;
             };
 
-            //CodeMulti5 for init
-
-            class GVAR(dynamicToolboxSide) {
+            class GVAR(dynamicToolboxSide): Default {
                 control = QGVAR(dynamicToolboxSide);
                 typeName = "NUMBER";
             };
-            class GVAR(dynamicToolboxUnitPos) {
-                control = QGVAR(dynamicToolboxUnitPos);
-                typeName = "NUMBER";
-            };
-            class GVAR(dynamicSkillSlider) {
-                control = QGVAR(dynamicSkillSlider);
+            class GVAR(dynamicToolboxUnitStance): Default {
+                control = QGVAR(dynamicToolboxUnitStance);
                 typeName = "NUMBER";
             };
 
-            class EditMulti3: Default {
-                control = "EditMulti3";
+            class GVAR(dynamicSlider): Default {
+                control = QGVAR(dynamicSlider);
+                typeName = "NUMBER";
+                GVAR(range[]) = {0, 1};
+                GVAR(valueUnit) = "%";
             };
-            class EditMulti5: Default {
-                control = "EditMulti5";
+
+            class GVAR(dynamicSkillSlider): Default {
+                control = QGVAR(dynamicSkillSlider);
+                typeName = "NUMBER";
             };
         };
 
@@ -201,7 +224,10 @@ class CfgVehicles {
              */
             syncRequired = 0;
 
-            // List of photos (textures, jpg or paa) with module sync schemas
+            // Info about sync requirements, replaces standard syncRequired info, requires syncRequired param to be greater than 0
+            syncRequiredInfo = "";
+
+            // List of photos (textures, jpg or paa) with module use schemas
             schemas[] = {};
 
             // API functions related to this module, in format {{"name", "desc"}, {"name", "desc"}}
@@ -209,6 +235,6 @@ class CfgVehicles {
         };
     };
 
-    #include "modules\dynamicModule\module.hpp"
-    #include "modules\genSoldiers\module.hpp"
+    #include "modules\generateSoldiers\module.hpp"
+    #include "modules\generatorComposition\module.hpp"
 };

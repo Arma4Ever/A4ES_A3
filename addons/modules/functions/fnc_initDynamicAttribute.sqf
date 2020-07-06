@@ -17,6 +17,9 @@ if (isNil QGVAR(dynamicAttributesEnabled)) exitWith {
 private _observeValue = (getNumber (_config >> QGVAR(observeValue))) isEqualTo 1;
 private _parsedValue = '';
 
+// Save config reference in control group
+_controlGroup setVariable [QGVAR(attributeConfig), _config];
+
 if (_observeValue) then {
   private _attributeSaveFunction = getText (configFile >> "Cfg3DEN" >> "Attributes" >> _controlGroupClass >> "attributeSave");
 
@@ -44,9 +47,10 @@ if (_observeValue) then {
     _controlGroup call _fnc
   };
 
-  // Setup vars for future access
-  _controlGroup setVariable [QGVAR(attributeConfig), _config];
+  // Save saveing function
   _controlGroup setVariable [QGVAR(attributeSaveFunction), _attributeSaveFunction];
+
+  // Update attributes values
   GVAR(dynamicAttributesValues) setVariable [_configName, _parsedValue];
 
   // Add observer
@@ -61,6 +65,16 @@ if (_isReactive) then {
   _controlGroup setVariable [QGVAR(conditionActive), compile _conditionActive];
 };
 
+// Setup onValuesChanged handler
+private _onValuesChangedHandler = getText (_config >> QGVAR(onValuesChanged));
+if !(_onValuesChangedHandler isEqualTo "") then {
+  _controlGroup setVariable [
+    QGVAR(onValuesChanged),
+    missionNamespace getVariable [_onValuesChangedHandler, '']
+  ];
+};
+
+// Setup title
 private _controlTitle = _controlGroup controlsGroupCtrl IDC_DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE;
 private _titleText = format ["%1%2", "%1", getText (_config >> "displayName")];
 _controlTitle ctrlSetStructuredText parseText format [_titleText, ""];
@@ -68,23 +82,25 @@ _controlTitle ctrlSetStructuredText parseText format [_titleText, ""];
 _controlTitle setVariable [QGVAR(attributeTitle), _titleText];
 _controlTitle setVariable [QGVAR(attributeClass), configName _config];
 
-// Update description
+// Setup description if present
 private _controlDescription = _controlGroup controlsGroupCtrl IDC_DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_DESC;
 private _description = getText (_config >> QGVAR(description));
-_controlDescription ctrlSetStructuredText parseText _description;
-private _descHeight = ctrlTextHeight _controlDescription;
+if !(_description isEqualTo "") then {
+  _controlDescription ctrlSetStructuredText parseText _description;
+  private _descHeight = ctrlTextHeight _controlDescription;
 
-// Update description control height
-private _controlDescriptionPos = ctrlPosition _controlDescription;
-_controlDescriptionPos set [3, _descHeight];
-_controlDescription ctrlSetPosition _controlDescriptionPos;
-_controlDescription ctrlCommit 0;
+  // Update description control height
+  private _controlDescriptionPos = ctrlPosition _controlDescription;
+  _controlDescriptionPos set [3, _descHeight];
+  _controlDescription ctrlSetPosition _controlDescriptionPos;
+  _controlDescription ctrlCommit 0;
 
-// Update control group height
-private _controlGroupPos = ctrlPosition _controlGroup;
-_controlGroupPos set [3, (_controlGroupPos # 3) + _descHeight];
-_controlGroup ctrlSetPosition _controlGroupPos;
-_controlGroup ctrlCommit 0;
+  // Update control group height
+  private _controlGroupPos = ctrlPosition _controlGroup;
+  _controlGroupPos set [3, (_controlGroupPos # 3) + _descHeight];
+  _controlGroup ctrlSetPosition _controlGroupPos;
+  _controlGroup ctrlCommit 0;
+};
 
 // Add control group to controls list
 GVAR(allAttributesControls) pushBackUnique _controlGroup;

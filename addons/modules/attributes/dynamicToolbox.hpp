@@ -4,12 +4,14 @@ class GVAR(dynamicToolbox): Toolbox {
     attributeSave = QUOTE(_this call FUNC(dynamicToolbox_attributeSave););
     class Controls: Controls {
         class Title: Title {
-            DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE_PROPERTIES(right);
+            DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE_PROPERTIES(right,0);
+            y = "0.5 * (pixelH * pixelGrid * 0.50)";
+            h = "4.5 * (pixelH * pixelGrid * 0.50)";
         };
         class Value: Value {
             idc = 100;
             rows = 1;
-            columns=0;
+            columns = 0;
             strings[] = {};
             tooltips[] = {};
             values[] = {};
@@ -40,6 +42,8 @@ class GVAR(dynamicToolboxPicture): GVAR(dynamicToolbox) {
             h = "8 * (pixelH * pixelGrid * 0.50)";
             style = "0x02 + 0x30 + 0x800";
         };
-        class GVAR(description): GVAR(description) {};
+        class GVAR(description): GVAR(description) {
+            y = "8 * (pixelH * pixelGrid * 0.50)";
+        };
     };
 };

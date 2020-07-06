@@ -25,6 +25,7 @@ class ctrlEdit;
 class ctrlStructuredText;
 
 #include "CfgEventHandlers.hpp"
+#include "CfgSurfaces.hpp"
 #include "Cfg3DEN.hpp"
 #include "CfgAILevelPresets.hpp"
 #include "CfgAISkill.hpp"

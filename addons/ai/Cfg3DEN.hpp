@@ -47,6 +47,7 @@ class Cfg3DEN {
                         typeName = "NUMBER";
                         defaultValue = "0.5";
                         expression = "_this setSkill _value;";
+                        condition = "objectBrain";
 					};
                 };
             };

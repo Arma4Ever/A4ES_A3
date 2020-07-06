@@ -49,5 +49,8 @@ if !(_description isEqualTo "") then {
   _x ctrlCommit 0;
 } forEach [_controlDescGroup, _controlGroup];
 
+// Save config reference in control group
+_this setVariable [QGVAR(attributeConfig), _config];
+
 // Add control group to controls list
 GVAR(allAttributesControls) pushBack _this;

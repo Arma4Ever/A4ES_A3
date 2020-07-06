@@ -4,6 +4,7 @@ import os
 import sys
 import subprocess
 import shutil
+import datetime
 
 ######## GLOBALS #########
 from vendor import VENDOR
@@ -222,6 +223,8 @@ def main():
 
     print("  A3CS build:")
     print("  Made {}, skipped {}, removed {}, failed to make {}.".format(made, skipped, removed, failed))
+    print("")
+    print("  {}".format(datetime.datetime.now()))
     print("")
 
 if __name__ == "__main__":

@@ -18,23 +18,28 @@ VENDOR = {
     "@Enhanced Movement": {},
     "@Enhanced Movement Rework": {},
     "@GRAD Trenches": {},
+    "@GRAD SlingHelmet": {},
     "@VET_Unflipping": {},
     "@BackpackOnChest": {},
     "@Breaching Charge": {},
     "@The Mighty GAU-8 Avenger": {},
     "@The Mighty GAU-8 Avenger - Less FX More Performance": {},
     "@The Mighty GAU-8 Avenger - ACE": {},
-    "@Zombies and Demons": {},
     "@RSPN Cave Systems for Eden": {},
     "@Eden Extended Objects": {},
     "@O&T Expansion Eden": {
         "blacklist": ["expEden_static_ssDM"],
     },
     "@Metis Nature": {},
-    "@Mocap": {
+    "@TFAR Animations": {},
+    # "@Camofaces": {},
+    "-Zombies and Demons": {},
+    "-Mocap": {
         "whitelist": ["MOCAP_mov"],
     },
-    "@TFAR Animations": {},
-    "JSHK_Contamination_Gear": {}
-    # "@Camofaces": {},
+    "-JSHK_Contamination_Gear": {},
+    "-A3CS_vendor": {},
+    "-MBG Alien Ground Forces": {},
+    "-Alienz": {},
+
 }

@@ -13,5 +13,11 @@
     <Key ID="STR_A3CS_API_squadRadar_wrongColorFormat">
       <Original>_iconColor - kolor musi być w formacie [R,G,B] gdzie każda z wartości to liczba z przedziału 0 - 1</Original>
     </Key>
+    <Key ID="STR_A3CS_API_didGenerateUnits_paramNotArray">
+      <Original>_this - parametrem funkcji musi być tablica</Original>
+    </Key>
+    <Key ID="STR_A3CS_API_didGenerateUnits_notObjectInParam">
+      <Original>_this - podana tablica może zawierać jedynie obiekty</Original>
+    </Key>
   </Package>
 </Project>

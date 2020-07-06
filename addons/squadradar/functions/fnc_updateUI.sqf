@@ -56,7 +56,7 @@ private _showRadar = (
   GVAR(showRadar)
   && {!GVAR(displayInterrupt)}
   && {!EGVAR(ui,screenshotModeEnabled)}
-  && {(vehicle ace_player) isEqualTo ace_player}
+  && {isNull (objectParent ace_player)}
   && {!_isUnconscious}
   && {alive ace_player}
 );

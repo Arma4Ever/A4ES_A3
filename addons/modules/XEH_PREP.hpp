@@ -10,10 +10,12 @@ PREP(dynamicClassSelect_attributeSave);
 PREP(dynamicClassSelect_removeClassFromList);
 PREP(dynamicClassSelect_setupAssetsTree);
 PREP(dynamicClassSelect_showNotification);
+PREP(dynamicClassSelect_updateClassWeight);
 PREP(dynamicClassSelect_updateUI);
 PREP(dynamicCombo_attributeLoad);
 PREP(dynamicEdit_attributeLoad);
 PREP(dynamicSkillSlider_attributeLoad);
+PREP(dynamicSlider_attributeLoad);
 PREP(dynamicToolbox_attributeLoad);
 PREP(dynamicToolbox_attributeSave);
 PREP(handleModuleInit);
@@ -22,6 +24,7 @@ PREP(initDynamicAttribute);
 PREP(initWarnings);
 PREP(moduleDescription_attributeLoad);
 PREP(moduleShortDescription_attributeLoad);
+PREP(moduleSubCategory_attributeLoad);
 PREP(moduleWarnings_attributeLoad);
 PREP(refreshModuleWarnings);
 PREP(refreshAttributes);
@@ -32,5 +35,5 @@ PREP(updateModuleValues);
 PREP(updateWarningsTabUI);
 PREP(validateEntity);
 
-#include "modules\dynamicModule\prep.hpp"
-#include "modules\genSoldiers\prep.hpp"
+#include "modules\generateSoldiers\prep.hpp"
+#include "modules\generatorComposition\prep.hpp"

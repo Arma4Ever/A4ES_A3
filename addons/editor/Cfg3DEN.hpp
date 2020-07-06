@@ -241,6 +241,7 @@ class Cfg3DEN {
 
                     // Do stop
                     // Force flashlight
+                    // if (_value) then {_this setVariable ["BIS_enableRandomization", false, true];};
 				};
 			};
             class GVAR(disableAI) {

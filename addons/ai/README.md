@@ -5,3 +5,4 @@ Setups AI skill and difficulty settings.
 - Setups CfgAISkill.
 - Setups CfgAILevelPresets.
 - Adds custom skill levels.
+- Modifies CfgSurfaces to make AI avoid prone stance.

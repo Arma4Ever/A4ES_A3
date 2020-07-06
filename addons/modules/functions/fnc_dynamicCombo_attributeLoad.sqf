@@ -32,10 +32,12 @@ if (isClass _attributeValuesConfig) then {
 };
 
 // Get options from insert function
+private _hasInsertFunction = false;
 private _insertFunctionName = getText (_config >> QGVAR(insertValues));
 if !(_insertFunctionName isEqualTo "") then {
   private _insertFunction = missionNamespace getVariable [_insertFunctionName, ''];
   if (_insertFunction isEqualType {}) then {
+    _hasInsertFunction = true;
     private _insertOptions = GVAR(dynamicAttributesModule) call _insertFunction;
     if (_insertOptions isEqualType []) then {
       _options append _insertOptions;
@@ -71,8 +73,8 @@ if !(_insertFunctionName isEqualTo "") then {
   };
 } forEach _options;
 
-// Add enable/disable options if options are empty
-if ((lbSize _control) isEqualTo 0) then {
+// Add enable/disable options if options are empty (and insert function is not present - sometimes it is desirable to have empty options list)
+if ((lbSize _control) isEqualTo 0 && !_hasInsertFunction) then {
   {
     private _option = _control lbAdd _x;
     private _value = 1 - _forEachIndex;

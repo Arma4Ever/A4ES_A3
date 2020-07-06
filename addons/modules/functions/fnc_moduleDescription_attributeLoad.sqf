@@ -30,7 +30,7 @@ private _deactivationDisablesEffect = (getNumber (_moduleDescriptionConfig >> "d
 private _positionInfo = getText (_moduleDescriptionConfig >> "positionInfo");
 private _positionMatters = !(_positionInfo isEqualTo "");
 private _canSyncWith = getArray (_moduleDescriptionConfig >> "canSyncWith");
-private _syncRequired = (getNumber (_moduleDescriptionConfig >> "syncRequired")) > 0;
+private _syncRequired = getNumber (_moduleDescriptionConfig >> "syncRequired");
 private _apiFunctions = getArray (_moduleDescriptionConfig >> "apiFunctions");
 private _schema = getText (_moduleDescriptionConfig >> "schema");
 
@@ -310,11 +310,18 @@ if (_canSyncWithSupported) then {
     };
   } forEach ["main", "module"];
 
-  if (_syncRequired) then {
+  if (_syncRequired > 0) then {
+    private _syncRequiredInfo = getText (_moduleDescriptionConfig >> "syncRequiredInfo");
     _syncDesc = _syncDesc + ([
       "<br/>",
       "<img size='1.2' color='#cd2323' image='\a3\3den\data\cfgwaypoints\sentry_ca.paa'/> ",
-      localize LSTRING(ModuleDescription_canSyncWith_SyncRequiredInfo),
+      [
+        _syncRequiredInfo,
+        [
+          localize LSTRING(ModuleDescription_canSyncWith_SyncRequiredInfo_1),
+          localize LSTRING(ModuleDescription_canSyncWith_SyncRequiredInfo_2)
+        ] select (_syncRequired - 1)
+      ] select (_syncRequiredInfo isEqualTo ""),
       "<br/>"
     ] joinString "");
   };
@@ -333,7 +340,7 @@ _text = _text + ([
       _stringType select _canSyncWithSupported
     ]
   ],
-  format ["%1<br/>", _syncDesc]
+  _syncDesc + "<br/>"
 ] joinString "");
 
 if !(_apiFunctions isEqualTo []) then {
@@ -404,6 +411,9 @@ private _groupTextHeight = _controlTextHeight + (5 * (pixelH * pixelGrid * 0.50)
   _x ctrlCommit 0;
 } forEach [_this, _attributesListControl, _attributesCategory];
 
+// Save config reference in control group
+_this setVariable [QGVAR(attributeConfig), _config];
+
 // Add control to controls list
 GVAR(allAttributesControls) pushBackUnique _this;
 
@@ -427,5 +437,3 @@ LOG_1("Triggering initial refresh of module warnings (warnings: %1).",str _warni
 // Trigger initial refresh of attributes
 LOG_1("Triggering initial refresh of attributes (count: %1).",str count GVAR(allAttributesControls));
 call FUNC(refreshAttributes);
-
-// Initial call of values changed handler

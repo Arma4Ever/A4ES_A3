@@ -4,7 +4,7 @@
  * Adds classname to 3DEN dynamicClassSelect class list
  */
 
-params ["_ctrlClassList", "_className", "_weight", ["_playSound", true], ["_notificationBar", controlNull]];
+params ["_ctrlClassList", "_className", "_weight", ["_updateUI", false], ["_playSound", false], ["_notificationBar", controlNull]];
 
 private _config = configFile >> "CfgVehicles" >> _className;
 
@@ -40,7 +40,19 @@ if !(_dlcIcon isEqualTo "") then {
 };
 
 // Update labels
-(ctrlParentControlsGroup _ctrlClassList) call FUNC(dynamicClassSelect_updateUI);
+if (_updateUI) then {
+  [
+    (ctrlParentControlsGroup _ctrlClassList),
+    nil,
+    GVAR(dynamicAttributesValues)
+  ] call FUNC(dynamicClassSelect_updateUI);
+};
 
 // Show notification
-[_playSound, _notificationBar] call FUNC(dynamicClassSelect_showNotification);
+if (_playSound || !(isNull _notificationBar)) then {
+  [
+    format [localize LSTRING(dynamicClassSelect_addedClassToList), _displayName],
+    0,
+    _notificationBar
+  ] call FUNC(dynamicClassSelect_showNotification);
+};

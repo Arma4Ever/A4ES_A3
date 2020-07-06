@@ -1,11 +1,11 @@
 #include "\a3\3DEN\UI\resincl.inc"
 
-#define DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE_PROPERTIES(alignDir) \
+#define DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE_PROPERTIES(alignDir,shadowValue) \
     idc = IDC_DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE; \
     type = 13; \
     size = "4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5"; \
     text = ""; \
-    shadow = 0; \
+    shadow = shadowValue; \
     class Attributes { \
         color = "#FFFFFF"; \
         size = 1; \

@@ -1,0 +1,58 @@
+#include "script_component.hpp"
+/*
+ * Author: Bohemia Interactive, SzwedzikPL
+ * 3DEN moduleSubCategory attributeLoad handler
+ */
+
+private _controlGroup = _this;
+private _controlDescGroup = _controlGroup controlsGroupCtrl 101;
+private _controlTitle = _controlDescGroup controlsGroupCtrl 100;
+private _controlDesc = _controlDescGroup controlsGroupCtrl 102;
+
+private _title = getText (_config >> "displayName");
+private _description = getText (_config >> QGVAR(description));
+
+// Hide description by default in case there's no description defined
+private _groupHeights = [0,0];
+private _groupHeight = 0;
+private _descriptionHeight = 0;
+
+// Setup title
+_controlTitle ctrlSetText _title;
+_controlTitle ctrlcommit 0;
+private _titleHeight = (ctrlposition _controlTitle) # 3;
+
+// Setup description
+if !(_description isEqualTo "") then {
+  _controlDesc ctrlSetStructuredText parseText _description;
+  _descriptionHeight = ctrlTextHeight _controlDesc;
+
+  // Update description control height
+  private _controlDescPos = ctrlPosition _controlDesc;
+  _controlDescPos set [3, _descriptionHeight];
+  _controlDesc ctrlSetPosition _controlDescPos;
+  _controlDesc ctrlCommit 0;
+};
+
+// Update group height with current description height
+_groupHeight = _titleHeight + _descriptionHeight;
+
+_groupHeights = [
+  _groupHeight,
+  // + little bottom margin
+  _groupHeight + (0.5 * 5 * (pixelH * pixelGrid *	0.50))
+];
+
+// Set new group height for all groups
+{
+  private _groupPos = ctrlPosition _x;
+  _groupPos set [3, _groupHeights select _forEachIndex];
+  _x ctrlSetPosition _groupPos;
+  _x ctrlCommit 0;
+} forEach [_controlDescGroup, _controlGroup];
+
+// Save config reference in control group
+_this setVariable [QGVAR(attributeConfig), _config];
+
+// Add control group to controls list
+GVAR(allAttributesControls) pushBack _this;

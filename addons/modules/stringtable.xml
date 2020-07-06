@@ -22,7 +22,7 @@
       <Original>Triggery są obsługiwane</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_Triggers_Active_Desc">
-      <Original>Moduł może być zsynchronizowany z triggerem aby opóźnić jego wykonanie. Domyślnie moduł uruchomi się na starcie misji, po zsynchronizowaniu zsynchronizowaniu modułu z tiggerem, moduł uruchomi się dopiero w momencie aktywacji tiggera.</Original>
+      <Original>Moduł może być zsynchronizowany z triggerem aby opóźnić jego wykonanie. Domyślnie moduł uruchomi się na starcie misji, po zsynchronizowaniu modułu z tiggerem, moduł uruchomi się dopiero w momencie aktywacji tiggera. Jeśli moduł będzie zsynchronizowany z więcej niż jednym triggerem, moduł uruchomi się dopiero gdy wszystkie zsynchronizowane triggery będą aktywowane.</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_Triggers_Inactive_Title">
       <Original>Triggery nie są obsługiwane</Original>
@@ -46,19 +46,19 @@
       <Original>Moduł wspiera reaktywację</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_isDisposable_Inactive_Desc">
-      <Original>Moduł po aktywowaniu może być deaktywowany i aktywowany ponownie np. przez powtarzalny trigger.</Original>
+      <Original>Moduł po aktywowaniu może być dezaktywowany i aktywowany ponownie np. przez powtarzalny trigger.</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_deactivationDisablesEffect_Active_Title">
-      <Original>Deaktywacja modułu wyłącza efekt</Original>
+      <Original>Dezaktywacja modułu wyłącza efekt</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_deactivationDisablesEffect_Active_Desc">
-      <Original>Jeśli zsynchronizowany z modułem trigger zostanie deaktywowany efekt działania modułu zostanie wyłączony (zniknie lub przestanie działać).</Original>
+      <Original>Jeśli zsynchronizowany z modułem trigger zostanie dezaktywowany efekt działania modułu zostanie wyłączony (zniknie lub przestanie działać).</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_deactivationDisablesEffect_Inactive_Title">
-      <Original>Deaktywacja modułu nie wyłącza efektu</Original>
+      <Original>Dezaktywacja modułu nie wyłącza efektu</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_deactivationDisablesEffect_Inactive_Desc">
-      <Original>Jeśli zsynchronizowany z modułem trigger zostanie deaktywowany efekt działania modułu nie zostanie wyłączony.</Original>
+      <Original>Jeśli zsynchronizowany z modułem trigger zostanie dezaktywowany efekt działania modułu nie zostanie wyłączony.</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_Env_Title">
       <Original>Środowisko wykonania</Original>
@@ -135,8 +135,11 @@
     <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_Modules">
       <Original>Moduły</Original>
     </Key>
-    <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_SyncRequiredInfo">
-      <Original>Do poprawnego działania moduł wymaga synchronizacji z conajmniej jednym z wymienionych wyżej elementów.</Original>
+    <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_SyncRequiredInfo_1">
+      <Original>Do poprawnego działania, moduł wymaga synchronizacji z conajmniej jednym elementem o którymś z wymienionych wyżej typie.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_SyncRequiredInfo_2">
+      <Original>Do poprawnego działania, moduł wymaga synchronizacji z jednym (i tylko jednym!) elementem o którymś z wymienionych wyżej typie.</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_apiFunctions_Title">
       <Original>Funkcje API związane z modułem</Original>
@@ -146,6 +149,438 @@
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_Schema_Title">
       <Original>Schemat użycia</Original>
+    </Key>
+  </Package>
+  <Package name="Modules_dynamicClassSelect">
+    <Key ID="STR_A3CS_Modules_dynamicClassSelect_AssetsListTitle">
+      <Original>Wybierz klasy z listy...</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicClassSelect_ClassesEditTitle">
+      <Original>...lub dodaj własne</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicClassSelect_ClassesEdit_Tooltip">
+      <Original>Obsługiwane formaty:\nnazwa_klasy\n"nazwa_klasy"\nnazwa_klasy, nazwa_klasy\n"nazwa_klasy", "nazwa_klasy"\n[nazwa_klasy, nazwa_klasy]\n["nazwa_klasy", "nazwa_klasy"]</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicClassSelect_ButtonRemove_Tooltip">
+      <Original>Usuń zaznaczoną klasę (skrót klaw. DEL)</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicClassSelect_notRecognizedAnyClass">
+      <Original>Nie rozpoznano żadnej klasy o poprawnym typie (piechota)</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicClassSelect_classWordSingle">
+      <Original>klasę</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicClassSelect_classWordFew">
+      <Original>klasy</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicClassSelect_classWordMany">
+      <Original>klas</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicClassSelect_addedClassToList">
+      <Original>Dodano %1 do listy</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicClassSelect_addedClassesToList">
+      <Original>Dodano %1 %2 do listy%3</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicClassSelect_addedClassesToList_Rejected">
+      <Original>(Odrzucono: %1)</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicClassSelect_removedClassToList">
+      <Original>Usunięto %1 z listy</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicClassSelect_addedClassesCount">
+      <Original>Dodane klasy: %1</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicClassSelect_randomWeight">
+      <Original>Waga randomizacji</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicClassSelect_unitsCount">
+      <Original>Ilość jednostek</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicClassSelect_unitsInGroupCount">
+      <Original>Ilość jednostek w grupie: %1</Original>
+    </Key>
+  </Package>
+  <Package name="Modules_generateSoldiers">
+    <Key ID="STR_A3CS_Modules_generateSoldiers_displayName">
+      <Original>Generator piechoty</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_shortDescription">
+      <Original>Opis generatora piechoty</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_description">
+      <Original></Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_positionInfo">
+      <Original>Pozycja modułu oraz jego obszar oznaczają strefę spawnu dla wygenerowanych grup.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_baseSettingsSubCategory">
+      <Original>Ustawienia podstawowe</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_source">
+      <Original>Źródło klas</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_source_Tooltip">
+      <Original>Źródło danych na temat klas wchodzących w skład grupy.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_source_classlist">
+      <Original>Lista klas</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_source_classlist_Desc">
+      <Original>Jednostki w grupach zostaną wybrane na podstawie listy klas zdefiniowanej w module.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_source_composition">
+      <Original>Kompozycja</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_source_composition_Desc">
+      <Original>Grupy zostaną wygenerowane na podstawie wybranej kompozycji. Ilość jednostek w grupie oraz ich wyposażenie będą takie same jak w wybranej kompozycji.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_classListMode">
+      <Original>Tryb listy klas</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_classListMode_Tooltip">
+      <Original>Tryb w jakim ma działać lista klas jednostek zdefiniowanych w module.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_classListMode_random">
+      <Original>Losowy</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_classListMode_random_Desc">
+      <Original>Klasy z listy klas będą dobierane losowo. Wartość klasy (liczba na prawo od nazwy klasy na liście klas) określać będzie wagę jaką będzie miała klasa przy losowaniu. Im większa waga tym większe prawdopodobieństwo, że dana klasa zostanie wybrana. Szczegóły na temat wagowego doboru losowych elementów możesz znaleźć w dokumentacji komendy SQF "selectRandomWeighted" na wiki BI.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_classListMode_strict">
+      <Original>Dokładny</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_classListMode_strict_Desc">
+      <Original>Klasy z listy klas będą dobierane dokładnie tak jak są zdefiniowane na liście. Wartość klasy (liczba na prawo od nazwy klasy na liście klas) określać będzie ilość jednostek danej klasy jaka zostanie stworzona w każdej grupie.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_composition">
+      <Original>Kompozycja</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_composition_Tooltip">
+      <Original>Kompozycja na podstawie której zostanie stworzona każda wygenerowana grupa. Ilość jednostek oraz ich wyposażenie będą dokładnie takie same jak w wybranej kompozycji.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_unitCount">
+      <Original>Ilość jednostek w grupie</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_unitCount_Tooltip">
+      <Original>Ilość jednostek jaka ma zostać stworzona w każdej wygenerowanej grupie.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_groupCount">
+      <Original>Ilość grup</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_groupCount_Tooltip">
+      <Original>Ilość grup jaka ma zostać stworzona przez generator.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_classList">
+      <Original>Lista klas</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_classList_Tooltip">
+      <Original>Lista klas jaka ma zostać użyta przy generowaniu jednostek.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_side">
+      <Original>Strona</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_side_Tooltip">
+      <Original>Strona do której należeć będą wygenerowane grupy.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_skill_Tooltip">
+      <Original>Poziom umiejętności jaki zostanie nadany każdej wygenerowanej jednostce.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_areaSettingsSubCategory">
+      <Original>Ustawienia stref</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_spawnPosMode">
+      <Original>Pozycja spawnu grup</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_spawnPosMode_Tooltip">
+      <Original>Metoda wyboru pozycji spawnu dla generowanych grup.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_spawnPosMode_random">
+      <Original>Losowa w obszarze modułu</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_spawnPosMode_random_Desc">
+      <Original>Dla każdej wygenerowanej grupy zostanie wybrana losowa pozycja w obrębie obszaru modułu.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_spawnPosMode_strict">
+      <Original>Dokładna pozycja modułu</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_spawnPosMode_strict_Desc">
+      <Original>Każda grupa zostanie wygenerowana w miejscu ustawienia modułu (niezależnie od wielkości obszaru modułu). Opcja ta może być przydatna jeśli chcemy mieć stałą pozycje spawnu grupy np. w przypadku obsadzania budynków (garnizon) itp.</Original>
+    </Key>
+
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviourSettingsSubCategory">
+      <Original>Ustawienia zachowania</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour">
+      <Original>Zachowanie</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_Tooltip">
+      <Original>Zachowanie jednostek po wygenerowaniu.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_patrol">
+      <Original>Patrol obszaru</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_patrol_Tooltip">
+      <Original>Jednostki wygenerowanych grup będą patrolować obszar działania swojej grupy. Jednostki włączą latarki jeśli będą dostępne.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_camp">
+      <Original>Obóz</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_camp_Tooltip">
+      <Original>Wygenerowane jednostki zbiorą się wokół pozycji swojej grupy wykonując ambientowe animacje symulujące obóz. W zależności od wielkości grupy, niektóre jednostki z grupy mogą zostać oddelegowane do obsadzenia pojazdów (wolne sloty strzelców w pojazdach oraz bronie statyczne) lub budynków znajdujących się w zasięgu obozu oraz/lub do patrolowania perymetru wokół obozu (jednostki patrolujące włączą latarki jeśli będą dostępne).</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_garrison">
+      <Original>Garnizon</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_garrison_Tooltip">
+      <Original>Wygenerowane jednostki obsadzą budynki oraz pojazdy (wolne sloty strzelców w pojazdach oraz bronie statyczne) znajdujące się w obszarze działania swojej grupy.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_hunt">
+      <Original>Znajdź i zniszcz (patrol)</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_hunt_Tooltip">
+      <Original>Każda wygenerowana grupa będzie oczekiwać na swojej pozycji do czasu, aż jakaś wroga jednostka znajdzie się w jej obszarze działania. Po wejściu wrogich jednostek w obszar działania grupy, grupa wybierze najbliższy dostępny cel i ruszy w jego kierunku w formacji patrolowej (symulując patrol obszaru, stopniowo zbliżając się do wyznaczonego celu). Grupa włączy wskaźniki laserowe i latarki jeśli będą dostępne. Po wejściu w kontakt z wrogiem grupa odpali czerwoną flarę (symulując sygnał dla sojuszniczych jednostek o napotkaniu wroga w obszarze działań - jest to tylko efekt/symulacja, flara nie ma to żadnego specjalnego efektu na zachowanie innych grup).</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_creep">
+      <Original>Znajdź i zniszcz (stealth)</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_creep_Tooltip">
+      <Original>Każda wygenerowana grupa będzie oczekiwać na swojej pozycji do czasu, aż jakaś wroga jednostka znajdzie się w jej obszarze działania. Po wejściu wrogich jednostek w obszar działania grupy, grupa wybierze najbliższy dostępny cel i ruszy w jego kierunku starając się pozostać niewykrytym przez całą drogę. Jeśli grupa będzie poruszać się w lesie, jednostki będą zmieniać swoją postawę zależnie od odległości od celu, im cel będzie bliżej tym niższa postawa jednostki (trucht w przykucu, czołganie się itp.). Jeśli celem jest pojazd, grupa będzie starała się uniknąć wykrycia leżąc. Jeśli grupa zbliży się do celu na mniej niż 40 metrów lub wcześniej zostanie wykryta/ostrzelana, grupa otworzy ogień do wyznaczonego celu oraz wrogich jednostek wokoło.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_rush">
+      <Original>Znajdź i zniszcz (QRF)</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_rush_Tooltip">
+      <Original>Każda wygenerowana grupa będzie oczekiwać na swojej pozycji do czasu, aż jakaś wroga jednostka znajdzie się w jej obszarze działania. Po wejściu wrogich jednostek w obszar działania grupy, grupa wybierze najbliższy dostępny cel i ruszy w jego kierunku w maksymalnym możliwym tempie. Po napotkaniu przeciwnika grupa otworzy ogień do każdego celu niezależnie od swojego uzbrojenia (w tym do pojazdów lądowych i śmigłowców) starając się go przygwoździć, uszkodzić lub zniszczyć.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_range">
+      <Original>Zasięg obszaru działań</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_patrolRange_Tooltip">
+      <Original>Promień patrolowanego przez grupę obszaru (zasieg skryptowego generatora pozycji waypointów patrolu) liczony od miejsca spawnu grupy.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_campRange_Tooltip">
+      <Original>Promień obszaru w którym grupa ma wyznaczyć miejsce obozowiska (zasięg skryptowego skanu w poszukiwaniu możliwych pozycji obozu oraz budynków, pojazdów i broni statycznych do obsadzenia) liczony od miejsca spawnu grupy.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_garrisonRange_Tooltip">
+      <Original>Promień obszaru w którym grupa ma wyznaczyć garnizon (zasięg skryptowego skanu w poszukiwaniu możliwych do obsadzenia budynków, pojazdów i broni statycznych) liczony od miejsca spawnu grupy.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_hcrRange_Tooltip">
+      <Original>Promień obszaru w którym grupa ma szukać celów (zasięg skryptowego skanu w poszukiwaniu wrogich jednostek) liczony od miejsca spawnu grupy (lub pozycji lidera jeśli opcja lider jako centrum obszaru działania jest zaznaczona).</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_hcrLeaderAsCenter">
+      <Original>Lider jako centrum obszaru działań</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_hcrLeaderAsCenter_Tooltip">
+      <Original>Domyślnie obszar działań grupy jest liczony od miejsca jej spawnu, co sprawia, iż grupa zachowuje się w sposób raczej defensywny, działąc jedynie na stałym obszarze. Po zaznaczeniu tej opcji obszar działań grupy będzie liczony od aktualnej (regularnie odświeżanej) pozycji jej lidera co pozwala na uzyskanie efektu bardziej ofensywnych grup nieograniczonych żadnym stałym obszarem działań.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_hcrTargetOnlyPlayers">
+      <Original>Sprawdzaj tylko grywalne jednostki</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_hcrTargetOnlyPlayers_Tooltip">
+      <Original>Po włączeniu tej opcji tylko grywalne jednostki będą sprawdzane pod kątem obecności w strefie działań grup i tylko one będą mogły być wyznaczone jako cel grupy. Ta opcja ma wpływ jedynie na dobór celów w których kierunku zmierzać będzie dana grupa, nie ma wpływu na zachowanie w walce. Grupy wciąż będą reagować normalnie na napotkane wrogie jednostki, niezależnie czy są graczami czy nie.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviourAreaBoundary">
+      <Original>Ograniczenie obszaru działań</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviourAreaBoundary_Tooltip">
+      <Original>Ograniczenie obszaru działań grupy do elementów w wybranym obszarze. Ograniczenie ma wpływ na skrypty skanujące obszar działania grupy. Jeśli obszar działania grupy wykracza poza wybrany obszar ograniczający wtedy elementy poza obszarem ograniczającym będą ignorowane nawet jeśli same w sobie znajdują się w zasięgu obszaru działania grupy. Dzięki temu możemy ograniczyć działanie wygenerowanych grup (patrolowania, szukania celów itp.) do konkretnego obszaru niezależnie od ich pozycji spawnu.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviourAreaBoundary_none">
+      <Original>Brak</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviourAreaBoundary_none_Tooltip">
+      <Original>Obszar działania grupy nie będzie ograniczany. Wszystkie elementy znajdujące się w obszarze działania grupy będą brane pod uwagę przy skanowaniu.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviourAreaBoundary_module">
+      <Original>Obszar modułu</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviourAreaBoundary_module_Tooltip">
+      <Original>Obszar działań grupy będzie ograniczony przez obszar modułu. Elementy poza obszarem modułu będą ignorowane w skanach obszaru działania grupy (np. waypointy patrolowe nie będą wyznaczane poza obszarem modułu, wrogie jednostki poza obszarem modułu nie będą wyznaczane jako cele itp.).</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviourAreaBoundary_trigger">
+      <Original>Zsynchronizowany trigger</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviourAreaBoundary_trigger_Tooltip">
+      <Original>Obszar działań grupy będzie ograniczony przez obszar zsynchronizowanego z modułem triggera. Elementy poza obszarem zsynchronizowanego z modułem triggera będą ignorowane w skanach obszaru działania grupy (np. waypointy patrolowe nie będą wyznaczane poza obszarem zsynchronizowanego triggera, wrogie jednostki poza obszarem zsynchronizowanego triggera nie będą wyznaczane jako cele itp.). Jeśli z modułem zsynchronizowany jest więcej niż jeden trigger, pierwszy dostępny zostanie wybrany. W przypadku gdy z modułem nie będzie zsynchronizowany żaden trigger opcja ta będzie ignorowana (taki sam efekt jak przy wybraniu opcji "Brak").</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_patrolWaypointsCount">
+      <Original>Ilość waypointów</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_patrolWaypointsCount_Tooltip">
+      <Original>Ilość waypointów z których sładać się będzie trasa patrolu.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_patrolDynamicPattern">
+      <Original>Dynamiczna trasa patrolu</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_patrolDynamicPattern_Tooltip">
+      <Original>Grupa wygeneruje nową trasę patrolu po zakończeniu poprzedniej trasy.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_campTeleportUnits">
+      <Original>Przesnieś na pozycje</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_campTeleportUnits_Tooltip">
+      <Original>Natychmiastowo przenieś jednostki (teleport) na wyznaczone w obozie pozycje.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_garrisonExitTrigger">
+      <Original>Warunek opuszczenia pozycji</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_garrisonExitTrigger_Tooltip">
+      <Original>Warunek po spełnieniu którego jednostka będzie mogła opuścić zajmowaną w garnizonie pozycję (warunek dotyczy pojedynczych jednostek, nie całej grupy).</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_garrisonExitTrigger_none">
+      <Original>Brak</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_garrisonExitTrigger_none_Tooltip">
+      <Original>Żadna jednostka nie opuści zajmowanej w garnizonie pozycji niezaleznie od sytuacji.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_garrisonExitTrigger_random">
+      <Original>Losowy</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_garrisonExitTrigger_random_Tooltip">
+      <Original>Każdej jednostce w garnizonie zostanie przydzielony losowy warunek (każdej jednostce osobno, różne jednostki mogą mieć różne warunki w tym samym garnizonie).</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_garrisonExitTrigger_firedNear">
+      <Original>Strzał niedaleko</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_garrisonExitTrigger_firedNear_Tooltip">
+      <Original>Jednostka może opuścić zajmowaną w garnizonie pozycję jeśli usłyszy strzał wrogiej jednostki niedaleko (mniej niż 10-20m).</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_garrisonExitTrigger_firedDirect">
+      <Original>Otwarcie ognia</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_garrisonExitTrigger_firedDirect_Tooltip">
+      <Original>Jednostka może opuścić zajmowaną w garnizonie pozycję jeśli zauważy wrogą jednostkę i otworzy do niej ogień.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_garrisonExitTrigger_hit">
+      <Original>Otrzymanie obrażeń</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_garrisonExitTrigger_hit_Tooltip">
+      <Original>Jednostka może opuścić zajmowaną w garnizonie pozycję jeśli zostanie trafiona/ranna.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_garrisonExitTrigger_all">
+      <Original>Wszystkie</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_garrisonExitTrigger_all_Tooltip">
+      <Original>Wszystkie warunki będą obowiązywać każdą jednostkę w garnizonie.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_garrisonSortPosByHeight">
+      <Original>Sortuj pozycje po wysokości</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_garrisonSortPosByHeight_Tooltip">
+      <Original>Po zaznaczeniu tej opcji grupa będzie obsadzać budynki zaczynając od pozycji znajdujących się najwyżej.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_garrisonTeleportUnits">
+      <Original>Przesnieś na pozycje</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_garrisonTeleportUnits_Tooltip">
+      <Original>Natychmiastowo przenieś jednostki (teleport) na wyznaczone w garnizonie pozycje.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_hcrScriptInterval">
+      <Original>Częstotliwość skanowania</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_hcrScriptInterval_Tooltip">
+      <Original>Jak często skrypt ma sprawdzać obszar działań grupy w poszukiwaniu celów. Im częstsze skanowanie tym dokładniejsze zachowanie grupy. Pamiętaj, że każdy skan odbywa się kosztem obciążenia serwera i sieci.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_eventHandlersSubCategory">
+      <Original>Obsługa zdarzeń</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_addUnitPostInit">
+      <Original>Dodaj handler initu jednostki</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_addUnitPostInit_Tooltip">
+      <Original>Dodaj własny skrypt uruchamiany dla każdej wygenerowanej jednostki.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_unitPostInit">
+      <Original>Init jednostki</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_unitPostInit_Tooltip">
+      <Original>Skrypt zostanie wykonany dla każdej wygenerowanej jednoski po jej stworzeniu i przekazaniu do właściciela (serwera lub headlessa) ale jeszcze przed uruchomieniem skryptu zachowania. Podany skrypt zostanie wykonany na maszynie gdzie jednostka jest lokalna (serwer lub headless). Parametry: _this = wygenerowana jednostka. Uwaga: ze względu na to, że przekazanie własności jest operacją sieciową nie ma gwarancji kolejności wykonania skryptów (kolejnośc wykonania może być różna od kolejności wygenerowania).</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_addGroupPostInit">
+      <Original>Dodaj handler initu grupy</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_addGroupPostInit_Tooltip">
+      <Original>Dodaj własny skrypt uruchamiany dla każdej wygenerowanej grupy.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_groupPostInit">
+      <Original>Init grupy</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_groupPostInit_Tooltip">
+      <Original>Skrypt zostanie wykonany dla każdej wygenerowanej grupy po jej stworzeniu (i wszystkich jej jednostek) i przekazaniu do właściciela (serwer lub headless) ale jeszcze przed uruchomieniem skryptu zachowania. Podany skrypt zostanie wykonany na maszynie gdzie grupa jest lokalna (serwer lub headless). Parametry: _this = wygenerowana grupa. Uwaga: ze względu na to, że przekazanie własności jest operacją sieciową nie ma gwarancji kolejności wykonania skryptów (kolejnośc wykonania może być różna od kolejności wygenerowania).</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_addModulePostExec">
+      <Original>Dodaj handler wykonania modułu</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_addModulePostExec_Tooltip">
+      <Original>Dodaj własny skrypt uruchamiany po wykonaniu modułu (wszystkie grupy i ich jednostki zostały wygenerowane).</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_modulePostExec">
+      <Original>Handler wykonania modułu</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_modulePostExec_Tooltip">
+      <Original>Skrypt zostanie wykonany na serwerze (i tylko na serwerze, niezależnie od ustawień i obecności headlessa) w momencie gdy cały moduł się wykona - wszystkie grupy i ich jednostki zostały wygenerowane i przekazane do właściciela (serwer lub headless). Parametry: _this = moduł w którym zdeklarowaliśmy skrypt.\n\nTIP: Jako, że podany skrypt wykona się tylko na serwerze, można wykorzystać go jako inicjatora innych skryptów które chcemy wykonać w momencie wygenerowania przez moduł jednostek lub zmienić wartości flag używanych w triggerach (np. przy sprawdzaniu czy teren został wyczyszczony z wygenerowanych jednostek). Przykład: dodajemy skrypt wykonania modulu:\nmodul_wioski_wykonany = true;\npublicVariable 'modul_wioski_wykonany';\n\n Następnie triggerze sprawdzającym teren wioski ustawiamy aktywację OPFOR, typ "not present"a w warunku triggera podajemy:\n(modul_wioski_wykonany isEqualTo true) and this\n\n(isEqualTo zostało użyte, ponieważ przed wykonaniem modułu zmienna nie będzie istnieć - zwróci nil).</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_extraSettingsSubCategory">
+      <Original>Ustawienia dodatkowe</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableBISRandomization">
+      <Original>Wyłącz randomizacje nakryć głowy</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableBISRandomization_Tooltip">
+      <Original>Wyłącza armową randomizację hełmów, masek i gogli dla wygenerowanych jednostek.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableDynamicSim">
+      <Original>Wyłącz dynamiczną symulację</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableDynamicSim_Tooltip">
+      <Original>Wyłącz dynamiczną symulację dla wygenerowanych grup. Pamiętaj, że ma to realny wpływ na performance serwera, headlessa jak i graczy na serwerze. Użyj tej opcji tylko jeśli wiesz co robisz.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableHeadless">
+      <Original>Wyłącz przekazanie do headlessa</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableHeadless_Tooltip">
+      <Original>Blokuje przekazanie do headlessa (jeśli jest dostępny) wygenerowanych grup. Pamiętaj, że ma to realny wpływ na performance serwera. Użyj tej opcji tylko jeśli wiesz co robisz.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_addToCurators">
+      <Original>Dodaj grupy do obiektów zeusa</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_addToCurators_Tooltip">
+      <Original>Dodaje wygenerowane grupy jako obiekty edytowalne wszystkim dostępnym zeusom.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_emptyCompositions">
+      <Original>Brak (nie wykryto żadnych kompozycji)</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_emptyCompositions_Tooltip">
+      <Original>Nie wykryto żadnych kompozycji. Aby móc użyć kompozycji musisz ją najpierw stworzyć (moduł "Kompozycja generatora") oraz nadać jej unikalną nazwę (w atrybutach modułu "Kompozycja generatora").</Original>
+    </Key>
+  </Package>
+  <Package name="Modules_generatorComposition">
+    <Key ID="STR_A3CS_Modules_generatorComposition_displayName">
+      <Original>Kompozycja generatora</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generatorComposition_shortDescription">
+      <Original>
+        Moduł tworzy kompozycję (szablonu) grupy na podstawie grupy połączonej z modułem jednostki. Użycie kompozycji pozwala na dokładne odtworzenie grupy (wraz z wyposażeniem) w generatorach. Aby użyć kompozycji wystarzy stworzyć w edytorzę grupę zawierającą typy oraz ilość jednostek którą chcemy później generować, skonfigurować wyposażenie jednostek (za pomocą arsenału w edytorze) a następnie zsynchronizować (połączyć) którąś jednostkę z grupy (najlepiej lidera grupy) z modułem. Po dodaniu modułu kompozycji w edytorze oraz nadaniu jej nazwy, nazwa kompozycji będzie dostępna na liście kompozycji w generatorach.
+      </Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generatorComposition_description">
+      <Original>Moduł uruchamia się na starcie misji i zapisuje zestaw klas i wyposażenie jednostek połączonej z modułem grupy. Moduł kompozycji zapisuje jedynie klasy i wyposażenie jednostek, pozostałe ustawienia jak poziom umiejętności, ranga itp, nie są używane (obowiązywać będą ustawienia modułu generatora). Jeden moduł może być połączony tylko z jedną jednostką której grupy chcemy użyć jako kompozycji. Jeśli w grupie znajdują się pojazdy, one oraz ich załogi będą ignorowane przy zapisie kompozycji (tylko jednostki piechoty "na nogach" będą zapisane jako kompozycja). Pamiętaj, że użycie kompozycji w module generatora stworzy dokładną kopię użytej w kompozycji grupy, dostosuj ilość jednostek w grupie zgodnie z przeznaczeniem kompozycji (np. osobna kompozycja dla jednostek patrolujących, osobna dla załóg garnizonów itp). Strona użytej grupy nie ma znaczenia przy tworzeniu kompozycji, przy generowaniu jednostek użyta będzie strona ustawiona w generatorze (np. możesz stworzyć kompozycję na podstawie grupy o stronie CIV albo INDEP a następnie użyć jej w generatorze do generowania grup po stronie OPFOR).</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generatorComposition_syncRequiredInfo">
+      <Original>Do poprawnego działania, moduł wymaga synchronizacji z jedną jednostką (i tylko jedną!) której grupa zostanie użyta jako kompozycja (najlepiej z liderem tej grupy). Połączenie modułu z więcej niż jedną jednostką będzie traktowane jako błąd! W grupie połączonej jednostki nie powinien znajdować się żaden pojazd (pojazdy oraz ich załogi będą ignorowane).</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generatorComposition_Attributes_id">
+      <Original>Nazwa kompozycji</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generatorComposition_Attributes_id_Tooltip">
+      <Original>Nazwa kompozycji używana jako identyfikator kompozycji w generatorach.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generatorComposition_Attributes_deleteUnits">
+      <Original>Usuń zapisane jednostki</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generatorComposition_Attributes_deleteUnits_Tooltip">
+      <Original>Usuwa jednostki użyte w kompozycji po jej zapisaniu. Włączenie tej opcji jest zalecane jeśli połączona grupa została stworzona tylko na potrzeby kompozycji i sama w sobie nie jest potrzebna w scenariuszu.</Original>
     </Key>
   </Package>
 </Project>
