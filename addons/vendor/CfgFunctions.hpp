@@ -1,3 +1,0 @@
-class CfgFunctions {
-    delete RyanZM;
-};

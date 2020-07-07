@@ -13,25 +13,4 @@ class CfgMagazines {
         mass = 1;
         initSpeed = 310;
     };
-
-    class Default;
-	class CA_Magazine;
-	class zetaborn_rifle_mag: CA_Magazine {
-        scope = 1;
-        scopeArsenal = 0;
-	};
-	class HandGrenade;
-	class zetaborn_grenade_mag: HandGrenade {
-        scope = 1;
-        scopeArsenal = 0;
-	};
-	class CA_LauncherMagazine;
-	class zetaborn_at_mag: CA_LauncherMagazine {
-        scope = 1;
-        scopeArsenal = 0;
-	};
-	class zetaborn_krak_mag: CA_LauncherMagazine {
-        scope = 1;
-        scopeArsenal = 0;
-	};
 };

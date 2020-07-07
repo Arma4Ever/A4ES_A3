@@ -18,7 +18,6 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [Backpack On Chest](https://github.com/DerZade/BackpackOnChest)
 - [Arma 3 Breaching Charge](https://github.com/ampersand38/Arma-3-Breaching-Charge)
 - [Mighty Gau-8 Avenger](https://github.com/Zabuzard/MightyGau-8Avenger)
-- [Zombies and Demons](https://steamcommunity.com/sharedfiles/filedetails/?id=501966277) (with permission from author)
 - [RSPN Cave Systems for Eden](https://steamcommunity.com/sharedfiles/filedetails/?id=1678490017)
 - [O&T Expansion Eden](https://steamcommunity.com/sharedfiles/filedetails/?id=1923321700)
 - [Metis Nature](https://steamcommunity.com/sharedfiles/filedetails/?id=1951690856)
@@ -27,9 +26,6 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [MOCAP Melee](https://www.armaholic.com/page.php?id=27262)
 - [TFAR Animations](https://steamcommunity.com/sharedfiles/filedetails/?id=2141020863)
 - Modified version of [JSHK Contamination Gear](https://steamcommunity.com/sharedfiles/filedetails/?id=1738216191)
-- [MBG Alien Ground Forces](https://steamcommunity.com/sharedfiles/filedetails/?id=1749774001)
-- [Alienz](https://steamcommunity.com/sharedfiles/filedetails/?id=2052502998)
-
 
 ## Credits
 Authors of external mods.  

@@ -8,16 +8,10 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "a3cs_common",
-            "A3_Weapons_F_Mark_LongRangeRifles_DMR_02",
-            "Ryanzombies",
-            "Ryanzombiesanims",
-            "Ryanzombiesfaces",
-            "ryanzombiesfunctions",
-            "mbg_aliens_01",
-            "zetaborn"
+            "A3_Weapons_F_Mark_LongRangeRifles_DMR_02"
         };
         author = ECSTRING(main,Author);
-        authors[] = {"Ryan", "Mondkalb", "IceBreakr/BadBenson", "SzwedzikPL"};
+        authors[] = {"SzwedzikPL"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
@@ -30,8 +24,5 @@ class Mode_SemiAuto;
 #include "CfgLights.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgSoundEffects.hpp"
-#include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
-#include "CfgGroups.hpp"
-#include "CfgFunctions.hpp"
 #include "effects.hpp"

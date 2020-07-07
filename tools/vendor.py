@@ -33,13 +33,9 @@ VENDOR = {
     "@Metis Nature": {},
     "@TFAR Animations": {},
     # "@Camofaces": {},
-    "-Zombies and Demons": {},
     "-Mocap": {
         "whitelist": ["MOCAP_mov"],
     },
     "-JSHK_Contamination_Gear": {},
     "-A3CS_vendor": {},
-    "-MBG Alien Ground Forces": {},
-    "-Alienz": {},
-
 }
