@@ -61,9 +61,7 @@ if (tolower _logClass == "debuglogs") then {
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_TotalVehicleCount), str _totalVehicles];
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_TotalObjectCount), str _totalObjects];
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_ModuleGenAICount), str _modulesGenAI];
-    _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_ModuleGenAttackCount), str _modulesGenAttack];
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_CuratorCount), str _curatorCount];
-
 };
 if (tolower _logClass == "playerslist") then {
     private _players = (allPlayers - entities "HeadlessClient_F");

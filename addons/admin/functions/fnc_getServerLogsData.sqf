@@ -31,7 +31,7 @@ if (tolower _logClass == "debuglogs") then {
     private _modulesGenAttack = 0;
     private _curatorCount = 0;
 
-    private _headlessClient = missionNamespace getVariable [QEGVAR(mm,headlessClient), objNull];
+    private _headlessClient = QEGVAR(headless,headlessClient);
     private _headlessClientOwner = 0;
     if (!isNull _headlessClient) then {
         _headlessClientOwner = owner _headlessClient;
@@ -62,8 +62,8 @@ if (tolower _logClass == "debuglogs") then {
 
     _totalVehicles = count (vehicles select {_x isKindOf "AllVehicles"});
     _totalObjects = count (allMissionObjects "All");
-    _modulesGenAI = count (entities QEGVAR(mm,module_genSoldiers));
-    _modulesGenAttack = count (entities QEGVAR(mm,module_genAttack));
+    _modulesGenAI = count (entities QEGVAR(modules,generateSoldiers));
+    _modulesGenAttack = 0;
     _curatorCount = count (allCurators select {!(_x getVariable [QGVAR(adminCurator), false])});
 
     _logData = [

@@ -92,7 +92,7 @@ private _groupCount = (_logic getVariable [QGVAR(groupCount), 1]) max 1;
 private _spawnPosMode = _logic getVariable [QGVAR(spawnPosMode), 0];
 private _unitSkill = (_logic getVariable [QGVAR(skill), 0.5]) max 0.01;
 private _enableDynSim = !(_logic getVariable [QGVAR(disableDynamicSim), false]);
-private _transferToHeadless = !(_logic getVariable [QGVAR(disableHeadless), false]);
+private _disableHeadless = _logic getVariable [QGVAR(disableHeadless), false];
 private _addToCurators = _logic getVariable [QGVAR(addToCurators), false];
 
 // Get logic area
@@ -129,7 +129,8 @@ private _unitInit = if (
 // Calc unit spawn range based on unit count
 private _unitSpawnRange = _unitCount * 1.5;
 private _unitMaxIndex = _unitCount - 1;
-
+private _headlessTransfer = isMultiplayer && {!_disableHeadless} && {!(isNull EGVAR(headless,headlessClient))};
+private _headlessOwner = if (_headlessTransfer) then {owner EGVAR(headless,headlessClient)} else {-1};
 
 #ifdef DEBUG_MODE_FULL
 private _logCompositionId = _logic getVariable [QGVAR(composition), ""];
@@ -144,10 +145,10 @@ for "_i" from 1 to _groupCount do {
     LOG('Generating groups for EXEC_MODULE_NAME aborted - createdGroup is null: probably side group limit is reached.');
   };
 
-  // Set group ID
+  // Set custom groupId in debug mode
   #ifdef DEBUG_MODE_FULL
   private _groupId = format ["generateSoldiers #%1", _i - 1];
-  _group setGroupId [_groupId];
+  _group setGroupIdGlobal [_groupId];
   #endif
 
   LOG_1('Generating "%1" group.',_groupId);
@@ -178,23 +179,44 @@ for "_i" from 1 to _groupCount do {
     ];
   };
 
+  // Disable future transfers of this group
+  _group setVariable [QEGVAR(headless,disableTransfer), true];
+
   // Dynamic simulation
   _group enableDynamicSimulation _enableDynSim;
 
-  // Curators
+  // Get group units
+  private _units = units _group;
+
+  // Add units to curators
   if (_addToCurators) then {
-    private _units = units _group;
     {
       _x addCuratorEditableObjects [_units, true];
     } forEach allCurators;
   };
 
-  //if (isMultiplayer && headless?) then {
-    // transfer group to headless
-    // on confirmation send initGroup remoteExec
-  //} else {
-  [_group, _groupPos, _logic, _boundaryArea] call FUNC(generateSoldiers_initGroup);
-  //};
+  // Save generator in units locally (for debug and admin panel)
+  {
+    _x setVariable [QGVAR(generator), _logic];
+  } forEach _units;
+
+  // Transfter to headless
+  private _transfered = false;
+  if (_headlessTransfer) then {
+    _transfered = _group setGroupOwner _headlessOwner;
+    LOG_1('Transfer group to headless attempted (success: %1).',str _transfered);
+  };
+
+  // Init group
+  if (_transfered) then {
+    LOG_1('Executing initGroup on headless (headlessOwner: %1).',str _headlessOwner);
+    [_group, _groupPos, _logic, _boundaryArea] remoteExecCall [QFUNC(generateSoldiers_initGroup), _headlessOwner];
+  } else {
+    LOG('Executing initGroup locally.');
+    [_group, _groupPos, _logic, _boundaryArea] call FUNC(generateSoldiers_initGroup);
+  };
+
+  LOG_1('Group "%1" generated.',_groupId);
 
   // Wait a while to avoid sync problems
   sleep 0.5;

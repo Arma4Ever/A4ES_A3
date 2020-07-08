@@ -6,6 +6,19 @@
 
 params ["_group", "_groupPos", "_logic", "_boundaryArea"];
 
+if !(local _group) exitWith {
+  LOG_1('Init of %1 group postponed until group is local',str (groupId _group));
+  [
+    {
+      local (_this # 0)
+    },
+    {
+      _this call FUNC(generateSoldiers_initGroup);
+    },
+    _this
+  ] call CBA_fnc_waitUntilAndExecute;
+};
+
 LOG_3('Starting init of %1 group (unitCount: %2 boundaryArea: %3).',str (groupId _group),str (count (units _group)),str _boundaryArea);
 
 private _applyLoadout = (_logic getVariable [QGVAR(source), 0]) isEqualTo 1;
