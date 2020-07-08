@@ -8,7 +8,8 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "a3cs_common",
-            "A3_Weapons_F_Mark_LongRangeRifles_DMR_02"
+            "A3_Weapons_F_Mark_LongRangeRifles_DMR_02",
+            "vurtual_seat"
         };
         author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL"};
@@ -21,8 +22,10 @@ class Mode_SemiAuto;
 
 #include "CfgAmmo.hpp"
 #include "CfgCloudlets.hpp"
+#include "CfgFunctions.hpp"
 #include "CfgLights.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgSoundEffects.hpp"
+#include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "effects.hpp"

@@ -64,4 +64,29 @@ class CfgGlasses {
 	class JSHK_contam_mask_m04_blk_hood: JSHK_contam_mask_m04_hoodless {
         GVAR(protectedParts[]) = {"face", "head"};
     };
+
+    class avon_fm12: None {
+        GVAR(airFilter) = 3;
+        GVAR(protectedParts[]) = {"face"};
+	};
+	class avon_fm12_strapless: None {
+        GVAR(airFilter) = 3;
+        GVAR(protectedParts[]) = {"face"};
+	};
+	class avon_ct12: None {
+        GVAR(airFilter) = 3;
+        GVAR(protectedParts[]) = {"face"};
+	};
+	class avon_ct12_strapless: None {
+        GVAR(airFilter) = 3;
+        GVAR(protectedParts[]) = {"face"};
+	};
+	class avon_SF12: None {
+        GVAR(airFilter) = 3;
+        GVAR(protectedParts[]) = {"face"};
+	};
+	class avon_SF12_strapless: None {
+        GVAR(airFilter) = 3;
+        GVAR(protectedParts[]) = {"face"};
+	};
 };

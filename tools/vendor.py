@@ -2,7 +2,14 @@ import os
 
 VENDOR = {
     "@ACE": {
-        "blacklist": ["ace_advanced_fatigue", "ace_hearing", "ace_nametags", "ace_sandbag"],
+        "blacklist": [
+            "ace_advanced_fatigue",
+            "ace_hearing",
+            "ace_nametags",
+            "ace_sandbag",
+            # debug
+            "ace_map_gestures"
+        ],
         "optionals": [
             os.path.join("@ace_nocrosshair", "addons", "ace_nocrosshair.pbo"),
             os.path.join("@ace_nouniformrestrictions", "addons", "ace_nouniformrestrictions.pbo"),
@@ -32,6 +39,10 @@ VENDOR = {
     },
     "@Metis Nature": {},
     "@TFAR Animations": {},
+    "@vurtual's Car Seat & Stretcher": {},
+    "@PLP Materials": {},
+    "@Extended Fortifications Mod": {},
+    "@AVON FM12 Respirator Pack": {},
     # "@Camofaces": {},
     "-Mocap": {
         "whitelist": ["MOCAP_mov"],

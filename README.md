@@ -22,10 +22,15 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [O&T Expansion Eden](https://steamcommunity.com/sharedfiles/filedetails/?id=1923321700)
 - [Metis Nature](https://steamcommunity.com/sharedfiles/filedetails/?id=1951690856)
 - [Eden Extended Objects](https://steamcommunity.com/sharedfiles/filedetails/?id=882231372)
+- [PLP Materials](https://steamcommunity.com/sharedfiles/filedetails/?id=1354397885)
+- [Extended Fortifications Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=1109237932)
 - [Camofaces](https://steamcommunity.com/sharedfiles/filedetails/?id=346665985)
 - [MOCAP Melee](https://www.armaholic.com/page.php?id=27262)
 - [TFAR Animations](https://steamcommunity.com/sharedfiles/filedetails/?id=2141020863)
+- [AVON FM12 Respirator Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=793350643)
 - Modified version of [JSHK Contamination Gear](https://steamcommunity.com/sharedfiles/filedetails/?id=1738216191)
+- [Vurtual's Car Seat & Stretcher](https://steamcommunity.com/sharedfiles/filedetails/?id=1381327410)
+
 
 ## Credits
 Authors of external mods.  

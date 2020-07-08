@@ -30,4 +30,34 @@ class CfgGlasses {
         ACE_OverlayCracked = "\z\ace\addons\goggles\textures\HUD\DivingGogglesCracked.paa";
     };
 
+    class avon_fm12: None {
+        ACE_Overlay = QPATHTOF(data\roundGoggles.paa);
+        ACE_OverlayCracked = QPATHTOF(data\roundGogglesCracked.paa);
+        identityTypes[] = {};
+	};
+	class avon_fm12_strapless: None {
+        ACE_Overlay = QPATHTOF(data\roundGoggles.paa);
+        ACE_OverlayCracked = QPATHTOF(data\roundGogglesCracked.paa);
+        identityTypes[] = {};
+	};
+	class avon_ct12: None {
+        ACE_Overlay = QPATHTOF(data\roundGoggles.paa);
+        ACE_OverlayCracked = QPATHTOF(data\roundGogglesCracked.paa);
+        identityTypes[] = {};
+	};
+	class avon_ct12_strapless: None {
+        ACE_Overlay = QPATHTOF(data\roundGoggles.paa);
+        ACE_OverlayCracked = QPATHTOF(data\roundGogglesCracked.paa);
+        identityTypes[] = {};
+	};
+	class avon_SF12: None {
+        ACE_Overlay = QPATHTOF(data\roundGoggles.paa);
+        ACE_OverlayCracked = QPATHTOF(data\roundGogglesCracked.paa);
+        identityTypes[] = {};
+	};
+	class avon_SF12_strapless: None {
+        ACE_Overlay = QPATHTOF(data\roundGoggles.paa);
+        ACE_OverlayCracked = QPATHTOF(data\roundGogglesCracked.paa);
+        identityTypes[] = {};
+	};
 };

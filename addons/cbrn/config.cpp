@@ -16,7 +16,8 @@ class CfgPatches {
             "A3_Characters_F_Enoch_Headgear",
             "A3_Characters_F_Exp_Headgear",
             "JSHK_contam_gear_suits",
-            "JSHK_contam_gear_masks"
+            "JSHK_contam_gear_masks",
+            "fm12_respirator"
         };
         author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL"};
