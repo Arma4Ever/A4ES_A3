@@ -10,8 +10,11 @@
     <Key ID="STR_A3CS_Headless_Attributes_disableTransfer_object_tooltip">
       <Original>Wyłącza transfer jednostki/pojzadu do headlessa. Wyłączenie transferu jednostki wyłącza transfer całej grupy do której ta jednostka należy. Wyłączenie transferu pojazdu wyłącza transfer grup do których załoga pojazdu należy.</Original>
     </Key>
+    <Key ID="STR_A3CS_Headless_headlessConnectedInfo">
+      <Original>Headless client połączył się poprawnie.</Original>
+    </Key>
     <Key ID="STR_A3CS_Headless_transferReport_attempts">
-      <Original>Transfer grup do headlessa odbył się w %1%3 poprawnie. Przetransferowano %2%3 grup obecnych na misji.</Original>
+      <Original>Transfer grup do headlessa odbył się w %1%3 poprawnie. Przetransferowano %2%3 wszystkich aktualnie obecnych grup.</Original>
     </Key>
     <Key ID="STR_A3CS_Headless_transferReport_noAttempts">
       <Original>Transfer grup do headlessa został zakończony. Na tą chwilę nie znaleziono grup do przetransferowania.</Original>

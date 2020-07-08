@@ -4,17 +4,24 @@
  * Transfers AI groups to headless client
  */
 
+params [["_initialTransfer", false]];
+
+// Allow scheduling next transfer
+GVAR(transferScheduled) = false;
+
 if (isNull GVAR(headlessClient)) exitWith {
-  LOG("Groups transfer aborted. Headless client is null.");
+  LOG_1("Groups transfer aborted. Headless client is null (initial: %1).",str _initialTransfer);
 };
 
 // Exec transfer in unscheduled env for easy pausing
-0 spawn {
+_initialTransfer spawn {
+  params ["_initialTransfer"];
+
   private _headlessOwner = owner GVAR(headlessClient);
   private _transfers = 0;
   private _transferAttempts = 0;
 
-  LOG_1("Staring groups transfer (headless owner: %1).",str _headlessOwner);
+  LOG_2("Staring groups transfer (initial: %1 headless owner: %2).",str _initialTransfer,str _headlessOwner);
 
   private _allGroups = {
     // Check if group should be transfered
@@ -22,12 +29,15 @@ if (isNull GVAR(headlessClient)) exitWith {
       // Bumb transfer attempts counter
       _transferAttempts = _transferAttempts + 1;
 
+      LOG_1('Attempting to transfer group "%1".',groupId _x);
+
       // Attempt to transfer group
       private _transfered = _x setGroupOwner _headlessOwner;
 
       // Bumb transfer counter on success
       if (_transfered) then {
         _transfers = _transfers + 1;
+        LOG_1('Group "%1" transfered.',groupId _x);
 
         // Wait for sync (minimizes risk for sync bugs like empty loadout after transfer)
         sleep 0.15;
@@ -39,6 +49,9 @@ if (isNull GVAR(headlessClient)) exitWith {
   } count allGroups;
 
   LOG_3("Groups transfer finished (allGroups: %1 transferAttempts: %2 transfers: %3).",str _allGroups,str _transferAttempts,str _transfers);
+
+  // Do not send transfer report if it's not initial transfer
+  if !(_initialTransfer) exitWith {};
 
   // Show transfer report on systemChat globally
   if (_transferAttempts > 0) then {

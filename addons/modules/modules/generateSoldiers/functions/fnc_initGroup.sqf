@@ -6,11 +6,13 @@
 
 params ["_group", "_groupPos", "_logic", "_boundaryArea"];
 
-if !(local _group) exitWith {
+// Postopne group init if group (or some group units) are not local yet
+if !(_group call EFUNC(common,isGroupLocal)) exitWith {
   LOG_1('Init of %1 group postponed until group is local',str (groupId _group));
   [
     {
-      local (_this # 0)
+      // Wait until group and all group units are local
+      (_this # 0) call EFUNC(common,isGroupLocal)
     },
     {
       _this call FUNC(generateSoldiers_initGroup);

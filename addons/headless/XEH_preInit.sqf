@@ -20,19 +20,46 @@ ADDON = true;
   };
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(headlessConnectedInfo), {
+  systemChat localize LSTRING(headlessConnectedInfo);
+}] call CBA_fnc_addEventHandler;
+
 if (!isServer) exitWith {};
 
 GVAR(headlessClient) = objNull;
+GVAR(transferScheduled) = false;
+GVAR(spawnHandlerAdded) = false;
 
 // Handle headless connected
-[QGVAR(headlessClientConnected), {
+[QGVAR(headlessConnected), {
   params ["_object"];
   LOG_2("Registering connected headless (object: %1 owner: %2)",str _object,str (owner _object));
   GVAR(headlessClient) = _object;
 
-  // Exec groups transfer in 5 sec
-  LOG("Scheduling groups transfer in 5 sec");
-  [DFUNC(transferGroups), [], 5] call CBA_fnc_waitAndExecute;
+  // Send HC connection confirmation on chat globally
+  [{
+    [QGVAR(headlessConnectedInfo), []] call CBA_fnc_globalEvent
+  }, [], 0.5] call CBA_fnc_waitAndExecute;
+
+  // Initial transfer
+  LOG("Scheduling initial transfer");
+  GVAR(transferScheduled) = true;
+  [{
+    // Register init handler for unit spawns during mission
+    if !(GVAR(spawnHandlerAdded)) then {
+      GVAR(spawnHandlerAdded) = true;
+      LOG("Registering spawn handler");
+      ["CAManBase", "init", {
+        // Handle spawn 5 sec after unit spawn to properly handle unit vars
+        [{
+          _this call FUNC(handleSpawn);
+        }, _this, 5] call CBA_fnc_waitAndExecute;
+      }] call CBA_fnc_addClassEventHandler;
+    };
+
+    // Exec initial groups transfer
+    true call FUNC(transferGroups);
+  }, [], 5] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
 
 // Handle restoring units loadout

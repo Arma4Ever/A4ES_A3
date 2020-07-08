@@ -31,7 +31,7 @@ if (tolower _logClass == "debuglogs") then {
     private _modulesGenAttack = 0;
     private _curatorCount = 0;
 
-    private _headlessClient = QEGVAR(headless,headlessClient);
+    private _headlessClient = EGVAR(headless,headlessClient);
     private _headlessClientOwner = 0;
     if (!isNull _headlessClient) then {
         _headlessClientOwner = owner _headlessClient;

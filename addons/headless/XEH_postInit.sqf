@@ -1,14 +1,10 @@
 #include "script_component.hpp"
 
-// Exit if client has interface (not server nor headless)
-
-// DEBUG!
-// DEBUG!
-// DEBUG! if (hasInterface) exitWith {};
-// DEBUG!
-// DEBUG!
+// Exit if not multiplayer or has interface (not server nor headless)
+if (!isMultiplayer || hasInterface) exitWith {};
 
 if (isServer) then {
+  // Handle HC disconnect
   addMissionEventHandler ["HandleDisconnect", {
     params ["_object"];
 
@@ -42,5 +38,5 @@ if (isServer) then {
       };
   }] call CBA_fnc_addClassEventHandler;
 
-  [QGVAR(headlessClientConnected), [player]] call CBA_fnc_serverEvent;
+  [QGVAR(headlessConnected), [player]] call CBA_fnc_serverEvent;
 };

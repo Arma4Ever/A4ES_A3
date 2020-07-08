@@ -177,10 +177,8 @@ for "_i" from 1 to _groupCount do {
       _unitInit,
       _unitSkill
     ];
+    sleep 0.05;
   };
-
-  // Disable future transfers of this group
-  _group setVariable [QEGVAR(headless,disableTransfer), true];
 
   // Dynamic simulation
   _group enableDynamicSimulation _enableDynSim;
@@ -195,8 +193,10 @@ for "_i" from 1 to _groupCount do {
     } forEach allCurators;
   };
 
-  // Save generator in units locally (for debug and admin panel)
+  // Setup vars for headless and admin
+  _group setVariable [QEGVAR(headless,disableTransfer), true];
   {
+    _x setVariable [QEGVAR(headless,disableTransfer), true];
     _x setVariable [QGVAR(generator), _logic];
   } forEach _units;
 
