@@ -213,14 +213,13 @@ class Cfg3DEN {
                         control = QGVAR(hiddenCheckbox);
                     };
                     class GVAR(disableDynamicSimulation) {
-                        property = QGVAR(disableDynamicSimulation);
-						control = "Checkbox";
                         displayName = CSTRING(DisableDynamicSimulation);
 						tooltip = CSTRING(DisableDynamicSimulation_Tooltip);
+                        property = QGVAR(disableDynamicSimulation);
+						control = "Checkbox";
 						expression = QUOTE(if (is3DEN) then {_this call FUNC(updateDynamicSimulation);};);
 						defaultValue = "false";
                         typeName = "BOOL";
-						wikiType = "[[Bool]]";
                     };
 				};
 			};
@@ -239,9 +238,33 @@ class Cfg3DEN {
 				class Attributes {
                     delete EnableRevive;
 
-                    // Do stop
-                    // Force flashlight
-                    // if (_value) then {_this setVariable ["BIS_enableRandomization", false, true];};
+                    class GVAR(doStop) {
+            			displayName = CSTRING(doStop);
+            			tooltip = CSTRING(doStop_Tooltip);
+            			property = QGVAR(doStop);
+            			control = "Checkbox";
+            			expression = "if (_value) then {_this setVariable ['%s', true, true];};";
+            			defaultValue = "false";
+            			condition = "objectBrain";
+            		};
+                    class GVAR(forceGunLights) {
+            			displayName = CSTRING(forceGunLights);
+            			tooltip = CSTRING(forceGunLights_Tooltip);
+            			property = QGVAR(forceGunLights);
+            			control = "Checkbox";
+                        // Save var globally, postInit script will handle it + allows restore in case of locality change
+            			expression = "if (_value) then {_this setVariable ['%s', true, true];};";
+            			defaultValue = "false";
+            			condition = "objectBrain";
+            		};
+                    class GVAR(disableBISRandomization) {
+            			displayName = CSTRING(disableBISRandomization);
+            			tooltip = CSTRING(disableBISRandomization_Tooltip);
+            			property = QGVAR(disableBISRandomization);
+            			control = "Checkbox";
+            			expression = "if (_value) then {_this setVariable ['BIS_enableRandomization', false, true];};";
+            			defaultValue = "false";
+            		};
 				};
 			};
             class GVAR(disableAI) {

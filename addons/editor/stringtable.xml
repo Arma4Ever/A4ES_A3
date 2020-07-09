@@ -35,7 +35,7 @@
       <Original>MOVE</Original>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_MOVE_Tooltip">
-      <Original>Wyłącza możliwość poruszania się przez AI (dotyczy również pojazdu jeśli jednostka jest kierowcą). UWAGA! Ta opcja wyłącza poruszanie się jednostki niezależnie od sytuacji. Jesli chcesz powstrzymać jednostę przed ruszeniem do formacji na starcie misji ale umożliwić poruszanie się podczas walki użyć opcji "Zatrzymaj (doStop)".</Original>
+      <Original>Wyłącza możliwość poruszania się przez AI (dotyczy również pojazdu jeśli jednostka jest kierowcą). UWAGA! Ta opcja wyłącza poruszanie się jednostki niezależnie od sytuacji. Jesli chcesz powstrzymać jednostę przed ruszeniem do formacji na starcie misji ale umożliwić poruszanie się podczas walki użyć opcji "Zatrzymaj jednostkę".</Original>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_ANIM">
       <Original>ANIM</Original>
@@ -123,6 +123,24 @@
     </Key>
     <Key ID="STR_A3CS_Editor_roleDescription_Tooltip">
       <Original>Opis roli w grze wieloosobowej widoczny w lobby trybu wieloosobowego. Jeśli nie zostanie zdefiniowana, przypisana zostanie domyślna nazwa jednostki. UWAGA! Aby zmienić nazwę drużyny w lobby w opisie roli *dowódcy drużyny* dodaj "@Nazwa druzyny" np. "Dowódca drużyny@Charlie". Poza tym przypadkiem nie używaj "@" w opisie roli!</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_doStop">
+      <Original>Zatrzymaj jednostkę</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_doStop_Tooltip">
+      <Original>Powstrzymuje jednostkę przed ruszeniem do formacji na starcie misji. Jednostka po wejściu tryb zagrożenia będzie poruszać się normalnie.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_forceGunLights">
+      <Original>Wymuś włączenie latarki</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_forceGunLights_Tooltip">
+      <Original>Wymusza na jednostce włączenie latarki (jeśli ją posiada). UWAGA: opcja ta może być nadpisana przez ustawienia waypointów.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_disableBISRandomization">
+      <Original>Wyłącz randomizację wyglądu</Original>
+    </Key>
+    <Key ID="STR_A3CS_Editor_disableBISRandomization_Tooltip">
+      <Original>Wyłącza armową randomizację wyglądu. W przypadku pojazdów to może być np. kolor, w przypadku jednostek to mogą być np. nakrycia głowy, ubiór, goggle itp. Ta opcja nie wyłącza zmiany wyglądu grywalnej jednostki w oparciu o ustawienia profilu grającego nią gracza (np. zmiany twarzy z ustawień profilu itp.).</Original>
     </Key>
   </Package>
   <Package name="ENH">

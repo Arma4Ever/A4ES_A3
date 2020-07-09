@@ -525,7 +525,7 @@
       <Original>Ustawienia dodatkowe</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableBISRandomization">
-      <Original>Wyłącz randomizacje nakryć głowy</Original>
+      <Original>Wyłącz randomizację wyglądu</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableBISRandomization_Tooltip">
       <Original>Wyłącza armową randomizację hełmów, masek i gogli dla wygenerowanych jednostek.</Original>
