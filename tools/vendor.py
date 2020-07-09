@@ -6,9 +6,7 @@ VENDOR = {
             "ace_advanced_fatigue",
             "ace_hearing",
             "ace_nametags",
-            "ace_sandbag",
-            # debug
-            "ace_map_gestures"
+            "ace_sandbag"
         ],
         "optionals": [
             os.path.join("@ace_nocrosshair", "addons", "ace_nocrosshair.pbo"),
@@ -25,7 +23,7 @@ VENDOR = {
     "@Enhanced Movement": {},
     "@Enhanced Movement Rework": {},
     "@GRAD Trenches": {},
-    "@GRAD SlingHelmet": {},
+    #"@GRAD SlingHelmet": {},
     "@VET_Unflipping": {},
     "@BackpackOnChest": {},
     "@Breaching Charge": {},

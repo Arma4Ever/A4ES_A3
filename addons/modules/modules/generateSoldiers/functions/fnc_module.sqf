@@ -142,7 +142,7 @@ for "_i" from 1 to _groupCount do {
   private _group = createGroup [_side, true];
   // Exit if new group is null - means we reached game group limit in selected side
   if (isNull _group) exitWith {
-    LOG('Generating groups for EXEC_MODULE_NAME aborted - createdGroup is null: probably side group limit is reached.');
+    LOG('Generating groups for EXEC_MODULE_NAME aborted - createdGroup is null: probably side group limit has been reached.');
   };
 
   // Set custom groupId in debug mode

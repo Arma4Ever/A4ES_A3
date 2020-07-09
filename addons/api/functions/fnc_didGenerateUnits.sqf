@@ -9,7 +9,7 @@
       podasz moduł który nie jest generatorem, funkcja zawsze zwróci false).
 
   Parametry:
-      _modul - Pierwszy moduł który należy sprawdzić <OBJECT>
+      _modul1 - Pierwszy moduł który należy sprawdzić <OBJECT>
       _modul2 - Drugi moduł który należy sprawdzić <OBJECT>
       i tak dalej...
 
