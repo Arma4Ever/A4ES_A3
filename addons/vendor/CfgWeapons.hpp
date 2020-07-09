@@ -30,7 +30,6 @@ class CfgWeapons {
             allowedSlots[] = {};
             mass = 180;
             class CowsSlot {
-                access = 0;
                 displayName = "Optics Slot";
                 iconPicture = "\A3\Weapons_F\Data\UI\attachment_top";
                 iconPinpoint = "Bottom";

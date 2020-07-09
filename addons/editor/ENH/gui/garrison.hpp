@@ -1,4 +1,4 @@
-#define DIALOG_W 60
+#define ENH_Garrison_DIALOG_W 60
 
 class ENH_Garrison
 {
@@ -10,9 +10,9 @@ class ENH_Garrison
 		DISABLE_BACKGROUND
 		class Background: ctrlStaticBackground
 		{
-			x = CENTERED_X(DIALOG_W);
+			x = CENTERED_X(ENH_Garrison_DIALOG_W);
 			y = DIALOG_TOP + CTRL_DEFAULT_H;
-			w = DIALOG_W * GRID_W;
+			w = ENH_Garrison_DIALOG_W * GRID_W;
 			h = 25 * GRID_H;
 		};
 	};
@@ -21,15 +21,15 @@ class ENH_Garrison
 		class Header: ctrlStaticTitle
 		{
 			text = $STR_ENH_GARRISON_HEADER;
-			x = CENTERED_X(DIALOG_W);
+			x = CENTERED_X(ENH_Garrison_DIALOG_W);
 			y = DIALOG_TOP;
-			w = DIALOG_W * GRID_W;
+			w = ENH_Garrison_DIALOG_W * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class Radius: ctrlStatic
 		{
 			text = $STR_ENH_PLACEMENTTOOLS_RADIUS;
-			x = CENTERED_X(DIALOG_W);
+			x = CENTERED_X(ENH_Garrison_DIALOG_W);
 			y = DIALOG_TOP + 6 * GRID_H;
 			w = 15 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -37,7 +37,7 @@ class ENH_Garrison
 		class RadiusEdit: ctrlEdit
 		{
 			idc = 100;
-			x = CENTERED_X(DIALOG_W) + 16 * GRID_W;
+			x = CENTERED_X(ENH_Garrison_DIALOG_W) + 16 * GRID_W;
 			y = DIALOG_TOP + 6 * GRID_H;
 			w = 43 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -45,7 +45,7 @@ class ENH_Garrison
 		class Coverage: ctrlStatic
 		{
 			text = $STR_ENH_GARRISON_COVERAGE;
-			x = CENTERED_X(DIALOG_W);
+			x = CENTERED_X(ENH_Garrison_DIALOG_W);
 			y = DIALOG_TOP + 12 * GRID_H;
 			w = 15 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -53,13 +53,13 @@ class ENH_Garrison
 		class CoverageValue: ctrlToolbox
 		{
 			idc = 200;
-			x = CENTERED_X(DIALOG_W) + 16 * GRID_W;
+			x = CENTERED_X(ENH_Garrison_DIALOG_W) + 16 * GRID_W;
 			y = DIALOG_TOP + 12 * GRID_H;
 			w = 43 * GRID_W;
 			h = CTRL_DEFAULT_H;
 			rows = 1;
 			columns = 4;
-			strings[] = 
+			strings[] =
 			{
 				$STR_ENH_GARRISON_10PERCENT,
 				$STR_ENH_GARRISON_25PERCENT,
@@ -71,7 +71,7 @@ class ENH_Garrison
 		class Stance: ctrlStatic
 		{
 			text = $STR_ENH_GARRISON_STANCE;
-			x = CENTERED_X(DIALOG_W);
+			x = CENTERED_X(ENH_Garrison_DIALOG_W);
 			y = DIALOG_TOP + 18 * GRID_H;
 			w = 15 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -79,13 +79,13 @@ class ENH_Garrison
 		class StanceValue: ctrlToolbox
 		{
 			idc = 300;
-			x = CENTERED_X(DIALOG_W) + 16 * GRID_W;
+			x = CENTERED_X(ENH_Garrison_DIALOG_W) + 16 * GRID_W;
 			y = DIALOG_TOP + 18 * GRID_H;
 			w = 43 * GRID_W;
 			h = CTRL_DEFAULT_H;
 			rows = 1;
 			columns = 3;
-			strings[] = 
+			strings[] =
 			{
 				$STR_ENH_GARRISON_STANCE_AUTO,
 				$STR_ENH_GARRISON_STANCE_CROUCH,
@@ -95,7 +95,7 @@ class ENH_Garrison
 		};
 		class Cancel: ctrlButtonCancel
 		{
-			x = CENTERED_X(DIALOG_W) + 34 * GRID_W;
+			x = CENTERED_X(ENH_Garrison_DIALOG_W) + 34 * GRID_W;
 			y = DIALOG_TOP + 24 * GRID_H;
 			w = 25 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -103,7 +103,7 @@ class ENH_Garrison
 		class Ok: ctrlButtonOK
 		{
 			idc = -1;//We don't want it to close the GUI. The function does that.
-			x = CENTERED_X(DIALOG_W) + GRID_W;
+			x = CENTERED_X(ENH_Garrison_DIALOG_W) + GRID_W;
 			y = DIALOG_TOP + 24 * GRID_H;
 			w = 25 * GRID_W;
 			h = CTRL_DEFAULT_H;

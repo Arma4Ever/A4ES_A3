@@ -5,7 +5,7 @@ class CfgWeapons {
 			reload = "";
 			reloaded = "";
 		};
-	}
+	};
 	class RifleCore;
 	class Rifle: RifleCore {
 		class EventHandlers {

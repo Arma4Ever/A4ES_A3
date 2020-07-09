@@ -84,7 +84,6 @@ class A3CS_ui_comboBoxBase: RscCombo {
     };
 };
 class A3CS_ui_listNBoxBase {
-    access = 0;
     type = CT_LISTNBOX;
     style =ST_MULTI;
     w = 0.4;
@@ -214,7 +213,6 @@ class A3CS_ui_selectMenuButtonBase {
     action = "";
 
     idc = -1;
-    access = 0;
     type = 1;
     text = "";
     font = FONT_STANDARD;

@@ -1,5 +1,5 @@
-#define DIALOG_W 160
-#define DIALOG_H 110
+#define ENH_TextureFinder_DIALOG_W 160
+#define ENH_TextureFinder_DIALOG_H 110
 
 class ENH_TextureFinder
 {
@@ -11,10 +11,10 @@ class ENH_TextureFinder
 		DISABLE_BACKGROUND
 		class Background: ctrlStaticBackground
 		{
-			x = CENTERED_X(DIALOG_W);
+			x = CENTERED_X(ENH_TextureFinder_DIALOG_W);
 			y = DIALOG_TOP + CTRL_DEFAULT_H;
-			w = DIALOG_W * GRID_W;
-			h = DIALOG_H * GRID_H;
+			w = ENH_TextureFinder_DIALOG_W * GRID_W;
+			h = ENH_TextureFinder_DIALOG_H * GRID_H;
 		};
 	};
 	class Controls
@@ -22,17 +22,17 @@ class ENH_TextureFinder
 		class Header: ctrlStaticTitle
 		{
 			text = $STR_ENH_TEXTUREFINDER;
-			x = CENTERED_X(DIALOG_W);
+			x = CENTERED_X(ENH_TextureFinder_DIALOG_W);
 			y = DIALOG_TOP;
-			w = DIALOG_W * GRID_W;
+			w = ENH_TextureFinder_DIALOG_W * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class TextureList: ctrlListbox
 		{
 			idc = 1500;
-			x = CENTERED_X(DIALOG_W);
+			x = CENTERED_X(ENH_TextureFinder_DIALOG_W);
 			y = DIALOG_TOP + CTRL_DEFAULT_H;
-			w = DIALOG_W * GRID_W;
+			w = ENH_TextureFinder_DIALOG_W * GRID_W;
 			h = 52 * GRID_H;
 			onLBSelChanged = "_this call ENH_fnc_textureFinder_showTexture";
 			onKeyDown = "_this call ENH_fnc_textureFinder_exportTexturePath";
@@ -40,18 +40,18 @@ class ENH_TextureFinder
 		class ProgressList: ctrlProgress
 		{
 			idc = 1800;
-			x = CENTERED_X(DIALOG_W);
+			x = CENTERED_X(ENH_TextureFinder_DIALOG_W);
 			y = DIALOG_TOP + CTRL_DEFAULT_H + 52 * GRID_H;
-			w = (DIALOG_W) * GRID_W;
+			w = (ENH_TextureFinder_DIALOG_W) * GRID_W;
 			h = GRID_H;
 			colorFrame[] = {0,0,0,0};
 		};
 		class TexturePreview: ctrlStaticPictureKeepAspect
 		{
 			idc = 1200;
-			x = CENTERED_X(DIALOG_W);
+			x = CENTERED_X(ENH_TextureFinder_DIALOG_W);
 			y = DIALOG_TOP + 58 * GRID_H;
-			w = DIALOG_W * GRID_W;
+			w = ENH_TextureFinder_DIALOG_W * GRID_W;
 			h = 40 * GRID_H;
 			colorBackground[] = {1,1,1,1};
 		};
@@ -59,17 +59,17 @@ class ENH_TextureFinder
 		{
 			idc = 1002;
 			style = ST_CENTER;
-			x = CENTERED_X(DIALOG_W);
+			x = CENTERED_X(ENH_TextureFinder_DIALOG_W);
 			y = DIALOG_TOP + 99 * GRID_H;
-			w = DIALOG_W * GRID_W;
+			w = ENH_TextureFinder_DIALOG_W * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class Progress: ctrlProgress
 		{
 			idc = 1001;
-			x = CENTERED_X(DIALOG_W - 2);
+			x = CENTERED_X(ENH_TextureFinder_DIALOG_W - 2);
 			y = DIALOG_TOP + 103 * GRID_H;
-			w = (DIALOG_W - 2) * GRID_W;
+			w = (ENH_TextureFinder_DIALOG_W - 2) * GRID_W;
 			h = CTRL_DEFAULT_H;
 			colorFrame[] = {0,0,0,0};
 		};
@@ -77,7 +77,7 @@ class ENH_TextureFinder
 		{
 			idc = 1900;
 			text = $STR_ENH_TEXTUREFINDER_UPDATELIST;
-			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
+			x = CENTERED_X(ENH_TextureFinder_DIALOG_W) + 1 * GRID_W;
 			y = DIALOG_TOP + 109 * GRID_H;
 			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -86,7 +86,7 @@ class ENH_TextureFinder
 		class SearchTextBox: ctrlEdit
 		{
 			idc = 1600;
-			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
+			x = CENTERED_X(ENH_TextureFinder_DIALOG_W) + 1 * GRID_W;
 			y = DIALOG_TOP + 59 * GRID_H;
 			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -94,7 +94,7 @@ class ENH_TextureFinder
 		class SearchButton: ctrlButtonSearch
 		{
 			idc = 1700;
-			x = CENTERED_X(DIALOG_W) + 31 * GRID_W;
+			x = CENTERED_X(ENH_TextureFinder_DIALOG_W) + 31 * GRID_W;
 			y = DIALOG_TOP + 59 * GRID_H;
 			w = 5 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -103,13 +103,13 @@ class ENH_TextureFinder
 		class Filter: ctrlToolbox
 		{
 			idc = 2000;
-			x = CENTERED_X(DIALOG_W) + 63 * GRID_W;
+			x = CENTERED_X(ENH_TextureFinder_DIALOG_W) + 63 * GRID_W;
 			y = DIALOG_TOP + 109 * GRID_H;
 			w = 65 * GRID_W;
 			h = CTRL_DEFAULT_H;
             rows = 1;
             columns = 3;
-            strings[] = 
+            strings[] =
             {
                 $STR_ENH_TEXTUREFINDER_FILTERALL,
                 $STR_ENH_TEXTUREFINDER_FILTERJPG,
@@ -121,7 +121,7 @@ class ENH_TextureFinder
         };
 		class Close: ctrlButtonClose
 		{
-			x = CENTERED_X(DIALOG_W) + 129 * GRID_W;
+			x = CENTERED_X(ENH_TextureFinder_DIALOG_W) + 129 * GRID_W;
 			y = DIALOG_TOP + 109 * GRID_H;
 			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
