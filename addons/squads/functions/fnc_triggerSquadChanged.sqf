@@ -14,6 +14,9 @@ private _targets = [];
   };
 } forEach _this;
 
+// Remove duplicates
+_targets = _targets arrayIntersect _targets;
+
 LOG_1("Triggering squad changed event for targets: %1",str _targets);
 
 [QGVAR(squadChanged), [], _targets] call CBA_fnc_targetEvent;

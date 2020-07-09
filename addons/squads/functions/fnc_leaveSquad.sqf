@@ -51,4 +51,15 @@ if (_sendChangedEvent) then {
   [_unit] call FUNC(triggerSquadChanged);
 };
 
+// Remove unit if it's a dummy unit
+if (_unit isKindOf "VirtualSpectator_F") then {
+  LOG_1('Removing dummy unit "%1".',str _unit);
+  private _unitGroup = group _unit;
+  deleteVehicle _unit;
+  if (local _unitGroup && {(side _unitGroup) isEqualTo sideLogic}) then {
+    LOG_1('Removing dummy unit group "%1".',str _unitGroup);
+    deleteGroup _unitGroup;
+  };
+};
+
 _squadDeleted

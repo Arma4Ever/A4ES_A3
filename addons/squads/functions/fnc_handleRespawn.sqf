@@ -9,14 +9,12 @@ params ["_newUnit", "_corpse"];
 // Exit if not server
 if !(isServer) exitWith {};
 
-LOG_1("Handling respawn event (unit: %1 corpse: %2)",str _unit,str _corpse);
+LOG_1('Handling respawn event (unit: "%1" corpse: "%2")',str _unit,str _corpse);
+
+// Replace corpse with new unit
+[_corpse, _newUnit] call FUNC(replaceSquadUnit);
 
 // TODO
-// Default
-// Replace old unit with new unit in squad
-// Delete old unit if it was a dummy unit
-// Trigger squad change
-
 // Reset squad on respawn option
 // Reset unit squad
 // Remove old unit?

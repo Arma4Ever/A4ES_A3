@@ -3,8 +3,7 @@
 // Exit if it's main menu intro
 if (EGVAR(common,isMainMenu)) exitWith {};
 
-// TODO: client events?
-
+// Exit if not server
 if !(isServer) exitWith {};
 
 // Add server event handlers

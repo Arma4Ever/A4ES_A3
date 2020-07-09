@@ -23,6 +23,7 @@ PREP(joinSquadClient);
 PREP(leaveSquad);
 PREP(leaveSquadClient);
 PREP(modifyJoinSquadAction);
+PREP(replaceSquadUnit);
 PREP(setSquadLeader);
 PREP(setSquadLeaderClient);
 PREP(triggerSquadChanged);
