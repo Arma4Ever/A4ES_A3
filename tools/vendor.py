@@ -38,6 +38,7 @@ VENDOR = {
     "@Metis Nature": {},
     "@TFAR Animations": {},
     "@vurtual's Car Seat & Stretcher": {},
+    "@Vurtual's Ships": {},
     "@PLP Materials": {},
     "@Extended Fortifications Mod": {},
     "@AVON FM12 Respirator Pack": {},

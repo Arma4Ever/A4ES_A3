@@ -237,4 +237,6 @@ class CfgVehicles {
 
     #include "modules\generateSoldiers\module.hpp"
     #include "modules\generatorComposition\module.hpp"
+
+    #include "hiddenModules.hpp"
 };

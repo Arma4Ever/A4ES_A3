@@ -29,6 +29,7 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [AVON FM12 Respirator Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=793350643)
 - Modified version of [JSHK Contamination Gear](https://steamcommunity.com/sharedfiles/filedetails/?id=1738216191)
 - [Vurtual's Car Seat & Stretcher](https://steamcommunity.com/sharedfiles/filedetails/?id=1381327410)
+- [Vurtual's Ships](https://steamcommunity.com/sharedfiles/filedetails/?id=1564445550)
 
 
 ## Credits
