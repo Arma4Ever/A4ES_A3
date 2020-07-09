@@ -12,6 +12,13 @@ if !(isServer) exitWith {};
 [QGVAR(setSquadLeader), DFUNC(setSquadLeader)] call CBA_fnc_addEventHandler;
 [QGVAR(killed), DFUNC(handleKilled)] call CBA_fnc_addEventHandler;
 [QGVAR(respawn), DFUNC(handleRespawn)] call CBA_fnc_addEventHandler;
+["CBA_teamColorChanged", {
+    params ["_unit", "_team"];
+
+    // Save unit assigned team on server for dummy units
+    _unit setVariable [QGVAR(assignedTeam), _team];
+}] call CBA_fnc_addEventHandler;
+
 
 // Parse playable units groups one second after start
 // We're giving some time for things like ace setName etc.

@@ -32,10 +32,11 @@ if ((count _squadUnits) isEqualTo 1) then {
     LOG_1('Handling deleted event (unit: "%1")',str _unit);
 
     private _name = _unit call EFUNC(common,getUnitName);
+    private _assignedTeam = _unit getVariable [QGVAR(assignedTeam), "MAIN"];
     private _squad = _unit call FUNC(getUnitSquad);
     if (isNull _squad) exitWith {};
 
-    LOG_1('Creating dummy unit for deleted unit "%1".',str _unit);
+    LOG_3('Creating dummy unit for deleted unit "%1" (name: "%2" assignedTeam: "%3").',str _unit,_name,_assignedTeam);
     private _group = createGroup [sideLogic, true];
     "VirtualSpectator_F" createUnit [[-1000, -1000, 1000], _group];
 
@@ -43,6 +44,9 @@ if ((count _squadUnits) isEqualTo 1) then {
     _dummyUnit setVariable ["ACE_Name", _name, true];
     // Disable transfer of dummy unit
     _dummyUnit setVariable [QEGVAR(headless,disableTransfer), true];
+
+    // Assign team
+    ["CBA_teamColorChanged", [_dummyUnit, _assignedTeam]] call CBA_fnc_globalEvent;
 
     // Replace unit with dummy unit
     [_unit, _dummyUnit] call FUNC(replaceSquadUnit);
