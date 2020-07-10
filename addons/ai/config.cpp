@@ -10,7 +10,8 @@ class CfgPatches {
             "a3cs_common",
             "a3cs_modules",
             "A3_Data_F",
-            "A3_3DEN"
+            "A3_3DEN",
+            "lambs_wp"
         };
         author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL"};

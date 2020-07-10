@@ -35,6 +35,11 @@ class Cfg3DEN {
     };
     class Object {
         class AttributeCategories {
+            class lambs_danger_attributes {
+                class Attributes {
+                    delete lambs_WP_Editor_IsArtillery;
+                };
+            };
             class State {
                 class Attributes {
                     delete Skill;

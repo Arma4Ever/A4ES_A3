@@ -37,3 +37,4 @@ PREP(validateEntity);
 
 #include "modules\generateSoldiers\prep.hpp"
 #include "modules\generatorComposition\prep.hpp"
+#include "modules\registerArtilleryUnits\prep.hpp"

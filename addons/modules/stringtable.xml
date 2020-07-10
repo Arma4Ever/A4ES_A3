@@ -307,7 +307,6 @@
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_spawnPosMode_strict_Desc">
       <Original>Każda grupa zostanie wygenerowana w miejscu ustawienia modułu (niezależnie od wielkości obszaru modułu). Opcja ta może być przydatna jeśli chcemy mieć stałą pozycje spawnu grupy np. w przypadku obsadzania budynków (garnizon) itp.</Original>
     </Key>
-
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviourSettingsSubCategory">
       <Original>Ustawienia zachowania</Original>
     </Key>
@@ -560,9 +559,7 @@
       <Original>Kompozycja generatora</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_generatorComposition_shortDescription">
-      <Original>
-        Moduł tworzy kompozycję (szablonu) grupy na podstawie grupy połączonej z modułem jednostki. Użycie kompozycji pozwala na dokładne odtworzenie grupy (wraz z wyposażeniem) w generatorach. Aby użyć kompozycji wystarzy stworzyć w edytorzę grupę zawierającą typy oraz ilość jednostek którą chcemy później generować, skonfigurować wyposażenie jednostek (za pomocą arsenału w edytorze) a następnie zsynchronizować (połączyć) którąś jednostkę z grupy (najlepiej lidera grupy) z modułem. Po dodaniu modułu kompozycji w edytorze oraz nadaniu jej nazwy, nazwa kompozycji będzie dostępna na liście kompozycji w generatorach.
-      </Original>
+      <Original>Moduł tworzy kompozycję (szablonu) grupy na podstawie grupy połączonej z modułem jednostki. Użycie kompozycji pozwala na dokładne odtworzenie grupy (wraz z wyposażeniem) w generatorach. Aby użyć kompozycji wystarzy stworzyć w edytorzę grupę zawierającą typy oraz ilość jednostek którą chcemy później generować, skonfigurować wyposażenie jednostek (za pomocą arsenału w edytorze) a następnie zsynchronizować (połączyć) którąś jednostkę z grupy (najlepiej lidera grupy) z modułem. Po dodaniu modułu kompozycji w edytorze oraz nadaniu jej nazwy, nazwa kompozycji będzie dostępna na liście kompozycji w generatorach.</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_generatorComposition_description">
       <Original>Moduł uruchamia się na starcie misji i zapisuje zestaw klas i wyposażenie jednostek połączonej z modułem grupy. Moduł kompozycji zapisuje jedynie klasy i wyposażenie jednostek, pozostałe ustawienia jak poziom umiejętności, ranga itp, nie są używane (obowiązywać będą ustawienia modułu generatora). Jeden moduł może być połączony tylko z jedną jednostką której grupy chcemy użyć jako kompozycji. Jeśli w grupie znajdują się pojazdy, one oraz ich załogi będą ignorowane przy zapisie kompozycji (tylko jednostki piechoty "na nogach" będą zapisane jako kompozycja). Pamiętaj, że użycie kompozycji w module generatora stworzy dokładną kopię użytej w kompozycji grupy, dostosuj ilość jednostek w grupie zgodnie z przeznaczeniem kompozycji (np. osobna kompozycja dla jednostek patrolujących, osobna dla załóg garnizonów itp). Strona użytej grupy nie ma znaczenia przy tworzeniu kompozycji, przy generowaniu jednostek użyta będzie strona ustawiona w generatorze (np. możesz stworzyć kompozycję na podstawie grupy o stronie CIV albo INDEP a następnie użyć jej w generatorze do generowania grup po stronie OPFOR).</Original>
@@ -581,6 +578,17 @@
     </Key>
     <Key ID="STR_A3CS_Modules_generatorComposition_Attributes_deleteUnits_Tooltip">
       <Original>Usuwa jednostki użyte w kompozycji po jej zapisaniu. Włączenie tej opcji jest zalecane jeśli połączona grupa została stworzona tylko na potrzeby kompozycji i sama w sobie nie jest potrzebna w scenariuszu.</Original>
+    </Key>
+  </Package>
+  <Package name="Modules_registerArtilleryUnits">
+    <Key ID="STR_A3CS_Modules_registerArtilleryUnits_displayName">
+      <Original>Zarejestruj artylerię</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_registerArtilleryUnits_shortDescription">
+      <Original>Moduł rejestruje każdą zsynchronizowaną jednostkę (w tym pojazdy) jako artylerię dla strony do której jednostka (w przypadku pojazdów - załoga) należy (jednostki OPFOR rejestrują się jako artyleria dla OPFOR itp.). Zarejestrowane jednostki artylerii będą używane przez AI danej strony do zapewniania wsparcia ogniowego jednostkom w kontakcie ogniowym której cele są w zasięgu oraz mogą zostać przekazane do artylerii (mają włączone przekazywanie informacji).</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_registerArtilleryUnits_description">
+      <Original>System alrtylerii działa w pełni autonomicznie i nie wymaga ingerencji ze strony mission-makera. Wystarczy zarejestrować jednostki artylerii których strona ma używać, a gdy jakieś AI danej strony wejdzie w kontakt ogniowy (a wróg jest w zasięgu artylerii), wsparcie ogniowe zostanie wezwane. System symuluje użycie prawdziwej artylerii. Pierwsze wystrzelone pociski są bardzo niecielne i zwykle niegroźne dla graczy, z czasem jednak, jednostki które wezwały wsparcie nanoszą poprawki i ogień staje się coraz celniejszy, co motywuje graczy do szybkiego wyeliminowania AI które wezwało wsparcie i kieruje ogniem. Gdy kolejna grupa AI zostanie zaatakowana, cały proces zaczyna się od nowa.&lt;br/&gt;&lt;br/&gt;TIP: System ten może być z powodzeniem wykorzystywany jako element zadań pobocznych. Np. niedaleko wioski którą mają zająć graczę ustawiamy baterię moździeży które rejestrujemy jako artylerię. W zadaniach dodajemy zniszczenie baterii jako cel poboczny, z informacją, że wyeliminowanie baterii przed atakiem na wioskę ułatwi jej zajęcie, bo AI w wiosce nie będą mogły użyć moździeży do wsparcia ogniowego.</Original>
     </Key>
   </Package>
 </Project>
