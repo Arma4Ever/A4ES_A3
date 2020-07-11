@@ -4,8 +4,8 @@
  * Setups mission attributes default values
  */
 
-"Scenario" set3DENMissionAttribute ["SaveBinarized", false];
-"Preferences" set3DENMissionAttribute ["SaveBinarized", false];
+// "Scenario" set3DENMissionAttribute ["SaveBinarized", false];
+// "Preferences" set3DENMissionAttribute ["SaveBinarized", false];
 "GarbageCollection" set3DENMissionAttribute ["DynSimEnabled", true];
 "GarbageCollection" set3DENMissionAttribute ["CorpseManagerMode", 1];
 "GarbageCollection" set3DENMissionAttribute ["WreckManagerMode", 1];

@@ -141,7 +141,7 @@ class Cfg3DEN {
                 class Misc {
                     class Attributes {
                         class Binarize {
-                            control = QGVAR(hiddenCheckbox);
+                            //control = QGVAR(hiddenCheckbox);
                         };
                     };
                 };
@@ -197,7 +197,7 @@ class Cfg3DEN {
                 class Saving {
                     class Attributes {
                         class Binarize {
-                            control = QGVAR(hiddenCheckbox);
+                            //control = QGVAR(hiddenCheckbox);
                         };
                     };
                 };
