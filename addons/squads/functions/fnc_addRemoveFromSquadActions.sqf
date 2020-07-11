@@ -12,6 +12,9 @@ if (isNull _squad) exitWith {[]};
 private _units = _squad call FUNC(getSquadUnits);
 if ((count _units) < 2) exitWith {[]};
 
+// Remove player from list
+_units = _units - [_player];
+
 private _actions = [];
 
 {
