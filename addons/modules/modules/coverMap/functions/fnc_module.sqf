@@ -28,6 +28,7 @@ if (_isActivated) then {
   private _logicId = _logic call BIS_fnc_netId;
 	private _sizeOut = 50000;
   private _markers = [];
+  private _dotMarkers = [];
 
   private _markerAlpha = _logic getVariable [QGVAR(coverOpacity), 0];
   private _markerColorId = _logic getVariable [QGVAR(coverColor), 0];
@@ -58,22 +59,15 @@ if (_isActivated) then {
     _coverMarker setMarkerAlpha _markerAlpha;
     _markers pushBack _coverMarker;
 
-    // Create corner dot marker if alpha isn't 1 or color is not black
+    // Add corner dot marker if alpha isn't 1 or color is not black
     if (!(_markerAlpha isEqualTo 1) || !(_markerColorId isEqualTo 0)) then {
-      private _dotMarkerPos = [
-  			_posX + (sin _dirTemp * _size1) + (sin (_dirTemp + 90) * _size2),
-  			_posY + (cos _dirTemp * _size1) + (cos (_dirTemp + 90) * _size2)
-  		];
-      private _dotMarker = createMarker [
+      _dotMarkers pushBack [
         format [QGVAR(coverMap_%1_dot_%2), _logicId, _i],
-        _dotMarkerPos
+        [
+          _posX + (sin _dirTemp * _size1) + (sin (_dirTemp + 90) * _size2),
+          _posY + (cos _dirTemp * _size1) + (cos (_dirTemp + 90) * _size2)
+        ]
       ];
-  		_dotMarker setMarkerPos _dotMarkerPos;
-  		_dotMarker setMarkerSize [0.75,0.75];
-  		_dotMarker setMarkerDir _dir;
-  		_dotMarker setMarkerType "mil_box_noShadow";
-  		_dotMarker setMarkerColor "colorBlack";
-      _markers pushBack _dotMarker;
     };
 	};
 
@@ -89,6 +83,19 @@ if (_isActivated) then {
 	_borderMarker setMarkerBrush "border";
 	_borderMarker setMarkerColor "colorBlack";
   _markers pushBack _borderMarker;
+
+  // Create added dot markers
+  // Last to create so they will be on top
+  {
+    _x params ["_dotMarkerName", "_dotMarkerPos"];
+    private _dotMarker = createMarker [_dotMarkerName, _dotMarkerPos];
+    _dotMarker setMarkerPos _dotMarkerPos;
+    _dotMarker setMarkerSize [0.75, 0.75];
+    _dotMarker setMarkerDir _dir;
+    _dotMarker setMarkerType "mil_box_noShadow";
+    _dotMarker setMarkerColor "colorBlack";
+    _markers pushBack _dotMarker;
+  } forEach _dotMarkers;
 
   // Save created markers in module
   _logic setVariable [QGVAR(coverMap_markers), _markers];
