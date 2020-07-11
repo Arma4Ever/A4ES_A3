@@ -16,3 +16,14 @@ class GVAR(dynamicSlider): Slider {
         class GVAR(description): GVAR(description) {};
     };
 };
+
+class GVAR(dynamicSliderPercent): GVAR(dynamicSlider) {
+    class Controls: Controls {
+        class Title: Title {};
+        class Value: Value {
+            sliderStep = 0.01;
+        };
+        class Edit: Edit {};
+        class GVAR(description): GVAR(description) {};
+    };
+};

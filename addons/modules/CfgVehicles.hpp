@@ -163,9 +163,12 @@ class CfgVehicles {
                 control = QGVAR(dynamicSlider);
                 typeName = "NUMBER";
                 GVAR(range[]) = {0, 1};
+                GVAR(valueUnit) = "";
+            };
+            class GVAR(dynamicSliderPercent): GVAR(dynamicSlider) {
+                control = QGVAR(dynamicSliderPercent);
                 GVAR(valueUnit) = "%";
             };
-
             class GVAR(dynamicSkillSlider): Default {
                 control = QGVAR(dynamicSkillSlider);
                 typeName = "NUMBER";
@@ -235,6 +238,7 @@ class CfgVehicles {
         };
     };
 
+    #include "modules\coverMap\module.hpp"
     #include "modules\generateSoldiers\module.hpp"
     #include "modules\generatorComposition\module.hpp"
     #include "modules\registerArtilleryUnits\module.hpp"

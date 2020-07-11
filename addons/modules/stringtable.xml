@@ -518,7 +518,7 @@
       <Original>Handler wykonania modułu</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_modulePostExec_Tooltip">
-      <Original>Skrypt zostanie wykonany na serwerze (i tylko na serwerze, niezależnie od ustawień i obecności headlessa) w momencie gdy cały moduł się wykona - wszystkie grupy i ich jednostki zostały wygenerowane i przekazane do właściciela (serwer lub headless). Parametry: _this = moduł w którym zdeklarowaliśmy skrypt.\n\nTIP: Jako, że podany skrypt wykona się tylko na serwerze, można wykorzystać go jako inicjatora innych skryptów które chcemy wykonać w momencie wygenerowania przez moduł jednostek lub zmienić wartości flag używanych w triggerach (np. przy sprawdzaniu czy teren został wyczyszczony z wygenerowanych jednostek). Przykład: dodajemy skrypt wykonania modulu:\nmodul_wioski_wykonany = true;\npublicVariable 'modul_wioski_wykonany';\n\n Następnie triggerze sprawdzającym teren wioski ustawiamy aktywację OPFOR, typ "not present"a w warunku triggera podajemy:\n(modul_wioski_wykonany isEqualTo true) and this\n\n(isEqualTo zostało użyte, ponieważ przed wykonaniem modułu zmienna nie będzie istnieć - zwróci nil).</Original>
+      <Original>Skrypt zostanie wykonany na serwerze (i tylko na serwerze, niezależnie od ustawień i obecności headlessa) w momencie gdy cały moduł się wykona - wszystkie grupy i ich jednostki zostały wygenerowane i przekazane do właściciela (serwer lub headless). Parametry: _this = moduł w którym zdeklarowaliśmy skrypt.\n\nTIP: Jako, że podany skrypt wykona się tylko na serwerze, można wykorzystać go jako inicjatora innych skryptów które chcemy wykonać w momencie wygenerowania przez moduł jednostek lub zmienić wartości flag używanych w triggerach (np. przy sprawdzaniu czy teren został wyczyszczony z wygenerowanych jednostek). Przykład: dodajemy skrypt wykonania modulu:\nmissionNamespace setVariable ["modul_wioski_wykonany", true, true];\n\n Następnie triggerze sprawdzającym teren wioski ustawiamy aktywację OPFOR, typ "not present"a w warunku triggera podajemy:\nthis and (missionNamespace getVariable ["modul_wioski_wykonany", false])</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_extraSettingsSubCategory">
       <Original>Ustawienia dodatkowe</Original>
@@ -589,6 +589,35 @@
     </Key>
     <Key ID="STR_A3CS_Modules_registerArtilleryUnits_description">
       <Original>System alrtylerii działa w pełni autonomicznie i nie wymaga ingerencji ze strony mission-makera. Wystarczy zarejestrować jednostki artylerii których strona ma używać, a gdy jakieś AI danej strony wejdzie w kontakt ogniowy (a wróg jest w zasięgu artylerii), wsparcie ogniowe zostanie wezwane. System symuluje użycie prawdziwej artylerii. Pierwsze wystrzelone pociski są bardzo niecielne i zwykle niegroźne dla graczy, z czasem jednak, jednostki które wezwały wsparcie nanoszą poprawki i ogień staje się coraz celniejszy, co motywuje graczy do szybkiego wyeliminowania AI które wezwało wsparcie i kieruje ogniem. Gdy kolejna grupa AI zostanie zaatakowana, cały proces zaczyna się od nowa.&lt;br/&gt;&lt;br/&gt;TIP: System ten może być z powodzeniem wykorzystywany jako element zadań pobocznych. Np. niedaleko wioski którą mają zająć graczę ustawiamy baterię moździeży które rejestrujemy jako artylerię. W zadaniach dodajemy zniszczenie baterii jako cel poboczny, z informacją, że wyeliminowanie baterii przed atakiem na wioskę ułatwi jej zajęcie, bo AI w wiosce nie będą mogły użyć moździeży do wsparcia ogniowego.</Original>
+    </Key>
+  </Package>
+  <Package name="Modules_coverMap">
+    <Key ID="STR_A3CS_Modules_coverMap_displayName">
+      <Original>Obszar operacji</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_coverMap_shortDescription">
+      <Original>Moduł w momencie aktywacji tworzy markery które zasłonią mapę poza obszarem modułu (innymi słowy, obszar modułu będzie widoczny normalnie, reszta bedzie zasłonięta).</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_coverMap_description">
+      <Original>Moduł wspiera deaktywację oraz ponowną aktywację. Można użyć tej właściwości do zmiany widocznego obszaru mapy w trakcie gry, zależnie np. od wykonanych zadań. Aby uzyskać ten efekt wystarczy stworzyć dwa (lub więcej) moduły i zsynchronizować je z osobnymi triggerami, gdzie warunek jednego triggera będzie zwracał "true" jeśli dane zadanie nie zostało jeszcze wykonane, a warunek drugiego triggera będzie zwracał "true" jeśli dane zadanie zostało już wykonane. Tak ustawione modułu sprawią, że zasłona pierwszego modułu zniknie zaraz po wykonaniu zadania, a zasłona drugiego modułu zostanie stworzona w miejsce poprzedniej.<Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_coverMap_Attributes_coverOpacity">
+      <Original>Widocznośc</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_coverMap_Attributes_coverOpacity_Tooltip">
+      <Original>Widoczność markerów które będą stworzone jako zasłona mapy. Im wyższa widoczność zasłony tym zasłonięte fragmenty mapy będą słabiej widoczne.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_coverMap_Attributes_coverColor">
+      <Original>Kolor</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_coverMap_Attributes_coverColor_Tooltip">
+      <Original>Kolor markerów które zostaną stworzone jako zasłona mapy. Ta opcja ma wpływ tylko na kolor markerów zasłaniających mapkę. Kolor ramki widocznej strefy zawsze jest czarny.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_coverMap_Attributes_coverColor_black">
+      <Original>Czarny</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_coverMap_Attributes_coverColor_white">
+      <Original>Biały</Original>
     </Key>
   </Package>
 </Project>

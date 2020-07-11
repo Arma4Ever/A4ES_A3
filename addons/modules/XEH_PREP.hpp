@@ -35,6 +35,7 @@ PREP(updateModuleValues);
 PREP(updateWarningsTabUI);
 PREP(validateEntity);
 
+#include "modules\coverMap\prep.hpp"
 #include "modules\generateSoldiers\prep.hpp"
 #include "modules\generatorComposition\prep.hpp"
 #include "modules\registerArtilleryUnits\prep.hpp"
