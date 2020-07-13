@@ -239,6 +239,7 @@ class CfgVehicles {
     };
 
     #include "modules\coverMap\module.hpp"
+    #include "modules\fireArtillery\module.hpp"
     #include "modules\generateSoldiers\module.hpp"
     #include "modules\generatorComposition\module.hpp"
     #include "modules\registerArtilleryUnits\module.hpp"

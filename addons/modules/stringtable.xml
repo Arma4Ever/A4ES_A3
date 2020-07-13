@@ -344,7 +344,7 @@
       <Original>Znajdź i zniszcz (stealth)</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_creep_Tooltip">
-      <Original>Każda wygenerowana grupa będzie oczekiwać na swojej pozycji do czasu, aż jakaś wroga jednostka znajdzie się w jej obszarze działania. Po wejściu wrogich jednostek w obszar działania grupy, grupa wybierze najbliższy dostępny cel i ruszy w jego kierunku starając się pozostać niewykrytym przez całą drogę. Jeśli grupa będzie poruszać się w lesie, jednostki będą zmieniać swoją postawę zależnie od odległości od celu, im cel będzie bliżej tym niższa postawa jednostki (trucht w przykucu, czołganie się itp.). Jeśli celem jest pojazd, grupa będzie starała się uniknąć wykrycia leżąc. Jeśli grupa zbliży się do celu na mniej niż 40 metrów lub wcześniej zostanie wykryta/ostrzelana, grupa otworzy ogień do wyznaczonego celu oraz wrogich jednostek wokoło.</Original>
+      <Original>Każda wygenerowana grupa będzie oczekiwać na swojej pozycji do czasu, aż jakaś wroga jednostka znajdzie się w jej obszarze działania. Po wejściu wrogich jednostek w obszar działania grupy, grupa wybierze najbliższy dostępny cel i ruszy w jego kierunku starając się pozostać niewykrytym przez całą drogę. Jeśli grupa będzie poruszać się w lesie, jednostki będą zmieniać swoją postawę zależnie od odległości od celu, im cel będzie bliżej tym niższa postawa jednostki (trucht w przykucu, czołganie się itp.). Jeśli celem jest pojazd, grupa będzie starała się uniknąć wykrycia leżąc. Jeśli grupa zbliży się do celu na mniej niż 40 metrów lub wcześniej zostanie wykryta/ostrzelana, grupa otworzy ogień do wyznaczonego celu oraz wrogich jednostek wokoło.\n\nTo zachowanie może być szczególnie przydatne do generowania zasadzek lub oddziałów snajperskich.</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_rush">
       <Original>Znajdź i zniszcz (QRF)</Original>
@@ -618,6 +618,17 @@
     </Key>
     <Key ID="STR_A3CS_Modules_coverMap_Attributes_coverColor_white">
       <Original>Biały</Original>
+    </Key>
+  </Package>
+  <Package name="Modules_fireArtillery">
+    <Key ID="STR_A3CS_Modules_fireArtillery_displayName">
+      <Original>Ostrzał artylerii</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_shortDescription">
+      <Original>shortDescription</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_description">
+      <Original>description<Original>
     </Key>
   </Package>
 </Project>

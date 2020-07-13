@@ -232,6 +232,9 @@ class Cfg3DEN {
         #include "attributes\dynamicToolboxUnitStance.hpp"
         #include "attributes\dynamicSkillSlider.hpp"
 
+        #include "modules\fireArtillery\attributes\conditionType.hpp"
+        #include "modules\fireArtillery\attributes\targetPosMode.hpp"
+
         #include "modules\generateSoldiers\attributes\source.hpp"
         #include "modules\generateSoldiers\attributes\classListMode.hpp"
         #include "modules\generateSoldiers\attributes\spawnPosMode.hpp"
