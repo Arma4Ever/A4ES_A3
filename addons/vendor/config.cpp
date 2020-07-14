@@ -9,7 +9,8 @@ class CfgPatches {
         requiredAddons[] = {
             "a3cs_common",
             "A3_Weapons_F_Mark_LongRangeRifles_DMR_02",
-            "vurtual_seat"
+            "vurtual_seat",
+            "vurtual_ship"
         };
         author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL"};
