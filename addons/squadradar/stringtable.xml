@@ -40,8 +40,8 @@
       <Polish>Pokazuj ikonki stanów specjalnych</Polish>
     </Key>
     <Key ID="STR_A3CS_Squadradar_Settings_showSpecialStates_Tooltip">
-      <Original>Show special states like talks with TFAR or dead/unconscious</Original>
-      <Polish>Pokazuj stany specjalne jak mówi przez TFAR lub martwy/nieprzytomny</Polish>
+      <Original>Show special states like talking with ACRE or dead/unconscious</Original>
+      <Polish>Pokazuj stany specjalne jak mówienie przez ACRE lub martwy/nieprzytomny</Polish>
     </Key>
     <Key ID="STR_A3CS_Squadradar_Settings_showFingerPointers">
       <Original>Show finger pointers</Original>

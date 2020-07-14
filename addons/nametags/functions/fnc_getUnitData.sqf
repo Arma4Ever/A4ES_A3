@@ -15,7 +15,7 @@ private _rank = _unit call FUNC(getUnitRank);
   _rank # 1,
   _unit getVariable [QGVAR(unitColor), [[1,1,1], "#ffffff"]],
   _unit call EFUNC(squads,isLeader),
-  _unit getVariable [QGVAR(isSpeaking), false],
+  _unit getVariable [QEGVAR(radio,isSpeaking), false],
   _unit getVariable ["ACE_isUnconscious", false],
   _unit getVariable [QGVAR(specialIcon), ""]
 ]

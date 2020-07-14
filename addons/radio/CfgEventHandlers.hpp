@@ -6,17 +6,21 @@ class Extended_PreStart_EventHandlers {
 };
 
 class Extended_PreInit_EventHandlers {
-    delete Radio_Animations_PreInitHandler;
-
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
     };
 };
 
 class Extended_PostInit_EventHandlers {
-    delete Radio_Animations_PostInitHandler;
-
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_postInit));
+    };
+};
+
+class Extended_Respawn_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            respawn = QUOTE(_this call FUNC(handleRespawn));
+        };
     };
 };

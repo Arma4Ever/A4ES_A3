@@ -1,30 +1,13 @@
 class CfgWeapons {
-    class PistolCore;
-	class Pistol: PistolCore {
-		class EventHandlers {
-			reload = "";
-			reloaded = "";
-		};
-	};
-	class RifleCore;
-	class Rifle: RifleCore {
-		class EventHandlers {
-            reload = "";
-			reloaded = "";
-		};
-	};
-	class LauncherCore;
-	class Launcher: LauncherCore {
-		class EventHandlers {
-            reload = "";
-			reloaded = "";
-		};
-	};
-	class MGunCore;
-	class MGun: MGunCore {
-		class EventHandlers {
-            reload = "";
-			reloaded = "";
-		};
-	};
+    class ItemCore;
+    class ItemRadio: ItemCore {
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        scope = 2;
+    };
+    class ItemRadioAcreFlagged: ItemRadio {
+        scopeCurator = 1;
+        scope = 1;
+        scopeArsenal = 0;
+    };
 };

@@ -27,7 +27,7 @@ force force ace_artillerytables_advancedCorrections = false;
 force force ace_artillerytables_disableArtilleryComputer = false;
 force force ace_mk6mortar_airResistanceEnabled = false;
 force force ace_mk6mortar_allowCompass = true;
-force force ace_mk6mortar_allowComputerRangefinder = true;
+force force ace_mk6mortar_allowComputerRangefinder = false;
 force force ace_mk6mortar_useAmmoHandling = true;
 
 // ACE Captives
@@ -47,10 +47,10 @@ force force ace_parachute_hideAltimeter = true;
 
 // ACE Cook off
 force force ace_cookoff_ammoCookoffDuration = 0.5;
-force force ace_cookoff_enable = 1;
+force force ace_cookoff_enable = 2;
 force force ace_cookoff_enableAmmobox = true;
 force force ace_cookoff_enableAmmoCookoff = true;
-force force ace_cookoff_probabilityCoef = 1;
+force force ace_cookoff_probabilityCoef = 1.5;
 
 // ACE Crew Served Weapons
 force force ace_csw_ammoHandling = 2;
@@ -72,7 +72,7 @@ force force ace_frag_reflectionsEnabled = false;
 force force ace_frag_spallEnabled = false;
 
 // ACE G-Forces
-force force ace_gforces_coef = 1;
+force force ace_gforces_coef = 0.5;
 force force ace_gforces_enabledFor = 1;
 
 // ACE Goggles
@@ -140,12 +140,12 @@ force force ace_maptools_drawStraightLines = false;
 
 // ACE Medical
 force force ace_medical_ai_enabledFor = 2;
-force force ace_medical_AIDamageThreshold = 0.5;
-force force ace_medical_bleedingCoefficient = 0.5;
+force force ace_medical_AIDamageThreshold = 0.42;
+force force ace_medical_bleedingCoefficient = 0.25;
 force force ace_medical_blood_bloodLifetime = 600;
 force force ace_medical_blood_enabledFor = 2;
 force force ace_medical_blood_maxBloodObjects = 500;
-force force ace_medical_fatalDamageSource = 2;
+force force ace_medical_fatalDamageSource = 1;
 force force ace_medical_feedback_bloodVolumeEffectType = 2;
 force force ace_medical_feedback_painEffectType = 1;
 force force ace_medical_fractureChance = 0.503616;
@@ -158,7 +158,7 @@ force force ace_medical_gui_openAfterTreatment = true;
 force force ace_medical_ivFlowRate = 1.3;
 force force ace_medical_limping = 1;
 force force ace_medical_painCoefficient = 1;
-force force ace_medical_playerDamageThreshold = 1.5;
+force force ace_medical_playerDamageThreshold = 3;
 force force ace_medical_spontaneousWakeUpChance = 0.245351;
 force force ace_medical_spontaneousWakeUpEpinephrineBoost = 1;
 force force ace_medical_statemachine_AIUnconsciousness = false;
@@ -197,7 +197,7 @@ force force ace_nightvision_aimDownSightsBlur = 0;
 force force ace_nightvision_disableNVGsWithSights = false;
 force force ace_nightvision_effectScaling = 1;
 force force ace_nightvision_fogScaling = 1;
-force force ace_nightvision_noiseScaling = 1;
+force force ace_nightvision_noiseScaling = 0.5;
 force force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
@@ -217,7 +217,7 @@ force force ace_finger_maxRange = 4;
 // ACE Pylons
 force force ace_pylons_enabledForZeus = true;
 force force ace_pylons_enabledFromAmmoTrucks = true;
-force force ace_pylons_rearmNewPylons = false;
+force force ace_pylons_rearmNewPylons = true;
 force force ace_pylons_requireEngineer = false;
 force force ace_pylons_requireToolkit = true;
 force force ace_pylons_searchDistance = 15;
@@ -364,6 +364,28 @@ force force acex_fortify_settingHint = 2;
 // ACEX Sitting
 force force acex_sitting_enable = true;
 
+// ACRE2
+force force acre_sys_core_automaticAntennaDirection = false;
+force force acre_sys_core_defaultRadioVolume = 0.8;
+force force acre_sys_core_fullDuplex = false;
+force force acre_sys_core_ignoreAntennaDirection = true;
+force force acre_sys_core_interference = true;
+force force acre_sys_core_postmixGlobalVolume = 1;
+force force acre_sys_core_premixGlobalVolume = 1;
+force force acre_sys_core_revealToAI = 1;
+force force acre_sys_core_spectatorVolume = 1;
+force force acre_sys_core_terrainLoss = 1;
+force force acre_sys_core_ts3ChannelName = "";
+force force acre_sys_core_ts3ChannelPassword = "";
+force force acre_sys_core_ts3ChannelSwitch = false;
+force force acre_sys_core_unmuteClients = true;
+force force acre_sys_signal_signalModel = 2;
+
+// ACRE2 Zeus
+force force acre_sys_zeus_zeusCanSpectate = true;
+force force acre_sys_zeus_zeusCommunicateViaCamera = true;
+force force acre_sys_zeus_zeusDefaultVoiceSource = false;
+
 // CBA Weapons
 force force cba_disposable_dropUsedLauncher = 2;
 force force cba_disposable_replaceDisposableLauncher = true;
@@ -379,9 +401,9 @@ force force EMR_main_enableWeightCheck = true;
 force force EMR_main_jumpDuty = 1;
 force force EMR_main_jumpingEnabled = true;
 force force EMR_main_jumpingLoadCoefficient = 1;
-force force EMR_main_jumpVelocity = 3.4;
+force force EMR_main_jumpVelocity = 4.5;
 force force EMR_main_maxClimbHeight = 2.6;
-force force EMR_main_maxDropHeight = 5;
+force force EMR_main_maxDropHeight = 6;
 force force EMR_main_maxWeightClimb1 = 100;
 force force EMR_main_maxWeightClimb2 = 85;
 force force EMR_main_maxWeightClimb3 = 60;
@@ -443,15 +465,6 @@ force force lambs_eventhandlers_ExplosionReactionTime = 9;
 // LAMBS Danger WP
 force force lambs_wp_autoAddArtillery = false;
 
-// Task Force Arrowhead Radio
-force force TF_default_radioVolume = 9;
-force force TF_give_microdagr_to_soldier = false;
-force force TF_give_personal_radio_to_regular_soldier = false;
-force force TF_no_auto_long_range_radio = true;
-force force TF_same_dd_frequencies_for_side = false;
-force force TF_same_lr_frequencies_for_side = false;
-force force TF_same_sw_frequencies_for_side = false;
-
 // VET_Unflipping
 force force vet_unflipping_require_serviceVehicle = false;
 force force vet_unflipping_require_toolkit = false;
@@ -482,7 +495,7 @@ force force zen_editor_previews_enabled = true;
 force force zen_editor_randomizeCopyPaste = false;
 force force zen_editor_removeWatermark = true;
 force force zen_editor_unitRadioMessages = 2;
-force force zen_placement_enabled = false;
+force force zen_placement_enabled = true;
 force force zen_visibility_enabled = false;
 force force zen_vision_enableBlackHot = false;
 force force zen_vision_enableBlackHotGreenCold = false;

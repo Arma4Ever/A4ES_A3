@@ -48,7 +48,6 @@ class CfgPatches {
             "A3_Missions_F_Heli",
             "A3_Modules_F_Supports",
             "lambs_wp",
-            "task_force_radio_items",
             "A3_Modules_F_Tank",
             "ace_vehiclelock",
             "A3_Modules_F_Warlords",

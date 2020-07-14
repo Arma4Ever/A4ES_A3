@@ -37,8 +37,8 @@
       <Polish>Wyświetl ikonkę mówienia</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_showSpeaking_Desc">
-      <Original>Show animation above unit head when speaking (TFAR) on 3D tag</Original>
-      <Polish>Wyświetl animację nad głową jednostki podczas mówienia (TFAR) na tagu 3D</Polish>
+      <Original>Show animation above unit head when speaking (ACRE) on 3D tag</Original>
+      <Polish>Wyświetl animację nad głową jednostki podczas mówienia (ACRE) na tagu 3D</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_showLeaderIcon">
       <Original>Show group leader icon</Original>

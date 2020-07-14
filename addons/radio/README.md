@@ -1,8 +1,5 @@
 # A3CS Radio
-Overrides for TFAR Animations mod.
+Handles radios releated stuff (ACRE2).
 
 ### Changes
-
-
-### Credits
-Addon overrides [TFAR Animations](https://steamcommunity.com/sharedfiles/filedetails/?id=2141020863) mod by ASmallDinosaur & JetBlack164
+- Moves radios from player's corpse to new unit on respawn

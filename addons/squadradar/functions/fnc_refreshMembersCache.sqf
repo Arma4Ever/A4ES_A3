@@ -29,7 +29,7 @@ GVAR(membersCache) = GVAR(currentSquadUnits) apply {
       _isSpecialState = true;
       _checkFOV = _checkHelpFOV;
     };
-    if (_x getVariable [QEGVAR(nametags,isSpeaking), false]) exitWith {
+    if (_x getVariable [QEGVAR(radio,isSpeaking), false]) exitWith {
       _icon = "\a3\ui_f\data\igui\rscingameui\rscdisplaychannel\mutevon_ca.paa";
       _isSpecialState = true;
     };

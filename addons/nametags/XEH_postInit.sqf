@@ -7,22 +7,17 @@ if (EGVAR(common,isMainMenu)) exitWith {};
   call FUNC(onDrawSettingsChanged);
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(onSpeak), "OnSpeak", {
-  params ["_unit", "_isSpeaking"];
-  _unit setVariable [QGVAR(isSpeaking), _isSpeaking];
-}, ObjNull] call TFAR_fnc_addEventHandler;
-
 ["CBA_teamColorChanged", {
-    params ["_unit", "_team"];
+  params ["_unit", "_team"];
 
-    private _color = _team call EFUNC(common,getTeamColor);
-    _unit setVariable [QGVAR(unitColor), _color];
+  private _color = _team call EFUNC(common,getTeamColor);
+  _unit setVariable [QGVAR(unitColor), _color];
 }] call CBA_fnc_addEventHandler;
 
 ["ace_interactMenuOpened", {
-    'ACEInteractMenu' call FUNC(displayLoad);
+  'ACEInteractMenu' call FUNC(displayLoad);
 }] call CBA_fnc_addEventHandler;
 
 ["ace_interactMenuClosed", {
-    'ACEInteractMenu' call FUNC(displayUnload);
+  'ACEInteractMenu' call FUNC(displayUnload);
 }] call CBA_fnc_addEventHandler;

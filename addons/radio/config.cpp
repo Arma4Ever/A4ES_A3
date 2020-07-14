@@ -6,13 +6,13 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"a3cs_common", "Radio_Animations"};
+        requiredAddons[] = {"a3cs_common", "acre_sys_components"};
         author = ECSTRING(main,Author);
-        authors[] = {"ASmallDinosaur & JetBlack164", "SzwedzikPL"};
+        authors[] = {"SzwedzikPL"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
-#include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgEventHandlers.hpp"

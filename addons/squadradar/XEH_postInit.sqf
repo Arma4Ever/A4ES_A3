@@ -9,37 +9,10 @@ if (!hasInterface || EGVAR(common,isMainMenu)) exitWith {};
   call FUNC(handleSettingsChanged);
 }] call CBA_fnc_addEventHandler;
 
-#ifdef DEBUG_MODE_FULL
 ["unit", {
   LOG_1("unit event: %1",str _this);
-}] call CBA_fnc_addPlayerEventHandler;
-["vehicle", {
-  LOG_1("vehicle event: %1",str _this);
-}] call CBA_fnc_addPlayerEventHandler;
-[QGVAR(jamRadar), {
-  LOG_1("jamRadar event: %1",str _this);
-}] call CBA_fnc_addEventHandler;
-[QEGVAR(squads,squadChanged), {
-  LOG_1("squadChanged event: %1",str _this);
-}] call CBA_fnc_addEventHandler;
-[QGVAR(onSpeakDebug), "OnSpeak", {
-  LOG_1("onSpeak event: %1",str _this);
-}, ObjNull] call TFAR_fnc_addEventHandler;
-["CBA_teamColorChanged", {
-  LOG_1("CBA_teamColorChanged event: %1",str _this);
-}] call CBA_fnc_addEventHandler;
-["ace_unconscious", {
-  LOG_1("ace_unconscious event: %1",str _this);
-}] call CBA_fnc_addEventHandler;
-["ace_finger_fingered", {
-  LOG_1("ace_finger_fingered event: %1",str _this);
-}] call CBA_fnc_addEventHandler;
-#endif
-
-["unit", {
   // Hide current squad for now
   GVAR(showCurrentSquad) = false;
-
   // Trigger squads changed event on unit change & update UI
   [{
     [QEGVAR(squads,squadChanged), []] call CBA_fnc_localEvent;
@@ -47,15 +20,19 @@ if (!hasInterface || EGVAR(common,isMainMenu)) exitWith {};
 }] call CBA_fnc_addPlayerEventHandler;
 
 ["vehicle", {
+  LOG_1("vehicle event: %1",str _this);
   false call FUNC(updateUI);
 }] call CBA_fnc_addPlayerEventHandler;
 
 [QGVAR(jamRadar), {
+  LOG_1("jamRadar event: %1",str _this);
   // Update UI
   true call FUNC(updateUI);
 }] call CBA_fnc_addEventHandler;
 
 [QEGVAR(squads,squadChanged), {
+  LOG_1("squadChanged event: %1",str _this);
+
   GVAR(currentSquad) = ace_player call EFUNC(squads,getUnitSquad);
 
   if (isNull GVAR(currentSquad)) then {
@@ -73,12 +50,20 @@ if (!hasInterface || EGVAR(common,isMainMenu)) exitWith {};
   true call FUNC(updateUI);
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(onSpeak), "OnSpeak", DFUNC(handleUnitStatusUpdate), ObjNull] call TFAR_fnc_addEventHandler;
-["CBA_teamColorChanged", DFUNC(handleUnitStatusUpdate)] call CBA_fnc_addEventHandler;
+[QEGVAR(radio,onSpeak), {
+  LOG_2("%1 event: %2",QEGVAR(radio,onSpeak),str _this);
+  (_this # 0) call FUNC(handleUnitStatusUpdate);
+}] call CBA_fnc_addEventHandler;
+
+["CBA_teamColorChanged", {
+  LOG_1("CBA_teamColorChanged event: %1",str _this);
+  _this call FUNC(handleUnitStatusUpdate)
+}] call CBA_fnc_addEventHandler;
 
 ["ace_unconscious", {
   params ["_unit"];
 
+  LOG_1("ace_unconscious event: %1",str _this);
   _this call FUNC(handleUnitStatusUpdate);
 
   // Update ui if player unconsciousness status changes
@@ -89,10 +74,12 @@ if (!hasInterface || EGVAR(common,isMainMenu)) exitWith {};
 
 // ACE Finger
 ["ace_finger_fingered", {
+  LOG_1("ace_finger_fingered event: %1",str _this);
   _this call FUNC(handleFinger);
 }] call CBA_fnc_addEventHandler;
 
 // UI screenshot mode
 [QEGVAR(ui,screenshotModeToggled), {
+  LOG_2("%1 event: %2",QEGVAR(ui,screenshotModeToggled),str _this);
   false call FUNC(updateUI);
 }] call CBA_fnc_addEventHandler;

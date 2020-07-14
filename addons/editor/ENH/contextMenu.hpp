@@ -46,5 +46,5 @@ class ENH_DeleteCrew {
 class ENH_FirstPerson {
 	action = "call ENH_fnc_firstPerson";
 	Text = $STR_ENH_CONTEXTMENU_FIRSTPERSON;
-	conditionShow = "objectBrain";
+	//conditionShow = "objectBrain";
 };
