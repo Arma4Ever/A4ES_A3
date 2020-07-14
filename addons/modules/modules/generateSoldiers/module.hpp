@@ -396,6 +396,6 @@ class GVAR(generateSoldiers): GVAR(base) {
         shortDescription = CSTRING(generateSoldiers_shortDescription);
         description = CSTRING(generateSoldiers_description);
         positionInfo = CSTRING(generateSoldiers_positionInfo);
-        schema = QPATHTOF(data\schema_placeholder.paa);
+        //schema = QPATHTOF(data\schema_placeholder.paa);
     };
 };

@@ -51,7 +51,8 @@ class CfgPatches {
             "A3_Modules_F_Tank",
             "ace_vehiclelock",
             "A3_Modules_F_Warlords",
-            "A3_Modules_F_Curator_Lightning"
+            "A3_Modules_F_Curator_Lightning",
+            "acre_api"
         };
         author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL"};

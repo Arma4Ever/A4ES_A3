@@ -37,6 +37,6 @@ class GVAR(generatorComposition): GVAR(base) {
         canSyncWith[] = {"<anyUnit>"};
         syncRequired = 2;
         syncRequiredInfo = CSTRING(generatorComposition_syncRequiredInfo);
-        schema = QPATHTOF(data\schema_placeholder.paa);
+        //schema = QPATHTOF(data\schema_placeholder.paa);
     };
 };

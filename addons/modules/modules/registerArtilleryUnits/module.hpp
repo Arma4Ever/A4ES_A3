@@ -20,6 +20,6 @@ class GVAR(registerArtilleryUnits): GVAR(base) {
         description = CSTRING(registerArtilleryUnits_description);
         canSyncWith[] = {"<anyUnit>"};
         syncRequired = 1;
-        schema = QPATHTOF(data\schema_placeholder.paa);
+        //schema = QPATHTOF(data\schema_placeholder.paa);
     };
 };

@@ -391,6 +391,6 @@ class GVAR(fireArtillery): GVAR(base) {
     class GVAR(moduleDescription): GVAR(moduleDescription) {
         shortDescription = CSTRING(fireArtillery_shortDescription);
         description = CSTRING(fireArtillery_description);
-        schema = QPATHTOF(data\schema_placeholder.paa);
+        //schema = QPATHTOF(data\schema_placeholder.paa);
     };
 };

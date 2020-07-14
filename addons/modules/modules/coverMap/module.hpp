@@ -48,7 +48,7 @@ class GVAR(coverMap): GVAR(base) {
     class GVAR(moduleDescription): GVAR(moduleDescription) {
         shortDescription = CSTRING(coverMap_shortDescription);
         description = CSTRING(coverMap_description);
-        schema = QPATHTOF(data\schema_placeholder.paa);
+        //schema = QPATHTOF(data\schema_placeholder.paa);
         isDisposable = 0;
         deactivationDisablesEffect = 1;
     };

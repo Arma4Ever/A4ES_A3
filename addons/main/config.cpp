@@ -18,7 +18,6 @@ class CfgMods {
     class PREFIX {
         dir = "@A3CS";
         name = "Arma3Coop System";
-        picture = "A3\Ui_f\data\Logos\arma3_expansion_alpha_ca";
         actionName = "Forum";
         action = CSTRING(URL);
         description = "Arma3Coop.pl";
