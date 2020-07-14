@@ -72,7 +72,7 @@ dssignfile = ""
 prefix = "a3cs"
 pbo_name_prefix = "a3cs_"
 signature_blacklist = []
-importantFiles = ["mod.cpp", "README.md", "LICENSE", "logo_a3cs_ca.paa", "version.a3c"]
+importantFiles = ["mod.cpp", "README.md", "LICENSE", "logo_a3cs.paa", "logosmall_a3cs.paa", "picture_a3cs.paa", "version.a3c"]
 versionFiles = ["mod.cpp", "version.a3c"]
 
 ciBuild = False # Used for CI builds

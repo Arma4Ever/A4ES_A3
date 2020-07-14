@@ -599,7 +599,7 @@
       <Original>Moduł w momencie aktywacji tworzy markery które zasłonią mapę poza obszarem modułu (innymi słowy, obszar modułu będzie widoczny normalnie, reszta bedzie zasłonięta).</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_coverMap_description">
-      <Original>Moduł wspiera deaktywację oraz ponowną aktywację. Można użyć tej właściwości do zmiany widocznego obszaru mapy w trakcie gry, zależnie np. od wykonanych zadań. Aby uzyskać ten efekt wystarczy stworzyć dwa (lub więcej) moduły i zsynchronizować je z osobnymi triggerami, gdzie warunek jednego triggera będzie zwracał "true" jeśli dane zadanie nie zostało jeszcze wykonane, a warunek drugiego triggera będzie zwracał "true" jeśli dane zadanie zostało już wykonane. Tak ustawione modułu sprawią, że zasłona pierwszego modułu zniknie zaraz po wykonaniu zadania, a zasłona drugiego modułu zostanie stworzona w miejsce poprzedniej.<Original>
+      <Original>Moduł wspiera deaktywację oraz ponowną aktywację. Można użyć tej właściwości do zmiany widocznego obszaru mapy w trakcie gry, zależnie np. od wykonanych zadań. Aby uzyskać ten efekt wystarczy stworzyć dwa (lub więcej) moduły i zsynchronizować je z osobnymi triggerami, gdzie warunek jednego triggera będzie zwracał "true" jeśli dane zadanie nie zostało jeszcze wykonane, a warunek drugiego triggera będzie zwracał "true" jeśli dane zadanie zostało już wykonane. Tak ustawione modułu sprawią, że zasłona pierwszego modułu zniknie zaraz po wykonaniu zadania, a zasłona drugiego modułu zostanie stworzona w miejsce poprzedniej.</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_coverMap_Attributes_coverOpacity">
       <Original>Widocznośc</Original>
@@ -628,7 +628,7 @@
       <Original>shortDescription</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_fireArtillery_description">
-      <Original>description<Original>
+      <Original>description</Original>
     </Key>
   </Package>
 </Project>
