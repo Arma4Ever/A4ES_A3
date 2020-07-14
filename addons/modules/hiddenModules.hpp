@@ -212,3 +212,5 @@ HIDE_MODULE(ModuleOmMarket_F,Module_F);
 HIDE_MODULE(ModuleOmRandomConversation_F,Module_F);
 HIDE_MODULE(ModuleOMFastTravel_F,Module_F);
 HIDE_MODULE(ModuleOMFastTravelPos_F,Module_F);
+HIDE_MODULE(acre_api_basicMissionSetup,Module_F);
+HIDE_MODULE(acre_api_nameChannels,Module_F);
