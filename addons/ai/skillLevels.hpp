@@ -1,3 +1,4 @@
+
 class GVAR(skillLevels) {
     ranges[] = {
         {0, "partisans"},

@@ -1,7 +1,16 @@
 #include "script_component.hpp"
 
-// Exit if no interface or it's main menu intro
-if (!hasInterface || EGVAR(common,isMainMenu)) exitWith {};
+// Exit if main menu
+if (EGVAR(common,isMainMenu)) exitWith {};
+
+if (isServer && isMultiplayer) then {
+  [{
+    [QGVAR(enableSafety), []] call CBA_fnc_globalEvent;
+  }, []] call CBA_fnc_execNextFrame;
+};
+
+// Exit if no interface
+if (!hasInterface) exitWith {};
 
 // Disable all channels except global & side
 for "_i" from 2 to 15 do {

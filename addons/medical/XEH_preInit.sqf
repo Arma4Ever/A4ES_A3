@@ -13,3 +13,19 @@ if (GVAR(systemDisabled)) then {
 };
 
 ADDON = true;
+
+// Kill vehicle crew on vehicle destruction
+{
+  [_x, "Killed", {
+    params ["_vehicle"];
+    // Exit if vehicle not local
+    if (!(local _vehicle)) exitWith {};
+
+    LOG_1('Handling killed event for "%1" vehicle - killing all crew',typeOf _vehicle);
+
+    // Kill all crew
+    {
+      _x setDamage 1;
+    } forEach (crew _vehicle);
+  }] call CBA_fnc_addClassEventHandler;
+} forEach ["Air", "Car", "Tank", "Ship"];
