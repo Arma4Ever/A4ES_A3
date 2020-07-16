@@ -128,7 +128,7 @@
       <Original>Zatrzymaj jednostkę</Original>
     </Key>
     <Key ID="STR_A3CS_Editor_doStop_Tooltip">
-      <Original>Powstrzymuje jednostkę przed ruszeniem do formacji na starcie misji. Jednostka po wejściu tryb zagrożenia będzie poruszać się normalnie.</Original>
+      <Original>Powstrzymuje jednostkę przed ruszeniem do formacji na starcie misji. Jednostka po wejściu w tryb zagrożenia będzie poruszać się normalnie.</Original>
     </Key>
     <Key ID="STR_A3CS_Editor_forceGunLights">
       <Original>Wymuś włączenie latarki</Original>

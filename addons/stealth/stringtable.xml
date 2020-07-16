@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+  <Package name="Stealth">
+    <Key ID="STR_A3CS_Stealth_Takedown">
+      <Original>Silent takedown</Original>
+      <Polish>Ciche zabójstwo</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Stealth_Takedown_Tooltip">
+      <Original>Silently kills unit under cursor</Original>
+      <Polish>Zabija po cichu jednostkę pod kursorem</Polish>
+    </Key>
+  </Package>
+</Project>
