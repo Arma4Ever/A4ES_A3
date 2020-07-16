@@ -147,8 +147,8 @@
     <Key ID="STR_A3CS_Modules_ModuleDescription_apiFunctions_Desc">
       <Original>Wszystkie funkcje API są widoczne w przeglądarce funkcji edytora (%1) lub na &lt;a href="https://github.com/SzwedzikPL/A3CS/wiki"&gt;Wiki A3CS&lt;/a&gt;.</Original>
     </Key>
-    <Key ID="STR_A3CS_Modules_ModuleDescription_Schema_Title">
-      <Original>Schemat użycia</Original>
+    <Key ID="STR_A3CS_Modules_Warning_ModuleHasNoEffect">
+      <Original>Brak efektu działania modułu</Original>
     </Key>
   </Package>
   <Package name="Modules_dynamicClassSelect">
@@ -553,6 +553,18 @@
     <Key ID="STR_A3CS_Modules_generateSoldiers_emptyCompositions_Tooltip">
       <Original>Nie wykryto żadnych kompozycji. Aby móc użyć kompozycji musisz ją najpierw stworzyć (moduł "Kompozycja generatora") oraz nadać jej unikalną nazwę (w atrybutach modułu "Kompozycja generatora").</Original>
     </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Warning_NoSyncedTrigger">
+      <Original>Brak zsynchronizowanego triggera</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Warning_NoSyncedTrigger_Desc">
+      <Original>Uruchamianie generatora piechoty od razu na starcie misji nie jest zalecaną praktyką. Zsynchronizuj moduł z triggerem aby opóźnić jego wykonanie do czasu aktywacji triggera.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Warning_EmptyClasslist_Desc">
+      <Original>Lista klas generatora jest pusta.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Warning_NoComposition_Desc">
+      <Original>Nie wybrano żadnej kompozycji.</Original>
+    </Key>
   </Package>
   <Package name="Modules_generatorComposition">
     <Key ID="STR_A3CS_Modules_generatorComposition_displayName">
@@ -579,6 +591,12 @@
     <Key ID="STR_A3CS_Modules_generatorComposition_Attributes_deleteUnits_Tooltip">
       <Original>Usuwa jednostki użyte w kompozycji po jej zapisaniu. Włączenie tej opcji jest zalecane jeśli połączona grupa została stworzona tylko na potrzeby kompozycji i sama w sobie nie jest potrzebna w scenariuszu.</Original>
     </Key>
+    <Key ID="STR_A3CS_Modules_generatorComposition_Warning_SyncError">
+      <Original>Brak zsynchronizowanej jednostki</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generatorComposition_Warning_SyncError_Desc">
+      <Original>Moduł do poprawnego działania musi być zsynchronizowany z dokładnie jedną (i tylko jedną) jednostką piechoty (pojazdy nie są obsługiwane) której grupa ma być użyta jako kompozycja.</Original>
+    </Key>
   </Package>
   <Package name="Modules_registerArtilleryUnits">
     <Key ID="STR_A3CS_Modules_registerArtilleryUnits_displayName">
@@ -589,6 +607,12 @@
     </Key>
     <Key ID="STR_A3CS_Modules_registerArtilleryUnits_description">
       <Original>System alrtylerii działa w pełni autonomicznie i nie wymaga ingerencji ze strony mission-makera. Wystarczy zarejestrować jednostki artylerii których strona ma używać, a gdy jakieś AI danej strony wejdzie w kontakt ogniowy (a wróg jest w zasięgu artylerii), wsparcie ogniowe zostanie wezwane. System symuluje użycie prawdziwej artylerii. Pierwsze wystrzelone pociski są bardzo niecielne i zwykle niegroźne dla graczy, z czasem jednak, jednostki które wezwały wsparcie nanoszą poprawki i ogień staje się coraz celniejszy, co motywuje graczy do szybkiego wyeliminowania AI które wezwało wsparcie i kieruje ogniem. Gdy kolejna grupa AI zostanie zaatakowana, cały proces zaczyna się od nowa.&lt;br/&gt;&lt;br/&gt;TIP: System ten może być z powodzeniem wykorzystywany jako element zadań pobocznych. Np. niedaleko wioski którą mają zająć graczę ustawiamy baterię moździeży które rejestrujemy jako artylerię. W zadaniach dodajemy zniszczenie baterii jako cel poboczny, z informacją, że wyeliminowanie baterii przed atakiem na wioskę ułatwi jej zajęcie, bo AI w wiosce nie będą mogły użyć moździeży do wsparcia ogniowego.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_registerArtilleryUnits_Warning_NoSyncedUnits">
+      <Original>Brak zsynchronizowanych jednostek</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_registerArtilleryUnits_Warning_NoSyncedUnits_Desc">
+      <Original>Moduł do działania wymaga zsynchronizacji z conajmniej jedną jednostką (lub pojazdem) która ma być zarejestrowana jako jednostka artylerii.</Original>
     </Key>
   </Package>
   <Package name="Modules_coverMap">

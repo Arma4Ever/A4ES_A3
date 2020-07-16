@@ -28,3 +28,6 @@ _ctrlClassList lnbSetCurSelRow (_index min (((lnbSize _ctrlClassList) # 0) - 1))
   1,
   _notificationBar
 ] call FUNC(dynamicClassSelect_showNotification);
+
+// Update dynamic attribute
+[ctrlParentControlsGroup _ctrlClassList, ""] call FUNC(updateDynamicAttribute);

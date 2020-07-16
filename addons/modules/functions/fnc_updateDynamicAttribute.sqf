@@ -34,5 +34,3 @@ private _warnings = [
 
 // Trigger refresh of attributes
 call FUNC(refreshAttributes);
-
-// Call onValuesChanged handlers

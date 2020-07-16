@@ -55,4 +55,7 @@ if (_playSound || !(isNull _notificationBar)) then {
     0,
     _notificationBar
   ] call FUNC(dynamicClassSelect_showNotification);
+
+  // Update dynamic attribute
+  [ctrlParentControlsGroup _ctrlClassList, ""] call FUNC(updateDynamicAttribute);
 };

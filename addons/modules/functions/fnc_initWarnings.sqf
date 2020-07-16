@@ -32,4 +32,23 @@ private _modules = all3DENEntities # 3;
   _x call FUNC(handleModuleInit);
 } forEach _modules;
 
+// Add draw3D handler
+if (isNil QGVAR(warnings3DDrawHandler)) then {
+  GVAR(warnings3DDrawHandler) = addMissionEventHandler ["Draw3D", {
+    private _selected = get3DENSelected "logic";
+    private _mouseOver = get3DENMouseOver param [1, objNull];
+    {
+      private _entity = get3DENEntity _x;
+      drawIcon3D [
+        QPATHTOF(data\warning_entity_red.paa),
+        [1, 1, 1, [0.85, 1] select ((_entity in _selected) || {_entity isEqualTo _mouseOver})],
+        getPos _entity,
+        1.5,
+        1.5,
+        0
+      ];
+    } forEach GVAR(warningsEntities);
+  }];
+};
+
 LOG_1("Warnings init finished (entities: %1).",str count _modules);

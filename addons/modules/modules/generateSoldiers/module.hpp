@@ -98,6 +98,7 @@ class GVAR(generateSoldiers): GVAR(base) {
             property = QGVAR(classList);
             typeName = "STRING";
             defaultValue = '[]';
+            GVAR(observeValue) = 1;
             GVAR(assetsTypes[]) = {"CAManBase"};
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(source)) isEqualTo 0);
             GVAR(onValuesChanged) = QFUNC(dynamicClassSelect_updateUI);

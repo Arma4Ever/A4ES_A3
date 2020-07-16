@@ -6,4 +6,16 @@
 
 params ["_module", "_values"];
 
-[]
+private _warnings = [];
+private _syncedUnits = (get3DENConnections _module) select {
+  ((_x # 0) isEqualTo "Sync") && {(_x # 1) isKindOf "AllVehicles"}
+};
+
+if (_syncedUnits isEqualTo []) then {
+  _warnings pushBack [
+    localize LSTRING(registerArtilleryUnits_Warning_NoSyncedUnits),
+    localize LSTRING(registerArtilleryUnits_Warning_NoSyncedUnits_Desc)
+  ];
+};
+
+_warnings
