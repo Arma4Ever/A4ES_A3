@@ -57,7 +57,7 @@ if (!hasInterface || EGVAR(common,isMainMenu)) exitWith {};
 
 ["CBA_teamColorChanged", {
   LOG_1("CBA_teamColorChanged event: %1",str _this);
-  _this call FUNC(handleUnitStatusUpdate)
+  _this call FUNC(handleUnitStatusUpdate);
 }] call CBA_fnc_addEventHandler;
 
 ["ace_unconscious", {

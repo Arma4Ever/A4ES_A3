@@ -15,7 +15,7 @@ private _checkHelpFOV = !GVAR(disableHelpIconFOVCheck);
 // Build squad members cache
 GVAR(membersCache) = GVAR(currentSquadUnits) apply {
   private _icon = "";
-  private _iconColor = [];
+  private _iconColor = [[1, 1, 1], "#ffffff"];
   private _isSpecialState = false;
   private _checkFOV = false;
 

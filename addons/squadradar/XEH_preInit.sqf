@@ -3,9 +3,6 @@
 ADDON = false;
 
 #include "XEH_PREP.hpp"
-
-ADDON = true;
-
 #include "initSettings.sqf"
 
 GVAR(disabledInMission) = getMissionConfigValue [QGVAR(disableSquadRadar), false];
@@ -27,10 +24,10 @@ GVAR(interruptingDisplays) = [];
 
 GVAR(radarPos) = [0,0,0];
 GVAR(radarDrawCachePFH) = -1;
-GVAR(radarMembersCache) = [];
+GVAR(membersCache) = [];
 GVAR(radarDrawCache) = [];
 GVAR(lastSpecialStateUnits) = [];
 GVAR(radarJammed) = false;
 GVAR(memberlistJammed) = false;
 
-GVAR(memberslistColumns) = [];
+ADDON = true;

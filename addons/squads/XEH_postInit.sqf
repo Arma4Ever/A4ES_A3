@@ -3,6 +3,18 @@
 // Exit if it's main menu intro
 if (EGVAR(common,isMainMenu)) exitWith {};
 
+// JIP squad detection
+if (hasInterface) then {
+  [{
+
+    private _squad = player getVariable [QGVAR(squad), objNull];
+    // Exit if player has no squad
+    if (isNull _squad) exitWith {};
+    // Trigger squad changed event
+    [QGVAR(squadChanged), []] call CBA_fnc_localEvent;
+  }, []] call CBA_fnc_execNextFrame;
+};
+
 // Exit if not server
 if !(isServer) exitWith {};
 
@@ -15,10 +27,9 @@ if !(isServer) exitWith {};
 ["CBA_teamColorChanged", {
     params ["_unit", "_team"];
 
-    // Save unit assigned team on server for dummy units
-    _unit setVariable [QGVAR(assignedTeam), _team];
+    // Save unit assigned team globally (for JIP support and dummy units)
+    _unit setVariable [QGVAR(assignedTeam), _team, true];
 }] call CBA_fnc_addEventHandler;
-
 
 // Parse playable units groups one second after start
 // We're giving some time for things like ace setName etc.

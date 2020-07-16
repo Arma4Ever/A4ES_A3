@@ -6,6 +6,11 @@
 
 params ["_control"];
 
+// Exit if draw cache is empty
+if (GVAR(radarDrawCache) isEqualTo []) exitWith {
+  LOG("Radar draw is skipped - draw cache is empty");
+};
+
 BEGIN_COUNTER(drawRadar);
 
 private _cameraDirVector = (positionCameraToWorld [0, 0, 1]) vectorDiff (positionCameraToWorld [0, 0, 0]);
@@ -35,16 +40,24 @@ private _radarIconsOpacity = GVAR(radarIconsOpacity);
 } forEach (GVAR(radarDrawCache) # 1);
 
 private _playerData = GVAR(radarDrawCache) # 0;
-_playerData params ["_icon", "_color"];
+if !(_playerData isEqualTo []) then {
+  _playerData params ["_icon", "_color"];
 
-_control drawIcon [
-  _icon,
-  _color,
-  _radarPos,
-  _radarIconSize,
-  _radarIconSize,
-  ((getDir ace_player) - _cameraDir),
-  ""
-];
+  _control drawIcon [
+    _icon,
+    _color,
+    _radarPos,
+    _radarIconSize,
+    _radarIconSize,
+    ((getDir ace_player) - _cameraDir),
+    ""
+  ];
+};
+
+#ifdef DEBUG_MODE_FULL
+if (_playerData isEqualTo []) then {
+  LOG("Drawing player on radar is skipped - no player data in draw cache");
+};
+#endif
 
 END_COUNTER(drawRadar);

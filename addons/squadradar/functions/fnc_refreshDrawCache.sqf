@@ -54,7 +54,7 @@ private _unitsData = [];
       ];
     };
   } else {
-    private _color = (_colors # 0) # 0;
+    private _color = +((_colors # 0) # 0);
     _color set [3, GVAR(radarIconsOpacity)];
     _playerData = [_icons # 0, _color];
   };

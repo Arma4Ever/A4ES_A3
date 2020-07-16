@@ -17,7 +17,12 @@ private _areaTargets = (_camPosAGL nearObjects ["CAManBase", NAMETAG_3D_MAX_DIST
 private _targetsData = [];
 
 {
-  _targetsData pushBack (_x call FUNC(getUnitData));
+  _targetsData pushBack (
+    [
+      _x,
+      [ace_player, _x] call EFUNC(squads,areInSameSquad)
+    ] call FUNC(getUnitData)
+  );
 } forEach _areaTargets;
 
 _targetsData

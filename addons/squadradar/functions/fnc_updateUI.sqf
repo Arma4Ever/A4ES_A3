@@ -29,8 +29,10 @@ if ((!GVAR(enable) || !GVAR(showCurrentSquad) || GVAR(disabledInMission)) && GVA
 
 // Create RscRadar
 if (GVAR(enable) && !GVAR(enabled) && GVAR(showCurrentSquad) && !GVAR(disabledInMission)) then {
+  // Initial refresh of members data
+  call FUNC(refreshMembersData);
   QGVAR(RscRadar) cutRsc [QGVAR(RscRadar), "PLAIN", 0, false];
-  GVAR(drawCachePFH) = [DFUNC(refreshDrawCache), 0.25, []] call CBA_fnc_addPerFrameHandler;
+  GVAR(drawCachePFH) = [DFUNC(refreshDrawCache), 0.33, []] call CBA_fnc_addPerFrameHandler;
 };
 
 private _display = uiNamespace getVariable [QGVAR(rscRadar), displayNull];
@@ -115,7 +117,7 @@ if !(GVAR(memberlistJammed)) then {
 
 LOG_4("UI elements updated (showRadar: %1 showMemberlist: %2 radarJammed: %3 memberlistJammed: %4)",str _showRadar,str _showMemberlist,str GVAR(radarJammed),str GVAR(memberlistJammed));
 
-// Refresh members cache & redraw memberlist in case of column with change
+// Refresh members cache & redraw memberlist in case of column width change
 // or initial draw
 if (_settingsChanged) then {
   true call FUNC(drawMemberlist);

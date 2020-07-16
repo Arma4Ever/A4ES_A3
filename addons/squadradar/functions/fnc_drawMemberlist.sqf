@@ -18,7 +18,7 @@ private _display = uiNamespace getVariable [QGVAR(rscRadar), displayNull];
 private _controlMemberlist = _display displayCtrl IDC_RSCRADAR_MEMBERLIST;
 private _columns = _controlMemberlist getVariable [QGVAR(columns), []];
 private _usedColumnWidthScale = _controlMemberlist getVariable [QGVAR(columnWidthScale), 0];
-private _requiredColumnCount = ceil ((count GVAR(currentSquadUnits)) / MEMBERLIST_COLUMN_ROWS);
+private _requiredColumnCount = ceil ((count GVAR(membersCache)) / MEMBERLIST_COLUMN_ROWS);
 private _columnWidthScale = GVAR(memberlistColumnWidthScale);
 
 #ifdef DEBUG_MODE_FULL
