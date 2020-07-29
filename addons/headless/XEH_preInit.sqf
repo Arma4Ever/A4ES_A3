@@ -28,7 +28,7 @@ if (!isServer) exitWith {};
 
 GVAR(headlessClient) = objNull;
 GVAR(transferScheduled) = false;
-GVAR(spawnHandlerAdded) = false;
+//GVAR(spawnHandlerAdded) = false;
 
 // Handle headless connected
 [QGVAR(headlessConnected), {
@@ -46,7 +46,7 @@ GVAR(spawnHandlerAdded) = false;
   GVAR(transferScheduled) = true;
   [{
     // Register init handler for unit spawns during mission
-    if !(GVAR(spawnHandlerAdded)) then {
+    /* if !(GVAR(spawnHandlerAdded)) then {
       GVAR(spawnHandlerAdded) = true;
       LOG("Registering spawn handler");
       ["CAManBase", "init", {
@@ -55,18 +55,9 @@ GVAR(spawnHandlerAdded) = false;
           _this call FUNC(handleSpawn);
         }, _this, 5] call CBA_fnc_waitAndExecute;
       }] call CBA_fnc_addClassEventHandler;
-    };
+    }; */
 
     // Exec initial groups transfer
     true call FUNC(transferGroups);
   }, [], 5] call CBA_fnc_waitAndExecute;
-}] call CBA_fnc_addEventHandler;
-
-// Handle restoring units loadout
-[QGVAR(restoreUnitsLoadout), {
-  LOG_1("Restoring loadout for %1 units.",str (count _this));
-  {
-    private _unitLoadout = _x getVariable [QGVAR(loadout), typeOf _x];
-    _x setUnitLoadout _unitLoadout;
-  } forEach _this;
 }] call CBA_fnc_addEventHandler;

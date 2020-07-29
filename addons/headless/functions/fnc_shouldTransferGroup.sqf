@@ -71,9 +71,7 @@ private _transferUnits = true;
 
   // Save gear if unit about to be transferred with current
   // loadout (in case of need of loadout restoration later).
-  // Var will stay on server to lower network traffic,
-  // headless will send list of bugged units to restore loadout.
-  _unit setVariable [QGVAR(loadout), getUnitLoadout _x];
+  _unit setVariable [QGVAR(loadout), getUnitLoadout _x, true];
 } forEach (units _group);
 
 _transferUnits
