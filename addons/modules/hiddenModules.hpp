@@ -160,7 +160,6 @@ HIDE_MODULE(ModuleWLInit_F,ModuleWLTemplate_F);
 HIDE_MODULE(ModuleWLResponse_F,ModuleWLTemplate_F);
 HIDE_MODULE(ModuleWLSector_F,ModuleWLTemplate_F);
 HIDE_MODULE(ModuleWLSpawnPoint_F,ModuleWLTemplate_F);
-HIDE_MODULE(ModuleLightning_F,Module_F);
 HIDE_MODULE(ModuleZoneProtection_F,Module_F);
 HIDE_MODULE(ModuleZoneRestriction_F,Module_F);
 HIDE_MODULE(ModuleOmBase,Module_F);

@@ -50,7 +50,7 @@ force force ace_cookoff_ammoCookoffDuration = 1;
 force force ace_cookoff_enable = 2;
 force force ace_cookoff_enableAmmobox = true;
 force force ace_cookoff_enableAmmoCookoff = true;
-force force ace_cookoff_probabilityCoef = 0.75;
+force force ace_cookoff_probabilityCoef = 0.35;
 
 // ACE Crew Served Weapons
 force force ace_csw_ammoHandling = 2;
@@ -140,7 +140,7 @@ force force ace_maptools_drawStraightLines = false;
 
 // ACE Medical
 force force ace_medical_ai_enabledFor = 2;
-force force ace_medical_AIDamageThreshold = 0.42;
+force force ace_medical_AIDamageThreshold = 0.3;
 force force ace_medical_bleedingCoefficient = 0.25;
 force force ace_medical_blood_bloodLifetime = 600;
 force force ace_medical_blood_enabledFor = 2;
@@ -195,9 +195,9 @@ force force ace_medical_treatment_woundReopenChance = 0.5;
 // ACE Nightvision
 force force ace_nightvision_aimDownSightsBlur = 0;
 force force ace_nightvision_disableNVGsWithSights = false;
-force force ace_nightvision_effectScaling = 1;
-force force ace_nightvision_fogScaling = 1;
-force force ace_nightvision_noiseScaling = 0.5;
+force force ace_nightvision_effectScaling = 0.5;
+force force ace_nightvision_fogScaling = 0.5;
+force force ace_nightvision_noiseScaling = 0.2;
 force force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
@@ -367,19 +367,19 @@ force force acex_sitting_enable = true;
 // ACRE2
 force force acre_sys_core_automaticAntennaDirection = false;
 force force acre_sys_core_defaultRadioVolume = 0.8;
-force force acre_sys_core_fullDuplex = false;
+force force acre_sys_core_fullDuplex = true;
 force force acre_sys_core_ignoreAntennaDirection = true;
-force force acre_sys_core_interference = true;
+force force acre_sys_core_interference = false;
 force force acre_sys_core_postmixGlobalVolume = 1;
 force force acre_sys_core_premixGlobalVolume = 1;
 force force acre_sys_core_revealToAI = 1;
 force force acre_sys_core_spectatorVolume = 1;
-force force acre_sys_core_terrainLoss = 1;
+force force acre_sys_core_terrainLoss = 0;
 force force acre_sys_core_ts3ChannelName = "";
 force force acre_sys_core_ts3ChannelPassword = "";
 force force acre_sys_core_ts3ChannelSwitch = false;
 force force acre_sys_core_unmuteClients = true;
-force force acre_sys_signal_signalModel = 2;
+force force acre_sys_signal_signalModel = 0;
 
 // ACRE2 Zeus
 force force acre_sys_zeus_zeusCanSpectate = true;
@@ -387,7 +387,7 @@ force force acre_sys_zeus_zeusCommunicateViaCamera = true;
 force force acre_sys_zeus_zeusDefaultVoiceSource = false;
 
 // CBA Weapons
-force force cba_disposable_dropUsedLauncher = 2;
+force force cba_disposable_dropUsedLauncher = 0;
 force force cba_disposable_replaceDisposableLauncher = true;
 
 // Enhanced Movement Rework

@@ -23,6 +23,7 @@ VENDOR = {
     "@Enhanced Movement": {},
     "@Enhanced Movement Rework": {},
     "@GRAD Trenches": {},
+    "@GRAD SlingHelmet": {},
     "@VET_Unflipping": {},
     "@BackpackOnChest": {},
     "@Breaching Charge": {},
@@ -40,6 +41,8 @@ VENDOR = {
     "@PLP Materials": {},
     "@Extended Fortifications Mod": {},
     "@AVON FM12 Respirator Pack": {},
+    "@Wearable Antennae": {},
+    "@ArmaZeusCache": {},
     # "@Camofaces": {},
     "-Mocap": {
         "whitelist": ["MOCAP_mov"],

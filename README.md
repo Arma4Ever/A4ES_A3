@@ -13,6 +13,7 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [Enhanced Movement](https://forums.bohemia.net/forums/topic/174788-enhanced-movement/)
 - [Enhanced Movement Rework](https://github.com/SceptreOfficial/Enhanced-Movement-Rework)
 - [GRAD Trenches](https://github.com/gruppe-adler/grad_trenches)
+- [GRAD SlingHelmet](https://github.com/DerZade/grad_slinghelmet)
 - [VET Unflipping](https://github.com/veteran29/vet_unflipping)
 - [Backpack On Chest](https://github.com/DerZade/BackpackOnChest)
 - [Arma 3 Breaching Charge](https://github.com/ampersand38/Arma-3-Breaching-Charge)
@@ -29,7 +30,8 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - Modified version of [JSHK Contamination Gear](https://steamcommunity.com/sharedfiles/filedetails/?id=1738216191)
 - [Vurtual's Car Seat & Stretcher](https://steamcommunity.com/sharedfiles/filedetails/?id=1381327410)
 - [Vurtual's Ships](https://steamcommunity.com/sharedfiles/filedetails/?id=1564445550)
-
+- [ArmaZeusCache](https://steamcommunity.com/sharedfiles/filedetails/?id=1908099028)
+- [Wearable Antennae](https://steamcommunity.com/sharedfiles/filedetails/?id=2142137881)
 
 ## Credits
 Authors of external mods.  
