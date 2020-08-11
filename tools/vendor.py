@@ -41,9 +41,9 @@ VENDOR = {
     "@PLP Materials": {},
     "@Extended Fortifications Mod": {},
     "@AVON FM12 Respirator Pack": {},
-    "@Wearable Antennae": {},
     "@ArmaZeusCache": {},
     # "@Camofaces": {},
+    "-Wearable Antennae": {},
     "-Mocap": {
         "whitelist": ["MOCAP_mov"],
     },
