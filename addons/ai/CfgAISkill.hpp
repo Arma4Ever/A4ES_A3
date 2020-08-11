@@ -5,9 +5,9 @@ class CfgAISkill {
 	// 0.05 is the value that people tend to like, it's super inaccurate - takes a while for AI groups to kill each other
     aimingAccuracy[] = {0, 0.075, 1, 0.4};
 
-    aimingShake[] = {0, 0.1, 1, 0.5};
-    aimingSpeed[] = {0, 0.35, 1, 0.75};
-    spotDistance[] = {0, 0.5, 1, 1};
+    aimingShake[] = {0, 0.15, 1, 0.5};
+    aimingSpeed[] = {0, 0.4, 1, 0.75};
+    spotDistance[] = {0, 0.75, 1, 1};
 
     // Static vars
     commanding[] = {0, 1, 1, 1};

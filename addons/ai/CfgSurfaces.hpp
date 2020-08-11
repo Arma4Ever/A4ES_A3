@@ -2,6 +2,6 @@
 class CfgSurfaces {
 	class Default {
         // Make AI avoid prone stance
-		AIAvoidStance = 2;
+		AIAvoidStance = 1;
 	};
 };
