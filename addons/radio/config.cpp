@@ -8,11 +8,12 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"a3cs_common", "acre_sys_components"};
         author = ECSTRING(main,Author);
-        authors[] = {"SzwedzikPL"};
+        authors[] = {"diwako", "SzwedzikPL"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
-#include "CfgWeapons.hpp"
 #include "CfgEventHandlers.hpp"
+#include "CfgWeapons.hpp"
+#include "CfgMoves.hpp"
