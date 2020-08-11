@@ -26,8 +26,8 @@ LOG('Starting execution of EXEC_MODULE_NAME.');
 _logic setVariable [QGVAR(executed), true, true];
 
 // Add extra sync time if module is executed on mission start
-if (CBA_missionTime < 10) then {
-  sleep 5;
+if (CBA_missionTime < 30) then {
+  sleep 10;
 };
 
 // Get logic area
@@ -54,13 +54,18 @@ private _boundaryArea = switch (_logic getVariable [QGVAR(behaviourAreaBoundary)
     default {[]}
 };
 
-// Get headless setting
-private _disableHeadless = _logic getVariable [QGVAR(disableHeadless), false];
-private _headlessTransfer = isMultiplayer && {!_disableHeadless} && {!(isNull EGVAR(headless,headlessClient))};
-
-if (_headlessTransfer) then {
+// Call module exec function
+if (
+  isMultiplayer
+  && {!(_logic getVariable [QGVAR(disableHeadless), false])}
+  && {!(isNull EGVAR(headless,headlessClient))}
+) then {
+  // Exec on headless
+  LOG_1('Spawning EXEC_MODULE_NAME exec function on headless (owner: %1)', str (owner EGVAR(headless,headlessClient)));
   [_logic, _logicArea, _boundaryArea] remoteExec [QFUNC(generateSoldiers_moduleExec), owner EGVAR(headless,headlessClient)];
 } else {
+  // Exec on server
+  LOG('Spawning EXEC_MODULE_NAME exec function on server');
   [_logic, _logicArea, _boundaryArea] spawn FUNC(generateSoldiers_moduleExec);
 };
 
