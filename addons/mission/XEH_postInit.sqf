@@ -3,9 +3,19 @@
 // Exit if main menu
 if (EGVAR(common,isMainMenu)) exitWith {};
 
-if (isServer && isMultiplayer) then {
+if (isServer) then {
+  if (isMultiplayer) then {
+    [{
+      [QGVAR(enableSafety), []] call CBA_fnc_globalEvent;
+    }, []] call CBA_fnc_execNextFrame;
+  };
+
   [{
-    [QGVAR(enableSafety), []] call CBA_fnc_globalEvent;
+    private _respawn = getMissionConfigValue ["respawn", 0];
+    // Exit if respawn enabled
+    if !(_respawn isEqualTo 0) exitWith {};
+    // Remove all playable units from garbage collection
+    removeFromRemainsCollector ([switchableUnits, playableUnits] select isMultiplayer);
   }, []] call CBA_fnc_execNextFrame;
 };
 
