@@ -8,6 +8,11 @@
 	if (!isMultiplayer) exitWith {};
 #endif
 
+// Add local handler
+["CAManBase", "Local", {
+  _this call FUNC(handleLocal);
+}] call CBA_fnc_addClassEventHandler;
+
 if (isServer) then {
   // Handle HC disconnect
   addMissionEventHandler ["HandleDisconnect", {
@@ -18,10 +23,6 @@ if (isServer) then {
     true
   }];
 } else {
-  ["CAManBase", "Local", {
-    _this call FUNC(handleLocal);
-  }] call CBA_fnc_addClassEventHandler;
-
   // Notify server about connected HC
   [QGVAR(headlessConnected), [player]] call CBA_fnc_serverEvent;
 };
