@@ -18,19 +18,22 @@ private _display = uiNamespace getVariable [QGVAR(rscRadar), displayNull];
 private _controlMemberlist = _display displayCtrl IDC_RSCRADAR_MEMBERLIST;
 private _columns = _controlMemberlist getVariable [QGVAR(columns), []];
 private _usedColumnWidthScale = _controlMemberlist getVariable [QGVAR(columnWidthScale), 0];
+private _usedUIScale = _controlMemberlist getVariable [QGVAR(uiScale), 0];
 private _requiredColumnCount = ceil ((count GVAR(membersCache)) / MEMBERLIST_COLUMN_ROWS);
 private _columnWidthScale = GVAR(memberlistColumnWidthScale);
+private _uiScale = GVAR(uiScale);
 
 #ifdef DEBUG_MODE_FULL
 private _columnsRebuilded = false;
 #endif
 
 if !(
-  (count _columns) isEqualTo _requiredColumnCount &&
-  _usedColumnWidthScale isEqualTo _columnWidthScale
+  (count _columns) isEqualTo _requiredColumnCount
+  && _usedColumnWidthScale isEqualTo _columnWidthScale
+  && _usedUIScale isEqualTo _uiScale
 ) then {
-  private _columnWidth = (pixelW * 130) * _columnWidthScale;
-  private _columnHeight = pixelH * 128;
+  private _columnWidth = (pixelW * 130) * _uiScale * _columnWidthScale;
+  private _columnHeight = pixelH * 128 * _uiScale;
 
   {ctrlDelete _x;} forEach _columns;
   _columns = [];
@@ -49,15 +52,16 @@ if !(
     _columns pushBack _column;
   };
   _controlMemberlist setVariable [QGVAR(columns), _columns];
-  // Save used column width scale
+  // Save used settings
   _controlMemberlist setVariable [QGVAR(columnWidthScale), _columnWidthScale];
+  _controlMemberlist setVariable [QGVAR(uiScale), _uiScale];
   #ifdef DEBUG_MODE_FULL
   _columnsRebuilded = true;
   #endif
 };
 
-private _iconSize = 0.9 * GVAR(uiHScale);
-private _nameSize = 1 * GVAR(uiHScale);
+private _iconSize = 0.9 * GVAR(memberlistHScale) * GVAR(memberlistTextScale);
+private _nameSize = 1 * GVAR(memberlistHScale) * GVAR(memberlistTextScale);
 private _memberlistOpacity = GVAR(memberlistOpacity);
 private _memberlistTextShadow = GVAR(memberlistTextShadow);
 

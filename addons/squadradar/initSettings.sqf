@@ -68,6 +68,15 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(uiScale), "SLIDER",
+    [LSTRING(Settings_uiScale), LSTRING(Settings_uiScale_Tooltip)],
+    [LSTRING(Settings_Addon), LSTRING(Settings_GUI)],
+    [1, 2, 1, 2],
+    2,
+    {_this call FUNC(handleSettingsChanged);}
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(radarBackgroundOpacity), "SLIDER",
     [LSTRING(Settings_radarBackgroundOpacity), LSTRING(Settings_OpacityTooltip)],
     [LSTRING(Settings_Addon), LSTRING(Settings_GUI)],
@@ -81,6 +90,15 @@
     [LSTRING(Settings_radarIconsOpacity), LSTRING(Settings_OpacityTooltip)],
     [LSTRING(Settings_Addon), LSTRING(Settings_GUI)],
     [0, 1, 1, 2],
+    2,
+    {_this call FUNC(handleSettingsChanged);}
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(memberlistTextScale), "SLIDER",
+    [LSTRING(Settings_memberlistTextScale), LSTRING(Settings_memberlistTextScale_Tooltip)],
+    [LSTRING(Settings_Addon), LSTRING(Settings_GUI)],
+    [0, 2, 1, 2],
     2,
     {_this call FUNC(handleSettingsChanged);}
 ] call CBA_settings_fnc_init;

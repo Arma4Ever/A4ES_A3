@@ -8,17 +8,6 @@ params [["_settingsChanged", false, [false]]];
 
 LOG_3("Updating UI (settingsChanged: %1 enable: %2 enabled: %3 showCurrentSquad %4)",str _settingsChanged,str GVAR(enable),str GVAR(enabled),str GVAR(showCurrentSquad));
 
-if (_settingsChanged) then {
-  // Update scale vars
-  private _resolution = getResolution;
-  private _screenHeight = _resolution # 1;
-  private _uiScale = _resolution # 5;
-  GVAR(uiScale) = 0.55 / _uiScale;
-  GVAR(uiHScale) = 900 / _screenHeight;
-  GVAR(mapZoomScale) = _screenHeight / 900;
-  GVAR(radarIconSize) = RADAR_BASE_ICON_SIZE * GVAR(uiScale);
-};
-
 // Remove RscRadar
 if ((!GVAR(enable) || !GVAR(showCurrentSquad) || GVAR(disabledInMission)) && GVAR(enabled)) exitWith {
   LOG("Unloading radar");
@@ -46,10 +35,54 @@ private _ctrlRadarBg = _display displayCtrl IDC_RSCRADAR_RADARBG;
 private _ctrlFingerPointers = _display displayCtrl IDC_RSCRADAR_FINGER_POINTERS;
 private _ctrlMemberlist = _display displayCtrl IDC_RSCRADAR_MEMBERLIST;
 
-// Update radar background
+// Update radar size & background
 if (_settingsChanged) then {
+  // Update scale vars
+  private _resolution = getResolution;
+  private _screenHeight = _resolution # 1;
+  private _settingsUIScale = 0.55 / (_resolution # 5);
+
+  GVAR(memberlistHScale) = (900 / _screenHeight) * GVAR(uiScale);
+  GVAR(radarIconSize) = RADAR_BASE_ICON_SIZE * _settingsUIScale * GVAR(uiScale);
+
+  private _radarW = pixelW * 128 * GVAR(uiScale);
+  private _radarH = pixelH * 128 * GVAR(uiScale);
+  private _radarPos = [
+    0.5 - (_radarW / 2),
+    safeZoneY + safeZoneH - (_radarH + (pixelH * 10)),
+    _radarW,
+    _radarH
+  ];
+
   _ctrlRadarBg ctrlSetText GVAR(radarBackground);
   _ctrlRadarBg ctrlSetTextColor [1, 1, 1, GVAR(radarBackgroundOpacity)];
+  _ctrlRadarBg ctrlSetPosition _radarPos;
+  _ctrlRadarBg ctrlCommit 0;
+
+  _ctrlRadar ctrlSetPosition _radarPos;
+  _ctrlRadar ctrlCommit 0;
+
+  _ctrlFingerPointers ctrlSetPosition _radarPos;
+  _ctrlFingerPointers ctrlCommit 0;
+
+  _ctrlMemberlist ctrlSetPosition [
+    0.5 + (_radarW / 2),
+    safeZoneY + safeZoneH - (_radarH + (pixelH * 2)),
+    (safeZoneW / 2) - (_radarW / 2),
+    _radarH
+  ];
+  _ctrlMemberlist ctrlCommit 0;
+
+  // Adjust map zoom
+  private _mapZoomScale = _screenHeight / 900;
+  private _mapZoom = linearConversion [1, 2, GVAR(uiScale), 15.5, 7.5, false];
+  _ctrlRadar ctrlMapAnimAdd [
+    0,
+    1 / (worldsize / (22 * _mapZoom * _mapZoomScale)),
+    // Counter arma bug with broken pos after map resize
+    GVAR(radarPos) vectorAdd [(1 - GVAR(uiScale)) * 32.25 * _mapZoomScale, 0, 0]
+  ];
+  ctrlMapAnimCommit _ctrlRadar;
 };
 
 // Termine which UI elements should be visible

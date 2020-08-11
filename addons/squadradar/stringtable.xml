@@ -71,6 +71,14 @@
       <Original>Dark with light border</Original>
       <Polish>Ciemne z jasnym obramowaniem</Polish>
     </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_uiScale">
+      <Original>UI scale</Original>
+      <Polish>Skala UI</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_uiScale_Tooltip">
+      <Original>Squad radar UI scale, 1 = 100% of normal size, 2 = 200% of normal size</Original>
+      <Polish>Skala wielkości UI radaru drużynowego, 1 = 100% normalnej wielkości, 2 = 200% normalnej wielkości</Polish>
+    </Key>
     <Key ID="STR_A3CS_Squadradar_Settings_radarBackgroundOpacity">
       <Original>Radar background opacity</Original>
       <Polish>Widoczność tła radaru</Polish>
@@ -87,6 +95,13 @@
       <Original>Finger pointer texture color</Original>
       <Polish>Kolor tekstury wskaznika wskazania palcem</Polish>
     </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_memberlistTextScale">
+      <Original>Squad members text scale</Original>
+      <Polish>Skala tekstu listy członków</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Squadradar_Settings_memberlistTextScale_Tooltip">
+      <Original>0 = 0%, 1 = 100%, 2 = 200%</Original>
+    </Key>
     <Key ID="STR_A3CS_Squadradar_Settings_memberlistOpacity">
       <Original>Squad members opacity</Original>
       <Polish>Widoczność listy członków drużyny radaru</Polish>
@@ -96,7 +111,7 @@
       <Polish>Szerokość kolumn listy członków drużyny</Polish>
     </Key>
     <Key ID="STR_A3CS_Squadradar_Settings_memberlistColumnWidthScale_Tooltip">
-      <Original>0 = 0%, 1 = 100%, 2 = 200%)</Original>
+      <Original>0 = 0%, 1 = 100%, 2 = 200%</Original>
     </Key>
     <Key ID="STR_A3CS_Squadradar_Settings_memberlistTextShadow">
       <Original>Squad members text shadow</Original>
