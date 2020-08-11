@@ -21,7 +21,7 @@ _module addEventHandler ["RegisteredToWorld3DEN", {
     LOG_2("Module '%1' (ID: %2) RegisteredToWorld3DEN.",typeof _module,str get3DENEntityID _module);
 
     // Setup module variables because tmp vars are lost during unregistration
-    _module call FUNC(updateModuleValues);
+    _module spawn FUNC(updateModuleValues);
 }];
 
 // Add UnregisteredFromWorld3DEN handler
@@ -36,4 +36,4 @@ _module addEventHandler ["UnregisteredFromWorld3DEN", {
 }];
 
 // Setup module variables
-_module call FUNC(updateModuleValues);
+_module spawn FUNC(updateModuleValues);
