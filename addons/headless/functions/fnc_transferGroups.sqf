@@ -13,7 +13,7 @@ if (isNull GVAR(headlessClient)) exitWith {
   LOG_1("Groups transfer aborted. Headless client is null (initial: %1).",str _initialTransfer);
 };
 
-// Exec transfer in unscheduled env for easy pausing
+// Exec transfer in scheduled env for easy pausing
 _initialTransfer spawn {
   params ["_initialTransfer"];
 
@@ -28,6 +28,39 @@ _initialTransfer spawn {
     if ([_x, _headlessOwner] call FUNC(shouldTransferGroup)) then {
       // Bumb transfer attempts counter
       _transferAttempts = _transferAttempts + 1;
+
+      // Save group units data before transfer
+      {
+        private _unit = _x;
+        // Save gear if unit about to be transferred with current
+        // loadout (in case of need of loadout restoration later).
+        _unit setVariable [QGVAR(loadout), getUnitLoadout _x, true];
+
+        // Save AI features
+        _unit setVariable [
+          QGVAR(AIFeatures),
+          [
+            "TARGET",
+            "AUTOTARGET",
+            "MOVE",
+            "ANIM",
+            "TEAMSWITCH",
+            "FSM",
+            "WEAPONAIM",
+            "AIMINGERROR",
+            "SUPPRESSION",
+            "CHECKVISIBLE",
+            "COVER",
+            "AUTOCOMBAT",
+            "PATH",
+            "MINEDETECTION",
+            "NVG",
+            "LIGHTS",
+            "RADIOPROTOCOL"
+          ] apply {[_x, _unit checkAIFeature _x]},
+          true
+        ];
+      } forEach (units _x);
 
       LOG_1('Attempting to transfer group "%1".',groupId _x);
 
@@ -50,7 +83,7 @@ _initialTransfer spawn {
 
   LOG_3("Groups transfer finished (allGroups: %1 transferAttempts: %2 transfers: %3).",str _allGroups,str _transferAttempts,str _transfers);
 
-  // Do not send transfer report if it's not initial transfer
+  // Do not show transfer report if it's not initial transfer
   if !(_initialTransfer) exitWith {};
 
   // Show transfer report on systemChat globally

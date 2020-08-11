@@ -68,10 +68,6 @@ private _transferUnits = true;
     LOG_1('Group "%1" rejected for transfer - group unit vehicle has disableTransfer flag.');
     _transferUnits = false;
   };
-
-  // Save gear if unit about to be transferred with current
-  // loadout (in case of need of loadout restoration later).
-  _unit setVariable [QGVAR(loadout), getUnitLoadout _x, true];
 } forEach (units _group);
 
 _transferUnits
