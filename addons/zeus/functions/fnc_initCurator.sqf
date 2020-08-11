@@ -12,7 +12,7 @@ LOG_2("Initing curator module %1 (editable3DENObjects count: %2)",str _curator,s
 #endif
 
 _curator addCuratorEditableObjects [
-  ([switchableUnits, playableUnits] select isMultiplayer) select {!(_x isKindOf "VirtualMan_F")},
+  [switchableUnits, playableUnits] select isMultiplayer,
   true
 ];
 _curator addCuratorEditableObjects [
@@ -20,8 +20,15 @@ _curator addCuratorEditableObjects [
   true
 ];
 
+_curator addEventHandler ["CuratorGroupPlaced", {
+  params ["", "_group"];
+  if (local _group) then {
+    _group deleteGroupWhenEmpty true;
+  };
+}];
+
 // Start curators points reset loop if not started yet
-if (GVAR(pointsResetPFH) < 0) then {
+if (GVAR(pointsResetPFH) isEqualTo -1) then {
   LOG("Starting points reset PFH");
-  GVAR(pointsResetPFH) = [DFUNC(pointsResetPFH), 30, []] call CBA_fnc_addPerFrameHandler;
+  GVAR(pointsResetPFH) = [{call FUNC(pointsResetPFH)}, 15, []] call CBA_fnc_addPerFrameHandler;
 };
