@@ -19,3 +19,12 @@ if ((uniform _unit) isEqualTo "") then {
   LOG("Naked unit detected.");
   _unit setUnitLoadout (_unit getVariable [QGVAR(loadout), typeOf _unit]);
 };
+
+// Reapply AI features
+{
+  if (_x # 1) then {
+    _unit enableAI (_x # 0);
+  } else {
+    _unit disableAI (_x # 0);
+  };
+} forEach (_unit getVariable [QGVAR(AIFeatures), []]);
