@@ -23,7 +23,6 @@ VENDOR = {
     "@Enhanced Movement": {},
     "@Enhanced Movement Rework": {},
     "@GRAD Trenches": {},
-    "@GRAD SlingHelmet": {},
     "@VET_Unflipping": {},
     "@BackpackOnChest": {},
     "@Breaching Charge": {},
