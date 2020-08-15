@@ -29,7 +29,6 @@ VENDOR = {
     "@The Mighty GAU-8 Avenger": {},
     "@The Mighty GAU-8 Avenger - Less FX More Performance": {},
     "@The Mighty GAU-8 Avenger - ACE": {},
-    "@RSPN Cave Systems for Eden": {},
     "@Eden Extended Objects": {},
     "@O&T Expansion Eden": {
         "blacklist": ["expEden_static_ssDM"],

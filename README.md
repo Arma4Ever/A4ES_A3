@@ -17,7 +17,6 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [Backpack On Chest](https://github.com/DerZade/BackpackOnChest)
 - [Arma 3 Breaching Charge](https://github.com/ampersand38/Arma-3-Breaching-Charge)
 - [Mighty Gau-8 Avenger](https://github.com/Zabuzard/MightyGau-8Avenger)
-- [RSPN Cave Systems for Eden](https://steamcommunity.com/sharedfiles/filedetails/?id=1678490017)
 - [O&T Expansion Eden](https://steamcommunity.com/sharedfiles/filedetails/?id=1923321700)
 - [Metis Nature](https://steamcommunity.com/sharedfiles/filedetails/?id=1951690856)
 - [Eden Extended Objects](https://steamcommunity.com/sharedfiles/filedetails/?id=882231372)
