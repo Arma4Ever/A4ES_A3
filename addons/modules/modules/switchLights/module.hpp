@@ -2,7 +2,7 @@ class GVAR(switchLights): GVAR(base) {
     scope = 2;
     author = "SzwedzikPL";
     displayName = CSTRING(switchLights_displayName);
-    icon = QPATHTOF(modules\switchLights\data\icon.paa);
+    //icon = QPATHTOF(modules\switchLights\data\icon.paa);
     category = QGVAR(effects);
     function = QFUNC(switchLights_module);
     functionPriority = 5;
@@ -18,15 +18,15 @@ class GVAR(switchLights): GVAR(base) {
         class GVAR(moduleWarnings): GVAR(moduleWarnings) {};
 
         class GVAR(segments): GVAR(dynamicCheckbox) {
-            displayName = "Segmenty";
-            tooltip = "Segmenty";
+            displayName = CSTRING(switchLights_Attributes_segments);
+            tooltip = CSTRING(switchLights_Attributes_segments_tooltip);
             property = QGVAR(segments);
             defaultValue = "false";
         };
 
         class GVAR(segmentSize): GVAR(dynamicEdit) {
-            displayName = "Ilosc lamp na segment";
-            tooltip = "Na ile lamp maja sie dzielic segmenty";
+            displayName = CSTRING(switchLights_Attributes_segmentSize);
+            tooltip = CSTRING(switchLights_Attributes_segmentSize_tooltip);
             property = QGVAR(segmentSize);
             defaultValue = "1";
             typeName = "NUMBER";
@@ -35,8 +35,8 @@ class GVAR(switchLights): GVAR(base) {
         };
 
         class GVAR(segmentDir): GVAR(dynamicSlider) {
-            displayName = "Kierunek wylaczania";
-            tooltip = "W ktora strone maja byc wylaczane lampy";
+            displayName = CSTRING(switchLights_Attributes_segmentDir);
+            tooltip = CSTRING(switchLights_Attributes_segmentDir_tooltip);
             property = QGVAR(hitAngle);
             defaultValue = "0";
             typeName = "NUMBER";
@@ -46,8 +46,8 @@ class GVAR(switchLights): GVAR(base) {
         };
 
         class GVAR(segmentDelay): GVAR(dynamicEdit) {
-            displayName = "Opoznienie miedzy segmentami";
-            tooltip = "Czas w sekundach jaki ma uplaynac miedzy wylaczeniem kazdego segmentu";
+            displayName = CSTRING(switchLights_Attributes_segmentDelay);
+            tooltip = CSTRING(switchLights_Attributes_segmentDelay_tooltip);
             property = QGVAR(segmentDelay);
             defaultValue = "1";
             typeName = "NUMBER";
@@ -60,7 +60,6 @@ class GVAR(switchLights): GVAR(base) {
 
     class GVAR(moduleDescription): GVAR(moduleDescription) {
         shortDescription = CSTRING(switchLights_shortDescription);
-        description = CSTRING(switchLights_description);
         //schema = QPATHTOF(data\schema_placeholder.paa);
         isDisposable = 0;
         deactivationDisablesEffect = 1;

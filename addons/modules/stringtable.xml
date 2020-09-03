@@ -352,6 +352,18 @@
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_rush_Tooltip">
       <Original>Każda wygenerowana grupa będzie oczekiwać na swojej pozycji do czasu, aż jakaś wroga jednostka znajdzie się w jej obszarze działania. Po wejściu wrogich jednostek w obszar działania grupy, grupa wybierze najbliższy dostępny cel i ruszy w jego kierunku w maksymalnym możliwym tempie. Po napotkaniu przeciwnika grupa otworzy ogień do każdego celu niezależnie od swojego uzbrojenia (w tym do pojazdów lądowych i śmigłowców) starając się go przygwoździć, uszkodzić lub zniszczyć.</Original>
     </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_move">
+      <Original>Szturm</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_move_Tooltip">
+      <Original>Każda wygenerowana grupa ruszy w kierunku pozycji docelowej. Grupa w razie kontaktu ogniowego będzie starała się osiągnąć wyznaczoną pozycje walcząc, korzystając z osłon, systematycznie przemieszczając się w stronę celu.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_assault">
+      <Original>Agresywny szturm</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_behaviour_assault_Tooltip">
+      <Original>Każda wygenerowana grupa ruszy w kierunku pozycji docelowej. Grupa będzie starała się osiągnąc wskazaną pozycję za wszelką cenę, w dużej mierze ignorując osłony aka zerg rush.</Original>
+    </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_range">
       <Original>Zasięg obszaru działań</Original>
     </Key>
@@ -480,6 +492,24 @@
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_hcrScriptInterval_Tooltip">
       <Original>Jak często skrypt ma sprawdzać obszar działań grupy w poszukiwaniu celów. Im częstsze skanowanie tym dokładniejsze zachowanie grupy. Pamiętaj, że każdy skan odbywa się kosztem obciążenia serwera i sieci.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_maMovePosition">
+      <Original>Pozycja docelowa</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_maMovePosition_Tooltip">
+      <Original>Nazwa markera oznaczającego pozycje docelową dla grupy.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_maDistanceThreshold">
+      <Original>Dokładność pozycji</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_maDistanceThreshold_Tooltip">
+      <Original>W jakiej odległości od pozycji docelowej grupa może uznać, że dotarła na pozycję.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_assaultForcedRetreat">
+      <Original>Wymuszony odwrót</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_assaultForcedRetreat_Tooltip">
+      <Original>Zaznacz tą opcję, jeśli grupa ma uznać ten rozkaz jako rozkaz odwrotu. Efektem tej opcji jest agresywniejszy ruch oraz brak możliwości podjęcia samodzielnego odwrotu.</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_eventHandlersSubCategory">
       <Original>Obsługa zdarzeń</Original>
@@ -658,18 +688,35 @@
   </Package>
   <Package name="Modules_switchLights">
     <Key ID="STR_A3CS_Modules_switchLights_displayName">
-      <Original>Latarnie</Original>
+      <Original>Wyłącz latarnie</Original>
     </Key>
     <Key ID="STR_A3CS_Modules_switchLights_shortDescription">
-      <Original>Moduł włącza/wyłącza latarnie na oznaczonym obszarze.</Original>
+      <Original>Moduł włącza/wyłącza latarnie oraz światła na budynkach w obszarze modułu. Moduł obsługuje dezaktywację, jeśli połączony z modułem trigger zostanie dezaktywowany, światła zostaną włączone.</Original>
     </Key>
-    <Key ID="STR_A3CS_Modules_switchLights_description">
-      <Original>Opis.</Original>
+    <Key ID="STR_A3CS_Modules_switchLights_Attributes_segments">
+      <Original>Wyłączaj światła segmentami</Original>
     </Key>
-
-
-
-
+    <Key ID="STR_A3CS_Modules_switchLights_Attributes_segments_Tooltip">
+      <Original>Po zaznaczeniu tej opcji światła będą wyłączane/włączane segmentami, zamiast wszystkie na raz.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_switchLights_Attributes_segmentSize">
+      <Original>Ilość świateł w segmencie</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_switchLights_Attributes_segmentSize_Tooltip">
+      <Original>Po ile świateł mają być podzielone segmenty.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_switchLights_Attributes_segmentDir">
+      <Original>Kierunek segmentów</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_switchLights_Attributes_segmentDir_Tooltip">
+      <Original>W jakim kierunku mają być dzielone segmenty. Np. kierunek 0 oznacza, że segmenty będą wyłączane z południa w kierunku północnym.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_switchLights_Attributes_segmentDelay">
+      <Original>Opóźnienie między segmentami</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_switchLights_Attributes_segmentDelay_Tooltip">
+      <Original>Odstęp czasowy (w sekundach) pomiędzy wyłączaniem poszczególnych segmentów.</Original>
+    </Key>
   </Package>
   <Package name="Modules_fireArtillery">
     <Key ID="STR_A3CS_Modules_fireArtillery_displayName">

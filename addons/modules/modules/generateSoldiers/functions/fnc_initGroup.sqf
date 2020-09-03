@@ -14,6 +14,10 @@ private ["_composition", "_unitInit"];
 // Get unit skill
 private _unitSkill = (_logic getVariable [QGVAR(skill), 0.5]) max 0.01;
 
+// Get LAMBS vars
+private _disableLambsAI = _logic getVariable [QGVAR(disableLambsAI), false];
+private _hasLambsRadio = _logic getVariable [QGVAR(hasLambsRadio), true];
+
 // Prep unit init
 private _execUnitInit = _logic getVariable [QGVAR(addUnitPostInit), false];
 if (_execUnitInit) then {
@@ -39,6 +43,14 @@ if (_applyLoadout) then {
   if (_applyLoadout) then {
     LOG_2('Applying loadout for %1 group unit #%2.',str (groupId _group),str _forEachIndex);
     _x setUnitLoadout [(_composition # _forEachIndex) # 1, true];
+  };
+
+  // Apply lambs vars
+  if (_disableLambsAI) then {
+    _x setVariable ["lambs_danger_disableAI", true, true];
+  };
+  if (_hasLambsRadio) then {
+    _x setVariable ["lambs_danger_dangerRadio", true, true];
   };
 
   // Exec unit init
@@ -160,7 +172,41 @@ if (_behaviour isEqualto 5) exitWith {
     _groupPos,
     _hcrTargetOnlyPlayers
   ] spawn lambs_wp_fnc_taskHunt;
+};
 
+private _movePos = getMarkerPos (_logic getVariable [QGVAR(maMovePosition), ""]);
+private _moveDistanceTreshold = (_logic getVariable [QGVAR(maDistanceThreshold), 50]) max 20;
+
+// Move
+if (_behaviour isEqualto 6) exitWith {
+  LOG_1('Executing move behaviour for %1 group.',str (groupId _group));
+
+  [_group, _movePos, _moveDistanceTreshold] spawn {
+    params ["_group", "_movePos", "_moveDistanceTreshold"];
+    sleep 2;
+    private _wp = _group addWaypoint [_movePos, 10];
+    _wp setWaypointType "MOVE";
+    _wp setWaypointSpeed "FULL";
+    _wp setWaypointCombatMode "RED";
+    _wp setWaypointBehaviour "AWARE";
+    _wp setWaypointCompletionRadius _moveDistanceTreshold;
+    _wp setWaypointPosition [_movePos, 10];
+    _group setCurrentWaypoint _wp;
+  };
+};
+
+// Assault
+if (_behaviour isEqualto 7) exitWith {
+  LOG_1('Executing assault behaviour for %1 group.',str (groupId _group));
+
+  [
+    _group,
+    _movePos,
+    _logic getVariable [QGVAR(assaultForcedRetreat), false],
+    _moveDistanceTreshold,
+    (_logic getVariable [QGVAR(assaultScriptInterval), 10]) max 5,
+    false
+  ] spawn lambs_wp_fnc_taskAssault;
 };
 
 // Log error if no behaviour script was selected

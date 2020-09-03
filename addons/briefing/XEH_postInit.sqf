@@ -5,6 +5,9 @@ if !(hasInterface) exitWith {};
 // Add character info
 player createDiarySubject [QGVAR(characterInfo), localize LSTRING(Character)];
 
+// TODO: Add A3CS settings with info about enabled/disabled features (i.e. disabled squad radar)
+// This will remove needless confusion
+
 private _rankInfo = player call EFUNC(nametags,getUnitRank);
 private _traits = (player call EFUNC(common,getUnitTraitsNames)) joinString ", ";
 

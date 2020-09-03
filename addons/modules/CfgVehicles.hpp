@@ -243,7 +243,6 @@ class CfgVehicles {
     #include "modules\generateSoldiers\module.hpp"
     #include "modules\generatorComposition\module.hpp"
     #include "modules\registerArtilleryUnits\module.hpp"
-    #include "modules\spawnObjects\module.hpp"
     #include "modules\switchLights\module.hpp"
 
     #include "hiddenModules.hpp"

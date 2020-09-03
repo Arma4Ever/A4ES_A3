@@ -145,6 +145,16 @@ class GVAR(generateSoldiers): GVAR(base) {
                     tooltip = CSTRING(generateSoldiers_Attributes_behaviour_rush_Tooltip);
                     value = 5;
                 };
+                class move {
+                    name = CSTRING(generateSoldiers_Attributes_behaviour_move);
+                    tooltip = CSTRING(generateSoldiers_Attributes_behaviour_move_Tooltip);
+                    value = 6;
+                };
+                class assault {
+                    name = CSTRING(generateSoldiers_Attributes_behaviour_assault);
+                    tooltip = CSTRING(generateSoldiers_Attributes_behaviour_assault_Tooltip);
+                    value = 7;
+                };
             };
         };
         class GVAR(patrolRange): GVAR(dynamicSlider) {
@@ -189,6 +199,7 @@ class GVAR(generateSoldiers): GVAR(base) {
             property = QGVAR(behaviourAreaBoundary);
             typeName = "NUMBER";
             defaultValue = "0";
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(behaviour)) in [ARR_6(0,1,2,3,4,5)]);
             class values {
                 class none {
                     name = CSTRING(generateSoldiers_Attributes_behaviourAreaBoundary_none);
@@ -321,6 +332,38 @@ class GVAR(generateSoldiers): GVAR(base) {
             GVAR(valueUnit) = "s";
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(behaviour)) isEqualTo 5);
         };
+        class GVAR(maMovePosition): GVAR(dynamicEdit) {
+            displayName = CSTRING(generateSoldiers_Attributes_maMovePosition);
+            tooltip = CSTRING(generateSoldiers_Attributes_maMovePosition_Tooltip);
+            property = QGVAR(maMovePosition);
+            defaultValue = "''";
+            validate = "STRING";
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(behaviour)) in [ARR_2(6,7)]);
+        };
+        class GVAR(maDistanceThreshold): GVAR(dynamicSlider) {
+            displayName = CSTRING(generateSoldiers_Attributes_maDistanceThreshold);
+            tooltip = CSTRING(generateSoldiers_Attributes_maDistanceThreshold_Tooltip);
+            property = QGVAR(maDistanceThreshold);
+            defaultValue = "50";
+            GVAR(range[]) = {20, 200};
+            GVAR(valueUnit) = "m";
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(behaviour)) in [ARR_2(6,7)]);
+        };
+        class GVAR(assaultScriptInterval): GVAR(dynamicSlider) {
+            displayName = CSTRING(generateSoldiers_Attributes_hcrScriptInterval);
+            tooltip = CSTRING(generateSoldiers_Attributes_hcrScriptInterval_Tooltip);
+            property = QGVAR(assaultScriptInterval);
+            defaultValue = "10";
+            GVAR(range[]) = {5, 30};
+            GVAR(valueUnit) = "s";
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(behaviour)) isEqualTo 7);
+        };
+        class GVAR(assaultForcedRetreat): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(generateSoldiers_Attributes_assaultForcedRetreat);
+            tooltip = CSTRING(generateSoldiers_Attributes_assaultForcedRetreat_Tooltip);
+            property = QGVAR(assaultForcedRetreat);
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(behaviour)) isEqualTo 7);
+        };
         class GVAR(eventHandlersSubCategory): GVAR(moduleSubCategory) {
             displayName = CSTRING(generateSoldiers_Attributes_eventHandlersSubCategory);
             property = QGVAR(eventHandlersSubCategory);
@@ -368,6 +411,17 @@ class GVAR(generateSoldiers): GVAR(base) {
             displayName = CSTRING(generateSoldiers_Attributes_extraSettingsSubCategory);
             property = QGVAR(extraSettingsSubCategory);
         };
+        class GVAR(disableLambsAI): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(generateSoldiers_Attributes_disableLambsAI);
+            tooltip = CSTRING(generateSoldiers_Attributes_disableLambsAI_Tooltip);
+            property = QGVAR(disableLambsAI);
+        };
+        class GVAR(hasLambsRadio): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(generateSoldiers_Attributes_hasLambsRadio);
+            tooltip = CSTRING(generateSoldiers_Attributes_hasLambsRadio_Tooltip);
+            property = QGVAR(hasLambsRadio);
+            defaultValue = "true";
+        };
         class GVAR(disableBISRandomization): GVAR(dynamicCheckbox) {
             displayName = CSTRING(generateSoldiers_Attributes_disableBISRandomization);
             tooltip = CSTRING(generateSoldiers_Attributes_disableBISRandomization_Tooltip);
@@ -388,6 +442,7 @@ class GVAR(generateSoldiers): GVAR(base) {
             displayName = CSTRING(generateSoldiers_Attributes_addToCurators);
             tooltip = CSTRING(generateSoldiers_Attributes_addToCurators_Tooltip);
             property = QGVAR(addToCurators);
+            defaultValue = "true";
         };
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};
