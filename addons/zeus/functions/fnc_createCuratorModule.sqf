@@ -7,12 +7,23 @@
 if (!isServer) exitWith {};
 
 if (isNull GVAR(curatorGroup)) then {
-  // 1. check curator modules
-  // 2. check other modules
-  // 3. create new group
+  private _group = grpNull;
 
-  _group = createGroup sideLogic;
-  _group deleteGroupWhenEmpty true;
+  if !(allCurators isEqualTo []) then {
+    _group = group (allCurators # 0);
+  } else {
+    private _modules = entities QEGVAR(modules,curator);
+
+    if !(_modules isEqualTo []) then {
+      _group = group (_modules # 0);
+    };
+  };
+
+  if (isNull _group) then {
+    _group = createGroup sideLogic;
+    _group deleteGroupWhenEmpty true;
+  };
+
   GVAR(curatorGroup) = _group;
 };
 
