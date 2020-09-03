@@ -16,4 +16,7 @@ class CfgFactionClasses {
     class GVAR(radio): GVAR(base) {
         displayName = "A3CS Radia";
     };
+    class GVAR(zeus): GVAR(base) {
+        displayName = "A3CS Zeus";
+    };
 };

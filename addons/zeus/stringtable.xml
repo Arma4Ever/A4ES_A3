@@ -14,5 +14,8 @@
     <Key ID="STR_A3CS_Zeus_addCuratorEditableObject_Tooltip">
       <Original>Dodaje obiekt do edytowalnych obiektów każdego zeusa na starcie misji.</Original>
     </Key>
+    <Key ID="STR_A3CS_Zeus_Activated">
+      <Original>Dostęp do zeusa został aktywowany</Original>
+    </Key>
   </Package>
 </Project>

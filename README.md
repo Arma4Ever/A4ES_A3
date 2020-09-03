@@ -20,7 +20,7 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [O&T Expansion Eden](https://steamcommunity.com/sharedfiles/filedetails/?id=1923321700)
 - [Metis Nature](https://steamcommunity.com/sharedfiles/filedetails/?id=1951690856)
 - [Eden Extended Objects](https://steamcommunity.com/sharedfiles/filedetails/?id=882231372)
-- [PLP Materials](https://steamcommunity.com/sharedfiles/filedetails/?id=1354397885)
+- [PLP Markers](https://steamcommunity.com/sharedfiles/filedetails/?id=495275491)
 - [Extended Fortifications Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=1109237932)
 - [Camofaces](https://steamcommunity.com/sharedfiles/filedetails/?id=346665985)
 - [MOCAP Melee](https://www.armaholic.com/page.php?id=27262)
@@ -30,6 +30,8 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [Vurtual's Ships](https://steamcommunity.com/sharedfiles/filedetails/?id=1564445550)
 - [ArmaZeusCache](https://steamcommunity.com/sharedfiles/filedetails/?id=1908099028)
 - [Wearable Antennae](https://www.armaholic.com/page.php?id=36198)
+- [Blurry Laser](https://steamcommunity.com/sharedfiles/filedetails/?id=2079283616)
+- [Ladder Tweak](https://steamcommunity.com/sharedfiles/filedetails/?id=1803586009)
 
 ## Credits
 Authors of external mods.  

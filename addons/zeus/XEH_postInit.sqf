@@ -1,12 +1,6 @@
 #include "script_component.hpp"
 
 if (isServer) then {
-  [{
-    ["ModuleCurator_F", "initPost", {
-      _this call FUNC(initCurator);
-    }, true, [], true] call CBA_fnc_addClassEventHandler;
-  }, [], 0.5] call CBA_fnc_waitAndExecute;
-
   // Unassign player from zeus if player is disconnected
   // Fixes A3 bug when zeus cannot return to slot
   addMissionEventHandler ["HandleDisconnect", {
@@ -20,6 +14,13 @@ if (isServer) then {
 
 if (hasInterface) then {
   #include "initKeybinds.sqf"
+
+  // Assign zeus
+  [{
+    if (player getVariable [QGVAR(isCurator), false]) then {
+      [player, true] call FUNC(assignZeus);
+    };
+  }, [], 5] call CBA_fnc_waitAndExecute;
 
   ["unit", {
     // Exit if player is not curator

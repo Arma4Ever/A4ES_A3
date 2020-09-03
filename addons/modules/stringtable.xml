@@ -523,6 +523,18 @@
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_extraSettingsSubCategory">
       <Original>Ustawienia dodatkowe</Original>
     </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableLambsAI">
+      <Original>Wyłącz zaawansowane AI</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableLambsAI_Tooltip">
+      <Original>Wyłącza AI LAMBS dla wygenerowanych grup. Pamiętaj, że wyłączenie AI LAMBS bardzo ogranicza jakość zachowań AI. Użyj tej opcji tylko jeśli wiesz co robisz/chcesz osiągnąć.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_hasLambsRadio">
+      <Original>Pozwól na komunikację radiową</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_hasLambsRadio">
+      <Original>Pozwala wygenerowanym grupom (LAMBS) na zaawansowaną komunikację radiową między sobą. Dzięki temu, wygenerowane grupy mogą m.in. koordynować swoje działania i przychodzić sobie z pomocą. Zasięg komunikacji możesz ustawić z poziomu ustawień addonów w misji (domyślnie 2km). UWAGA, wyłączenie tej opcji nie wyłącza komunikacji całkowicie - ogranicza jedynie znacząco jej zasięg.</Original>
+    </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableBISRandomization">
       <Original>Wyłącz randomizację wyglądu</Original>
     </Key>
@@ -644,6 +656,21 @@
       <Original>Biały</Original>
     </Key>
   </Package>
+  <Package name="Modules_switchLights">
+    <Key ID="STR_A3CS_Modules_switchLights_displayName">
+      <Original>Latarnie</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_switchLights_shortDescription">
+      <Original>Moduł włącza/wyłącza latarnie na oznaczonym obszarze.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_switchLights_description">
+      <Original>Opis.</Original>
+    </Key>
+
+
+
+
+  </Package>
   <Package name="Modules_fireArtillery">
     <Key ID="STR_A3CS_Modules_fireArtillery_displayName">
       <Original>Ostrzał artylerii</Original>
@@ -653,6 +680,20 @@
     </Key>
     <Key ID="STR_A3CS_Modules_fireArtillery_description">
       <Original>description</Original>
+    </Key>
+  </Package>
+  <Package name="Modules_curator">
+    <Key ID="STR_A3CS_Modules_curator_displayName">
+      <Original>Zeus</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_curator_shortDescription">
+      <Original>Moduł oznacza jednostki które mają mieć dostęp do interfejsu zeusa. Aby dać jednostce dostęp do zeusa wystarczy połączyć (zsynchronizować) moduł z daną jednostką. Jeden moduł może być połączony (zsynchronizowany) z dowolną ilością jednostek.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_curator_Warning_NoSyncedUnits">
+      <Original>Brak zsynchronizowanych jednostek</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_curator_Warning_NoSyncedUnits_Desc">
+      <Original>Moduł do działania wymaga zsynchronizacji z conajmniej jedną jednostką która ma mieć dostęp do zeusa.</Original>
     </Key>
   </Package>
 </Project>

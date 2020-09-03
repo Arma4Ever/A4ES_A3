@@ -150,6 +150,7 @@ HIDE_MODULE(lambs_wp_TaskRush,lambs_wp_BaseModule);
 HIDE_MODULE(ModuleTrident_F,Module_F);
 HIDE_MODULE(ModuleCuratorUnlockArea_F,Module_F);
 HIDE_MODULE(ModuleCuratorUnlockObject_F,Module_F);
+HIDE_MODULE(ModuleCurator_F,Module_F);
 HIDE_MODULE(ModuleVanguardObjective_F,Module_F);
 HIDE_MODULE(ModuleVanguardScorePersistence_F,Module_F);
 HIDE_MODULE(ModuleVanguardFob_F,Module_F);
