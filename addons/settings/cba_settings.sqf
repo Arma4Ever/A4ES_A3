@@ -80,6 +80,9 @@ force force ace_goggles_effects = 2;
 force force ace_goggles_showClearGlasses = true;
 force force ace_goggles_showInThirdPerson = false;
 
+// ACE Grenades
+force force ace_grenades_convertExplosives = true;
+
 // ACE Interaction
 force force ace_interaction_disableNegativeRating = true;
 force force ace_interaction_enableMagazinePassing = true;
@@ -130,9 +133,13 @@ force force ace_map_mapShowCursorCoordinates = false;
 force force ace_markers_moveRestriction = 0;
 
 // ACE Map Gestures
+force force ace_map_gestures_allowCurator = true;
+force force ace_map_gestures_allowSpectator = true;
+force force ace_map_gestures_briefingMode = 0;
 force force ace_map_gestures_enabled = true;
 force force ace_map_gestures_interval = 0.05;
 force force ace_map_gestures_maxRange = 7;
+force force ace_map_gestures_maxRangeCamera = 14;
 force force ace_map_gestures_onlyShowFriendlys = false;
 
 // ACE Map Tools
@@ -158,7 +165,7 @@ force force ace_medical_gui_openAfterTreatment = true;
 force force ace_medical_ivFlowRate = 1.3;
 force force ace_medical_limping = 1;
 force force ace_medical_painCoefficient = 1;
-force force ace_medical_playerDamageThreshold = 3;
+force force ace_medical_playerDamageThreshold = 4.5;
 force force ace_medical_spontaneousWakeUpChance = 0.65;
 force force ace_medical_spontaneousWakeUpEpinephrineBoost = 1.5;
 force force ace_medical_statemachine_AIUnconsciousness = false;
@@ -261,6 +268,12 @@ force force ace_switchunits_switchToCivilian = false;
 force force ace_switchunits_switchToEast = false;
 force force ace_switchunits_switchToIndependent = false;
 force force ace_switchunits_switchToWest = false;
+
+// ACE Trenches
+force force ace_trenches_bigEnvelopeDigDuration = 25;
+force force ace_trenches_bigEnvelopeRemoveDuration = 15;
+force force ace_trenches_smallEnvelopeDigDuration = 20;
+force force ace_trenches_smallEnvelopeRemoveDuration = 12;
 
 // ACE Uncategorized
 force force ace_fastroping_requireRopeItems = false;
