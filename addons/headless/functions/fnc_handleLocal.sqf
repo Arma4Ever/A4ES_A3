@@ -25,12 +25,8 @@ _unit call EFUNC(editor,initUnit);
 
 // Reapply AI features
 {
-  if (_x # 1) then {
-    _unit enableAI (_x # 0);
-  } else {
-    _unit disableAI (_x # 0);
-  };
-} forEach (_unit getVariable [QGVAR(AIFeatures), []]);
+  _unit disableAI _x;
+} forEach (_unit getVariable [QGVAR(disabledAI), []]);
 
 if (isServer) then {
   // Schedule transfer to HC if unit is local for server

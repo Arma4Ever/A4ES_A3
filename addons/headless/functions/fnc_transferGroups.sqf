@@ -38,7 +38,7 @@ _initialTransfer spawn {
 
         // Save AI features
         _unit setVariable [
-          QGVAR(AIFeatures),
+          QGVAR(disabledAI),
           [
             "TARGET",
             "AUTOTARGET",
@@ -57,7 +57,7 @@ _initialTransfer spawn {
             "NVG",
             "LIGHTS",
             "RADIOPROTOCOL"
-          ] apply {[_x, _unit checkAIFeature _x]},
+          ] select {!(_unit checkAIFeature _x)},
           true
         ];
       } forEach (units _x);
