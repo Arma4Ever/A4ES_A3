@@ -1,5 +1,5 @@
-#define COMPONENT smoke
-#define COMPONENT_BEAUTIFIED Smoke
+#define COMPONENT particles
+#define COMPONENT_BEAUTIFIED Particles
 #include "\z\a3cs\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

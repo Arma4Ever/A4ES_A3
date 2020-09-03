@@ -1,5 +1,5 @@
-# A3CS Smoke
-Makes vanilla smoke grenades more useful.
+# A3CS Particles
+Tweaks particle effects like smoke etc.
 
 ### Changes
 - Changes effect type of SmokeShell.
