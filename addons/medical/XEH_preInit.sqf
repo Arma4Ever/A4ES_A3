@@ -14,6 +14,7 @@ if (GVAR(systemDisabled)) then {
 
 ADDON = true;
 
+/*
 // Kill vehicle crew on vehicle destruction
 {
   [_x, "Killed", {
@@ -29,3 +30,4 @@ ADDON = true;
     } forEach (crew _vehicle);
   }] call CBA_fnc_addClassEventHandler;
 } forEach ["Air", "Car", "Tank", "Ship"];
+*/
