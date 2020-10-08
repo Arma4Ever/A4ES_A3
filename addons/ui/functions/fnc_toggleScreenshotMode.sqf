@@ -4,10 +4,14 @@
  * Toogles screenshot mode (hide/show game UI)
  */
 
+params [["_showHint", true, [true]]];
+
 if (!hasInterface) exitWith {};
 
 if (GVAR(screenshotModeEnabled)) then {
-  hintSilent parseText format ["<t size='1.5'>%1</t>", localize LSTRING(screenshotModeDisabled)];
+  if (_showHint) then {
+    hintSilent parseText format ["<t size='1.5'>%1</t>", localize LSTRING(screenshotModeDisabled)];
+  };
   showHUD GVAR(lastShownHUD);
   GVAR(screenshotModeEnabled) = false;
 

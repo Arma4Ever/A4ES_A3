@@ -9,6 +9,6 @@ if (!hasInterface) exitWith {};
     localize LSTRING(ToggleScreenshotMode),
     localize LSTRING(ToggleScreenshotMode_Tooltip)
   ], {
-    call FUNC(toggleScreenshotMode);
+    true call FUNC(toggleScreenshotMode);
   }, {}, [DIK_BACK, [true, false, false]]
 ] call CBA_fnc_addKeybind;
