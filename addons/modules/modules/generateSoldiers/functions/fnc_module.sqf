@@ -37,7 +37,7 @@ _logicArea append (_logic getVariable ["objectarea", []]);
 // Calc behaviour boundary area
 private _boundaryArea = switch (_logic getVariable [QGVAR(behaviourAreaBoundary), 0]) do {
     case 0: {[]};
-    case 1: {_logicArea};
+    case 1: {_logic getVariable ["objectarea", []]};
     case 2: {
       private _syncedTriggers = (synchronizedObjects _logic) select {
         _x isKindOf "EmptyDetector"
@@ -46,9 +46,7 @@ private _boundaryArea = switch (_logic getVariable [QGVAR(behaviourAreaBoundary)
         []
       } else {
         private _trigger = _syncedTriggers # 0;
-        private _triggerArea = [getPos _trigger];
-        _triggerArea append (triggerArea _trigger);
-        _triggerArea
+        triggerArea _trigger
       };
     };
     default {[]}
