@@ -22,11 +22,6 @@ if (isServer) then {
 // Exit if no interface
 if (!hasInterface) exitWith {};
 
-// Update terrain grid resolution
-if (isMultiplayer) then {
-  setTerrainGrid 25;
-};
-
 // Disable all channels except global & side
 for "_i" from 2 to 15 do {
   _i enableChannel false;
