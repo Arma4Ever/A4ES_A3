@@ -43,7 +43,6 @@ VENDOR = {
     "@PLP Markers": {},
     "@Extended Fortifications Mod": {},
     "@AVON FM12 Respirator Pack": {},
-    "@ArmaZeusCache": {},
     # "@Camofaces": {},
     "-Wearable Antennae": {},
     "-Mocap": {

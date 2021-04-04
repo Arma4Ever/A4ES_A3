@@ -58,8 +58,7 @@ def main():
   ####################
 """)
 
-    scriptpath = os.path.realpath(__file__)
-    projectpath = os.path.dirname(os.path.dirname(scriptpath))
+    projectpath = "P:\\z\\a3cs"
     addonspath = os.path.join(projectpath, "addons")
     vendorpath = os.path.join(projectpath, "vendor")
     vendorstats = []
@@ -187,7 +186,7 @@ def main():
         try:
             subprocess.check_output([
                 "makepbo",
-                "-NUP",
+                "-P",
                 "-@={}\\{}\\addons\\{}".format(MAINPREFIX,PREFIX.rstrip("_"),p),
                 p,
                 "{}{}.pbo".format(PREFIX,p)
