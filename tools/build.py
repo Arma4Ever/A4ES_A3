@@ -58,7 +58,9 @@ def main():
   ####################
 """)
 
-    projectpath = "P:\\z\\a3cs"
+    scriptpath = os.path.realpath(__file__)
+    projectpath = os.path.dirname(os.path.dirname(scriptpath))
+    hemttExe = os.path.join(projectpath, "hemtt.exe")
     addonspath = os.path.join(projectpath, "addons")
     vendorpath = os.path.join(projectpath, "vendor")
     vendorstats = []
@@ -151,55 +153,7 @@ def main():
             print("")
         vendorstats.append((dir[1:], copied, skipped, copieddlls, skippedlls))
 
-    ### Build A3CS
-
-    print("  Building A3CS")
-
-    os.chdir(addonspath)
-
-    made = 0
-    failed = 0
-    skipped = 0
-    removed = 0
-
-    for file in os.listdir(addonspath):
-        if os.path.isfile(file):
-            if check_for_obsolete_pbos(addonspath, file):
-                removed += 1
-                print("  Removing {}.".format(file))
-                os.remove(file)
-    print("")
-
-    for p in os.listdir(addonspath):
-        path = os.path.join(addonspath, p)
-        if not os.path.isdir(path):
-            continue
-        if p[0] == ".":
-            continue
-        if p in IGNOREADDONS or not check_for_changes(addonspath, p):
-            skipped += 1
-            print("  Skipping {}.".format(p))
-            continue
-
-        print("# Making {} ...".format(p))
-
-        try:
-            subprocess.check_output([
-                "makepbo",
-                "-P",
-                "-@={}\\{}\\addons\\{}".format(MAINPREFIX,PREFIX.rstrip("_"),p),
-                p,
-                "{}{}.pbo".format(PREFIX,p)
-            ], stderr=subprocess.STDOUT)
-        except:
-            failed += 1
-            print("  Failed to make {}.".format(p))
-        else:
-            made += 1
-            print("  Successfully made {}.".format(p))
-
-    print("\n# A3CS debug build done\n")
-    print("  Vendos:")
+    print("  Vendor addons:")
 
     for stat in vendorstats:
         if stat[1] > 0 or stat[3] > 0:
@@ -220,9 +174,33 @@ def main():
             print("    {}".format(mod))
         print("")
 
-    print("  A3CS build:")
-    print("  Made {}, skipped {}, removed {}, failed to make {}.".format(made, skipped, removed, failed))
+    ### Rename vendor addons for HEMTT clear
+
+    os.chdir(addonspath)
+
+    for file in vendoraddons:
+        os.rename(file, "{}.vendor".format(file[:-4]))
+
+    ### Build A3CS
+
+    os.chdir(projectpath)
+
+    print("  Building A3CS")
     print("")
+    hemttRet = subprocess.call([hemttExe, "pack"], stderr=subprocess.STDOUT)
+    print("Result: {}".format(hemttRet));
+
+    ### Rename vendor addons
+
+    os.chdir(addonspath)
+
+    for file in vendoraddons:
+        os.rename("{}.vendor".format(file[:-4]), file)
+
+    ### Log finish
+
+    print("")
+    print("\n# A3CS debug build done\n")
     print("  {}".format(datetime.datetime.now()))
     print("")
 

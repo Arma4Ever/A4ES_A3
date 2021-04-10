@@ -1,0 +1,27 @@
+name = "A3CS"
+prefix = "a3cs"
+author = "SzwedzikPL oraz twórcy addonów zewnętrznych"
+mainprefix = "z"
+files = [
+    "*.dll",
+    "*.so",
+    "mod.cpp",
+    "README.md",
+    "AUTHORS.txt",
+    "LICENSE",
+    "logo_a3cs.paa",
+    "logosmall_a3cs.paa",
+    "picture_a3cs.paa",
+    "version.a3c"
+]
+
+modname = "{{name}}"
+key_name = "{{prefix}}_{{version}}"
+authority = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
+
+releasebuild = [
+    "@zip a3cs_{{semver.major}}.{{semver.minor}}.{{semver.patch}}"
+]
+
+[header_exts]
+version= "{{git \"id 8\"}}"

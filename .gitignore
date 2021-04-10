@@ -4,6 +4,8 @@ release/*
 releases/*
 hemtt
 hemtt.exe
+.hemtt/local
+keys/*
 tools/temp
 *.cache
 *.pbo
