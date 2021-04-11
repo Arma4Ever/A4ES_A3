@@ -32,8 +32,8 @@ if (_group getVariable [QGVAR(disableTransfer), false]) exitWith {
 };
 
 // No transfer if group has waypoints with synchronized triggers
-private _allWaypointsWithTriggers = (waypoints _group) select {!((synchronizedTriggers _x) isEqualTo [])};
-if !(_allWaypointsWithTriggers isEqualTo []) exitWith {
+private _allWaypointsWithTriggers = (waypoints _group) select {(synchronizedTriggers _x) isNotEqualTo []};
+if (_allWaypointsWithTriggers isNotEqualTo []) exitWith {
   LOG_2('Group "%1" rejected for transfer - group has waypoints with synchronized triggers (invalid waypoints count: %2).',_groupId,str (count _allWaypointsWithTriggers));
   false
 };

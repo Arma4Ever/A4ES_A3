@@ -13,7 +13,7 @@
  if (_rankName == "") then {
    private _rankClass = _unit getVariable [
      QGVAR(rank),
-     getText (configFile >> "CfgVehicles" >> typeof _unit >> QGVAR(rank))
+     getText ((configOf _unit) >> QGVAR(rank))
    ];
 
    // Parse rank class
@@ -30,7 +30,7 @@
    if (_rankName == "") then {
      // TODO: DROP THIS WHEN ALL MODS SWITCH TO NEW SOLUTION
      // No rank class, fallback to legacy rank vars
-     private _unitCfg = configFile >> "CfgVehicles" >> typeof _unit;
+     private _unitCfg = configOf _unit;
      _rankName = getText (_unitCfg >> "a3cs_nametag_rankname");
      _rankIcon = getText (_unitCfg >> "a3cs_nametag_rankicon");
      // From this point use vanilla rank importance

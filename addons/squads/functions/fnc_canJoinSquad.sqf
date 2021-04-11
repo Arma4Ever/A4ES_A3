@@ -15,6 +15,6 @@ alive _target
 // Different squads or both squads are null (if target squad is null then
 // new squad will be created and both units will join it)
 && {
-  !(_unitSquad isEqualTo _targetSquad)
+  (_unitSquad isNotEqualTo _targetSquad)
   || {isNull _unitSquad && {isNull _targetSquad}}
 }

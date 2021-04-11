@@ -58,7 +58,7 @@ class Display3DEN {
 	};
 	class Controls {
         delete Eden_Extended_Objects_multiply_dialog;
-        
+
 		class MenuStrip: ctrlMenuStrip {
             class Items {
                 class Tools {
@@ -75,9 +75,15 @@ class Display3DEN {
                         "ENH_Folder_Miscellaneous",
                     };
                 };
+                class MissionPreviewSP {
+                    shortcuts[] = {};
+                };
                 #include "ENH\menustrip.hpp"
 			};
 		};
+        class ButtonPlay: ctrlShortcutButton {
+            shortcuts[] = {"0x00050000 + 0", 57};
+        };
         #include "ENH\statusbar.hpp"
 	};
 };

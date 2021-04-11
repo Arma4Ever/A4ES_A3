@@ -36,8 +36,8 @@ GVAR(binoClasses) = "getText (_x >> 'simulation') == 'Binocular'" configClasses 
     || {(currentWeapon _unit) in GVAR(binoClasses)}
   ) exitWith {};
 
-  private _hasVest = !((vest _unit) isEqualTo "");
-  private _hasHeadgear = !((headgear _unit) isEqualTo "");
+  private _hasVest = ((vest _unit) isNotEqualTo "");
+  private _hasHeadgear = ((headgear _unit) isNotEqualTo "");
   if (!_hasVest && !_hasHeadgear) exitWith {};
 
   private _shortRange = "343" in _radio;

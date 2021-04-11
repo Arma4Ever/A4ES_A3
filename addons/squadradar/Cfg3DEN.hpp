@@ -83,7 +83,7 @@ class Cfg3DEN {
                         tooltip = CSTRING(Attributes_baseIconClass_Tooltip);
                         control = QGVAR(baseIconClass);
                         property = QGVAR(baseIconClass);
-                        expression = "if !(_value isEqualTo '') then {_this setVariable ['%s', _value, true];};";
+                        expression = "if (_value isNotEqualTo '') then {_this setVariable ['%s', _value, true];};";
                         typeName = "STRING";
                         condition = "objectControllable";
                         defaultValue = "''";

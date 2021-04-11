@@ -6,8 +6,6 @@
 
 params [["_unit", objNull, [objNull]], ["_damageToAdd", 0, [0]], ["_bodyPart", "", [""]]];
 
-systemChat str _this;
-
 if (isNull _unit || {!local _unit} || {!alive _unit}) exitWith {};
 
 _bodyPart = toLower _bodyPart;
@@ -19,8 +17,6 @@ private _index = _bodyParts find _bodyPart;
 if (_index >= 0) then {
   _hitPoint = _hitPoints select _index;
 };
-
-systemChat _hitPoint;
 
 if (_hitPoint isEqualTo "") then {
   _unit setDamage ((damage _unit) + _damageToAdd);

@@ -12,20 +12,20 @@ GVAR(moduleWarningsParams) params ["_controlGroup", "_controlTextGroup", "_contr
 private _text = "";
 private _warningsHeight = 0;
 
-private _hasWarnings = !(_warnings isEqualTo []);
+private _hasWarnings = (_warnings isNotEqualTo []);
 
 if (_hasWarnings) then {
   {
     _x params [["_title", ""], ["_description", ""]];
 
-    if !(_title isEqualTo "") then {
+    if (_title isNotEqualTo "") then {
       private _warningText = format [
         QUOTE(%1<t size='1.5'><img color='#cd2323' image=QQPATHTOF(data\leftpanel\warning.paa)/></t>&#160;&#160;<t size='1.5' font='RobotoCondensedBold' color='#cbcbcb'>%2</t>),
         ["<br/><br/>", ""] select (_text isEqualTo ""),
         toUpper _title
       ];
 
-      if !(_description isEqualTo "") then {
+      if (_description isNotEqualTo "") then {
         _warningText = _warningText + format [
           "<br/><br/><t size='1.1' color='#afafaf'>%1</t>", _description
         ];
@@ -48,7 +48,7 @@ if (_hasWarnings) then {
   // Prepare warning sources
   {
     private _source = _x param [2, ""];
-    if !(_source isEqualTo "") then {
+    if (_source isNotEqualTo "") then {
       _warningSources pushBackUnique _source;
     };
   } forEach _warnings;

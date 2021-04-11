@@ -17,7 +17,7 @@ if (isServer) then {
   // Handle HC disconnect
   addMissionEventHandler ["HandleDisconnect", {
     params ["_object"];
-    if !(_object isEqualTo GVAR(headlessClient)) exitWith {false};
+    if (_object isNotEqualTo GVAR(headlessClient)) exitWith {false};
     GVAR(headlessClient) = objNull;
     // Force HC unit existance even if AI for him is disabled
     true

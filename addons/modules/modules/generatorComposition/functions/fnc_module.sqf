@@ -8,7 +8,7 @@
 params ["_mode", "_input"];
 
 // Exit if module executed inside editor, not on server or not in init mode
-if (is3DEN || !(isServer) || !(_mode isEqualTo "init")) exitWith {};
+if (is3DEN || !(isServer) || (_mode isNotEqualTo "init")) exitWith {};
 _input params [
   ["_logic", objNull, [objNull]],
   ["_isActivated", false, [true]],
@@ -32,7 +32,7 @@ private _deleteUnits = _logic getVariable [QGVAR(deleteUnits), ""];
 // Get synced units
 private _units = (synchronizedObjects _logic) select {_x isKindOf "CAManBase"};
 // Exit if there're no synced units or more than one
-if !((count _units) isEqualTo 1) exitWith {
+if ((count _units) isNotEqualTo 1) exitWith {
   LOG_1('Execution of EXEC_MODULE_NAME aborted - no synced units (units: %1).',str _units);
 };
 

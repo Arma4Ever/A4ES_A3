@@ -9,12 +9,12 @@ if (!isServer) exitWith {};
 if (isNull GVAR(curatorGroup)) then {
   private _group = grpNull;
 
-  if !(allCurators isEqualTo []) then {
+  if (allCurators isNotEqualTo []) then {
     _group = group (allCurators # 0);
   } else {
     private _modules = entities QEGVAR(modules,curator);
 
-    if !(_modules isEqualTo []) then {
+    if (_modules isNotEqualTo []) then {
       _group = group (_modules # 0);
     };
   };

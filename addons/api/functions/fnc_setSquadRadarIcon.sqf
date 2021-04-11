@@ -68,7 +68,7 @@ if (_isSpecial) then {
   if !(_iconColor isEqualTypeAll 0) exitWith {
     LSTRING(squadRadar_wrongColorFormat) call EFUNC(common,showError);
   };
-  if !((count _iconColor) isEqualTo 3) exitWith {
+  if ((count _iconColor) isNotEqualTo 3) exitWith {
     LSTRING(squadRadar_wrongColorFormat) call EFUNC(common,showError);
   };
 

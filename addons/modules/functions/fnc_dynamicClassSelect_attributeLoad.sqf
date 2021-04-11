@@ -75,7 +75,7 @@ _ctrlSearchButton ctrlAddEventHandler ["buttonClick", {
   params ["_control"];
 
   private _ctrlSearchEdit = _control getVariable QGVAR(searchEdit);
-  if !((ctrlText _ctrlSearchEdit) isEqualTo "") then {
+  if ((ctrlText _ctrlSearchEdit) isNotEqualTo "") then {
     private _ctrlAssetsTree = _control getVariable QGVAR(assetsTree);
     // Update button icon
     _control ctrlSetText "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
@@ -96,7 +96,7 @@ _ctrlSearchEdit ctrlAddEventHandler ["keyUp", {
   // Reset assets tree if filter phrase has shrunk or empty
   if (_text isEqualTo "" || {(count _text) < (count _lastText)}) then {
     private _ctrlAssetsTree = _control getVariable QGVAR(assetsTree);
-    [_ctrlAssetsTree, !(_text isEqualTo "")] call FUNC(dynamicClassSelect_setupAssetsTree);
+    [_ctrlAssetsTree, (_text isNotEqualTo "")] call FUNC(dynamicClassSelect_setupAssetsTree);
   };
 
   _control setVariable [QGVAR(lastText), _text];
@@ -194,8 +194,8 @@ _ctrlClassList ctrlAddEventHandler ["keyDown", {
   params ["_control", "_key", "_shift", "_ctrl", "_alt"];
 
   // Exit if not del key
-  if !(_key isEqualTo DIK_DELETE) exitWith {};
-  if !([_shift, _ctrl, _alt] isEqualTo [false, false, false]) exitWith {};
+  if (_key isNotEqualTo DIK_DELETE) exitWith {};
+  if ([_shift, _ctrl, _alt] isNotEqualTo [false, false, false]) exitWith {};
 
   private _curSelRow = lnbCurSelRow _control;
 

@@ -11,4 +11,4 @@ if (isNull _squad) exitWith {false};
 
 private _leader = _squad call FUNC(getSquadLeader);
 
-!(_leader isEqualTo _unit)
+(_leader isNotEqualTo _unit)

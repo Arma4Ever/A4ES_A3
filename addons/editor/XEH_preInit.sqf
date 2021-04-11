@@ -19,7 +19,7 @@ if (isClass (configFile >> "CfgPatches" >> "3denEnhanced")) then {
 };
 
 // Show info and force 3DEN close if there are incompatible mods
-if !(_incompatibleMods isEqualTo []) then {
+if (_incompatibleMods isNotEqualTo []) then {
   private _modsNames = "";
   {
     _modsNames = _modsNames + format [

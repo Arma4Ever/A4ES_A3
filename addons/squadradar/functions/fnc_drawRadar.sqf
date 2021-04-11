@@ -40,7 +40,7 @@ private _radarIconsOpacity = GVAR(radarIconsOpacity);
 } forEach (GVAR(radarDrawCache) # 1);
 
 private _playerData = GVAR(radarDrawCache) # 0;
-if !(_playerData isEqualTo []) then {
+if (_playerData isNotEqualTo []) then {
   _playerData params ["_icon", "_color"];
 
   _control drawIcon [

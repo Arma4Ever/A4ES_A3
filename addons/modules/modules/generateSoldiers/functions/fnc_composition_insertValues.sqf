@@ -11,7 +11,7 @@ private _modules = (all3DENEntities # 3) select {_x isKindOf QGVAR(generatorComp
 // Get compositions ids list
 private _compositions = _modules apply {
   private _id = (_x get3DENAttribute QGVAR(id)) param [0, ""];
-  if ((_id isEqualType "") && !(_id isEqualTo "")) then {[_id, _id]} else {nil};
+  if ((_id isEqualType "") && (_id isNotEqualTo "")) then {[_id, _id]} else {nil};
 };
 
 // Clear nils

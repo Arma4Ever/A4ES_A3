@@ -18,7 +18,7 @@ if (_traits isEqualTo "") then {
 private _characterDesc = player getVariable [QGVAR(characterDesc), ""];
 
 // Add character description if present
-if !(_characterDesc isEqualTo "") then {
+if (_characterDesc isNotEqualTo "") then {
   player createDiaryRecord [QGVAR(characterInfo), [
     localize LSTRING(CharacterDesc_Title),
     "<font size='20'>" + (localize LSTRING(CharacterDesc)) + "</font><br/><br/><font size='15'>" + _characterDesc + "</font>"

@@ -21,9 +21,9 @@ if !(".paa" in _icon) then {
 };
 
 // Get dlc icon if className is not vanilla
-if !(_sourceMod isEqualTo "A3") then {
+if (_sourceMod isNotEqualTo "A3") then {
   private _modParams = modParams [_sourceMod, ["logoSmall"]];
-  if !(_modParams isEqualTo []) then {
+  if (_modParams isNotEqualTo []) then {
     _dlcIcon = _modParams # 0;
   };
 };
@@ -35,7 +35,7 @@ _ctrlClassList lnbSetTooltip [[_index, 0], _className];
 _ctrlClassList lnbSetPicture [[_index, 0], _icon];
 _ctrlClassList lnbSetValue [[_index, 2], _weight];
 
-if !(_dlcIcon isEqualTo "") then {
+if (_dlcIcon isNotEqualTo "") then {
   _ctrlClassList lnbSetPicture [[_index, 1], _dlcIcon];
 };
 

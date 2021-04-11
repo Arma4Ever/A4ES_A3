@@ -8,7 +8,7 @@
 params ["_mode", "_input"];
 
 // Exit if module executed inside editor, not on server or not in init mode
-if (is3DEN || !(isServer) || !(_mode isEqualTo "init")) exitWith {};
+if (is3DEN || !(isServer) || (_mode isNotEqualTo "init")) exitWith {};
 _input params [
   ["_logic", objNull, [objNull]],
   ["_isActivated", false, [true]],
@@ -36,11 +36,11 @@ if (isNil "_lamps") then {
     if (_x inArea _logicArea) then {
       // Get reflectors
       private _reflectors = configProperties [
-        configFile >> "CfgVehicles" >> (typeOf _x) >> "Reflectors",
+        (configOf _x) >> "Reflectors",
         "isClass _x"
       ];
       // Collect hit indexes of reflectors
-      if !(_reflectors isEqualTo []) then {
+      if (_reflectors isNotEqualTo []) then {
         private _hitIndexes = [];
         private _hitPoints = (getAllHitPointsDamage _x) param [0, []];
         {
@@ -52,7 +52,7 @@ if (isNil "_lamps") then {
           } forEach _hitPoints;
         } forEach (_reflectors apply {getText (_x >> "hitpoint")});
 
-        if !(_hitIndexes isEqualTo []) then {
+        if (_hitIndexes isNotEqualTo []) then {
           _lamps pushBack [_x, _hitIndexes];
         };
       };

@@ -28,7 +28,7 @@ private _is3DEN = (getNumber (_moduleDescriptionConfig >> "is3DEN")) > 0;
 private _isDisposable = (getNumber (_moduleDescriptionConfig >> "isDisposable")) > 0;
 private _deactivationDisablesEffect = (getNumber (_moduleDescriptionConfig >> "deactivationDisablesEffect")) > 0;
 private _positionInfo = getText (_moduleDescriptionConfig >> "positionInfo");
-private _positionMatters = !(_positionInfo isEqualTo "");
+private _positionMatters = (_positionInfo isNotEqualTo "");
 private _canSyncWith = getArray (_moduleDescriptionConfig >> "canSyncWith");
 private _syncRequired = getNumber (_moduleDescriptionConfig >> "syncRequired");
 private _apiFunctions = getArray (_moduleDescriptionConfig >> "apiFunctions");
@@ -54,7 +54,7 @@ private _text = format ["<t color='%1' shadow='0' size='1.1'>", _colorText];
 private _sectionTitle = "<t size='1.2' color='#d8d8d8' valign='middle' font='RobotoCondensedBold'>%1</t><br/>";
 
 // Description text
-if !(_descriptionText isEqualTo "") then {
+if (_descriptionText isNotEqualTo "") then {
   _text = _text + format ["%2<br/><br/>", _colorInactive, _descriptionText];
 };
 
@@ -235,7 +235,7 @@ _text = _text + ([
 
 // Prepare canSyncWith elements
 private _syncDesc = "";
-private _canSyncWithSupported = !(_canSyncWith isEqualTo []);
+private _canSyncWithSupported = (_canSyncWith isNotEqualTo []);
 
 if (_canSyncWithSupported) then {
   private _categoryNames = [
@@ -278,11 +278,11 @@ if (_canSyncWithSupported) then {
   {
     private _category = _x;
     private _categoryElements = [_categories, _category] call CBA_fnc_hashGet;
-    if !(_categoryElements isEqualTo []) then {
+    if (_categoryElements isNotEqualTo []) then {
       if (_category isEqualTo "main") exitWith {
         {
           private _name = [_mainOptions, _x] call CBA_fnc_hashGet;
-          if !(_name isEqualTo "") then {
+          if (_name isNotEqualTo "") then {
             _syncDesc = _syncDesc + format ["- %1<br/>", localize _name];
           };
         } forEach _categoryElements;
@@ -291,7 +291,7 @@ if (_canSyncWithSupported) then {
         private _modulesList = "";
         {
           private _name = getText (configFile >> "CfgVehicles" >> _x >> "displayName");
-          if !(_name isEqualTo "") then {
+          if (_name isNotEqualTo "") then {
             private _isLastElement = _forEachIndex isEqualTo ((count _categoryElements) - 1);
             _modulesList = _modulesList + format [
               "<t font='RobotoCondensedBold'>%1</t>%2",
@@ -343,7 +343,7 @@ _text = _text + ([
   _syncDesc + "<br/>"
 ] joinString "");
 
-if !(_apiFunctions isEqualTo []) then {
+if (_apiFunctions isNotEqualTo []) then {
   _text = _text + ([
     "<img size='1.5' image='\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\functions_ca.paa'/> ",
     format [
@@ -371,7 +371,7 @@ if !(_apiFunctions isEqualTo []) then {
 };
 
 // Schema section
-if !(_schema isEqualTo "") then {
+if (_schema isNotEqualTo "") then {
   _text = _text + ([
     "<img size='1.5' image='\a3\3den\data\cfg3den\group\iconcustomcomposition_ca.paa'/> ",
     format [

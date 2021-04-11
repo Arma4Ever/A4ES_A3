@@ -11,7 +11,7 @@ if !(hasInterface) exitWith {};
   // Update all playable units teams
   {
     private _team = _x getVariable [QEGVAR(squads,assignedTeam), ""];
-    if !(_team isEqualTo "") then {
+    if (_team isNotEqualTo "") then {
       ["CBA_teamColorChanged", [_x, _team]] call CBA_fnc_localEvent;
     };
   } forEach playableUnits;

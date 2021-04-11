@@ -3,6 +3,8 @@ class CfgMarkers {
     /* Vanilla */
 
     class Flag {};
+
+    /*
     class b_unknown: Flag {
         // Unknown
         scope = 1;
@@ -235,6 +237,7 @@ class CfgMarkers {
         // Anti-Air
         scope = 1;
     };
+    */
     class flag_NATO: Flag {};
     class RedCrystal: flag_NATO {
         // Red Crystal
@@ -244,6 +247,7 @@ class CfgMarkers {
         // White
         scope = 1;
     };
+    /*
     class b_Ordnance: b_unknown {
         // Ordnance
         scope = 1;
@@ -256,6 +260,7 @@ class CfgMarkers {
         // Ordnance
         scope = 1;
     };
+    */
     class Empty {};
     class loc_LetterA: Empty {
         // Letter (A)

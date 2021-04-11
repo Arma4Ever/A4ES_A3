@@ -27,7 +27,7 @@ private _idCategory = _ctrlTV tvadd [[],gettext (configfile >> "cfgWorlds" >> wo
    _ctrlTV tvsetdata [[_idCategory,_idLocation],str locationposition _x];
    _ctrlTV tvsetpicture [[_idCategory,_idLocation],_icon];
 } foreach nearestlocations [[0,0,0],["nameVillage","nameCity","nameCityCapital"],worldsize * sqrt 2];
-         
+
 _ctrlTV tvsort [[_idCategory],false];
 _ctrlTV tvexpand [_idCategory];
 
@@ -36,12 +36,12 @@ private _fn_addTerrainObjects =
    params ["_types","_parentName","_isLocation"];
 
    private _locations = nearestTerrainObjects [[0,0,0],_types,worldSize * sqrt 2,false,true];
-   
+
    if (_locations isEqualTo []) exitWith {false};
 
    private _parentIndex = _ctrlTV tvAdd [[0],localize _parentName];
    {
-      private _name = getText (configfile >> "CfgVehicles" >> typeOf _x >> "displayName");
+      private _name = getText ((configOf _x) >> "displayName");
       if (_name isEqualTo "") then {_name = localize "STR_ENH_LOCATIONLIST_UNKNOWN"}; // str_dn_wreck
       private _index = _ctrlTV tvAdd [[0,_parentIndex],_name];
 

@@ -18,7 +18,7 @@ private _description = getText (_moduleConfig >> QGVAR(moduleDescription) >> "sh
 // Hide short description by default in case there's no short description defined
 private _groupHeights = [0,0];
 
-if !(_description isEqualTo "") then {
+if (_description isNotEqualTo "") then {
   _controlTitle ctrlSetText _title;
   _controlTitle ctrlcommit 0;
   private _titleHeight = (ctrlposition _controlTitle) # 3;

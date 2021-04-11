@@ -21,7 +21,7 @@ private _treeCopy = [];
 	_x params ["_name", "_control", "_picture"];
 	private _tree = [_control, [], _this] call FUNC(assetsTreeParse);
 
-  if !(_tree isEqualTo []) then {
+  if (_tree isNotEqualTo []) then {
     _treeCopy pushBack [_name, _tree, [_picture, ""]];
   };
 } forEach [

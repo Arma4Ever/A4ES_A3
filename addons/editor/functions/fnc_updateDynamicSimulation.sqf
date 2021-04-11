@@ -19,14 +19,14 @@ if (isNull _target) exitWith {};
 // Get dynamicSimulation attribute value
 private _dynamicSim = false;
 private _dynamicSimAttr = _target get3DENAttribute "dynamicSimulation";
-if !(_dynamicSimAttr isEqualTo []) then {
+if (_dynamicSimAttr isNotEqualTo []) then {
   _dynamicSim = _dynamicSimAttr # 0;
 };
 
 // Get disableDynamicSimulation attribute value
 private _disableDynamicSim = false;
 private _disableDynamicSimAttr = _target get3DENAttribute QGVAR(disableDynamicSimulation);
-if !(_disableDynamicSimAttr isEqualTo []) then {
+if (_disableDynamicSimAttr isNotEqualTo []) then {
   _disableDynamicSim = _disableDynamicSimAttr # 0;
 };
 

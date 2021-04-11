@@ -58,7 +58,7 @@ if (_observeValue) then {
 };
 
 private _conditionActive = getText (_config >> QGVAR(conditionActive));
-private _isReactive = !(_conditionActive isEqualTo "");
+private _isReactive = (_conditionActive isNotEqualTo "");
 
 if (_isReactive) then {
   // Save compiled condition
@@ -67,7 +67,7 @@ if (_isReactive) then {
 
 // Setup onValuesChanged handler
 private _onValuesChangedHandler = getText (_config >> QGVAR(onValuesChanged));
-if !(_onValuesChangedHandler isEqualTo "") then {
+if (_onValuesChangedHandler isNotEqualTo "") then {
   _controlGroup setVariable [
     QGVAR(onValuesChanged),
     missionNamespace getVariable [_onValuesChangedHandler, '']
@@ -85,7 +85,7 @@ _controlTitle setVariable [QGVAR(attributeClass), configName _config];
 // Setup description if present
 private _controlDescription = _controlGroup controlsGroupCtrl IDC_DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_DESC;
 private _description = getText (_config >> QGVAR(description));
-if !(_description isEqualTo "") then {
+if (_description isNotEqualTo "") then {
   _controlDescription ctrlSetStructuredText parseText _description;
   private _descHeight = ctrlTextHeight _controlDescription;
 

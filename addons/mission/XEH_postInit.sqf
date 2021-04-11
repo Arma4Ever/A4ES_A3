@@ -13,7 +13,7 @@ if (isServer) then {
   [{
     private _respawn = getMissionConfigValue ["respawn", 0];
     // Exit if respawn enabled
-    if !(_respawn isEqualTo 0) exitWith {};
+    if (_respawn isNotEqualTo 0) exitWith {};
     // Remove all playable units from garbage collection
     removeFromRemainsCollector ([switchableUnits, playableUnits] select isMultiplayer);
   }, []] call CBA_fnc_execNextFrame;

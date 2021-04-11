@@ -107,6 +107,7 @@ class ctrlButtonSearch;
 class ctrlButtonCollapseAll;
 class ctrlButtonExpandAll;
 class ctrlButtonPictureKeepAspect;
+class ctrlShortcutButton;
 class ctrlStructuredText;
 class ctrlCombo;
 class ctrlCheckbox;

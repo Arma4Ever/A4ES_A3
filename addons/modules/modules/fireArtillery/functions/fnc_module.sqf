@@ -8,7 +8,7 @@
 params ["_mode", "_input"];
 
 // Exit if module executed inside editor, not on server or not in init mode
-if (is3DEN || !(isServer) || !(_mode isEqualTo "init")) exitWith {};
+if (is3DEN || !(isServer) || (_mode isNotEqualTo "init")) exitWith {};
 _input params [
   ["_logic", objNull, [objNull]],
   ["_isActivated", false, [true]],

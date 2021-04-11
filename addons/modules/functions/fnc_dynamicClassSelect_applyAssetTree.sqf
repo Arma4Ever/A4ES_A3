@@ -15,11 +15,11 @@ private _lazyPictures = GVAR(dynamicClassSelect_lazyPictures);
   private _index = _ctrlAssetsTree tvAdd [_path, _text];
   private _curPath = _path + [_index];
 
-  if !(_picture isEqualTo "") then {
+  if (_picture isNotEqualTo "") then {
     _ctrlAssetsTree tvSetPicture [_curPath, _picture];
   };
 
-  if !(_pictureRight isEqualTo "") then {
+  if (_pictureRight isNotEqualTo "") then {
     _ctrlAssetsTree tvSetPictureRight [_curPath, _pictureRight];
   };
 
@@ -30,7 +30,7 @@ private _lazyPictures = GVAR(dynamicClassSelect_lazyPictures);
     _ctrlAssetsTree tvSetTooltip [_curPath, _data];
   };
 
-  if !(_props isEqualTo []) then {
+  if (_props isNotEqualTo []) then {
     // Setup pictures now if we're on root level or filter is active -
     // paths are changing by filtering so we won't be able to lazy load them
     // in next frame

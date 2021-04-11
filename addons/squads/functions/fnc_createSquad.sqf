@@ -32,7 +32,7 @@ _squad setVariable ["units", _units, true];
 _squad setVariable ["leader", leader _baseGroup, true];
 
 private _groupName = groupId _baseGroup;
-if !(_groupName isEqualTo "") then {
+if (_groupName isNotEqualTo "") then {
   _squad setVariable ["name", _groupName, true];
 };
 

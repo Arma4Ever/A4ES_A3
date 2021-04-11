@@ -13,7 +13,7 @@ private _unitsData = [];
 {
   _x params ["_unit", "_icons", "_colors", "_isSpecialState", "", "_checkFOV"];
 
-  if !(_unit isEqualTo ace_player) then {
+  if (_unit isNotEqualTo ace_player) then {
     private _distance = _unit distance ace_player;
     private _showSpecialState = false;
     if (_isSpecialState && {_distance < RADAR_MAX_UNIT_DISTANCE}) then {
@@ -63,7 +63,7 @@ private _unitsData = [];
 GVAR(radarDrawCache) = [_playerData, _unitsData];
 
 // Redraw memberlist if special state units in range changed
-if !(_specialStateUnits isEqualTo GVAR(lastSpecialStateUnits)) then {
+if (_specialStateUnits isNotEqualTo GVAR(lastSpecialStateUnits)) then {
   GVAR(lastSpecialStateUnits) = _specialStateUnits;
   false call FUNC(drawMemberlist);
 };

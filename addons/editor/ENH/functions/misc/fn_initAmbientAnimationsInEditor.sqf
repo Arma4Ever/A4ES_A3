@@ -25,9 +25,9 @@ private _units = (all3DENEntities # 0) select
 EXIT
 
 //Only select soldiers which have the ENH_AmbientAnimation attribute set
-_units = _units select 
+_units = _units select
 {
-	!((ATTRIBUTE # 0 # 0) isEqualTo "")
+	((ATTRIBUTE # 0 # 0) isNotEqualTo "")
 };
 
 EXIT

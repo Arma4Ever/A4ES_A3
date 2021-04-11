@@ -8,7 +8,7 @@
 params ["_mode", "_input"];
 
 // Exit if module executed inside editor, not on server or not in init mode
-if (is3DEN || !(isServer) || !(_mode isEqualTo "init")) exitWith {};
+if (is3DEN || !(isServer) || (_mode isNotEqualTo "init")) exitWith {};
 _input params [
   ["_logic", objNull, [objNull]],
   ["_isActivated", false, [true]],
@@ -60,7 +60,7 @@ if (_isActivated) then {
     _markers pushBack _coverMarker;
 
     // Add corner dot marker if alpha isn't 1 or color is not black
-    if (!(_markerAlpha isEqualTo 1) || !(_markerColorId isEqualTo 0)) then {
+    if ((_markerAlpha isNotEqualTo 1) || (_markerColorId isNotEqualTo 0)) then {
       _dotMarkers pushBack [
         format [QGVAR(coverMap_%1_dot_%2), _logicId, _i],
         [

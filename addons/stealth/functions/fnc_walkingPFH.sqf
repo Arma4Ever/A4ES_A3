@@ -28,7 +28,7 @@ if (_isWalking) then {
 };
 
 // Update icon if status changed
-if !(GVAR(isSilentWalking) isEqualTo _isSilentWalking) then {
+if (GVAR(isSilentWalking) isNotEqualTo _isSilentWalking) then {
   [
     QGVAR(silentWalking),
     true,

@@ -15,7 +15,7 @@ if ((_scriptName isEqualTo "") && !(isNil "_fnc_scriptName")) then {
 };
 
 // Tag script name
-if !(_scriptName isEqualTo "") then {
+if (_scriptName isNotEqualTo "") then {
   _scriptName = "[" + _scriptName + "] ";
 };
 
@@ -25,7 +25,7 @@ if (isLocalized _message) then {
 };
 
 // Format message if params are present
-if !(_params isEqualTo []) then {
+if (_params isNotEqualTo []) then {
   _message = format ([_message] + _params);
 };
 

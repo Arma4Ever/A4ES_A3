@@ -27,7 +27,7 @@ private _addTextSection = {
 
 private _text = "";
 
-if !(_general isEqualTo []) then {
+if (_general isNotEqualTo []) then {
   private _generalRules = "";
   {
     _generalRules = _generalRules + format [
@@ -43,7 +43,7 @@ if !(_general isEqualTo []) then {
   ]] call _addTextSection;
 };
 
-if !(_limitations isEqualTo []) then {
+if (_limitations isNotEqualTo []) then {
   private _limitationsRules = "";
   {
     _limitationsRules = _limitationsRules + format [
@@ -59,7 +59,7 @@ if !(_limitations isEqualTo []) then {
   ]] call _addTextSection;
 };
 
-if !(_warnings isEqualTo []) then {
+if (_warnings isNotEqualTo []) then {
   private _warningsInfo = "";
   {
     _warningsInfo = _warningsInfo + format [

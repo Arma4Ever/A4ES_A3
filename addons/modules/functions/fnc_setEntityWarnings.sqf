@@ -30,10 +30,10 @@ for "_i" from 0 to _treeRootElements do {
   };
 };
 
-if !(_warnings isEqualTo []) then {
+if (_warnings isNotEqualTo []) then {
   // Add entity to warnings tree if not added yet
   if (_index isEqualTo -1) then {
-    private _entityConfig = configFile >> "CfgVehicles" >> (typeOf _entity);
+    private _entityConfig = configOf _entity;
     private _displayName = getText (_entityConfig >> "displayName");
     private _icon = getText (_entityConfig >> "portrait");
 
@@ -74,7 +74,7 @@ if !(_warnings isEqualTo []) then {
   GVAR(warningsEntities) pushBackUnique _entityID;
 } else {
   // Remove entity warnings from warnings tree
-  if !(_index isEqualTo -1) then {
+  if (_index isNotEqualTo -1) then {
     _warningsTree tvDelete [_index];
   };
 

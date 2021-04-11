@@ -63,8 +63,8 @@ switch (_modeIndex) do
 					_addonIndex = _ctrlTV tvAdd [[_rootIndex],_addon];
 					//_ctrlTV tvSetPictureRight [[_rootIndex,_addonIndex],_logo]; Adding icons hits the performance quite hard
 				};
-				
-				if !(_addonOld isEqualTo _addon) then
+
+				if (_addonOld isNotEqualTo _addon) then
 				{
 					_categories = [];
 					_addonOld = _addon;
@@ -104,7 +104,7 @@ switch (_modeIndex) do
 			{
 				_ctrlTV tvSort [[_i,_j],false];
 				for "_k" from 0 to ((_ctrlTV tvCount [_i,_j]) - 1) do
-				{	
+				{
 					_ctrlTV tvSort [[_i,_j,_k],false];
 				};
 			};
@@ -120,7 +120,7 @@ switch (_modeIndex) do
 		{
 			_x params ["_configStr","","_category","_fncShort","_fncLong","_path","_preInit","_preStart","_postInit","_recompile","_logo"];
 
-			if (_configStr == (["configFile","missionConfigFile","campaignConfigFile"] select _configIndex)) then 
+			if (_configStr == (["configFile","missionConfigFile","campaignConfigFile"] select _configIndex)) then
 			{
 				if (_categoryOld isEqualTo []) then {_categoryOld = _category};
 				if (_category in _categories) then

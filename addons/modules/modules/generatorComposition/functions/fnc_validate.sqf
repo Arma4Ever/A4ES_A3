@@ -11,7 +11,7 @@ private _syncedUnits = (get3DENConnections _module) select {
   ((_x # 0) isEqualTo "Sync") && {(_x # 1) isKindOf "CAManBase"}
 };
 
-if !((count _syncedUnits) isEqualTo 1) then {
+if ((count _syncedUnits) isNotEqualTo 1) then {
   _warnings pushBack [
     localize LSTRING(generatorComposition_Warning_SyncError),
     localize LSTRING(generatorComposition_Warning_SyncError_Desc)

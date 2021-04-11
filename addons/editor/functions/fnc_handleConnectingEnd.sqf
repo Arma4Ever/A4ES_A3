@@ -7,7 +7,7 @@
 params ["_type", "_from"];
 
 // Exit if it's not a group connection
-if !(_type isEqualTo "Group") exitWith {};
+if (_type isNotEqualTo "Group") exitWith {};
 
 // Exit if source is empty
 if (_from isEqualTo []) exitWith {};

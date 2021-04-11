@@ -92,7 +92,7 @@ private _columnIndex = 0;
 } forEach GVAR(membersCache);
 
 // Add remaining units texts to last column
-if !(_columnTexts isEqualTo []) then {
+if (_columnTexts isNotEqualTo []) then {
   (_columns # _columnIndex) ctrlSetStructuredText parseText (_columnTexts joinString "<br/>");
 };
 

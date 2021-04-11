@@ -6,7 +6,7 @@
 
 params ["_unit"];
 
-if !(_unit isEqualTo ace_player) exitWith {};
+if (_unit isNotEqualTo ace_player) exitWith {};
 
 LOG("Handling killed event");
 

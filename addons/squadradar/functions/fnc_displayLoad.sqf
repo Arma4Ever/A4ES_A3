@@ -7,7 +7,7 @@
 params ["_displayClass"];
 
 GVAR(interruptingDisplays) pushBackUnique _displayClass;
-GVAR(displayInterrupt) = !(GVAR(interruptingDisplays) isEqualTo []);
+GVAR(displayInterrupt) = (GVAR(interruptingDisplays) isNotEqualTo []);
 
 // Update squadradar ui
 false call FUNC(updateUI);

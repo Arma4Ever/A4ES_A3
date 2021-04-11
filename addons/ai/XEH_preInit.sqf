@@ -16,7 +16,7 @@ ADDON = true;
   params ["_unit", "_weapon", "_muzzle", "_newMagazine"];
 
   // Exit if unit not local, is player or not fired from correct (main) muzzle
-  if (!(local _unit) || {isPlayer _unit} || {!(_muzzle isEqualTo _weapon)}) exitWith {};
+  if (!(local _unit) || {isPlayer _unit} || {_muzzle isNotEqualTo _weapon}) exitWith {};
   // Exit if thrown grenade or put mine
   if (_weapon in ["Throw", "Put"]) exitWith {};
 

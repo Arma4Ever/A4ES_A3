@@ -23,7 +23,7 @@ _controlTitle ctrlcommit 0;
 private _titleHeight = (ctrlposition _controlTitle) # 3;
 
 // Setup description
-if !(_description isEqualTo "") then {
+if (_description isNotEqualTo "") then {
   _controlDesc ctrlSetStructuredText parseText _description;
   _descriptionHeight = ctrlTextHeight _controlDesc;
 

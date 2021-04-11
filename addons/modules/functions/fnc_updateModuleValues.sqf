@@ -20,7 +20,7 @@ if (isNil "_moduleValuesProperties") then {
   // Apply values to namespace
   private _attributesConfigs = (
     QUOTE((getNumber (_x >> QQGVAR(observeValue))) isEqualTo 1) configClasses (
-      configFile >> "CfgVehicles" >> (typeOf _module) >> "Attributes"
+      (configOf _module) >> "Attributes"
     )
   );
 

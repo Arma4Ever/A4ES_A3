@@ -55,7 +55,7 @@ if ((count _squadUnits) isEqualTo 1) then {
     LOG_1('Checking name of dummy unit "%1".',str _unit);
     [
       {
-        !(((_this # 0) getVariable "ACE_Name") isEqualTo (_this # 1))
+        (((_this # 0) getVariable "ACE_Name") isNotEqualTo (_this # 1))
       },
       {
         LOG_1('Name of dummy unit "%1" has changed - overriding.',str (_this # 0));

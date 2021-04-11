@@ -12,7 +12,7 @@ if (_index != -1) then {
   GVAR(interruptingDisplays) deleteAt _index;
 };
 
-GVAR(displayInterrupt) = !(GVAR(interruptingDisplays) isEqualTo []);
+GVAR(displayInterrupt) = (GVAR(interruptingDisplays) isNotEqualTo []);
 
 // Update squadradar ui
 false call FUNC(updateUI);

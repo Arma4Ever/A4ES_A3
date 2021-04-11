@@ -13,7 +13,7 @@ GVAR(entities) = [];
   while {true} do {
     private _entities = entities [["CAManBase"], [], true, false];
 
-    if !(_entities isEqualTo GVAR(entities)) then {
+    if (_entities isNotEqualTo GVAR(entities)) then {
         private _newEntities = _entities - GVAR(entities);
         GVAR(entities) = _entities;
         {

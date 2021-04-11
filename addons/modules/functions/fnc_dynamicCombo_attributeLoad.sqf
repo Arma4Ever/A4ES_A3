@@ -23,7 +23,7 @@ if (isClass _attributeValuesConfig) then {
     _options pushback [
       getText (_x >> 'name'),
       _optionValue,
-      !((getNumber (_x >> 'default')) isEqualTo 0),
+      ((getNumber (_x >> 'default')) isNotEqualTo 0),
       getText (_x >> 'tooltip'),
       getText (_x >> 'picture'),
       getText (_x >> 'pictureRight')
@@ -34,7 +34,7 @@ if (isClass _attributeValuesConfig) then {
 // Get options from insert function
 private _hasInsertFunction = false;
 private _insertFunctionName = getText (_config >> QGVAR(insertValues));
-if !(_insertFunctionName isEqualTo "") then {
+if (_insertFunctionName isNotEqualTo "") then {
   private _insertFunction = missionNamespace getVariable [_insertFunctionName, ''];
   if (_insertFunction isEqualType {}) then {
     _hasInsertFunction = true;

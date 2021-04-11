@@ -20,7 +20,7 @@ for "_i" from 0 to _maxIndex do {
 
 private _descriptions = getArray (_controlConfig >> QGVAR(descriptions));
 
-if !(_descriptions isEqualTo []) then {
+if (_descriptions isNotEqualTo []) then {
   // Save references
   _ctrlToolbox setVariable [QGVAR(description), _ctrlDescription];
   _ctrlToolbox setVariable [QGVAR(descriptions), _descriptions];
