@@ -153,18 +153,22 @@ def main():
             print("")
         vendorstats.append((dir[1:], copied, skipped, copieddlls, skippedlls))
 
+    print("========================================================")
+    print("")
     print("  Vendor addons:")
 
+    allvendorskiped = True
     for stat in vendorstats:
         if stat[1] > 0 or stat[3] > 0:
+            allvendorskiped = False
             print("    {}:".format(stat[0]))
             print("      copied {} addons.".format(stat[1]))
             print("      skipped {} addons.".format(stat[2]))
             print("      copied {} dlls.".format(stat[3]))
             print("      skipped {} dlls.".format(stat[4]))
-        else:
-            print("    {}:".format(stat[0]))
-            print("      skipped all.")
+
+    if allvendorskiped:
+        print("    Skipped all.")
 
     print("")
 
