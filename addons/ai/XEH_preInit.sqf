@@ -6,10 +6,12 @@ ADDON = false;
 
 ADDON = true;
 
+/*
 // Allow crew in immobile vehicles in ~50% cases
 ["LandVehicle", "InitPost", {
   (_this # 0) allowCrewInImmobile ((random 1) < 0.5);
 }] call CBA_fnc_addClassEventHandler;
+*/
 
 // Add primary weapon magazine to AI on reload
 ["CAManBase", "Reloaded", {
