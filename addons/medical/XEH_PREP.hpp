@@ -1,2 +1,3 @@
 
 PREP(isMedic);
+PREP(updateMedicalLocalUnits);

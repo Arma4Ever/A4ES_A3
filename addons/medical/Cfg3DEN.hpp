@@ -23,4 +23,22 @@ class Cfg3DEN {
             };
         };
 	};
+    class Object {
+        class AttributeCategories {
+            class ace_attributes {
+                class Attributes {
+                    class GVAR(enableACEDamage) {
+                        displayName = CSTRING(Attributes_enableACEDamage);
+                        tooltip = CSTRING(Attributes_enableACEDamage_Tooltip);
+                        property = QUOTE(enableACEDamage);
+                        control = "Checkbox";
+                        expression = "if (_value) then {_this setVariable ['%s', _value, true];};";
+                        defaultValue = "false";
+                        condition = "objectBrain";
+                        typeName = "BOOL";
+                    };
+                };
+            };
+        };
+    };
 };

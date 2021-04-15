@@ -56,7 +56,7 @@ force force ace_cookoff_enable = 2;
 force force ace_cookoff_enableAmmobox = true;
 force force ace_cookoff_enableAmmoCookoff = true;
 force force ace_cookoff_enableFire = true;
-force force ace_cookoff_probabilityCoef = 0.35;
+force force ace_cookoff_probabilityCoef = 0.5;
 
 // ACE Crew Served Weapons
 force force ace_csw_ammoHandling = 2;
@@ -163,13 +163,13 @@ force force ace_map_gestures_onlyShowFriendlys = false;
 force force ace_maptools_drawStraightLines = false;
 
 // ACE Medical
-force force ace_medical_ai_enabledFor = 2;
-force force ace_medical_AIDamageThreshold = 0.14;
+force force ace_medical_ai_enabledFor = 0;
+force force ace_medical_AIDamageThreshold = 0.85;
 force force ace_medical_bleedingCoefficient = 0.24;
 force force ace_medical_blood_bloodLifetime = 600;
 force force ace_medical_blood_enabledFor = 2;
 force force ace_medical_blood_maxBloodObjects = 500;
-force force ace_medical_fatalDamageSource = 1;
+force force ace_medical_fatalDamageSource = 2;
 force force ace_medical_feedback_bloodVolumeEffectType = 2;
 force force ace_medical_feedback_painEffectType = 1;
 force force ace_medical_fractureChance = 0.34;
@@ -186,7 +186,7 @@ force force ace_medical_painUnconsciousChance = 0.1;
 force force ace_medical_playerDamageThreshold = 5.5;
 force force ace_medical_spontaneousWakeUpChance = 0.8;
 force force ace_medical_spontaneousWakeUpEpinephrineBoost = 2.5;
-force force ace_medical_statemachine_AIUnconsciousness = false;
+force force ace_medical_statemachine_AIUnconsciousness = true;
 force force ace_medical_statemachine_cardiacArrestBleedoutEnabled = true;
 force force ace_medical_statemachine_cardiacArrestTime = 300;
 force force ace_medical_statemachine_fatalInjuriesAI = 0;

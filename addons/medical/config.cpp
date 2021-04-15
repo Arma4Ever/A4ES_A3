@@ -31,3 +31,7 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "Cfg3DEN.hpp"
+
+class ACE_Medical_StateMachine {
+    list = QUOTE(missionNamespace getVariable [ARR_2(QQGVAR(localMedicalUnits),[])]);
+};
