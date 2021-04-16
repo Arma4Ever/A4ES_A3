@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+  <Package name="Markers">
+    <Key ID="STR_A3CS_Markers_AttributeCategory">
+      <Original>Markery</Original>
+    </Key>
+    <Key ID="STR_A3CS_Markers_Attributes_disableUniqueMaps">
+      <Original>Wyłącz unikalne mapy</Original>
+    </Key>
+    <Key ID="STR_A3CS_Markers_Attributes_disableUniqueMaps_Tooltip">
+      <Original>Wyłącz unikalne mapy</Original>
+    </Key>
+  </Package>
+</Project>
