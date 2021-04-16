@@ -4,16 +4,6 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
-[QGVAR(enableSafety), {
-  // Lower player weapon
-  player action ["WeaponOnBack", player];
-
-  [{
-    // Lock player weapon
-    [player, currentWeapon player, true] call ACEFUNC(safemode,setWeaponSafety);
-  }, [], 0.5] call CBA_fnc_waitAndExecute;
-}] call CBA_fnc_addEventHandler;
-
 ADDON = true;
 
 if (hasInterface) then {

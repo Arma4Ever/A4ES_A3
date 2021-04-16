@@ -4,12 +4,6 @@
 if (EGVAR(common,isMainMenu)) exitWith {};
 
 if (isServer) then {
-  if (isMultiplayer) then {
-    [{
-      [QGVAR(enableSafety), []] call CBA_fnc_globalEvent;
-    }, []] call CBA_fnc_execNextFrame;
-  };
-
   [{
     private _respawn = getMissionConfigValue ["respawn", 0];
     // Exit if respawn enabled
@@ -47,4 +41,4 @@ for "_i" from 2 to 15 do {
 
   // Lock player weapon
   [player, currentWeapon player, true] call ACEFUNC(safemode,setWeaponSafety);
-}, [], 0.05] call CBA_fnc_waitAndExecute;
+}, [], 0.01] call CBA_fnc_waitAndExecute;
