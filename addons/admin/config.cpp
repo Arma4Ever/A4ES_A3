@@ -139,32 +139,24 @@ class GVAR(admins) {
         uid = "76561197998970466";
         allowedModules[] = {"endMission", "adminMessages", "debugCamera", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
     };
-    class sarlack {
-        uid = "76561198007533644";
-        allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
-    };
-    class shock {
-        uid = "76561197984292422";
-        allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
-    };
     class bohun {
         uid = "76561198001065845";
+        allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
+    };
+    class wikary {
+        uid = "76561198006636036";
         allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
     };
     class radrix {
         uid = "76561198091312264";
         allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
     };
-    class staffo {
-        uid = "76561198002312509";
-        allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
-    };
-    class vincer {
-        uid = "76561198026270754";
-        allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
-    };
     class wasyl {
         uid = "76561198046275691";
+        allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
+    };
+    class krzyciu {
+        uid = "76561198017606120";
         allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
     };
     class diament {
@@ -183,8 +175,12 @@ class GVAR(admins) {
         uid = "76561198025557349";
         allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
     };
-    class aki {
-        uid = "76561198024269757";
+    class symbiotyk {
+        uid = "76561198119905360";
+        allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
+    };
+    class cichy {
+        uid = "76561198043356095";
         allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
     };
     class modzyn {
@@ -199,10 +195,6 @@ class GVAR(admins) {
         uid = "76561198044299447";
         allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
     };
-    class sabig {
-        uid = "76561198028744860";
-        allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
-    };
     class jonny {
         uid = "76561198119088699";
         allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
@@ -213,6 +205,26 @@ class GVAR(admins) {
     };
     class minnow {
         uid = "76561198264982630";
+        allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
+    };
+    class falcon {
+        uid = "76561198050226790";
+        allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
+    };
+    class rafimus {
+        uid = "76561198034966085";
+        allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
+    };
+    class faraon {
+        uid = "76561198193343497";
+        allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
+    };
+    class istan {
+        uid = "76561198017443011";
+        allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
+    };
+    class chicken {
+        uid = "76561198286942055";
         allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
     };
 };
