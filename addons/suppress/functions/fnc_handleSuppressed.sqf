@@ -27,6 +27,9 @@ private _curSuppress = 1 - (ctrlFade _overlayCtrl);
 private _suppress = (_newSuppress + _curSuppress) min 1;
 
 _overlayCtrl ctrlSetFade (1 - _suppress);
-_overlayCtrl ctrlCommit 0;
-_overlayCtrl ctrlSetFade 1;
-_overlayCtrl ctrlCommit 10;
+_overlayCtrl ctrlCommit 0.07;
+_overlayCtrl spawn {
+  sleep 0.07;
+  _this ctrlSetFade 1;
+  _this ctrlCommit 8;
+};

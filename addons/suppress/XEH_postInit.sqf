@@ -3,7 +3,7 @@
 if !(hasInterface) exitWith {};
 
 // Create overlay and hide it
-QGVAR(overlay) cutRsc [QGVAR(overlay), "PLAIN"];
+QGVAR(overlay) cutRsc [QGVAR(overlay), "PLAIN", -1, false];
 private _display = uiNamespace getVariable QGVAR(overlay);
 private _overlayCtrl = _display displayCtrl IDC_OVERLAY;
 _overlayCtrl ctrlSetFade 1;

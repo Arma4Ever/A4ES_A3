@@ -33,7 +33,7 @@ class RscTitles {
             	w = "safezoneWAbs";
             	h = "safezoneH";
             	text = QPATHTOF(data\overlay.paa);
-            	colortext[] = {0,0,0,1};
+            	colortext[] = {0, 0, 0, 0.88};
             };
     	};
     };
