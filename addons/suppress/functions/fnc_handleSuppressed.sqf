@@ -38,5 +38,5 @@ _overlayCtrl ctrlCommit 0.07;
 _overlayCtrl spawn {
   sleep 0.07;
   _this ctrlSetFade 1;
-  _this ctrlCommit 10;
+  _this ctrlCommit 7;
 };
