@@ -1,5 +1,18 @@
 class CfgWeapons {
+    class ItemCore;
     class ACE_ItemCore;
+
+    class acc_flashlight: ItemCore {
+        ACE_Attachable = QGVAR(colorWhite);
+    };
+
+    class acc_flashlight_smg_01: acc_flashlight {
+        ACE_Attachable = QGVAR(colorWhite);
+    };
+
+    class acc_flashlight_pistol: ItemCore {
+        ACE_Attachable = QGVAR(colorWhite);
+    };
 
     class ACE_Flashlight_MX991: ACE_ItemCore {
         descriptionShort = CSTRING(MX991_Description);

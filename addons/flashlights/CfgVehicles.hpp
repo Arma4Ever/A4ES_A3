@@ -47,7 +47,7 @@ class CfgVehicles {
             };
         };
     };
-    class GVAR(colorRed): GVAR(personalFlashlight_base) {
+    class GVAR(colorRed): GVAR(base) {
         scope = 1;
         displayName = QGVAR(colorRed);
         model = "\A3\weapons_f\acc\accv_Flashlight_F";
