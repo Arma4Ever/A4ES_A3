@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+  <Package name="Tanks">
+    <Key ID="STR_A3CS_Tanks_ThrowInGrenade_displayName">
+      <Original>Wrzuć granat</Original>
+    </Key>
+    <Key ID="STR_A3CS_Tanks_ThrowInGrenade_progress">
+      <Original>Wrzucanie granatu...</Original>
+    </Key>
+    <Key ID="STR_A3CS_Tanks_ThrowInGrenade_progress">
+      <Original>Wrzucanie granatu...</Original>
+    </Key>
+    <Key ID="STR_A3CS_Tanks_GrenadeThrownIn">
+      <Original>Granat wrzucony. Uciekaj!</Original>
+    </Key>
+    <Key ID="STR_A3CS_Tanks_KnockOnHatch_displayName">
+      <Original>Zapukaj we właz</Original>
+    </Key>
+    <Key ID="STR_A3CS_Tanks_KnockOnHatch_progress">
+      <Original>Pukanie we właz...</Original>
+    </Key>
+    <Key ID="STR_A3CS_Tanks_KnockedInHatch">
+      <Original>Zapukałeś we właz</Original>
+    </Key>
+    <Key ID="STR_A3CS_Tanks_KnockingInHatch">
+      <Original>Ktoś puka we właz...</Original>
+    </Key>
+  </Package>
+</Project>
