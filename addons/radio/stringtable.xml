@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+  <Package name="Radio">
+    <Key ID="STR_A3CS_Radio_PlaceMobileAntenna_displayName">
+      <English>Place antenna</English>
+      <Polish>Rozłóż antenę</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Radio_PickupMobileAntenna_displayName">
+      <English>Fold and pickup antenna</English>
+      <Polish>Złóż i podnieś antenę</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Radio_NoPlaceInInventory">
+      <English>Not enough place in inventory to pickup antenna</English>
+      <Polish>Za mało miejsca w ekwipunku aby podnieść antenę</Polish>
+    </Key>
+  </Package>
+</Project>

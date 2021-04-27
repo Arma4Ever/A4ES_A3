@@ -26,7 +26,7 @@ VENDOR = {
     "@Zeus Enhanced - ACE3 Compatibility": {},
     "@Enhanced Movement": {},
     "@Enhanced Movement Rework": {},
-    "@GRAD Trenches": {},
+    "@Gruppe Adler Trenches": {},
     "@VET_Unflipping": {},
     "@BackpackOnChest": {},
     "@Breaching Charge": {},
@@ -50,7 +50,9 @@ VENDOR = {
     "@L3-GPNVG18 Panoramic Night Vision": {},
     "@PMK-1 Gas mask": {},
     "@M40 protective mask": {},
+    "@Hate's Hidden Cameras": {},
     "@ArmaZeusCache": {},
+    "@ILBE Assault Pack - Rewrite": {},
     # "@Camofaces": {},
     "-Wearable Antennae": {},
     "-Mocap": {

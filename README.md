@@ -3,7 +3,7 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 
 ## Requirements
 - [CBA](https://github.com/CBATeam/CBA_A3)
-- [ACRE2](https://github.com/IDI-Systems/acre2)
+- [Task Force Arrowhead Radio BETA](https://github.com/michail-nikolaev/task-force-arma-3-radio)
 
 ## Build process includes external mods:
 - [ACE3](https://github.com/acemod/ACE3)
@@ -39,6 +39,8 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [Wearable Antennae](https://www.armaholic.com/page.php?id=36198)
 - [Blurry Laser](https://steamcommunity.com/sharedfiles/filedetails/?id=2079283616)
 - [Ladder Tweak](https://steamcommunity.com/sharedfiles/filedetails/?id=1803586009)
+- [Hate's Hidden Cameras](https://steamcommunity.com/sharedfiles/filedetails/?id=2404750021)
+- [ILBE Assault Pack - Rewrite](https://github.com/Grezvany13/ILBE-Assault-Pack-Rewrite)
 
 ## Credits
 Authors of external mods.  

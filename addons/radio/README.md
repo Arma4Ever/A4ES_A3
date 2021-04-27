@@ -1,11 +1,13 @@
 # A3CS Radio
-Handles radios releated stuff (ACRE2).
+Handles radios releated stuff (TFAR).
 
 ### Changes
-- Moves radios from player's corpse to new unit on respawn
+- TFAR integration.
+- Adds script handling for mobile antennas from ILBE Assault Pack mod.
+- Adds radio gestures.
 
 ### Credits
-Parts of this addon are based on acre_gestures addon from [FPARMA Mods](https://github.com/fparma/fparma-mods) project.
+Parts of this addon are based on gestures addon from [ACRE2](https://github.com/IDI-Systems/acre2) project.
 
 ### License
-Addon is distributed under [FPARMA Mods MIT](https://github.com/fparma/fparma-mods/blob/master/LICENSE) license.
+Addon is distributed under [ACRE2 GPL3](https://github.com/IDI-Systems/acre2/blob/master/LICENSE) license.

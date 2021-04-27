@@ -6,9 +6,15 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"a3cs_common", "acre_sys_components"};
+        requiredAddons[] = {
+            "a3cs_common",
+            "tfar_core",
+            "tfw_radios_main",
+            "tfw_radios_ilbe",
+            "tfw_radios_rf3080"
+        };
         author = ECSTRING(main,Author);
-        authors[] = {"diwako", "SzwedzikPL"};
+        authors[] = {"diwako", "ACRE2Team", "SzwedzikPL"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
@@ -16,4 +22,6 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
-#include "CfgMoves.hpp"
+#include "CfgVehicles.hpp"
+#include "CfgMovesBasic.hpp"
+#include "CfgGesturesMale.hpp"
