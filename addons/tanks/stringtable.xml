@@ -2,28 +2,32 @@
 <Project name="A3CS">
   <Package name="Tanks">
     <Key ID="STR_A3CS_Tanks_ThrowInGrenade_displayName">
-      <Original>Wrzuć granat</Original>
+      <English>Throw in grenade</English>
+      <Polish>Wrzuć granat</Polish>
     </Key>
     <Key ID="STR_A3CS_Tanks_ThrowInGrenade_progress">
-      <Original>Wrzucanie granatu...</Original>
-    </Key>
-    <Key ID="STR_A3CS_Tanks_ThrowInGrenade_progress">
-      <Original>Wrzucanie granatu...</Original>
+      <English>Throwing grenade...</English>
+      <Polish>Wrzucanie granatu...</Polish>
     </Key>
     <Key ID="STR_A3CS_Tanks_GrenadeThrownIn">
-      <Original>Granat wrzucony. Uciekaj!</Original>
+      <English>Grenade thrown in. Run!</English>
+      <Polish>Granat wrzucony. Uciekaj!</Polish>
     </Key>
     <Key ID="STR_A3CS_Tanks_KnockOnHatch_displayName">
-      <Original>Zapukaj we właz</Original>
+      <English>Knock on hatch</English>
+      <Polish>Zapukaj we właz</Polish>
     </Key>
     <Key ID="STR_A3CS_Tanks_KnockOnHatch_progress">
-      <Original>Pukanie we właz...</Original>
+      <English>Knocking on hatch....</English>
+      <Polish>Pukanie we właz...</Polish>
     </Key>
     <Key ID="STR_A3CS_Tanks_KnockedInHatch">
-      <Original>Zapukałeś we właz</Original>
+      <English>You knocked on hatch</English>
+      <Polish>Zapukałeś we właz</Polish>
     </Key>
     <Key ID="STR_A3CS_Tanks_KnockingInHatch">
-      <Original>Ktoś puka we właz...</Original>
+      <English>Somebody is knocking on hatch...</English>
+      <Polish>Ktoś puka we właz...</Polish>
     </Key>
   </Package>
 </Project>

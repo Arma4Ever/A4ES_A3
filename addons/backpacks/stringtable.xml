@@ -2,7 +2,7 @@
 <Project name="A3CS">
   <Package name="Backpacks">
     <Key ID="STR_A3CS_Backpacks_InvisibleBackpack">
-      <Original>Invisible backpack</Original>
+      <English>Invisible backpack</English>
       <Polish>Niewidzialny plecak</Polish>
     </Key>
   </Package>

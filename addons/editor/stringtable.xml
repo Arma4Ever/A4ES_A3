@@ -2,145 +2,145 @@
 <Project name="A3CS">
   <Package name="Editor">
     <Key ID="STR_A3CS_Editor_DisableDynamicSimulation">
-      <Original>Wyłącz dynamiczną symulację</Original>
+      <Polish>Wyłącz dynamiczną symulację</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableDynamicSimulation_Tooltip">
-      <Original>Wyłącz dynamiczną symulację tej grupy. Grupy z wyłączoną dynamiczną symulacją będą symulowane cały czas, niezależnie od odległości od graczy.</Original>
+      <Polish>Wyłącz dynamiczną symulację tej grupy. Grupy z wyłączoną dynamiczną symulacją będą symulowane cały czas, niezależnie od odległości od graczy.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_Scenario_AttributeCategory_States_displayName">
-      <Original>Debug</Original>
+      <Polish>Debug</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_IncompatibleModsDetected_Title">
-      <Original>Wykryto niekompatybilne mody</Original>
+      <Polish>Wykryto niekompatybilne mody</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_IncompatibleModsDetected_Message">
-      <Original>Wyłącz %1 i uruchom grę ponownie. Jeśli brakuje Ci jakichś funkcjonalności w edytorze daj nam o tym znać na forum.</Original>
+      <Polish>Wyłącz %1 i uruchom grę ponownie. Jeśli brakuje Ci jakichś funkcjonalności w edytorze daj nam o tym znać na forum.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI">
-      <Original>Wyłącz funkcję AI</Original>
+      <Polish>Wyłącz funkcję AI</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_TARGET">
-      <Original>TARGET</Original>
+      <Polish>TARGET</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_TARGET_Tooltip">
-      <Original>Wyłącza obserwację celów przez AI i wskazywanie celów przez dowódcę.</Original>
+      <Polish>Wyłącza obserwację celów przez AI i wskazywanie celów przez dowódcę.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_AUTOTARGET">
-      <Original>AUTOTARGET</Original>
+      <Polish>AUTOTARGET</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_AUTOTARGET_Tooltip">
-      <Original>Wyłącza samodzielne szukanie celów i obserwację podejrzanych obiektów.</Original>
+      <Polish>Wyłącza samodzielne szukanie celów i obserwację podejrzanych obiektów.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_MOVE">
-      <Original>MOVE</Original>
+      <Polish>MOVE</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_MOVE_Tooltip">
-      <Original>Wyłącza możliwość poruszania się przez AI (dotyczy również pojazdu jeśli jednostka jest kierowcą). UWAGA! Ta opcja wyłącza poruszanie się jednostki niezależnie od sytuacji. Jesli chcesz powstrzymać jednostę przed ruszeniem do formacji na starcie misji ale umożliwić poruszanie się podczas walki użyć opcji "Zatrzymaj jednostkę".</Original>
+      <Polish>Wyłącza możliwość poruszania się przez AI (dotyczy również pojazdu jeśli jednostka jest kierowcą). UWAGA! Ta opcja wyłącza poruszanie się jednostki niezależnie od sytuacji. Jesli chcesz powstrzymać jednostę przed ruszeniem do formacji na starcie misji ale umożliwić poruszanie się podczas walki użyć opcji "Zatrzymaj jednostkę".</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_ANIM">
-      <Original>ANIM</Original>
+      <Polish>ANIM</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_ANIM_Tooltip">
-      <Original>Wyłącza możliwość zmiany animacji przez AI.</Original>
+      <Polish>Wyłącza możliwość zmiany animacji przez AI.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_TEAMSWITCH">
-      <Original>TEAMSWITCH</Original>
+      <Polish>TEAMSWITCH</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_TEAMSWITCH_Tooltip">
-      <Original>Wyłącza możliwość zmiany drużyny przez AI.</Original>
+      <Polish>Wyłącza możliwość zmiany drużyny przez AI.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_FSM">
-      <Original>FSM</Original>
+      <Polish>FSM</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_FSM_Tooltip">
-      <Original>Wyłącza uruchamianie skryptów zachowań i reakcji AI.</Original>
+      <Polish>Wyłącza uruchamianie skryptów zachowań i reakcji AI.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_WEAPONAIM">
-      <Original>WEAPONAIM</Original>
+      <Polish>WEAPONAIM</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_WEAPONAIM_Tooltip">
-      <Original>Wyłącza celowanie przez AI.</Original>
+      <Polish>Wyłącza celowanie przez AI.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_AIMINGERROR">
-      <Original>AIMINGERROR</Original>
+      <Polish>AIMINGERROR</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_AIMINGERROR_Tooltip">
-      <Original>Wyłącza pogarszanie celności AI ze względu na przygwożdżenie, poruszanie się, rany itp.</Original>
+      <Polish>Wyłącza pogarszanie celności AI ze względu na przygwożdżenie, poruszanie się, rany itp.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_SUPPRESSION">
-      <Original>SUPPRESSION</Original>
+      <Polish>SUPPRESSION</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_SUPPRESSION_Tooltip">
-      <Original>Wyłącza możliwość przygwożdżenia AI.</Original>
+      <Polish>Wyłącza możliwość przygwożdżenia AI.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_CHECKVISIBLE">
-      <Original>CHECKVISIBLE</Original>
+      <Polish>CHECKVISIBLE</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_CHECKVISIBLE_Tooltip">
-      <Original>Wyłącza sprawdzanie widoczności celów.</Original>
+      <Polish>Wyłącza sprawdzanie widoczności celów.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_COVER">
-      <Original>COVER</Original>
+      <Polish>COVER</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_COVER_Tooltip">
-      <Original>Wyłącza szukanie i wykorzystywanie obiektów jako osłony.</Original>
+      <Polish>Wyłącza szukanie i wykorzystywanie obiektów jako osłony.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_AUTOCOMBAT">
-      <Original>AUTOCOMBAT</Original>
+      <Polish>AUTOCOMBAT</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_AUTOCOMBAT_Tooltip">
-      <Original>Wyłącza automatyczne przełączanie się AI w tryb walki w przypadku zagrożenia.</Original>
+      <Polish>Wyłącza automatyczne przełączanie się AI w tryb walki w przypadku zagrożenia.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_PATH">
-      <Original>PATH</Original>
+      <Polish>PATH</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_PATH_Tooltip">
-      <Original>Wyłącza wyszukiwanie scieżek (path finding) co efektywnie unieruchamia AI.</Original>
+      <Polish>Wyłącza wyszukiwanie scieżek (path finding) co efektywnie unieruchamia AI.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_MINEDETECTION">
-      <Original>MINEDETECTION</Original>
+      <Polish>MINEDETECTION</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_MINEDETECTION_Tooltip">
-      <Original>Wyłącza wykrywanie min przez AI.</Original>
+      <Polish>Wyłącza wykrywanie min przez AI.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_NVG">
-      <Original>NVG</Original>
+      <Polish>NVG</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_NVG_Tooltip">
-      <Original>Wyłącza zakładanie noktowizji przez AI.</Original>
+      <Polish>Wyłącza zakładanie noktowizji przez AI.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_LIGHTS">
-      <Original>LIGHTS</Original>
+      <Polish>LIGHTS</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_LIGHTS_Tooltip">
-      <Original>Wyłącza używanie reflektorów i świateł kolizyjnych w pojazdach przez AI.</Original>
+      <Polish>Wyłącza używanie reflektorów i świateł kolizyjnych w pojazdach przez AI.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_RADIOPROTOCOL">
-      <Original>RADIOPROTOCOL</Original>
+      <Polish>RADIOPROTOCOL</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_RADIOPROTOCOL_Tooltip">
-      <Original>Wyłącza możliwość komunikacji AI ale nie wydawanie rozkazów.</Original>
+      <Polish>Wyłącza możliwość komunikacji AI ale nie wydawanie rozkazów.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_roleDescription_Tooltip">
-      <Original>Opis roli w grze wieloosobowej widoczny w lobby trybu wieloosobowego. Jeśli nie zostanie zdefiniowana, przypisana zostanie domyślna nazwa jednostki. UWAGA! Aby zmienić nazwę drużyny w lobby w opisie roli *dowódcy drużyny* dodaj "@Nazwa druzyny" np. "Dowódca drużyny@Charlie". Poza tym przypadkiem nie używaj "@" w opisie roli!</Original>
+      <Polish>Opis roli w grze wieloosobowej widoczny w lobby trybu wieloosobowego. Jeśli nie zostanie zdefiniowana, przypisana zostanie domyślna nazwa jednostki. UWAGA! Aby zmienić nazwę drużyny w lobby w opisie roli *dowódcy drużyny* dodaj "@Nazwa druzyny" np. "Dowódca drużyny@Charlie". Poza tym przypadkiem nie używaj "@" w opisie roli!</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_doStop">
-      <Original>Zatrzymaj jednostkę</Original>
+      <Polish>Zatrzymaj jednostkę</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_doStop_Tooltip">
-      <Original>Powstrzymuje jednostkę przed ruszeniem do formacji na starcie misji. Jednostka po wejściu w tryb zagrożenia będzie poruszać się normalnie.</Original>
+      <Polish>Powstrzymuje jednostkę przed ruszeniem do formacji na starcie misji. Jednostka po wejściu w tryb zagrożenia będzie poruszać się normalnie.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_forceGunLights">
-      <Original>Wymuś włączenie latarki</Original>
+      <Polish>Wymuś włączenie latarki</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_forceGunLights_Tooltip">
-      <Original>Wymusza na jednostce włączenie latarki (jeśli ją posiada). UWAGA: opcja ta może być nadpisana przez ustawienia waypointów.</Original>
+      <Polish>Wymusza na jednostce włączenie latarki (jeśli ją posiada). UWAGA: opcja ta może być nadpisana przez ustawienia waypointów.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_disableBISRandomization">
-      <Original>Wyłącz randomizację wyglądu</Original>
+      <Polish>Wyłącz randomizację wyglądu</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_disableBISRandomization_Tooltip">
-      <Original>Wyłącza armową randomizację wyglądu. W przypadku pojazdów to może być np. kolor, w przypadku jednostek to mogą być np. nakrycia głowy, ubiór, goggle itp. Ta opcja nie wyłącza zmiany wyglądu grywalnej jednostki w oparciu o ustawienia profilu grającego nią gracza (np. zmiany twarzy z ustawień profilu itp.).</Original>
+      <Polish>Wyłącza armową randomizację wyglądu. W przypadku pojazdów to może być np. kolor, w przypadku jednostek to mogą być np. nakrycia głowy, ubiór, goggle itp. Ta opcja nie wyłącza zmiany wyglądu grywalnej jednostki w oparciu o ustawienia profilu grającego nią gracza (np. zmiany twarzy z ustawień profilu itp.).</Polish>
     </Key>
   </Package>
   <Package name="ENH">

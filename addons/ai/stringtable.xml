@@ -2,64 +2,64 @@
 <Project name="A3CS">
   <Package name="AI">
     <Key ID="STR_A3CS_AI_skill_displayName">
-      <Original>Umiejętności</Original>
+      <Polish>Umiejętności</Polish>
     </Key>
     <Key ID="STR_A3CS_AI_skill_tooltip">
-      <Original>Umiejętności AI. Poziom umiejętności ma wpływ tylko na celność ostrzału oraz szybkość celowania, wszystkie inne umiejętności jak poruszanie się, dowodzenie, czy odwaga są jednakowe, niezależnie od ogólnego poziomu umiejętności.</Original>
+      <Polish>Umiejętności AI. Poziom umiejętności ma wpływ tylko na celność ostrzału oraz szybkość celowania, wszystkie inne umiejętności jak poruszanie się, dowodzenie, czy odwaga są jednakowe, niezależnie od ogólnego poziomu umiejętności.</Polish>
     </Key>
     <Key ID="STR_A3CS_AI_skillLevel_partisans">
-      <Original>Partyzant</Original>
+      <Polish>Partyzant</Polish>
     </Key>
     <Key ID="STR_A3CS_AI_skillLevel_partisans_description">
-      <Original>Członek partyzantki, ochotnik bez wyszkolenia</Original>
+      <Polish>Członek partyzantki, ochotnik bez wyszkolenia</Polish>
     </Key>
     <Key ID="STR_A3CS_AI_skillLevel_partisanVeterans">
-      <Original>Doświadczony partyzant</Original>
+      <Polish>Doświadczony partyzant</Polish>
     </Key>
     <Key ID="STR_A3CS_AI_skillLevel_partisanVeterans_description">
-      <Original>Partyzant z krótkim doświadczeniem bojowym</Original>
+      <Polish>Partyzant z krótkim doświadczeniem bojowym</Polish>
     </Key>
     <Key ID="STR_A3CS_AI_skillLevel_militia">
-      <Original>Milicjant</Original>
+      <Polish>Milicjant</Polish>
     </Key>
     <Key ID="STR_A3CS_AI_skillLevel_militia_description">
-      <Original>Żołnierz zorganizowanej milicji z amatorskim wyszkoleniem</Original>
+      <Polish>Żołnierz zorganizowanej milicji z amatorskim wyszkoleniem</Polish>
     </Key>
     <Key ID="STR_A3CS_AI_skillLevel_guards">
-      <Original>Gwardzista</Original>
+      <Polish>Gwardzista</Polish>
     </Key>
     <Key ID="STR_A3CS_AI_skillLevel_guards_description">
-      <Original>Żołnierz gwardii narodowej z minimalnym wyszkoleniem</Original>
+      <Polish>Żołnierz gwardii narodowej z minimalnym wyszkoleniem</Polish>
     </Key>
     <Key ID="STR_A3CS_AI_skillLevel_conscripts">
-      <Original>Poborowy</Original>
+      <Polish>Poborowy</Polish>
     </Key>
     <Key ID="STR_A3CS_AI_skillLevel_conscripts_description">
-      <Original>Żołnierz armii poborowej z podstawowym wyszkoleniem</Original>
+      <Polish>Żołnierz armii poborowej z podstawowym wyszkoleniem</Polish>
     </Key>
     <Key ID="STR_A3CS_AI_skillLevel_professionals">
-      <Original>Zawodowy</Original>
+      <Polish>Zawodowy</Polish>
     </Key>
     <Key ID="STR_A3CS_AI_skillLevel_professionals_description">
-      <Original>Żołnierz armii zawodowej z dobrym wyszkoleniem</Original>
+      <Polish>Żołnierz armii zawodowej z dobrym wyszkoleniem</Polish>
     </Key>
     <Key ID="STR_A3CS_AI_skillLevel_professionalVeterans">
-      <Original>Doświadczony zawodowy</Original>
+      <Polish>Doświadczony zawodowy</Polish>
     </Key>
     <Key ID="STR_A3CS_AI_skillLevel_professionalVeterans_description">
-      <Original>Żołnierz zawodowy z doświadczeniem bojowym</Original>
+      <Polish>Żołnierz zawodowy z doświadczeniem bojowym</Polish>
     </Key>
     <Key ID="STR_A3CS_AI_skillLevel_elite">
-      <Original>Specjalista</Original>
+      <Polish>Specjalista</Polish>
     </Key>
     <Key ID="STR_A3CS_AI_skillLevel_elite_description">
-      <Original>Żołnierz sił specjalnych z doskonałym wyszkoleniem</Original>
+      <Polish>Żołnierz sił specjalnych z doskonałym wyszkoleniem</Polish>
     </Key>
     <Key ID="STR_A3CS_AI_skillLevel_eliteVeterans">
-      <Original>Weteran sił specjalnych</Original>
+      <Polish>Weteran sił specjalnych</Polish>
     </Key>
     <Key ID="STR_A3CS_AI_skillLevel_eliteVeterans_description">
-      <Original>Żołnierz sił specjalnych z długim doświadczeniem bojowym</Original>
+      <Polish>Żołnierz sił specjalnych z długim doświadczeniem bojowym</Polish>
     </Key>
   </Package>
 </Project>

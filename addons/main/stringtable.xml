@@ -2,11 +2,11 @@
 <Project name="A3CS">
   <Package name="Main">
     <Key ID="STR_A3CS_Main_Author">
-      <Original>SzwedzikPL and respectful authors of included external mods</Original>
+      <English>SzwedzikPL and respectful authors of included external mods</English>
       <Polish>SzwedzikPL oraz autorzy załączonych modów zewnętrznych</Polish>
     </Key>
     <Key ID="STR_A3CS_Main_URL">
-      <Original>https://arma3coop.pl/</Original>
+      <English>https://arma3coop.pl/</English>
     </Key>
   </Package>
 </Project>
