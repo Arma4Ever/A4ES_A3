@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: SzwedzikPL
- * Adds mobile antenna for updating player's TFAR multiplicators
+ * Removes mobile antenna from registry
  */
 
 params ["_antennaObj"];
