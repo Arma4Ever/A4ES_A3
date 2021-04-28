@@ -5,6 +5,7 @@ releases/*
 hemtt
 hemtt.exe
 .hemtt/local
+ArmaScriptCompiler.exe
 keys/*
 tools/temp
 *.cache
