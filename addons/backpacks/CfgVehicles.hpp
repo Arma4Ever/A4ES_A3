@@ -6,6 +6,6 @@ class CfgVehicles {
 		picture = "";
         model = "\A3\weapons_f\dummyvest";
 		hiddenSelectionsTextures[] = {""};
-        maximumLoad = 400;
+        maximumLoad = 800;
 	};
 };
