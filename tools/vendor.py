@@ -54,7 +54,6 @@ VENDOR = {
     "@ArmaZeusCache": {},
     "@ILBE Assault Pack - Rewrite": {},
     # "@Camofaces": {},
-    "-Wearable Antennae": {},
     "-Mocap": {
         "whitelist": ["MOCAP_mov"],
     },

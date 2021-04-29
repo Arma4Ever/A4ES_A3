@@ -36,7 +36,6 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [Vurtual's Car Seat & Stretcher](https://steamcommunity.com/sharedfiles/filedetails/?id=1381327410)
 - [Vurtual's Ships](https://steamcommunity.com/sharedfiles/filedetails/?id=1564445550)
 - [ArmaZeusCache](https://steamcommunity.com/sharedfiles/filedetails/?id=1908099028)
-- [Wearable Antennae](https://www.armaholic.com/page.php?id=36198)
 - [Blurry Laser](https://steamcommunity.com/sharedfiles/filedetails/?id=2079283616)
 - [Ladder Tweak](https://steamcommunity.com/sharedfiles/filedetails/?id=1803586009)
 - [Hate's Hidden Cameras](https://steamcommunity.com/sharedfiles/filedetails/?id=2404750021)
