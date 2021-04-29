@@ -10,7 +10,6 @@ class GVAR(ambientFlyby): GVAR(base) {
         isRectangle = 0;
     };
 
-
         class Attributes: AttributesBase {
             class GVAR(moduleShortDescription): GVAR(moduleShortDescription) {};
             class GVAR(moduleWarnings): GVAR(moduleWarnings) {};
@@ -55,7 +54,7 @@ class GVAR(ambientFlyby): GVAR(base) {
                 property = QGVAR(planesCount);
                 defaultValue = "1";
                 typeName = "NUMBER";
-                GVAR(range[]) = {1, 100};
+                GVAR(range[]) = {1, 20};
                 GVAR(valueUnit) = "";
                 GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(classListMode)) isEqualTo 0);
             };
@@ -75,7 +74,7 @@ class GVAR(ambientFlyby): GVAR(base) {
                 property = QGVAR(flightSpeed);
                 defaultValue = "20";
                 typeName = "NUMBER";
-                GVAR(range[]) = {20, 1000};
+                GVAR(range[]) = {20, 300};
                 GVAR(valueUnit) = "";
             };
             class GVAR(timeInterval): GVAR(dynamicEdit) {

@@ -81,17 +81,17 @@ if (_isActivated) then {
   {
     if (_randomWeighted) then {_x = selectRandomWeighted _planesClassesData};
 
-    private _plane = createVehicle [_x, [0, 0, 0], [], 0, "CAN_COLLIDE"];
+    private _plane = createVehicle [_x, [0, 0, 0], [], 0, "FLY"];
     _plane engineOn true;
     _plane setDir _dir;
     _plane addEventHandler ["Killed", {
   	params ["_plane"];
     detach _plane;
     }];
-    
+
     //Iron Front planes seems not to animate gear when created with "FLY"
     private _dummy = createAgent ["VirtualMan_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
-    _dummy moveInDriver _plane;
+    _dummy moveInAny _plane;
     _dummy action ["LandGearUp", _plane];
     deleteVehicle _dummy;
 
@@ -107,17 +107,18 @@ if (_isActivated) then {
         params ["_plane","_posEnd"];
         (_plane distance2D _posEnd) < 300 || (attachedTo _plane) isEqualTo ""
     }, {
-        params ["_plane","_proxy"];
+        params ["_plane","","_proxy"];
         if (attachedTo _plane isEqualTo "") then {
           deleteVehicle _proxy;
           _plane enableDynamicSimulation true;
           addToRemainsCollector [_plane];
         } else {
-          {deleteVehicle _x} forEach _plane + _proxy
+          {deleteVehicle _x} forEach [_plane,_proxy];
         };
     }, [_plane,_posEnd,_proxy]] call CBA_fnc_waitUntilAndExecute;
 
     sleep (10 + _delay);
+    _plane setDamage 1;
   } forEach _planesClassesData;
 };
 
