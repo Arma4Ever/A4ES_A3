@@ -6,7 +6,6 @@ class Cfg3DEN {
             onMissionNew = QUOTE(_this call FUNC(handleMissionNew));
             onMissionLoad = QUOTE(_this call FUNC(handleMissionLoad));
 			onConnectingEnd = QUOTE(_this call FUNC(handleConnectingEnd));
-            onTerrainNew = QUOTE(_this call FUNC(handleTerrainNew));
         };
         #ifdef DEBUG_MODE_FULL
         class DOUBLES(ADDON,debug) {
