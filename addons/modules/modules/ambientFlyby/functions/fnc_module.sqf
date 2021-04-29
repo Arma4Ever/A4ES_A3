@@ -91,7 +91,7 @@ if (_isActivated) then {
 
     //Iron Front planes seems not to animate gear when created with "FLY"
     private _dummy = createAgent ["VirtualMan_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
-    _dummy moveInAny _plane;
+    _dummy moveInDriver _plane;
     _dummy action ["LandGearUp", _plane];
     deleteVehicle _dummy;
 
