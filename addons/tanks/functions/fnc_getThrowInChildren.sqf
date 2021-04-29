@@ -7,7 +7,7 @@
 params ["_target", "_player"];
 
 private _actions = [];
-private _supportedGrenades = uiNamespace getVariable [QGVAR(hatchGrenadesCache), []];
+private _supportedGrenades = uiNamespace getVariable [QGVAR(hatchGrenadeClasses), []];
 {
   _x params ["_className", "", "", "_type"];
   if ((_type isEqualTo 0) && {_className in _supportedGrenades}) then {
