@@ -4,14 +4,11 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
-ADDON = true;
 
-if (isNil QGVAR(isEditorPreview)) then {
-  GVAR(isEditorPreview) = false;
-};
 
 if !(is3DEN) exitWith {};
 
+/*
 // Check for incompatible 3DEN mods
 private _incompatibleMods = [];
 if (isClass (configFile >> "CfgPatches" >> "3denEnhanced")) then {
@@ -47,6 +44,7 @@ if (_incompatibleMods isNotEqualTo []) then {
     };
   };
 };
+*/
 
 // Setup mission attributes
 call FUNC(setupMissionAttributes);
@@ -64,3 +62,5 @@ if (cba_xeh_fallbackRunning) then {
   LOG("Starting CBA fallback loop");
   call FUNC(startCBAFallbackLoop);
 };
+
+ADDON = true;

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Bohemia Interactive, SzwedzikPL
+ * Author: SzwedzikPL
  * Handles onConnectingEnd 3DEN event
  */
 

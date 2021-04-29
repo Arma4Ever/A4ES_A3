@@ -20,6 +20,7 @@ VENDOR = {
     "@LAMBS_Suppression": {},
     "@LAMBS_Turrets": {},
     "@LAMBS_RPG": {},
+    "@3den Enhanced": {},
     "@Blurry Laser": {},
     "@Ladder Tweak": {},
     "@Zeus Enhanced": {},

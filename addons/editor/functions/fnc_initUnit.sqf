@@ -8,7 +8,7 @@ params ["_unit"];
 
 if !(local _unit) exitWith {};
 
-LOG_1("Execuint 3DEN unit init for %1 unit",str _unit);
+LOG_1("Executing 3DEN unit init for %1 unit",str _unit);
 
 // doStop
 if (_unit getVariable [QGVAR(doStop), false]) then {

@@ -10,6 +10,7 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [ACEX](https://github.com/acemod/ACEX)
 - [Zeus Enhanced](https://github.com/zen-mod/ZEN)
 - [LAMBS Danger FSM](https://github.com/nk3nny/LambsDanger)
+- [3DEN Enhanced](https://github.com/R3voA3/3den-Enhanced)
 - [Enhanced Movement](https://forums.bohemia.net/forums/topic/174788-enhanced-movement/)
 - [Enhanced Movement Rework](https://github.com/SceptreOfficial/Enhanced-Movement-Rework)
 - [GRAD Trenches](https://github.com/gruppe-adler/grad_trenches)

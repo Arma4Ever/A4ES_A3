@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Bohemia Interactive, SzwedzikPL
+ * Author: SzwedzikPL
  * Handles onMissionNew 3DEN event
  */
 

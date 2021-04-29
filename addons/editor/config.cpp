@@ -12,7 +12,8 @@ class CfgPatches {
             "Eden_Extended_Objects",
             "A3_3DEN",
             "A3_Data_F_Sams_Loadorder",
-            "a3_expEden"
+            "a3_expEden",
+            "3denEnhanced"
         };
         author = ECSTRING(main,Author);
         authors[] = {"3DEN Enhanced Team", "R3vo", "SzwedzikPL"};
@@ -21,23 +22,20 @@ class CfgPatches {
     };
 };
 
-// Enable target debug
-enableTargetDebug = 1;
-
 #include "defines.hpp"
-
 #include "CfgEventHandlers.hpp"
 #include "CfgFunctions.hpp"
-#include "CfgVehicles.hpp"
 #include "Cfg3DEN.hpp"
 #include "CfgAddons.hpp"
 #include "display3DEN.hpp"
 #include "display3DENSave.hpp"
 
-// 3DEN Enhanced
-#include "ENH\gui\nameObjects.hpp"
-#include "ENH\gui\textureFinder.hpp"
-#include "ENH\gui\batchReplace.hpp"
-#include "ENH\gui\functionsViewer.hpp"
-#include "ENH\gui\placementTools.hpp"
-#include "ENH\gui\garrison.hpp"
+// Enable target debug
+enableTargetDebug = 1;
+
+delete ENH_3DENCamPositions;
+delete ENH_ActionCreator;
+delete ENH_BriefingEditor;
+delete ENH_Extraction;
+delete ENH_ModuleInformation;
+delete ENH_ScenarioAttributesManager;

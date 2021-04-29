@@ -7,7 +7,7 @@
 params ["_message", ["_params", []], ["_scriptName", ""]];
 
 // Exit if not 3DEN or editor preview
-if !(is3DEN || EGVAR(editor,isEditorPreview)) exitWith {};
+if !(is3DEN || is3DENPreview) exitWith {};
 
 // Try using header scriptName if used didn't defined one
 if ((_scriptName isEqualTo "") && !(isNil "_fnc_scriptName")) then {
