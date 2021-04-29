@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 #define EXEC_MODULE_NAME GVAR(coverMap)
 /*
- * Author: Bohemia Interavtive, SzwedzikPL
- * coverMap module function
+ * Author: Krzyciu, SzwedzikPL
+ * Ambient flyby function
  */
 
 params ["_mode", "_input"];
@@ -32,9 +32,10 @@ if (_isActivated) then {
     private _posEnd = [];
     private _classListMode = _logic getVariable [QGVAR(classListMode), 0];
     private _classList = call compile (_logic getVariable [QGVAR(classList), "[]"]);
-    private _delay = _logic getVariable [QGVAR(timeInterval), 0];
     private _speed = _logic getVariable [QGVAR(flightSpeed), 0];
-
+    //ToDo: Spawning in shape
+    //private _shape = _logic getVariable [QGVAR(flybyShape), 1];
+    
     // Exit if classList is not array or array is empty
     if (!(_classList isEqualType []) || (count _classList) isEqualTo 0) exitWith {
       WARNING_2('EXEC_MODULE_NAME - classList is not array or array is empty (classList: %1).',str _classList);
@@ -117,7 +118,6 @@ if (_isActivated) then {
         };
     }, [_plane,_posEnd,_proxy]] call CBA_fnc_waitUntilAndExecute;
 
-    sleep (10 + _delay);
   } forEach _planesClassesData;
 };
 

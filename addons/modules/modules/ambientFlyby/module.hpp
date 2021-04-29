@@ -77,12 +77,27 @@ class GVAR(ambientFlyby): GVAR(base) {
                 GVAR(range[]) = {20, 300};
                 GVAR(valueUnit) = "";
             };
-            class GVAR(timeInterval): GVAR(dynamicEdit) {
-                displayName = CSTRING(ambientFlyby_Attributes_timeInterval);
-                tooltip = CSTRING(ambientFlyby_Attributes_timeInterval_Tooltip);
-                property = QGVAR(timeInterval);
-                defaultValue = "0";
+            class GVAR(flybyShape): GVAR(dynamicCombo) {
+                displayName = CSTRING(ambientFlyby_Shape);
+                tooltip = CSTRING(ambientFlyby_Shape_Tooltip);
+                property = QGVAR(flybyShape);
                 typeName = "NUMBER";
+                defaultValue = "0";
+                class values {
+                    class diamond {
+                        name = CSTRING(ambientFlyby_Shape_Diamond);
+                        value = 0;
+                        default = 1;
+                    };
+                    class wedge {
+                        name = CSTRING(ambientFlyby_Shape__Wedge);
+                        value = 1;
+                    };
+                    class Echelon {
+                        name = CSTRING(ambientFlyby_Shape_Echelon);
+                        value = 2;
+                    };
+                };
             };
             class GVAR(endPosAmb): GVAR(dynamicEdit) {
                 displayName = CSTRING(ambientFlyby_Attributes_endMovePosition);

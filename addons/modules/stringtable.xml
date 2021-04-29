@@ -822,14 +822,23 @@
     <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_endMovePosition">
       <Polish>Marker pozycji docelowej</Polish>
     </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Shape">
+      <Polish>Formacja</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Shape_Tooltip">
+      <Polish>Formacja którą będą leciały samoloty</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Shape_Diamond">
+      <Polish>Diament</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Shape__Wedge">
+      <Polish>Klin</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Shape_Echelon">
+      <Polish>Eszelon</Polish>
+    </Key>
     <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_endMovePosition_Tooltip">
       <Polish>Nazwa markera oznaczającego pozycje końcową dla samolotów. Po doleceniu do niej zostaną usunięte. Przykładowe nazwy: marker_0, mrk_amb_1.</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_timeInterval">
-      <Polish>Interwał czasowy</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_timeInterval_Tooltip">
-      <Polish>Interwał pomiędzy kolejnymi samolotami. Wyrażany w sekundach. Do wpisanej wartości zostaną dodane 2 sekundy.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_flightSpeed">
       <Polish>Prędkość samolotów</Polish>
