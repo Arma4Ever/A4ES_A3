@@ -118,7 +118,6 @@ if (_isActivated) then {
     }, [_plane,_posEnd,_proxy]] call CBA_fnc_waitUntilAndExecute;
 
     sleep (10 + _delay);
-    _plane setDamage 1;
   } forEach _planesClassesData;
 };
 
