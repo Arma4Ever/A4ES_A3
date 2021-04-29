@@ -743,4 +743,182 @@
       <Original>Moduł do działania wymaga zsynchronizacji z conajmniej jedną jednostką która ma mieć dostęp do zeusa.</Original>
     </Key>
   </Package>
+  <Package name="Modules_ambientFlyby">
+    <Key ID="STR_A3CS_Modules_ambientFlyby_displayName">
+      <Original>Ambient Flyby</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_shortDescription">
+      <Original>Opis Ambient Flyby</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_description">
+      <Original></Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_positionInfo">
+      <Original>Pozycja modułu oraz jego obszar oznaczają strefę spawnu dla wygenerowanych grup.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_baseSettingsSubCategory">
+      <Original>Ustawienia podstawowe</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_mode">
+      <Original>Ustawienia podstawowe</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_mode_tooltip">
+      <Original>Ustawienia podstawowe</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_mode_central">
+      <Original>Przelot przez punkt</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_mode_line">
+      <Original>Z punktu A do B</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_mode_central_Desc">
+      <Original>Samoloty przelecą przez lokalizację, w której postawiony jest moduł. Możesz wybrać stronę, z której nadlecą jednostki.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_mode_line_Desc">
+      <Original>Samoloty przelecą z punktu miejsca i wysokości postawienia modułu do punktu końcowego, który ustawiłeś.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_source">
+      <Original>Źródło klas</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_source_Tooltip">
+      <Original>Źródło danych na temat klas wchodzących w skład grupy.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_source_classlist">
+      <Original>Lista klas</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_source_classlist_Desc">
+      <Original>Samoloty zostaną wybrane na podstawie listy klas zdefiniowanej w module.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_classListMode">
+      <Original>Tryb listy klas</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_classListMode_Tooltip">
+      <Original>Tryb w jakim ma działać lista klas samolotów zdefiniowanych w module.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_classListMode_random">
+      <Original>Losowy</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_classListMode_random_Desc">
+      <Original>Klasy z listy klas będą dobierane losowo. Wartość klasy (liczba na prawo od nazwy klasy na liście klas) określać będzie wagę jaką będzie miała klasa przy losowaniu. Im większa waga tym większe prawdopodobieństwo, że dana klasa zostanie wybrana. Szczegóły na temat wagowego doboru losowych elementów możesz znaleźć w dokumentacji komendy SQF "selectRandomWeighted" na wiki BI.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_classListMode_strict">
+      <Original>Dokładny</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_classListMode_strict_Desc">
+      <Original>Klasy z listy klas będą dobierane dokładnie tak jak są zdefiniowane na liście. Wartość klasy określać będzie ilość jednostek danej klasy jaka zostanie wygenerowana</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_planeCount">
+      <Original>Ilość samolotów</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_unitCount_Tooltip">
+      <Original>Dokładna ilość samolotów, która zostanie stworzona. Samoloty są wybierane losow z listy klas.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_classList">
+      <Original>Lista klas</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_classList_Tooltip">
+      <Original>Lista klas jaka ma zostać użyta przy generowaniu samolotów.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_endMovePosition">
+      <Original>Marker pozycji docelowej</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_endMovePosition_Tooltip">
+      <Original>Nazwa markera oznaczającego pozycje końcową dla samolotów. Po doleceniu do niej zostaną usunięte. Przykładowe nazwy: marker_0, mrk_amb_1.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_timeInterval">
+      <Original>Interwał czasowy</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_timeInterval_Tooltip">
+      <Original>Interwał pomiędzy kolejnymi samolotami. Wyrażany w sekundach. Do wpisanej wartości zostaną dodane 2 sekundy.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_flightSpeed">
+      <Original>Prędkość samolotów</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_fromDirection">
+      <Original>Kierunek przylotu</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_fromDirection_Tooltip">
+      <Original>Wybierz kierunek, z którego przylecą samoloty.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_flightSpeed_Tooltip">
+      <Original>Prędkość samolotów, minimalna wartość to 20.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Directions_N">
+      <Original>[N] Północ</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Directions_NE">
+      <Original>[NE] Północny Wschód</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Directions_E">
+      <Original>[E] Wschód</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Directions_SE">
+      <Original>[SE] Południowy Wschód</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Directions_S">
+      <Original>[S] Południe</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Directions_SW">
+      <Original>[SW] Południowy Zachód</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Directions_W">
+      <Original>[W] Zachód</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Directions_NW">
+      <Original>[NW] Północny Zachód</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_Distance">
+      <Original>Dystans do spawnu</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_Distance_Tooltip">
+      <Original>Odległość w metrach od modułu, w której zespawnią się samoloty.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_Height">
+      <Original>Wysokość spawnu</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_Height_Tooltip">
+      <Original>Odległość w metrach, na której zespawnią się samoloty.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Warning_NoSyncedTrigger">
+      <Original>Brak zsynchronizowanego triggera</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Warning_NoSyncedTrigger_Desc">
+      <Original>Uruchamianie generatora ambientowych samolotów na starcie misji nie jest dobrą praktyką. Zsynchronizuj moduł z triggerem aby opóźnić jego wykonanie do czasu aktywacji triggera.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Warning_EmptyClasslist_Desc">
+      <Original>Lista klas generatora jest pusta.</Original>
+    </Key>
+  </Package>
+  <Package name="Modules_generatorComposition">
+    <Key ID="STR_A3CS_Modules_generatorComposition_displayName">
+      <Original>Kompozycja generatora</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generatorComposition_shortDescription">
+      <Original>Moduł tworzy kompozycję (szablonu) grupy na podstawie grupy połączonej z modułem jednostki. Użycie kompozycji pozwala na dokładne odtworzenie grupy (wraz z wyposażeniem) w generatorach. Aby użyć kompozycji wystarzy stworzyć w edytorzę grupę zawierającą typy oraz ilość jednostek którą chcemy później generować, skonfigurować wyposażenie jednostek (za pomocą arsenału w edytorze) a następnie zsynchronizować (połączyć) którąś jednostkę z grupy (najlepiej lidera grupy) z modułem. Po dodaniu modułu kompozycji w edytorze oraz nadaniu jej nazwy, nazwa kompozycji będzie dostępna na liście kompozycji w generatorach.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generatorComposition_description">
+      <Original>Moduł uruchamia się na starcie misji i zapisuje zestaw klas i wyposażenie jednostek połączonej z modułem grupy. Moduł kompozycji zapisuje jedynie klasy i wyposażenie jednostek, pozostałe ustawienia jak poziom umiejętności, ranga itp, nie są używane (obowiązywać będą ustawienia modułu generatora). Jeden moduł może być połączony tylko z jedną jednostką której grupy chcemy użyć jako kompozycji. Jeśli w grupie znajdują się pojazdy, one oraz ich załogi będą ignorowane przy zapisie kompozycji (tylko jednostki piechoty "na nogach" będą zapisane jako kompozycja). Pamiętaj, że użycie kompozycji w module generatora stworzy dokładną kopię użytej w kompozycji grupy, dostosuj ilość jednostek w grupie zgodnie z przeznaczeniem kompozycji (np. osobna kompozycja dla jednostek patrolujących, osobna dla załóg garnizonów itp). Strona użytej grupy nie ma znaczenia przy tworzeniu kompozycji, przy generowaniu jednostek użyta będzie strona ustawiona w generatorze (np. możesz stworzyć kompozycję na podstawie grupy o stronie CIV albo INDEP a następnie użyć jej w generatorze do generowania grup po stronie OPFOR).</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generatorComposition_syncRequiredInfo">
+      <Original>Do poprawnego działania, moduł wymaga synchronizacji z jedną jednostką (i tylko jedną!) której grupa zostanie użyta jako kompozycja (najlepiej z liderem tej grupy). Połączenie modułu z więcej niż jedną jednostką będzie traktowane jako błąd! W grupie połączonej jednostki nie powinien znajdować się żaden pojazd (pojazdy oraz ich załogi będą ignorowane).</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generatorComposition_Attributes_id">
+      <Original>Nazwa kompozycji</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generatorComposition_Attributes_id_Tooltip">
+      <Original>Nazwa kompozycji używana jako identyfikator kompozycji w generatorach.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generatorComposition_Attributes_deleteUnits">
+      <Original>Usuń zapisane jednostki</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generatorComposition_Attributes_deleteUnits_Tooltip">
+      <Original>Usuwa jednostki użyte w kompozycji po jej zapisaniu. Włączenie tej opcji jest zalecane jeśli połączona grupa została stworzona tylko na potrzeby kompozycji i sama w sobie nie jest potrzebna w scenariuszu.</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generatorComposition_Warning_SyncError">
+      <Original>Brak zsynchronizowanej jednostki</Original>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generatorComposition_Warning_SyncError_Desc">
+      <Original>Moduł do poprawnego działania musi być zsynchronizowany z dokładnie jedną (i tylko jedną) jednostką piechoty (pojazdy nie są obsługiwane) której grupa ma być użyta jako kompozycja.</Original>
+    </Key>
+  </Package>
 </Project>
