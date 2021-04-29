@@ -9,7 +9,9 @@ params ["_group", "_logic"];
 private _units = units _group;
 
 // Setup dynamic simulation
-_group enableDynamicSimulation (!(_logic getVariable [QGVAR(disableDynamicSim), false]));
+if !(_logic getVariable [QGVAR(disableDynamicSim), false]) then {
+  _group enableDynamicSimulation true;
+};
 
 // Add units to curators
 if (_logic getVariable [QGVAR(addToCurators), false]) then {
@@ -18,9 +20,7 @@ if (_logic getVariable [QGVAR(addToCurators), false]) then {
   } forEach allCurators;
 };
 
-// Setup vars for headless and admin
-_group setVariable [QEGVAR(headless,disableTransfer), true];
+// Setup vars for admin
 {
-  _x setVariable [QEGVAR(headless,disableTransfer), true];
   _x setVariable [QGVAR(generator), _logic];
 } forEach _units;

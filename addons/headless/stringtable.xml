@@ -1,23 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
   <Package name="Headless">
-    <Key ID="STR_A3CS_Headless_Attributes_disableTransfer">
-      <Polish>Wyłącz transfer do headlessa</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Headless_Attributes_disableTransfer_group_tooltip">
-      <Polish>Wyłącza transfer grupy do headlessa.</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Headless_Attributes_disableTransfer_object_tooltip">
-      <Polish>Wyłącza transfer jednostki/pojzadu do headlessa. Wyłączenie transferu jednostki wyłącza transfer całej grupy do której ta jednostka należy. Wyłączenie transferu pojazdu wyłącza transfer grup do których załoga pojazdu należy.</Polish>
-    </Key>
     <Key ID="STR_A3CS_Headless_headlessConnectedInfo">
       <Polish>Headless client połączył się poprawnie.</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Headless_transferReport_attempts">
-      <Polish>Transfer grup do headlessa odbył się w %1%3 poprawnie. Przetransferowano %2%3 wszystkich aktualnie obecnych grup.</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Headless_transferReport_noAttempts">
-      <Polish>Transfer grup do headlessa został zakończony. Na tą chwilę nie znaleziono grup do przetransferowania.</Polish>
     </Key>
   </Package>
 </Project>

@@ -1,12 +1,5 @@
 # A3CS Headless
-Handles headless ownership of AI groups.
+Handles headless detection for other components.
 
 ### Changes
-- Adds transfering AI groups to headless after headless client connection.
-- Adds flags for disabling headless client transfer to objects & groups.
-
-### Credits
-This addon is based on headless addon from [ACEX](https://github.com/acemod/ACEX) project.
-
-### License
-This addon is distributed under [ACEX License](https://github.com/acemod/ACEX/blob/master/LICENSE).
+- Registers headless connection for other components to use (for spawning AI directly on headless).
