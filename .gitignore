@@ -6,6 +6,7 @@ hemtt
 hemtt.exe
 .hemtt/local
 ArmaScriptCompiler.exe
+*.sqfc
 keys/*
 tools/temp
 *.cache

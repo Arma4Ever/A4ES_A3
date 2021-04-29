@@ -562,7 +562,7 @@
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_hasLambsRadio">
       <Polish>Pozwól na komunikację radiową</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_hasLambsRadio">
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_hasLambsRadio_Tooltip">
       <Polish>Pozwala wygenerowanym grupom (LAMBS) na zaawansowaną komunikację radiową między sobą. Dzięki temu, wygenerowane grupy mogą m.in. koordynować swoje działania i przychodzić sobie z pomocą. Zasięg komunikacji możesz ustawić z poziomu ustawień addonów w misji (domyślnie 2km). UWAGA, wyłączenie tej opcji nie wyłącza komunikacji całkowicie - ogranicza jedynie znacząco jej zasięg.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableBISRandomization">
