@@ -12,6 +12,7 @@
 // MINIMAL required version for the Mod. Components can specify others..
 #define REQUIRED_VERSION 2.04
 #define REQUIRED_CBA_VERSION {3,15,3}
+#define REQUIRED_MISSION_TEMPLATE_VERSION 3.0
 
 #ifdef COMPONENT_BEAUTIFIED
     #define COMPONENT_NAME QUOTE(A3CS - COMPONENT_BEAUTIFIED)

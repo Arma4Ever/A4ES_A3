@@ -54,6 +54,15 @@ if (!hasInterface) exitWith {};
 
 // Exec after mission start
 [{
+  // Validate mission template
+  if ((getMissionConfigValue ["a3c_missionTemplate", 0]) < REQUIRED_MISSION_TEMPLATE_VERSION) then {
+    0 spawn {
+      sleep 3;
+      diag_log localize LSTRING(WrongMissionTemplateWarning);
+      systemChat localize LSTRING(WrongMissionTemplateWarning);
+    };
+  };
+
   // Exit if player joined in progress
   if (didJIP) exitWith {};
 

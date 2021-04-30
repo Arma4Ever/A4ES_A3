@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
   <Package name="Mission">
+    <Key ID="STR_A3CS_Mission_WrongMissionTemplateWarning">
+      <Polish>Nie wykryto szablonu misji lub jest on nieaktualny. Pobierz najnowszy szablon misji z repozytorium A3C i wklej go do misji.</Polish>
+    </Key>
     <Key ID="STR_A3CS_Mission_FixInvisibleGear">
       <English>A3CS Refresh gear</English>
       <Polish>A3CS Odśwież sprzęt</Polish>
