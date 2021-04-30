@@ -18,8 +18,7 @@ if (isServer) then {
 
     if (
       !(_entity isKindOf "CAManBase") ||
-      {simulationEnabled _entity} ||
-      {isNull _entity}
+      {simulationEnabled _entity}
     ) exitWith {};
 
     private _target = group _entity;
