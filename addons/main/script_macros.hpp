@@ -49,7 +49,7 @@
 #define QACEFUNC(moduleName,fncName) QUOTE(ACEFUNC(moduleName,fncName))
 
 #ifdef DISABLE_COMPILE_CACHE
-    #define PREP_MODULE(moduleName,fncName) DFUNC(DOUBLES(moduleName,fncName) = compile preprocessFileLineNumbers QPATHTOF(modules\moduleName\functions\DOUBLES(fnc,fncName).sqf)
+    #define PREP_MODULE(moduleName,fncName) DFUNC(DOUBLES(moduleName,fncName) = compileScript [QPATHTOF(modules\moduleName\functions\DOUBLES(fnc,fncName).sqf)]
 #else
     #define PREP_MODULE(moduleName,fncName) [QPATHTOF(modules\moduleName\functions\DOUBLES(fnc,fncName).sqf), QFUNC(DOUBLES(moduleName,fncName))] call CBA_fnc_compileFunction
 #endif
