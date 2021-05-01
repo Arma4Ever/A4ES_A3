@@ -1,3 +1,3 @@
 
 PREP_MODULE(switchLights,module);
-PREP_MODULE(switchLights,switchLights);
+PREP_MODULE(switchLights,switchLightsLocal);
