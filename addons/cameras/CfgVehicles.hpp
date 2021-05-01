@@ -4,9 +4,6 @@ class CfgVehicles {
         scope = 1;
         scopeCurator = 1;
         scopeArsenal = 1;
-
-        uavCameraGunnerPos = "look";
-		uavCameraGunnerDir = "look";
 	};
     class GVAR(B_RemoteCamera): Hate_BallThingCamera {
         displayName = CSTRING(RemoteCamera_displayName);
