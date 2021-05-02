@@ -1,2 +1,3 @@
 
+PREP(cleanupEmptyGroups);
 PREP(fixInvisibleGear);

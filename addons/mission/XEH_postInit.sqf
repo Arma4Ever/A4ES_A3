@@ -3,6 +3,11 @@
 // Exit if main menu
 if (EGVAR(common,isMainMenu)) exitWith {};
 
+[QGVAR(deleteGroup), {
+  params ["_group"];
+  deleteGroup _group;
+}] call CBA_fnc_addEventHandler;
+
 if (isServer) then {
   [{
     private _respawn = getMissionConfigValue ["respawn", 0];
@@ -11,6 +16,9 @@ if (isServer) then {
     // Remove all playable units from garbage collection
     removeFromRemainsCollector ([switchableUnits, playableUnits] select isMultiplayer);
   }, [], 0.1] call CBA_fnc_waitAndExecute;
+
+  // Schedule first cleanup of empty groups
+  [{0 spawn FUNC(cleanupEmptyGroups)}, [], EMPTY_GROUPS_CLEANUP_INTERVAL] call CBA_fnc_waitAndExecute;
 
   // Enable simulation of dead units, it's groups and vehicles for dynamically simulated groups/agents
   addMissionEventHandler ["EntityKilled", {

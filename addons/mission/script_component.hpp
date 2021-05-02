@@ -7,3 +7,5 @@
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #include "\z\a3cs\addons\main\script_macros.hpp"
+
+#define EMPTY_GROUPS_CLEANUP_INTERVAL 15
