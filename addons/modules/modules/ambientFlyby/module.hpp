@@ -49,14 +49,20 @@ class GVAR(ambientFlyby): GVAR(base) {
                 };
             };
             class GVAR(planesCount): GVAR(dynamicSlider) {
-                displayName = CSTRING(ambientFlyby_Attributes_planeCount);
-                tooltip = CSTRING(ambientFlyby_Attributes_planeCount_Tooltip);
+                displayName = CSTRING(ambientFlyby_Attributes_planesCount);
+                tooltip = CSTRING(ambientFlyby_Attributes_planesCount_Tooltip);
                 property = QGVAR(planesCount);
                 defaultValue = "1";
                 typeName = "NUMBER";
                 GVAR(range[]) = {1, 20};
                 GVAR(valueUnit) = "";
                 GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(classListMode)) isEqualTo 0);
+            };
+            class GVAR(modSet): GVAR(dynamicCheckbox) {
+                displayName = CSTRING(ambientFlyby_Attributes_modSet);
+                tooltip = CSTRING(ambientFlyby_Attributes_modSet_Tooltip);
+                property = QGVAR(modSet);
+                defaultValue = "false";
             };
             class GVAR(classList): Default {
                 displayName = CSTRING(ambientFlyby_Attributes_classList);
@@ -82,12 +88,11 @@ class GVAR(ambientFlyby): GVAR(base) {
                 tooltip = CSTRING(ambientFlyby_Shape_Tooltip);
                 property = QGVAR(flybyShape);
                 typeName = "NUMBER";
-                defaultValue = "0";
+                defaultValue = "1";
                 class values {
                     class diamond {
                         name = CSTRING(ambientFlyby_Shape_Diamond);
                         value = 0;
-                        default = 1;
                     };
                     class wedge {
                         name = CSTRING(ambientFlyby_Shape__Wedge);

@@ -1,5 +1,5 @@
 #include "script_component.hpp"
-#define EXEC_MODULE_NAME GVAR(coverMap)
+#define EXEC_MODULE_NAME GVAR(ambientFlyby)
 /*
  * Author: Krzyciu, SzwedzikPL
  * Ambient flyby function
@@ -18,7 +18,7 @@ _input params [
 if (isNull _logic || !(local _logic) || _isCuratorPlaced) exitWith {};
 
   if (CBA_missionTime < 30) then {
-    sleep 1;
+    sleep 10;
   };
 
 LOG_1('Starting execution of EXEC_MODULE_NAME (isActivated: %1).',str _isActivated);
@@ -32,10 +32,9 @@ if (_isActivated) then {
     private _posEnd = [];
     private _classListMode = _logic getVariable [QGVAR(classListMode), 0];
     private _classList = call compile (_logic getVariable [QGVAR(classList), "[]"]);
-    private _speed = _logic getVariable [QGVAR(flightSpeed), 0];
-    //ToDo: Spawning in shape
-    //private _shape = _logic getVariable [QGVAR(flybyShape), 1];
-    
+    private _modSet = _logic getVariable [QGVAR(modSet), false];
+    private _speed = _logic getVariable [QGVAR(flightSpeed), 20];
+    private _shape = _logic getVariable [QGVAR(flybyShape), 1];
     // Exit if classList is not array or array is empty
     if (!(_classList isEqualType []) || (count _classList) isEqualTo 0) exitWith {
       WARNING_2('EXEC_MODULE_NAME - classList is not array or array is empty (classList: %1).',str _classList);
@@ -65,13 +64,14 @@ if (_isActivated) then {
     };
 
     private _direction = _logic getVariable [QGVAR(flybyDirection), 0];
+    private _planeMaxIndex = _planesCount - 1;
 
     if (_mode isEqualTo 0) then {
-        private _posStart = getPosASL _logic;
-        private _posEnd = getMarkerPos (_logic getVariable [QGVAR(endPosAmb), 0]);
+        _posStart = getPosASL _logic;
+        _posEnd = getMarkerPos (_logic getVariable [QGVAR(endPosAmb), ""]);
       } else {
         private _distance = _logic getVariable [QGVAR(distanceTo), 2000];
-        private _height = _logic getVariable [QGVAR(height), 250];
+        private _height = _logic getVariable [QGVAR(height), 50];
         private _direction = _direction * 45;
         _posStart = _logic getPos [_distance, _direction];
         _posEnd   = _logic getPos [_distance, _direction - 180];
@@ -79,46 +79,90 @@ if (_isActivated) then {
       };
 
     private _dir = _posStart getDir _posEnd;
-  {
-    if (_randomWeighted) then {_x = selectRandomWeighted _planesClassesData};
-
-    private _plane = createVehicle [_x, [0, 0, 0], [], 0, "FLY"];
-    _plane engineOn true;
-    _plane setDir _dir;
-    _plane addEventHandler ["Killed", {
-  	params ["_plane"];
-    detach _plane;
-    }];
-
-    //Iron Front planes seems not to animate gear when created with "FLY"
-    private _dummy = createAgent ["VirtualMan_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
-    _dummy moveInDriver _plane;
-    _dummy action ["LandGearUp", _plane];
-    deleteVehicle _dummy;
 
     //Not perfect but way more stable than AI
     private _proxy = createVehicle ["test_EmptyObjectForBubbles", [0, 0, 0], [], 0, "CAN_COLLIDE"];
     _proxy hideObjectGlobal true;
     _proxy setDir _dir;
     _proxy setPosASL _posStart;
-    _plane attachTo [_proxy, [0,0,-2]];
     _proxy setVelocity [_speed*(sin(_dir)), _speed*(cos(_dir)) ,0];
 
-    [{
-        params ["_plane","_posEnd"];
-        (_plane distance2D _posEnd) < 300 || (attachedTo _plane) isEqualTo ""
-    }, {
-        params ["_plane","","_proxy"];
-        if (attachedTo _plane isEqualTo "") then {
-          deleteVehicle _proxy;
-          _plane enableDynamicSimulation true;
-          addToRemainsCollector [_plane];
-        } else {
-          {deleteVehicle _x} forEach [_plane,_proxy];
-        };
-    }, [_plane,_posEnd,_proxy]] call CBA_fnc_waitUntilAndExecute;
+    for "_planeIndex" from 0 to _planeMaxIndex do {
 
-  } forEach _planesClassesData;
+      private _planeClass = if (_randomWeighted) then {
+        // Get random class from classlist
+        selectRandomWeighted _planesClassesData
+      } else {
+        _planesClassesData select _planeIndex
+      };
+
+      private _plane = createVehicle [_planeClass, [0, 0, 0], [], 0, "FLY"];
+      _plane engineOn true;
+      _plane setDir _dir;
+      _plane addEventHandler ["Killed", {
+    	params ["_plane"];
+      detach _plane;
+      }];
+
+      //Iron Front planes seems not to animate gear when created with "FLY"
+      if (_modSet) then {
+        private _dummy = createAgent ["VirtualMan_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+        _dummy moveInDriver _plane;
+        _dummy action ["LandGearUp", _plane];
+        deleteVehicle _dummy;
+      };
+
+      private _attachPosNew = switch (_shape) do {
+          case 0: {
+            switch (_planeIndex) do {
+              case 0: {[0,0,0]};
+              case 1: {_proxy worldToModel (_proxy getRelPos [35, 135])};
+              case 2: {_proxy worldToModel (_proxy getRelPos [35, 225])};
+              case 3: {_proxy worldToModel (_proxy getRelPos [45, 180])};
+              case 4: {_proxy worldToModel (_proxy getRelPos [80, 180])};
+              default {_proxy worldToModel (_proxy getRelPos [_planeIndex*25, 180])};
+              }; //diament
+            };
+          case 1: {
+            switch (_planeIndex) do {
+              case 0: {[0,0,0]};
+              case 1: {_proxy worldToModel (_proxy getRelPos [35, 135])};
+              case 2: {_proxy worldToModel (_proxy getRelPos [35, 225])};
+              case 3: {_proxy worldToModel (_proxy getRelPos [65, 135])};
+              case 4: {_proxy worldToModel (_proxy getRelPos [65, 225])};
+              default {_proxy worldToModel (_proxy getRelPos [_planeIndex*25, 180])};
+              };//klin
+            };
+          default {
+            switch (_planeIndex) do {
+              case 0: {[0,0,0]};
+              case 1: {_proxy worldToModel (_proxy getRelPos [35, 135])};
+              case 2: {_proxy worldToModel (_proxy getRelPos [65, 135])};
+              case 3: {_proxy worldToModel (_proxy getRelPos [95, 135])};
+              case 4: {_proxy worldToModel (_proxy getRelPos [125, 135])};
+              default {_proxy worldToModel (_proxy getRelPos [_planeIndex*35, 135])};
+              };//eszeleon
+            };
+        };
+
+      _attachPosNew set [2, random [-1.5,0,1.5]];
+      _plane attachTo [_proxy, _attachPosNew];
+
+      [{
+          params ["_plane","_posEnd"];
+          (_plane distance2D _posEnd) < 300 || (attachedTo _plane) isEqualTo ""
+      }, {
+          params ["_plane","","_proxy"];
+          if (attachedTo _plane isEqualTo "") then {
+            deleteVehicle _proxy;
+            _plane enableDynamicSimulation true;
+            addToRemainsCollector [_plane];
+          } else {
+            {deleteVehicle _x} forEach [_plane,_proxy];
+          };
+      }, [_plane,_posEnd,_proxy]] call CBA_fnc_waitUntilAndExecute;
+
+    };
 };
 
 LOG('Execution of EXEC_MODULE_NAME finished.');

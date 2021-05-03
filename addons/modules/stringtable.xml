@@ -807,11 +807,17 @@
     <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_classListMode_strict_Desc">
       <Polish>Klasy z listy klas będą dobierane dokładnie tak jak są zdefiniowane na liście. Wartość klasy określać będzie ilość jednostek danej klasy jaka zostanie wygenerowana</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_planeCount">
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_planesCount">
       <Polish>Ilość samolotów</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_unitCount_Tooltip">
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_planesCount_Tooltip">
       <Polish>Dokładna ilość samolotów, która zostanie stworzona. Samoloty są wybierane losow z listy klas.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_modSet">
+      <Polish>Iron Front/Unsung?</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_modSet_Tooltip">
+      <Polish>Zaznacz jeżeli korzystasz z innego modsetu niz default. Ustawienie to nadpisuje domyślne chowanie podwozia, które na IFie/Unsungu nie działa poprawnie.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_classList">
       <Polish>Lista klas</Polish>
@@ -826,7 +832,7 @@
       <Polish>Formacja</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_ambientFlyby_Shape_Tooltip">
-      <Polish>Formacja którą będą leciały samoloty</Polish>
+      <Polish>Formacja którą będą leciały samoloty. Formacja obsługuje do 5 samolotów (z wyjątkiem eszelonu). Pozostałe będą spawnione w kolumnie w niewielkiej odległości za formacją.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_ambientFlyby_Shape_Diamond">
       <Polish>Diament</Polish>
@@ -886,7 +892,7 @@
       <Polish>Wysokość spawnu</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_Height_Tooltip">
-      <Polish>Odległość w metrach, na której zespawnią się samoloty.</Polish>
+      <Polish>Wysokość w metrach, na której zespawnią się samoloty.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_ambientFlyby_Warning_NoSyncedTrigger">
       <Polish>Brak zsynchronizowanego triggera</Polish>
