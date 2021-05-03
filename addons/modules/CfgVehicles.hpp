@@ -244,6 +244,7 @@ class CfgVehicles {
     #include "modules\generatorComposition\module.hpp"
     #include "modules\registerArtilleryUnits\module.hpp"
     #include "modules\switchLights\module.hpp"
+    #include "modules\fireArtillery\module.hpp"
 
     #include "hiddenModules.hpp"
 };
