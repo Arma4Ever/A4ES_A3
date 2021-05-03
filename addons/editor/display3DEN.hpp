@@ -181,7 +181,7 @@ class Display3DEN {
                 };
                 class ENH_Folder_Loadout {
                   items[] = {
-                      "ENH_InventoryManager",
+                      "ENH_VIM",
                       "ENH_CopyLoadout",
                       "ENH_ApplyLoadout",
                       "ENH_ExportLoadoutConfig",
