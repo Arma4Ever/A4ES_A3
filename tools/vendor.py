@@ -54,6 +54,7 @@ VENDOR = {
     "@Hate's Hidden Cameras": {},
     "@ArmaZeusCache": {},
     "@ILBE Assault Pack - Rewrite": {},
+    "@FRXA's TFAR Extra Retextured Equipment": {},
     # "@Camofaces": {},
     "-Mocap": {
         "whitelist": ["MOCAP_mov"],

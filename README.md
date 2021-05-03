@@ -41,6 +41,7 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [Ladder Tweak](https://steamcommunity.com/sharedfiles/filedetails/?id=1803586009)
 - [Hate's Hidden Cameras](https://steamcommunity.com/sharedfiles/filedetails/?id=2404750021)
 - [ILBE Assault Pack - Rewrite](https://github.com/Grezvany13/ILBE-Assault-Pack-Rewrite)
+- [FRXA's TFAR Extra Retextured Equipment](https://steamcommunity.com/sharedfiles/filedetails/?id=1606874412)
 
 ## Credits
 Authors of external mods.  
