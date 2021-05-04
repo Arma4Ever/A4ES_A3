@@ -6,4 +6,4 @@
 
 params ["_trigger", "_isActivated"];
 
-diag_log _this;
+diag_log text format ["Trigger %1 %2", _trigger, ["deaktywowany", "aktywowany"] select _isActivated];

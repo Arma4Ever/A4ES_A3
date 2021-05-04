@@ -253,7 +253,14 @@ namespace a3cs_debug
 
                             if (lineNumber > lastRPTLineNumber)
                             {
-                                logsList.Add(line);
+                                // Replace XML chars for A3 structured text
+                                string structLine = line
+                                    .Replace("<", "&lt;")
+                                    .Replace(">", "&gt;")
+                                    .Replace("\"", "&quot;")
+                                    .Replace("'", "&apos;");
+
+                                logsList.Add(structLine);
                             }
                         }
                     }

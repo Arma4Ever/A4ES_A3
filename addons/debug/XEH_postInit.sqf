@@ -8,19 +8,34 @@ addMissionEventHandler ["ExtensionCallback", {
   if (_name isNotEqualTo "a3cs_debug") exitWith {};
 
   if (_function isEqualTo "logsListUpdated") exitWith {
+    private _logs = [];
+
     while {true} do {
       private _log = "a3cs_debug" callExtension "getLog";
       if (_log isEqualTo "") exitWith {};
-      systemChat _log;
-
-      // TODO - dedicated chat
+      _logs pushBack _log;
     };
+
+    reverse _logs;
+    [_logs] call FUNC(addLogs);
   };
 }];
 
 private _initWatcher = "a3cs_debug" callExtension "missionPreviewStart";
 if (_initWatcher isEqualTo "true") then {
   systemChat "Uruchamiam obserwację logów";
+
+  QGVAR(logsList) cutRsc [QGVAR(logsList), "PLAIN", -1, false];
+  private _display = uiNamespace getVariable [QGVAR(logsList), displayNull];
+  if !(isNull _display) then {
+    private _logsListTextCtrl = _display displayCtrl IDC_LOGSLIST;
+    _logsListTextCtrl ctrlSetBackgroundColor [0, 0, 0, 0.45];
+    _logsListTextCtrl ctrlCommit 0;
+  };
+
+  // Initial write of logs
+  [[]] call FUNC(addLogs);
+
   /*
     FileSystemWatcher often don't trigger if focus is on arma app
     Async polling for updates forces callback if logsList updated

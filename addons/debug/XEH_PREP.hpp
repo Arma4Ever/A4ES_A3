@@ -1,4 +1,5 @@
 
+PREP(addLogs);
 PREP(initModule);
 PREP(initTrigger);
 PREP(moduleLog);

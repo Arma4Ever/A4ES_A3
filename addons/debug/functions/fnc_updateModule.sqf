@@ -6,4 +6,4 @@
 
 params ["_logic", "_isActivated"];
 
-diag_log _this;
+diag_log text format ["Moduł %1 %2", _logic, ["deaktywowany", "aktywowany"] select _isActivated];
