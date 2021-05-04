@@ -1,5 +1,18 @@
 #include "script_component.hpp"
 
+if (hasInterface) then {
+  // Check if player has "G" as default keybind
+  if (actionKeys "Throw" isEqualTo [34]) then {
+    [{!isNull (findDisplay 46)}, {
+        [
+        localize LSTRING(Warning_Message),
+        localize LSTRING(Warning_Message_Header),
+        true
+        ] spawn BIS_fnc_guiMessage;
+    }] call CBA_fnc_waitUntilAndExecute;
+  };
+};
+
 // Exit if main menu
 if (EGVAR(common,isMainMenu)) exitWith {};
 
@@ -70,9 +83,6 @@ if (!hasInterface) exitWith {};
       systemChat localize LSTRING(WrongMissionTemplateWarning);
     };
   };
-
-  // Check if player has "G" as default keybind
-  if (34 in actionKeys "Throw") then {call FUNC(bindWarning)};
 
   // Exit if player joined in progress
   if (didJIP) exitWith {};
