@@ -17,53 +17,52 @@ class GVAR(fireArtillery): GVAR(base) {
         class GVAR(moduleWarnings): GVAR(moduleWarnings) {};
 
         class GVAR(propertiesSettingsSubCategory): GVAR(moduleSubCategory) {
-            displayName = "Wlasciwosci ostrzalu";
+            displayName = CSTRING(fireArtillery_Attributes);
             property = QGVAR(propertiesSettingsSubCategory);
         };
         class GVAR(ammoCat): GVAR(dynamicCombo) {
-            displayName = "Kategoria pociskow";
-            tooltip = "";
+            displayName = CSTRING(fireArtillery_ammoCat);
             property = QGVAR(ammoCat);
             typeName = "NUMBER";
             defaultValue = "0";
             class values {
                 class artillery {
-                    name = "Artyleria";
-                    tooltip = "Pociski artyleryjskie i mozdziezowe";
+                    name = CSTRING(fireArtillery_ammoCat_Art);
+                    tooltip = CSTRING(fireArtillery_ammoCat_Art_Tooltip);
                     value = 0;
                     default = 1;
                 };
                 class grenades {
-                    name = "Granatnik";
-                    tooltip = "Granaty wystrzelone z granatnika";
+                    name = CSTRING(fireArtillery_ammoCat_Granatnik);
+                    tooltip = CSTRING(fireArtillery_ammoCat_Granatnik_Tooltip);
                     value = 1;
                 };
                 class rockets {
-                    name = "Rakiety niekierowane";
-                    tooltip = "Proste rakiety niekierowane";
+                    name = CSTRING(fireArtillery_ammoCat_Unguided);
+                    tooltip = CSTRING(fireArtillery_ammoCat_Unguided_Tooltip);
                     value = 2;
                 };
                 class missiles {
-                    name = "Rakiety kierowane";
-                    tooltip = "Rakiety kierowane";
+                    name = CSTRING(fireArtillery_ammoCat_Guided);
+                    tooltip = CSTRING(fireArtillery_ammoCat_Guided_Tooltip);
                     value = 3;
                 };
                 class cruiseMissiles {
-                    name = "Pociski manewrujace (cruise)";
-                    tooltip = "Okretowe pociski manewrujace (cruise missile)";
+                    name = CSTRING(fireArtillery_ammoCat_VLS);
+                    tooltip = CSTRING(fireArtillery_ammoCat_VLS_Tooltip);
                     value = 4;
                 };
                 class bombs {
-                    name = "Bomby";
-                    tooltip = "Bomby kierowane (JDAM)";
+                    name = CSTRING(fireArtillery_ammoCat_JDAM);
+                    tooltip = CSTRING(fireArtillery_ammoCat_JDAM_Tooltip);
                     value = 5;
                 };
             };
         };
 
         class GVAR(ammo_0): GVAR(dynamicCombo) {
-            displayName = "Pociski";
-            tooltip = "Typ pociskow artyleryjskich uzywanych w ostrzale";
+            displayName = CSTRING(fireArtillery_ammoType_Art);
+            tooltip = CSTRING(fireArtillery_ammoType_Art_Tooltip);
             property = QGVAR(ammo_0);
             typeName = "STRING";
             defaultValue = "'Sh_82mm_AMOS'";
@@ -95,8 +94,8 @@ class GVAR(fireArtillery): GVAR(base) {
         };
 
         class GVAR(ammo_1): GVAR(dynamicCombo) {
-            displayName = "Granaty";
-            tooltip = "Typ granatów uzywanych w ostrzale";
+            displayName = CSTRING(fireArtillery_ammoType_Art);
+            tooltip = CSTRING(fireArtillery_ammoType_Art_Tooltip);
             property = QGVAR(ammo_1);
             typeName = "STRING";
             defaultValue = "'G_20mm_HE'";
@@ -152,8 +151,8 @@ class GVAR(fireArtillery): GVAR(base) {
         };
 
         class GVAR(ammo_2): GVAR(dynamicCombo) {
-            displayName = "Rakiety";
-            tooltip = "Typ rakiet uzywanych w ostrzale";
+            displayName = CSTRING(fireArtillery_ammoType_Rockets);
+            tooltip = CSTRING(fireArtillery_ammoType_Rockets_Tooltip);
             property = QGVAR(ammo_2);
             typeName = "STRING";
             defaultValue = "'R_60mm_HE'";
@@ -184,8 +183,8 @@ class GVAR(fireArtillery): GVAR(base) {
         };
 
         class GVAR(ammo_3): GVAR(dynamicCombo) {
-            displayName = "Pociski";
-            tooltip = "Typ pociskow kierowanych w ostrzale";
+            displayName = CSTRING(fireArtillery_ammoType_Gudied);
+            tooltip = CSTRING(fireArtillery_ammoType_Guided_Tooltip);
             property = QGVAR(ammo_3);
             typeName = "STRING";
             defaultValue = "'M_Jian_AT'";
@@ -206,8 +205,8 @@ class GVAR(fireArtillery): GVAR(base) {
         };
 
         class GVAR(ammo_4): GVAR(dynamicCombo) {
-            displayName = "Pociski";
-            tooltip = "Typ pociskow manewrujacych ktory ma zostac uzyty w ostrzale";
+            displayName = CSTRING(fireArtillery_ammoType_VLS);
+            tooltip = CSTRING(fireArtillery_ammoType_VLS_Tooltip);
             property = QGVAR(ammo_4);
             typeName = "STRING";
             defaultValue = "'ammo_Missile_Cruise_01'";
@@ -228,8 +227,8 @@ class GVAR(fireArtillery): GVAR(base) {
         };
 
         class GVAR(ammo_5): GVAR(dynamicCombo) {
-            displayName = "Bomby";
-            tooltip = "Typ bomb ktory ma zostac uzyty w ostrzale";
+            displayName = CSTRING(fireArtillery_ammoType_Bombs);
+            tooltip = CSTRING(fireArtillery_ammoType_Bombs_Tooltip);
             property = QGVAR(ammo_5);
             typeName = "STRING";
             defaultValue = "'ammo_Missile_Cruise_01'";
@@ -251,8 +250,8 @@ class GVAR(fireArtillery): GVAR(base) {
 
 
         class GVAR(targetPosMode): Default {
-            displayName = "Tryb generowania pozycji";
-            tooltip = "Sposob w jakim beda generowane pozycje w ktore maja uderzac pociski.";
+            displayName = CSTRING(fireArtillery_targetPosMode);
+            tooltip = CSTRING(fireArtillery_targetPosMode_Tooltip);
             control = QGVAR(fireArtillery_targetPosMode);
             property = QGVAR(targetPosMode);
             typeName = "NUMBER";
@@ -260,8 +259,8 @@ class GVAR(fireArtillery): GVAR(base) {
             GVAR(observeValue) = 1;
         };
         class GVAR(hitAngle): GVAR(dynamicSlider) {
-            displayName = "Kat uderzenia rakiety";
-            tooltip = "Kat pod jakim rakieta ma uderzyc w wyznaczona pozycje";
+            displayName = CSTRING(fireArtillery_hitAngle);
+            tooltip = CSTRING(fireArtillery_hitAngle_Tooltip);
             property = QGVAR(hitAngle);
             defaultValue = "90";
             typeName = "NUMBER";
@@ -269,8 +268,8 @@ class GVAR(fireArtillery): GVAR(base) {
             GVAR(valueUnit) = "°";
         };
         class GVAR(hitDir): GVAR(dynamicSlider) {
-            displayName = "Kierunek";
-            tooltip = "Kierunek z ktorego maja uderzac pociski";
+            displayName = CSTRING(fireArtillery_hitDir);
+            tooltip = CSTRING(fireArtillery_hitDir_Tooltip);
             property = QGVAR(hitDir);
             defaultValue = "0";
             typeName = "NUMBER";
@@ -280,71 +279,71 @@ class GVAR(fireArtillery): GVAR(base) {
         // distance
         // generate craters?
         class GVAR(salvos): GVAR(dynamicCheckbox) {
-            displayName = "Strzelaj salwami";
-            tooltip = "salwy";
+            displayName = CSTRING(fireArtillery_salvos);
+            tooltip = CSTRING(fireArtillery_salvos_Tooltip);
             property = QGVAR(salvos);
             defaultValue = "false";
         };
         class GVAR(salvoShellsCount): GVAR(dynamicEdit) {
-            displayName = "Ilosc pociskow w salwie";
-            tooltip = "Ilosc pociskow ktora ma zostac wystrzelona w kazdej salwie";
+            displayName = CSTRING(fireArtillery_salvoShellsCount);
+            tooltip = CSTRING(fireArtillery_salvoShellsCount_Tooltip);
             property = QGVAR(salvoShellsCount);
             defaultValue = "'1'";
             validate = "NUMBER";
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(salvos)) isEqualTo true);
         };
         class GVAR(salvosMinDelay): GVAR(dynamicEdit) {
-            displayName = "Min. odstep miedzy salwami";
-            tooltip = "Minimalny odstep czasowy miedzy salwami liczony w sekundach";
+            displayName = CSTRING(fireArtillery_salvosMinDelay);
+            tooltip = CSTRING(fireArtillery_salvosMinDelay_Tooltip);
             property = QGVAR(salvosMinDelay);
             defaultValue = "'2'";
             validate = "NUMBER";
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(salvos)) isEqualTo true);
         };
         class GVAR(salvosMidDelay): GVAR(dynamicEdit) {
-            displayName = "Sr. odstep miedzy salwami";
-            tooltip = "Sredni odstep czasowy miedzy salwami liczony w sekundach";
+            displayName = CSTRING(fireArtillery_salvosMidDelay);
+            tooltip = CSTRING(fireArtillery_salvosMidDelay_Tooltip);
             property = QGVAR(salvosMidDelay);
             defaultValue = "'4'";
             validate = "NUMBER";
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(salvos)) isEqualTo true);
         };
         class GVAR(salvosMaxDelay): GVAR(dynamicEdit) {
-            displayName = "Maks. odstep miedzy salwami";
-            tooltip = "Maksymalny odstep czasowy miedzy salwami liczony w sekundach";
+            displayName = CSTRING(fireArtillery_salvosMaxDelay);
+            tooltip = CSTRING(fireArtillery_salvosMaxDelay_Tooltip);
             property = QGVAR(salvosMaxDelay);
             defaultValue = "'6'";
             validate = "NUMBER";
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(salvos)) isEqualTo true);
         };
         class GVAR(shellsMinDelay): GVAR(dynamicEdit) {
-            displayName = "Min. odstep miedzy pociskami";
-            tooltip = "Minimalny odstep czasowy miedzy pociskami liczony w sekundach";
+            displayName = CSTRING(fireArtillery_shellsMinDelay);
+            tooltip = CSTRING(fireArtillery_shellsMinDelay_Tooltip);
             property = QGVAR(shellsMinDelay);
             defaultValue = "'2'";
             validate = "NUMBER";
         };
         class GVAR(shellsMidDelay): GVAR(dynamicEdit) {
-            displayName = "Sr. odstep miedzy pociskami";
-            tooltip = "Sredni odstep czasowy miedzy pociskami liczony w sekundach";
+            displayName = CSTRING(fireArtillery_shellsMidDelay);
+            tooltip = CSTRING(fireArtillery_shellsMidDelay_Tooltip);
             property = QGVAR(shellsMidDelay);
             defaultValue = "'4'";
             validate = "NUMBER";
         };
         class GVAR(shellsMaxDelay): GVAR(dynamicEdit) {
-            displayName = "Maks. odstep miedzy pociskami";
-            tooltip = "Maksymalny odstep czasowy miedzy pociskami liczony w sekundach";
+            displayName = CSTRING(fireArtillery_shellsMaxDelay);
+            tooltip = CSTRING(fireArtillery_shellsMaxDelay_Tooltip);
             property = QGVAR(shellsMaxDelay);
             defaultValue = "'6'";
             validate = "NUMBER";
         };
         class GVAR(conditionSettingsSubCategory): GVAR(moduleSubCategory) {
-            displayName = "Uwarunkowanie ostrzalu";
+            displayName = CSTRING(fireArtillery_conditionSettingsSubCategory);
             property = QGVAR(conditionSettingsSubCategory);
         };
         class GVAR(conditionType): Default {
-            displayName = "Typ warunku ostrzalu";
-            tooltip = "Typ warunku pod jakim ostrzal ma byc prowadzony";
+            displayName = CSTRING(fireArtillery_conditionType);
+            tooltip = CSTRING(fireArtillery_conditionType_Tooltip);
             control = QGVAR(fireArtillery_conditionType);
             property = QGVAR(conditionType);
             typeName = "NUMBER";
@@ -352,32 +351,32 @@ class GVAR(fireArtillery): GVAR(base) {
             GVAR(observeValue) = 1;
         };
         class GVAR(timer): GVAR(dynamicEdit) {
-            displayName = "Czas trwania ostrzalu";
-            tooltip = "Czas w sekundach po uplywie ktorego ostrzal zostanie zakoczony";
+            displayName = CSTRING(fireArtillery_timer);
+            tooltip = CSTRING(fireArtillery_timer_Tooltip);
             property = QGVAR(timer);
             defaultValue = "'10'";
             validate = "NUMBER";
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(conditionType)) isEqualTo 0);
         };
         class GVAR(shellsCount): GVAR(dynamicEdit) {
-            displayName = "Ilosc strzalow";
-            tooltip = "Ilosc strzalow po ktorych ostrzal zostanie zakonczony";
+            displayName = CSTRING(fireArtillery_shellsCount);
+            tooltip = CSTRING(fireArtillery_shellsCount_Tooltip);
             property = QGVAR(shellsCount);
             defaultValue = "'1'";
             validate = "NUMBER";
             GVAR(conditionActive) = QUOTE( ((_this getVariable QQGVAR(conditionType)) isEqualTo 1) && ((_this getVariable QQGVAR(salvos)) isEqualTo false));
         };
         class GVAR(salvosCount): GVAR(dynamicEdit) {
-            displayName = "Ilosc salw";
-            tooltip = "Ilosc salw po ktorych ostrzal zostanie zakonczony";
+            displayName = CSTRING(fireArtillery_salvosCount);
+            tooltip = CSTRING(fireArtillery_salvosCount_Tooltip);
             property = QGVAR(salvosCount);
             defaultValue = "'1'";
             validate = "NUMBER";
             GVAR(conditionActive) = QUOTE( ((_this getVariable QQGVAR(conditionType)) isEqualTo 1) && ((_this getVariable QQGVAR(salvos)) isEqualTo true));
         };
         class GVAR(condition): GVAR(dynamicEditCodeMulti5) {
-            displayName = "Warunek ostrzalu";
-            tooltip = "Ostrzal bedzie prowadzony do momentu w ktorym waruek przestanie byc prawdziwy (zwroci nieprawde - false).";
+            displayName = CSTRING(fireArtillery_condition);
+            tooltip = CSTRING(fireArtillery_condition_Tooltip);
             property = QGVAR(condition);
             defaultValue = "'true'";
             typeName = "STRING";
