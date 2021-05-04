@@ -58,12 +58,6 @@ class GVAR(ambientFlyby): GVAR(base) {
                 GVAR(valueUnit) = "";
                 GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(classListMode)) isEqualTo 0);
             };
-            class GVAR(modSet): GVAR(dynamicCheckbox) {
-                displayName = CSTRING(ambientFlyby_Attributes_modSet);
-                tooltip = CSTRING(ambientFlyby_Attributes_modSet_Tooltip);
-                property = QGVAR(modSet);
-                defaultValue = "false";
-            };
             class GVAR(classList): Default {
                 displayName = CSTRING(ambientFlyby_Attributes_classList);
                 tooltip = CSTRING(ambientFlyby_Attributes_classList_Tooltip);

@@ -813,12 +813,6 @@
     <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_planesCount_Tooltip">
       <Polish>Dokładna ilość samolotów, która zostanie stworzona. Samoloty są wybierane losow z listy klas.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_modSet">
-      <Polish>Iron Front/Unsung?</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_modSet_Tooltip">
-      <Polish>Zaznacz jeżeli korzystasz z innego modsetu niz default. Ustawienie to nadpisuje domyślne chowanie podwozia, które na IFie/Unsungu nie działa poprawnie.</Polish>
-    </Key>
     <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_classList">
       <Polish>Lista klas</Polish>
     </Key>

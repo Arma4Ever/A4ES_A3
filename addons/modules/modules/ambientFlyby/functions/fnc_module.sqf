@@ -32,9 +32,11 @@ if (_isActivated) then {
     private _posEnd = [];
     private _classListMode = _logic getVariable [QGVAR(classListMode), 0];
     private _classList = call compile (_logic getVariable [QGVAR(classList), "[]"]);
-    private _modSet = _logic getVariable [QGVAR(modSet), false];
     private _speed = _logic getVariable [QGVAR(flightSpeed), 20];
     private _shape = _logic getVariable [QGVAR(flybyShape), 1];
+    private _isUnsung = isClass (configFile >> "CfgPatches" >> "uns_main");
+    private _isIronFront = isClass (configFile >> "CfgPatches" >> "WW2_Core_c_IF_Data_c");
+
     // Exit if classList is not array or array is empty
     if (!(_classList isEqualType []) || (count _classList) isEqualTo 0) exitWith {
       WARNING_2('EXEC_MODULE_NAME - classList is not array or array is empty (classList: %1).',str _classList);
@@ -105,7 +107,7 @@ if (_isActivated) then {
       }];
 
       //Iron Front planes seems not to animate gear when created with "FLY"
-      if (_modSet) then {
+      if (_isUnsung || _isIronFront) then {
         private _dummy = createAgent ["VirtualMan_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
         _dummy moveInDriver _plane;
         _dummy action ["LandGearUp", _plane];
