@@ -26,3 +26,4 @@ vendor/*
 extensions/*/.vs
 extensions/*/bin
 extensions/*/obj
+extensions/*/packages
