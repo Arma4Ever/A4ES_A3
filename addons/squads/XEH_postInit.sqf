@@ -19,11 +19,11 @@ if (hasInterface) then {
 if !(isServer) exitWith {};
 
 // Add server event handlers
-[QGVAR(joinSquad), DFUNC(joinSquad)] call CBA_fnc_addEventHandler;
-[QGVAR(leaveSquad), DFUNC(leaveSquad)] call CBA_fnc_addEventHandler;
-[QGVAR(setSquadLeader), DFUNC(setSquadLeader)] call CBA_fnc_addEventHandler;
-[QGVAR(killed), DFUNC(handleKilled)] call CBA_fnc_addEventHandler;
-[QGVAR(respawn), DFUNC(handleRespawn)] call CBA_fnc_addEventHandler;
+[QGVAR(joinSquad), {_this call FUNC(joinSquad)}] call CBA_fnc_addEventHandler;
+[QGVAR(leaveSquad), {_this call FUNC(leaveSquad)}] call CBA_fnc_addEventHandler;
+[QGVAR(setSquadLeader), {_this call FUNC(setSquadLeader)}] call CBA_fnc_addEventHandler;
+[QGVAR(killed), {_this call FUNC(handleKilled)}] call CBA_fnc_addEventHandler;
+[QGVAR(respawn), {_this call FUNC(handleRespawn)}] call CBA_fnc_addEventHandler;
 ["CBA_teamColorChanged", {
     params ["_unit", "_team"];
 

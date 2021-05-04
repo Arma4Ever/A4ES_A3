@@ -2,658 +2,145 @@
 <Project name="A3CS">
   <Package name="Editor">
     <Key ID="STR_A3CS_Editor_DisableDynamicSimulation">
-      <Original>Wyłącz dynamiczną symulację</Original>
+      <Polish>Wyłącz dynamiczną symulację</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableDynamicSimulation_Tooltip">
-      <Original>Wyłącz dynamiczną symulację tej grupy. Grupy z wyłączoną dynamiczną symulacją będą symulowane cały czas, niezależnie od odległości od graczy.</Original>
+      <Polish>Wyłącz dynamiczną symulację tej grupy. Grupy z wyłączoną dynamiczną symulacją będą symulowane cały czas, niezależnie od odległości od graczy.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_Scenario_AttributeCategory_States_displayName">
-      <Original>Debug</Original>
+      <Polish>Debug</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_IncompatibleModsDetected_Title">
-      <Original>Wykryto niekompatybilne mody</Original>
+      <Polish>Wykryto niekompatybilne mody</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_IncompatibleModsDetected_Message">
-      <Original>Wyłącz %1 i uruchom grę ponownie. Jeśli brakuje Ci jakichś funkcjonalności w edytorze daj nam o tym znać na forum.</Original>
+      <Polish>Wyłącz %1 i uruchom grę ponownie. Jeśli brakuje Ci jakichś funkcjonalności w edytorze daj nam o tym znać na forum.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI">
-      <Original>Wyłącz funkcję AI</Original>
+      <Polish>Wyłącz funkcję AI</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_TARGET">
-      <Original>TARGET</Original>
+      <Polish>TARGET</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_TARGET_Tooltip">
-      <Original>Wyłącza obserwację celów przez AI i wskazywanie celów przez dowódcę.</Original>
+      <Polish>Wyłącza obserwację celów przez AI i wskazywanie celów przez dowódcę.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_AUTOTARGET">
-      <Original>AUTOTARGET</Original>
+      <Polish>AUTOTARGET</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_AUTOTARGET_Tooltip">
-      <Original>Wyłącza samodzielne szukanie celów i obserwację podejrzanych obiektów.</Original>
+      <Polish>Wyłącza samodzielne szukanie celów i obserwację podejrzanych obiektów.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_MOVE">
-      <Original>MOVE</Original>
+      <Polish>MOVE</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_MOVE_Tooltip">
-      <Original>Wyłącza możliwość poruszania się przez AI (dotyczy również pojazdu jeśli jednostka jest kierowcą). UWAGA! Ta opcja wyłącza poruszanie się jednostki niezależnie od sytuacji. Jesli chcesz powstrzymać jednostę przed ruszeniem do formacji na starcie misji ale umożliwić poruszanie się podczas walki użyć opcji "Zatrzymaj jednostkę".</Original>
+      <Polish>Wyłącza możliwość poruszania się przez AI (dotyczy również pojazdu jeśli jednostka jest kierowcą). UWAGA! Ta opcja wyłącza poruszanie się jednostki niezależnie od sytuacji. Jesli chcesz powstrzymać jednostę przed ruszeniem do formacji na starcie misji ale umożliwić poruszanie się podczas walki użyć opcji "Zatrzymaj jednostkę".</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_ANIM">
-      <Original>ANIM</Original>
+      <Polish>ANIM</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_ANIM_Tooltip">
-      <Original>Wyłącza możliwość zmiany animacji przez AI.</Original>
+      <Polish>Wyłącza możliwość zmiany animacji przez AI.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_TEAMSWITCH">
-      <Original>TEAMSWITCH</Original>
+      <Polish>TEAMSWITCH</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_TEAMSWITCH_Tooltip">
-      <Original>Wyłącza możliwość zmiany drużyny przez AI.</Original>
+      <Polish>Wyłącza możliwość zmiany drużyny przez AI.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_FSM">
-      <Original>FSM</Original>
+      <Polish>FSM</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_FSM_Tooltip">
-      <Original>Wyłącza uruchamianie skryptów zachowań i reakcji AI.</Original>
+      <Polish>Wyłącza uruchamianie skryptów zachowań i reakcji AI.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_WEAPONAIM">
-      <Original>WEAPONAIM</Original>
+      <Polish>WEAPONAIM</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_WEAPONAIM_Tooltip">
-      <Original>Wyłącza celowanie przez AI.</Original>
+      <Polish>Wyłącza celowanie przez AI.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_AIMINGERROR">
-      <Original>AIMINGERROR</Original>
+      <Polish>AIMINGERROR</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_AIMINGERROR_Tooltip">
-      <Original>Wyłącza pogarszanie celności AI ze względu na przygwożdżenie, poruszanie się, rany itp.</Original>
+      <Polish>Wyłącza pogarszanie celności AI ze względu na przygwożdżenie, poruszanie się, rany itp.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_SUPPRESSION">
-      <Original>SUPPRESSION</Original>
+      <Polish>SUPPRESSION</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_SUPPRESSION_Tooltip">
-      <Original>Wyłącza możliwość przygwożdżenia AI.</Original>
+      <Polish>Wyłącza możliwość przygwożdżenia AI.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_CHECKVISIBLE">
-      <Original>CHECKVISIBLE</Original>
+      <Polish>CHECKVISIBLE</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_CHECKVISIBLE_Tooltip">
-      <Original>Wyłącza sprawdzanie widoczności celów.</Original>
+      <Polish>Wyłącza sprawdzanie widoczności celów.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_COVER">
-      <Original>COVER</Original>
+      <Polish>COVER</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_COVER_Tooltip">
-      <Original>Wyłącza szukanie i wykorzystywanie obiektów jako osłony.</Original>
+      <Polish>Wyłącza szukanie i wykorzystywanie obiektów jako osłony.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_AUTOCOMBAT">
-      <Original>AUTOCOMBAT</Original>
+      <Polish>AUTOCOMBAT</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_AUTOCOMBAT_Tooltip">
-      <Original>Wyłącza automatyczne przełączanie się AI w tryb walki w przypadku zagrożenia.</Original>
+      <Polish>Wyłącza automatyczne przełączanie się AI w tryb walki w przypadku zagrożenia.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_PATH">
-      <Original>PATH</Original>
+      <Polish>PATH</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_PATH_Tooltip">
-      <Original>Wyłącza wyszukiwanie scieżek (path finding) co efektywnie unieruchamia AI.</Original>
+      <Polish>Wyłącza wyszukiwanie scieżek (path finding) co efektywnie unieruchamia AI.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_MINEDETECTION">
-      <Original>MINEDETECTION</Original>
+      <Polish>MINEDETECTION</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_MINEDETECTION_Tooltip">
-      <Original>Wyłącza wykrywanie min przez AI.</Original>
+      <Polish>Wyłącza wykrywanie min przez AI.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_NVG">
-      <Original>NVG</Original>
+      <Polish>NVG</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_NVG_Tooltip">
-      <Original>Wyłącza zakładanie noktowizji przez AI.</Original>
+      <Polish>Wyłącza zakładanie noktowizji przez AI.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_LIGHTS">
-      <Original>LIGHTS</Original>
+      <Polish>LIGHTS</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_LIGHTS_Tooltip">
-      <Original>Wyłącza używanie reflektorów i świateł kolizyjnych w pojazdach przez AI.</Original>
+      <Polish>Wyłącza używanie reflektorów i świateł kolizyjnych w pojazdach przez AI.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_RADIOPROTOCOL">
-      <Original>RADIOPROTOCOL</Original>
+      <Polish>RADIOPROTOCOL</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_DisableAI_RADIOPROTOCOL_Tooltip">
-      <Original>Wyłącza możliwość komunikacji AI ale nie wydawanie rozkazów.</Original>
+      <Polish>Wyłącza możliwość komunikacji AI ale nie wydawanie rozkazów.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_roleDescription_Tooltip">
-      <Original>Opis roli w grze wieloosobowej widoczny w lobby trybu wieloosobowego. Jeśli nie zostanie zdefiniowana, przypisana zostanie domyślna nazwa jednostki. UWAGA! Aby zmienić nazwę drużyny w lobby w opisie roli *dowódcy drużyny* dodaj "@Nazwa druzyny" np. "Dowódca drużyny@Charlie". Poza tym przypadkiem nie używaj "@" w opisie roli!</Original>
+      <Polish>Opis roli w grze wieloosobowej widoczny w lobby trybu wieloosobowego. Jeśli nie zostanie zdefiniowana, przypisana zostanie domyślna nazwa jednostki. UWAGA! Aby zmienić nazwę drużyny w lobby w opisie roli *dowódcy drużyny* dodaj "@Nazwa druzyny" np. "Dowódca drużyny@Charlie". Poza tym przypadkiem nie używaj "@" w opisie roli!</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_doStop">
-      <Original>Zatrzymaj jednostkę</Original>
+      <Polish>Zatrzymaj jednostkę</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_doStop_Tooltip">
-      <Original>Powstrzymuje jednostkę przed ruszeniem do formacji na starcie misji. Jednostka po wejściu w tryb zagrożenia będzie poruszać się normalnie.</Original>
+      <Polish>Powstrzymuje jednostkę przed ruszeniem do formacji na starcie misji. Jednostka po wejściu w tryb zagrożenia będzie poruszać się normalnie.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_forceGunLights">
-      <Original>Wymuś włączenie latarki</Original>
+      <Polish>Wymuś włączenie latarki</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_forceGunLights_Tooltip">
-      <Original>Wymusza na jednostce włączenie latarki (jeśli ją posiada). UWAGA: opcja ta może być nadpisana przez ustawienia waypointów.</Original>
+      <Polish>Wymusza na jednostce włączenie latarki (jeśli ją posiada). UWAGA: opcja ta może być nadpisana przez ustawienia waypointów.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_disableBISRandomization">
-      <Original>Wyłącz randomizację wyglądu</Original>
+      <Polish>Wyłącz randomizację wyglądu</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_disableBISRandomization_Tooltip">
-      <Original>Wyłącza armową randomizację wyglądu. W przypadku pojazdów to może być np. kolor, w przypadku jednostek to mogą być np. nakrycia głowy, ubiór, goggle itp. Ta opcja nie wyłącza zmiany wyglądu grywalnej jednostki w oparciu o ustawienia profilu grającego nią gracza (np. zmiany twarzy z ustawień profilu itp.).</Original>
-    </Key>
-  </Package>
-  <Package name="ENH">
-    <Key ID="STR_ENH_FUNCTIONS_BATCHREPLACE_ERROR">
-      <Original>No valid Classname!</Original>
-      <Polish>Brak poprawnych Classname!</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONS_FILLTEXTURELB_TOOLTIP">
-      <Original>Copy path with 'CTRL + C'.</Original>
-      <Polish>Skopiuj ścieżke przy pomocy "CTRL + C".</Polish>
-    </Key>
-    <Key ID="STR_ENH_CREDITS_HEADER">
-      <Original>Contributors</Original>
-      <Polish>Współtwórcy</Polish>
-    </Key>
-    <Key ID="STR_ENH_GROUPINDICATOR_DISPLAYNAME">
-      <Original>Show Group Indicator</Original>
-      <Polish>Pokazuje indykator grupy</Polish>
-    </Key>
-    <Key ID="STR_ENH_GROUPINDICATOR_TOOLTIP">
-      <Original>Shows a group indicator at the right hand side of the screen.</Original>
-      <Polish>Pokazuje indykator grupy po prawej stronie ekranu.</Polish>
-    </Key>
-    <Key ID="STR_ENH_ALLOWSPRINTING_TOOLTIP">
-      <Original>Unit can't sprint if unchecked.</Original>
-      <Polish>Jednostka nie może sprintować jeżeli nie zaznaczone.</Polish>
-    </Key>
-    <Key ID="STR_ENH_NOTIFICATIONS_ACTIONPERFORMED">
-      <Original>Action performed!</Original>
-      <Polish>Akcja wykonana!</Polish>
-    </Key>
-    <Key ID="STR_ENH_NOTIFICATIONS_NOENTITIESSELECTED">
-      <Original>No entities selected. Action cancelled!</Original>
-    </Key>
-    <Key ID="STR_ENH_ENABLE">
-      <Original>Enable</Original>
-      <Polish>Włącz</Polish>
-    </Key>
-    <Key ID="STR_ENH_STATUSBAR_SESSIONTIMER_TOOLTIP">
-      <Original>Session Time</Original>
-      <Polish>Czas sesji</Polish>
-    </Key>
-    <Key ID="STR_ENH_ESTABLISHINGSHOT_CENTERPOS_TOOLTIP">
-      <Original>The center position of the virtual UAV's orbit.</Original>
-      <Polish>Pozycja środkowa orbity wirtualnego BSP</Polish>
-    </Key>
-    <Key ID="STR_ENH_ESTABLISHINGSHOT_ALTITUDE_DISPLAYNAME">
-      <Original>Altitude</Original>
-      <Polish>Wysokość</Polish>
-    </Key>
-    <Key ID="STR_ENH_NAMEOBJECTS">
-      <Original>Name Objects</Original>
-      <Polish>Nazwij obiekt</Polish>
-    </Key>
-    <Key ID="STR_ENH_NAMEOBJECTS_REMOVENAME">
-      <Original>Remove Name</Original>
-      <Polish>Usuń nazwe</Polish>
-    </Key>
-    <Key ID="STR_ENH_NAMEOBJECTS_STARTINDEX">
-      <Original>Start Index</Original>
-      <Polish>Start index</Polish>
-    </Key>
-    <Key ID="STR_ENH_GARRISON_NOTIFICATION">
-      <Original>Not enough empty building positions, increase the radius or the coverage.</Original>
-    </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_FILLAREA_HEADER">
-      <Original>Fill Area </Original>
-      <Polish>Wypełnij strefe</Polish>
-    </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_HEADER">
-      <Original>Settings: Pattern Tools</Original>
-      <Polish>Ustawienia: Narzedzia wzorów</Polish>
-    </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_RADIUS">
-      <Original>Radius</Original>
-      <Polish>Promień</Polish>
-    </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_LINEPATTERN_HEADER">
-      <Original>Line Pattern</Original>
-      <Polish>Wzór liniowy</Polish>
-    </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_SPACING">
-      <Original>Spacing</Original>
-      <Polish>Odstęp</Polish>
-    </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_RECTANGLE_HEADER">
-      <Original>Rectangle Pattern</Original>
-    </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_A">
-      <Original>A</Original>
-      <Polish>A</Polish>
-    </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_B">
-      <Original>B</Original>
-      <Polish>B</Polish>
-    </Key>
-    <Key ID="STR_ENH_TEXTUREFINDER">
-      <Original>Texture Finder</Original>
-      <Polish>Wyszukiwarka tekstur</Polish>
-    </Key>
-    <Key ID="STR_ENH_TEXTUREFINDER_UPDATELIST">
-      <Original>Update List</Original>
-    </Key>
-    <Key ID="STR_ENH_TEXTUREFINDER_FILTERJPG">
-      <Original>Hide JPG</Original>
-    </Key>
-    <Key ID="STR_ENH_TEXTUREFINDER_FILTERPAA">
-      <Original>Hide PAA</Original>
-    </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_GRID_HEADER">
-      <Original>Grid Pattern</Original>
-      <Polish>Wzór siatki</Polish>
-    </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_NUMCOLUMNS">
-      <Original>#Colums</Original>
-      <Polish>#Kolumny</Polish>
-    </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_SPACINGX">
-      <Original>Spacing X</Original>
-      <Polish>Odstęp X</Polish>
-    </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_SPACINGY">
-      <Original>Spacing Y</Original>
-      <Polish>Odstęp Y</Polish>
-    </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_CENTRALANGLE">
-      <Original>Central Angle</Original>
-      <Polish>Kąt środkowy</Polish>
-    </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_INITIALANGLE">
-      <Original>Initial Angle</Original>
-      <Polish>Kąt początkowy</Polish>
-    </Key>
-    <Key ID="STR_ENH_BATCHREPLACE">
-      <Original>Batch Replace</Original>
-    </Key>
-    <Key ID="STR_ENH_BATCHREPLACE_REPLACE">
-      <Original>Replace</Original>
-      <Polish>Zamień</Polish>
-    </Key>
-    <Key ID="STR_ENH_BATCHREPLACE_REPLACEWITH">
-      <Original>Replace with:</Original>
-      <Polish>Zamień z:</Polish>
-    </Key>
-    <Key ID="STR_ENH_BATCHREPLACE_REPLACEWITH_TOOLTIP">
-      <Original>Example: Classname_1 Classname_2 Classname_n</Original>
-      <Polish>Przykład: Classname_1 Classname_2 Classname_n</Polish>
-    </Key>
-    <Key ID="STR_ENH_BATCHREPLACE_DESCRIPTION">
-      <Original>All selected objects will be replaced by the object types you enter in the edit box below randomly.</Original>
-      <Polish>Wszystkie zaznaczone obiekty bedą losowo zamienione przez typy obiektów które wpiszesz poniżej.</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONSVIEWER_SEARCH_TOOLTIP">
-      <Original>Press CTRL + F to directly jump into the search box.</Original>
-      <Polish>Nacisnij CTRL + F aby przejść do wyszukiwarki</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONSVIEWER_HEADER">
-      <Original>3den Enhanced Functions Viewer</Original>
-      <Polish>3den Enhanced Przeglądarka funkcji</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONSVIEWER_EXPANDALL_TEXT">
-      <Original>Expand All</Original>
-      <Polish>Rozwiń wszystko</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TEXT">
-      <Original>Copy Function</Original>
-      <Polish>Skopiuj funkcje</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TOOLTIP">
-      <Original>Copies the function's code, path and name to the clipboard. Can also be triggered by pressing CTRL + X.</Original>
-      <Polish>Kopiuje kod funkcji, ścieżke i nazwe do schowka. Może też być aktywowane przez CTRL + X.</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONSVIEWER_RECOMPILEALL_TEXT">
-      <Original>Recompile All</Original>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONSVIEWER_RECOMPILEALL_TOOLTIP">
-      <Original>Recompiles all functions. This may take a moment.</Original>h&gt;
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONSVIEWER_RECOMPILESELETECTED_TEXT">
-      <Original>Recompile Selected</Original>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONSVIEWER_RECOMPILESELETECTED_TOOLTIP">
-      <Original>Recompiles currently selected function.</Original>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONSVIEWER_FUNCTIONNAME_TOOLTIP">
-      <Original>Name of the function.</Original>
-      <Polish>Nazwa funkcji.</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONSVIEWER_FUNCTIONPATH_TOOLTIP">
-      <Original>Path which leads to script file.</Original>
-      <Polish>Ścieżka która prowadzi do pliku skryptu.</Polish>
-    </Key>
-    <Key ID="STR_ENH_LOCATIONLIST_CITIES">
-      <Original>Cities &amp; Villages</Original>
-      <Polish>Miasta i wioski</Polish>
-    </Key>
-    <Key ID="STR_ENH_LOCATIONLIST_AIRPORTS">
-      <Original>Airports</Original>
-      <Polish>Lotniska</Polish>
-    </Key>
-    <Key ID="STR_ENH_LOCATIONLIST_CHAPELS">
-      <Original>Chapels</Original>
-      <Polish>Kaplice</Polish>
-    </Key>
-    <Key ID="STR_ENH_LOCATIONLIST_FUELSTATIONS">
-      <Original>Fuel Stations</Original>
-      <Polish>Stacje benzynowe</Polish>
-    </Key>
-    <Key ID="STR_ENH_LOCATIONLIST_CHURCHES">
-      <Original>Churches</Original>
-      <Polish>Kościoły</Polish>
-    </Key>
-    <Key ID="STR_ENH_LOCATIONLIST_TRANSMITTERS">
-      <Original>Transmitters</Original>
-      <Polish>Nadajniki</Polish>
-    </Key>
-    <Key ID="STR_ENH_LOCATIONLIST_HOSPITALS">
-      <Original>Hospitals</Original>
-      <Polish>Szpitale</Polish>
-    </Key>
-    <Key ID="STR_ENH_LOCATIONLIST_SHIPWRECKS">
-      <Original>Shipwrecks</Original>
-      <Polish>Wraki statków</Polish>
-    </Key>
-    <Key ID="STR_ENH_LOCATIONLIST_POWERPRODUCTION">
-      <Original>Power Production</Original>
-      <Polish>Elektrownie</Polish>
-    </Key>
-    <Key ID="STR_ENH_LOCATIONLIST_UNKNOWN">
-      <Original>Unknown</Original>
-      <Polish>Nieznane</Polish>
-    </Key>
-    <Key ID="STR_ENH_SEARCHSTATE_PLEASEWAIT">
-      <Original>Still searching. Please wait.</Original>
-      <Polish>Ciągle szukam. Proszę czekać.</Polish>
-    </Key>
-    <Key ID="STR_ENH_UPDATEPROGRESSBAR">
-      <Original>Classes searched: #%1 of #%2 Textures found: #%3</Original>
-      <Polish>Klasy znalezione: #%1 of #%2 Tekstury znalezione: #%3</Polish>
-    </Key>
-    <Key ID="STR_ENH_MEASUREDISTANCE_DATA">
-      <Original>Distance 2D/3D: %1 / %2 m Travel Time (on foot): ~ %3 min</Original>
-      <Polish>Dystans 2D/3D: %1 / %2 m Czas podróży (na piechote): ~ %3 min</Polish>
-    </Key>
-    <Key ID="STR_ENH_MEASUREDISTANCE_SELECT2NDPOINT">
-      <Original>Select second point</Original>
-      <Polish>Zaznacz drugi punkt</Polish>
-    </Key>
-    <Key ID="STR_ENH_FOLDER_UTILITIES">
-      <Original>Utilities</Original>
-      <Polish>Narzędzia</Polish>
-    </Key>
-    <Key ID="STR_ENH_FOLDER_PLACEMENTTOOLS">
-      <Original>Placement Tools</Original>
-      <Polish>Narzędzia ustawiania</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_FUNCTIONSVIEWER">
-      <Original>3den Enhanced Functions Viewer</Original>
-      <Polish>3den Enhanced Przeglądarka funkcji</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_CIRCULARPATTERN">
-      <Original>Circular Pattern</Original>
-      <Polish>Wzór kołowy</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_REVERSEDIRECTION">
-      <Original>Reverse Direction</Original>
-      <Polish>Odwróć kierunek</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_RANDOMDIR">
-      <Original>Randomise Direction</Original>
-      <Polish>Losowy kierunek</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_ORIENTATENORTH">
-      <Original>Orientate North</Original>
-      <Polish>Orientuj na północ</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_ORIENTATESOUTH">
-      <Original>Orientate South</Original>
-      <Polish>Orientuj na południe</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_ORIENTATEEAST">
-      <Original>Orientate East</Original>
-      <Polish>Orientuj na wschód</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_ORIENTATEWEST">
-      <Original>Orientate West</Original>
-      <Polish>Orientuj na zachód</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_LINEPATTERN">
-      <Original>Linepattern</Original>
-      <Polish>Wzór liniowy</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_GRIDPATTERN">
-      <Original>Grid Pattern</Original>
-      <Polish>Wzór siatkowy</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_MOONPHASES">
-      <Original>Moon Phases</Original>
-      <Polish>Fazy księżyca</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_JUKEBOX">
-      <Original>Jukebox</Original>
-      <Polish>Maszyna grająca</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_BATCHREPLACE">
-      <Original>Batch Replace</Original>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_DELETEEMPTYLAYERS">
-      <Original>Delete Empty Layers</Original>
-      <Polish>Usuń puste warstwy</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_BATCHNAMING">
-      <Original>Name Objects</Original>
-      <Polish>Nazwij obiekty</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_TOGGLESIMPLEOBJECT">
-      <Original>Toggle Simple Object</Original>
-      <Polish>Włącz "proste obiekty"</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_TOGGLESIMULATION">
-      <Original>Toggle Simulation</Original>
-    </Key>
-    <Key ID="STR_ENH_CONTEXTMENU_LOGCLASS">
-      <Original>Log Class to Clipboard</Original>
-      <Polish>Zapisz klase do schowka</Polish>
-    </Key>
-    <Key ID="STR_ENH_CONTEXTMENU_GETMODULEINFORMATION">
-      <Original>Module Information</Original>
-      <Polish>Opis modułu</Polish>
-    </Key>
-    <Key ID="STR_ENH_CONTEXTMENU_GARRISON">
-      <Original>Garrison Buildings</Original>
-      <Polish>Obsadź budynki</Polish>
-    </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_CURRENTVALUE">
-      <Original>Current Value</Original>
-      <Polish>Aktualna wartość</Polish>
-    </Key>
-    <Key ID="STR_ENH_CONTEXTMENU_DELETECREW">
-      <Original>Delete Crew</Original>
-      <Polish>Usuń załoge</Polish>
-    </Key>
-    <Key ID="STR_ENH_CONTEXTMENU_GETSIZE">
-      <Original>Get Object's Size</Original>
-      <Polish>Zmierz rozmiar obiektu</Polish>
-    </Key>
-    <Key ID="STR_ENH_CONTEXTMENU_LOGPOSITIONS2D">
-      <Original>Log Positions (2D) to Clipboard</Original>
-      <Polish>Zapisz pozycje (2D) do schowka</Polish>
-    </Key>
-    <Key ID="STR_ENH_CONTEXTMENU_LOGPOSITIONS3D">
-      <Original>Log Positions (3D) to Clipboard</Original>
-      <Polish>Zapisz pozycje (3D) do schowka</Polish>
-    </Key>
-    <Key ID="STR_ENH_CONTEXTMENU_SHOW3DENID">
-      <Original>Show 3DEN Entity ID</Original>
-      <Polish>Pokaż ID bytu 3DENa</Polish>
-    </Key>
-    <Key ID="STR_ENH_CONTEXTMENU_MEASUREDISTANCE">
-      <Original>Measure Distance</Original>
-      <Polish>Mierzenie odległości</Polish>
-    </Key>
-    <Key ID="STR_ENH_CONTEXTMENU_LOGGRIDPOSITION">
-      <Original>Log Grid Position to Clipboard</Original>
-      <Polish>Zapisuje pozycje geograficzną do schowka</Polish>
-    </Key>
-    <Key ID="STR_ENH_CONTEXTMENU_LOGMISSIONATTRIBUTES">
-      <Original>Log Mission Attributes to Clipboard</Original>
-      <Polish>Zapisuje atrybuty misji do schowka</Polish>
-    </Key>
-    <Key ID="STR_ENH_DISABLEGRASS_DISPLAYNAME">
-      <Original>Disable Grass</Original>
-      <Polish>Wyłącz trawe</Polish>
-    </Key>
-    <Key ID="STR_ENH_TIMEMULTIPLIER_DISPLAYNAME">
-      <Original>Time Multiplier</Original>
-      <Polish>Mnożnik czasu</Polish>
-    </Key>
-    <Key ID="STR_ENH_TIMEMULTIPLIER_TOOLTIP">
-      <Original>Set how fast the time will pass.</Original>
-      <Polish>Ustaw jak szybko ma płynąć czas.</Polish>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_PLACEMENTTOOLS">
-      <Original>Placement Tools</Original>
-    </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_CIRCULAR_HEADER">
-      <Original>Circular Pattern</Original>
-      <Polish>Wzór kołowy</Polish>
-    </Key>
-    <Key ID="STR_ENH_RESET">
-      <Original>Reset</Original>
-      <Polish>Reset</Polish>
-    </Key>
-    <Key ID="STR_ENH_RESETANDDISABLE">
-      <Original>Reset and Disable</Original>
-    </Key>
-    <Key ID="STR_ENH_NAMEOBJECTS_NAME">
-      <Original>Name</Original>
-    </Key>
-    <Key ID="STR_ENH_DESCRIPTION">
-      <Original>Description</Original>
-      <Polish>Opis</Polish>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONSVIEWER_NUMFUNCTIONS_TOOLTIP">
-      <Original>Number of Functions</Original>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONSVIEWER_FULL">
-      <Original>Full</Original>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONSVIEWER_CATEGORIES">
-      <Original>Categories</Original>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONSVIEWER_FUNCTIONS">
-      <Original>Functions</Original>
-    </Key>
-    <Key ID="STR_ENH_FUNCTIONSVIEWER_BIKI">
-      <Original>OPEN ON BIKI</Original>
-    </Key>
-    <Key ID="STR_ENH_STATUSBAR_ENTITYCOUNTER_DISPLAYNAME">
-      <Original>Show Entity Counter</Original>
-    </Key>
-    <Key ID="STR_ENH_YES">
-      <Original>Yes</Original>
-    </Key>
-    <Key ID="STR_ENH_NO">
-      <Original>No</Original>
-    </Key>
-    <Key ID="STR_ENH_CONTEXTMENU_LOGCLASSESSTRING">
-      <Original>Log Classes as String to Clipboard</Original>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_DRAWBUILDINGPOSITIONS">
-      <Original>Toggle Drawing of Building Positions</Original>
-    </Key>
-    <Key ID="STR_ENH_FOLDER_MISCELLANEOUS">
-      <Original>Miscellaneous Tools</Original>
-    </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_ORIENTATION">
-      <Original>Orientation</Original>
-    </Key>
-    <Key ID="STR_ENH_GARRISON_STANCE">
-      <Original>Stance</Original>
-    </Key>
-    <Key ID="STR_ENH_GARRISON_STANCE_AUTO">
-      <Original>Auto</Original>
-    </Key>
-    <Key ID="STR_ENH_GARRISON_STANCE_CROUCH">
-      <Original>Crouch</Original>
-    </Key>
-    <Key ID="STR_ENH_GARRISON_COVERAGE">
-      <Original>Coverage</Original>
-      <Polish>Pokrycie budynków</Polish>
-    </Key>
-    <Key ID="STR_ENH_GARRISON_10PERCENT">
-      <Original>10 %</Original>
-    </Key>
-    <Key ID="STR_ENH_GARRISON_25PERCENT">
-      <Original>25 %</Original>
-    </Key>
-    <Key ID="STR_ENH_GARRISON_50PERCENT">
-      <Original>50 %</Original>
-    </Key>
-    <Key ID="STR_ENH_GARRISON_100PERCENT">
-      <Original>100 %</Original>
-    </Key>
-    <Key ID="STR_ENH_GARRISON_HEADER">
-      <Original>Garrison Buildings</Original>
-      <Polish>Obsadź budynki</Polish>
-    </Key>
-    <Key ID="STR_ENH_GARRISON_STANCE_STAND">
-      <Original>Stand</Original>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_SCRIPTCOMMANDS">
-      <Original>Script Commands</Original>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_DRAWDLCICONS">
-      <Original>Toggle Drawing of DLC Icons</Original>
-    </Key>
-    <Key ID="STR_ENH_CONTEXTMENU_FIRSTPERSON">
-      <Original>Move Camera to First Person View</Original>
-    </Key>
-    <Key ID="STR_ENH_RADIO_PLAYLIST_TEXT">
-      <Original>Playlist</Original>
-      <Polish>Lista odtwarzania</Polish>
-    </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_RESETCENTER_TOOLTIP">
-      <Original>Reset Center.</Original>
-    </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP">
-      <Original>Sets the size of the increment when clicking the arrows next to the sliders.</Original>
-    </Key>
-    <Key ID="STR_ENH_OPTIONS">
-      <Original>Options</Original>
-    </Key>
-    <Key ID="STR_ENH_DISABLED">
-      <Original>disabled</Original>
-    </Key>
-    <Key ID="STR_ENH_ENABLED">
-      <Original>enabled</Original>
-    </Key>
-    <Key ID="STR_ENH_COLLAPSEASSETBROWSER">
-      <Original>Collapse Asset Browser on Start</Original>
-    </Key>
-    <Key ID="STR_ENH_COLLAPSEENTITYLIST">
-      <Original>Collapse Entity List on Start</Original>
-    </Key>
-    <Key ID="STR_ENH_INTERFACE">
-      <Original>Interface</Original>
-    </Key>
-    <Key ID="STR_ENH_SHOWRIGHTPANEL">
-      <Original>Show Right Panel on Start</Original>
-    </Key>
-    <Key ID="STR_ENH_SHOWLEFTPANEL">
-      <Original>Show Left Panel on Start</Original>
+      <Polish>Wyłącza armową randomizację wyglądu. W przypadku pojazdów to może być np. kolor, w przypadku jednostek to mogą być np. nakrycia głowy, ubiór, goggle itp. Ta opcja nie wyłącza zmiany wyglądu grywalnej jednostki w oparciu o ustawienia profilu grającego nią gracza (np. zmiany twarzy z ustawień profilu itp.).</Polish>
     </Key>
   </Package>
 </Project>

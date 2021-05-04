@@ -76,6 +76,11 @@ private _groupCount = (_logic getVariable [QGVAR(groupCount), 1]) max 1;
 private _spawnPosMode = _logic getVariable [QGVAR(spawnPosMode), 0];
 private _unitSkill = (_logic getVariable [QGVAR(skill), 0.5]) max 0.01;
 
+// Debug log
+if (is3DENPreview) then {
+  [_logic, "Generuje %1 jednostek w %2 grupach", _unitCount, _groupCount] call EFUNC(debug,moduleLog);
+};
+
 // Prep units init based on source & disableBISRandomization params
 private _unitInit = if (
   (_logic getVariable [QGVAR(disableBISRandomization), false])

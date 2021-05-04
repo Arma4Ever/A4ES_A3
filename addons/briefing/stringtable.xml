@@ -2,30 +2,30 @@
 <Project name="A3CS">
   <Package name="Briefing">
     <Key ID="STR_A3CS_Briefing_Character">
-      <Original>Character</Original>
+      <English>Character</English>
       <Polish>Postać</Polish>
     </Key>
     <Key ID="STR_A3CS_Briefing_CharacterInfo">
-      <Original>Character info</Original>
+      <English>Character info</English>
       <Polish>Informacje o postaci</Polish>
     </Key>
     <Key ID="STR_A3CS_Briefing_CharacterInfo_Title">
-      <Original>Info</Original>
+      <English>Info</English>
       <Polish>Informacje</Polish>
     </Key>
     <Key ID="STR_A3CS_Briefing_CharacterDesc">
-      <Original>Character description</Original>
+      <English>Character description</English>
       <Polish>Opis postaci</Polish>
     </Key>
     <Key ID="STR_A3CS_Briefing_CharacterDesc_Title">
-      <Original>Description</Original>
+      <English>Description</Original>
       <Polish>Opis</Polish>
     </Key>
     <Key ID="STR_A3CS_Briefing_Attributes_characterDesc">
-      <Original>Opis postaci</Original>
+      <English>Opis postaci</English>
     </Key>
     <Key ID="STR_A3CS_Briefing_Attributes_characterDesc_Tooltip">
-      <Original>Opis postaci widoczny tylko dla gracza grającego daną jednostką (dostępny w briefingu). Tekst parsowany jak normalny briefing, wszystkie tagi z briefingów będą działać.</Original>
+      <English>Opis postaci widoczny tylko dla gracza grającego daną jednostką (dostępny w briefingu). Tekst parsowany jak normalny briefing, wszystkie tagi z briefingów będą działać.</English>
     </Key>
   </Package>
 </Project>

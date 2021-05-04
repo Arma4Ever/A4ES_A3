@@ -42,8 +42,6 @@ if ((count _squadUnits) isEqualTo 1) then {
 
     private _dummyUnit = (units _group) # 0;
     _dummyUnit setVariable ["ACE_Name", _name, true];
-    // Disable transfer of dummy unit
-    _dummyUnit setVariable [QEGVAR(headless,disableTransfer), true];
 
     // Assign team
     ["CBA_teamColorChanged", [_dummyUnit, _assignedTeam]] call CBA_fnc_globalEvent;

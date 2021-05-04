@@ -2,15 +2,15 @@
 <Project name="A3CS">
   <Package name="Squads">
     <Key ID="STR_A3CS_Squads_JoinSquad">
-      <Original>Join group</Original>
+      <English>Join group</English>
       <Polish>Dołącz do grupy</Polish>
     </Key>
     <Key ID="STR_A3CS_Squads_RemoveFromSquad">
-      <Original>Remove from group</Original>
+      <English>Remove from group</English>
       <Polish>Usuń z grupy</Polish>
     </Key>
     <Key ID="STR_A3CS_Squads_RemoveSquadMember">
-      <Original>Remove group member</Original>
+      <English>Remove group member</English>
       <Polish>Usuń członka grupy</Polish>
     </Key>
   </Package>

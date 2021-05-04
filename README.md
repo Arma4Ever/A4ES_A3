@@ -10,6 +10,7 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [ACEX](https://github.com/acemod/ACEX)
 - [Zeus Enhanced](https://github.com/zen-mod/ZEN)
 - [LAMBS Danger FSM](https://github.com/nk3nny/LambsDanger)
+- [3DEN Enhanced](https://github.com/R3voA3/3den-Enhanced)
 - [Enhanced Movement](https://forums.bohemia.net/forums/topic/174788-enhanced-movement/)
 - [Enhanced Movement Rework](https://github.com/SceptreOfficial/Enhanced-Movement-Rework)
 - [GRAD Trenches](https://github.com/gruppe-adler/grad_trenches)
@@ -36,11 +37,11 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [Vurtual's Car Seat & Stretcher](https://steamcommunity.com/sharedfiles/filedetails/?id=1381327410)
 - [Vurtual's Ships](https://steamcommunity.com/sharedfiles/filedetails/?id=1564445550)
 - [ArmaZeusCache](https://steamcommunity.com/sharedfiles/filedetails/?id=1908099028)
-- [Wearable Antennae](https://www.armaholic.com/page.php?id=36198)
 - [Blurry Laser](https://steamcommunity.com/sharedfiles/filedetails/?id=2079283616)
 - [Ladder Tweak](https://steamcommunity.com/sharedfiles/filedetails/?id=1803586009)
 - [Hate's Hidden Cameras](https://steamcommunity.com/sharedfiles/filedetails/?id=2404750021)
 - [ILBE Assault Pack - Rewrite](https://github.com/Grezvany13/ILBE-Assault-Pack-Rewrite)
+- [FRXA's TFAR Extra Retextured Equipment](https://steamcommunity.com/sharedfiles/filedetails/?id=1606874412)
 
 ## Credits
 Authors of external mods.  

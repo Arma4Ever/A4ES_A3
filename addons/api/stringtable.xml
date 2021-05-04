@@ -2,22 +2,22 @@
 <Project name="A3CS">
   <Package name="API">
     <Key ID="STR_A3CS_API_squadRadar_emptyUnits">
-      <Original>_units - lista jednostek nie może być pusta</Original>
+      <Polish>_units - lista jednostek nie może być pusta</Polish>
     </Key>
     <Key ID="STR_A3CS_API_squadRadar_nonObjectUnits">
-      <Original>_units - podane jednostki muszą być obiektami</Original>
+      <Polish>_units - podane jednostki muszą być obiektami</Polish>
     </Key>
     <Key ID="STR_A3CS_API_squadRadar_emptyIcon">
-      <Original>_icon - Ikona nie może być pusta. Jeśli chcesz zresetować ikonę jednostki użyj A3CS_fnc_resetSquadRadarIcon</Original>
+      <Polish>_icon - Ikona nie może być pusta. Jeśli chcesz zresetować ikonę jednostki użyj A3CS_fnc_resetSquadRadarIcon</Polish>
     </Key>
     <Key ID="STR_A3CS_API_squadRadar_wrongColorFormat">
-      <Original>_iconColor - kolor musi być w formacie [R,G,B] gdzie każda z wartości to liczba z przedziału 0 - 1</Original>
+      <Polish>_iconColor - kolor musi być w formacie [R,G,B] gdzie każda z wartości to liczba z przedziału 0 - 1</Polish>
     </Key>
     <Key ID="STR_A3CS_API_didGenerateUnits_paramNotArray">
-      <Original>_this - parametrem funkcji musi być tablica</Original>
+      <Polish>_this - parametrem funkcji musi być tablica</Polish>
     </Key>
     <Key ID="STR_A3CS_API_didGenerateUnits_notObjectInParam">
-      <Original>_this - podana tablica może zawierać jedynie obiekty</Original>
+      <Polish>_this - podana tablica może zawierać jedynie obiekty</Polish>
     </Key>
   </Package>
 </Project>

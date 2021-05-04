@@ -20,6 +20,7 @@ VENDOR = {
     "@LAMBS_Suppression": {},
     "@LAMBS_Turrets": {},
     "@LAMBS_RPG": {},
+    "@3den Enhanced": {},
     "@Blurry Laser": {},
     "@Ladder Tweak": {},
     "@Zeus Enhanced": {},
@@ -53,8 +54,8 @@ VENDOR = {
     "@Hate's Hidden Cameras": {},
     "@ArmaZeusCache": {},
     "@ILBE Assault Pack - Rewrite": {},
+    "@FRXA's TFAR Extra Retextured Equipment": {},
     # "@Camofaces": {},
-    "-Wearable Antennae": {},
     "-Mocap": {
         "whitelist": ["MOCAP_mov"],
     },

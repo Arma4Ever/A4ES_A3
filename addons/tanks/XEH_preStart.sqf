@@ -2,6 +2,8 @@
 
 #include "XEH_PREP.hpp"
 
+if !(hasInterface) exitWith {};
+
 private _configs = "(configName _x) isKindOf ['HandGrenade', (configFile >> 'CfgMagazines')]" configClasses (configFile >> "CfgMagazines");
 private _magazines = ["MiniGrenade"];
 {
@@ -19,4 +21,4 @@ private _magazines = ["MiniGrenade"];
   false
 } count _configs;
 
-uiNamespace setVariable [QGVAR(hatchGrenadesCache), _magazines];
+uiNamespace setVariable [QGVAR(hatchGrenadeClasses), _magazines];

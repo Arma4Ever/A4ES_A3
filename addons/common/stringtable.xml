@@ -2,59 +2,59 @@
 <Project name="A3CS">
   <Package name="Common">
     <Key ID="STR_A3CS_Common_Yes">
-      <Original>Yes</Original>
+      <English>Yes</English>
       <Polish>Tak</Polish>
     </Key>
     <Key ID="STR_A3CS_Common_No">
-      <Original>No</Original>
+      <English>No</English>
       <Polish>Nie</Polish>
     </Key>
     <Key ID="STR_A3CS_Common_None">
-      <Original>None</Original>
+      <English>None</English>
       <Polish>Brak</Polish>
     </Key>
     <Key ID="STR_A3CS_Common_NoName">
-      <Original>No name</Original>
+      <English>No name</English>
       <Polish>Imię nieznane</Polish>
     </Key>
     <Key ID="STR_A3CS_Common_Close">
-      <Original>Close</Original>
+      <English>Close</English>
       <Polish>Zamknij</Polish>
     </Key>
     <Key ID="STR_A3CS_Common_Add">
-      <Original>Add</Original>
+      <English>Add</English>
       <Polish>Dodaj</Polish>
     </Key>
     <Key ID="STR_A3CS_Common_Remove">
-      <Original>Remove</Original>
+      <English>Remove</English>
       <Polish>Usuń</Polish>
     </Key>
     <Key ID="STR_A3CS_Common_Rank">
-      <Original>Rank</Original>
+      <English>Rank</English>
       <Polish>Ranga</Polish>
     </Key>
     <Key ID="STR_A3CS_Common_Traits">
-      <Original>Traits</Original>
+      <English>Traits</English>
       <Polish>Uprawnienia</Polish>
     </Key>
     <Key ID="STR_A3CS_Common_Medic">
-      <Original>Medic</Original>
+      <English>Medic</English>
       <Polish>Medyk</Polish>
     </Key>
     <Key ID="STR_A3CS_Common_Doctor">
-      <Original>Doctor</Original>
+      <English>Doctor</English>
       <Polish>Doktor</Polish>
     </Key>
     <Key ID="STR_A3CS_Common_Engineer">
-      <Original>Engineer</Original>
+      <English>Engineer</English>
       <Polish>Inżynier</Polish>
     </Key>
     <Key ID="STR_A3CS_Common_AdvEngineer">
-      <Original>Advanced engineer</Original>
+      <English>Advanced engineer</English>
       <Polish>Zaawansowany inżynier</Polish>
     </Key>
     <Key ID="STR_A3CS_Common_EOD">
-      <Original>EOD</Original>
+      <English>EOD</English>
       <Polish>Saper</Polish>
     </Key>
   </Package>

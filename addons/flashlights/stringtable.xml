@@ -2,13 +2,13 @@
 <Project name="A3CS">
   <Package name="Flashlights">
     <Key ID="STR_A3CS_Flashlights_MX991_Description">
-        <Original>Latarka z czerwonym filtrem. Używana do podświetlania mapy lub podczepiania do munduru.</Original>
+        <Polish>Latarka z czerwonym filtrem. Używana do podświetlania mapy lub podczepiania do munduru.</Polish>
     </Key>
     <Key ID="STR_A3CS_Flashlights_KSF1_Description">
-        <Original>Latarka z czerwonym filtrem. Używana do podświetlania mapy lub podczepiania do munduru.</Original>
+        <Polish>Latarka z czerwonym filtrem. Używana do podświetlania mapy lub podczepiania do munduru.</Polish>
     </Key>
     <Key ID="STR_A3CS_Flashlights_XL50_Description">
-        <Original>Mini latarka. Światło białe. Używana do podświetlania mapy lub podczepiania do munduru.</Original>
+        <Polish>Mini latarka. Światło białe. Używana do podświetlania mapy lub podczepiania do munduru.</Polish>
     </Key>
   </Package>
 </Project>

@@ -28,6 +28,11 @@ _logic setVariable [QGVAR(executed), true, true];
 // Get all synced units
 private _syncedUnits = (synchronizedObjects _logic) select {_x isKindOf "CAManBase"};
 
+// Debug log
+if (is3DENPreview) then {
+  [_logic, "Oznaczam %1 jednostek jako zeus", count _syncedUnits] call EFUNC(debug,moduleLog);
+};
+
 // Mark units as curators
 {
   _x setVariable [QEGVAR(zeus,isCurator), true, true];

@@ -2,98 +2,98 @@
 <Project name="A3CS">
   <Package name="NameTags">
     <Key ID="STR_A3CS_NameTags_Settings_Addon">
-      <Original>A3CS Name Tags</Original>
+      <English>A3CS Name Tags</English>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_show2DNameTag">
-      <Original>Show 2D tag</Original>
+      <English>Show 2D tag</English>
       <Polish>Wyświetl tag 2D</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_show2DNameTag_Desc">
-      <Original>Show 2D tag on cursor</Original>
+      <English>Show 2D tag on cursor</English>
       <Polish>Wyświetl tag 2D pod kursorem</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_show3DNameTag">
-      <Original>Show 3D tag</Original>
+      <English>Show 3D tag</English>
       <Polish>Wyświetl tag 3D</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_show3DNameTag_Desc">
-      <Original>Show 3D tag above unit head</Original>
+      <English>Show 3D tag above unit head</English>
       <Polish>Wyświetl tag 3D nad głowami jednostek</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_show3DNameTag_Freelook">
-      <Original>Only during freelook</Original>
+      <English>Only during freelook</English>
       <Polish>Tylko podczas rozglądania (domyślnie lewy alt)</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_show3DNameTag_OnCursor">
-      <Original>Only on cursor</Original>
+      <English>Only on cursor</English>
       <Polish>Tylko po najechaniu kursorem</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_show3DNameTag_Both">
-      <Original>In both cases</Original>
+      <English>In both cases</English>
       <Polish>W obu przypadkach</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_showSpeaking">
-      <Original>Show speaking</Original>
+      <English>Show speaking</English>
       <Polish>Wyświetl ikonkę mówienia</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_showSpeaking_Desc">
-      <Original>Show animation above unit head when speaking (ACRE) on 3D tag</Original>
+      <English>Show animation above unit head when speaking (ACRE) on 3D tag</English>
       <Polish>Wyświetl animację nad głową jednostki podczas mówienia (ACRE) na tagu 3D</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_showLeaderIcon">
-      <Original>Show group leader icon</Original>
+      <English>Show group leader icon</English>
       <Polish>Wyświetl ikonkę dowódcy drużyny</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_showLeaderIcon_Desc">
-      <Original>Show group leader icon above unit head on 3D tag</Original>
+      <English>Show group leader icon above unit head on 3D tag</English>
       <Polish>Wyświetl ikonkę dowódcy drużyny na tagu 3D</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_2DNameTagShowTraits">
-      <Original>Show unit traits on 2D tag</Original>
+      <English>Show unit traits on 2D tag</English>
       <Polish>Wyświetl uprawnienia jednostki na tagu 2D</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_2DNameTagPosition">
-      <Original>2D tag position on screen</Original>
+      <English>2D tag position on screen</English>
       <Polish>Miejsce wyświetlania taga 2D na ekranie</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_2DNameTagPosition_Center">
-      <Original>Screen center</Original>
+      <English>Screen center</English>
       <Polish>Środek ekranu</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_2DNameTagPosition_Bottom">
-      <Original>Screen bottom</Original>
+      <English>Screen bottom</English>
       <Polish>Dół ekranu</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_3DNameTagScale">
-      <Original>3D tag scale</Original>
+      <English>3D tag scale</English>
       <Polish>Wielkość taga 3D</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_3DNameTagScale_VerySmall">
-      <Original>Very small</Original>
+      <English>Very small</English>
       <Polish>Bardzo mały</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_3DNameTagScale_Small">
-      <Original>Small</Original>
+      <English>Small</English>
       <Polish>Mały</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_3DNameTagScale_Normal">
-      <Original>Normal</Original>
+      <English>Normal</English>
       <Polish>Normalny</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_Settings_3DNameTagScale_Big">
-      <Original>Big</Original>
+      <English>Big</English>
       <Polish>Duży</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_RankAttribute_DisplayName">
-      <Original>Rank</Original>
+      <English>Rank</English>
       <Polish>Stopień</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_RankAttribute_Tooltip">
-      <Original>Custom unit rank, overrides vanilla rank.</Original>
+      <English>Custom unit rank, overrides vanilla rank.</English>
       <Polish>Customowy stopień jednostki, nadpisuje stopień armowy.</Polish>
     </Key>
     <Key ID="STR_A3CS_NameTags_RankAttribute_ValueNone">
-      <Original>None (Use vanilla rank)</Original>
+      <English>None (Use vanilla rank)</English>
       <Polish>Brak (Użyj armowego stopnia)</Polish>
     </Key>
   </Package>

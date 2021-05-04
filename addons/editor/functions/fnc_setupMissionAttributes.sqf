@@ -14,13 +14,13 @@ private _garbageCollectionSetuped = "GarbageCollection" get3DENMissionAttribute 
 
 // Setup garbage collector & dynamic sim default settings if not setuped yet
 if !(_garbageCollectionSetuped) then {
-  "GarbageCollection" set3DENMissionAttribute ["MinPlayerDistance", 150];
-  "GarbageCollection" set3DENMissionAttribute ["CorpseLimit", 20];
-  "GarbageCollection" set3DENMissionAttribute ["CorpseRemovalMinTime", 120];
-  "GarbageCollection" set3DENMissionAttribute ["CorpseRemovalMaxTime", 1800];
+  "GarbageCollection" set3DENMissionAttribute ["MinPlayerDistance", 0];
+  "GarbageCollection" set3DENMissionAttribute ["CorpseLimit", 16];
+  "GarbageCollection" set3DENMissionAttribute ["CorpseRemovalMinTime", 45];
+  "GarbageCollection" set3DENMissionAttribute ["CorpseRemovalMaxTime", 15*60];
   "GarbageCollection" set3DENMissionAttribute ["WreckLimit", 8];
-  "GarbageCollection" set3DENMissionAttribute ["WreckRemovalMinTime", 300];
-  "GarbageCollection" set3DENMissionAttribute ["WreckRemovalMaxTime", 3600];
+  "GarbageCollection" set3DENMissionAttribute ["WreckRemovalMinTime", 3*60];
+  "GarbageCollection" set3DENMissionAttribute ["WreckRemovalMaxTime", 30*60];
 
   "GarbageCollection" set3DENMissionAttribute ["DynSimDistGroup", 800];
   "GarbageCollection" set3DENMissionAttribute ["DynSimDistVehicle", 1300];

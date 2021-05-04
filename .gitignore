@@ -6,6 +6,7 @@ hemtt
 hemtt.exe
 .hemtt/local
 ArmaScriptCompiler.exe
+*.sqfc
 keys/*
 tools/temp
 *.cache
@@ -21,3 +22,8 @@ __pycache__
 vendor/*
 !vendor/.gitkeep
 *.dll
+!a3cs_*.dll
+extensions/*/.vs
+extensions/*/bin
+extensions/*/obj
+extensions/*/packages

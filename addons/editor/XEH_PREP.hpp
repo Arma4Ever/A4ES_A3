@@ -1,7 +1,7 @@
 
 PREP(handleConnectingEnd);
-PREP(handleMissionNew);
 PREP(handleMissionLoad);
+PREP(handleMissionNew);
 PREP(initUnit);
 PREP(setupMissionAttributes);
 PREP(startCBAFallbackLoop);
