@@ -22,3 +22,7 @@ __pycache__
 vendor/*
 !vendor/.gitkeep
 *.dll
+!a3cs_*.dll
+extensions/*/.vs
+extensions/*/bin
+extensions/*/obj
