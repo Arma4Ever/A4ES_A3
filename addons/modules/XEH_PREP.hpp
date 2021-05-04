@@ -42,3 +42,4 @@ PREP(validateEntity);
 #include "modules\generatorComposition\prep.hpp"
 #include "modules\registerArtilleryUnits\prep.hpp"
 #include "modules\switchLights\prep.hpp"
+#include "modules\ambientFlyby\prep.hpp"
