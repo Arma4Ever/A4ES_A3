@@ -14,6 +14,4 @@ private _moduleName = getText ((configOf _module) >> "displayName");
 
 _params set [0, (format ["[%1] ", _moduleName]) + (_params # 0)];
 
-private _log = format _params;
-diag_log _log;
-systemChat _log;
+diag_log text format _params;

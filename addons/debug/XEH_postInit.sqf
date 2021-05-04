@@ -20,9 +20,19 @@ addMissionEventHandler ["ExtensionCallback", {
 
 private _initWatcher = "a3cs_debug" callExtension "missionPreviewStart";
 if (_initWatcher isEqualTo "true") then {
+  systemChat "Uruchamiam obserwację logów";
   /*
     FileSystemWatcher often don't trigger if focus is on arma app
     Async polling for updates forces callback if logsList updated
   */
   [{"a3cs_debug" callExtension "updateLogsList";}, 0.5] call CBA_fnc_addPerFrameHandler;
 };
+
+[QEGVAR(modules,base), "init", {
+  _this call FUNC(initModule);
+}, true, [], true] call CBA_fnc_addClassEventHandler;
+
+{
+  _x call FUNC(initTrigger);
+  false
+} count (allMissionObjects "EmptyDetector");
