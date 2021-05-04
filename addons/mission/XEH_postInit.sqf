@@ -71,6 +71,9 @@ if (!hasInterface) exitWith {};
     };
   };
 
+  // Check if player has "G" as default keybind
+  if (34 in actionKeys "Throw") then {call FUNC(bindWarning)};
+
   // Exit if player joined in progress
   if (didJIP) exitWith {};
 
