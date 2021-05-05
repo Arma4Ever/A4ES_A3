@@ -12,5 +12,13 @@
       <English>Refresh gear to fix invisible uniform/vest.</English>
       <Polish>Odśwież sprzęt aby naprawić bug z niewidzialnym mundurem/kamizelką.</Polish>
     </Key>
+    <Key ID="STR_A3CS_Mission_Warning_Message">
+      <English>You have single "G" as your grenade bind. It's highly recommended to rebind it to "2xG".</English>
+      <Polish>Masz zbindowane pojedyncze "G" jako klawisz rzutu granatem. Zaleca się przebindowanie na "2xG".</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Mission_Warning_Message_Header">
+      <English>Rebind granade throw!</English>
+      <Polish>Przebinduj rzut granatem!</Polish>
+    </Key>
   </Package>
 </Project>
