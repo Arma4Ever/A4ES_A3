@@ -30,11 +30,26 @@ if (_initWatcher isEqualTo "true") then {
   if !(isNull _display) then {
     private _logsListTextCtrl = _display displayCtrl IDC_LOGSLIST;
     _logsListTextCtrl ctrlSetBackgroundColor [0, 0, 0, 0.45];
+    _logsListTextCtrl ctrlSetFade (parseNumber (!GVAR(showLogs)));
     _logsListTextCtrl ctrlCommit 0;
   };
 
   // Initial write of logs
   [[]] call FUNC(addLogs);
+
+  // Add action
+  // TODO: Debug control panel
+  player addAction [
+    "<t color='#FF0000' size='1.5'>DEBUG - Pokaż/ukryj logi</t>",
+    {
+      GVAR(showLogs) = !GVAR(showLogs);
+      private _display = uiNamespace getVariable [QGVAR(logsList), displayNull];
+      if (isNull _display) exitWith {};
+      private _logsListTextCtrl = _display displayCtrl IDC_LOGSLIST;
+      _logsListTextCtrl ctrlSetFade (parseNumber (!GVAR(showLogs)));
+      _logsListTextCtrl ctrlCommit 0;
+    }, nil, 99
+  ];
 
   /*
     FileSystemWatcher often don't trigger if focus is on arma app
