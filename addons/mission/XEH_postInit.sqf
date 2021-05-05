@@ -1,13 +1,13 @@
 #include "script_component.hpp"
 
 if (hasInterface) then {
-  // Check if player has "G" as default keybind
-  if (actionKeys "Throw" isEqualTo [34]) then {
-    [{!isNull (findDisplay 46)}, {
+  // Check if player has default "G" as throw keybind
+  if ((actionKeys "Throw") isEqualTo [34]) then {
+    [{!(isNull (findDisplay 46))}, {
         [
-        localize LSTRING(Warning_Message),
-        localize LSTRING(Warning_Message_Header),
-        true
+          localize LSTRING(Warning_Message),
+          localize LSTRING(Warning_Message_Header),
+          true
         ] spawn BIS_fnc_guiMessage;
     }] call CBA_fnc_waitUntilAndExecute;
   };
@@ -75,6 +75,10 @@ if (!hasInterface) exitWith {};
 
 // Exec after mission start
 [{
+  // Disable ambient life
+  enableEnvironment [false, environmentEnabled # 1];
+  [{enableEnvironment [false, environmentEnabled # 1];}, 30] call CBA_fnc_addPerFrameHandler;
+
   // Validate mission template
   if ((getMissionConfigValue ["a3c_missionTemplate", 0]) < REQUIRED_MISSION_TEMPLATE_VERSION) then {
     0 spawn {
