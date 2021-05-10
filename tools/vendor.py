@@ -55,6 +55,7 @@ VENDOR = {
     "@ArmaZeusCache": {},
     "@ILBE Assault Pack - Rewrite": {},
     "@FRXA's TFAR Extra Retextured Equipment": {},
+    "@ACD - Arma3 Containers And Decorations": {},
     # "@Camofaces": {},
     "-Mocap": {
         "whitelist": ["MOCAP_mov"],
