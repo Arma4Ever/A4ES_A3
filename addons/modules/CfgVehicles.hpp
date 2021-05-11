@@ -246,6 +246,7 @@ class CfgVehicles {
     #include "modules\switchLights\module.hpp"
     #include "modules\ambientFlyby\module.hpp"
     #include "modules\fireArtillery\module.hpp"
+    #include "modules\ambientAnimals\module.hpp"
 
     #include "hiddenModules.hpp"
 };
