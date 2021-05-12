@@ -8,7 +8,7 @@ class GVAR(ambientAnimals): GVAR(base) {
     canSetArea = 1;
     canSetAreaShape = 1;
     class AttributeValues {
-        size3[] = {25, 25, -1};
+        size3[] = {20, 20, -1};
         isRectangle = 0;
     };
 
@@ -17,39 +17,39 @@ class GVAR(ambientAnimals): GVAR(base) {
         class GVAR(moduleWarnings): GVAR(moduleWarnings) {};
 
         class GVAR(baseSettingsSubCategory): GVAR(moduleSubCategory) {
-            displayName = CSTRING(ambientAmimals_baseSettingsSubCategory);
+            displayName = CSTRING(ambientAnimals_baseSettingsSubCategory);
             property = QGVAR(baseSettingsSubCategory);
         };
         class GVAR(animalsType): GVAR(dynamicCombo) {
-            displayName = CSTRING(ambientAmimals_animalsType);
-            tooltip = CSTRING(ambientAmimals_animalsType_Tooltip);
+            displayName = CSTRING(ambientAnimals_animalsType);
+            tooltip = CSTRING(ambientAnimals_animalsType_Tooltip);
             property = QGVAR(animalsType);
             typeName = "STRING";
             defaultValue = "'Rabbit_F'";
             class values {
                 class Rabbit_F {
-                    name = CSTRING(ambientAmimals_Rabbit);
+                    name = CSTRING(ambientAnimals_Rabbit);
                     tooltip = "";
                     value = "Rabbit_F";
                     default = 1;
                 };
                 class Hen_random_F {
-                    name = CSTRING(ambientAmimals_Hen);
+                    name = CSTRING(ambientAnimals_Hen);
                     tooltip = "";
                     value = "Hen_random_F";
                 };
                 class Fin_random_F {
-                    name = CSTRING(ambientAmimals_Dog);
+                    name = CSTRING(ambientAnimals_Dog);
                     tooltip = "";
                     value = "Fin_random_F";
                 };
                 class Goat_random_F {
-                    name = CSTRING(ambientAmimals_Goat);
+                    name = CSTRING(ambientAnimals_Goat);
                     tooltip = "";
                     value = "Goat_random_F";
                 };
                 class Sheep_random_F {
-                    name = CSTRING(ambientAmimals_Sheep);
+                    name = CSTRING(ambientAnimals_Sheep);
                     tooltip = "";
                     value = "Sheep_random_F";
                 };
@@ -57,8 +57,8 @@ class GVAR(ambientAnimals): GVAR(base) {
         };
 
         class GVAR(animalsCount): GVAR(dynamicSlider) {
-            displayName = CSTRING(ambientAmimals_animalsCount);
-            tooltip = CSTRING(ambientAmimals_animalsCount_Tooltip);
+            displayName = CSTRING(ambientAnimals_animalsCount);
+            tooltip = CSTRING(ambientAnimals_animalsCount_Tooltip);
             property = QGVAR(animalsCount);
             defaultValue = "3";
             typeName = "NUMBER";
@@ -70,9 +70,9 @@ class GVAR(ambientAnimals): GVAR(base) {
     };
 
     class GVAR(moduleDescription): GVAR(moduleDescription) {
-        shortDescription = CSTRING(ambientAmimals_shortDescription);
-        description = CSTRING(ambientAmimals_description);
-        positionInfo = CSTRING(ambientAmimals_positionInfo);
+        shortDescription = CSTRING(ambientAnimals_shortDescription);
+        description = CSTRING(ambientAnimals_description);
+        positionInfo = CSTRING(ambientAnimals_positionInfo);
         //schema = QPATHTOF(data\schema_placeholder.paa);
     };
 };

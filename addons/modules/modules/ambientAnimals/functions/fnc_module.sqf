@@ -16,9 +16,9 @@ _input params [
 // Exit if module is null, not local or placed by zeus (should not happen)
 if (isNull _logic || !(local _logic) || _isCuratorPlaced) exitWith {};
 
-  if (CBA_missionTime < 30) then {
-    sleep 15;
-  };
+if (CBA_missionTime < 30) then {
+  sleep 15;
+};
 
 LOG_1('Starting execution of EXEC_MODULE_NAME (isActivated: %1).',str _isActivated);
 
@@ -37,9 +37,10 @@ if (_isActivated) then {
     for "_animalIndex" from 0 to _animalsMaxIndex do {
 
         LOG_3('Generating animals #%1 (animalClass: "%2").',str _animalIndex,_animalsType);
-        
+
         private _spawnPos = _logicArea call EFUNC(common,getAreaRandomPos);
-        private _animal = createAgent [_animalsType,_spawnPos,[],0,"NONE"];
+        private _animal = createAgent [_animalsType,[0,0,0],[],0,"NONE"];
+        _animal setPos _spawnPos;
         _animal setDir (random 360);
         _animal enableDynamicSimulation true;
     };

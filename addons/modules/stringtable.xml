@@ -1118,7 +1118,7 @@
   <Key ID="STR_A3CS_Modules_ambientAnimals_displayName">
     <Polish>Generator zwierząt</Polish>
   </Key>
-  <Key ID="STR_A3CS_Modules_ambientAmimals_baseSettingsSubCategory">
+  <Key ID="STR_A3CS_Modules_ambientAnimals_baseSettingsSubCategory">
     <Polish>Ustawienia Podstawowe</Polish>
   </Key>
   <Key ID="STR_A3CS_Modules_ambientAmimals_animalsType">
@@ -1127,19 +1127,19 @@
   <Key ID="STR_A3CS_Modules_ambientAmimals_animalsType_Tooltip">
     <Polish>Typ zwierząt generowanych przed moduł</Polish>
   </Key>
-  <Key ID="STR_A3CS_Modules_ambientAmimals_Rabbit">
+  <Key ID="STR_A3CS_Modules_ambientAnimals_Rabbit">
     <Polish>Królik</Polish>
   </Key>
-  <Key ID="STR_A3CS_Modules_ambientAmimals_Hen">
+  <Key ID="STR_A3CS_Modules_ambientAnimals_Hen">
     <Polish>Kura</Polish>
   </Key>
-  <Key ID="STR_A3CS_Modules_ambientAmimals_Dog">
+  <Key ID="STR_A3CS_Modules_ambientAnimals_Dog">
     <Polish>Pies</Polish>
   </Key>
-  <Key ID="STR_A3CS_Modules_ambientAmimals_Goat">
+  <Key ID="STR_A3CS_Modules_ambientAnimals_Goat">
     <Polish>Koza</Polish>
   </Key>
-  <Key ID="STR_A3CS_Modules_ambientAmimals_Sheep">
+  <Key ID="STR_A3CS_Modules_ambientAnimals_Sheep">
     <Polish>Owca</Polish>
   </Key>
   <Key ID="STR_A3CS_Modules_ambientAmimals_animalsCount">
@@ -1148,13 +1148,13 @@
   <Key ID="STR_A3CS_Modules_ambientAmimals_animalsCount_Tooltip">
     <Polish>Liczba zwierząt generowanych przez moduł. Maksymalnie 20.</Polish>
   </Key>
-  <Key ID="STR_A3CS_Modules_ambientAmimals_shortDescription">
+  <Key ID="STR_A3CS_Modules_ambientAnimals_shortDescription">
     <Polish>Moduł generowania ambientowych zwierząt</Polish>
   </Key>
-  <Key ID="STR_A3CS_Modules_ambientAmimals_description">
+  <Key ID="STR_A3CS_Modules_ambientAnimals_description">
     <Polish>Wygenerwoane zwierzęta mają włączoną dynamiczną symulację - nie będą symulowane jeżeli gracze są poza zasięgiem dynamicznej symulacji.</Polish>
   </Key>
-  <Key ID="STR_A3CS_Modules_ambientAmimals_positionInfo">
+  <Key ID="STR_A3CS_Modules_ambientAnimals_positionInfo">
     <Polish>Zwierzęta generują się na wyznaczonym obszarze, jednak mogą się poruszać.</Polish>
   </Key>
 </Package>
