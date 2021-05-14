@@ -17,7 +17,6 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [VET Unflipping](https://github.com/veteran29/vet_unflipping)
 - [Backpack On Chest](https://github.com/DerZade/BackpackOnChest)
 - [Arma 3 Breaching Charge](https://github.com/ampersand38/Arma-3-Breaching-Charge)
-- [Mighty Gau-8 Avenger](https://github.com/Zabuzard/MightyGau-8Avenger)
 - [O&T Expansion Eden](https://steamcommunity.com/sharedfiles/filedetails/?id=1923321700)
 - [Metis Nature](https://steamcommunity.com/sharedfiles/filedetails/?id=1951690856)
 - [Eden Extended Objects](https://steamcommunity.com/sharedfiles/filedetails/?id=882231372)
@@ -42,6 +41,8 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [Hate's Hidden Cameras](https://steamcommunity.com/sharedfiles/filedetails/?id=2404750021)
 - [ILBE Assault Pack - Rewrite](https://github.com/Grezvany13/ILBE-Assault-Pack-Rewrite)
 - [FRXA's TFAR Extra Retextured Equipment](https://steamcommunity.com/sharedfiles/filedetails/?id=1606874412)
+- [ACD - Arma3 Containers And Decorations](https://steamcommunity.com/sharedfiles/filedetails/?id=689845793)
+- [Uriki's Mission Items](https://steamcommunity.com/sharedfiles/filedetails/?id=940841212)
 
 ## Credits
 Authors of external mods.  
