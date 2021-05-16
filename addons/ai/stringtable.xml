@@ -61,5 +61,13 @@
     <Key ID="STR_A3CS_AI_skillLevel_eliteVeterans_description">
       <Polish>Żołnierz sił specjalnych z długim doświadczeniem bojowym</Polish>
     </Key>
+    <Key ID="STR_A3CS_AI_NVGoggles_displayName">
+      <English>Hidden AI NVG</English>
+      <Polish>Ukryta noktowizja AI</Polish>
+    </Key>
+    <Key ID="STR_A3CS_AI_NVGoggles_description">
+      <English>Invisible NV goggles, usable only by AI units</English>
+      <Polish>Niewidzialne gogle NV, używalne tylko przez jednostki AI</Polish>
+    </Key>
   </Package>
 </Project>

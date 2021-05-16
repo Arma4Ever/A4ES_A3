@@ -6,19 +6,26 @@ ADDON = false;
 
 ADDON = true;
 
-/*
-// Allow crew in immobile vehicles in ~50% cases
-["LandVehicle", "InitPost", {
-  (_this # 0) allowCrewInImmobile ((random 1) < 0.5);
-}] call CBA_fnc_addClassEventHandler;
-*/
+// Remove AI NVG from inventory if player has one
+["loadout", {
+  // Use "player" - ignore remote controled units
+  if (QGVAR(NVGoggles) in (assignedItems player)) then {
+    LOG('Removing AI NVG from player');
+    player unlinkItem QGVAR(NVGoggles);
+  };
+}] call CBA_fnc_addPlayerEventHandler;
 
 // Add primary weapon magazine to AI on reload
 ["CAManBase", "Reloaded", {
   params ["_unit", "_weapon", "_muzzle", "_newMagazine"];
 
   // Exit if unit not local, is player or not fired from correct (main) muzzle
-  if (!(local _unit) || {isPlayer _unit} || {_muzzle isNotEqualTo _weapon}) exitWith {};
+  if (
+    !(local _unit) ||
+    {isPlayer _unit} ||
+    {_muzzle isNotEqualTo _weapon} ||
+    {_unit in playableUnits}
+  ) exitWith {};
   // Exit if thrown grenade or put mine
   if (_weapon in ["Throw", "Put"]) exitWith {};
 
@@ -33,9 +40,13 @@ ADDON = true;
 {
   [_x, "Reloaded", {
     params ["_vehicle"];
-    // Exit if vehicle not local or player is commander
-    if (!(local _vehicle) || {isPlayer _vehicle}) exitWith {};
+    // Exit if vehicle not local or player in vehicle
+    if (
+      !(local _vehicle) ||
+      {isPlayer _vehicle} ||
+      {((crew _vehicle) arrayIntersect playableUnits) isNotEqualTo []}
+    ) exitWith {};
     // Reset vehicle ammo
     _vehicle setVehicleAmmo 1;
   }] call CBA_fnc_addClassEventHandler;
-} forEach ["Air", "Car", "Tank", "Ship"];
+} forEach ["Air", "Car", "Tank", "Ship", "StaticWeapon"];
