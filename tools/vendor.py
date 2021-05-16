@@ -53,7 +53,7 @@ VENDOR = {
     "@ILBE Assault Pack - Rewrite": {},
     "@FRXA's TFAR Extra Retextured Equipment": {},
     "@ACD - Arma3 Containers And Decorations": {},
-    "Uriki's Mission Items": {},
+    "@Uriki's Mission Items": {},
     # "@Camofaces": {},
     "-Mocap": {
         "whitelist": ["MOCAP_mov"],
