@@ -136,11 +136,11 @@
     <Key ID="STR_A3CS_Editor_forceGunLights_Tooltip">
       <Polish>Wymusza na jednostce włączenie latarki (jeśli ją posiada). UWAGA: opcja ta może być nadpisana przez ustawienia waypointów.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Editor_disableBISRandomization">
-      <Polish>Wyłącz randomizację wyglądu</Polish>
+    <Key ID="STR_A3CS_Editor_disableRandomization">
+      <Polish>Wyłącz randomizację wyposażenia</Polish>
     </Key>
-    <Key ID="STR_A3CS_Editor_disableBISRandomization_Tooltip">
-      <Polish>Wyłącza armową randomizację wyglądu. W przypadku pojazdów to może być np. kolor, w przypadku jednostek to mogą być np. nakrycia głowy, ubiór, goggle itp. Ta opcja nie wyłącza zmiany wyglądu grywalnej jednostki w oparciu o ustawienia profilu grającego nią gracza (np. zmiany twarzy z ustawień profilu itp.).</Polish>
+    <Key ID="STR_A3CS_Editor_disableRandomization_Tooltip">
+      <Polish>Wyłącza randomizację wyglądu oraz wyposażenia jednostki/pojazdu. Zaznaczenie tej opcji pozwala na ogórne zdefiniowane wyposażenia i wyglądu pojazdu/jednostki w edytorze. Ta opcja wyłącza zarówno system losowania Bohemii jak i Community Factions Project.</Polish>
     </Key>
   </Package>
 </Project>

@@ -15,7 +15,6 @@
       <Polish>Dodaje obiekt do edytowalnych obiektów każdego zeusa na starcie misji.</Polish>
     </Key>
     <Key ID="STR_A3CS_Zeus_Activated">
-      <English>Access to zeus interface has been activated</English>
       <Polish>Dostęp do interfejsu zeusa został aktywowany</Polish>
     </Key>
   </Package>
