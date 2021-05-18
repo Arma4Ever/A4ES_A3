@@ -1,6 +1,6 @@
 class GVAR(ambientAnimals): GVAR(base) {
     scope = 2;
-    author = "Krzyciu";
+    author = "Krzyciu, SzwedzikPL";
     displayName = CSTRING(ambientAnimals_displayName);
     icon = QPATHTOF(modules\ambientAnimals\data\icon.paa);
     category = QGVAR(ambient);
@@ -28,28 +28,28 @@ class GVAR(ambientAnimals): GVAR(base) {
             defaultValue = "'Rabbit_F'";
             class values {
                 class Rabbit_F {
-                    name = CSTRING(ambientAnimals_Rabbit);
+                    name = CSTRING(ambientAnimals_animalsType_Rabbit)
                     tooltip = "";
                     value = "Rabbit_F";
                     default = 1;
                 };
                 class Hen_random_F {
-                    name = CSTRING(ambientAnimals_Hen);
+                    name = CSTRING(ambientAnimals_animalsType_Hen);
                     tooltip = "";
                     value = "Hen_random_F";
                 };
                 class Fin_random_F {
-                    name = CSTRING(ambientAnimals_Dog);
+                    name = CSTRING(ambientAnimals_animalsType_Dog);
                     tooltip = "";
                     value = "Fin_random_F";
                 };
                 class Goat_random_F {
-                    name = CSTRING(ambientAnimals_Goat);
+                    name = CSTRING(ambientAnimals_animalsType_Goat);
                     tooltip = "";
                     value = "Goat_random_F";
                 };
                 class Sheep_random_F {
-                    name = CSTRING(ambientAnimals_Sheep);
+                    name = CSTRING(ambientAnimals_animalsType_Sheep);
                     tooltip = "";
                     value = "Sheep_random_F";
                 };
@@ -64,6 +64,13 @@ class GVAR(ambientAnimals): GVAR(base) {
             typeName = "NUMBER";
             GVAR(range[]) = {1, 20};
             GVAR(valueUnit) = "";
+        };
+
+        class GVAR(addToCurators): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(ambientAnimals_Attributes_addToCurators);
+            tooltip = CSTRING(ambientAnimals_Attributes_addToCurators_Tooltip);
+            property = QGVAR(addToCurators);
+            defaultValue = "false";
         };
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};
