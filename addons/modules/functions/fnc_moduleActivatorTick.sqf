@@ -9,7 +9,11 @@ BEGIN_COUNTER(moduleActivatorTick);
 private _moduleList = GVAR(activatorModuleList);
 private _index = GVAR(moduleActivatorIndex);
 
-if (_moduleList isEqualTo []) exitWith {};
+if (_moduleList isEqualTo []) exitWith {
+  [GVAR(moduleActivatorPFH)] call CBA_fnc_removePerFrameHandler;
+  GVAR(moduleActivatorIndex) = -1;
+  GVAR(moduleActivatorPFH) = -1;
+};
 
 private _data = _moduleList param [_index, []];
 if (_data isEqualTo []) exitWith {
