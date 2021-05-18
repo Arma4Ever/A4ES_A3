@@ -251,7 +251,7 @@ namespace a3cs_debug
                             string line = sr.ReadLine();
                             lineNumber++;
 
-                            if (lineNumber > lastRPTLineNumber)
+                            if (lineNumber > lastRPTLineNumber && line != "")
                             {
                                 // Replace XML chars for A3 structured text
                                 string structLine = line
