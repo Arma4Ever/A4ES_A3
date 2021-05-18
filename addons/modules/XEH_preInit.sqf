@@ -4,6 +4,12 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
+if (isServer) then {
+  GVAR(moduleActivatorPFH) = -1;
+  GVAR(moduleActivatorIndex) = -1;
+  GVAR(activatorModuleList) = [];
+};
+
 [QGVAR(switchLightsLocal), {
   params ["_logic"];
 
@@ -12,7 +18,7 @@ ADDON = false;
   if !(isNull _currentSwitchScript) then {
     terminate _currentSwitchScript;
   };
-  
+
   // Switch lights
   private _switchScript = _this spawn FUNC(switchLights_switchLightsLocal);
   // Save script handler

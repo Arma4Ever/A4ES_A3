@@ -49,7 +49,7 @@ _ctrlAssetsTree setVariable [QGVAR(assetsTypes), _assetsTypes];
 // Add current classList from value to list
 {
   [_ctrlClassList, _x # 0, _x # 1] call FUNC(dynamicClassSelect_addClassToList);
-} forEach (call compile _value);
+} forEach (parseSimpleArray _value);
 
 // Handle asset tree dblClick (adding classes)
 _ctrlAssetsTree ctrlAddEventHandler ["treeDblClick", {

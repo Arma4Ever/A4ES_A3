@@ -17,13 +17,7 @@ _input params [
 // Exit if module is null, not local or placed by zeus (should not happen)
 if (isNull _logic || !(local _logic) || _isCuratorPlaced) exitWith {};
 
-// Exit if module was executed before
-if (_logic getVariable [QGVAR(executed), false]) exitWith {};
-
 LOG('Starting execution of EXEC_MODULE_NAME.');
-
-// Mark module as executed to prevent double execution
-_logic setVariable [QGVAR(executed), true, true];
 
 // Load logic params
 private _compositionId = _logic getVariable [QGVAR(id), ""];
@@ -65,5 +59,8 @@ if (_deleteUnits) then {
     deleteGroup _group;
   };
 };
+
+// Delete module
+deleteVehicle _logic;
 
 LOG('Execution of EXEC_MODULE_NAME finished.');

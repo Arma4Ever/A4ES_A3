@@ -150,6 +150,12 @@ class CfgVehicles {
                 GVAR(observeValue) = 1;
             };
 
+            class GVAR(dynamicToolboxActivationMode): Default {
+                control = QGVAR(dynamicToolboxActivationMode);
+                typeName = "NUMBER";
+                GVAR(observeValue) = 1;
+            };
+
             class GVAR(dynamicToolboxSide): Default {
                 control = QGVAR(dynamicToolboxSide);
                 typeName = "NUMBER";
@@ -246,6 +252,7 @@ class CfgVehicles {
     #include "modules\switchLights\module.hpp"
     #include "modules\ambientFlyby\module.hpp"
     #include "modules\fireArtillery\module.hpp"
+    #include "modules\aiNightvision\module.hpp"
 
     #include "hiddenModules.hpp"
 };

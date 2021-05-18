@@ -19,6 +19,10 @@ if (isNull _logic || !(local _logic) || _isCuratorPlaced) exitWith {};
 
 LOG_1('Starting execution of EXEC_MODULE_NAME (isActivated: %1).',str _isActivated);
 
+if (is3DENPreview) then {
+  [_logic, _isActivated] call EFUNC(debug,updateModuleStatus);
+};
+
 private _mode = ["ON", "OFF"] select _isActivated;
 private _jipId = format [QGVAR(switchLightsId_%1), _logic call BIS_fnc_netId];
 

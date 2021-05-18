@@ -228,6 +228,7 @@ class Cfg3DEN {
         #include "attributes\dynamicSlider.hpp"
 
         #include "attributes\dynamicClassSelect.hpp"
+        #include "attributes\dynamicToolboxActivationMode.hpp"
         #include "attributes\dynamicToolboxSide.hpp"
         #include "attributes\dynamicToolboxUnitStance.hpp"
         #include "attributes\dynamicSkillSlider.hpp"
@@ -239,7 +240,7 @@ class Cfg3DEN {
         #include "modules\generateSoldiers\attributes\classListMode.hpp"
         #include "modules\generateSoldiers\attributes\spawnPosMode.hpp"
 
-				#include "modules\ambientFlyby\attributes\mode.hpp"
+		#include "modules\ambientFlyby\attributes\mode.hpp"
 	};
     class EventHandlers {
         class ADDON {

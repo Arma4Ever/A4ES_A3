@@ -151,6 +151,73 @@
       <Polish>Brak efektu działania modułu</Polish>
     </Key>
   </Package>
+  <Package name="Modules_AttributesCommon">
+    <Key ID="STR_A3CS_Modules_Attributes_activationSettingsSubCategory">
+      <Polish>Ustawienia aktywacji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_activationMode">
+      <Polish>Metoda aktywacji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_activationMode_Tooltip">
+      <Polish>Jaką metodą ma być aktywowany moduł.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_activationNearestPlayerDistance">
+      <Polish>Dystans do najbliższego gracza</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_activationNearestPlayerDistance_Tooltip">
+      <Polish>Na ile musi zbliżyć się najbliższy gracz, aby aktywować moduł.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_activationIgnoreHelicopters">
+      <Polish>Ignoruj śmigłowce</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_activationIgnoreHelicopters_tooltip">
+      <Polish>Czy śmigłowce mają być ignorowane podczas sprawdzania najbliższego gracza.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_activationIgnorePlanes">
+      <Polish>Ignoruj samoloty</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_activationIgnorePlanes_tooltip">
+      <Polish>Czy samoloty mają być ignorowane podczas sprawdzania najbliższego gracza.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_activationCondition">
+      <Polish>Warunek logiczny</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_activationCondition_Tooltip">
+      <Polish>Warunek logiczny po którego spełnieniu moduł zostanie aktywowany. UWAGA! Warunek będzie sprawdzany tylko na serwerze.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_activationDelay">
+      <Polish>Opóźnij aktywację</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_activationDelay_tooltip">
+      <Polish>Czy aktywacja modułu ma zostać opóźniona.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_activationDelayTime">
+      <Polish>Czas opóźnienia</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_activationDelayTime_Tooltip">
+      <Polish>Czas w sekundach jaki ma odczekać moduł od momentu aktywacji do wykonania kodu.</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_dynamicToolboxActivationMode">
+    <Key ID="STR_A3CS_Modules_dynamicToolboxActivationMode_value_nearestPlayer">
+      <Polish>Dystans od graczy</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolboxActivationMode_value_nearestPlayer_Desc">
+      <Polish>Moduł będzie aktywowany przez zbliżenie się graczy do modułu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolboxActivationMode_value_condition">
+      <Polish>Warunek logiczny</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolboxActivationMode_value_condition_Desc">
+      <Polish>Moduł będzie aktywowany po spełnieniuw warunku logicznego.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolboxActivationMode_value_trigger">
+      <Polish>Wyzwalacz</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolboxActivationMode_value_trigger_Desc">
+      <Polish>Moduł będzie aktywowany w momencie w którym połączony z nim wyzwalacz zostanie aktywowany. Pamiętaj - należy unikać wyzwalaczy/triggerów jak tylko to możliwe. Użyj wyzwalacza/triggera tylko gdy nie ma możliwości osiągniecia pożądanego efektu przy użyciu innych metod aktywacji.</Polish>
+    </Key>
+  </Package>
   <Package name="Modules_dynamicClassSelect">
     <Key ID="STR_A3CS_Modules_dynamicClassSelect_AssetsListTitle">
       <Polish>Wybierz klasy z listy...</Polish>
@@ -206,10 +273,7 @@
       <Polish>Generator piechoty</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_shortDescription">
-      <Polish>Opis generatora piechoty</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_generateSoldiers_description">
-      <Polish></Polish>
+      <Polish>Moduł generuje jednostki piechoty na danym obszarze.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_positionInfo">
       <Polish>Pozycja modułu oraz jego obszar oznaczają strefę spawnu dla wygenerowanych grup.</Polish>
@@ -569,19 +633,19 @@
       <Polish>Wyłącz randomizację wyglądu</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableBISRandomization_Tooltip">
-      <Polish>Wyłącza armową randomizację hełmów, masek i gogli dla wygenerowanych jednostek.</Polish>
+      <Polish>Wyłącza randomizację hełmów, masek i gogli dla wygenerowanych jednostek.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableDynamicSim">
       <Polish>Wyłącz dynamiczną symulację</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableDynamicSim_Tooltip">
-      <Polish>Wyłącz dynamiczną symulację dla wygenerowanych grup. Pamiętaj, że ma to realny wpływ na performance serwera, headlessa jak i graczy na serwerze. Użyj tej opcji tylko jeśli wiesz co robisz.</Polish>
+      <Polish>Wyłącz dynamiczną symulację dla wygenerowanych grup. Pamiętaj, że ma to realny wpływ na wydajność misji (serwera, headlessa jak i graczy na serwerze). Użyj tej opcji tylko jeśli wiesz co robisz.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableHeadless">
       <Polish>Wyłącz przekazanie do headlessa</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableHeadless_Tooltip">
-      <Polish>Blokuje przekazanie do headlessa (jeśli jest dostępny) wygenerowanych grup. Pamiętaj, że ma to realny wpływ na performance serwera. Użyj tej opcji tylko jeśli wiesz co robisz.</Polish>
+      <Polish>Blokuje przekazanie do headlessa (jeśli jest dostępny) wygenerowanych grup. Pamiętaj, że ma to realny wpływ na wydajność misji (jeśli headless jest dostępny). Użyj tej opcji tylko jeśli wiesz co robisz.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_addToCurators">
       <Polish>Dodaj grupy do obiektów zeusa</Polish>
@@ -723,10 +787,7 @@
       <Polish>Ostrzał artylerii</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_fireArtillery_shortDescription">
-      <Polish>shortDescription</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_description">
-      <Polish>description</Polish>
+      <Polish>Moduł generuje ostrzał artylerii na danym obszarze.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_fireArtillery_Attributes">
       <Polish>Właściwości ostrzału</Polish>
@@ -928,16 +989,13 @@
   </Package>
   <Package name="Modules_ambientFlyby">
     <Key ID="STR_A3CS_Modules_ambientFlyby_displayName">
-      <Polish>Ambient Flyby</Polish>
+      <Polish>Ambientowy przelot</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_ambientFlyby_shortDescription">
-      <Polish>Opis Ambient Flyby</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_ambientFlyby_description">
-      <Polish></Polish>
+      <Polish>Moduł generujący ambientowy przelot nad wyznaczonym obszarem.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_ambientFlyby_positionInfo">
-      <Polish>Pozycja modułu oraz jego obszar oznaczają strefę spawnu dla wygenerowanych grup.</Polish>
+      <Polish>Pozycja modułu określa miejsce na którym przelecą wygenerowane maszyny.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_ambientFlyby_Attributes_baseSettingsSubCategory">
       <Polish>Ustawienia podstawowe</Polish>
@@ -1111,6 +1169,20 @@
     </Key>
     <Key ID="STR_A3CS_Modules_generatorComposition_Warning_SyncError_Desc">
       <Polish>Moduł do poprawnego działania musi być zsynchronizowany z dokładnie jedną (i tylko jedną) jednostką piechoty (pojazdy nie są obsługiwane) której grupa ma być użyta jako kompozycja.</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_aiNightvision">
+    <Key ID="STR_A3CS_Modules_aiNightvision_displayName">
+      <Polish>Noktowizja AI</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_aiNightvision_shortDescription">
+      <Polish>Moduł przydzielający wszystkim AI na misji (także tym tworzonym w trakcie misji) dany model gogli noktowizyjnych.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_aiNightvision_Attributes_className">
+      <Polish>Model gogli</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_aiNightvision_Attributes_className_Tooltip">
+      <Polish>Model gogli NV który zostanie przydzielony wszystkim AI.</Polish>
     </Key>
   </Package>
 </Project>

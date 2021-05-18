@@ -14,59 +14,42 @@ _input params [
   ["_isActivated", false, [true]],
   ["_isCuratorPlaced", false, [true]]
 ];
-// Exit if module is null, not local, is deactivated or placed by zeus (should not happen)
+// Exit if module is null, not local or placed by zeus (should not happen)
 if (isNull _logic || !(local _logic) || !_isActivated || _isCuratorPlaced) exitWith {};
 
 // Exit if module was executed before
 if (_logic getVariable [QGVAR(executed), false]) exitWith {};
 
-LOG('Starting execution of EXEC_MODULE_NAME.');
-
 // Mark module as executed to prevent future executions
 _logic setVariable [QGVAR(executed), true, true];
 
-// Add extra sync time if module is executed on mission start
-if (CBA_missionTime < 30) then {
-  sleep 10;
+LOG('Starting init of EXEC_MODULE_NAME.');
+
+private _activationMode = _logic getVariable [QGVAR(activationMode), 0];
+
+// Exec module if activated & activation mode by trigger
+if (_activationMode isEqualTo 2) exitWith {
+  // Add extra sync time if module is executed on mission start
+  if (CBA_missionTime < 15) then {
+    sleep 5;
+  };
+
+  if (_logic getVariable [QGVAR(activationDelay), false]) then {
+    [
+      {_this call FUNC(generateSoldiers_moduleExec)},
+      [_logic],
+      _logic getVariable [QGVAR(activationDelayTime), 0]
+    ] call CBA_fnc_waitAndExecute;
+    LOG('Init of EXEC_MODULE_NAME finished - exection delayed.');
+  } else {
+    _logic call FUNC(generateSoldiers_moduleExec);
+    LOG('Init of EXEC_MODULE_NAME finished - executed.');
+  };
 };
 
-// Get logic area
-private _logicArea = [getPos _logic];
-_logicArea append (_logic getVariable ["objectarea", []]);
+// Add module to activator system
+[_logic, _activationMode, QFUNC(generateSoldiers_moduleExec)] call FUNC(addModuleToActivator);
 
-// Calc behaviour boundary area
-private _boundaryArea = switch (_logic getVariable [QGVAR(behaviourAreaBoundary), 0]) do {
-    case 0: {[]};
-    case 1: {_logic getVariable ["objectarea", []]};
-    case 2: {
-      private _syncedTriggers = (synchronizedObjects _logic) select {
-        _x isKindOf "EmptyDetector"
-      };
-      if (_syncedTriggers isEqualTo []) then {
-        []
-      } else {
-        private _trigger = _syncedTriggers # 0;
-        triggerArea _trigger
-      };
-    };
-    default {[]}
-};
-
-// Call module exec function
-if (
-  isMultiplayer
-  && {!(_logic getVariable [QGVAR(disableHeadless), false])}
-  && {!(isNull EGVAR(headless,headlessClient))}
-) then {
-  // Exec on headless
-  LOG_1('Spawning EXEC_MODULE_NAME exec function on headless (owner: %1)', str (owner EGVAR(headless,headlessClient)));
-  [_logic, _logicArea, _boundaryArea] remoteExec [QFUNC(generateSoldiers_moduleExec), owner EGVAR(headless,headlessClient)];
-} else {
-  // Exec on server
-  LOG('Spawning EXEC_MODULE_NAME exec function on server');
-  [_logic, _logicArea, _boundaryArea] spawn FUNC(generateSoldiers_moduleExec);
-};
-
-LOG('Execution of EXEC_MODULE_NAME finished.');
+LOG('Init of EXEC_MODULE_NAME finished - added to activator.');
 
 true
