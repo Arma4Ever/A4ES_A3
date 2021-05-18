@@ -31,9 +31,6 @@ VENDOR = {
     "@VET_Unflipping": {},
     "@BackpackOnChest": {},
     "@Breaching Charge": {},
-    "@The Mighty GAU-8 Avenger": {},
-    "@The Mighty GAU-8 Avenger - Less FX More Performance": {},
-    "@The Mighty GAU-8 Avenger - ACE": {},
     "@Eden Extended Objects": {},
     "@O&T Expansion Eden": {
         "blacklist": ["expEden_static_ssDM"],
@@ -55,6 +52,8 @@ VENDOR = {
     "@ArmaZeusCache": {},
     "@ILBE Assault Pack - Rewrite": {},
     "@FRXA's TFAR Extra Retextured Equipment": {},
+    "@ACD - Arma3 Containers And Decorations": {},
+    "@Uriki's Mission Items": {},
     # "@Camofaces": {},
     "-Mocap": {
         "whitelist": ["MOCAP_mov"],

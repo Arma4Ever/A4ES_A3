@@ -16,11 +16,11 @@ class GVAR(forceGunLights) {
     defaultValue = "false";
     condition = "objectBrain";
 };
-class GVAR(disableBISRandomization) {
-    displayName = CSTRING(disableBISRandomization);
-    tooltip = CSTRING(disableBISRandomization_Tooltip);
-    property = QGVAR(disableBISRandomization);
+class GVAR(disableRandomization) {
+    displayName = CSTRING(disableRandomization);
+    tooltip = CSTRING(disableRandomization_Tooltip);
+    property = QGVAR(disableRandomization);
     control = "Checkbox";
-    expression = "if (_value) then {_this setVariable ['BIS_enableRandomization', false];};";
+    expression = "if (_value) then {_this setVariable ['BIS_enableRandomization', false];_this setVariable ['ALiVE_OverrideLoadout', true];_this setVariable ['CFP_DisableRandom', true];_this setVariable ['NoRandom', true]};";
     defaultValue = "false";
 };

@@ -13,7 +13,8 @@ class CfgPatches {
             "A3_3DEN",
             "A3_Data_F_Sams_Loadorder",
             "a3_expEden",
-            "3denEnhanced"
+            "3denEnhanced",
+            "armaContainersAndDecorations"
         };
         author = ECSTRING(main,Author);
         authors[] = {"3DEN Enhanced Team", "R3vo", "SzwedzikPL"};
