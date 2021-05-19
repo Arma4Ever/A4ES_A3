@@ -1,7 +1,9 @@
 
 PREP(addCuratorEditable3DENObject);
-PREP(assignZeus);
+PREP(addCuratorObjects);
+PREP(assignCuratorModule);
 PREP(createCuratorModule);
 PREP(drawPlayersIcons);
-PREP(getFreeCuratorModule);
-PREP(initCurator);
+PREP(handleCuratorPinged);
+PREP(initCuratorModule);
+PREP(unassignCuratorModule);

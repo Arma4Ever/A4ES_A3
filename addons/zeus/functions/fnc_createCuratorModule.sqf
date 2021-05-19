@@ -27,11 +27,18 @@ if (isNull GVAR(curatorGroup)) then {
   GVAR(curatorGroup) = _group;
 };
 
-private _zeus = GVAR(curatorGroup) createUnit ["ModuleCurator_F", [0, 0, 0], [], 0, "NONE"];
-GVAR(curators) pushBack _zeus;
-_zeus setVariable ["Addons", 3, true];
-_zeus setVariable ["BIS_fnc_initModules_disableAutoActivation", false];
-_zeus setCuratorCoef ["Place", 0];
-_zeus setCuratorCoef ["Delete", 0];
+private _module = GVAR(curatorGroup) createUnit ["ModuleCurator_F", [0, 0, 0], [], 0, "NONE"];
+_module setVariable ["Addons", 3, true];
+_module setVariable ["BIS_fnc_initModules_disableAutoActivation", false];
+_module setCuratorCoef ["place", 0];
+_module setCuratorCoef ["edit", 0];
+_module setCuratorCoef ["delete", 0];
+_module setCuratorCoef ["destroy", 0];
+_module setCuratorCoef ["group", 0];
+_module setCuratorCoef ["synchronize", 0];
 
-_zeus
+_module addEventHandler ["CuratorPinged", {
+  _this call FUNC(handleCuratorPinged);
+}];
+
+_module

@@ -4,10 +4,7 @@ if (isServer) then {
   // Unassign player from zeus if player is disconnected
   // Fixes A3 bug when zeus cannot return to slot
   addMissionEventHandler ["HandleDisconnect", {
-    params ["_unit"];
-    private _module = getAssignedCuratorLogic _unit;
-    if (isNull _module) exitWith {false};
-    unassignCurator _module;
+    _this call FUNC(unassignCuratorModule);
     false
   }];
 };
@@ -18,10 +15,11 @@ if (hasInterface) then {
   // Assign zeus
   [{
     if (player getVariable [QGVAR(isCurator), false]) then {
-      [player, true] call FUNC(assignZeus);
+      [QGVAR(assignCuratorModule), [player, true]] call CBA_fnc_serverEvent;
     };
-  }, [], 5] call CBA_fnc_waitAndExecute;
+  }, [], ([0.1, 1.5] select isMultiplayer)] call CBA_fnc_waitAndExecute;
 
+  // 3D players drawing during remote control
   ["unit", {
     // Exit if player is not curator
     if (isNull (getAssignedCuratorLogic player)) exitWith {};
@@ -32,7 +30,7 @@ if (hasInterface) then {
         removeMissionEventHandler ["Draw3D", GVAR(playersIconsDraw)];
       } else {
         LOG("Enabling draw of players icons");
-        GVAR(playersIconsDraw) = addMissionEventHandler ["Draw3D", DFUNC(drawPlayersIcons)];
+        GVAR(playersIconsDraw) = addMissionEventHandler ["Draw3D", {_this call FUNC(drawPlayersIcons)}];
       };
     }, []] call CBA_fnc_execNextFrame;
   }] call CBA_fnc_addPlayerEventHandler;
