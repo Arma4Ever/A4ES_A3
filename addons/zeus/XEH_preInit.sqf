@@ -20,9 +20,6 @@ ADDON = false;
 
 if (isServer) then {
   GVAR(curatorModulesGroup) = grpNull;
-  GVAR(curatorModules) = [];
-  GVAR(curatorUnits) = [];
-  GVAR(entitiesInitAdded) = false;
 
   // Entity inits for adding to curator
   ["CAManBase", "initPost", {

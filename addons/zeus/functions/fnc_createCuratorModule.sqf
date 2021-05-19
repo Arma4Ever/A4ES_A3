@@ -6,7 +6,7 @@
 
 if (!isServer) exitWith {};
 
-if (isNull GVAR(curatorGroup)) then {
+if (isNull GVAR(curatorModulesGroup)) then {
   private _group = grpNull;
 
   if (allCurators isNotEqualTo []) then {
@@ -24,10 +24,10 @@ if (isNull GVAR(curatorGroup)) then {
     _group deleteGroupWhenEmpty true;
   };
 
-  GVAR(curatorGroup) = _group;
+  GVAR(curatorModulesGroup) = _group;
 };
 
-private _module = GVAR(curatorGroup) createUnit ["ModuleCurator_F", [0, 0, 0], [], 0, "NONE"];
+private _module = GVAR(curatorModulesGroup) createUnit ["ModuleCurator_F", [0, 0, 0], [], 0, "NONE"];
 _module setVariable ["Addons", 3, true];
 _module setVariable ["BIS_fnc_initModules_disableAutoActivation", false];
 _module setCuratorCoef ["place", 0];
