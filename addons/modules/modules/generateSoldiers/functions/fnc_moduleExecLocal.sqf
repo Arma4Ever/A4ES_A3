@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-#define EXEC_MODULE_NAME GVAR(generateSoldiers)
 /*
  * Author: SzwedzikPL
  * Generates groups for generateSoldiers module
@@ -81,12 +80,14 @@ if (is3DENPreview) then {
   [_logic, "Generuje %1 jednostek w %2 grupach", _unitCount, _groupCount] call EFUNC(debug,moduleLog);
 };
 
-// Prep units init based on source & disableBISRandomization params
+// Prep units init based on source & disableRandomization params
 private _unitInit = if (
-  (_logic getVariable [QGVAR(disableBISRandomization), false])
+  (_logic getVariable [QGVAR(disableRandomization), false])
   // Randomization is disabled for compositions
   || (_source isEqualTo 1)
-) then {"this setVariable [""BIS_enableRandomization"", false];"} else {""};
+) then {
+  "this setVariable ['BIS_enableRandomization', false];this setVariable ['ALiVE_OverrideLoadout', true];this setVariable ['CFP_DisableRandom', true];this setVariable ['NoRandom', true];"
+} else {""};
 
 // Calc unit spawn range based on unit count
 private _unitSpawnRange = _unitCount * 1.5;
@@ -160,17 +161,14 @@ LOG('Generating groups of EXEC_MODULE_NAME finished.');
 // Wait for group inits to execute and sync
 sleep 5;
 
-// Save info about units generated for api
-_logic setVariable [QGVAR(unitsGenerated), true, true];
-
 // Exec module postExec
 if (_logic getVariable [QGVAR(addModulePostExec), false]) then {
-  if (isServer) then {
-    [_logic] call FUNC(generateSoldiers_modulePostExec);
-  } else {
-    [_logic] remoteExecCall [QFUNC(generateSoldiers_modulePostExec), 2];
-  };
+  LOG_1('Executing modulePostExec handler (isServer: %1).',str isServer);
+  _logic call (compile (_logic getVariable [QGVAR(modulePostExec), ""]));
 };
+
+// Delete module
+deleteVehicle _logic;
 
 LOG('Execution of EXEC_MODULE_NAME local exec function finished.');
 

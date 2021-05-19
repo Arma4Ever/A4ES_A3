@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-#define EXEC_MODULE_NAME GVAR(aiNightvision)
 /*
  * Author: SzwedzikPL
  * aiNightvision module function
@@ -17,24 +16,14 @@ _input params [
 // Exit if module is null, not local or placed by zeus (should not happen)
 if (isNull _logic || !(local _logic) || _isCuratorPlaced) exitWith {};
 
-// Exit if module was executed before
-if (_logic getVariable [QGVAR(executed), false]) exitWith {};
-
 LOG('Starting execution of EXEC_MODULE_NAME.');
-
-// Mark module as executed to prevent double execution
-_logic setVariable [QGVAR(executed), true, true];
-
-// Update module debug status
-if (is3DENPreview) then {
-  [_logic, true] call EFUNC(debug,updateModuleStatus);
-};
 
 // Load logic params
 private _className = _logic getVariable [QGVAR(className), ""];
 
 if (_className isEqualTo "") exitWith {
-  // TODO: Error?
+  WARNING('EXEC_MODULE_NAME - empty nvg classname.');
+  deleteVehicle _logic;
 };
 
 private _func = compile format ["

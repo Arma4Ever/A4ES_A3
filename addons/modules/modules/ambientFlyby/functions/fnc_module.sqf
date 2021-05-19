@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-#define EXEC_MODULE_NAME GVAR(ambientFlyby)
 /*
  * Author: Krzyciu, SzwedzikPL
  * Ambient flyby function
@@ -29,7 +28,6 @@ private _classListMode = _logic getVariable [QGVAR(classListMode), 0];
 private _classList = parseSimpleArray (_logic getVariable [QGVAR(classList), "[]"]);
 private _speed = _logic getVariable [QGVAR(flightSpeed), 20];
 private _shape = _logic getVariable [QGVAR(flybyShape), 1];
-private _isIronFront = ;
 
 // Exit if classList is not array or array is empty
 if (!(_classList isEqualType []) || (count _classList) isEqualTo 0) exitWith {
@@ -83,11 +81,6 @@ _proxy setDir _dir;
 _proxy setPosASL _posStart;
 _proxy setVelocity [_speed*(sin(_dir)), _speed*(cos(_dir)) ,0];
 
-private _needLandGearUp = (
-  isClass (configFile >> "CfgPatches" >> "uns_main") || // TODO: test & migrate to SOG (if needed)
-  {isClass (configFile >> "CfgPatches" >> "WW2_Core_c_IF_Data_c")}
-);
-
 for "_planeIndex" from 0 to _planeMaxIndex do {
   private _planeClass = if (_randomWeighted) then {
     // Get random class from classlist
@@ -104,13 +97,11 @@ for "_planeIndex" from 0 to _planeMaxIndex do {
     detach _plane;
   }];
 
-  // Iron Front planes seems not to animate gear when created with "FLY"
-  if (_needLandGearUp) then {
-    private _dummy = createAgent ["VirtualMan_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
-    _dummy moveInDriver _plane;
-    _dummy action ["LandGearUp", _plane];
-    deleteVehicle _dummy;
-  };
+  // Make sure landing gear is hidden
+  private _dummy = createAgent ["VirtualMan_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+  _dummy moveInDriver _plane;
+  _dummy action ["LandGearUp", _plane];
+  deleteVehicle _dummy;
 
   private _attachPosNew = switch (_shape) do {
     // diament

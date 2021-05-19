@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-#define EXEC_MODULE_NAME GVAR(fireArtillery)
 /*
  * Author: SzwedzikPL
  * fireArtillery module function

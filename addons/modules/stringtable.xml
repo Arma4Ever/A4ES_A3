@@ -612,7 +612,7 @@
       <Polish>Handler wykonania modułu</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_modulePostExec_Tooltip">
-      <Polish>Skrypt zostanie wykonany na serwerze (i tylko na serwerze, niezależnie od ustawień i obecności headlessa) w momencie gdy cały moduł się wykona - wszystkie grupy i ich jednostki zostały wygenerowane i przekazane do właściciela (serwer lub headless). Parametry: _this = moduł w którym zdeklarowaliśmy skrypt.\n\nTIP: Jako, że podany skrypt wykona się tylko na serwerze, można wykorzystać go jako inicjatora innych skryptów które chcemy wykonać w momencie wygenerowania przez moduł jednostek lub zmienić wartości flag używanych w triggerach (np. przy sprawdzaniu czy teren został wyczyszczony z wygenerowanych jednostek). Przykład: dodajemy skrypt wykonania modulu:\nmissionNamespace setVariable ["modul_wioski_wykonany", true, true];\n\n Następnie triggerze sprawdzającym teren wioski ustawiamy aktywację OPFOR, typ "not present"a w warunku triggera podajemy:\nthis and (missionNamespace getVariable ["modul_wioski_wykonany", false])</Polish>
+      <Polish>Skrypt zostanie wykonany na maszynie która wygenerowała jednostki (serwer lub headless) w momencie gdy cały moduł się wykona - wszystkie grupy i ich jednostki zostały wygenerowane i przekazane do właściciela (serwer lub headless). Parametry: _this = moduł w którym zdeklarowaliśmy skrypt.\n\nTIP: Jako, że podany skrypt wykona się tylko raz, na maszynie która wygenerowała jednostki, można wykorzystać go jako inicjatora innych skryptów które chcemy wykonać w momencie wygenerowania przez moduł jednostek lub zmienić wartości flag używanych w triggerach (np. przy sprawdzaniu czy teren został wyczyszczony z wygenerowanych jednostek). Przykład: dodajemy skrypt wykonania modulu:\nmissionNamespace setVariable ["modul_wioski_wykonany", true, true];\n\n Następnie triggerze sprawdzającym teren wioski ustawiamy aktywację OPFOR, typ "not present"a w warunku triggera podajemy:\nthis and (missionNamespace getVariable ["modul_wioski_wykonany", false])</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_extraSettingsSubCategory">
       <Polish>Ustawienia dodatkowe</Polish>
@@ -629,10 +629,10 @@
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_hasLambsRadio_Tooltip">
       <Polish>Pozwala wygenerowanym grupom (LAMBS) na zaawansowaną komunikację radiową między sobą. Dzięki temu, wygenerowane grupy mogą m.in. koordynować swoje działania i przychodzić sobie z pomocą. Zasięg komunikacji możesz ustawić z poziomu ustawień addonów w misji (domyślnie 2km). UWAGA, wyłączenie tej opcji nie wyłącza komunikacji całkowicie - ogranicza jedynie znacząco jej zasięg.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableBISRandomization">
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableRandomization">
       <Polish>Wyłącz randomizację wyglądu</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableBISRandomization_Tooltip">
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableRandomization_Tooltip">
       <Polish>Wyłącza randomizację hełmów, masek i gogli dla wygenerowanych jednostek.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableDynamicSim">
@@ -646,12 +646,6 @@
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableHeadless_Tooltip">
       <Polish>Blokuje przekazanie do headlessa (jeśli jest dostępny) wygenerowanych grup. Pamiętaj, że ma to realny wpływ na wydajność misji (jeśli headless jest dostępny). Użyj tej opcji tylko jeśli wiesz co robisz.</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_addToCurators">
-      <Polish>Dodaj grupy do obiektów zeusa</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_addToCurators_Tooltip">
-      <Polish>Dodaje wygenerowane grupy jako obiekty edytowalne wszystkim dostępnym zeusom.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_emptyCompositions">
       <Polish>Brak (nie wykryto żadnych kompozycji)</Polish>
@@ -752,10 +746,10 @@
   </Package>
   <Package name="Modules_switchLights">
     <Key ID="STR_A3CS_Modules_switchLights_displayName">
-      <Polish>Wyłącz latarnie</Polish>
+      <Polish>Wyłącz światła</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_switchLights_shortDescription">
-      <Polish>Moduł włącza/wyłącza latarnie oraz światła na budynkach w obszarze modułu. Moduł obsługuje dezaktywację, jeśli połączony z modułem trigger zostanie dezaktywowany, światła zostaną włączone.</Polish>
+      <Polish>Moduł włącza/wyłącza latarnie oraz światła na budynkach w obszarze modułu. Moduł obsługuje deaktywację (tylko w przypadku triggerów), jeśli połączony z modułem trigger zostanie dezaktywowany, światła zostaną włączone.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_switchLights_Attributes_segments">
       <Polish>Wyłączaj światła segmentami</Polish>
@@ -1183,6 +1177,53 @@
     </Key>
     <Key ID="STR_A3CS_Modules_aiNightvision_Attributes_className_Tooltip">
       <Polish>Model gogli NV który zostanie przydzielony wszystkim AI.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_aiNightvision_Warning_ClassNameEmpty_Desc">
+      <Polish>Klasa gogli nie może być pusta</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_addCuratorModule">
+    <Key ID="STR_A3CS_Modules_addCuratorModule_displayName">
+      <Polish>Dodaj moduł zeusa</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addCuratorModule_shortDescription">
+      <Polish>Moduł dodaje moduł do interfejsu zeusa.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addCuratorModule_Attributes_category">
+      <Polish>Kategoria</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addCuratorModule_Attributes_category_Tooltip">
+      <Polish>Nazwa kategorii pod którą ma być dostępny moduł. Jeśli chcesz dodać kilka modułów do tej samej kategorii, wystarczy podać tą samą nazwę kategorii dla kilku modułów.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addCuratorModule_Attributes_name">
+      <Polish>Nazwa modułu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addCuratorModule_Attributes_name_Tooltip">
+      <Polish>Nazwa modułu wyświetlana w interfejsie zeusa.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addCuratorModule_Attributes_icon">
+      <Polish>Ikona</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addCuratorModule_Attributes_icon_Tooltip">
+      <Polish>Ikona modułu wyświetlana w interfejsie zeusa.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addCuratorModule_Attributes_function">
+      <Polish>Funkcja</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addCuratorModule_Attributes_function_Tooltip">
+      <Polish>Nazwa funkcji (nazwa zmiennej która jest funkcją) która ma zostać wywołana w momencie użycia modułu przez zeusa, np. mission_fnc_myZeusModule</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addCuratorModule_Attributes_function_Description">
+      <Polish>Funkcja zostanie wykonana u zeusa który postawi moduł. Funckja zostanie wywołana z parametrami:&lt;br /&gt;#0 - _posASL: pozycja ASL modułu.&lt;br /&gt;#1 - _attachedObj: obiekt na którym został postawiony moduł (objNull jeśli brak).</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addCuratorModule_Warning_CategoryEmpty_Desc">
+      <Polish>Nazwa kategorii nie może być pusta.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addCuratorModule_Warning_NameEmpty_Desc">
+      <Polish>Nazwa modułu nie może być pusta.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addCuratorModule_Warning_FunctionEmpty_Desc">
+      <Polish>Nazwa funkcji nie może być pusta.</Polish>
     </Key>
   </Package>
 </Project>

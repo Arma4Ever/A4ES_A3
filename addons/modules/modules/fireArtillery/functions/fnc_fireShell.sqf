@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-#define EXEC_MODULE_NAME GVAR()
 /*
  * Author: SzwedzikPL
  * Fires shell for fireArtillery module
@@ -78,7 +77,7 @@ if (_ammoCat isEqualTo 4) exitWith {
   [_launcher, [0], _muzzle, _ammo] call EFUNC(common,loadMagazineInstantly);
 
   // Create target
-  private _target = createVehicle ["Land_HelipadEmpty_F" , _targetPos, [], 0, "CAN_COLLIDE"];
+  private _target = createVehicle ["Land_HelipadEmpty_F" , [0, 0, 0], [], 0, "CAN_COLLIDE"];
   _target setPos _targetPos;
 
   // Save target in launcher for cleanup

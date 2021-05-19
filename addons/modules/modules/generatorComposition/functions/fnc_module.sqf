@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-#define EXEC_MODULE_NAME GVAR(generatorComposition)
 /*
  * Author: SzwedzikPL
  * generatorComposition module function
@@ -28,6 +27,7 @@ private _units = (synchronizedObjects _logic) select {_x isKindOf "CAManBase"};
 // Exit if there're no synced units or more than one
 if ((count _units) isNotEqualTo 1) exitWith {
   LOG_1('Execution of EXEC_MODULE_NAME aborted - no synced units (units: %1).',str _units);
+  deleteVehicle _logic;
 };
 
 // Get group units
@@ -37,10 +37,13 @@ private _groupUnits = (units _group) select {isNull (objectParent _x)};
 // Exit if there're no units "on foot" in group
 if (_groupUnits isEqualTo []) exitWith {
   LOG_1('Execution of EXEC_MODULE_NAME aborted - no valid units (units: %1).',str _groupUnits);
+  deleteVehicle _logic;
 };
 
 // Save composition
 LOG_2('Saving generator composition "%1" (units count: %2)',_compositionId,str (count _groupUnits));
+
+// Save composition definition
 missionNamespace setVariable [
   format [QGVAR(generatorComposition_id_%1), _compositionId],
   _groupUnits apply {[typeOf _x, getUnitLoadout _x]},

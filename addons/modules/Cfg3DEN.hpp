@@ -5,7 +5,7 @@ class Cfg3DEN {
 			class Controls {
 				class Title;
                 class GVAR(description): ctrlStructuredText {
-                    idc = 702;
+                    idc = IDC_DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_DESC;
                     x = "48 * (pixelW * pixelGrid * 0.50)";
                     y = "5 * (pixelH * pixelGrid * 	0.50)";
                     w = "82 * (pixelW * pixelGrid * 0.50)";

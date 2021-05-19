@@ -2,7 +2,7 @@ class GVAR(fireArtillery): GVAR(base) {
     scope = 2;
     author = "SzwedzikPL";
     displayName = CSTRING(fireArtillery_displayName);
-    icon = "\a3\Modules_F_Curator\Data\portraitOrdnance_ca.paa";
+    icon = QPATHTOF(modules\fireArtillery\data\icon.paa);
     category = QGVAR(effects);
     function = QFUNC(fireArtillery_module);
     canSetArea = 1;

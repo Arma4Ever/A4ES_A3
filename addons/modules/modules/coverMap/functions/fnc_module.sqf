@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-#define EXEC_MODULE_NAME GVAR(coverMap)
 /*
  * Author: Bohemia Interavtive, SzwedzikPL
  * coverMap module function

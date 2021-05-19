@@ -10,6 +10,17 @@ if (isServer) then {
   GVAR(activatorModuleList) = [];
 };
 
+[QGVAR(addCuratorModule), {
+  params ["_category", "_name", "_icon", "_function"];
+
+  [
+    _category,
+    _name,
+    compile format ["_this call %1;", _function],
+    _icon
+  ] call zen_custom_modules_fnc_register;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(switchLightsLocal), {
   params ["_logic"];
 
@@ -24,6 +35,12 @@ if (isServer) then {
   // Save script handler
   _logic setVariable [QGVAR(switchScript), _switchScript];
 }] call CBA_fnc_addEventHandler;
+
+if (hasInterface) then {
+  [QGVAR(addCuratorModule), {
+    _this call FUNC(addCuratorModule_moduleExecLocal);
+  }] call CBA_fnc_addEventHandler;
+};
 
 if (is3DEN) then {
   call FUNC(initWarnings);

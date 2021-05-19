@@ -2,7 +2,7 @@ class GVAR(aiNightvision): GVAR(base) {
     scope = 2;
     author = "SzwedzikPL";
     displayName = CSTRING(aiNightvision_displayName);
-    icon = "\a3\3den\data\displays\display3den\panelright\modegroups_ca.paa";
+    icon = QPATHTOF(modules\aiNightvision\data\icon.paa);
     category = QGVAR(AI);
     function = QFUNC(aiNightvision_module);
     isTriggerActivated = 0;

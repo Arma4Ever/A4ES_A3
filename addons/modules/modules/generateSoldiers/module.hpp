@@ -479,10 +479,10 @@ class GVAR(generateSoldiers): GVAR(base) {
             property = QGVAR(hasLambsRadio);
             defaultValue = "true";
         };
-        class GVAR(disableBISRandomization): GVAR(dynamicCheckbox) {
-            displayName = CSTRING(generateSoldiers_Attributes_disableBISRandomization);
-            tooltip = CSTRING(generateSoldiers_Attributes_disableBISRandomization_Tooltip);
-            property = QGVAR(disableBISRandomization);
+        class GVAR(disableRandomization): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(generateSoldiers_Attributes_disableRandomization);
+            tooltip = CSTRING(generateSoldiers_Attributes_disableRandomization_Tooltip);
+            property = QGVAR(disableRandomization);
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(source)) isEqualTo 0);
         };
         class GVAR(disableDynamicSim): GVAR(dynamicCheckbox) {
@@ -494,12 +494,6 @@ class GVAR(generateSoldiers): GVAR(base) {
             displayName = CSTRING(generateSoldiers_Attributes_disableHeadless);
             tooltip = CSTRING(generateSoldiers_Attributes_disableHeadless_Tooltip);
             property = QGVAR(disableHeadless);
-        };
-        class GVAR(addToCurators): GVAR(dynamicCheckbox) {
-            displayName = CSTRING(generateSoldiers_Attributes_addToCurators);
-            tooltip = CSTRING(generateSoldiers_Attributes_addToCurators_Tooltip);
-            property = QGVAR(addToCurators);
-            defaultValue = "true";
         };
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};

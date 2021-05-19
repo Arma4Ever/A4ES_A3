@@ -12,15 +12,3 @@ private _units = units _group;
 if !(_logic getVariable [QGVAR(disableDynamicSim), false]) then {
   _group enableDynamicSimulation true;
 };
-
-// Add units to curators
-if (_logic getVariable [QGVAR(addToCurators), false]) then {
-  {
-    _x addCuratorEditableObjects [_units, true];
-  } forEach allCurators;
-};
-
-// Setup vars for admin
-{
-  _x setVariable [QGVAR(generator), _logic];
-} forEach _units;

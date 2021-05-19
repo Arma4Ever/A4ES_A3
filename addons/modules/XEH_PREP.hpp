@@ -47,3 +47,4 @@ PREP(validateEntity);
 #include "modules\switchLights\prep.hpp"
 #include "modules\ambientFlyby\prep.hpp"
 #include "modules\aiNightvision\prep.hpp"
+#include "modules\addCuratorModule\prep.hpp"
