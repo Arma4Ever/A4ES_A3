@@ -28,8 +28,6 @@ private _jipId = format [QGVAR(switchLightsId_%1), _logic call BIS_fnc_netId];
 // Send global event and save for JIP
 [QGVAR(switchLightsLocal), [_logic, _mode, CBA_missionTime], _jipId] call CBA_fnc_globalEventJIP;
 
-// ---------------------------
-
 LOG('Execution of EXEC_MODULE_NAME finished.');
 
 true

@@ -749,7 +749,7 @@
       <Polish>Wyłącz światła</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_switchLights_shortDescription">
-      <Polish>Moduł włącza/wyłącza latarnie oraz światła na budynkach w obszarze modułu. Moduł obsługuje deaktywację (tylko w przypadku triggerów), jeśli połączony z modułem trigger zostanie dezaktywowany, światła zostaną włączone.</Polish>
+      <Polish>Moduł włącza/wyłącza latarnie oraz światła na budynkach w obszarze modułu. Moduł obsługuje dezaktywację, jeśli połączony z modułem trigger zostanie dezaktywowany, światła zostaną włączone.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_switchLights_Attributes_segments">
       <Polish>Wyłączaj światła segmentami</Polish>

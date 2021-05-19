@@ -1,6 +1,6 @@
 class GVAR(ambientFlyby): GVAR(base) {
     scope = 2;
-    author = "Krzyciu";
+    author = "Krzyciu, SzwedzikPL";
     displayName = CSTRING(ambientFlyby_displayName);
     icon = QPATHTOF(modules\ambientFlyby\data\icon.paa);
     category = QGVAR(ambient);
@@ -13,6 +13,9 @@ class GVAR(ambientFlyby): GVAR(base) {
     class Attributes: AttributesBase {
         class GVAR(moduleShortDescription): GVAR(moduleShortDescription) {};
         class GVAR(moduleWarnings): GVAR(moduleWarnings) {};
+
+        // Attributes for module activator
+        #include "\z\a3cs\addons\modules\includes\moduleActivationAttributes.hpp"
 
         class GVAR(baseSettingsSubCategory): GVAR(moduleSubCategory) {
             displayName = CSTRING(ambientFlyby_Attributes_baseSettingsSubCategory);

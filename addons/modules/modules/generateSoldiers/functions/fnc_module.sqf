@@ -24,30 +24,7 @@ _logic setVariable [QGVAR(executed), true, true];
 
 LOG('Starting init of EXEC_MODULE_NAME.');
 
-private _activationMode = _logic getVariable [QGVAR(activationMode), 0];
-
-// Exec module if activated & activation mode by trigger
-if (_activationMode isEqualTo 2) exitWith {
-  // Add extra sync time if module is executed on mission start
-  if (CBA_missionTime < 15) then {
-    sleep 5;
-  };
-
-  if (_logic getVariable [QGVAR(activationDelay), false]) then {
-    [
-      {_this call FUNC(generateSoldiers_moduleExec)},
-      [_logic],
-      _logic getVariable [QGVAR(activationDelayTime), 0]
-    ] call CBA_fnc_waitAndExecute;
-    LOG('Init of EXEC_MODULE_NAME finished - exection delayed.');
-  } else {
-    _logic call FUNC(generateSoldiers_moduleExec);
-    LOG('Init of EXEC_MODULE_NAME finished - executed.');
-  };
-};
-
-// Add module to activator system
-[_logic, _activationMode, QFUNC(generateSoldiers_moduleExec)] call FUNC(addModuleToActivator);
+#include "\z\a3cs\addons\modules\includes\moduleActivation.sqf"
 
 LOG('Init of EXEC_MODULE_NAME finished - added to activator.');
 
