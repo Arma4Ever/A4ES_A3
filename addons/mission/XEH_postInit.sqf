@@ -56,8 +56,8 @@ if (isServer) then {
     // Disable target dyn sim and enable sim for all units
     _target enableDynamicSimulation false;
     {
-      _x enableSimulationGlobal true;false
-    } count _targetUnits;
+      _x enableSimulationGlobal true;
+    } forEach _targetUnits;
 
     // Check vehicle
     private _vehicle = objectParent _entity;

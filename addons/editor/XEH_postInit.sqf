@@ -7,6 +7,5 @@ if !(isServer) exitWith {};
 [{
   {
     _x call FUNC(initUnit);
-    false
-  } count allUnits;
+  } forEach allUnits;
 }, [], 0.5] call CBA_fnc_waitAndExecute;

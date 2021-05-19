@@ -10,6 +10,7 @@ private _moduleList = GVAR(activatorModuleList);
 private _index = GVAR(moduleActivatorIndex);
 
 if (_moduleList isEqualTo []) exitWith {
+  LOG("Removing module activator PFH");
   [GVAR(moduleActivatorPFH)] call CBA_fnc_removePerFrameHandler;
   GVAR(moduleActivatorIndex) = -1;
   GVAR(moduleActivatorPFH) = -1;

@@ -21,11 +21,9 @@ params ["_ctrl"];
       	_color
       ];
     };
-    false
-  } count _syncs;
+  } forEach _syncs;
   _ctrl drawIcon ["\a3\Ui_f\data\IGUI\Cfg\IslandMap\iconSensor_ca.paa", _color, _pos, 24, 24, 0];
-  false
-} count GVAR(triggersDrawData);
+} forEach GVAR(triggersDrawData);
 
 {
   _x params ["", "_pos", "_icon", "_color", "_colorBg", "_hasArea", "_a", "_b", "_angle", "_isRect", "_syncs"];
@@ -45,13 +43,11 @@ params ["_ctrl"];
       	_color
       ];
     };
-    false
-  } count _syncs;
+  } forEach _syncs;
 
   _ctrl drawIcon ["\a3\3DEN\Data\Cfg3DEN\Logic\textureBackgroundModule_ca.paa", _colorBg, _pos, 40, 40, 0];
   _ctrl drawIcon [_icon, _color, _pos, 32, 32, 0];
-  false
-} count GVAR(modulesDrawData);
+} forEach GVAR(modulesDrawData);
 
 {
   _x params ["_entity", "_icon", "_color", "_waypointsData"];
@@ -65,11 +61,9 @@ params ["_ctrl"];
         _color
       ];
       _prevPos = _x;
-      false
-    } count _waypointsData;
+    } forEach _waypointsData;
   };
   if (_icon isNotEqualTo "") then {
     _ctrl drawIcon [_icon, _color, getPos _entity, 24, 24, getDir _entity];
   };
-  false
-} count GVAR(entitiesDrawData);
+} forEach GVAR(entitiesDrawData);

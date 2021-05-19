@@ -15,6 +15,9 @@ if ((count _logs) > 30) then {
 
 GVAR(logs) = _logs;
 
+// Don't update logs list text if list is hidden
+if !(GVAR(showLogs)) exitWith {};
+
 private _display = uiNamespace getVariable [QGVAR(logsList), displayNull];
 if (isNull _display) exitWith {};
 

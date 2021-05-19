@@ -33,7 +33,6 @@ private _actions = [];
     [],
     _x
   ];
-  false
-} count _units;
+} forEach _units;
 
 _actions

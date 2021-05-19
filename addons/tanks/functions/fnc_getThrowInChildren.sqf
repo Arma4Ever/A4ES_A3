@@ -23,7 +23,6 @@ private _supportedGrenades = uiNamespace getVariable [QGVAR(hatchGrenadeClasses)
     ] call ACEFUNC(interact_menu,createAction);
     _actions pushBack [_action, [], _target];
   };
-  false
-} count (magazinesAmmoFull _player);
+} forEach (magazinesAmmoFull _player);
 
 _actions

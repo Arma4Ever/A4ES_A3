@@ -8,5 +8,4 @@ if !(isServer) exitWith {};
 
 {
   _x addCuratorEditableObjects [_this, true];
-  false
-} count allCurators;
+} forEach allCurators;

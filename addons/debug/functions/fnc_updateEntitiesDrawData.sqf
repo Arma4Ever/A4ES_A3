@@ -4,6 +4,8 @@
  * Updates entities data for map debug draw
  */
 
+// Do not update if map not visible
+if !(visibleMap) exitWith {};
 
 private _entitiesData = [];
 private _vehicles = [];
@@ -29,8 +31,7 @@ private _sideColors = [
         if ((_x # 1) >= _currentWaypoint) then {
           _waypointsData pushBack (waypointPosition _x);
         };
-        false
-      } count _waypoints;
+      } forEach _waypoints;
     } else {
       private _dest = expectedDestination _x;
       if ((_dest # 1) isNotEqualTo "DoNotPlan") then {
@@ -63,8 +64,6 @@ private _sideColors = [
     _color,
     _waypointsData
   ];
-
-  false
-} count allUnits;
+} forEach allUnits;
 
 GVAR(entitiesDrawData) = _entitiesData;

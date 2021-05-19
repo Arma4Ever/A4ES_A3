@@ -48,6 +48,11 @@ if (_initWatcher isEqualTo "true") then {
       private _logsListTextCtrl = _display displayCtrl IDC_LOGSLIST;
       _logsListTextCtrl ctrlSetFade (parseNumber (!GVAR(showLogs)));
       _logsListTextCtrl ctrlCommit 0;
+
+      // Update logs list text
+      if (GVAR(showLogs)) then {
+        [[]] call FUNC(addLogs);
+      };
     }, nil, 0
   ];
 
@@ -74,14 +79,12 @@ private _pfh = [{0 call FUNC(updateEntitiesDrawData)}, 0.5] call CBA_fnc_addPerF
     if (isNull (_x # 0)) then {
       [(_x # 0)] call FUNC(handleModuleDeleted);
     };
-    false
-  } count GVAR(modulesDrawData);
+  } forEach GVAR(modulesDrawData);
 }, 0, 1.5] call CBA_fnc_waitAndExecute;
 
 {
   _x call FUNC(initTrigger);
-  false
-} count (allMissionObjects "EmptyDetector");
+} forEach (allMissionObjects "EmptyDetector");
 
 // Add map draw script
 ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", {

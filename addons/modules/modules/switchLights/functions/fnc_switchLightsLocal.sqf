@@ -47,10 +47,9 @@ if (_segments) then {
       _counter = 0;
       sleep _segmentDelay;
     };
-    false
-  } count _lamps;
+  } forEach _lamps;
 } else {
-  {_x switchLight _mode;false} count _lamps;
+  {_x switchLight _mode} forEach _lamps;
 };
 
 if (is3DENPreview) then {
