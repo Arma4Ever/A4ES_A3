@@ -749,7 +749,7 @@
       <Polish>Wyłącz światła</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_switchLights_shortDescription">
-      <Polish>Moduł włącza/wyłącza latarnie oraz światła na budynkach w obszarze modułu. Moduł obsługuje dezaktywację, jeśli połączony z modułem trigger zostanie dezaktywowany, światła zostaną włączone.</Polish>
+      <Polish>Moduł włącza/wyłącza latarnie oraz światła na budynkach w obszarze modułu.&lt;br /&gt;&lt;br /&gt;Moduł wspiera dezaktywację i ponowną aktywację za pomocą tiggera. Jeśli połączony z modułem trigger zostanie dezaktywowany, światła zostaną włączone. Jeśli połączony z modułem trigger jest powtarzalny, i zostanie aktywowany ponownie, światła ponownie zgasną.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_switchLights_Attributes_segments">
       <Polish>Wyłączaj światła segmentami</Polish>
@@ -1224,6 +1224,29 @@
     </Key>
     <Key ID="STR_A3CS_Modules_addCuratorModule_Warning_FunctionEmpty_Desc">
       <Polish>Nazwa funkcji nie może być pusta.</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_aiNightvision">
+    <Key ID="STR_A3CS_Modules_radioJammer_displayName">
+      <Polish>Zagłuszanie radiowe</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_radioJammer_shortDescription">
+      <Polish>Moduł zagłusza nadawanie i odbieranie sygnału radiowego (TFAR) na danym obszarze.&lt;br /&gt;&lt;br /&gt;Moduł wspiera dezaktywację i ponowną aktywację za pomocą tiggera. Jeśli połączony z modułem trigger zostanie dezaktywowany, zagłuszanie zostanie wyłączone. Jeśli połączony z modułem trigger jest powtarzalny, i zostanie aktywowany ponownie, zagłuszanie zostanie ponownie włączone.&lt;br /&gt;&lt;br /&gt;Efekty zagłuszania mogą się stackować. Jesli gracz jest w obszarze dwóch zagłuszaczy i np. oba zagłuszają sygnał odbioru na poziomie 50%, jakość odbieranego sygnału zostanie obniżona do 25% (POWER * 0.5 * 0.5).</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_radioJammer_Attributes_sendingMultiplicator">
+      <Polish>Jakość nadawania</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_radioJammer_Attributes_sendingMultiplicator_Tooltip">
+      <Polish>Jakość nadawania sygnału radiowego w obszarze zagłuszania.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_radioJammer_Attributes_receivingMultiplicator">
+      <Polish>Jakość odbioru</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_radioJammer_Attributes_receivingMultiplicator_Tooltip">
+      <Polish>Jakość odbioru sygnału radiowego w obszarze zagłuszania.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_radioJammer_Multiplicators_Desc">
+      <Polish>Powyższe wartości (jakość nadwania i odbioru) działają na zasadzie mnożników, np. jeśli ustawimy jakość odbioru na 25%, jakość odbioru radia zostanie pomniejszona o 75% względem normalnej (czyli 25% normalnej jakości odbioru). Jakość odbioru 100% oznacza, że radia będą odbierać normalnie, a jakość odbioru 0% oznacza, iż radio nie będzie odbierać w ogóle.</Polish>
     </Key>
   </Package>
 </Project>

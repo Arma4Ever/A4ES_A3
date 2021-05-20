@@ -254,6 +254,7 @@ class CfgVehicles {
     #include "modules\fireArtillery\module.hpp"
     #include "modules\aiNightvision\module.hpp"
     #include "modules\addCuratorModule\module.hpp"
+    #include "modules\radioJammer\module.hpp"
 
     #include "hiddenModules.hpp"
 };

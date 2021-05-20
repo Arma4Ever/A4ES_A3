@@ -10,8 +10,12 @@ private _sendingMult = 1;
 private _receivingMult = 1;
 
 {
-  // TODO!
-} forEach GVAR(jammers);
+  _x params ["_area", "_jammerSendingMult", "_jammerReceivingMult"];
+  if (player inArea _area) then {
+    _sendingMult = _sendingMult * _jammerSendingMult;
+    _receivingMult = _receivingMult * _jammerReceivingMult;
+  };
+} forEach (missionNamespace getVariable [QGVAR(radioJammers), []]);
 
 {
   // Exit if mobile antenna in range - antenna effects do not stack

@@ -8,6 +8,8 @@ if (isServer) then {
   GVAR(moduleActivatorPFH) = -1;
   GVAR(moduleActivatorIndex) = -1;
   GVAR(activatorModuleList) = [];
+
+  GVAR(radioJammerModules) = [];
 };
 
 [QGVAR(addCuratorModule), {
