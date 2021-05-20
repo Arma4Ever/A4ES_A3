@@ -6,6 +6,8 @@
 
 params ["_unit", "_distance", "_shooter"];
 
+TRACE_3("handleSuppressed",_unit,_distance,_shooter);
+
 if (
   // Exit if EH is triggered for remote unit - should not happen
   !(local _unit) ||
@@ -32,6 +34,8 @@ private _overlayCtrl = _display displayCtrl IDC_OVERLAY;
 private _curSuppress = 1 - (ctrlFade _overlayCtrl);
 
 private _suppress = (_newSuppress + _curSuppress) min 1;
+
+TRACE_1("Suppress value updated",_suppress);
 
 _overlayCtrl ctrlSetFade (1 - _suppress);
 _overlayCtrl ctrlCommit 0.07;

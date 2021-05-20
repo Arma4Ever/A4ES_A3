@@ -9,9 +9,11 @@ LOG("updatePlayerMultiplicators");
 private _sendingMult = 1;
 private _receivingMult = 1;
 
+private _player = vehicle player;
+
 {
   _x params ["_area", "_jammerSendingMult", "_jammerReceivingMult"];
-  if (player inArea _area) then {
+  if (_player inArea _area) then {
     _sendingMult = _sendingMult * _jammerSendingMult;
     _receivingMult = _receivingMult * _jammerReceivingMult;
   };
@@ -19,7 +21,7 @@ private _receivingMult = 1;
 
 {
   // Exit if mobile antenna in range - antenna effects do not stack
-  if ((player distance _x) < 7) exitWith {
+  if ((_player distance _x) < 7) exitWith {
     _sendingMult = _sendingMult * 2.5;
     _receivingMult = _receivingMult * 0.85;
   };
