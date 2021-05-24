@@ -29,6 +29,7 @@ class ctrlEdit;
 class ctrlStructuredText;
 
 #include "CfgEventHandlers.hpp"
+#include "CfgVehicles.hpp"
 #include "CfgSurfaces.hpp"
 #include "Cfg3DEN.hpp"
 #include "CfgWeapons.hpp"
