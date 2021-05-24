@@ -13,8 +13,8 @@ private _syncedUnits = (get3DENConnections _module) select {
 
 if (_syncedUnits isEqualTo []) then {
   _warnings pushBack [
-    localize LSTRING(curator_Warning_NoSyncedUnits),
-    localize LSTRING(curator_Warning_NoSyncedUnits_Desc)
+    LLSTRING(curator_Warning_NoSyncedUnits),
+    LLSTRING(curator_Warning_NoSyncedUnits_Desc)
   ];
 };
 

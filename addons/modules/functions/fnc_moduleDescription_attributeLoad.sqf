@@ -146,7 +146,7 @@ _text = _text + ([
   "<img size='1.5' image='\a3\3den\data\displays\display3den\statusbar\server_ca.paa'/> ",
   format [
     "<t size='1.2' color='#d8d8d8' valign='middle' font='RobotoCondensedBold'>%1: %2</t><br/>",
-    localize LSTRING(ModuleDescription_Env_Title),
+    LLSTRING(ModuleDescription_Env_Title),
     localize format [
       LSTRING(ModuleDescription_Env_%1_Title),
       ['Server', 'Global', 'GlobalJIP'] select _isGlobal
@@ -205,7 +205,7 @@ _text = _text + ([
       "<br/>",
       format [
         "%1<br/><br/>",
-        localize LSTRING(ModuleDescription_Area_Active_Desc)
+        LLSTRING(ModuleDescription_Area_Active_Desc)
       ]
     ] select _canSetArea
   ]
@@ -271,7 +271,7 @@ if (_canSyncWithSupported) then {
   } forEach _canSyncWith;
 
   _syncDesc = [
-    localize LSTRING(ModuleDescription_canSyncWith_ElementsListTitle),
+    LLSTRING(ModuleDescription_canSyncWith_ElementsListTitle),
     ":<br/>"
   ] joinString "";
 
@@ -303,7 +303,7 @@ if (_canSyncWithSupported) then {
 
         _syncDesc = _syncDesc + format [
           "- %1: %2<br/>",
-          localize LSTRING(ModuleDescription_canSyncWith_Modules),
+          LLSTRING(ModuleDescription_canSyncWith_Modules),
           _modulesList
         ];
       };
@@ -318,8 +318,8 @@ if (_canSyncWithSupported) then {
       [
         _syncRequiredInfo,
         [
-          localize LSTRING(ModuleDescription_canSyncWith_SyncRequiredInfo_1),
-          localize LSTRING(ModuleDescription_canSyncWith_SyncRequiredInfo_2)
+          LLSTRING(ModuleDescription_canSyncWith_SyncRequiredInfo_1),
+          LLSTRING(ModuleDescription_canSyncWith_SyncRequiredInfo_2)
         ] select (_syncRequired - 1)
       ] select (_syncRequiredInfo isEqualTo ""),
       "<br/>"
@@ -348,7 +348,7 @@ if (_apiFunctions isNotEqualTo []) then {
     "<img size='1.5' image='\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\functions_ca.paa'/> ",
     format [
       _sectionTitle,
-      localize LSTRING(ModuleDescription_apiFunctions_Title)
+      LLSTRING(ModuleDescription_apiFunctions_Title)
     ],
     (_apiFunctions apply {
       [
@@ -359,7 +359,7 @@ if (_apiFunctions isNotEqualTo []) then {
     "<br/><br/>",
     "<img size='1.2' color='#cd2323' image='\a3\3den\data\cfgwaypoints\sentry_ca.paa'/> ",
     format [
-      localize LSTRING(ModuleDescription_apiFunctions_Desc),
+      LLSTRING(ModuleDescription_apiFunctions_Desc),
       [
         localize "STR_3DEN_Display3DEN_MenuBar_Tools_text",
         " / ",
@@ -376,7 +376,7 @@ if (_schema isNotEqualTo "") then {
     "<img size='1.5' image='\a3\3den\data\cfg3den\group\iconcustomcomposition_ca.paa'/> ",
     format [
       _sectionTitle,
-      localize LSTRING(ModuleDescription_Schema_Title)
+      LLSTRING(ModuleDescription_Schema_Title)
     ],
     format [
       "<t align='center'><img size='15' color='' shadow='0' image='%1'/></t><br/><br/>",

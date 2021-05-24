@@ -14,16 +14,16 @@
       <Polish>Trawa wycięta</Polish>
     </Key>
     <Key ID="STR_A3CS_Flora_cutFlora_displayName">
-      <Polish>Wytnij drzewo/krzak</Polish>
+      <Polish>Zetnij drzewo/krzak</Polish>
     </Key>
     <Key ID="STR_A3CS_Flora_cutFlora_objectNotFound">
-      <Polish>Brak drzewa/krzaku do wycięcia</Polish>
+      <Polish>Brak drzewa/krzaku do ścięcia</Polish>
     </Key>
     <Key ID="STR_A3CS_Flora_cutFlora_cuttingObject">
-      <Polish>Wycinanie...</Polish>
+      <Polish>Ścinanie drzewa/krzaku...</Polish>
     </Key>
     <Key ID="STR_A3CS_Flora_cutFlora_objectCut">
-      <Polish>Drzewo/krzak wycięte</Polish>
+      <Polish>Drzewo/krzak ścięte</Polish>
     </Key>
   </Package>
 </Project>

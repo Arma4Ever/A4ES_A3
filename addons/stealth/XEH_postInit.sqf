@@ -7,8 +7,8 @@ if (!hasInterface) exitWith {};
 [
   "A3CS Stealth", QGVAR(takedown),
   [
-    localize LSTRING(Takedown),
-    localize LSTRING(Takedown_Tooltip)
+    LLSTRING(Takedown),
+    LLSTRING(Takedown_Tooltip)
   ], {
     call FUNC(takedown);
   }, {}, [DIK_SPACE, [false, true, false]]

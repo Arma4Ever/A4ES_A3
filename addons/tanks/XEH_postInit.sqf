@@ -17,5 +17,5 @@ if !(hasInterface) exitWith {};
   if ((objectParent ace_player) isNotEqualTo _target) exitWith {};
 
   playSound QGVAR(knockingOnHatch);
-  [localize LSTRING(KnockingInHatch), 2] call ACEFUNC(common,displayTextStructured);
+  [LLSTRING(KnockingInHatch), 2] call ACEFUNC(common,displayTextStructured);
 }] call CBA_fnc_addEventHandler;

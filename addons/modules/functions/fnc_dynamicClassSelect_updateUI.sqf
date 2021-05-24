@@ -15,16 +15,16 @@ private _moduleClassListMode = _attributesValues getVariable [QGVAR(classListMod
 
 private _classListSize = (lnbSize _ctrlClassList) # 0;
 _ctrlClassListTitle ctrlSetText format [
-  localize LSTRING(dynamicClassSelect_addedClassesCount),
+  LLSTRING(dynamicClassSelect_addedClassesCount),
   _classListSize
 ];
 
 
 if (_moduleClassListMode isEqualTo 0) then {
-  _ctrlClassListModeTitle ctrlSetText ((localize LSTRING(dynamicClassSelect_randomWeight)) + "  ");
+  _ctrlClassListModeTitle ctrlSetText ((LLSTRING(dynamicClassSelect_randomWeight)) + "  ");
   _ctrlClassListDesc ctrlSetText "";
 } else {
-  _ctrlClassListModeTitle ctrlSetText ((localize LSTRING(dynamicClassSelect_unitsCount)) + "      ");
+  _ctrlClassListModeTitle ctrlSetText ((LLSTRING(dynamicClassSelect_unitsCount)) + "      ");
 
   private _unitCount = 0;
   private _maxIndex = _classListSize - 1;
@@ -35,7 +35,7 @@ if (_moduleClassListMode isEqualTo 0) then {
   };
 
   _ctrlClassListDesc ctrlSetText format [
-    localize LSTRING(dynamicClassSelect_unitsInGroupCount),
+    LLSTRING(dynamicClassSelect_unitsInGroupCount),
     _unitCount
   ];
 };

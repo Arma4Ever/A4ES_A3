@@ -22,8 +22,8 @@ if !(_selected isEqualTo [[],[],[],[],[]] && {(count _modules) isEqualTo 1}) exi
   0 spawn {
     sleep 0.001;
     [
-      localize LSTRING(EditingMultipleModulesError_Message),
-      localize LSTRING(EditingMultipleModulesError_Title),
+      LLSTRING(EditingMultipleModulesError_Message),
+      LLSTRING(EditingMultipleModulesError_Title),
       false,
       'OK'
     ] call BIS_fnc_3DENShowMessage;

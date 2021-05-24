@@ -123,7 +123,7 @@ _ctrlClassAddButton ctrlAddEventHandler ["buttonClick", {
 
   if (_classes isEqualTo []) exitWith {
     [
-      localize LSTRING(dynamicClassSelect_notRecognizedAnyClass),
+      LLSTRING(dynamicClassSelect_notRecognizedAnyClass),
       2,
       _ctrlClassEditNotfBar
     ] call FUNC(dynamicClassSelect_showNotification);
@@ -151,25 +151,25 @@ _ctrlClassAddButton ctrlAddEventHandler ["buttonClick", {
       GVAR(dynamicAttributesValues)
     ] call FUNC(dynamicClassSelect_updateUI);
 
-    private _classesWord = localize LSTRING(dynamicClassSelect_classWordSingle);
+    private _classesWord = LLSTRING(dynamicClassSelect_classWordSingle);
 
     if (_addedCount > 1) then {
       if (_addedCount > 4) then {
-        _classesWord = localize LSTRING(dynamicClassSelect_classWordMany);
+        _classesWord = LLSTRING(dynamicClassSelect_classWordMany);
       } else {
-        _classesWord = localize LSTRING(dynamicClassSelect_classWordFew);
+        _classesWord = LLSTRING(dynamicClassSelect_classWordFew);
       };
     };
 
     [
       format [
-        localize LSTRING(dynamicClassSelect_addedClassesToList),
+        LLSTRING(dynamicClassSelect_addedClassesToList),
         _addedCount,
         _classesWord,
         [
           "",
           format [
-            " " + (localize LSTRING(dynamicClassSelect_addedClassesToList_Rejected)),
+            " " + (LLSTRING(dynamicClassSelect_addedClassesToList_Rejected)),
             _rejectedCount
           ]
         ] select (_rejectedCount > 0)
@@ -179,7 +179,7 @@ _ctrlClassAddButton ctrlAddEventHandler ["buttonClick", {
     ] call FUNC(dynamicClassSelect_showNotification);
   } else {
     [
-      localize LSTRING(dynamicClassSelect_notRecognizedAnyClass),
+      LLSTRING(dynamicClassSelect_notRecognizedAnyClass),
       2,
       _ctrlClassEditNotfBar
     ] call FUNC(dynamicClassSelect_showNotification);

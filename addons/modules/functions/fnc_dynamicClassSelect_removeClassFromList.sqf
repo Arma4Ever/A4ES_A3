@@ -24,7 +24,7 @@ _ctrlClassList lnbSetCurSelRow (_index min (((lnbSize _ctrlClassList) # 0) - 1))
 
 // Show notification
 [
-  format [localize LSTRING(dynamicClassSelect_removedClassToList), _displayName],
+  format [LLSTRING(dynamicClassSelect_removedClassToList), _displayName],
   1,
   _notificationBar
 ] call FUNC(dynamicClassSelect_showNotification);

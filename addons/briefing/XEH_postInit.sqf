@@ -3,7 +3,7 @@
 if !(hasInterface) exitWith {};
 
 // Add character info
-player createDiarySubject [QGVAR(characterInfo), localize LSTRING(Character)];
+player createDiarySubject [QGVAR(characterInfo), LLSTRING(Character)];
 
 // TODO: Add A3CS settings with info about enabled/disabled features (i.e. disabled squad radar)
 // This will remove needless confusion
@@ -20,16 +20,16 @@ private _characterDesc = player getVariable [QGVAR(characterDesc), ""];
 // Add character description if present
 if (_characterDesc isNotEqualTo "") then {
   player createDiaryRecord [QGVAR(characterInfo), [
-    localize LSTRING(CharacterDesc_Title),
-    "<font size='20'>" + (localize LSTRING(CharacterDesc)) + "</font><br/><br/><font size='15'>" + _characterDesc + "</font>"
+    LLSTRING(CharacterDesc_Title),
+    "<font size='20'>" + (LLSTRING(CharacterDesc)) + "</font><br/><br/><font size='15'>" + _characterDesc + "</font>"
   ], taskNull, "", false];
 };
 
 player createDiaryRecord [QGVAR(characterInfo), [
-  localize LSTRING(CharacterInfo_Title),
+  LLSTRING(CharacterInfo_Title),
   format [
     "<font size='20'>%1</font><br/><br/><font size='16'>%2</font><br/><font size='15'>%3</font><br/><br/><font size='16'>%4</font><br/><font size='15'>%5</font>",
-    localize LSTRING(CharacterInfo),
+    LLSTRING(CharacterInfo),
     localize ELSTRING(common,rank),
     _rankInfo # 0,
     localize ELSTRING(common,traits),

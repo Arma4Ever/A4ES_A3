@@ -5,8 +5,8 @@ if (hasInterface) then {
   if ((actionKeys "Throw") isEqualTo [34]) then {
     [{!(isNull (findDisplay 46))}, {
         [
-          localize LSTRING(Warning_Message),
-          localize LSTRING(Warning_Message_Header),
+          LLSTRING(Warning_Message),
+          LLSTRING(Warning_Message_Header),
           true
         ] spawn BIS_fnc_guiMessage;
     }] call CBA_fnc_waitUntilAndExecute;
@@ -83,8 +83,8 @@ if (!hasInterface) exitWith {};
   if ((getMissionConfigValue ["a3c_missionTemplate", 0]) < REQUIRED_MISSION_TEMPLATE_VERSION) then {
     0 spawn {
       sleep 3;
-      diag_log localize LSTRING(WrongMissionTemplateWarning);
-      systemChat localize LSTRING(WrongMissionTemplateWarning);
+      diag_log text LLSTRING(WrongMissionTemplateWarning);
+      systemChat LLSTRING(WrongMissionTemplateWarning);
     };
   };
 

@@ -20,10 +20,10 @@ _compositions = _compositions arrayIntersect _compositions;
 // Add info about empty compositions
 if (_compositions isEqualTo []) then {
   _compositions = [[
-    localize LSTRING(generateSoldiers_emptyCompositions),
+    LLSTRING(generateSoldiers_emptyCompositions),
     "",
     true,
-    localize LSTRING(generateSoldiers_emptyCompositions_Tooltip),
+    LLSTRING(generateSoldiers_emptyCompositions_Tooltip),
     QPATHTOF(data\warning_red.paa)
   ]];
 };

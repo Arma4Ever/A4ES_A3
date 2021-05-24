@@ -11,5 +11,5 @@ if (isNull _squad) exitWith {};
 
 private _squadName = _squad getVariable ["name", ""];
 if (_squadName isNotEqualTo "") then {
-  _actionData set [1, format ["%1: %2", localize LSTRING(JoinSquad), _squadName]];
+  _actionData set [1, format ["%1: %2", LLSTRING(JoinSquad), _squadName]];
 };
