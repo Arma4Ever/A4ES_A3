@@ -94,6 +94,7 @@ class GVAR(createTask): GVAR(base) {
             displayName = CSTRING(createTask_Attributes_showPos);
             tooltip = CSTRING(createTask_Attributes_showPos_tooltip);
             property = QGVAR(showPos);
+            defaultValue = "true";
             GVAR(observeValue) = 0;
         };
 
@@ -101,6 +102,7 @@ class GVAR(createTask): GVAR(base) {
             displayName = CSTRING(createTask_Attributes_showNotification);
             tooltip = CSTRING(createTask_Attributes_showNotification_tooltip);
             property = QGVAR(showNotification);
+            defaultValue = "true";
             GVAR(observeValue) = 0;
             GVAR(description) = CSTRING(createTask_Attributes_showNotification_desc);
         };

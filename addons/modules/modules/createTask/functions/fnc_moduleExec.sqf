@@ -20,7 +20,7 @@ if (_title isEqualTo "") exitWith {
 };
 
 private _pos = [];
-if (_logic getVariable [QGVAR(showPos), false]) then {
+if (_logic getVariable [QGVAR(showPos), true]) then {
   _pos = getPos _logic;
 };
 
@@ -36,7 +36,7 @@ if (_logic getVariable [QGVAR(showPos), false]) then {
     _pos,
     _logic getVariable [QGVAR(state), 0]
   ],
-  _logic getVariable [QGVAR(showNotification), false]
+  _logic getVariable [QGVAR(showNotification), true]
 ] call EFUNC(tasks,createTask);
 
 // Delete module

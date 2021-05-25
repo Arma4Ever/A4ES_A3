@@ -18,7 +18,7 @@ if (_task isEqualTo "") exitWith {
 [
   _task,
   _logic getVariable [QGVAR(state), 0],
-  _logic getVariable [QGVAR(showNotification), false]
+  _logic getVariable [QGVAR(showNotification), true]
 ] call EFUNC(tasks,setTaskState);
 
 // Delete module

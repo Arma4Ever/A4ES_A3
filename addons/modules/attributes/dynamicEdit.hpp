@@ -29,18 +29,18 @@ class GVAR(dynamicEditMulti3): EditMulti3 {
 class GVAR(dynamicEditMulti5): EditMulti5 {
     attributeLoad = QUOTE(_this call FUNC(dynamicEdit_attributeLoad));
     // TODO: Fix scroll (with & without desc)
-    h = "(5 * 5 + 1.6 * 5) * (pixelH * pixelGrid * 0.50)";
+    h = "((6 * 5) + 2) * (pixelH * pixelGrid * 0.50)";
     class Controls: Controls {
         class BottomBackground: Background {
             y = "0.8 * 5 * (pixelH * pixelGrid * 0.50)";
-            h = "(5 * 5 + 0.8 * 5) * (pixelH * pixelGrid * 0.50)";
+            h = "5 * 5 * (pixelH * pixelGrid * 0.50)";
             colorBackground[] = {0, 0, 0, 0.5};
         };
         class Background: Background {
             style = 64;
             colorText[] = {1, 1, 1, 1};
             y = "0.8 * 5 * (pixelH * pixelGrid * 0.50)";
-            h = "(5 * 5 + 0.8 * 5) * (pixelH * pixelGrid * 0.50)";
+            h = "5 * 5 * (pixelH * pixelGrid * 0.50)";
         };
         class Title: Title {
             DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE_PROPERTIES(left,0);
@@ -49,11 +49,11 @@ class GVAR(dynamicEditMulti5): EditMulti5 {
             colorBackground[] = {0, 0, 0, 0};
         };
         class Value: Value {
-            //h = "5 * 3.5 * (pixelH * pixelGrid * 0.50)";
-            y = "1.25 * 5 * (pixelH * pixelGrid * 0.50)";
+            h = "5 * 5 * (pixelH * pixelGrid * 0.50)";
+            y = "1 * 5 * (pixelH * pixelGrid * 0.50)";
         };
         class GVAR(description): GVAR(description) {
-            y = "(5 * 3.5 + 1.6 * 5) * (pixelH * pixelGrid * 0.50)";
+            y = "(5 * 5 + 0.8 * 5) * (pixelH * pixelGrid * 0.50)";
         };
     };
 };

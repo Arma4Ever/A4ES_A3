@@ -43,6 +43,7 @@ class GVAR(setTaskState): GVAR(base) {
             displayName = CSTRING(setTaskState_Attributes_showNotification);
             tooltip = CSTRING(setTaskState_Attributes_showNotification_tooltip);
             property = QGVAR(showNotification);
+            defaultValue = "true";
             GVAR(observeValue) = 0;
         };
 
