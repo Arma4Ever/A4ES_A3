@@ -10,4 +10,14 @@ if (hasInterface) then {
   GVAR(fixingInvisibleGear) = false;
 };
 
+if (isServer) then {
+  {
+    [_x, "GetOut", {
+      [{
+        _this call FUNC(handleGetOut);
+      }, _this] call CBA_fnc_execNextFrame;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+  } forEach ["Plane", "Helicopter", "Car", "Tank", "Ship", "StaticWeapon"];
+};
+
 ADDON = true;
