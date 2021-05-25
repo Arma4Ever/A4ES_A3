@@ -49,3 +49,6 @@ PREP(validateEntity);
 #include "modules\aiNightvision\prep.hpp"
 #include "modules\addCuratorModule\prep.hpp"
 #include "modules\radioJammer\prep.hpp"
+#include "modules\createTask\prep.hpp"
+#include "modules\setTaskState\prep.hpp"
+// #include "modules\spawnUnits\prep.hpp"

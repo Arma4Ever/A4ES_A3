@@ -150,16 +150,16 @@ class CfgVehicles {
                 GVAR(observeValue) = 1;
             };
 
-            class GVAR(dynamicToolboxActivationMode): Default {
-                control = QGVAR(dynamicToolboxActivationMode);
-                typeName = "NUMBER";
-                GVAR(observeValue) = 1;
-            };
-
             class GVAR(dynamicToolboxSide): Default {
                 control = QGVAR(dynamicToolboxSide);
                 typeName = "NUMBER";
             };
+
+            class GVAR(dynamicToolboxTaskState): Default {
+                control = QGVAR(dynamicToolboxTaskState);
+                typeName = "NUMBER";
+            };
+
             class GVAR(dynamicToolboxUnitStance): Default {
                 control = QGVAR(dynamicToolboxUnitStance);
                 typeName = "NUMBER";
@@ -244,6 +244,18 @@ class CfgVehicles {
         };
     };
 
+    // Base class for curator modules
+    class GVAR(baseCurator): Module_F {
+        scope = 0;
+        scopeCurator = 0;
+        is3DEN = 0;
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        curatorCanAttach = 1;
+        curatorCost = 0;
+        curatorInfoType = "";
+    };
+
     #include "modules\coverMap\module.hpp"
     #include "modules\curator\module.hpp"
     #include "modules\generateSoldiers\module.hpp"
@@ -255,6 +267,10 @@ class CfgVehicles {
     #include "modules\aiNightvision\module.hpp"
     #include "modules\addCuratorModule\module.hpp"
     #include "modules\radioJammer\module.hpp"
+    #include "modules\createTask\module.hpp"
+    #include "modules\setTaskState\module.hpp"
 
-    #include "hiddenModules.hpp"
+    // #include "modules\spawnUnits\module.hpp"
+
+    /*#include "hiddenModules.hpp"*/
 };

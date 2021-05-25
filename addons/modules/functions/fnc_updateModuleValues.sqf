@@ -10,8 +10,13 @@ params ["_module", ["_validate", true, [true]]];
 // Save entityID in case of future unregistration
 _module setVariable [QGVAR(entityID), get3DENEntityID _module];
 
-private _moduleValues = _module getVariable [QGVAR(moduleValues), (false call CBA_fnc_createNamespace)];
+private _moduleValues = _module getVariable [QGVAR(moduleValues), objNull];
+if (isNull _moduleValues) then {
+  _moduleValues = false call CBA_fnc_createNamespace;
+};
+
 private _moduleValuesProperties = _module getVariable QGVAR(moduleValueProperties);
+private _moduleConfig = configOf _module;
 
 // Setup list linking attributes with properties
 if (isNil "_moduleValuesProperties") then {
@@ -19,9 +24,7 @@ if (isNil "_moduleValuesProperties") then {
 
   // Apply values to namespace
   private _attributesConfigs = (
-    QUOTE((getNumber (_x >> QQGVAR(observeValue))) isEqualTo 1) configClasses (
-      (configOf _module) >> "Attributes"
-    )
+    QUOTE((getNumber (_x >> QQGVAR(observeValue))) isEqualTo 1) configClasses (_moduleConfig >> "Attributes")
   );
 
   {

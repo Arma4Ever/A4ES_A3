@@ -230,8 +230,13 @@ class Cfg3DEN {
         #include "attributes\dynamicClassSelect.hpp"
         #include "attributes\dynamicToolboxActivationMode.hpp"
         #include "attributes\dynamicToolboxSide.hpp"
+        #include "attributes\dynamicToolboxTaskState.hpp"
         #include "attributes\dynamicToolboxUnitStance.hpp"
         #include "attributes\dynamicSkillSlider.hpp"
+
+        // #include "modules\spawnUnits\attributes\mode.hpp"
+
+        #include "modules\createTask\attributes\ownerToolbox.hpp"
 
         #include "modules\fireArtillery\attributes\conditionType.hpp"
         #include "modules\fireArtillery\attributes\targetPosMode.hpp"

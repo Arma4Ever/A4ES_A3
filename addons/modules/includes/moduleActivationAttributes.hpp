@@ -2,11 +2,27 @@ class GVAR(activationSettingsSubCategory): GVAR(moduleSubCategory) {
     displayName = CSTRING(Attributes_activationSettingsSubCategory);
     property = QGVAR(activationSettingsSubCategory);
 };
-class GVAR(activationMode): GVAR(dynamicToolboxActivationMode) {
+
+class GVAR(activationMode): Default {
     displayName = CSTRING(Attributes_activationMode);
     tooltip = CSTRING(Attributes_activationMode_Tooltip);
     property = QGVAR(activationMode);
-    defaultValue = "0";
+    typeName = "NUMBER";
+    GVAR(observeValue) = 1;
+
+    #ifdef MODULE_ACTIVATOR_CONTROL
+        control = MODULE_ACTIVATOR_CONTROL;
+        #undef MODULE_ACTIVATOR_CONTROL
+    #else
+        control = QGVAR(dynamicToolboxActivationMode);
+    #endif
+
+    #ifdef MODULE_ACTIVATOR_DEFAULT_VALUE
+        defaultValue = MODULE_ACTIVATOR_DEFAULT_VALUE;
+        #undef MODULE_ACTIVATOR_DEFAULT_VALUE
+    #else
+        defaultValue = "0";
+    #endif
 };
 class GVAR(activationNearestPlayerDistance): GVAR(dynamicSlider) {
     displayName = CSTRING(Attributes_activationNearestPlayerDistance);
@@ -45,7 +61,7 @@ class GVAR(activationDelay): GVAR(dynamicCheckbox) {
     displayName = CSTRING(Attributes_activationDelay);
     tooltip = CSTRING(Attributes_activationDelay_tooltip);
     property = QGVAR(activationDelay);
-    GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(activationMode)) isNotEqualTo 2);
+    GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(activationMode)) isNotEqualTo -1);
 };
 class GVAR(activationDelayTime): GVAR(dynamicEdit) {
     displayName = CSTRING(Attributes_activationDelayTime);
@@ -53,5 +69,5 @@ class GVAR(activationDelayTime): GVAR(dynamicEdit) {
     property = QGVAR(activationDelayTime);
     defaultValue = "'0'";
     validate = "NUMBER";
-    GVAR(conditionActive) = QUOTE(((_this getVariable QQGVAR(activationDelay)) isEqualTo true) && ((_this getVariable QQGVAR(activationMode)) isNotEqualTo 2));
+    GVAR(conditionActive) = QUOTE(((_this getVariable QQGVAR(activationDelay)) isEqualTo true) &&((_this getVariable QQGVAR(activationMode)) isNotEqualTo -1));
 };

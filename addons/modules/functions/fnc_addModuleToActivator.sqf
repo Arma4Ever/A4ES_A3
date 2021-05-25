@@ -5,12 +5,15 @@
  */
 
 params ["_logic", "_activationMode", "_activatedFncName"];
+TRACE_3("addModuleToActivator",_logic,_activationMode,_activatedFncName);
 
 if !(isServer) exitWith {};
 
-LOG_3("Adding module to activator (logic: %1 activationMode: %2 activatedFncName: %3).",str _logic,str _activationMode,_activatedFncName);
-
 private _condition = compile ([_logic, _activationMode] call FUNC(getModuleActivatorCond));
+#ifdef DEBUG_MODE_FULL
+diag_log text "condition:";
+diag_log _condition;
+#endif
 private _activation = if (_logic getVariable [QGVAR(activationDelay), false]) then {
   compile format [
     "[{_this call %1}, _this, %2] call CBA_fnc_waitAndExecute;",

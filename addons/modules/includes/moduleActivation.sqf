@@ -1,8 +1,11 @@
 
 private _activationMode = _logic getVariable [QGVAR(activationMode), 0];
 
-// Exec module if activated & activation mode by trigger
+// Activation by trigger
 if (_activationMode isEqualTo 2) exitWith {
+  if !(_isActivated) exitWith {
+    LOG('Init of EXEC_MODULE_NAME finished - exection aborted - not activated.');
+  };
   if (_logic getVariable [QGVAR(activationDelay), false]) then {
     [
       {_this call EXEC_MODULE_FNC},
@@ -22,5 +25,13 @@ if (_activationMode isEqualTo 2) exitWith {
   };
 };
 
-// Add module to activator system
-[_logic, _activationMode, QUOTE(EXEC_MODULE_FNC)] call FUNC(addModuleToActivator);
+// Activation by proximity or condition
+if (_activationMode in [0, 1]) exitWith {
+  // Add module to activator system
+  [_logic, _activationMode, QUOTE(EXEC_MODULE_FNC)] call FUNC(addModuleToActivator);
+  LOG('Init of EXEC_MODULE_NAME finished - added to activator.');
+};
+
+// Activation on mission start
+_logic call EXEC_MODULE_FNC;
+LOG('Init of EXEC_MODULE_NAME finished - executed.');

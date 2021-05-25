@@ -199,6 +199,12 @@
     </Key>
   </Package>
   <Package name="Modules_dynamicToolboxActivationMode">
+    <Key ID="STR_A3CS_Modules_dynamicToolboxActivationMode_value_missionStart">
+      <Polish>Start misji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolboxActivationMode_value_missionStart_Desc">
+      <Polish>Moduł będzie wykonany na samym starcie misji.</Polish>
+    </Key>
     <Key ID="STR_A3CS_Modules_dynamicToolboxActivationMode_value_nearestPlayer">
       <Polish>Dystans od graczy</Polish>
     </Key>
@@ -1247,6 +1253,126 @@
     </Key>
     <Key ID="STR_A3CS_Modules_radioJammer_Multiplicators_Desc">
       <Polish>Powyższe wartości (jakość nadwania i odbioru) działają na zasadzie mnożników, np. jeśli ustawimy jakość odbioru na 25%, jakość odbioru radia zostanie pomniejszona o 75% względem normalnej (czyli 25% normalnej jakości odbioru). Jakość odbioru 100% oznacza, że radia będą odbierać normalnie, a jakość odbioru 0% oznacza, iż radio nie będzie odbierać w ogóle.</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_createTask_ownerToolbox">
+    <Key ID="STR_A3CS_Modules_createTask_ownerToolbox_all">
+      <Polish>Wszyscy gracze</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_createTask">
+    <Key ID="STR_A3CS_Modules_createTask_displayName">
+      <Polish>Nowe zadanie</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_shortDescription">
+      <Polish>Moduł tworzy nowe zadanie.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_baseSettingsSubCategory">
+      <Polish>Ustawienia zadania</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_owner">
+      <Polish>Grupa docelowa</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_owner_tooltip">
+      <Polish>Grupa której wyświetli się dane zadanie</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_id">
+      <Polish>Identyfikator</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_id_tooltip">
+      <Polish>Unikalny identyfikator zadania np. zadanie_1</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_parent">
+      <Polish>Zadanie nadrzędne</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_parent_tooltip">
+      <Polish>Zadanie pod którym wyświetlać będzie się to zadanie</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_parent_none">
+      <Polish>Brak</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_parent_none_tooltip">
+      <Polish>Brak zadania nadrzędnego</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_title">
+      <Polish>Tytuł zadania</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_title_tooltip">
+      <Polish>Tytuł zadania</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_description">
+      <Polish>Opis zadania</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_description_tooltip">
+      <Polish>Opis zadania</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_type">
+      <Polish>Typ zadania</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_type_tooltip">
+      <Polish>Typ zadania</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_state">
+      <Polish>Stan początkowy</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_state_tooltip">
+      <Polish>Stan w jakim ma zostać stworzone zadanie</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_showPos">
+      <Polish>Pokaż na mapie</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_showPos_tooltip">
+      <Polish>Czy zadanie ma być wyświetlone na mapie (pozycja modułu)</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_showNotification">
+      <Polish>Pokaż powiadomienie</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_showNotification_tooltip">
+      <Polish>Czy ma zostać wyświetlone powiadomienie w momencie dodania zadania</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_showNotification_desc">
+      <Polish>Powiadomienia o dodaniu zadania są ignorowane na starcie misji.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Warning_EmptyTitle_Desc">
+      <Polish>Tytuł nie może być pusty</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_setTaskState">
+    <Key ID="STR_A3CS_Modules_setTaskState_displayName">
+      <Polish>Zmiana stanu zadania</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setTaskState_shortDescription">
+      <Polish>Moduł zmienia stanu zadania</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setTaskState_Attributes_baseSettingsSubCategory">
+      <Polish>Ustawienia zmiany stanu zadania</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setTaskState_Attributes_task">
+      <Polish>Zadanie</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setTaskState_Attributes_task_tooltip">
+      <Polish>Zadanie którego stan ma zostać zmieniony</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setTaskState_Attributes_state">
+      <Polish>Stan</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setTaskState_Attributes_state_tooltip">
+      <Polish>Stan ktory ma być nadany zadaniu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setTaskState_Attributes_showNotification">
+      <Polish>Pokaż powiadomienie</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setTaskState_Attributes_showNotification_tooltip">
+      <Polish>Czy ma zostać wyświetlone powiadomienie w momencie zmiany stanu zadania</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setTaskState_Warning_MissingTask_Desc">
+      <Polish>Brak zadania</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setTaskState_Warning_emptyTasks">
+      <Polish>Brak zadań</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setTaskState_Warning_emptyTasks_Tooltip">
+      <Polish>Nie wykryto żadnych zadań</Polish>
     </Key>
   </Package>
 </Project>

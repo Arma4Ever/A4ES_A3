@@ -43,6 +43,10 @@ if (_groupUnits isEqualTo []) exitWith {
 // Save composition
 LOG_2('Saving generator composition "%1" (units count: %2)',_compositionId,str (count _groupUnits));
 
+// Save composition ids for curators
+private _compositionList = missionNamespace getVariable [QGVAR(generatorCompositionList), []];
+_compositionList pushBack _compositionId;
+
 // Save composition definition
 missionNamespace setVariable [
   format [QGVAR(generatorComposition_id_%1), _compositionId],

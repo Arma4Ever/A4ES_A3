@@ -30,21 +30,12 @@ ace_player playActionNow "PutDown";
 
 // Make target leave current group just before takedown
 // This prevents AI from going into alert after group member is killed
-[{
-  [(_this # 0)] joinSilent grpNull;
-}, [_target], 0.25] call CBA_fnc_waitAndExecute;
+[_target] joinSilent grpNull;
 
 // Kill target
 [{
   params ["_target"];
   _target setDamage 1;
   private _group = group _target;
-  if (local _group) then {
-    // Delete group if local
-    deleteGroup _group;
-  } else {
-    // Mark for deletion if not local
-    _group deleteGroupWhenEmpty true;
-  };
-
+  [QEGVAR(common,deleteGroup), _group, _group] call CBA_fnc_targetEvent;
 }, [_target], 0.5] call CBA_fnc_waitAndExecute;

@@ -34,10 +34,8 @@ if (_function isEqualTo "") exitWith {
   WARNING('EXEC_MODULE_NAME - empty module function name.');
 };
 
-private _jipId = format [QGVAR(addCuratorModule_%1), _logic call BIS_fnc_netId];
-
 // Create global jip event
-[QGVAR(addCuratorModule), [_category, _name, _icon, _function], _jipId] call CBA_fnc_globalEventJIP;
+[QGVAR(addCuratorModule), [_category, _name, _icon, _function]] call CBA_fnc_globalEventJIP;
 
 // Delete module
 deleteVehicle _logic;

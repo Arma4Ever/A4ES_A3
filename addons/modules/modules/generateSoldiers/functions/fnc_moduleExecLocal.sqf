@@ -43,7 +43,6 @@ if (_source isEqualTo 0) then {
       } forEach _classList;
       _unitCount = count _unitClassesData;
     };
-
 } else {
   // Based on composition
   private _compositionId = _logic getVariable [QGVAR(composition), ""];
@@ -74,6 +73,7 @@ private _side = [west, east, independent] select (_logic getVariable [QGVAR(side
 private _groupCount = (_logic getVariable [QGVAR(groupCount), 1]) max 1;
 private _spawnPosMode = _logic getVariable [QGVAR(spawnPosMode), 0];
 private _unitSkill = (_logic getVariable [QGVAR(skill), 0.5]) max 0.01;
+private _enableDynSim = !(_logic getVariable [QGVAR(disableDynamicSim), false]);
 
 // Debug log
 if (is3DENPreview) then {
@@ -148,11 +148,8 @@ for "_i" from 1 to _groupCount do {
   // Wait a while to avoid sync problems
   sleep 0.5;
 
-  // Init group on server
-  if (isServer) then {
-    [_group, _logic] call FUNC(generateSoldiers_initGroupServer);
-  } else {
-    [_group, _logic] remoteExecCall [QFUNC(generateSoldiers_initGroupServer), 2];
+  if (_enableDynSim) then {
+    [QEGVAR(common,enableDynSim), [_group]] call CBA_fnc_serverEvent;
   };
 };
 
