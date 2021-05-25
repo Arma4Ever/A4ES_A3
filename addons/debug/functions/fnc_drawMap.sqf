@@ -26,13 +26,17 @@ params ["_ctrl"];
 } forEach GVAR(triggersDrawData);
 
 {
-  _x params ["", "_pos", "_icon", "_color", "_colorBg", "_hasArea", "_a", "_b", "_angle", "_isRect", "_syncs"];
+  _x params ["", "_pos", "_icon", "_color", "_colorBg", "_activationRange", "_hasArea", "_a", "_b", "_angle", "_isRect", "_syncs"];
   if (_hasArea) then {
     if (_isRect) then {
-      _ctrl drawRectangle [_pos, _a, _b, _angle, _color, ""];
+      _ctrl drawRectangle [_pos, _a, _b, _angle, _color, "\a3\ui_f\data\map\markerbrushes\bdiagonal_ca.paa"];
     } else {
-      _ctrl drawEllipse [_pos, _a, _b, _angle, _color, ""];
+      _ctrl drawEllipse [_pos, _a, _b, _angle, _color, "\a3\ui_f\data\map\markerbrushes\bdiagonal_ca.paa"];
     };
+  };
+
+  if (_activationRange > 0) then {
+    _ctrl drawEllipse [_pos, _activationRange, _activationRange, 0, _color, ""];
   };
 
   {
