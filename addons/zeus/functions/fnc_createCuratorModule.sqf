@@ -21,7 +21,6 @@ if (isNull GVAR(curatorModulesGroup)) then {
 
   if (isNull _group) then {
     _group = createGroup sideLogic;
-    _group deleteGroupWhenEmpty true;
   };
 
   GVAR(curatorModulesGroup) = _group;
