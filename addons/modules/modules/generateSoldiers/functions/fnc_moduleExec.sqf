@@ -5,6 +5,7 @@
  */
 
 params ["_logic"];
+TRACE_1("generateSoldiers_moduleExec",_logic);
 
 if (is3DENPreview) then {
   [_logic, true] call EFUNC(debug,updateModuleStatus);

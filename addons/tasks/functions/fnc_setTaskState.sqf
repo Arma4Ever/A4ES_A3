@@ -17,8 +17,6 @@ if !(_id in GVAR(createdTasks)) exitWith {
 [QGVAR(setTaskState), [_id, _state], _id] call CBA_fnc_globalEventJIP;
 
 // Send notification if not mission start
-if (_showNotification && {CBA_missionTime > 5}) then {
-  [{
-    [QGVAR(taskNotification), _this] call CBA_fnc_globalEvent;
-  }, [_id, _state]] call CBA_fnc_execNextFrame;
+if (_showNotification) then {
+  [_id, _state] call FUNC(showTaskNotification);
 };

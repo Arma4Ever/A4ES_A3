@@ -60,6 +60,7 @@ if (_id in _awaitingNotifications) then {
 // Create awaiting tasks
 if (_id in GVAR(awaitingTasks)) then {
   private _tasks = GVAR(awaitingTasks) get _id;
+  TRACE_2("createTaskLocal - creating awaiting tasks",_id,_tasks);
   GVAR(awaitingTasks) deleteAt _id;
 
   {

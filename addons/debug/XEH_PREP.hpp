@@ -5,6 +5,7 @@ PREP(handleModuleDeleted);
 PREP(initModule);
 PREP(initTrigger);
 PREP(moduleLog);
+PREP(updateDeletedModules);
 PREP(updateEntitiesDrawData);
 PREP(updateModuleStatus);
 PREP(updateTriggerStatus);

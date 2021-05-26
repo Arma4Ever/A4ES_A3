@@ -26,7 +26,7 @@ params ["_ctrl"];
 } forEach GVAR(triggersDrawData);
 
 {
-  _x params ["", "_pos", "_icon", "_color", "_colorBg", "_activationRange", "_hasArea", "_a", "_b", "_angle", "_isRect", "_syncs"];
+  (_x # 3) params ["_pos", "_icon", "_color", "_colorBg", "_activationRange", "_hasArea", "_a", "_b", "_angle", "_isRect", "_syncs"];
   if (_hasArea) then {
     if (_isRect) then {
       _ctrl drawRectangle [_pos, _a, _b, _angle, _color, "\a3\ui_f\data\map\markerbrushes\bdiagonal_ca.paa"];

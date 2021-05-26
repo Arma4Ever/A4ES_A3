@@ -19,6 +19,10 @@ if (_title isEqualTo "") exitWith {
   ERROR("Task title is missing");
 };
 
+if (is3DENPreview) then {
+  [_logic, true] call EFUNC(debug,updateModuleStatus);
+};
+
 private _pos = [];
 if (_logic getVariable [QGVAR(showPos), true]) then {
   _pos = getPos _logic;

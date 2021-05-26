@@ -63,10 +63,6 @@ if (_initWatcher isEqualTo "true") then {
   [{"a3cs_debug" callExtension "updateLogsList";}, 0.5] call CBA_fnc_addPerFrameHandler;
 };
 
-GVAR(entitiesDrawData) = [];
-GVAR(modulesDrawData) = [];
-GVAR(triggersDrawData) = [];
-
 private _pfh = [{0 call FUNC(updateEntitiesDrawData)}, 0.5] call CBA_fnc_addPerFrameHandler;
 
 [QEGVAR(modules,base), "init", {
@@ -74,13 +70,10 @@ private _pfh = [{0 call FUNC(updateEntitiesDrawData)}, 0.5] call CBA_fnc_addPerF
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 // Force check modules deleted on init (won't trigger deleted EH)
-[{
-  {
-    if (isNull (_x # 0)) then {
-      [(_x # 0)] call FUNC(handleModuleDeleted);
-    };
-  } forEach GVAR(modulesDrawData);
-}, 0, 1.5] call CBA_fnc_waitAndExecute;
+[{diag_frameNo > _this}, {
+  TRACE_1("force checking deleted modules",diag_frameNo);
+  0 call FUNC(updateDeletedModules);
+}, (diag_frameNo + 10)] call CBA_fnc_waitUntilAndExecute;
 
 {
   _x call FUNC(initTrigger);

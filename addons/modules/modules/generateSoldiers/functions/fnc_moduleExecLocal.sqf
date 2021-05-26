@@ -167,6 +167,10 @@ if (_logic getVariable [QGVAR(addModulePostExec), false]) then {
 // Delete module
 deleteVehicle _logic;
 
+if (is3DENPreview) then {
+  [_logic, true] call EFUNC(debug,updateModuleStatus);
+};
+
 LOG('Execution of EXEC_MODULE_NAME local exec function finished.');
 
 true

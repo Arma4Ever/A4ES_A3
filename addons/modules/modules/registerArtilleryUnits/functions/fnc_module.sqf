@@ -5,6 +5,7 @@
  */
 
 params ["_mode", "_input"];
+TRACE_2(QUOTE(EXEC_MODULE_NAME),_mode,_input);
 
 // Exit if module executed inside editor, not on server or not in init mode
 if (is3DEN || !(isServer) || (_mode isNotEqualTo "init")) exitWith {};
@@ -22,6 +23,10 @@ if !(lambs_danger_Loaded_WP) exitWith {};
 lambs_danger_debug_functions = true;
 
 LOG('Starting execution of EXEC_MODULE_NAME.');
+
+if (is3DENPreview) then {
+  [_logic, true] call EFUNC(debug,updateModuleStatus);
+};
 
 // Get all synced units and vehicles crews
 private _syncedUnits = (synchronizedObjects _logic) apply {

@@ -14,6 +14,10 @@ if (_task isEqualTo "") exitWith {
   ERROR("Task is missing");
 };
 
+if (is3DENPreview) then {
+  [_logic, true] call EFUNC(debug,updateModuleStatus);
+};
+
 // Set task state
 [
   _task,
