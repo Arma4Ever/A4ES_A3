@@ -1139,6 +1139,56 @@
       <Polish>Lista klas generatora jest pusta.</Polish>
     </Key>
   </Package>
+  <Package name="Modules_ambientAnimals">
+    <Key ID="STR_A3CS_Modules_ambientAnimals_displayName">
+      <Polish>Generator zwierząt</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientAnimals_baseSettingsSubCategory">
+      <Polish>Ustawienia Podstawowe</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientAnimals_animalsType">
+      <Polish>Typ zwierząt</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientAnimals_animalsType_Tooltip">
+      <Polish>Typ zwierząt generowanych przed moduł</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientAnimals_animalsType_Rabbit">
+      <Polish>Królik</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientAnimals_animalsType_Hen">
+      <Polish>Kura</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientAnimals_animalsType_Dog">
+      <Polish>Pies</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientAnimals_animalsType_Goat">
+      <Polish>Koza</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientAnimals_animalsType_Sheep">
+      <Polish>Owca</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientAnimals_animalsCount">
+      <Polish>Liczba zwierząt</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientAnimals_animalsCount_Tooltip">
+      <Polish>Liczba zwierząt generowanych przez moduł. Maksymalnie 20.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientAnimals_Attributes_addToCurators">
+      <Polish>Dodaj zwierzęta do obiektów zeusa</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientAnimalszwierzęta_Attributes_addToCurators_Tooltip">
+      <Polish>Dodaje wygenerowane zwierzęta jako obiekty edytowalne wszystkim dostępnym zeusom. Nie można przejmować kontroli nad zwierzętami, ale można je usuwać/przenosić.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientAnimals_shortDescription">
+      <Polish>Moduł generowania ambientowych zwierząt</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientAnimals_description">
+      <Polish>Wygenerwoane zwierzęta mają włączoną dynamiczną symulację - nie będą symulowane jeżeli gracze są poza zasięgiem dynamicznej symulacji.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ambientAnimals_positionInfo">
+      <Polish>Zwierzęta generują się na wyznaczonym obszarze, jednak mogą się poruszać.</Polish>
+    </Key>
+  </Package>
   <Package name="Modules_generatorComposition">
     <Key ID="STR_A3CS_Modules_generatorComposition_displayName">
       <Polish>Kompozycja generatora</Polish>

@@ -51,4 +51,6 @@ PREP(validateEntity);
 #include "modules\radioJammer\prep.hpp"
 #include "modules\createTask\prep.hpp"
 #include "modules\setTaskState\prep.hpp"
+#include "modules\ambientAnimals\prep.hpp"
+
 // #include "modules\spawnUnits\prep.hpp"

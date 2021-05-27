@@ -269,6 +269,8 @@ class CfgVehicles {
     #include "modules\radioJammer\module.hpp"
     #include "modules\createTask\module.hpp"
     #include "modules\setTaskState\module.hpp"
+    #include "modules\ambientAnimals\module.hpp"
+
 
     // #include "modules\spawnUnits\module.hpp"
 
