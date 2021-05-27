@@ -16,6 +16,9 @@ class GVAR(ambientAnimals): GVAR(base) {
         class GVAR(moduleShortDescription): GVAR(moduleShortDescription) {};
         class GVAR(moduleWarnings): GVAR(moduleWarnings) {};
 
+        // Attributes for module activator
+         #include "\z\a3cs\addons\modules\includes\moduleActivationAttributes.hpp"
+         
         class GVAR(baseSettingsSubCategory): GVAR(moduleSubCategory) {
             displayName = CSTRING(ambientAnimals_baseSettingsSubCategory);
             property = QGVAR(baseSettingsSubCategory);

@@ -1,4 +1,5 @@
 
+PREP(addModuleToActivator);
 PREP(assetsTreeCopy);
 PREP(assetsTreeParse);
 PREP(display3DENEditAttributes_onLoad);
@@ -18,10 +19,12 @@ PREP(dynamicSkillSlider_attributeLoad);
 PREP(dynamicSlider_attributeLoad);
 PREP(dynamicToolbox_attributeLoad);
 PREP(dynamicToolbox_attributeSave);
+PREP(getModuleActivatorCond);
 PREP(handleModuleInit);
 PREP(handleWarningsTreeClick);
 PREP(initDynamicAttribute);
 PREP(initWarnings);
+PREP(moduleActivatorTick);
 PREP(moduleDescription_attributeLoad);
 PREP(moduleShortDescription_attributeLoad);
 PREP(moduleSubCategory_attributeLoad);
@@ -43,4 +46,10 @@ PREP(validateEntity);
 #include "modules\registerArtilleryUnits\prep.hpp"
 #include "modules\switchLights\prep.hpp"
 #include "modules\ambientFlyby\prep.hpp"
+#include "modules\aiNightvision\prep.hpp"
+#include "modules\addCuratorModule\prep.hpp"
+#include "modules\radioJammer\prep.hpp"
+#include "modules\createTask\prep.hpp"
+#include "modules\setTaskState\prep.hpp"
 #include "modules\ambientAnimals\prep.hpp"
+// #include "modules\spawnUnits\prep.hpp"
