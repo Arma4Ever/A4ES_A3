@@ -10,11 +10,11 @@ if (!hasInterface) exitWith {};
     LLSTRING(Takedown),
     LLSTRING(Takedown_Tooltip)
   ], {
-    call FUNC(takedown);
+    0 call FUNC(takedown);
   }, {}, [DIK_SPACE, [false, true, false]]
 ] call CBA_fnc_addKeybind;
 
 // Start walking PFH
 [{
-  call FUNC(walkingPFH);
-}, 0.5, []] call CBA_fnc_addPerFrameHandler;
+  0 call FUNC(walkingPFH);
+}, 0.5] call CBA_fnc_addPerFrameHandler;
