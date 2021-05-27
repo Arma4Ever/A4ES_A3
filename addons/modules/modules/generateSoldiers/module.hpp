@@ -17,6 +17,9 @@ class GVAR(generateSoldiers): GVAR(base) {
         class GVAR(moduleShortDescription): GVAR(moduleShortDescription) {};
         class GVAR(moduleWarnings): GVAR(moduleWarnings) {};
 
+        // Attributes for module activator
+        #include "\z\a3cs\addons\modules\includes\moduleActivationAttributes.hpp"
+
         class GVAR(baseSettingsSubCategory): GVAR(moduleSubCategory) {
             displayName = CSTRING(generateSoldiers_Attributes_baseSettingsSubCategory);
             property = QGVAR(baseSettingsSubCategory);
@@ -422,10 +425,10 @@ class GVAR(generateSoldiers): GVAR(base) {
             property = QGVAR(hasLambsRadio);
             defaultValue = "true";
         };
-        class GVAR(disableBISRandomization): GVAR(dynamicCheckbox) {
-            displayName = CSTRING(generateSoldiers_Attributes_disableBISRandomization);
-            tooltip = CSTRING(generateSoldiers_Attributes_disableBISRandomization_Tooltip);
-            property = QGVAR(disableBISRandomization);
+        class GVAR(disableRandomization): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(generateSoldiers_Attributes_disableRandomization);
+            tooltip = CSTRING(generateSoldiers_Attributes_disableRandomization_Tooltip);
+            property = QGVAR(disableRandomization);
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(source)) isEqualTo 0);
         };
         class GVAR(disableDynamicSim): GVAR(dynamicCheckbox) {
@@ -438,19 +441,13 @@ class GVAR(generateSoldiers): GVAR(base) {
             tooltip = CSTRING(generateSoldiers_Attributes_disableHeadless_Tooltip);
             property = QGVAR(disableHeadless);
         };
-        class GVAR(addToCurators): GVAR(dynamicCheckbox) {
-            displayName = CSTRING(generateSoldiers_Attributes_addToCurators);
-            tooltip = CSTRING(generateSoldiers_Attributes_addToCurators_Tooltip);
-            property = QGVAR(addToCurators);
-            defaultValue = "true";
-        };
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};
     };
 
     class GVAR(moduleDescription): GVAR(moduleDescription) {
         shortDescription = CSTRING(generateSoldiers_shortDescription);
-        description = CSTRING(generateSoldiers_description);
+        description = "";
         positionInfo = CSTRING(generateSoldiers_positionInfo);
         //schema = QPATHTOF(data\schema_placeholder.paa);
     };

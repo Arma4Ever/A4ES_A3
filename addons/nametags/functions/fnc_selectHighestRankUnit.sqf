@@ -15,7 +15,6 @@ if (_this isEqualTo []) exitWith {_highestRankUnit};
     _highestRank = _rankImportance;
     _highestRankUnit = _x;
   };
-  false
-} count _this;
+} forEach _this;
 
 _highestRankUnit

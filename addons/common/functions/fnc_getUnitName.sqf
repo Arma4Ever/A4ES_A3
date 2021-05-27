@@ -6,4 +6,4 @@
 
 params ["_unit"];
 
-_unit getVariable ["ACE_Name", localize LSTRING(NoName)]
+_unit getVariable ["ACE_Name", LLSTRING(NoName)]

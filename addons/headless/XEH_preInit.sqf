@@ -7,7 +7,7 @@ ADDON = false;
 ADDON = true;
 
 [QGVAR(headlessConnectedInfo), {
-  systemChat localize LSTRING(headlessConnectedInfo);
+  systemChat LLSTRING(headlessConnectedInfo);
 }] call CBA_fnc_addEventHandler;
 
 if (!isServer) exitWith {};

@@ -271,6 +271,7 @@ class CfgVehicles {
     #include "modules\setTaskState\module.hpp"
     #include "modules\ambientAnimals\module.hpp"
 
+
     // #include "modules\spawnUnits\module.hpp"
 
     /*#include "hiddenModules.hpp"*/

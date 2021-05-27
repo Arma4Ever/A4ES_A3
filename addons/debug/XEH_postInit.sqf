@@ -40,7 +40,7 @@ if (_initWatcher isEqualTo "true") then {
   // Add action
   // TODO: Debug control panel
   player addAction [
-    "<t color='#FF0000' size='1.5'>DEBUG - Pokaż/ukryj logi</t>",
+    "<t color='#FF0000'>DEBUG - Pokaż/ukryj logi</t>",
     {
       GVAR(showLogs) = !GVAR(showLogs);
       private _display = uiNamespace getVariable [QGVAR(logsList), displayNull];
@@ -48,7 +48,12 @@ if (_initWatcher isEqualTo "true") then {
       private _logsListTextCtrl = _display displayCtrl IDC_LOGSLIST;
       _logsListTextCtrl ctrlSetFade (parseNumber (!GVAR(showLogs)));
       _logsListTextCtrl ctrlCommit 0;
-    }, nil, 99
+
+      // Update logs list text
+      if (GVAR(showLogs)) then {
+        [[]] call FUNC(addLogs);
+      };
+    }, nil, 0
   ];
 
   /*
@@ -58,11 +63,23 @@ if (_initWatcher isEqualTo "true") then {
   [{"a3cs_debug" callExtension "updateLogsList";}, 0.5] call CBA_fnc_addPerFrameHandler;
 };
 
+private _pfh = [{0 call FUNC(updateEntitiesDrawData)}, 0.5] call CBA_fnc_addPerFrameHandler;
+
 [QEGVAR(modules,base), "init", {
   _this call FUNC(initModule);
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
+// Force check modules deleted on init (won't trigger deleted EH)
+[{diag_frameNo > _this}, {
+  TRACE_1("force checking deleted modules",diag_frameNo);
+  0 call FUNC(updateDeletedModules);
+}, (diag_frameNo + 10)] call CBA_fnc_waitUntilAndExecute;
+
 {
   _x call FUNC(initTrigger);
-  false
-} count (allMissionObjects "EmptyDetector");
+} forEach (allMissionObjects "EmptyDetector");
+
+// Add map draw script
+((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", {
+  _this call FUNC(drawMap);
+}];

@@ -2,7 +2,7 @@ class GVAR(switchLights): GVAR(base) {
     scope = 2;
     author = "SzwedzikPL";
     displayName = CSTRING(switchLights_displayName);
-    //icon = QPATHTOF(modules\switchLights\data\icon.paa);
+    icon = QPATHTOF(modules\switchLights\data\icon.paa);
     category = QGVAR(effects);
     function = QFUNC(switchLights_module);
     functionPriority = 5;

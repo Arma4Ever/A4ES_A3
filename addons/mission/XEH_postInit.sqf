@@ -5,8 +5,8 @@ if (hasInterface) then {
   if ((actionKeys "Throw") isEqualTo [34]) then {
     [{!(isNull (findDisplay 46))}, {
         [
-          localize LSTRING(Warning_Message),
-          localize LSTRING(Warning_Message_Header),
+          LLSTRING(Warning_Message),
+          LLSTRING(Warning_Message_Header),
           true
         ] spawn BIS_fnc_guiMessage;
     }] call CBA_fnc_waitUntilAndExecute;
@@ -15,11 +15,6 @@ if (hasInterface) then {
 
 // Exit if main menu
 if (EGVAR(common,isMainMenu)) exitWith {};
-
-[QGVAR(deleteGroup), {
-  params ["_group"];
-  deleteGroup _group;
-}] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
   [{
@@ -35,38 +30,7 @@ if (isServer) then {
 
   // Enable simulation of dead units, it's groups and vehicles for dynamically simulated groups/agents
   addMissionEventHandler ["EntityKilled", {
-    params ["_entity"];
-
-    if (
-      !(_entity isKindOf "CAManBase") ||
-      {simulationEnabled _entity}
-    ) exitWith {};
-
-    private _target = group _entity;
-    private _targetUnits = units _target;
-    // Target unit if group is null (agents)
-    if (isNull _target) then {
-      _target = _entity;
-      _targetUnits = [_entity];
-    };
-
-    // Don't react if disabled simulation is not by dyn sim
-    if !(dynamicSimulationEnabled _target) exitWith {};
-
-    // Disable target dyn sim and enable sim for all units
-    _target enableDynamicSimulation false;
-    {
-      _x enableSimulationGlobal true;false
-    } count _targetUnits;
-
-    // Check vehicle
-    private _vehicle = objectParent _entity;
-
-    // Exit if no vehicle, vehicle sim enabled or dyn sim is not reason for disabled sim
-    if (isNull _vehicle || {simulationEnabled _vehicle} || {!(dynamicSimulationEnabled _vehicle)}) exitWith {};
-
-    _vehicle enableDynamicSimulation false;
-    _vehicle enableSimulationGlobal true;
+    _this call FUNC(handleEntityKilled);
   }];
 };
 
@@ -83,8 +47,8 @@ if (!hasInterface) exitWith {};
   if ((getMissionConfigValue ["a3c_missionTemplate", 0]) < REQUIRED_MISSION_TEMPLATE_VERSION) then {
     0 spawn {
       sleep 3;
-      diag_log localize LSTRING(WrongMissionTemplateWarning);
-      systemChat localize LSTRING(WrongMissionTemplateWarning);
+      diag_log text LLSTRING(WrongMissionTemplateWarning);
+      systemChat LLSTRING(WrongMissionTemplateWarning);
     };
   };
 

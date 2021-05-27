@@ -1,5 +1,5 @@
-#define COMPONENT flora
-#define COMPONENT_BEAUTIFIED Flora
+#define COMPONENT fortify
+#define COMPONENT_BEAUTIFIED Fortify
 #include "\z\a3cs\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

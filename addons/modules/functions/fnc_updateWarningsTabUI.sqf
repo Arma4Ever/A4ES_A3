@@ -27,7 +27,7 @@ _warningsTabIcon ctrlCommit 0;
 _warningsTabInfo ctrlSetStructuredText parseText format [
   "<t align='center'>%1</t>",
   format [
-    localize LSTRING(WarningsInfo),
+    LLSTRING(WarningsInfo),
     format ["<t font='RobotoCondensedBold' size='1.1' color='%1'>%2</t>",
       ['#17b712', '#d01e1e'] select (_entitiesCount > 0),
       _entitiesCount

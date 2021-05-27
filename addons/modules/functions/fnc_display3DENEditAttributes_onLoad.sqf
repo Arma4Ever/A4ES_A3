@@ -22,8 +22,8 @@ if !(_selected isEqualTo [[],[],[],[],[]] && {(count _modules) isEqualTo 1}) exi
   0 spawn {
     sleep 0.001;
     [
-      localize LSTRING(EditingMultipleModulesError_Message),
-      localize LSTRING(EditingMultipleModulesError_Title),
+      LLSTRING(EditingMultipleModulesError_Message),
+      LLSTRING(EditingMultipleModulesError_Title),
       false,
       'OK'
     ] call BIS_fnc_3DENShowMessage;
@@ -36,7 +36,11 @@ GVAR(dynamicAttributesModule) = _modules # 0;
 LOG_1("Loading display3DENEditAttributes (module: '%1').",typeof GVAR(dynamicAttributesModule));
 
 GVAR(allAttributesControls) = [];
-GVAR(dynamicAttributesValues) = GVAR(dynamicAttributesModule) getVariable [QGVAR(moduleValues), (false call CBA_fnc_createNamespace)];
+
+GVAR(dynamicAttributesValues) = GVAR(dynamicAttributesModule) getVariable [QGVAR(moduleValues), objNull];
+if (isNull GVAR(dynamicAttributesValues)) then {
+  GVAR(dynamicAttributesValues) = false call CBA_fnc_createNamespace;
+};
 
 // Cleanup vars on display unload
 _display displayAddEventHandler ["unload", {

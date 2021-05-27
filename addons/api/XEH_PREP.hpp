@@ -1,5 +1,4 @@
 
-PREP(didGenerateUnits);
 PREP(isMedic);
 PREP(isSquadLeader);
 PREP(jamSquadRadar);

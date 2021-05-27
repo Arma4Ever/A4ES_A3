@@ -6,8 +6,8 @@ if (!hasInterface) exitWith {};
 [
   "A3CS UI", QGVAR(toggleScreenshotMode),
   [
-    localize LSTRING(ToggleScreenshotMode),
-    localize LSTRING(ToggleScreenshotMode_Tooltip)
+    LLSTRING(ToggleScreenshotMode),
+    LLSTRING(ToggleScreenshotMode_Tooltip)
   ], {
     true call FUNC(toggleScreenshotMode);
   }, {}, [DIK_BACK, [true, false, false]]

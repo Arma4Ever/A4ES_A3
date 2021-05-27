@@ -4,6 +4,4 @@
  * Removes current map markers from map
  */
 
-{
-  deleteMarkerLocal _x; false
-} count (keys GVAR(currentMapMarkers));
+{deleteMarkerLocal _x} forEach (keys GVAR(currentMapMarkers));

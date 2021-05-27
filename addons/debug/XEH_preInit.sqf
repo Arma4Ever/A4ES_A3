@@ -4,7 +4,13 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
-GVAR(showLogs) = true;
-GVAR(logs) = [];
+if (is3DENPreview) then {
+  GVAR(showLogs) = true;
+  GVAR(logs) = [];
+
+  GVAR(entitiesDrawData) = [];
+  GVAR(modulesDrawData) = [];
+  GVAR(triggersDrawData) = [];
+};
 
 ADDON = true;

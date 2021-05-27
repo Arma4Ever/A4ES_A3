@@ -24,7 +24,7 @@ if (_engineerClass > 0) then {
 };
 
 if (_unit call ACEFUNC(common,isEOD)) then {
-  _traits pushback (localize LSTRING(EOD));
+  _traits pushback (LLSTRING(EOD));
 };
 
 _traits

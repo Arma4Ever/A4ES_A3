@@ -1,11 +1,15 @@
 #include "script_component.hpp"
-#define EXEC_MODULE_NAME GVAR(fireArtillery)
 /*
  * Author: SzwedzikPL
  * fireArtillery module function
  */
 
 params ["_mode", "_input"];
+TRACE_2(QUOTE(EXEC_MODULE_NAME),_mode,_input);
+
+/*
+ TODO: Tweak & refactor
+*/
 
 // Exit if module executed inside editor, not on server or not in init mode
 if (is3DEN || !(isServer) || (_mode isNotEqualTo "init")) exitWith {};
@@ -24,6 +28,10 @@ LOG('Starting execution of EXEC_MODULE_NAME.');
 
 // Mark module as executed to prevent future executions
 _logic setVariable [QGVAR(executed), true, true];
+
+if (is3DENPreview) then {
+  [_logic, true] call EFUNC(debug,updateModuleStatus);
+};
 
 // Get logic area
 private _logicArea = [getPos _logic];

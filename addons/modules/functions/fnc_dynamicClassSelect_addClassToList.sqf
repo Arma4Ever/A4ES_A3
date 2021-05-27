@@ -51,7 +51,7 @@ if (_updateUI) then {
 // Show notification
 if (_playSound || !(isNull _notificationBar)) then {
   [
-    format [localize LSTRING(dynamicClassSelect_addedClassToList), _displayName],
+    format [LLSTRING(dynamicClassSelect_addedClassToList), _displayName],
     0,
     _notificationBar
   ] call FUNC(dynamicClassSelect_showNotification);

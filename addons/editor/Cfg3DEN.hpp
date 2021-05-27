@@ -125,8 +125,13 @@ class Cfg3DEN {
         };
 		class Preferences {
             class AttributeCategories {
-                delete ENH_Interface;
                 delete ENH_DebugOptions;
+
+                class ENH_Interface {
+                    class Attributes {
+                        delete ENH_MenuStrip_Blacklist;
+                    };
+                };
 
                 class Camera {
                     class Attributes {

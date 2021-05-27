@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+  <Package name="Flora">
+    <Key ID="STR_A3CS_Flora_cut_displayName">
+      <English>Cut...</English>
+      <Polish>Wytnij...</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Flora_cutGrass_displayName">
+      <English>Cut grass</English>
+      <Polish>Wytnij trawę</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Flora_cutGrass_cuttingGrass">
+      <English>Cutting grass...</English>
+      <Polish>Wycinanie trawy...</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Flora_cutGrass_grassCut">
+      <English>Grass has been cut</English>
+      <Polish>Trawa wycięta</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Flora_cutFlora_displayName">
+      <English>Cut tree/bush</English>
+      <Polish>Zetnij drzewo/krzak</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Flora_cutFlora_objectNotFound">
+      <English>No tree/bush to cut</English>
+      <Polish>Brak drzewa/krzaku do ścięcia</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Flora_cutFlora_cuttingObject">
+      <English>Cutting tree/bush...</English>
+      <Polish>Ścinanie drzewa/krzaku...</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Flora_cutFlora_objectCut">
+      <English>Tree/bush has been cut</English>
+      <Polish>Drzewo/krzak ścięte</Polish>
+    </Key>
+  </Package>
+</Project>

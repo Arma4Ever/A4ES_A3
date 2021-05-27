@@ -10,7 +10,7 @@ if (!hasInterface) exitWith {};
 
 if (GVAR(screenshotModeEnabled)) then {
   if (_showHint) then {
-    hintSilent parseText format ["<t size='1.5'>%1</t>", localize LSTRING(screenshotModeDisabled)];
+    hintSilent parseText format ["<t size='1.5'>%1</t>", LLSTRING(screenshotModeDisabled)];
   };
   showHUD GVAR(lastShownHUD);
   GVAR(screenshotModeEnabled) = false;

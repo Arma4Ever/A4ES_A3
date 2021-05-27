@@ -23,7 +23,6 @@ A collection of mods providing necessary functionalities for Arma3Coop.pl commun
 - [PLP Markers](https://steamcommunity.com/sharedfiles/filedetails/?id=495275491)
 - [Extended Fortifications Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=1109237932)
 - [Camofaces](https://steamcommunity.com/sharedfiles/filedetails/?id=346665985)
-- [MOCAP Melee](https://www.armaholic.com/page.php?id=27262)
 - [AVON FM12 Respirator Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=793350643)
 - [Blastcore Murr Edition](https://steamcommunity.com/sharedfiles/filedetails/?id=2257686620)
 - [Cinematic Lens Flare](https://steamcommunity.com/sharedfiles/filedetails/?id=878502647)

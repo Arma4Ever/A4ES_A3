@@ -13,8 +13,8 @@ private _syncedUnits = (get3DENConnections _module) select {
 
 if ((count _syncedUnits) isNotEqualTo 1) then {
   _warnings pushBack [
-    localize LSTRING(generatorComposition_Warning_SyncError),
-    localize LSTRING(generatorComposition_Warning_SyncError_Desc)
+    LLSTRING(generatorComposition_Warning_SyncError),
+    LLSTRING(generatorComposition_Warning_SyncError_Desc)
   ];
 };
 

@@ -12,10 +12,13 @@
       <Polish>Dodaj do obiektów zeusa</Polish>
     </Key>
     <Key ID="STR_A3CS_Zeus_addCuratorEditableObject_Tooltip">
-      <Polish>Dodaje obiekt do edytowalnych obiektów każdego zeusa na starcie misji.</Polish>
+      <Polish>Dodaje obiekt do edytowalnych obiektów każdego zeusa.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Zeus_Activated">
-      <Polish>Dostęp do interfejsu zeusa został aktywowany</Polish>
+    <Key ID="STR_A3CS_Zeus_CuratorModuleAssigned">
+      <Polish>Dostęp do interfejsu zeusa został aktywowany. Obecnych zeusów: %1.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Zeus_CuratorPinged">
+      <Polish>Ping zeusa: %1</Polish>
     </Key>
   </Package>
 </Project>

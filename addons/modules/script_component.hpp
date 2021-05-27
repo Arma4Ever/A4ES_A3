@@ -8,6 +8,12 @@
 
 #include "\z\a3cs\addons\main\script_macros.hpp"
 
+#ifdef DISABLE_COMPILE_CACHE
+    #define PREP_MODULE(moduleName,fncName) DFUNC(DOUBLES(moduleName,fncName) = compileScript [QPATHTOF(modules\moduleName\functions\DOUBLES(fnc,fncName).sqf)]
+#else
+    #define PREP_MODULE(moduleName,fncName) [QPATHTOF(modules\moduleName\functions\DOUBLES(fnc,fncName).sqf), QFUNC(DOUBLES(moduleName,fncName))] call CBA_fnc_compileFunction
+#endif
+
 // Panel left
 #define IDC_DISPLAY3DEN_PANELLEFT_WARNINGS        1200
 #define IDC_DISPLAY3DEN_PANELLEFT_WARNINGS_ICON   1201

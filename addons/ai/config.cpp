@@ -13,7 +13,8 @@ class CfgPatches {
             "a3cs_modules",
             "A3_Data_F",
             "A3_3DEN",
-            "lambs_wp"
+            "lambs_wp",
+            "lambs_rpg"
         };
         author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL"};
@@ -28,9 +29,11 @@ class ctrlEdit;
 class ctrlStructuredText;
 
 #include "CfgEventHandlers.hpp"
+#include "CfgVehicles.hpp"
 #include "CfgSurfaces.hpp"
 #include "Cfg3DEN.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgAmmo.hpp"
 #include "CfgAILevelPresets.hpp"
 #include "CfgAISkill.hpp"
 #include "skillLevels.hpp"

@@ -20,7 +20,7 @@
   ];
 
   // Show confirmation message
-  [localize LSTRING(GrenadeThrownIn), 2] call ACEFUNC(common,displayTextStructured);
+  [LLSTRING(GrenadeThrownIn), 2] call ACEFUNC(common,displayTextStructured);
 
   // Schedule explosion in 5 sec
   [{
@@ -39,4 +39,4 @@
     // Send event damaging tank
     [QGVAR(thrownInGrenadeExplosion), _target, _target] call CBA_fnc_targetEvent;
   }, _target, 5] call CBA_fnc_waitAndExecute;
-}, {}, localize LSTRING(ThrowInGrenade_progress), {true}] call ACEFUNC(common,progressBar);
+}, {}, LLSTRING(ThrowInGrenade_progress), {true}] call ACEFUNC(common,progressBar);

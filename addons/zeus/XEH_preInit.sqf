@@ -4,77 +4,62 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
-GVAR(curators) = [];
-GVAR(curatorGroup) = grpNull;
-GVAR(playersIconsDraw) = -1;
-
-GVAR(showPlayerIcons) = false;
-GVAR(drawPlayersCache) = [];
-GVAR(drawPlayersLastCacheRefresh) = DRAWPLAYERSICONS_CACHE_LIFETIME * -1;
-
 // Add objects/group placed by curator to all curators
 ["ModuleCurator_F", "InitPost", {
   params ["_curator"];
+
   _curator addEventHandler ["CuratorObjectPlaced", {
     params ["", "_object"];
     [QGVAR(addObjects), [_object]] call CBA_fnc_serverEvent;
   }];
-  _curator addEventHandler ["CuratorGroupPlaced", {
-    params ["", "_group"];
-    _group deleteGroupWhenEmpty true;
-    [QGVAR(addObjects), units _group] call CBA_fnc_serverEvent;
+
+  _curator addEventHandler ["CuratorPinged", {
+	   _this call FUNC(handleCuratorPinged);
   }];
 }] call CBA_fnc_addClassEventHandler;
 
 if (isServer) then {
-  // Server curator init
-  [{
-    ["ModuleCurator_F", "initPost", {
-      _this call FUNC(initCurator);
-    }, true, [], true] call CBA_fnc_addClassEventHandler;
-  }, [], 0.5] call CBA_fnc_waitAndExecute;
+  GVAR(curatorModulesGroup) = grpNull;
 
-  // CBA Events
+  // Entity inits for adding to curator
+  ["CAManBase", "initPost", {
+    params ["_unit"];
+    [_unit] call FUNC(addCuratorObjects);
+  }, true, [], true] call CBA_fnc_addClassEventHandler;
+  ["AllVehicles", "initPost", {
+    params ["_vehicle"];
+    [_vehicle] call FUNC(addCuratorObjects);
+  }, true, [], true] call CBA_fnc_addClassEventHandler;
+
+  // Server curator init
+  ["ModuleCurator_F", "initPost", {
+    _this call FUNC(initCuratorModule);
+  }, true, [], true] call CBA_fnc_addClassEventHandler;
+
+  // Add objects on server
   [QGVAR(addObjects), {
-    {
-      _x addCuratorEditableObjects [_this, true];
-    } forEach allCurators;
+    _this call FUNC(addCuratorObjects);
   }] call CBA_fnc_addEventHandler;
 
   // Create curator on demand
-  [QGVAR(zeusAssign), {
-    params ["_unit"];
-    if !(isPlayer _unit) exitWith {};
-
-    LOG_1("Assigning Zeus to '%1'",_unit);
-
-    private _curatorModule = [_unit] call FUNC(getFreeCuratorModule);
-    unassignCurator getAssignedCuratorLogic _unit;
-
-    // Curator unassign can take a moment, add delay
-    [{
-      params ["_unit", "_curatorModule"];
-      _unit assignCurator _curatorModule;
-      [QGVAR(zeusAssigned), _curatorModule, _unit] call CBA_fnc_targetEvent;
-    }, [_unit, _curatorModule], 5] call CBA_fnc_waitAndExecute;
-  }] call CBA_fnc_addEventHandler;
-
-  // Unassign curator on demand
-  [QGVAR(zeusUnassign), {
-    params ["_unit"];
-    if !(isPlayer _unit) exitWith {};
-
-    LOG_1("Unassigning Zeus from '%1'", _unit);
-
-    private _curatorModule = getAssignedCuratorLogic _unit;
-    if (_curatorModule isEqualTo objNull) exitWith {};
-    unassignCurator _curatorModule;
+  [QGVAR(assignCuratorModule), {
+    _this spawn FUNC(assignCuratorModule);
   }] call CBA_fnc_addEventHandler;
 };
 
 if (hasInterface) then {
-  [QGVAR(zeusAssigned), {
-    systemChat localize LSTRING(Activated);
+  GVAR(curatorIconsDraw3D) = -1;
+  GVAR(remoteControlDraw3D) = -1;
+  GVAR(showPlayerIcons) = false;
+  GVAR(drawPlayersCache) = [];
+  GVAR(drawPlayersLastCacheRefresh) = DRAWPLAYERSICONS_CACHE_LIFETIME * -1;
+
+  [QGVAR(curatorModuleAssigned), {
+    params ["_curatorsCount"];
+    systemChat format [
+      LLSTRING(CuratorModuleAssigned),
+      _curatorsCount
+    ];
   }] call CBA_fnc_addEventHandler;
 };
 

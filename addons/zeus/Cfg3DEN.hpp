@@ -10,7 +10,7 @@ class Cfg3DEN {
             			control = "Checkbox";
             			expression = QUOTE(if (_value) then {_this call FUNC(addCuratorEditable3DENObject)};);
             			defaultValue = "false";
-            			condition = "1";
+            			condition = "(1 - objectBrain) * (1 - objectVehicle)";
                     };
                 };
             };

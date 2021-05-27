@@ -69,5 +69,17 @@
       <English>Invisible NV goggles, usable only by AI units</English>
       <Polish>Niewidzialne gogle NV, używalne tylko przez jednostki AI</Polish>
     </Key>
+    <Key ID="STR_A3CS_AI_hideBody_displayName">
+      <English>Hide body</English>
+      <Polish>Ukryj ciało</Polish>
+    </Key>
+    <Key ID="STR_A3CS_AI_hideBody_hidingBody">
+      <English>Hiding body...</English>
+      <Polish>Ukrywanie ciała...</Polish>
+    </Key>
+    <Key ID="STR_A3CS_AI_hideBody_bodyHidden">
+      <English>Body has been hidden</English>
+      <Polish>Ciało zostało ukryte</Polish>
+    </Key>
   </Package>
 </Project>

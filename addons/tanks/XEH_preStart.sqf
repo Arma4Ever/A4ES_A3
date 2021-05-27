@@ -18,7 +18,6 @@ private _magazines = ["MiniGrenade"];
 			_magazines pushBackUnique (configName _x);
 		};
 	};
-  false
-} count _configs;
+} forEach _configs;
 
 uiNamespace setVariable [QGVAR(hatchGrenadeClasses), _magazines];

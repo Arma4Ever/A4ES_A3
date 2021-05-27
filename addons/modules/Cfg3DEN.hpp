@@ -5,7 +5,7 @@ class Cfg3DEN {
 			class Controls {
 				class Title;
                 class GVAR(description): ctrlStructuredText {
-                    idc = 702;
+                    idc = IDC_DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_DESC;
                     x = "48 * (pixelW * pixelGrid * 0.50)";
                     y = "5 * (pixelH * pixelGrid * 	0.50)";
                     w = "82 * (pixelW * pixelGrid * 0.50)";
@@ -228,9 +228,15 @@ class Cfg3DEN {
         #include "attributes\dynamicSlider.hpp"
 
         #include "attributes\dynamicClassSelect.hpp"
+        #include "attributes\dynamicToolboxActivationMode.hpp"
         #include "attributes\dynamicToolboxSide.hpp"
+        #include "attributes\dynamicToolboxTaskState.hpp"
         #include "attributes\dynamicToolboxUnitStance.hpp"
         #include "attributes\dynamicSkillSlider.hpp"
+
+        // #include "modules\spawnUnits\attributes\mode.hpp"
+
+        #include "modules\createTask\attributes\ownerToolbox.hpp"
 
         #include "modules\fireArtillery\attributes\conditionType.hpp"
         #include "modules\fireArtillery\attributes\targetPosMode.hpp"
@@ -239,7 +245,7 @@ class Cfg3DEN {
         #include "modules\generateSoldiers\attributes\classListMode.hpp"
         #include "modules\generateSoldiers\attributes\spawnPosMode.hpp"
 
-				#include "modules\ambientFlyby\attributes\mode.hpp"
+		#include "modules\ambientFlyby\attributes\mode.hpp"
 	};
     class EventHandlers {
         class ADDON {

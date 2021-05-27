@@ -13,8 +13,16 @@ private _attributeMargin = 1 * (pixelH * pixelGrid * 0.50);
 
 {
   private _controlGroup = _x;
+  
+  // Get attribute config
+  private _config = _controlGroup getVariable QGVAR(attributeConfig);
+
   private _condition = _controlGroup getVariable [QGVAR(conditionActive), {true}];
   private _state = (_attributesValues call _condition) isEqualTo true;
+  if (isNil "_state") then {
+    ERROR_2("Attribute '%1' condition: '%2' returned nil",configName _config,str _condition);
+    _state = false;
+  };
 
   // Update attribute title if available
   private _controlTitle = _controlGroup controlsGroupCtrl IDC_DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE;
@@ -34,9 +42,6 @@ private _attributeMargin = 1 * (pixelH * pixelGrid * 0.50);
 
   // Update show status
   _controlGroup ctrlShow _state;
-
-  // Get attribute config
-  private _config = _controlGroup getVariable QGVAR(attributeConfig);
 
   // Call onValuesChanged handler
   private _onValuesChangedHandler = _controlGroup getVariable QGVAR(onValuesChanged);

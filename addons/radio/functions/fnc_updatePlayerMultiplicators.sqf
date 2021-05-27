@@ -9,13 +9,19 @@ LOG("updatePlayerMultiplicators");
 private _sendingMult = 1;
 private _receivingMult = 1;
 
+private _player = vehicle player;
+
 {
-  // TODO!
-} forEach GVAR(jammers);
+  _x params ["_area", "_jammerSendingMult", "_jammerReceivingMult"];
+  if (_player inArea _area) then {
+    _sendingMult = _sendingMult * _jammerSendingMult;
+    _receivingMult = _receivingMult * _jammerReceivingMult;
+  };
+} forEach (missionNamespace getVariable [QGVAR(radioJammers), []]);
 
 {
   // Exit if mobile antenna in range - antenna effects do not stack
-  if ((player distance _x) < 7) exitWith {
+  if ((_player distance _x) < 7) exitWith {
     _sendingMult = _sendingMult * 2.5;
     _receivingMult = _receivingMult * 0.85;
   };

@@ -54,10 +54,6 @@ VENDOR = {
     "@FRXA's TFAR Extra Retextured Equipment": {},
     "@ACD - Arma3 Containers And Decorations": {},
     "@Uriki's Mission Items": {},
-    # "@Camofaces": {},
-    "-Mocap": {
-        "whitelist": ["MOCAP_mov"],
-    },
     "-JSHK_Contamination_Gear": {},
     "-A3CS_vendor": {},
 }

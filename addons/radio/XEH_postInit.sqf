@@ -2,6 +2,11 @@
 
 if !(hasInterface) exitWith {};
 
+// Schedule multiplicators update for jammers (for JIP)
+[{
+  0 call FUNC(scheduleMultiplicatorsUpdate);
+}, [], 2] call CBA_fnc_waitAndExecute;
+
 [QGVAR(onSpeak), "OnSpeak", {
   params ["_unit", "_isSpeaking"];
   LOG_1("TFAR OnSpeak event: %1",str _this);
