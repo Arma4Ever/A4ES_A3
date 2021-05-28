@@ -9,6 +9,9 @@ if (isServer) then {
   GVAR(moduleActivatorIndex) = -1;
   GVAR(activatorModuleList) = [];
 
+  GVAR(onKilled_killedEH) = -1;
+  GVAR(onKilled_waitingModules) = [];
+
   GVAR(radioJammerModules) = [];
 };
 

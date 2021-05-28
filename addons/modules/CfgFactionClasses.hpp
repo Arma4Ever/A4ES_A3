@@ -16,6 +16,9 @@ class CfgFactionClasses {
     class GVAR(map): GVAR(base) {
         displayName = "A3CS Mapa";
     };
+    class GVAR(events): GVAR(base) {
+        displayName = CSTRING(FactionClasses_events_displayName);
+    };
     class GVAR(radio): GVAR(base) {
         displayName = "A3CS Radia";
     };

@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: SzwedzikPL
- * Validator for curator module
+ * Validator for createTask module
  */
 
 params ["_module", "_values"];

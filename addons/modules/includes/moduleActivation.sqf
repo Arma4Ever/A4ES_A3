@@ -1,16 +1,21 @@
 
 private _activationMode = _logic getVariable [QGVAR(activationMode), 0];
+private _activationDelay = _logic getVariable [QGVAR(activationDelay), false];
+private _activationDelayTime = [
+  0,
+  _logic getVariable [QGVAR(activationDelayTime), 0]
+] select _activationDelay;
 
 // Activation by trigger
 if (_activationMode isEqualTo 2) exitWith {
   if !(_isActivated) exitWith {
     LOG('Init of EXEC_MODULE_NAME finished - exection aborted - not activated.');
   };
-  if (_logic getVariable [QGVAR(activationDelay), false]) then {
+  if (_activationDelay) then {
     [
       {_this call EXEC_MODULE_FNC},
       [_logic],
-      _logic getVariable [QGVAR(activationDelayTime), 0]
+      _activationDelayTime
     ] call CBA_fnc_waitAndExecute;
     LOG('Init of EXEC_MODULE_NAME finished - exection delayed.');
   } else {
@@ -27,8 +32,9 @@ if (_activationMode isEqualTo 2) exitWith {
 
 // Activation by proximity or condition
 if (_activationMode in [0, 1]) exitWith {
+  private _condition = compile ([_logic, _activationMode] call FUNC(getModuleActivatorCond));
   // Add module to activator system
-  [_logic, _activationMode, QUOTE(EXEC_MODULE_FNC)] call FUNC(addModuleToActivator);
+  [_logic, _condition, _logic, QUOTE(EXEC_MODULE_FNC), _activationDelayTime] call FUNC(addModuleToActivator);
   LOG('Init of EXEC_MODULE_NAME finished - added to activator.');
 };
 

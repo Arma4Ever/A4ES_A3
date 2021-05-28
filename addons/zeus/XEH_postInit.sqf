@@ -7,6 +7,13 @@ if (isServer) then {
     _this call FUNC(unassignCuratorModule);
     false
   }];
+
+  // Reset curator points every 15 sec
+  [{
+    {
+      _x addCuratorPoints 1;
+    } forEach allCurators;
+  }, 15] call CBA_fnc_addPerFrameHandler;
 };
 
 if (hasInterface) then {

@@ -21,15 +21,15 @@ if (_data isEqualTo []) exitWith {
   GVAR(moduleActivatorIndex) = 0;
 };
 
-_data params ["_logic", "_condition", "_activation"];
+_data params ["_logic", "_condition", "_params", "_activation"];
 
 if (isNull _logic) exitWith {
   _moduleList deleteAt _index;
 };
 
-if (_logic call _condition) then {
+if (_params call _condition) then {
   _moduleList deleteAt _index;
-  _logic call _activation;
+  _params call _activation;
   // Removed current index - no need for index increase
 } else {
   GVAR(moduleActivatorIndex) = _index + 1;

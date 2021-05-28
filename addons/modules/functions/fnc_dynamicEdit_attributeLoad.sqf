@@ -13,6 +13,11 @@ if (typename _value != typename '') then {
 
 _control ctrlSetText _value;
 
+private _disabled = getNumber (_config >> QGVAR(disabled));
+if (_disabled isEqualTo 1) then {
+  _control ctrlEnable false;
+};
+
 // Init dynamic attribute
 private _initData = [_this, _config, _value, {
   //TODO: Observer for edit control

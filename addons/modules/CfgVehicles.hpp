@@ -155,6 +155,10 @@ class CfgVehicles {
                 typeName = "NUMBER";
             };
 
+            class GVAR(dynamicToolboxSideFull): GVAR(dynamicToolboxSide) {
+                control = QGVAR(dynamicToolboxSideFull);
+            };
+
             class GVAR(dynamicToolboxTaskState): Default {
                 control = QGVAR(dynamicToolboxTaskState);
                 typeName = "NUMBER";
@@ -256,23 +260,27 @@ class CfgVehicles {
         curatorInfoType = "";
     };
 
+    // #include "modules\addAction\module.hpp"
+    #include "modules\addCuratorModule\module.hpp"
+    #include "modules\aiNightvision\module.hpp"
+    #include "modules\ambientAnimals\module.hpp"
+    #include "modules\ambientFlyby\module.hpp"
     #include "modules\coverMap\module.hpp"
+    #include "modules\createTask\module.hpp"
     #include "modules\curator\module.hpp"
+    #include "modules\fireArtillery\module.hpp"
     #include "modules\generateSoldiers\module.hpp"
     #include "modules\generatorComposition\module.hpp"
-    #include "modules\registerArtilleryUnits\module.hpp"
-    #include "modules\switchLights\module.hpp"
-    #include "modules\ambientFlyby\module.hpp"
-    #include "modules\fireArtillery\module.hpp"
-    #include "modules\aiNightvision\module.hpp"
-    #include "modules\addCuratorModule\module.hpp"
+    // #include "modules\objects3DENComp\module.hpp"
+    #include "modules\onAreaCleared\module.hpp"
+    #include "modules\onDeleted\module.hpp"
+    #include "modules\onEntitiesInArea\module.hpp"
+    #include "modules\onKilled\module.hpp"
     #include "modules\radioJammer\module.hpp"
-    #include "modules\createTask\module.hpp"
+    #include "modules\registerArtilleryUnits\module.hpp"
     #include "modules\setTaskState\module.hpp"
-    #include "modules\ambientAnimals\module.hpp"
-
-
-    // #include "modules\spawnUnits\module.hpp"
+    #include "modules\switchLights\module.hpp"
+    // #include "modules\units3DENComp\module.hpp"
 
     /*#include "hiddenModules.hpp"*/
 };

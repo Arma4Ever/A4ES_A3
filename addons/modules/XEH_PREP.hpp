@@ -21,6 +21,7 @@ PREP(dynamicToolbox_attributeLoad);
 PREP(dynamicToolbox_attributeSave);
 PREP(getModuleActivatorCond);
 PREP(handleModuleInit);
+PREP(handlerModuleChangeTaskState);
 PREP(handleWarningsTreeClick);
 PREP(initDynamicAttribute);
 PREP(initWarnings);
@@ -38,19 +39,24 @@ PREP(updateModuleValues);
 PREP(updateWarningsTabUI);
 PREP(validateEntity);
 
+// #include "modules\addAction\prep.hpp"
+#include "modules\addCuratorModule\prep.hpp"
+#include "modules\aiNightvision\prep.hpp"
+#include "modules\ambientAnimals\prep.hpp"
+#include "modules\ambientFlyby\prep.hpp"
 #include "modules\coverMap\prep.hpp"
+#include "modules\createTask\prep.hpp"
 #include "modules\curator\prep.hpp"
 #include "modules\fireArtillery\prep.hpp"
 #include "modules\generateSoldiers\prep.hpp"
 #include "modules\generatorComposition\prep.hpp"
-#include "modules\registerArtilleryUnits\prep.hpp"
-#include "modules\switchLights\prep.hpp"
-#include "modules\ambientFlyby\prep.hpp"
-#include "modules\aiNightvision\prep.hpp"
-#include "modules\addCuratorModule\prep.hpp"
+// #include "modules\objects3DENComp\prep.hpp"
+#include "modules\onAreaCleared\prep.hpp"
+#include "modules\onDeleted\prep.hpp"
+#include "modules\onEntitiesInArea\prep.hpp"
+#include "modules\onKilled\prep.hpp"
 #include "modules\radioJammer\prep.hpp"
-#include "modules\createTask\prep.hpp"
+#include "modules\registerArtilleryUnits\prep.hpp"
 #include "modules\setTaskState\prep.hpp"
-#include "modules\ambientAnimals\prep.hpp"
-
-// #include "modules\spawnUnits\prep.hpp"
+#include "modules\switchLights\prep.hpp"
+// #include "modules\units3DENComp\prep.hpp"

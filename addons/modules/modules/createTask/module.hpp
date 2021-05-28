@@ -23,15 +23,15 @@ class GVAR(createTask): GVAR(base) {
             property = QGVAR(baseSettingsSubCategory);
         };
 
-        // Hidden task ID, auto generated in validator
-        class GVAR(id): Default {
-            displayName = "Id";
-            tooltip = "Id";
+        // Read only task ID, auto generated in validator
+        class GVAR(id): GVAR(dynamicEdit) {
+            displayName = CSTRING(createTask_Attributes_id);
+            tooltip = CSTRING(createTask_Attributes_id_tooltip);
             property = QGVAR(id);
-            control = QGVAR(dynamicHiddenEdit);
-            typeName = "STRING";
             defaultValue = "''";
             unique = 1;
+            GVAR(description) = CSTRING(createTask_Attributes_id_desc);
+            GVAR(disabled) = 1;
         };
 
         class GVAR(owner): Default {

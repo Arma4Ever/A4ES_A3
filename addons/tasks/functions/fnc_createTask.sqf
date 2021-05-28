@@ -5,7 +5,7 @@
  */
 
 params ["_taskData", "_showNotification"];
-_taskData params ["_id", "_parentId", "_owner", "_title", "", "", "", "_state"];
+_taskData params ["_id", "_parentId", "_owner", "_title", "_description", "_type", "_pos", "_state"];
 TRACE_2("createTask",_taskData,_showNotification);
 
 private _createdTasks = GVAR(createdTasks);
@@ -24,8 +24,25 @@ if (
   GVAR(awaitingTasksServer) set [_parentId, _awaiting];
 };
 
-_createdTasks pushBack _id;
-[QGVAR(createTask), _taskData] call CBA_fnc_globalEventJIP;
+// Use task state from setTaskState if task state has been updated before creation
+private _awaitingTasksStates = GVAR(awaitingTasksStates);
+if (_id in _awaitingTasksStates) then {
+  _state = _awaitingTasksStates get _id;
+  _awaitingTasksStates deleteAt _id;
+  TRACE_2("createTask - task has awaiting state, overriding state",_id,_state);
+};
+
+_createdTasks set [_id, _state];
+[QGVAR(createTask), [
+  _id,
+  _parentId,
+  _owner,
+  _title,
+  _description,
+  _type,
+  _pos,
+  _state
+]] call CBA_fnc_globalEventJIP;
 
 // Send notification if not mission start
 if (_showNotification) then {

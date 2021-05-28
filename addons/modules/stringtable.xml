@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
   <Package name="Modules">
+    <Key ID="STR_A3CS_Modules_FactionClasses_events_displayName">
+      <Polish>A3CS Obsługa zdarzeń</Polish>
+    </Key>
     <Key ID="STR_A3CS_Modules_Warnings">
       <English>Warnings</English>
       <Polish>Ostrzeżenia</Polish>
@@ -150,6 +153,12 @@
     <Key ID="STR_A3CS_Modules_Warning_ModuleHasNoEffect">
       <Polish>Brak efektu działania modułu</Polish>
     </Key>
+    <Key ID="STR_A3CS_Modules_Warning_changeTaskState_MissingTask">
+      <Polish>Brak zadania</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Warning_changeTaskState_MissingTask_Desc">
+      <Polish>Brak zadania do zmianu stanu</Polish>
+    </Key>
   </Package>
   <Package name="Modules_AttributesCommon">
     <Key ID="STR_A3CS_Modules_Attributes_activationSettingsSubCategory">
@@ -197,6 +206,36 @@
     <Key ID="STR_A3CS_Modules_Attributes_activationDelayTime_Tooltip">
       <Polish>Czas w sekundach jaki ma odczekać moduł od momentu aktywacji do wykonania kodu.</Polish>
     </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_changeTaskStateSettingsSubCategory">
+      <Polish>Zmiana stanu zadania</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_changeTaskState">
+      <Polish>Zmień stan zadania</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_changeTaskState_tooltip">
+      <Polish>Czy aktywacja modułu ma zmienić stan jakiegoś zadania.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_taskStateDelay">
+      <Polish>Opóźnij zmianę stanu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_taskStateDelay_tooltip">
+      <Polish>Opóźnia zmianę stanu zadania o podaną liczbę sekund (0 - brak opóźnienia).</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_scriptHandlerSettingsSubCategory">
+      <Polish>Handler zdarzenia</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_addScriptHandler">
+      <Polish>Dodaj własny handler</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_addScriptHandler_tooltip">
+      <Polish>Dodaj własny skrypt uruchomiony w momencie aktywacji modułu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_scriptHandler">
+      <Polish>Handler</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_scriptHandler_tooltip">
+      <Polish>Skrypt który zostanie uruchomiony w momencie aktywacji modułu.</Polish>
+    </Key>
   </Package>
   <Package name="Modules_dynamicToolboxActivationMode">
     <Key ID="STR_A3CS_Modules_dynamicToolboxActivationMode_value_missionStart">
@@ -215,7 +254,7 @@
       <Polish>Warunek logiczny</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_dynamicToolboxActivationMode_value_condition_Desc">
-      <Polish>Moduł będzie aktywowany po spełnieniuw warunku logicznego.</Polish>
+      <Polish>Moduł będzie aktywowany po spełnieniu warunku logicznego.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_dynamicToolboxActivationMode_value_trigger">
       <Polish>Wyzwalacz</Polish>
@@ -975,7 +1014,7 @@
   </Package>
   <Package name="Modules_curator">
     <Key ID="STR_A3CS_Modules_curator_displayName">
-      <Polish>Zeus</Polish>
+      <Polish>Dostęp do zeusa</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_curator_shortDescription">
       <Polish>Moduł oznacza jednostki które mają mieć dostęp do interfejsu zeusa. Aby dać jednostce dostęp do zeusa wystarczy połączyć (zsynchronizować) moduł z daną jednostką. Jeden moduł może być połączony (zsynchronizowany) z dowolną ilością jednostek.</Polish>
@@ -1320,17 +1359,20 @@
     <Key ID="STR_A3CS_Modules_createTask_Attributes_baseSettingsSubCategory">
       <Polish>Ustawienia zadania</Polish>
     </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_id">
+      <Polish>ID zadania</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_id_tooltip">
+      <Polish>Unikalny identyfikator zadania</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createTask_Attributes_id_desc">
+      <Polish>ID zadania jest generowane automatycznie w momencie utworzenia modułu zadania (tylko do odczytu). Tego ID można użyć we własnych skryptach do zmiany statusu zadania lub tworzenia podzadań.</Polish>
+    </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_owner">
       <Polish>Grupa docelowa</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_owner_tooltip">
       <Polish>Grupa której wyświetli się dane zadanie</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_createTask_Attributes_id">
-      <Polish>Identyfikator</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_createTask_Attributes_id_tooltip">
-      <Polish>Unikalny identyfikator zadania np. zadanie_1</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_parent">
       <Polish>Zadanie nadrzędne</Polish>
@@ -1423,6 +1465,71 @@
     </Key>
     <Key ID="STR_A3CS_Modules_setTaskState_Warning_emptyTasks_Tooltip">
       <Polish>Nie wykryto żadnych zadań</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_onKilled">
+    <Key ID="STR_A3CS_Modules_onKilled_displayName">
+      <Polish>Gdy zabity/zniszczony</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onKilled_shortDescription">
+      <Polish>Moduł uruchomi się gdy wszystkie zsynchronizowane z modułem jednostki, pojazdy i obiekty zostaną zabite/zniszczone.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onKilled_Attributes_scriptHandler_desc">
+      <Polish>Skrypt uruchomi się tylko na serwerze. Parametry:&lt;br/&gt;#0 _logic - moduł.&lt;br/&gt;#1 _objectList - lista wszystkich zsynchronizowanych jednostek/pojazdów/obiektów.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onKilled_Warning_EmptySynced">
+      <Polish>Brak zsynchronizowanych obiektów</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onKilled_Warning_EmptySynced_Desc">
+      <Polish>Aby moduł zadziałał, zsynchronizuj go z conajmniej jednym obiektem/pojazdem/jednostką po której/których zniszczeniu moduł ma się uruchomić.</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_onAreaCleared">
+    <Key ID="STR_A3CS_Modules_onAreaCleared_displayName">
+      <Polish>Gdy obszar wyczyszczony</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onAreaCleared_shortDescription">
+      <Polish>Moduł uruchomi się gdy wszystkie jednostki danej strony w obszarze modułu zostaną wyeliminowane.&lt;br/&gt;&lt;br/&gt;Moduł obsługuje jednostki spawnione w generatorach (m.in. tym się różni od triggerów "obecny"). Aby sprawdzać obecność jednostek dopiero po ich wygenerowaniu z generatorów, wystarczy połączyć moduł ze wszystkimi generatorami w obszarze.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onAreaCleared_Attributes_baseSettingsSubCategory">
+      <Polish>Ustawienia podstawowe</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onAreaCleared_Attributes_side">
+      <Polish>Strona przeciwnika</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onAreaCleared_Attributes_side_Tooltip">
+      <Polish>Strona jednostek z których obszar ma zostać wyczyszczony</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onAreaCleared_Attributes_scriptHandler_desc">
+      <Polish>Skrypt uruchomi się tylko na serwerze. Parametry:&lt;br/&gt;#0 _logic - moduł.</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_onEntitiesInArea">
+    <Key ID="STR_A3CS_Modules_onEntitiesInArea_displayName">
+      <Polish>Gdy w obszarze</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onEntitiesInArea_shortDescription">
+      <Polish>Moduł uruchomi się gdy wszystkie zsynchronizowane z modułem jednostki, pojazdy i obiekty będą znajdowały się w obszarze modułu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onEntitiesInArea_Attributes_scriptHandler_desc">
+      <Polish>Skrypt uruchomi się tylko na serwerze. Parametry:&lt;br/&gt;#0 _logic - moduł.&lt;br/&gt;#1 _objectList - lista wszystkich zsynchronizowanych jednostek/pojazdów/obiektów.</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_onDeleted">
+    <Key ID="STR_A3CS_Modules_onDeleted_displayName">
+      <Polish>Gdy usunięty</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onDeleted_shortDescription">
+      <Polish>Moduł uruchomi się gdy wszystkie zsynchronizowane z modułem jednostki, pojazdy i obiekty zostaną usunięte.&lt;br/&gt;&lt;br/&gt;Tego modułu można użyć m.in. gdy chcemy zaliczyć zadanie po podniesieniu jakiegoś obiektu (np. obiektu intelu/dokumentów), ponieważ po podniesieniu obiektów, są one przez grę usuwane (obiekt zostaje usunięty a dodany zostaje item do inventory jednostki).</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onDeleted_Attributes_scriptHandler_desc">
+      <Polish>Skrypt uruchomi się tylko na serwerze. Parametry:&lt;br/&gt;#0 _logic - moduł.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onDeleted_Warning_EmptySynced">
+      <Polish>Brak zsynchronizowanych obiektów</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onDeleted_Warning_EmptySynced_Desc">
+      <Polish>Aby moduł zadziałał, zsynchronizuj go z conajmniej jednym obiektem/pojazdem/jednostką po której/których usunięciu moduł ma się uruchomić.</Polish>
     </Key>
   </Package>
 </Project>

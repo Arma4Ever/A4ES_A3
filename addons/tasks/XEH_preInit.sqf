@@ -5,7 +5,8 @@ ADDON = false;
 #include "XEH_PREP.hpp"
 
 if (isServer) then {
-  GVAR(createdTasks) = [];
+  GVAR(createdTasks) = createHashMap;
+  GVAR(awaitingTasksStates) = createHashMap;
   GVAR(awaitingTasksServer) = createHashMap;
 };
 
