@@ -255,6 +255,7 @@ namespace a3cs_debug
                             {
                                 // Replace XML chars for A3 structured text
                                 string structLine = line
+                                    .Replace("&", "&amp;")
                                     .Replace("<", "&lt;")
                                     .Replace(">", "&gt;")
                                     .Replace("\"", "&quot;")
