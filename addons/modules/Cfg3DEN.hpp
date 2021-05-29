@@ -230,7 +230,7 @@ class Cfg3DEN {
         #include "attributes\dynamicClassSelect.hpp"
         #include "attributes\dynamicToolboxActivationMode.hpp"
         #include "attributes\dynamicToolboxSide.hpp"
-        #include "attributes\dynamicToolboxSoundRepatMode.hpp"
+        #include "attributes\dynamicToolboxSoundRepeatMode.hpp"
         #include "attributes\dynamicToolboxTaskState.hpp"
         #include "attributes\dynamicToolboxUnitStance.hpp"
         #include "attributes\dynamicOwnerToolbox.hpp"
