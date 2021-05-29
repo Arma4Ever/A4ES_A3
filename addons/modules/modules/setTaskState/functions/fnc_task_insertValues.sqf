@@ -7,8 +7,6 @@
 params ["_module"];
 
 private _modules = (all3DENEntities # 3) select {_x isKindOf QGVAR(createTask)};
-// Remove self
-_modules deleteAt (_modules find _module);
 
 // Get tasks ids list
 private _tasks = _modules apply {

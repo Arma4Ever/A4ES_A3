@@ -7,12 +7,7 @@
 params ["_module", "_values"];
 
 // Auto setup task id if not setuped yet
-private _id = (_module get3DENAttribute QGVAR(id)) param [0, ""];
-if (_id isEqualTo "") then {
-  _id = format ["task_%1", get3DENEntityID _module];
-  TRACE_2("Setuping task id",_module,_id);
-  _module set3DENAttribute [QGVAR(id), _id];
-};
+[_module, QGVAR(id), "task_%1"] call FUNC(setUniqueIdAttribute);
 
 private _warnings = [];
 

@@ -28,12 +28,17 @@ if (_logic getVariable [QGVAR(showPos), true]) then {
   _pos = getPos _logic;
 };
 
+private _owner = _logic getVariable [QGVAR(owner), 0];
+if (_owner isEqualTo 5) then {
+  _owner = (synchronizedObjects _logic) select {_x isKindOf "CAManBase"};
+};
+
 // Create task
 [
   [
     _id,
     _logic getVariable [QGVAR(parent), ""],
-    _logic getVariable [QGVAR(owner), 0],
+    _owner,
     _title,
     _logic getVariable [QGVAR(description), ""],
     _logic getVariable [QGVAR(type), "default"],

@@ -14,6 +14,8 @@
     #define PREP_MODULE(moduleName,fncName) [QPATHTOF(modules\moduleName\functions\DOUBLES(fnc,fncName).sqf), QFUNC(DOUBLES(moduleName,fncName))] call CBA_fnc_compileFunction
 #endif
 
+#define ATTRIBUTE_LOCAL expression = QUOTE(_this setVariable ['%s',_value];)
+
 // Panel left
 #define IDC_DISPLAY3DEN_PANELLEFT_WARNINGS        1200
 #define IDC_DISPLAY3DEN_PANELLEFT_WARNINGS_ICON   1201

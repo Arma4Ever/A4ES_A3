@@ -10,8 +10,10 @@ TRACE_2("createTask",_taskData,_showNotification);
 
 private _createdTasks = GVAR(createdTasks);
 
-// Exit if task already created - should not happen
-if (_id in _createdTasks) exitWith {};
+// Exit if not server or task already created - should not happen
+if (
+  !isServer || {_id in _createdTasks}
+) exitWith {""};
 
 // Delay task creation until parent is created
 if (
@@ -22,6 +24,7 @@ if (
   private _awaiting = GVAR(awaitingTasksServer) getOrDefault [_parentId, []];
   _awaiting pushBack _this;
   GVAR(awaitingTasksServer) set [_parentId, _awaiting];
+  ""
 };
 
 // Use task state from setTaskState if task state has been updated before creation
@@ -59,3 +62,5 @@ if (_id in GVAR(awaitingTasksServer)) then {
     _x call FUNC(createTask);
   } forEach _tasks;
 };
+
+_id

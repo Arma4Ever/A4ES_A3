@@ -34,11 +34,10 @@ class GVAR(createTask): GVAR(base) {
             GVAR(disabled) = 1;
         };
 
-        class GVAR(owner): Default {
+        class GVAR(owner): GVAR(dynamicOwnerToolbox) {
             displayName = CSTRING(createTask_Attributes_owner);
             tooltip = CSTRING(createTask_Attributes_owner_tooltip);
             property = QGVAR(owner);
-            control = QGVAR(createTask_ownerToolbox);
             typeName = "NUMBER";
             defaultValue = "0";
         };

@@ -159,6 +159,12 @@ class CfgVehicles {
                 control = QGVAR(dynamicToolboxSideFull);
             };
 
+            class GVAR(dynamicToolboxSoundRepeatMode): Default {
+                control = QGVAR(dynamicToolboxSoundRepeatMode);
+                typeName = "NUMBER";
+                GVAR(observeValue) = 1;
+            };
+
             class GVAR(dynamicToolboxTaskState): Default {
                 control = QGVAR(dynamicToolboxTaskState);
                 typeName = "NUMBER";
@@ -167,6 +173,12 @@ class CfgVehicles {
             class GVAR(dynamicToolboxUnitStance): Default {
                 control = QGVAR(dynamicToolboxUnitStance);
                 typeName = "NUMBER";
+            };
+
+            class GVAR(dynamicOwnerToolbox): Default {
+                control = QGVAR(dynamicOwnerToolbox);
+                typeName = "NUMBER";
+                GVAR(observeValue) = 1;
             };
 
             class GVAR(dynamicSlider): Default {
@@ -260,15 +272,20 @@ class CfgVehicles {
         curatorInfoType = "";
     };
 
-    // #include "modules\addAction\module.hpp"
+    #include "modules\addAction\module.hpp"
     #include "modules\addCuratorModule\module.hpp"
     #include "modules\aiNightvision\module.hpp"
     #include "modules\ambientAnimals\module.hpp"
     #include "modules\ambientFlyby\module.hpp"
+    // #include "modules\colorCorrections\module.hpp"
     #include "modules\coverMap\module.hpp"
+    #include "modules\createLogicFlag\module.hpp"
+    // #include "modules\createMarker\module.hpp"
     #include "modules\createTask\module.hpp"
     #include "modules\curator\module.hpp"
+    // #include "modules\deleteMarker\module.hpp"
     #include "modules\fireArtillery\module.hpp"
+    // #include "modules\generateMinefield\module.hpp"
     #include "modules\generateSoldiers\module.hpp"
     #include "modules\generatorComposition\module.hpp"
     // #include "modules\objects3DENComp\module.hpp"
@@ -276,9 +293,14 @@ class CfgVehicles {
     #include "modules\onDeleted\module.hpp"
     #include "modules\onEntitiesInArea\module.hpp"
     #include "modules\onKilled\module.hpp"
+    #include "modules\playSound\module.hpp"
     #include "modules\radioJammer\module.hpp"
     #include "modules\registerArtilleryUnits\module.hpp"
+    // #include "modules\setDamage\module.hpp"
+    // #include "modules\setDraggable\module.hpp"
+    #include "modules\setLogicFlagValue\module.hpp"
     #include "modules\setTaskState\module.hpp"
+    // #include "modules\setTimeMultiplier\module.hpp"
     #include "modules\switchLights\module.hpp"
     // #include "modules\units3DENComp\module.hpp"
 

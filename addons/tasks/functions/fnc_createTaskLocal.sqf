@@ -7,6 +7,8 @@
 params ["_id", "_parentId", "_owner", "_title", "_description", "_type", "_pos", "_state"];
 TRACE_8("createTaskLocal",_id,_parentId,_owner,_title,_description,_type,_pos,_state);
 
+if !(hasInterface) exitWith {};
+
 // Exit if player is not task owner
 if !([player, _owner] call FUNC(isTaskOwner)) exitWith {
   GVAR(rejectedTasks) pushBack _id;

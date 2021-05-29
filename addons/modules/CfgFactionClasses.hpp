@@ -7,8 +7,14 @@ class CfgFactionClasses {
     class GVAR(AI): GVAR(base) {
         displayName = "A3CS AI";
     };
+    class GVAR(actions): GVAR(base) {
+        displayName = "A3CS Akcje";
+    };
     class GVAR(tasks): GVAR(base) {
         displayName = "A3CS Zadania";
+    };
+    class GVAR(logicFlags): GVAR(base) {
+        displayName = "A3CS Flagi logiczne";
     };
     class GVAR(effects): GVAR(base) {
         displayName = "A3CS Efekty";

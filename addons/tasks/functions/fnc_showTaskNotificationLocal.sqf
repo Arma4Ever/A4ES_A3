@@ -7,6 +7,8 @@
 params ["_id", "_state"];
 TRACE_2("showTaskNotificationLocal",_id,_state);
 
+if !(hasInterface) exitWith {};
+
 // Do not show notifications for not created tasks
 if !(_id in GVAR(tasks)) exitWith {
   // Do not save notification if task has been rejected

@@ -7,6 +7,7 @@ class GVAR(changeTaskState): GVAR(dynamicCheckbox) {
     displayName = CSTRING(Attributes_changeTaskState);
     tooltip = CSTRING(Attributes_changeTaskState_tooltip);
     property = QGVAR(changeTaskState);
+    ATTRIBUTE_LOCAL;
 };
 
 class GVAR(task): GVAR(dynamicCombo) {
@@ -17,6 +18,7 @@ class GVAR(task): GVAR(dynamicCombo) {
     defaultValue = "''";
     GVAR(insertValues) = QFUNC(setTaskState_task_insertValues);
     GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(changeTaskState)) isEqualTo true);
+    ATTRIBUTE_LOCAL;
 };
 
 class GVAR(taskState): GVAR(dynamicToolboxTaskState) {
@@ -25,6 +27,7 @@ class GVAR(taskState): GVAR(dynamicToolboxTaskState) {
     property = QGVAR(taskState);
     defaultValue = "0";
     GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(changeTaskState)) isEqualTo true);
+    ATTRIBUTE_LOCAL;
 };
 
 class GVAR(taskStateDelay): GVAR(dynamicEdit) {
@@ -33,7 +36,9 @@ class GVAR(taskStateDelay): GVAR(dynamicEdit) {
     property = QGVAR(taskStateDelay);
     typeName = "NUMBER";
     defaultValue = "0";
+    validate = "number";
     GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(changeTaskState)) isEqualTo true);
+    ATTRIBUTE_LOCAL;
 };
 
 class GVAR(taskShowNotification): GVAR(dynamicCheckbox) {
@@ -43,4 +48,5 @@ class GVAR(taskShowNotification): GVAR(dynamicCheckbox) {
     defaultValue = "true";
     GVAR(observeValue) = 0;
     GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(changeTaskState)) isEqualTo true);
+    ATTRIBUTE_LOCAL;
 };

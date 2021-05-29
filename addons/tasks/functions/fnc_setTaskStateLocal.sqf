@@ -7,6 +7,8 @@
 params ["_id", "_state"];
 TRACE_2("setTaskStateLocal",_id,_state);
 
+if !(hasInterface) exitWith {};
+
 private _tasks = GVAR(tasks);
 
 if !(_id in _tasks) exitWith {

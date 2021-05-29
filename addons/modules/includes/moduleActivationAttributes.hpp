@@ -9,6 +9,7 @@ class GVAR(activationMode): Default {
     property = QGVAR(activationMode);
     typeName = "NUMBER";
     GVAR(observeValue) = 1;
+    ATTRIBUTE_LOCAL;
 
     #ifdef MODULE_ACTIVATOR_CONTROL
         control = MODULE_ACTIVATOR_CONTROL;
@@ -33,6 +34,7 @@ class GVAR(activationNearestPlayerDistance): GVAR(dynamicSlider) {
     GVAR(range[]) = {1, 3000};
     GVAR(valueUnit) = "m";
     GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(activationMode)) isEqualTo 0);
+    ATTRIBUTE_LOCAL;
 };
 class GVAR(activationIgnoreHelicopters): GVAR(dynamicCheckbox) {
     displayName = CSTRING(Attributes_activationIgnoreHelicopters);
@@ -40,6 +42,7 @@ class GVAR(activationIgnoreHelicopters): GVAR(dynamicCheckbox) {
     property = QGVAR(activationIgnoreHelicopters);
     GVAR(observeValue) = 0;
     GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(activationMode)) isEqualTo 0);
+    ATTRIBUTE_LOCAL;
 };
 class GVAR(activationIgnorePlanes): GVAR(dynamicCheckbox) {
     displayName = CSTRING(Attributes_activationIgnorePlanes);
@@ -47,6 +50,15 @@ class GVAR(activationIgnorePlanes): GVAR(dynamicCheckbox) {
     property = QGVAR(activationIgnorePlanes);
     GVAR(observeValue) = 0;
     GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(activationMode)) isEqualTo 0);
+    ATTRIBUTE_LOCAL;
+};
+class GVAR(activationFlags): GVAR(dynamicEdit) {
+    displayName = CSTRING(Attributes_activationFlags);
+    tooltip = CSTRING(Attributes_activationFlags_Tooltip);
+    property = QGVAR(activationFlags);
+    defaultValue = "'[]'";
+    GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(activationMode)) isEqualTo 1);
+    ATTRIBUTE_LOCAL;
 };
 class GVAR(activationCondition): GVAR(dynamicEditCodeMulti5) {
     displayName = CSTRING(Attributes_activationCondition);
@@ -55,19 +67,23 @@ class GVAR(activationCondition): GVAR(dynamicEditCodeMulti5) {
     defaultValue = "'true'";
     typeName = "STRING";
     validate = "condition";
-    GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(activationMode)) isEqualTo 1);
+    GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(activationMode)) isEqualTo 2);
+    ATTRIBUTE_LOCAL;
 };
 class GVAR(activationDelay): GVAR(dynamicCheckbox) {
     displayName = CSTRING(Attributes_activationDelay);
     tooltip = CSTRING(Attributes_activationDelay_tooltip);
     property = QGVAR(activationDelay);
     GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(activationMode)) isNotEqualTo -1);
+    ATTRIBUTE_LOCAL;
 };
 class GVAR(activationDelayTime): GVAR(dynamicEdit) {
     displayName = CSTRING(Attributes_activationDelayTime);
     tooltip = CSTRING(Attributes_activationDelayTime_Tooltip);
     property = QGVAR(activationDelayTime);
     defaultValue = "'0'";
-    validate = "NUMBER";
+    typeName = "NUMBER";
+    validate = "number";
     GVAR(conditionActive) = QUOTE(((_this getVariable QQGVAR(activationDelay)) isEqualTo true) &&((_this getVariable QQGVAR(activationMode)) isNotEqualTo -1));
+    ATTRIBUTE_LOCAL;
 };

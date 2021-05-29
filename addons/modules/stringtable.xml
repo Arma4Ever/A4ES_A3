@@ -236,6 +236,103 @@
     <Key ID="STR_A3CS_Modules_Attributes_scriptHandler_tooltip">
       <Polish>Skrypt który zostanie uruchomiony w momencie aktywacji modułu.</Polish>
     </Key>
+
+    <Key ID="STR_A3CS_Modules_Attributes_playSoundSettingsSubCategory">
+      <Polish>Odtwórz dźwięk</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_playSound">
+      <Polish>Odtwórz dźwięk</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_playSound_tooltip">
+      <Polish>Czy moduł w momencie aktywacji ma odtworzyć dźwięk.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundFilePath">
+      <Polish>Ścieżka do pliku</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundFilePath_tooltip">
+      <Polish>Pełna ścieżka do pliku dźwiękowego (bez początkowego "\") np. a3\sounds_F\sfx\alarm_independent.wss</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundFilePath_desc">
+      <Polish>Przykład: a3\sounds_F\sfx\alarm_independent.wss</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundFromMission">
+      <Polish>Plik z misji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundFromMission_tooltip">
+      <Polish>Zaznacz tą opcję jeśli ścieżka do pliku wkazuje plik w folderze misji.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundFromMission_desc">
+      <Polish>Po zaznaczeniu tej opcji dostosuj ścieżkę do pliku. Przykład ścieżki do pliku w misji: data\mySound.ogg</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundSource">
+      <Polish>Źródło dźwięku</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundSource_tooltip">
+      <Polish>Nazwa zmiennej obiektu który ma być źródłem dźwięku, np. baza_glosnik.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundIsInside">
+      <Polish>Dźwięk w pomieszczeniu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundIsInside_tooltip">
+      <Polish>Zaznacz tą opcję jeśli źródło dźwięku znajduje się w pomieszczeniu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundVolume">
+      <Polish>Głośność</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundVolume_tooltip">
+      <Polish>Głośność odtwarzanego dźwięku.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundPitch">
+      <Polish>Wysokość tonów</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundPitch_tooltip">
+      <Polish>Wysokość tonów odtwarzanego dźwięku.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundPitch_desc">
+      <Polish>100% - normalnie, 50% - Darth Vader, 200% - kreskówka</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundDistance">
+      <Polish>Maks. dystans</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundDistance_tooltip">
+      <Polish>Maksymalny dystans w metrach z jakiego dźwięk ma być słyszalny.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundOffset">
+      <Polish>Przesunięcie</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundOffset_tooltip">
+      <Polish>Moment od którego dźwiek ma być odtworzony. 0 - od początku, 5 - od 5tej sekundy, itp.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_playSoundDelay">
+      <Polish>Opóźnienie rozpoczęcia</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_playSoundDelay_tooltip">
+      <Polish>Czas w sekundach od momentu aktywacji modułu do rozpoczęcia odtwarzania dźwięku (0 - od razu).</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundRepeat">
+      <Polish></Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundRepeat_tooltip">
+      <Polish></Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundRepeatCount">
+      <Polish></Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundRepeatCount_tooltip">
+      <Polish></Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundRepeatCondition">
+      <Polish></Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundRepeatCondition_tooltip">
+      <Polish></Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundRepeatDelay">
+      <Polish></Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundRepeatDelay_tooltip">
+      <Polish></Polish>
+    </Key>
   </Package>
   <Package name="Modules_dynamicToolboxActivationMode">
     <Key ID="STR_A3CS_Modules_dynamicToolboxActivationMode_value_missionStart">
@@ -249,6 +346,12 @@
     </Key>
     <Key ID="STR_A3CS_Modules_dynamicToolboxActivationMode_value_nearestPlayer_Desc">
       <Polish>Moduł będzie aktywowany przez zbliżenie się graczy do modułu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolboxActivationMode_value_flags">
+      <Polish>Flagi logiczne</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolboxActivationMode_value_flags_Desc">
+      <Polish>Moduł będzie aktywowany gdy wybrane flagi logiczne będą miały oczekiwane wartości.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_dynamicToolboxActivationMode_value_condition">
       <Polish>Warunek logiczny</Polish>
@@ -311,6 +414,14 @@
     </Key>
     <Key ID="STR_A3CS_Modules_dynamicClassSelect_unitsInGroupCount">
       <Polish>Ilość jednostek w grupie: %1</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_dynamicOwnerToolbox">
+    <Key ID="STR_A3CS_Modules_dynamicOwnerToolbox_all">
+      <Polish>Wszyscy gracze</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicOwnerToolbox_syncedUnits">
+      <Polish>Zsynchronizowane z modułem jednostki</Polish>
     </Key>
   </Package>
   <Package name="Modules_generateSoldiers">
@@ -1344,11 +1455,6 @@
       <Polish>Powyższe wartości (jakość nadwania i odbioru) działają na zasadzie mnożników, np. jeśli ustawimy jakość odbioru na 25%, jakość odbioru radia zostanie pomniejszona o 75% względem normalnej (czyli 25% normalnej jakości odbioru). Jakość odbioru 100% oznacza, że radia będą odbierać normalnie, a jakość odbioru 0% oznacza, iż radio nie będzie odbierać w ogóle.</Polish>
     </Key>
   </Package>
-  <Package name="Modules_createTask_ownerToolbox">
-    <Key ID="STR_A3CS_Modules_createTask_ownerToolbox_all">
-      <Polish>Wszyscy gracze</Polish>
-    </Key>
-  </Package>
   <Package name="Modules_createTask">
     <Key ID="STR_A3CS_Modules_createTask_displayName">
       <Polish>Nowe zadanie</Polish>
@@ -1530,6 +1636,23 @@
     </Key>
     <Key ID="STR_A3CS_Modules_onDeleted_Warning_EmptySynced_Desc">
       <Polish>Aby moduł zadziałał, zsynchronizuj go z conajmniej jednym obiektem/pojazdem/jednostką po której/których usunięciu moduł ma się uruchomić.</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_addAction">
+    <Key ID="STR_A3CS_Modules_addAction_displayName">
+      <Polish>Gdy usunięty</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_shortDescription">
+      <Polish>Moduł uruchomi się gdy wszystkie zsynchronizowane z modułem jednostki, pojazdy i obiekty zostaną usunięte.&lt;br/&gt;&lt;br/&gt;Tego modułu można użyć m.in. gdy chcemy zaliczyć zadanie po podniesieniu jakiegoś obiektu (np. obiektu intelu/dokumentów), ponieważ po podniesieniu obiektów, są one przez grę usuwane (obiekt zostaje usunięty a dodany zostaje item do inventory jednostki).</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_scriptHandler_desc">
+      <Polish>Skrypt uruchomi się tylko na serwerze. Parametry:&lt;br/&gt;#0 _logic - moduł.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Warning_EmptySynced">
+      <Polish>Brak zsynchronizowanych jednostek</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Warning_EmptySynced_Desc">
+      <Polish>Aby moduł zadziałał, zsynchronizuj go z conajmniej jedną jednostką dla której akcja ma być dostępna.</Polish>
     </Key>
   </Package>
 </Project>

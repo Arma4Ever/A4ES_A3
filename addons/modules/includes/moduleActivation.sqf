@@ -7,7 +7,7 @@ private _activationDelayTime = [
 ] select _activationDelay;
 
 // Activation by trigger
-if (_activationMode isEqualTo 2) exitWith {
+if (_activationMode isEqualTo 3) exitWith {
   if !(_isActivated) exitWith {
     LOG('Init of EXEC_MODULE_NAME finished - exection aborted - not activated.');
   };
@@ -30,8 +30,8 @@ if (_activationMode isEqualTo 2) exitWith {
   };
 };
 
-// Activation by proximity or condition
-if (_activationMode in [0, 1]) exitWith {
+// Activation by proximity, flags or condition
+if (_activationMode in [0, 1, 2]) exitWith {
   private _condition = compile ([_logic, _activationMode] call FUNC(getModuleActivatorCond));
   // Add module to activator system
   [_logic, _condition, _logic, QUOTE(EXEC_MODULE_FNC), _activationDelayTime] call FUNC(addModuleToActivator);

@@ -5,14 +5,40 @@ ADDON = false;
 #include "XEH_PREP.hpp"
 
 if (isServer) then {
-  GVAR(moduleActivatorPFH) = -1;
-  GVAR(moduleActivatorIndex) = -1;
-  GVAR(activatorModuleList) = [];
+  GVAR(moduleActivatorCyclePFH) = -1;
+  GVAR(moduleActivatorCycleIndex) = -1;
+  GVAR(activatorModuleCycleList) = [];
+
+  GVAR(flagActivatorModuleList) = [];
+
+  /*
+
+  // Flags binded with modules, used for fast check after flag changed
+  GVAR(moduleActivatorFlags) = createHashMap;
+
+  [
+    "flag" => [[_cond,_logic]]
+  ]
+
+  // Modules netIds binded with flags list, used to quick remove after module exec
+  GVAR(activatorModulesFlags) = createHashMap
+
+  [
+    "netId" => ["flag_1",...]
+  ]
+
+  */
 
   GVAR(onKilled_killedEH) = -1;
   GVAR(onKilled_waitingModules) = [];
 
   GVAR(radioJammerModules) = [];
+
+  // ???????
+  GVAR(createdActions) = createHashMap;
+  [QGVAR(addAction_actionExecuted), {
+    _this call FUNC(addAction_handleActionExecuted);
+  }];
 };
 
 [QGVAR(addCuratorModule), {
@@ -42,8 +68,17 @@ if (isServer) then {
 }] call CBA_fnc_addEventHandler;
 
 if (hasInterface) then {
+  [QGVAR(addAction), {
+    _this call FUNC(addAction_moduleExecLocal);
+  }];
   [QGVAR(addCuratorModule), {
     _this call FUNC(addCuratorModule_moduleExecLocal);
+  }] call CBA_fnc_addEventHandler;
+  [QGVAR(diagFPS_request), {
+    _this call FUNC(curator_diagFPS_handleRequest);
+  }] call CBA_fnc_addEventHandler;
+  [QGVAR(diagFPS_receive), {
+    _this call FUNC(curator_diagFPS_handleReceive);
   }] call CBA_fnc_addEventHandler;
 };
 

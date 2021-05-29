@@ -6,8 +6,13 @@
 
 params ["_logic", "_activationMode"];
 
-// Return user provided condition
+// Return flags list
 if (_activationMode isEqualTo 1) exitWith {
+  parseSimpleArray (_logic getVariable [QGVAR(activationFlags), "[]"])
+};
+
+// Return user provided condition
+if (_activationMode isEqualTo 2) exitWith {
   _logic getVariable [QGVAR(activationCondition), "true"]
 };
 

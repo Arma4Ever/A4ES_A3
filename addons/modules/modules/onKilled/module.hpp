@@ -14,6 +14,7 @@ class GVAR(onKilled): GVAR(base) {
         class GVAR(moduleWarnings): GVAR(moduleWarnings) {};
 
         #include "\z\a3cs\addons\modules\includes\moduleChangeTaskStateAttributes.hpp"
+        #include "\z\a3cs\addons\modules\includes\modulePlaySoundAttributes.hpp"
 
         class GVAR(scriptHandlerSettingsSubCategory): GVAR(moduleSubCategory) {
             displayName = CSTRING(Attributes_scriptHandlerSettingsSubCategory);
