@@ -1,5 +1,5 @@
-#define COMPONENT zeus
-#define COMPONENT_BEAUTIFIED Zeus
+#define COMPONENT curator
+#define COMPONENT_BEAUTIFIED Curator
 #include "\z\a3cs\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

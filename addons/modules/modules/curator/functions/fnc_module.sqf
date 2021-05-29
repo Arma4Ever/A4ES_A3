@@ -33,7 +33,7 @@ if (is3DENPreview) then {
 
 // Mark units as curators
 {
-  _x setVariable [QEGVAR(zeus,isCurator), true, true];
+  _x setVariable [QEGVAR(curator,isCurator), true, true];
 } forEach _syncedUnits;
 
 // Delete module

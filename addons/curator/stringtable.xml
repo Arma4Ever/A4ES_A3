@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
-  <Package name="Zeus">
-    <Key ID="STR_A3CS_Zeus_Addon">
+  <Package name="Curator">
+    <Key ID="STR_A3CS_Curator_Addon">
       <English>A3CS Zeus</English>
     </Key>
-    <Key ID="STR_A3CS_Zeus_showPlayersIcons">
+    <Key ID="STR_A3CS_Curator_showPlayersIcons">
       <English>Show player icons during remote control</English>
       <Polish>Pokaż ikony gracza podczas zdalnej kontroli</Polish>
     </Key>
-    <Key ID="STR_A3CS_Zeus_addCuratorEditableObject">
+    <Key ID="STR_A3CS_Curator_addCuratorEditableObject">
       <Polish>Dodaj do obiektów zeusa</Polish>
     </Key>
-    <Key ID="STR_A3CS_Zeus_addCuratorEditableObject_Tooltip">
+    <Key ID="STR_A3CS_Curator_addCuratorEditableObject_Tooltip">
       <Polish>Dodaje obiekt do edytowalnych obiektów każdego zeusa.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Zeus_CuratorModuleAssigned">
+    <Key ID="STR_A3CS_Curator_CuratorModuleAssigned">
       <Polish>Dostęp do interfejsu zeusa został aktywowany. Obecnych zeusów: %1.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Zeus_CuratorPinged">
+    <Key ID="STR_A3CS_Curator_CuratorPinged">
       <Polish>Ping zeusa: %1</Polish>
     </Key>
   </Package>

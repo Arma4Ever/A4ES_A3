@@ -3,7 +3,7 @@ class GVAR(curator): GVAR(base) {
     author = "SzwedzikPL";
     displayName = CSTRING(curator_displayName);
     icon = "\a3\Modules_F_Curator\Data\portraitCurator_ca.paa";
-    category = QGVAR(zeus);
+    category = QGVAR(curator);
     function = QFUNC(curator_module);
     functionPriority = 1;
     isTriggerActivated = 0;

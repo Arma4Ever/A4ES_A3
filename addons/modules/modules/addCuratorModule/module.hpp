@@ -3,7 +3,7 @@ class GVAR(addCuratorModule): GVAR(base) {
     author = "SzwedzikPL";
     displayName = CSTRING(addCuratorModule_displayName);
     icon = QPATHTOF(modules\addCuratorModule\data\icon.paa);
-    category = QGVAR(zeus);
+    category = QGVAR(curator);
     function = QFUNC(addCuratorModule_module);
     isTriggerActivated = 0;
     GVAR(validator) = QFUNC(addCuratorModule_validate);
