@@ -13,6 +13,7 @@ if (GVAR(radarDrawCache) isEqualTo []) exitWith {
 
 BEGIN_COUNTER(drawRadar);
 
+private _player = ace_player;
 private _cameraDirVector = (positionCameraToWorld [0, 0, 1]) vectorDiff (positionCameraToWorld [0, 0, 0]);
 private _cameraDir = (_cameraDirVector # 0) atan2 (_cameraDirVector # 1);
 private _radarPos = GVAR(radarPos);
@@ -21,7 +22,7 @@ private _radarIconsOpacity = GVAR(radarIconsOpacity);
 {
   _x params ["_unit", "_icon", "_color", "_showSpecialState"];
 
-  private _distance = _unit distance ace_player;
+  private _distance = _unit distance _player;
 
   // Fade icons on edges
   _color set [3, linearConversion [RADAR_FADE_MIN_UNIT_DISTANCE, RADAR_MAX_UNIT_DISTANCE, _distance, _radarIconsOpacity, 0, true]];
@@ -29,7 +30,7 @@ private _radarIconsOpacity = GVAR(radarIconsOpacity);
   _control drawIcon [
     _icon,
     _color,
-    _radarPos getPos [_distance, ((ace_player getDir _unit) - _cameraDir)],
+    _radarPos getPos [_distance, ((_player getDir _unit) - _cameraDir)],
     _radarIconSize,
     _radarIconSize,
     // Don't rotate special state icons
@@ -49,15 +50,15 @@ if (_playerData isNotEqualTo []) then {
     _radarPos,
     _radarIconSize,
     _radarIconSize,
-    ((getDir ace_player) - _cameraDir),
+    ((getDir _player) - _cameraDir),
     ""
   ];
 };
+
+END_COUNTER(drawRadar);
 
 #ifdef DEBUG_MODE_FULL
 if (_playerData isEqualTo []) then {
   LOG("Drawing player on radar is skipped - no player data in draw cache");
 };
 #endif
-
-END_COUNTER(drawRadar);

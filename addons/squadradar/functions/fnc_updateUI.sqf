@@ -21,7 +21,7 @@ if (GVAR(enable) && !GVAR(enabled) && GVAR(showCurrentSquad) && !GVAR(disabledIn
   // Initial refresh of members data
   call FUNC(refreshMembersData);
   QGVAR(RscRadar) cutRsc [QGVAR(RscRadar), "PLAIN", 0, false];
-  GVAR(drawCachePFH) = [DFUNC(refreshDrawCache), 0.33, []] call CBA_fnc_addPerFrameHandler;
+  GVAR(drawCachePFH) = [{0 call FUNC(refreshDrawCache)}, 0.33] call CBA_fnc_addPerFrameHandler;
 };
 
 private _display = uiNamespace getVariable [QGVAR(rscRadar), displayNull];

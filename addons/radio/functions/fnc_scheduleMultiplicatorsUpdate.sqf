@@ -17,7 +17,7 @@ if (
   // Create PFH if not created yet
   if (GVAR(updateMultiplicatorsPFH) isEqualTo -1) then {
     LOG("Creating updateMultiplicatorsPFH");
-    GVAR(updateMultiplicatorsPFH) = [{0 call FUNC(updatePlayerMultiplicators)}, 5, []] call CBA_fnc_addPerFrameHandler;
+    GVAR(updateMultiplicatorsPFH) = [{0 call FUNC(updatePlayerMultiplicators)}, 5] call CBA_fnc_addPerFrameHandler;
   };
 } else {
   // Remove PFH if not created
