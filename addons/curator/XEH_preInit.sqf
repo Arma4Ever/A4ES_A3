@@ -43,7 +43,7 @@ if (isServer) then {
 
   // Create curator on demand
   [QGVAR(assignCuratorModule), {
-    _this spawn FUNC(assignCuratorModule);
+    _this call FUNC(assignCuratorModule);
   }] call CBA_fnc_addEventHandler;
 };
 

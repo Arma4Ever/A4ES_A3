@@ -45,5 +45,5 @@ class CfgVehicles {
     // #include "modules\spawnGeneratorComposition\module.hpp"
     // #include "modules\toggleDynamicSimulation\module.hpp"
 
-    #include "hide_modules.hpp"
+    #include "hiddenModules.hpp"
 };

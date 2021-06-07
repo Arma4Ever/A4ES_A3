@@ -9,6 +9,14 @@
       <English>No</English>
       <Polish>Nie</Polish>
     </Key>
+    <Key ID="STR_A3CS_Common_True">
+      <English>True</English>
+      <Polish>Prawda</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Common_False">
+      <English>False</English>
+      <Polish>Fałsz</Polish>
+    </Key>
     <Key ID="STR_A3CS_Common_None">
       <English>None</English>
       <Polish>Brak</Polish>

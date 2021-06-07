@@ -23,12 +23,15 @@ class CfgPatches {
     };
 };
 
+#include "CfgMarkers.hpp"
+
+/*
 #include "Cfg3DEN.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
-#include "CfgMarkers.hpp"
 
 class RscDisplayInsertMarker {
     onLoad = QUOTE(_this call DFUNC(initInsertMarkerACE););
     onUnload = QUOTE(_this call DFUNC(placeMarkerACE););
 };
+*/

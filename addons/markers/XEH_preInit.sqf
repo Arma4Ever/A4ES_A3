@@ -81,7 +81,7 @@ GVAR(currentMapChanges) = [[], []];
 }] call CBA_fnc_addEventHandler;
 
 ["loadout", {
-  params ["_unit", "_newLoadout"];
+  params ["_unit"];
 
   // Ignore curator remote controlled units
   // Don't create unique map each time curator takes control of some AI unit

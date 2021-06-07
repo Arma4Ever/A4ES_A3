@@ -1,5 +1,6 @@
 #include "script_component.hpp"
 
+/*
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
@@ -26,7 +27,7 @@ class GVAR(RscSupportPanel) {
 	onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(RscSupportPanel), _this select 0)];);
 	onUnload = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(RscSupportPanel), displayNull)];);
 	idd = -1;
-    movingEnable = 0;
+    movingEnable = 1;
 	enableSimulation = 1;
 	enableDisplay = 1;
 	class controlsBackground {
@@ -113,3 +114,4 @@ class GVAR(RscSupportPanel) {
 		};
 	};
 };
+*/

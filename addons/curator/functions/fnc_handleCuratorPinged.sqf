@@ -15,7 +15,7 @@ if (_player getVariable [QGVAR(isCurator), false]) then {
 
 // Show ping on chat if player is active curator
 if (hasInterface && {!(isNull (getAssignedCuratorLogic player))}) then {
-  format [
+  systemChat format [
     LLSTRING(CuratorPinged),
     _player call EFUNC(common,getUnitName)
   ];

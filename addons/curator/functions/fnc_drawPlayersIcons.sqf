@@ -7,17 +7,26 @@
 if !(GVAR(showPlayerIcons)) exitWith {};
 
 if ((CBA_missionTime - GVAR(drawPlayersLastCacheRefresh)) >= DRAWPLAYERSICONS_CACHE_LIFETIME) then {
-  GVAR(drawPlayersCache) = ([switchableUnits, playableUnits] select isMultiplayer) select {
+  private _players = ([switchableUnits, playableUnits] select isMultiplayer) select {
     (_x distance ace_player) < DRAWPLAYERSICONS_MAXDISTANCE
+  };
+  GVAR(drawPlayersCache) = _players apply {
+    [_x, _x call EFUNC(common,getUnitName), [side (group _x)] call BIS_fnc_sideColor]
   };
   GVAR(drawPlayersLastCacheRefresh) = CBA_missionTime;
 };
 
+private _colorWhite = [1, 1, 1, 1];
+private _modelIcon = [0, 0, 2.5];
+private _modelName = [0, 0, 2.3];
+
 {
+  private _unit = _x # 0;
+  private _distance = _unit distance ace_player;
   private _distanceScale = linearConversion [
     DRAWPLAYERSICONS_MAXDISTANCE,
     0,
-    _x distance ace_player,
+    _distance,
     0,
     1,
     true
@@ -26,8 +35,8 @@ if ((CBA_missionTime - GVAR(drawPlayersLastCacheRefresh)) >= DRAWPLAYERSICONS_CA
 
   drawIcon3D [
     "a3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\UnitIcon_ca.paa",
-    [side group _x] call BIS_fnc_sideColor,
-    _x modelToWorldVisual [0, 0, 2.5],
+    _x # 1,
+    _unit modelToWorldVisual _modelIcon,
     _iconSize,
     _iconSize,
     0,
@@ -38,12 +47,12 @@ if ((CBA_missionTime - GVAR(drawPlayersLastCacheRefresh)) >= DRAWPLAYERSICONS_CA
   ];
   drawIcon3D [
     "",
-    [1, 1, 1, 1],
-    _x modelToWorldVisual [0, 0, 2.3],
+    _colorWhite,
+    _unit modelToWorldVisual _modelName,
     0,
     0,
     0,
-    _x call EFUNC(common,getUnitName),
+    format ["%1 (%2m)", _x # 2, _distance toFixed 0],
     2,
     0.037 * _distanceScale,
     "PuristaMedium"

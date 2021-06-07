@@ -36,8 +36,4 @@ _module setCuratorCoef ["destroy", 0];
 _module setCuratorCoef ["group", 0];
 _module setCuratorCoef ["synchronize", 0];
 
-_module addEventHandler ["CuratorPinged", {
-  _this call FUNC(handleCuratorPinged);
-}];
-
 _module
