@@ -1,6 +1,8 @@
 #include "script_component.hpp"
 
 if (hasInterface) then {
+  disableRemoteSensors true;
+
   // Check if player has default "G" as throw keybind
   if ((actionKeys "Throw") isEqualTo [34]) then {
     [{!(isNull (findDisplay 46))}, {
@@ -21,8 +23,15 @@ if (isServer) then {
     private _respawn = getMissionConfigValue ["respawn", 0];
     // Exit if respawn enabled
     if (_respawn isNotEqualTo 0) exitWith {};
+
     // Remove all playable units from garbage collection
-    removeFromRemainsCollector ([switchableUnits, playableUnits] select isMultiplayer);
+    ["CAManBase", "initPost", {
+      params ["_unit"];
+
+      if (isPlayer _unit || {_unit in playableUnits}) then {
+        removeFromRemainsCollector [_unit];
+      };
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
   }, [], 0.1] call CBA_fnc_waitAndExecute;
 
   // Schedule first cleanup of empty groups
