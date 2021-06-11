@@ -11,12 +11,11 @@ params ["_module", "_values"];
 
 private _warnings = [];
 
-
-private _syncedUnits = (get3DENConnections _module) select {
-  ((_x # 0) isEqualTo "Sync") && {(_x # 1) isKindOf "CAManBase"}
+private _syncedObjects = (get3DENConnections _module) select {
+  ((_x # 0) isEqualTo "Sync") && {!((_x # 1) isKindOf "EmptyDetector")}
 };
 
-if (_syncedUnits isEqualTo []) then {
+if (_syncedObjects isEqualTo []) then {
   _warnings pushBack [
     LLSTRING(addAction_Warning_EmptySynced),
     LLSTRING(addAction_Warning_EmptySynced_desc)

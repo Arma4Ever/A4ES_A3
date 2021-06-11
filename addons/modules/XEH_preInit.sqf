@@ -20,8 +20,6 @@ if (isServer) then {
 
   GVAR(3DENCompObjects) = [];
 
-  // ???????
-  // GVAR(createdActions) = createHashMap;
   [QGVAR(addAction_actionExecuted), {
     _this call FUNC(addAction_handleActionExecuted);
   }] call CBA_fnc_addEventHandler;
@@ -30,6 +28,10 @@ if (isServer) then {
     _this call FUNC(units3DENComp_spawnData_waypointServer);
   }] call CBA_fnc_addEventHandler;
 };
+
+[QGVAR(addAction), {
+  _this call FUNC(addAction_moduleExecLocal);
+}] call CBA_fnc_addEventHandler;
 
 [QGVAR(addCuratorModule), {
   params ["_category", "_name", "_icon", "_function"];

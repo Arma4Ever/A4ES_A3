@@ -424,6 +424,34 @@
       <Polish>Dźwięk będzie odwarzany tak długo jak podany warunek będzie prawdziwy.</Polish>
     </Key>
   </Package>
+  <Package name="Modules_dynamicToolboxActionConditionType">
+    <Key ID="STR_A3CS_Modules_dynamicToolboxActionConditionType_logicFlags">
+      <Polish>Flagi logiczne</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolboxActionConditionType_logicFlags_desc">
+      <Polish>Akcja będzie dostępna tak długo jak podane flagi logiczne będą miały oczekiwane wartości.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolboxActionConditionType_condition">
+      <Polish>Warunek logiczny</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolboxActionConditionType_condition_desc">
+      <Polish>Akcja będzie dostępna tak długo jak podany warunek będzie prawdziwy.</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_dynamicToolboxActionType">
+    <Key ID="STR_A3CS_Modules_dynamicToolboxActionType_interaction">
+      <Polish>Interakcja</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolboxActionType_interaction_desc">
+      <Polish>Interakcja wykonywana na jakimś obiekcie/jednostce.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolboxActionType_selfInteraction">
+      <Polish>Interakcja osobista</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolboxActionType_selfInteraction_desc">
+      <Polish>Interakcja wykonywana na samym sobie.</Polish>
+    </Key>
+  </Package>
   <Package name="Modules_dynamicClassSelect">
     <Key ID="STR_A3CS_Modules_dynamicClassSelect_AssetsListTitle">
       <Polish>Wybierz klasy z listy...</Polish>
@@ -1786,16 +1814,145 @@
       <Polish>Dodaj akcję</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_addAction_shortDescription">
-      <Polish></Polish>
+      <Polish>Moduł dodaje akcję do wszystkich połączonych z modułem jednostek/obiektów.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_baseSettingsSubCategory">
+      <Polish>Ustawienia akcji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_id">
+      <Polish>ID akcji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_id_tooltip">
+      <Polish>Unikalny identyfikator akcji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_id_desc">
+      <Polish>Unikalne ID akcji generowane automatycznie. Tego ID można użyć do ręcznego manipulowania tą akcją z własnych skryptów.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_type">
+      <Polish>Typ akcji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_type_tooltip">
+      <Polish>Typ akcji jaka ma zostać dodana do połączonych z modułem jednostek/obiektów.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_owner">
+      <Polish>Grupa docelowa</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_owner_tooltip">
+      <Polish>Grupa docelowa dla której ma być dostępna akcja. UWAGA! Jeśli potrzebujesz ograniczyć akcję do konkretnych jednostek, użyć warunku akcji do sprawdzenia jednostki.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_title">
+      <Polish>Nazwa akcji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_title_tooltip">
+      <Polish>Nazwa akcji wyświetlana w menu interakcji.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_icon">
+      <Polish>Ikona akcji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_icon_tooltip">
+      <Polish>Ścieżka do pliku ikony akcji (opcjonalne).</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_conditionType">
+      <Polish>Typ warunku</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_conditionType_tooltip">
+      <Polish>Typ warunku po którego spełnieniu akcja będzie dostępna.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_conditionLogicFlags">
+      <Polish>Flagi logiczne</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_conditionLogicFlags_tooltip">
+      <Polish>Do momentu jak flagi logiczne będą miały oczekiwane wartości, akcja będzie dostępna w menu interakcji.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_conditionScript">
+      <Polish>Warunek logiczny</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_conditionScript_tooltip">
+      <Polish>Do momentu jak warunek logiczny będzie prawdziwy, akcja będzie dostępna w menu interakcji.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_conditionScript_desc">
+      <Polish>Warunku sprawdzany jest u każdego gracza który otworzy menu iterakcji. Parametry:&lt;br /&gt;#0 - _target: obiekt/jednostka na której dostępna jest akcja.&lt;br /&gt;#1 - _player: gracz który otworzył menu interakcji.&lt;br /&gt;#2 - _logic: moduł który dodał akcję.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_isDisposable">
+      <Polish>Akcja jednorazowa</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_isDisposable_tooltip">
+      <Polish>Czy akcja ma zniknąć po pierwszym użyciu przez dowolnego gracza.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_addScriptHandler">
+      <Polish>Dodaj skrypt akcji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_addScriptHandler_tooltip">
+      <Polish>Dodaj własny skrypt uruchomiony przy wykonaniu akcji.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_scriptHandler">
+      <Polish>Skrypt akcji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_scriptHandler_tooltip">
+      <Polish>Skrypt akcji który zostanie uruchomiony przy wykonaniu akcji.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_addAction_Attributes_scriptHandler_desc">
-      <Polish></Polish>
+      <Polish>Skrypt uruchomi się u gracza który wykonał akcję. Jeśli pasek postępu jest włączony, skrypt wykona się w momencie jego ukończenia. Parametry:&lt;br /&gt;#0 - _target: obiekt/jednostka na której wykonano akcję.&lt;br /&gt;#1 - _player: gracz który wykonał akcję.&lt;br /&gt;#2 - _logic: moduł który dodał akcję.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_addServerScriptHandler">
+      <Polish>Dodaj serwerowy skrypt akcji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_addServerScriptHandler_tooltip">
+      <Polish>Dodaj własny serwerowy skrypt uruchomiony przy wykonaniu akcji.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_serverScriptHandler">
+      <Polish>Serwerowy skrypt akcji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_serverScriptHandler_tooltip">
+      <Polish>Serwerowy skrypt akcji który zostanie uruchomiony przy wykonaniu akcji.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_serverScriptHandler_desc">
+      <Polish>Skrypt uruchomi się na serwerze gdy któryś z graczy wykona akcję. Jeśli pasek postępu jest włączony, skrypt wykona się w momencie jego ukończenia. Parametry:&lt;br /&gt;#0 - _target: obiekt/jednostka na której wykonano akcję.&lt;br /&gt;#1 - _player: gracz który wykonał akcję.&lt;br /&gt;#2 - _logic: moduł który dodał akcję.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_progressSettingsSubCategory">
+      <Polish>Ustawienia paska postępu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_progress">
+      <Polish>Dodaj pasek postępu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_progress_tooltip">
+      <Polish>Czy akcja ma wymagać wypełnienia paska postępu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_progressTitle">
+      <Polish>Tekst paska postępu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_progressTitle_tooltip">
+      <Polish>Tekst który wyświetli się na pasku postępu w momencie wykonywania akcji.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_progressTime">
+      <Polish>Czas trwania akcji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_progressTime_tooltip">
+      <Polish>Ile czasu (w sekundach) ma trwać wypełnienie paska postępu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_addProgressFailedScriptHandler">
+      <Polish>Dodaj skrypt przerwania akcji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_addProgressFailedScriptHandler_tooltip">
+      <Polish>Dodaj skrypt który wykona się w momencie przerwania akcji.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_progressFailedScriptHandler">
+      <Polish>Skrypt przerwania akcji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_progressFailedScriptHandler_tooltip">
+      <Polish>Skrypt wykonany w momencie przerwania akcji (paska postępu).</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_progressFailedScriptHandler_desc">
+      <Polish>Skrypt wykona się w momencie przerwania akcji u gracza który ja przerwał. Parametry:&lt;br /&gt;#0 - _target: obiekt/jednostka na której wykonano akcję.&lt;br /&gt;#1 - _player: gracz który wykonał akcję.&lt;br /&gt;#2 - _logic: moduł który dodał akcję.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_activatorSettingsSubCategory">
+      <Polish>Poniżej są akcje serwerowe, wykonywane za każdym razem gdy jakiś gracz wykona akcję.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_addAction_Warning_EmptySynced">
-      <Polish>Brak zsynchronizowanych jednostek</Polish>
+      <Polish>Brak zsynchronizowanych jednostek/obiektów</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_addAction_Warning_EmptySynced_Desc">
-      <Polish>Aby moduł zadziałał, zsynchronizuj go z conajmniej jedną jednostką dla której akcja ma być dostępna.</Polish>
+      <Polish>Połącz z modułem conajmniej jedną jednostkę/obiekt, aby dodać do niej akcję.</Polish>
     </Key>
   </Package>
   <Package name="Modules_createLogicFlag">

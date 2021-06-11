@@ -153,7 +153,7 @@ class GVAR(soundRepeatCount): GVAR(dynamicEdit) {
     ATTRIBUTE_LOCAL;
 };
 
-class GVAR(soundRepeatLogicFlags): GVAR(dynamicLogicFlagCond) {
+class GVAR(soundRepeatLogicFlags): GVAR(dynamicLogicFlagCondSoundRepeat) {
     displayName = CSTRING(Attributes_soundRepeatLogicFlags);
     tooltip = CSTRING(Attributes_soundRepeatLogicFlags_Tooltip);
     property = QGVAR(soundRepeatLogicFlags);

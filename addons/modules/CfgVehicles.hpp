@@ -159,6 +159,12 @@ class CfgVehicles {
             class GVAR(dynamicLogicFlagCond): Default {
                 control = QGVAR(dynamicLogicFlagCond);
             };
+            class GVAR(dynamicLogicFlagCondActivator): Default {
+                control = QGVAR(dynamicLogicFlagCondActivator);
+            };
+            class GVAR(dynamicLogicFlagCondSoundRepeat): Default {
+                control = QGVAR(dynamicLogicFlagCondSoundRepeat);
+            };
 
             class GVAR(dynamicToolbox3DENCompMode): Default {
                 control = QGVAR(dynamicToolbox3DENCompMode);
@@ -173,6 +179,17 @@ class CfgVehicles {
 
             class GVAR(dynamicToolboxSideFull): GVAR(dynamicToolboxSide) {
                 control = QGVAR(dynamicToolboxSideFull);
+            };
+
+            class GVAR(dynamicToolboxActionType): Default {
+                control = QGVAR(dynamicToolboxActionType);
+                typeName = "NUMBER";
+            };
+
+            class GVAR(dynamicToolboxActionConditionType): Default {
+                control = QGVAR(dynamicToolboxActionConditionType);
+                typeName = "NUMBER";
+                GVAR(observeValue) = 1;
             };
 
             class GVAR(dynamicToolboxSoundRepeatMode): Default {
@@ -195,6 +212,10 @@ class CfgVehicles {
                 control = QGVAR(dynamicOwnerToolbox);
                 typeName = "NUMBER";
                 GVAR(observeValue) = 1;
+            };
+
+            class GVAR(dynamicOwnerNoSyncToolbox): GVAR(dynamicOwnerToolbox) {
+                control = QGVAR(dynamicOwnerNoSyncToolbox);
             };
 
             class GVAR(dynamicSlider): Default {

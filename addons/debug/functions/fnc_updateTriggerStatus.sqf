@@ -19,4 +19,4 @@ if (_isActivated) then {
   _data set [2, [0, 0, 0.9, 1]];
 };
 
-diag_log text format ["Trigger %1 %2", _trigger, ["deaktywowany", "aktywowany"] select _isActivated];
+diag_log text format [LLSTRING(Trigger_StatusChangedLog), _trigger, [LLSTRING(Deactivated), LLSTRING(Activated)] select _isActivated];

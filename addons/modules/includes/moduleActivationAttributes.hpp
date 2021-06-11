@@ -53,7 +53,7 @@ class GVAR(activationIgnorePlanes): GVAR(dynamicCheckbox) {
     GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(activationMode)) isEqualTo 0);
     ATTRIBUTE_LOCAL;
 };
-class GVAR(activationFlags): GVAR(dynamicLogicFlagCond) {
+class GVAR(activationFlags): GVAR(dynamicLogicFlagCondActivator) {
     displayName = CSTRING(Attributes_activationFlags);
     tooltip = CSTRING(Attributes_activationFlags_Tooltip);
     property = QGVAR(activationFlags);

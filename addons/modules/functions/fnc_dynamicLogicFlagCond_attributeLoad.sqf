@@ -5,19 +5,24 @@
  * 3DEN dynamicLogicFlagCond attributeLoad handler
  */
 
+params ["_ctrlGroup", "_listIdc", "_arrowLeftIdc", "_arrowRightIdc"];
+_this = _ctrlGroup;
+
 // Flags combo
 private _ctrlFlagsCombo = _this controlsGroupCtrl 120;
+
 private _ctrlFlagsAddButton = _this controlsGroupCtrl 121;
 private _ctrlFlagsComboNotfBar = _this controlsGroupCtrl 122;
 
 // Flags list
-private _ctrlFlagsList = _this controlsGroupCtrl 101;
+private _ctrlFlagsList = _this controlsGroupCtrl _listIdc;
+
 private _ctrlFlagsListNotfBar = _this controlsGroupCtrl 102;
 private _ctrlFlagsListRemoveButton = _this controlsGroupCtrl 104;
 
 // Flags list arrows
-private _ctrlArrowLeft = _this controlsGroupCtrl 393101;
-private _ctrlArrowRight = _this controlsGroupCtrl 393102;
+private _ctrlArrowLeft = _this controlsGroupCtrl _arrowLeftIdc;
+private _ctrlArrowRight = _this controlsGroupCtrl _arrowRightIdc;
 
 // Load flags data
 private _flagsData = createHashMap;

@@ -7,4 +7,11 @@ class CfgWeapons {
             mass = 15;
         };
     };
+    /*
+       TODO:
+	   PAM
+	   Uriki
+       Próbki krwi
+       Elementy PLP
+    */
 };
