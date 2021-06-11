@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+  <Package name="Debug">
+    <Key ID="STR_A3CS_Debug_StartLogsWatcher">
+      <Polish>Uruchamiam obserwację logów</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Debug_ToggleLogsAction">
+      <Polish>DEBUG - Pokaż/ukryj logi</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Debug_Activated">
+      <Polish>aktywowany</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Debug_Deactivated">
+      <Polish>deaktywowany</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Debug_Module_StatusChangedLog">
+      <Polish>Moduł %1 %2</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Debug_Trigger_StatusChangedLog">
+      <Polish>Trigger %1 %2</Polish>
+    </Key>
+  </Package>
+</Project>

@@ -6,7 +6,6 @@ addMissionEventHandler ["ExtensionCallback", {
   params ["_name", "_function"];
 
   if (_name isNotEqualTo "a3cs_debug") exitWith {};
-
   if (_function isEqualTo "logsListUpdated") exitWith {
     private _logs = [];
 
@@ -23,7 +22,7 @@ addMissionEventHandler ["ExtensionCallback", {
 
 private _initWatcher = "a3cs_debug" callExtension "missionPreviewStart";
 if (_initWatcher isEqualTo "true") then {
-  systemChat "Uruchamiam obserwację logów";
+  systemChat LLSTRING(StartLogsWatcher);
 
   QGVAR(logsList) cutRsc [QGVAR(logsList), "PLAIN", -1, false];
   private _display = uiNamespace getVariable [QGVAR(logsList), displayNull];
@@ -40,7 +39,7 @@ if (_initWatcher isEqualTo "true") then {
   // Add action
   // TODO: Debug control panel
   player addAction [
-    "<t color='#FF0000'>DEBUG - Pokaż/ukryj logi</t>",
+    format ["<t color='#FF0000'>%1</t>", LLSTRING(toggleLogsAction)],
     {
       GVAR(showLogs) = !GVAR(showLogs);
       private _display = uiNamespace getVariable [QGVAR(logsList), displayNull];

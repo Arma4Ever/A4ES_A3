@@ -53,6 +53,7 @@ private _index = GVAR(modulesDrawData) pushBack [
     getText ((configOf _logic) >> "icon"),
     [0, 0, 0, 1],
     [1, 1, 1, 1],
+    [0, 0, 0.9, 1],
     _activationRange,
     _hasArea,
     _area # 0,

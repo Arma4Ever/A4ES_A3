@@ -15,5 +15,6 @@ private _data = GVAR(modulesDrawData) select _index;
 
 _data set [2, true];
 private _drawData = _data # 3;
-_drawData set [2, [0, 0, 0, 0.4]];
+_drawData set [2, [0, 0.5, 0, 0.45]];
 _drawData set [3, [1, 1, 1, 0.2]];
+_drawData set [4, [0, 0.5, 0, 0.4]];
