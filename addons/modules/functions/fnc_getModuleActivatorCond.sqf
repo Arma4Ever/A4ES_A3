@@ -4,7 +4,8 @@
  * Returns optimized condition for module activator
  */
 
-params ["_logic", "_activationMode"];
+params ["_logic", "_activationMode", ["_activationArea", []]];
+TRACE_3("getModuleActivatorCond",_logic,_activationMode,_activationArea);
 
 // Return flags list
 if (_activationMode isEqualTo 1) exitWith {
@@ -16,15 +17,20 @@ if (_activationMode isEqualTo 2) exitWith {
   _logic getVariable [QGVAR(activationCondition), "true"]
 };
 
-// Create optimized players proximity condition
-private _activationRange = _logic getVariable [QGVAR(activationNearestPlayerDistance), 0];
+// Get activation area
+if (_activationArea isEqualTo []) then {
+  // Create optimized players proximity condition
+  private _activationRange = _logic getVariable [QGVAR(activationNearestPlayerDistance), 0];
 
-// Get logic area
-private _activationArea = str [
-  getPos _logic,
-  _activationRange,
-  _activationRange
-];
+  _activationArea = str [
+    getPos _logic,
+    _activationRange,
+    _activationRange
+  ];
+} else {
+  // Use provided area
+  _activationArea = str _activationArea;
+};
 
 private _units = ["switchableUnits", "playableUnits"] select isMultiplayer;
 private _filterHelicopters = _logic getVariable [QGVAR(activationIgnoreHelicopters), false];

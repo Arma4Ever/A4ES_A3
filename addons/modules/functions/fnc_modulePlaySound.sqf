@@ -12,7 +12,7 @@ TRACE_2("modulePLaySound",_logic,_playSound);
 _playSound = _logic getVariable [QGVAR(playSound), _playSound];
 
 if (!_playSound) exitWith {
-  TRACE_2("modulePLaySound - abort, playing sound disabled",_logic,_playSound);
+  TRACE_1("modulePLaySound - abort, playing sound disabled",_logic);
 };
 
 private _filePath = _logic getVariable [QGVAR(soundFilePath), ""];
@@ -68,16 +68,32 @@ if (_logic getVariable [QGVAR(soundRepeat), false]) then {
     };
   };
   // Condition
-  if (_repeatMode isEqualTo 1) exitWith {
+  if (_repeatMode in [1, 2]) exitWith {
+    private _repeatCondition = "";
+    if (_repeatMode isEqualTo 1) then {
+      private _flags = parseSimpleArray (_logic getVariable [QGVAR(soundRepeatLogicFlags), "[]"]);
+      private _flagsCondition = _flags call FUNC(getLogicFlagsCondition);
+      _flagsCondition params ["_condition", "_usedFlags"];
+      if (_condition isEqualTo "" || {_usedFlags isEqualTo []}) exitWith {
+        TRACE_4("modulePLaySound, flag condition empty",_logic,_flags,_condition,_usedFlags);
+      };
+      _repeatCondition = _condition;
+    } else {
+      _repeatCondition = _logic getVariable [QGVAR(soundRepeatCondition), "true"];
+    };
+    if (_repeatCondition isEqualTo "") exitWith {
+      TRACE_2("modulePLaySound abort, empty repeat condition",_logic,_repeatCondition);
+    };
+
     _execParams = [
-      compile (_logic getVariable [QGVAR(soundRepeatCondition), "true"]),
+      compile _repeatCondition,
       _repeatDelay,
       _soundParams
     ];
     _exec = {
       params ["_condition", "_delay", "_soundParams"];
 
-      if !(0 call _condition) exitWith {
+      if !(missionNamespace call _condition) exitWith {
         TRACE_3("Aborting modulePlaySound, false condition",_condition,_delay,_soundParams);
       };
 
@@ -88,7 +104,7 @@ if (_logic getVariable [QGVAR(soundRepeat), false]) then {
       [{
         params ["_params", "_handle"];
 
-        if !(0 call (_params # 0)) exitWith {
+        if !(missionNamespace call (_params # 0)) exitWith {
           TRACE_1("Removing modulePlaySound PFH",_params);
           [_handle] call CBA_fnc_removePerFrameHandler;
         };

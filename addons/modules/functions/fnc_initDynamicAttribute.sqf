@@ -6,6 +6,7 @@
  */
 
 params ["_controlGroup", "_config", "_value", "_observer", "_observerParams"];
+TRACE_5("initDynamicAttribute",_controlGroup,_config,_value,_observer,_observerParams);
 
 private _configName = configName _config;
 private _controlGroupClass = ctrlClassName _controlGroup;

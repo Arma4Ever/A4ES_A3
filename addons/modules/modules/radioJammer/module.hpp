@@ -22,6 +22,7 @@ class GVAR(radioJammer): GVAR(base) {
             tooltip = CSTRING(radioJammer_Attributes_sendingMultiplicator_Tooltip);
             property = QGVAR(sendingMultiplicator);
             defaultValue = "0.25";
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(receivingMultiplicator): GVAR(dynamicSliderPercent) {
@@ -30,6 +31,7 @@ class GVAR(radioJammer): GVAR(base) {
             property = QGVAR(receivingMultiplicator);
             GVAR(description) = CSTRING(radioJammer_Multiplicators_Desc);
             defaultValue = "0.25";
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};

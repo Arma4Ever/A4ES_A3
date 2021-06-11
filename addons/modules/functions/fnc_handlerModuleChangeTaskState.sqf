@@ -5,6 +5,7 @@
  */
 
 params ["_logic"];
+TRACE_1("handleModuleChangeTaskState",_logic);
 
 if (_logic getVariable [QGVAR(changeTaskState), false]) then {
   private _task = _logic getVariable [QGVAR(task), ""];

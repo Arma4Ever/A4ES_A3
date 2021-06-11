@@ -1,6 +1,7 @@
+
 class GVAR(playSoundSettingsSubCategory): GVAR(moduleSubCategory) {
     displayName = CSTRING(Attributes_playSoundSettingsSubCategory);
-    property = QGVAR(changeTaskStateSettingsSubCategory);
+    property = QGVAR(playSoundSettingsSubCategory);
 };
 
 #ifndef MODULE_PLAYSOUND
@@ -60,25 +61,23 @@ class GVAR(soundIsInside): GVAR(dynamicCheckbox) {
     ATTRIBUTE_LOCAL;
 };
 
-class GVAR(soundVolume): GVAR(dynamicSlider) {
+class GVAR(soundVolume): GVAR(dynamicSliderPercent) {
     displayName = CSTRING(Attributes_soundVolume);
     tooltip = CSTRING(Attributes_soundVolume_tooltip);
     property = QGVAR(soundVolume);
     defaultValue = "1";
-    GVAR(range[]) = {0, 5};
-    GVAR(valueUnit) = "%";
+    GVAR(range[]) = {0, 500};
     #ifndef MODULE_PLAYSOUND
     GVAR(conditionActive) = QUOTE(PLAYSOUND_COND);
     #endif
 };
 
-class GVAR(soundPitch): GVAR(dynamicSlider) {
+class GVAR(soundPitch): GVAR(dynamicSliderPercent) {
     displayName = CSTRING(Attributes_soundPitch);
     tooltip = CSTRING(Attributes_soundPitch_tooltip);
     property = QGVAR(soundPitch);
     defaultValue = "1";
-    GVAR(range[]) = {0, 2};
-    GVAR(valueUnit) = "%";
+    GVAR(range[]) = {0, 200};
     GVAR(description) = CSTRING(Attributes_soundPitch_desc);
     #ifndef MODULE_PLAYSOUND
     GVAR(conditionActive) = QUOTE(PLAYSOUND_COND);
@@ -154,14 +153,23 @@ class GVAR(soundRepeatCount): GVAR(dynamicEdit) {
     ATTRIBUTE_LOCAL;
 };
 
+class GVAR(soundRepeatLogicFlags): GVAR(dynamicLogicFlagCond) {
+    displayName = CSTRING(Attributes_soundRepeatLogicFlags);
+    tooltip = CSTRING(Attributes_soundRepeatLogicFlags_Tooltip);
+    property = QGVAR(soundRepeatLogicFlags);
+    defaultValue = "'[]'";
+    GVAR(conditionActive) = QUOTE(PLAYSOUND_COND && {(_this getVariable QQGVAR(soundRepeat)) isEqualTo true} && {(_this getVariable QQGVAR(soundRepeatMode)) isEqualTo 1});
+    ATTRIBUTE_LOCAL;
+};
+
 class GVAR(soundRepeatCondition): GVAR(dynamicEditCodeMulti5) {
     displayName = CSTRING(Attributes_soundRepeatCondition);
     tooltip = CSTRING(Attributes_soundRepeatCondition_tooltip);
-    property = QGVAR(soundRepeatCount);
+    property = QGVAR(soundRepeatCondition);
     defaultValue = "'true'";
     typeName = "STRING";
     validate = "condition";
-    GVAR(conditionActive) = QUOTE(PLAYSOUND_COND && {(_this getVariable QQGVAR(soundRepeat)) isEqualTo true} && {(_this getVariable QQGVAR(soundRepeatMode)) isEqualTo 1});
+    GVAR(conditionActive) = QUOTE(PLAYSOUND_COND && {(_this getVariable QQGVAR(soundRepeat)) isEqualTo true} && {(_this getVariable QQGVAR(soundRepeatMode)) isEqualTo 2});
     ATTRIBUTE_LOCAL;
 };
 

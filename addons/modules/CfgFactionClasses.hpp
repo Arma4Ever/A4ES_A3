@@ -7,6 +7,9 @@ class CfgFactionClasses {
     class GVAR(AI): GVAR(base) {
         displayName = "A3CS AI";
     };
+    class GVAR(3DENComp): GVAR(base) {
+        displayName = "A3CS Kompozycje edytora";
+    };
     class GVAR(actions): GVAR(base) {
         displayName = "A3CS Akcje";
     };

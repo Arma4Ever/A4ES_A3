@@ -188,6 +188,12 @@
     <Key ID="STR_A3CS_Modules_Attributes_activationIgnorePlanes_tooltip">
       <Polish>Czy samoloty mają być ignorowane podczas sprawdzania najbliższego gracza.</Polish>
     </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_activationFlags">
+      <Polish>Flagi logiczne</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_activationFlags_Tooltip">
+      <Polish>Flagi logiczne które muszą mieć oczekiwane wartości by moduł został aktywowany.</Polish>
+    </Key>
     <Key ID="STR_A3CS_Modules_Attributes_activationCondition">
       <Polish>Warunek logiczny</Polish>
     </Key>
@@ -236,7 +242,6 @@
     <Key ID="STR_A3CS_Modules_Attributes_scriptHandler_tooltip">
       <Polish>Skrypt który zostanie uruchomiony w momencie aktywacji modułu.</Polish>
     </Key>
-
     <Key ID="STR_A3CS_Modules_Attributes_playSoundSettingsSubCategory">
       <Polish>Odtwórz dźwięk</Polish>
     </Key>
@@ -310,28 +315,61 @@
       <Polish>Czas w sekundach od momentu aktywacji modułu do rozpoczęcia odtwarzania dźwięku (0 - od razu).</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_Attributes_soundRepeat">
-      <Polish></Polish>
+      <Polish>Powtarzaj</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_Attributes_soundRepeat_tooltip">
-      <Polish></Polish>
+      <Polish>Czy dźwięk ma być odtworzony więcej niż raz.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundRepeatMode">
+      <Polish>Typ warunku powtórzeń</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundRepeatMode_tooltip">
+      <Polish>Na podstawie jakiego typu warunku ma być sprawdzane czy dźwięk powinien zostać powtórzony.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_Attributes_soundRepeatCount">
-      <Polish></Polish>
+      <Polish>Ilość powtórzeń</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_Attributes_soundRepeatCount_tooltip">
-      <Polish></Polish>
+      <Polish>Ile razy dźwięk ma zostać odtworzony.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundRepeatLogicFlags">
+      <Polish>Flagi</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_soundRepeatLogicFlags_tooltip">
+      <Polish>Flagi logiczne które muszą mieć oczekiwane wartości by dźwięk był odtwarzany.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_Attributes_soundRepeatCondition">
-      <Polish></Polish>
+      <Polish>Warunek logiczny</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_Attributes_soundRepeatCondition_tooltip">
-      <Polish></Polish>
+      <Polish>Warunek logiczny który musi być prawdziby by dźwięk był odtwarzany.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_Attributes_soundRepeatDelay">
-      <Polish></Polish>
+      <Polish>Odstępy między potwórzeniami</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_Attributes_soundRepeatDelay_tooltip">
-      <Polish></Polish>
+      <Polish>Ile czasu ma upłynąć między powtórzeniami dźwięku. Gdy podany odstęp między potwórzeniami będzie mniejszy niż długość dźwięku, dźwięki mogą się nakładać.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_setLogicFlagValueSettingsSubCategory">
+      <Polish>Zmiana wartości flagi logicznej</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_setLogicFlagValue">
+      <Polish>Zmień wartość flagi logicznej</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_setLogicFlagValue_tooltip">
+      <Polish>Czy aktywacja modułu ma zmienić wartość flagi logicznej.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_logicFlag">
+      <Polish>Flaga</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_logicFlag_tooltip">
+      <Polish>Flaga której wartość ma zostać zmieniona.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_logicFlagValue">
+      <Polish>Wartość</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_logicFlagValue_tooltip">
+      <Polish>Wartość jaka ma zostać nadana wybranej fladze.</Polish>
     </Key>
   </Package>
   <Package name="Modules_dynamicToolboxActivationMode">
@@ -364,6 +402,26 @@
     </Key>
     <Key ID="STR_A3CS_Modules_dynamicToolboxActivationMode_value_trigger_Desc">
       <Polish>Moduł będzie aktywowany w momencie w którym połączony z nim wyzwalacz zostanie aktywowany. Pamiętaj - należy unikać wyzwalaczy/triggerów jak tylko to możliwe. Użyj wyzwalacza/triggera tylko gdy nie ma możliwości osiągniecia pożądanego efektu przy użyciu innych metod aktywacji.</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_dynamicToolboxSoundRepeatMode">
+    <Key ID="STR_A3CS_Modules_dynamicToolboxSoundRepeatMode_count">
+      <Polish>Ilość powtórzeń</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolboxSoundRepeatMode_count_desc">
+      <Polish>Dźwięk będzie odtworzony podaną ilość razy.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolboxSoundRepeatMode_logicFlags">
+      <Polish>Flagi logiczne</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolboxSoundRepeatMode_logicFlags_desc">
+      <Polish>Dźwięk będzie odwarzany tak długo jak podane flagi logiczne będą miały oczekiwane wartości.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolboxSoundRepeatMode_condition">
+      <Polish>Warunek logiczny</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolboxSoundRepeatMode_condition_desc">
+      <Polish>Dźwięk będzie odwarzany tak długo jak podany warunek będzie prawdziwy.</Polish>
     </Key>
   </Package>
   <Package name="Modules_dynamicClassSelect">
@@ -416,12 +474,52 @@
       <Polish>Ilość jednostek w grupie: %1</Polish>
     </Key>
   </Package>
+  <Package name="Modules_dynamicLogicFlagCond">
+    <Key ID="STR_A3CS_Modules_dynamicLogicFlagCond_flagsComboTitle">
+      <Polish>Dostępne flagi</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicLogicFlagCond_ButtonRemove_Tooltip">
+      <Polish>Usuń zaznaczoną flagę (skrót klaw. DEL)</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicLogicFlagCond_FlagsTitle">
+      <Polish>Nazwa flagi</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicLogicFlagCond_FlagsValueTitle">
+      <Polish>Oczekiwana wartość </Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicLogicFlagCond_addedFlagToList">
+      <Polish>Dodano flagę %1 do listy</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicLogicFlagCond_removedFlagFromList">
+      <Polish>Usunięto flagę %1 z listy</Polish>
+    </Key>
+  </Package>
   <Package name="Modules_dynamicOwnerToolbox">
     <Key ID="STR_A3CS_Modules_dynamicOwnerToolbox_all">
       <Polish>Wszyscy gracze</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_dynamicOwnerToolbox_syncedUnits">
       <Polish>Zsynchronizowane z modułem jednostki</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_dynamicToolbox3DENCompMode">
+    <Key ID="STR_A3CS_Modules_dynamicToolbox3DENCompMode_edit">
+      <Polish>Edycja</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolbox3DENCompMode_edit_tooltip">
+      <Polish>Tryb edycji, pozwalający na edytowanie połączonych z modułem elementów za pomocą edytora.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolbox3DENCompMode_edit_desc">
+      <Polish>W tym trybie moduł pozwala na edycję połączonych z nim elementów za pomocą edytora. Pamiętaj, aby po zakończeniu pracy, połączyć odpowiednie elementy z modułem i przestawić moduł w tryb odczytu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolbox3DENCompMode_read">
+      <Polish>Odczyt</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolbox3DENCompMode_read_tooltip">
+      <Polish>Tryb odczytu, zapisuje połączone z modułem elementy w danych modułu do późniejszego stworzenia ich w trakcie gry.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicToolbox3DENCompMode_read_desc">
+      <Polish>W tym trybie moduł zapisze połączone z nim elementy a następnie, po jego aktywacji, stworzy je podczas gry.</Polish>
     </Key>
   </Package>
   <Package name="Modules_generateSoldiers">
@@ -801,7 +899,7 @@
       <Polish>Wyłącz przekazanie do headlessa</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableHeadless_Tooltip">
-      <Polish>Blokuje przekazanie do headlessa (jeśli jest dostępny) wygenerowanych grup. Pamiętaj, że ma to realny wpływ na wydajność misji (jeśli headless jest dostępny). Użyj tej opcji tylko jeśli wiesz co robisz.</Polish>
+      <Polish>Blokuje przekazanie do headlessa (jeśli jest dostępny) wygenerowanych grup. Pamiętaj, że ma to realny wpływ na wydajność misji (jeśli headless jest dostępny).\n\nUżyj tej opcji tylko jeśli wiesz co robisz.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_emptyCompositions">
       <Polish>Brak (nie wykryto żadnych kompozycji)</Polish>
@@ -1455,6 +1553,28 @@
       <Polish>Powyższe wartości (jakość nadwania i odbioru) działają na zasadzie mnożników, np. jeśli ustawimy jakość odbioru na 25%, jakość odbioru radia zostanie pomniejszona o 75% względem normalnej (czyli 25% normalnej jakości odbioru). Jakość odbioru 100% oznacza, że radia będą odbierać normalnie, a jakość odbioru 0% oznacza, iż radio nie będzie odbierać w ogóle.</Polish>
     </Key>
   </Package>
+  <Package name="Modules_playSound">
+    <Key ID="STR_A3CS_Modules_playSound_displayName">
+      <Polish>Dźwięk 3D</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_playSound_shortDescription">
+      <Polish>Moduł odtwarza dźwięk 3D.</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_onPlayerInArea">
+    <Key ID="STR_A3CS_Modules_onPlayerInArea_displayName">
+      <Polish>Gdy gracz w obszarze</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onPlayerInArea_shortDescription">
+      <Polish>Moduł uruchomi się gdy jakikolwiek gracz znajdzie się w obszarze modułu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onPlayerInArea_Attributes_baseSettingsSubCategory">
+      <Polish>Ustawienia aktywacji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onPlayerInArea_Attributes_scriptHandler_desc">
+      <Polish>Skrypt uruchomi się tylko na serwerze. Parametry:&lt;br/&gt;#0 _logic - moduł.</Polish>
+    </Key>
+  </Package>
   <Package name="Modules_createTask">
     <Key ID="STR_A3CS_Modules_createTask_displayName">
       <Polish>Nowe zadanie</Polish>
@@ -1578,7 +1698,16 @@
       <Polish>Gdy zabity/zniszczony</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_onKilled_shortDescription">
-      <Polish>Moduł uruchomi się gdy wszystkie zsynchronizowane z modułem jednostki, pojazdy i obiekty zostaną zabite/zniszczone.</Polish>
+      <Polish>Moduł uruchomi się gdy wszystkie podane i zsynchronizowane z modułem jednostki, pojazdy i obiekty zostaną zabite/zniszczone.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onKilled_Attributes_objectsList">
+      <Polish>Lista elementów</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onKilled_Attributes_objectsList_tooltip">
+      <Polish>Lista elementów na których zabicie/zniszczenie ma reagować modów. Parametr jest uzupełnieniem do zsynchronizowanych elementów, brane pod uwagę będą oba źrodła (synchro + podane zmienne).</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onKilled_Attributes_objectsList_desc">
+      <Polish>Parametr opcjonalny. Możesz podać zmienne jeśli nie da rady użyć synchronizanji (np. obiekty mapy). Zmienne dla obiektów map możesz ustawić za pomocą modułu edycji obiektów terenu. Zmienne podawaj w formacie: zmienna1, zmienna2 itp.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_onKilled_Attributes_scriptHandler_desc">
       <Polish>Skrypt uruchomi się tylko na serwerze. Parametry:&lt;br/&gt;#0 _logic - moduł.&lt;br/&gt;#1 _objectList - lista wszystkich zsynchronizowanych jednostek/pojazdów/obiektów.</Polish>
@@ -1640,19 +1769,243 @@
   </Package>
   <Package name="Modules_addAction">
     <Key ID="STR_A3CS_Modules_addAction_displayName">
-      <Polish>Gdy usunięty</Polish>
+      <Polish>Dodaj akcję</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_addAction_shortDescription">
-      <Polish>Moduł uruchomi się gdy wszystkie zsynchronizowane z modułem jednostki, pojazdy i obiekty zostaną usunięte.&lt;br/&gt;&lt;br/&gt;Tego modułu można użyć m.in. gdy chcemy zaliczyć zadanie po podniesieniu jakiegoś obiektu (np. obiektu intelu/dokumentów), ponieważ po podniesieniu obiektów, są one przez grę usuwane (obiekt zostaje usunięty a dodany zostaje item do inventory jednostki).</Polish>
+      <Polish></Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_addAction_Attributes_scriptHandler_desc">
-      <Polish>Skrypt uruchomi się tylko na serwerze. Parametry:&lt;br/&gt;#0 _logic - moduł.</Polish>
+      <Polish></Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_addAction_Warning_EmptySynced">
       <Polish>Brak zsynchronizowanych jednostek</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_addAction_Warning_EmptySynced_Desc">
       <Polish>Aby moduł zadziałał, zsynchronizuj go z conajmniej jedną jednostką dla której akcja ma być dostępna.</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_createLogicFlag">
+    <Key ID="STR_A3CS_Modules_createLogicFlag_displayName">
+      <Polish>Nowa flaga logiczna</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createLogicFlag_shortDescription">
+      <Polish>Moduł tworzny nową flagę logiczną której można użyć w warunku aktywacji pozostałych modułów.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createLogicFlag_Attributes_baseSettingsSubCategory">
+      <Polish>Ustawienia flagi</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createLogicFlag_Attributes_id">
+      <Polish>ID flagi</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createLogicFlag_Attributes_id_tooltip">
+      <Polish>Unikalny identyfikator flagi logicznej</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createLogicFlag_Attributes_id_desc">
+      <Polish>ID flagi jest generowane automatycznie w momencie utworzenia modułu nowej flagi logicznej (tylko do odczytu). Tego ID można użyć we własnych skryptach do zmiany statusu flagi.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createLogicFlag_Attributes_title">
+      <Polish>Nazwa</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createLogicFlag_Attributes_title_tooltip">
+      <Polish>Nazwa flagi</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createLogicFlag_Attributes_title_desc">
+      <Polish>Nazwa flagi wyświetlana jest tylko w edytorze, w ustawieniach aktywacji modułów i innych miejsach korzystajacych flag. Nazwa flagi powinna być jasna, związana z tym czym steruje (dla ułatwienia własnej pracy).</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createLogicFlag_Attributes_initialValue">
+      <Polish>Wartość początkowa</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_createLogicFlag_Attributes_initialValue_tooltip">
+      <Polish>Wartość nadana fladze przy jej tworzeniu.</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_setLogicFlagValue">
+    <Key ID="STR_A3CS_Modules_setLogicFlagValue_displayName">
+      <Polish>Zmiana wartości flagi logicznej</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setLogicFlagValue_shortDescription">
+      <Polish>Moduł zmienia wartość wybranej flagi logicznej.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setLogicFlagValue_Warning_MissingFlag_Desc">
+      <Polish>Brak flagi do zmiany wartości</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setLogicFlagValue_Warning_emptyFlags">
+      <Polish>Brak flag</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setLogicFlagValue_Warning_emptyFlags_Tooltip">
+      <Polish>Nie wykryto żadnych flag logicznych</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_units3DENComp">
+    <Key ID="STR_A3CS_Modules_units3DENComp_displayName">
+      <Polish>Kompozycja jednostek edytora</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_shortDescription">
+      <Polish>Moduł tworzy jednostki, wraz z pojazdami oraz waypointami, na podstawie zapisanych w nim jednostek z edytora.&lt;br/&gt;&lt;br/&gt;Aby zapisać w module jednostki, połącz je z modułem a następnie przełącz moduł w tryb odczytu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_baseSettingsSubCategory">
+      <Polish>Ustawienia modułu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_mode">
+      <Polish>Tryb modułu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_mode_tooltip">
+      <Polish>Tryb w którym aktualnie ma pracować moduł.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_dataStats">
+      <Polish>Zapisane jednostki</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_dataStats_tooltip">
+      <Polish>Podsumowanie aktualnie zapisanych w module jednostek.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_disableHeadless">
+      <Polish>Wyłącz przekazanie do headlessa</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_disableHeadless_tooltip">
+      <Polish>Blokuje przekazanie do headlessa (jeśli jest dostępny) wygenerowanych jednostek. Pamiętaj, że ma to realny wpływ na wydajność misji (jeśli headless jest dostępny).\n\nUżyj tej opcji tylko jeśli wiesz co robisz.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_unitsSettingsSubCategory">
+      <Polish>Ustawienia jednostek</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_groupsDynSim">
+      <Polish>Dynamiczna symulacja grup</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_groupsDynSim_tooltip">
+      <Polish>Ustawienia dynamicznej symulacji dla wygenerowanych przez moduł grup.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_groupsDynSim_desc">
+      <Polish>Ustawienia dynamicznej symulacji dla wygenerowanych przez moduł grup. Pamiętaj, że ta opcja dotyczy wszystkich wygenerowanych przez moduł grup.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_groupsDynSim_data">
+      <Polish>Ustawienia grup z edytora</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_groupsDynSim_data_tooltip">
+      <Polish>Przy ustawianiu dynamicznej symulacji grup, respektowane będą ustawienia grup z edytora.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_groupsDynSim_on">
+      <Polish>Włączona</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_groupsDynSim_on_tooltip">
+      <Polish>Przy ustawianiu dynamicznej symulacji grup, dynamiczna symulacja będzie włączana dla wszystkich grup.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_groupsDynSim_off">
+      <Polish>Wyłączona</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_groupsDynSim_off_tooltip">
+      <Polish>Przy ustawianiu dynamicznej symulacji grup, dynamiczna symulacja będzie wyłączana dla wszystkich grup.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_goUpAfterSpawn">
+      <Polish>Podnieś jednostki po spawnie</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_goUpAfterSpawn_tooltip">
+      <Polish>Po zaznaczeniu tej opcji, wszystkie jednostki które zostaną stworzone w innej pozie niż stojąca, wstaną zaraz po stworzeniu.\n\nMoże być to przydatna opcja do generowania jednostek w budynkach lub za osłonami, tak aby gracze nie widzieli spawnu.\n\nPamiętaj, że ta opcja dotyczy wszystkich wygenerowanych przez moduł jednostek.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_vehicleSettingsSubCategory">
+      <Polish>Ustawienia pojazdów</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_vehiclesDynSim">
+      <Polish>Dynamiczna symulacja pojazdów</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_vehiclesDynSim_tooltip">
+      <Polish>Ustawienia dynamicznej symulacji dla wygenerowanych przez moduł pojazdów.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_vehiclesDynSim_desc">
+      <Polish>Ustawienia dynamicznej symulacji dla wygenerowanych przez moduł pojazdów. Pamiętaj, że ta opcja dotyczy wszystkich wygenerowanych przez moduł pojazdów.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_vehiclesDynSim_data">
+      <Polish>Ustawienia pojazdu z edytora</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_vehiclesDynSim_data_tooltip">
+      <Polish>Przy ustawianiu dynamicznej symulacji pojazdów, respektowane będą ustawienia pojazdu z edytora.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_vehiclesDynSim_on">
+      <Polish>Włączona</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_vehiclesDynSim_on_tooltip">
+      <Polish>Przy ustawianiu dynamicznej symulacji pojazdów, dynamiczna symulacja będzie włączana dla wszystkich pojazdów.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_vehiclesDynSim_off">
+      <Polish>Wyłączona</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_vehiclesDynSim_off_tooltip">
+      <Polish>Przy ustawianiu dynamicznej symulacji pojazdów, dynamiczna symulacja będzie wyłączana dla wszystkich pojazdów.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_clearVehCargo">
+      <Polish>Wyczyść cargo pojazdów</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_clearVehCargo_tooltip">
+      <Polish>Po zaznaczeniu tej opcji, wszystkie wygenerowane pojazdy będą miały wyczyszczone cargo (inventory).</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_clearVehCargo_desc">
+      <Polish>Po zaznaczeniu tej opcji, wszystkie wygenerowane pojazdy będą miały wyczyszczone cargo (inventory).&lt;br/&gt;&lt;br/&gt;UWAGA! Z przyczyn optymalizacji, moduł NIE zapisuje cargo pojazdów. Tworzone przez moduł pojazdy mają swoje domyślne cargo (inventory - takie samo jak świeżo postawony pojazd w edytorze), ta opcja pozwala jedynie na jego wyczyszczenie.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Warning_NoSyncedTrigger">
+      <Polish>Brak zsynchronizowanego triggera</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Warning_NoSyncedTrigger_Desc">
+      <Polish>Uruchamianie generatora kompozycji edytora od razu na starcie misji nie jest zalecaną praktyką. Zsynchronizuj moduł z triggerem aby opóźnić jego wykonanie do czasu aktywacji triggera.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Warning_NoUnits_Desc">
+      <Polish>Brak połączonych z modułem jednostek</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Warning_NoSavedUnits_Desc">
+      <Polish>W module nie zostały zapisane żadne jednostki</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Warning_EditMode">
+      <Polish>Moduł w trybie edycji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Warning_EditMode_Desc">
+      <Polish>Moduł jest aktualnie w trybie edycji. Pamiętaj, aby po zakończonej pracy, połączyć odpowiednie jednostki z modułem a następnie przełączyć moduł w tryb odczytu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_DataStats_Vehicles">
+      <Polish>Pojazdów</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_DataStats_Groups">
+      <Polish>Grup</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_DataStats_Units">
+      <Polish>Jednostek</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_DataStats_Waypoints">
+      <Polish>Waypointów</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_objects3DENComp">
+    <Key ID="STR_A3CS_Modules_objects3DENComp_displayName">
+      <Polish>Kompozycja obiektów edytora</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_shortDescription">
+      <Polish>Moduł tworzy obiekty proste (super proste - same modele) na podstawie zapisanych w nim obiektów z edytora.&lt;br/&gt;&lt;br/&gt;Aby zapisać w module obiekty, połącz je z modułem a następnie przełącz moduł w tryb odczytu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_Attributes_baseSettingsSubCategory">
+      <Polish>Ustawienia modułu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_Attributes_mode">
+      <Polish>Tryb modułu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_Attributes_mode_tooltip">
+      <Polish>Tryb w którym aktualnie ma pracować moduł.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_Attributes_dataStats">
+      <Polish>Zapisane jednostki</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_Attributes_dataStats_tooltip">
+      <Polish>Podsumowanie aktualnie zapisanych w module jednostek.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_dataStats_format">
+      <Polish>Obiektów: %1</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_Warning_NoObjects_Desc">
+      <Polish>Brak połączonych z modułem obiektów</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_Warning_NoSavedObjects_Desc">
+      <Polish>W module nie zostały zapisane żadne obiekty</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_Warning_EditMode">
+      <Polish>Moduł w trybie edycji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_Warning_EditMode_Desc">
+      <Polish>Moduł jest aktualnie w trybie edycji. Pamiętaj, aby po zakończonej pracy, połączyć odpowiednie obiekty z modułem a następnie przełączyć moduł w tryb odczytu.</Polish>
     </Key>
   </Package>
 </Project>

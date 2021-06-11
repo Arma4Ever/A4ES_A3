@@ -18,6 +18,7 @@ class GVAR(generatorComposition): GVAR(base) {
             tooltip = CSTRING(generatorComposition_Attributes_id_tooltip);
             property = QGVAR(id);
             unique = 1;
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(deleteUnits): GVAR(dynamicCheckbox) {
@@ -26,6 +27,7 @@ class GVAR(generatorComposition): GVAR(base) {
             property = QGVAR(deleteUnits);
             defaultValue = "true";
             GVAR(observeValue) = 0;
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};

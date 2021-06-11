@@ -20,16 +20,18 @@ private _activation = if (_activationDelay > 0) then {
 };
 
 if (_condition isEqualType []) exitWith {
-  TRACE_2("Adding module to flag activator",_logic,_condition);
-
-
-
+  // Add module to flag activator in next frame
+  // Makes sure flags are created so we can validate them and read initial values
+  [
+    {_this call FUNC(addModuleFlagActivator);},
+    [_logic, _condition, _activation]
+  ] call CBA_fnc_execNextFrame;
 };
 
 TRACE_2("Adding module to cyclic activator",_logic,_condition);
 GVAR(activatorModuleCycleList) pushBack [
   _logic,
-  _condition,
+  compile _condition,
   _params,
   _activation
 ];

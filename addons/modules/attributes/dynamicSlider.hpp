@@ -2,6 +2,7 @@
 class GVAR(dynamicSlider): Slider {
     onLoad = "";
     attributeLoad = QUOTE(_this call FUNC(dynamicSlider_attributeLoad));
+    attributeSave = QUOTE(_this call FUNC(dynamicSlider_attributeSave));
 
     class Controls: Controls {
         class Title: Title {

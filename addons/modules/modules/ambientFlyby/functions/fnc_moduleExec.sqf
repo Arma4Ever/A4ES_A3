@@ -6,6 +6,11 @@
 
 params ["_logic"];
 
+/*
+TODO: Refactor
+*/
+
+if (isNull _logic || {!isServer}) exitWith {};
 if (is3DENPreview) then {
   [_logic, true] call EFUNC(debug,updateModuleStatus);
 };

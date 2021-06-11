@@ -9,36 +9,26 @@ if (isServer) then {
   GVAR(moduleActivatorCycleIndex) = -1;
   GVAR(activatorModuleCycleList) = [];
 
-  GVAR(flagActivatorModuleList) = [];
-
-  /*
-
-  // Flags binded with modules, used for fast check after flag changed
+  GVAR(createdLogicFlags) = createHashMap;
   GVAR(moduleActivatorFlags) = createHashMap;
-
-  [
-    "flag" => [[_cond,_logic]]
-  ]
-
-  // Modules netIds binded with flags list, used to quick remove after module exec
-  GVAR(activatorModulesFlags) = createHashMap
-
-  [
-    "netId" => ["flag_1",...]
-  ]
-
-  */
+  GVAR(activatorModulesFlags) = createHashMap;
 
   GVAR(onKilled_killedEH) = -1;
   GVAR(onKilled_waitingModules) = [];
 
   GVAR(radioJammerModules) = [];
 
+  GVAR(3DENCompObjects) = [];
+
   // ???????
-  GVAR(createdActions) = createHashMap;
+  // GVAR(createdActions) = createHashMap;
   [QGVAR(addAction_actionExecuted), {
     _this call FUNC(addAction_handleActionExecuted);
-  }];
+  }] call CBA_fnc_addEventHandler;
+
+  [QGVAR(spawnData_waypoint), {
+    _this call FUNC(units3DENComp_spawnData_waypointServer);
+  }] call CBA_fnc_addEventHandler;
 };
 
 [QGVAR(addCuratorModule), {
@@ -83,7 +73,7 @@ if (hasInterface) then {
 };
 
 if (is3DEN) then {
-  call FUNC(initWarnings);
+  0 call FUNC(initWarnings);
 
   ["Module_F", "init", {
     _this call FUNC(handleModuleInit);

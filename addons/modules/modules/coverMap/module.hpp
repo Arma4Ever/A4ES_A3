@@ -21,6 +21,7 @@ class GVAR(coverMap): GVAR(base) {
             tooltip = CSTRING(coverMap_Attributes_coverOpacity);
             property = QGVAR(coverOpacity);
             defaultValue = "1";
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(coverColor): GVAR(dynamicCombo) {
@@ -29,6 +30,7 @@ class GVAR(coverMap): GVAR(base) {
             property = QGVAR(coverColor);
             typeName = "NUMBER";
             defaultValue = "0";
+            ATTRIBUTE_LOCAL;
             class values {
                 class black {
                     name = CSTRING(coverMap_Attributes_coverColor_black);

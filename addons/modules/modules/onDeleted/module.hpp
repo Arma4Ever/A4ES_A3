@@ -5,7 +5,7 @@ class GVAR(onDeleted): GVAR(base) {
     icon = QPATHTOF(modules\onDeleted\data\icon.paa);
     category = QGVAR(events);
     function = QFUNC(onDeleted_module);
-    functionPriority = 1;
+    functionPriority = 2;
     isTriggerActivated = 0;
     GVAR(validator) = QFUNC(onDeleted_validate);
 
@@ -14,6 +14,8 @@ class GVAR(onDeleted): GVAR(base) {
         class GVAR(moduleWarnings): GVAR(moduleWarnings) {};
 
         #include "\z\a3cs\addons\modules\includes\moduleChangeTaskStateAttributes.hpp"
+        #include "\z\a3cs\addons\modules\includes\modulePlaySoundAttributes.hpp"
+        #include "\z\a3cs\addons\modules\includes\moduleSetLogicFlagValueAttributes.hpp"
 
         class GVAR(scriptHandlerSettingsSubCategory): GVAR(moduleSubCategory) {
             displayName = CSTRING(Attributes_scriptHandlerSettingsSubCategory);
@@ -24,6 +26,7 @@ class GVAR(onDeleted): GVAR(base) {
             displayName = CSTRING(Attributes_addScriptHandler);
             tooltip = CSTRING(Attributes_addScriptHandler_tooltip);
             property = QGVAR(addScriptHandler);
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(scriptHandler): GVAR(dynamicEditCodeMulti5) {
@@ -34,6 +37,7 @@ class GVAR(onDeleted): GVAR(base) {
             defaultValue = "''";
             typeName = "STRING";
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(addScriptHandler)) isEqualTo true);
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};

@@ -125,6 +125,9 @@ class CfgVehicles {
             class GVAR(dynamicEdit): Edit {
                 control = QGVAR(dynamicEdit);
             };
+            class GVAR(dynamicHiddenEdit): Edit {
+                control = QGVAR(dynamicHiddenEdit);
+            };
             class GVAR(dynamicEditMulti3): Edit {
                 control = QGVAR(dynamicEditMulti3);
             };
@@ -147,6 +150,19 @@ class CfgVehicles {
             class GVAR(dynamicCheckbox): Checkbox {
                 control = QGVAR(dynamicCheckbox);
                 // Observe checkbox value by default
+                GVAR(observeValue) = 1;
+            };
+            class GVAR(dynamicHiddenCheckbox): GVAR(dynamicCheckbox) {
+                control = QGVAR(dynamicHiddenCheckbox);
+            };
+
+            class GVAR(dynamicLogicFlagCond): Default {
+                control = QGVAR(dynamicLogicFlagCond);
+            };
+
+            class GVAR(dynamicToolbox3DENCompMode): Default {
+                control = QGVAR(dynamicToolbox3DENCompMode);
+                typeName = "NUMBER";
                 GVAR(observeValue) = 1;
             };
 
@@ -186,10 +202,13 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 GVAR(range[]) = {0, 1};
                 GVAR(valueUnit) = "";
+                GVAR(valueCoef) = 1;
             };
             class GVAR(dynamicSliderPercent): GVAR(dynamicSlider) {
                 control = QGVAR(dynamicSliderPercent);
+                GVAR(range[]) = {0, 100};
                 GVAR(valueUnit) = "%";
+                GVAR(valueCoef) = 0.01;
             };
             class GVAR(dynamicSkillSlider): Default {
                 control = QGVAR(dynamicSkillSlider);
@@ -288,7 +307,7 @@ class CfgVehicles {
     // #include "modules\generateMinefield\module.hpp"
     #include "modules\generateSoldiers\module.hpp"
     #include "modules\generatorComposition\module.hpp"
-    // #include "modules\objects3DENComp\module.hpp"
+    #include "modules\objects3DENComp\module.hpp"
     #include "modules\onAreaCleared\module.hpp"
     #include "modules\onDeleted\module.hpp"
     #include "modules\onEntitiesInArea\module.hpp"
@@ -299,10 +318,11 @@ class CfgVehicles {
     // #include "modules\setDamage\module.hpp"
     // #include "modules\setDraggable\module.hpp"
     #include "modules\setLogicFlagValue\module.hpp"
+    // // #include "modules\setMarker\module.hpp"
     #include "modules\setTaskState\module.hpp"
     // #include "modules\setTimeMultiplier\module.hpp"
     #include "modules\switchLights\module.hpp"
-    // #include "modules\units3DENComp\module.hpp"
+    #include "modules\units3DENComp\module.hpp"
 
     /*#include "hiddenModules.hpp"*/
 };

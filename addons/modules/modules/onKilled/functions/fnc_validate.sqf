@@ -7,13 +7,15 @@
 params ["_module", "_values"];
 
 private _warnings = [];
+
 private _syncedObjects = (get3DENConnections _module) select {
   ((_x # 0) isEqualTo "Sync") && {
     !((_x # 1) isKindOf "EmptyDetector") &&
     {!((_x # 1) isKindOf "Logic")}
   }
 };
-if ( _syncedObjects isEqualTo []) then {
+_objectsList = _values getVariable [QGVAR(objectsList), ""];
+if ( _syncedObjects isEqualTo [] && {_objectsList isEqualTo ""}) then {
   _warnings pushBack [
     LLSTRING(onKilled_Warning_EmptySynced),
     LLSTRING(onKilled_Warning_EmptySynced_Desc)

@@ -1,5 +1,5 @@
 
-PREP_MODULE(setTaskState,module);
-PREP_MODULE(setTaskState,moduleExec);
-PREP_MODULE(setTaskState,flags_insertValues);
-PREP_MODULE(setTaskState,validate);
+PREP_MODULE(setLogicFlagValue,module);
+PREP_MODULE(setLogicFlagValue,moduleExec);
+PREP_MODULE(setLogicFlagValue,logicFlag_insertValues);
+PREP_MODULE(setLogicFlagValue,validate);

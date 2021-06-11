@@ -8,7 +8,7 @@ params ["_module", "_values"];
 
 private _warnings = [];
 
-if ((_values getVariable [QGVAR(activationMode), 0]) isEqualTo 2) then {
+if ((_values getVariable [QGVAR(activationMode), 0]) isEqualTo 3) then {
   private _syncedTriggers = (get3DENConnections _module) select {
     ((_x # 0) isEqualTo "Sync") && {(_x # 1) isKindOf "EmptyDetector"}
   };

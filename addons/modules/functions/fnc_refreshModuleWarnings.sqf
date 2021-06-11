@@ -5,6 +5,7 @@
  * Updates module warnings ui
  */
 params ["_warnings"];
+TRACE_1("refreshModuleWarnings",_warnings);
 
 // Get warnings control params
 GVAR(moduleWarningsParams) params ["_controlGroup", "_controlTextGroup", "_controlText"];

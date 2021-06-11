@@ -14,7 +14,10 @@
     #define PREP_MODULE(moduleName,fncName) [QPATHTOF(modules\moduleName\functions\DOUBLES(fnc,fncName).sqf), QFUNC(DOUBLES(moduleName,fncName))] call CBA_fnc_compileFunction
 #endif
 
-#define ATTRIBUTE_LOCAL expression = QUOTE(_this setVariable ['%s',_value];)
+#define ATTRIBUTE_LOCAL expression = QUOTE(_this setVariable [ARR_2('%s',_value)];)
+#define ATTRIBUTE_IGNORED expression = ""
+
+#define AI_FEATURES ["TARGET", "AUTOTARGET", "MOVE", "ANIM", "TEAMSWITCH", "FSM", "WEAPONAIM", "AIMINGERROR", "SUPPRESSION", "CHECKVISIBLE", "COVER", "AUTOCOMBAT", "PATH", "MINEDETECTION", "NVG", "LIGHTS", "RADIOPROTOCOL"]
 
 // Panel left
 #define IDC_DISPLAY3DEN_PANELLEFT_WARNINGS        1200

@@ -5,8 +5,7 @@ class GVAR(playSound): GVAR(base) {
     icon = "\a3\modules_f_curator\data\portraitsound_ca.paa";
     category = QGVAR(effects);
     function = QFUNC(playSound_module);
-    functionPriority = 1;
-    isTriggerActivated = 1;
+    functionPriority = 5;
     GVAR(validator) = QFUNC(playSound_validate);
 
     class Attributes: AttributesBase {

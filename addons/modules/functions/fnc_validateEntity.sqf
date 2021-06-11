@@ -6,6 +6,7 @@
  */
 
 params ["_entity", ["_values", locationNull, [locationNull]], ["_updateWarnings", true, [true]]];
+TRACE_3("validateEntity",_entity,_values,_updateWarnings);
 
 private _className = typeOf _entity;
 private _validatorName = GVAR(validatorsCache) getVariable _className;

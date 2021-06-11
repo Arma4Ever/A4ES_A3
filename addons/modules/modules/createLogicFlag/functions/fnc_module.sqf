@@ -19,6 +19,27 @@ if (isNull _logic || !(local _logic) || _isCuratorPlaced) exitWith {};
 
 LOG('Starting init of EXEC_MODULE_NAME.');
 
+if (is3DENPreview) then {
+  [_logic, true] call EFUNC(debug,updateModuleStatus);
+};
 
+private _id =  _logic getVariable [QGVAR(id), ""];
+if (_id isEqualTo "") exitWith {
+  ERROR("Flag id is missing");
+};
+
+private _initialValue = _logic getVariable [QGVAR(initialValue), 0];
+if !(_initialValue in [0, 1]) exitWith {
+  ERROR_1("Invalid flag initial value",str _initialValue);
+};
+
+private _value = [false, true] select _initialValue;
+
+GVAR(createdLogicFlags) set [_id, _value];
+
+private _flagVar = format [QGVAR(%1), _id];
+missionNamespace setVariable [_flagVar, _value, true];
+
+deleteVehicle _logic;
 
 LOG('Init of EXEC_MODULE_NAME finished - executed.');

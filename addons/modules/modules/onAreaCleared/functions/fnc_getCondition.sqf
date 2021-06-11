@@ -19,7 +19,7 @@ private _side = ["west", "east", "independent", "civilian"] param [
 
 format ["
 private _area = %1;
-((_this nearEntities [['CAManBase', 'Car', 'Motorcycle', 'Tank'], %2]) findIf {
+((_this nearEntities [['CAManBase', 'Car', 'Tank', 'Ship'], %2]) findIf {
   ((side (group (effectiveCommander _x))) isEqualTo %3) &&
   {_x inArea _area}
 }) isEqualTo -1

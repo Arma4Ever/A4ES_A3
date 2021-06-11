@@ -5,6 +5,7 @@
  */
 
 params ["_logic", "_attribute", "_format"];
+TRACE_3("setUniqueIdAttribute",_logic,_attribute,_format);
 
 private _id = (_logic get3DENAttribute _attribute) param [0, ""];
 if (_id isEqualTo "") then {

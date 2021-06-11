@@ -1,3 +1,4 @@
+
 class GVAR(activationSettingsSubCategory): GVAR(moduleSubCategory) {
     displayName = CSTRING(Attributes_activationSettingsSubCategory);
     property = QGVAR(activationSettingsSubCategory);
@@ -52,7 +53,7 @@ class GVAR(activationIgnorePlanes): GVAR(dynamicCheckbox) {
     GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(activationMode)) isEqualTo 0);
     ATTRIBUTE_LOCAL;
 };
-class GVAR(activationFlags): GVAR(dynamicEdit) {
+class GVAR(activationFlags): GVAR(dynamicLogicFlagCond) {
     displayName = CSTRING(Attributes_activationFlags);
     tooltip = CSTRING(Attributes_activationFlags_Tooltip);
     property = QGVAR(activationFlags);

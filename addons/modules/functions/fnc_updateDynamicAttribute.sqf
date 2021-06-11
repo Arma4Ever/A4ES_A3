@@ -4,6 +4,7 @@
  * Updates dynamic attribute value & triggers attributes update
  */
 params ["_controlGroup"];
+TRACE_1("updateDynamicAttribute",_controlGroup);
 
 // Do not use private to allow access from attributeSave function
 _config = _controlGroup getVariable QGVAR(attributeConfig);

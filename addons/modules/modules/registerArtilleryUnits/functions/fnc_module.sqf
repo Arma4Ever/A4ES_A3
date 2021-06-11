@@ -20,8 +20,6 @@ if (isNull _logic || !(local _logic) || _isCuratorPlaced) exitWith {};
 waitUntil {!isNil 'lambs_danger_Loaded_WP'};
 if !(lambs_danger_Loaded_WP) exitWith {};
 
-lambs_danger_debug_functions = true;
-
 LOG('Starting execution of EXEC_MODULE_NAME.');
 
 if (is3DENPreview) then {

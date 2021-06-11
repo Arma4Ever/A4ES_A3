@@ -5,8 +5,7 @@ class GVAR(createTask): GVAR(base) {
     icon = "\a3\Modules_F\Data\iconTaskCreate_ca.paa";
     category = QGVAR(tasks);
     function = QFUNC(createTask_module);
-    functionPriority = 1;
-    isTriggerActivated = 1;
+    functionPriority = 2;
     GVAR(validator) = QFUNC(createTask_validate);
 
     class Attributes: AttributesBase {
@@ -32,6 +31,7 @@ class GVAR(createTask): GVAR(base) {
             unique = 1;
             GVAR(description) = CSTRING(createTask_Attributes_id_desc);
             GVAR(disabled) = 1;
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(owner): GVAR(dynamicOwnerToolbox) {
@@ -40,6 +40,7 @@ class GVAR(createTask): GVAR(base) {
             property = QGVAR(owner);
             typeName = "NUMBER";
             defaultValue = "0";
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(parent): GVAR(dynamicCombo) {
@@ -49,6 +50,7 @@ class GVAR(createTask): GVAR(base) {
             typeName = "STRING";
             defaultValue = "''";
             GVAR(insertValues) = QFUNC(createTask_parent_insertValues);
+            ATTRIBUTE_LOCAL;
 
             class values {
                 class none {
@@ -65,12 +67,14 @@ class GVAR(createTask): GVAR(base) {
             tooltip = CSTRING(createTask_Attributes_title_tooltip);
             property = QGVAR(title);
             GVAR(observeValue) = 1;
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(description): GVAR(dynamicEditMulti5) {
             displayName = CSTRING(createTask_Attributes_description);
             tooltip = CSTRING(createTask_Attributes_description_tooltip);
             property = QGVAR(description);
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(type): GVAR(dynamicCombo) {
@@ -80,6 +84,7 @@ class GVAR(createTask): GVAR(base) {
             typeName = "STRING";
             defaultValue = "'default'";
             GVAR(insertValues) = QFUNC(createTask_type_insertValues);
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(state): GVAR(dynamicToolboxTaskState) {
@@ -87,6 +92,7 @@ class GVAR(createTask): GVAR(base) {
             tooltip = CSTRING(createTask_Attributes_state_tooltip);
             property = QGVAR(state);
             defaultValue = "0";
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(showPos): GVAR(dynamicCheckbox) {
@@ -95,6 +101,7 @@ class GVAR(createTask): GVAR(base) {
             property = QGVAR(showPos);
             defaultValue = "true";
             GVAR(observeValue) = 0;
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(showNotification): GVAR(dynamicCheckbox) {
@@ -104,6 +111,7 @@ class GVAR(createTask): GVAR(base) {
             defaultValue = "true";
             GVAR(observeValue) = 0;
             GVAR(description) = CSTRING(createTask_Attributes_showNotification_desc);
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};
@@ -111,6 +119,5 @@ class GVAR(createTask): GVAR(base) {
 
     class GVAR(moduleDescription): GVAR(moduleDescription) {
         shortDescription = CSTRING(createTask_shortDescription);
-        //schema = QPATHTOF(data\schema_placeholder.paa);
     };
 };

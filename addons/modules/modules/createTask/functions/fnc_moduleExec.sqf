@@ -7,7 +7,10 @@
 params ["_logic"];
 TRACE_1("createTask_moduleExec",_logic);
 
-if !(isServer) exitWith {};
+if (isNull _logic || {!isServer}) exitWith {};
+if (is3DENPreview) then {
+  [_logic, true] call EFUNC(debug,updateModuleStatus);
+};
 
 private _id =  _logic getVariable [QGVAR(id), ""];
 if (_id isEqualTo "") exitWith {
@@ -17,10 +20,6 @@ if (_id isEqualTo "") exitWith {
 private _title = _logic getVariable [QGVAR(title), ""];
 if (_title isEqualTo "") exitWith {
   ERROR("Task title is missing");
-};
-
-if (is3DENPreview) then {
-  [_logic, true] call EFUNC(debug,updateModuleStatus);
 };
 
 private _pos = [];

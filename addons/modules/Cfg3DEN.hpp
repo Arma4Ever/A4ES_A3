@@ -227,7 +227,9 @@ class Cfg3DEN {
         #include "attributes\dynamicToolbox.hpp"
         #include "attributes\dynamicSlider.hpp"
 
+        #include "attributes\dynamicLogicFlagCond.hpp"
         #include "attributes\dynamicClassSelect.hpp"
+        #include "attributes\dynamicToolbox3DENCompMode.hpp"
         #include "attributes\dynamicToolboxActivationMode.hpp"
         #include "attributes\dynamicToolboxSide.hpp"
         #include "attributes\dynamicToolboxSoundRepeatMode.hpp"

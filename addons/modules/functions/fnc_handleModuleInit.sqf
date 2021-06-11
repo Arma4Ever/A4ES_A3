@@ -5,6 +5,7 @@
  */
 
 params ["_module"];
+TRACE_1("handleModuleInit",_module);
 
 // Add ConnectionChanged3DEN handler
 _module addEventHandler ["ConnectionChanged3DEN", {

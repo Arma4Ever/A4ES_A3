@@ -6,6 +6,7 @@
  */
 
 params ["_entity", "_warnings"];
+TRACE_2("setEntityWarnings",_entity,_warnings);
 
 private _entityID = _entity getVariable [QGVAR(entityID), get3DENEntityID _entity];
 private _entityIDVarName = str _entityID;

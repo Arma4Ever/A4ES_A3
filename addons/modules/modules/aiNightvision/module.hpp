@@ -19,6 +19,7 @@ class GVAR(aiNightvision): GVAR(base) {
             typeName = "STRING";
             defaultValue = QUOTE(QQEGVAR(ai,NVGoggles));
             GVAR(insertValues) = QFUNC(aiNightvision_className_insertValues);
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};

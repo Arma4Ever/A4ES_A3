@@ -5,8 +5,7 @@ class GVAR(setTaskState): GVAR(base) {
     icon = "\a3\Modules_F\Data\iconTaskSetState_ca.paa";
     category = QGVAR(tasks);
     function = QFUNC(setTaskState_module);
-    functionPriority = 1;
-    isTriggerActivated = 1;
+    functionPriority = 5;
     GVAR(validator) = QFUNC(setTaskState_validate);
 
     class Attributes: AttributesBase {
@@ -30,6 +29,7 @@ class GVAR(setTaskState): GVAR(base) {
             typeName = "STRING";
             defaultValue = "''";
             GVAR(insertValues) = QFUNC(setTaskState_task_insertValues);
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(state): GVAR(dynamicToolboxTaskState) {
@@ -37,6 +37,7 @@ class GVAR(setTaskState): GVAR(base) {
             tooltip = CSTRING(setTaskState_Attributes_state_tooltip);
             property = QGVAR(state);
             defaultValue = "0";
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(showNotification): GVAR(dynamicCheckbox) {
@@ -45,6 +46,7 @@ class GVAR(setTaskState): GVAR(base) {
             property = QGVAR(showNotification);
             defaultValue = "true";
             GVAR(observeValue) = 0;
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};
@@ -52,6 +54,5 @@ class GVAR(setTaskState): GVAR(base) {
 
     class GVAR(moduleDescription): GVAR(moduleDescription) {
         shortDescription = CSTRING(setTaskState_shortDescription);
-        //schema = QPATHTOF(data\schema_placeholder.paa);
     };
 };

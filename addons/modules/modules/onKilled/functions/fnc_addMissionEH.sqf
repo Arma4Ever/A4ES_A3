@@ -17,7 +17,8 @@ _waitingModules pushBack _logic;
 private _killedEH = GVAR(onKilled_killedEH);
 if (_killedEH isEqualTo -1) then {
   _killedEH = addMissionEventHandler ["EntityKilled", {
-    private _modules = (_entity # 0) getVariable [QGVAR(onKilledHandlers), []];
+    params ["_entity"];
+    private _modules = _entity getVariable [QGVAR(onKilledHandlers), []];
     if (_modules isNotEqualTo []) then {
       {
         if !(isNull _x) then {

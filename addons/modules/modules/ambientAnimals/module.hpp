@@ -17,8 +17,8 @@ class GVAR(ambientAnimals): GVAR(base) {
         class GVAR(moduleWarnings): GVAR(moduleWarnings) {};
 
         // Attributes for module activator
-         #include "\z\a3cs\addons\modules\includes\moduleActivationAttributes.hpp"
-         
+        #include "\z\a3cs\addons\modules\includes\moduleActivationAttributes.hpp"
+
         class GVAR(baseSettingsSubCategory): GVAR(moduleSubCategory) {
             displayName = CSTRING(ambientAnimals_baseSettingsSubCategory);
             property = QGVAR(baseSettingsSubCategory);
@@ -29,6 +29,7 @@ class GVAR(ambientAnimals): GVAR(base) {
             property = QGVAR(animalsType);
             typeName = "STRING";
             defaultValue = "'Rabbit_F'";
+            ATTRIBUTE_LOCAL;
             class values {
                 class Rabbit_F {
                     name = CSTRING(ambientAnimals_animalsType_Rabbit)
@@ -67,6 +68,7 @@ class GVAR(ambientAnimals): GVAR(base) {
             typeName = "NUMBER";
             GVAR(range[]) = {1, 20};
             GVAR(valueUnit) = "";
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(addToCurators): GVAR(dynamicCheckbox) {
@@ -74,6 +76,7 @@ class GVAR(ambientAnimals): GVAR(base) {
             tooltip = CSTRING(ambientAnimals_Attributes_addToCurators_Tooltip);
             property = QGVAR(addToCurators);
             defaultValue = "false";
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};

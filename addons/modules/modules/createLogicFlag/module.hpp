@@ -6,7 +6,6 @@ class GVAR(createLogicFlag): GVAR(base) {
     category = QGVAR(logicFlags);
     function = QFUNC(createLogicFlag_module);
     functionPriority = 1;
-    isTriggerActivated = 1;
     GVAR(validator) = QFUNC(createLogicFlag_validate);
 
     class Attributes: AttributesBase {
@@ -27,33 +26,36 @@ class GVAR(createLogicFlag): GVAR(base) {
             unique = 1;
             GVAR(description) = CSTRING(createLogicFlag_Attributes_id_desc);
             GVAR(disabled) = 1;
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(title): GVAR(dynamicEdit) {
-            displayName = CSTRING(createTask_Attributes_title);
-            tooltip = CSTRING(createTask_Attributes_title_tooltip);
+            displayName = CSTRING(createLogicFlag_Attributes_title);
+            tooltip = CSTRING(createLogicFlag_Attributes_title_tooltip);
             property = QGVAR(title);
             GVAR(observeValue) = 1;
+            GVAR(description) = CSTRING(createLogicFlag_Attributes_title_desc);
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(initialValue): GVAR(dynamicCombo) {
-            displayName = CSTRING(createTask_Attributes_initialValue);
-            tooltip = CSTRING(createTask_Attributes_initialValue_tooltip);
+            displayName = CSTRING(createLogicFlag_Attributes_initialValue);
+            tooltip = CSTRING(createLogicFlag_Attributes_initialValue_tooltip);
             property = QGVAR(initialValue);
-            typeName = "STRING";
-            defaultValue = "'false'";
+            typeName = "NUMBER";
+            defaultValue = "0";
+            ATTRIBUTE_LOCAL;
             class values {
-                class valueTrue {
-                    name = CSTRING(generateSoldiers_Attributes_behaviour_patrol);
-                    tooltip = CSTRING(generateSoldiers_Attributes_behaviour_patrol_Tooltip);
+                class valueFalse {
+                    name = ECSTRING(common,False);
                     value = 0;
                     default = 1;
                 };
-                class valueFalse {
-                    name = CSTRING(generateSoldiers_Attributes_behaviour_camp);
-                    tooltip = CSTRING(generateSoldiers_Attributes_behaviour_camp_Tooltip);
+                class valueTrue {
+                    name = ECSTRING(common,True);
                     value = 1;
                 };
+
             };
         };
 
@@ -61,7 +63,6 @@ class GVAR(createLogicFlag): GVAR(base) {
     };
 
     class GVAR(moduleDescription): GVAR(moduleDescription) {
-        shortDescription = CSTRING(createTask_shortDescription);
-        //schema = QPATHTOF(data\schema_placeholder.paa);
+        shortDescription = CSTRING(createLogicFlag_shortDescription);
     };
 };

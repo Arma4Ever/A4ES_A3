@@ -25,6 +25,12 @@ removeMissionEventHandler ["EntityKilled", _killedEH];
 // Change task state
 _logic call FUNC(handlerModuleChangeTaskState);
 
+// Play sound
+[_logic, false] call FUNC(modulePlaySound);
+
+// Set logic flag value
+[_logic, false] call FUNC(moduleSetLogicFlagValue);
+
 // Call script handler
 if (_logic getVariable [QGVAR(addScriptHandler), false]) then {
   [_logic] call compile (_logic getVariable [QGVAR(scriptHandler), ""]);

@@ -29,6 +29,7 @@ class GVAR(ambientFlyby): GVAR(base) {
             typeName = "NUMBER";
             defaultValue = "0";
             GVAR(observeValue) = 1;
+            ATTRIBUTE_LOCAL;
         };
         class GVAR(classListMode): GVAR(dynamicCombo) {
             displayName = CSTRING(ambientFlyby_Attributes_classListMode);
@@ -37,6 +38,7 @@ class GVAR(ambientFlyby): GVAR(base) {
             typeName = "NUMBER";
             defaultValue = "0";
             GVAR(observeValue) = 1;
+            ATTRIBUTE_LOCAL;
             class values {
                 class random {
                     name = CSTRING(ambientFlyby_Attributes_classListMode_random);
@@ -60,6 +62,7 @@ class GVAR(ambientFlyby): GVAR(base) {
             GVAR(range[]) = {1, 20};
             GVAR(valueUnit) = "";
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(classListMode)) isEqualTo 0);
+            ATTRIBUTE_LOCAL;
         };
         class GVAR(classList): Default {
             displayName = CSTRING(ambientFlyby_Attributes_classList);
@@ -70,15 +73,17 @@ class GVAR(ambientFlyby): GVAR(base) {
             defaultValue = '[]';
             GVAR(assetsTypes[]) = {"Plane"};
             GVAR(onValuesChanged) = QFUNC(dynamicClassSelect_updateUI);
+            ATTRIBUTE_LOCAL;
         };
         class GVAR(flightSpeed): GVAR(dynamicSlider) {
             displayName = CSTRING(ambientFlyby_Attributes_flightSpeed);
             tooltip = CSTRING(ambientFlyby_Attributes_flightSpeed_Tooltip);
             property = QGVAR(flightSpeed);
-            defaultValue = "20";
+            defaultValue = "80";
             typeName = "NUMBER";
             GVAR(range[]) = {20, 300};
-            GVAR(valueUnit) = "";
+            GVAR(valueUnit) = "km/h";
+            ATTRIBUTE_LOCAL;
         };
         class GVAR(flybyShape): GVAR(dynamicCombo) {
             displayName = CSTRING(ambientFlyby_Shape);
@@ -86,6 +91,7 @@ class GVAR(ambientFlyby): GVAR(base) {
             property = QGVAR(flybyShape);
             typeName = "NUMBER";
             defaultValue = "1";
+            ATTRIBUTE_LOCAL;
             class values {
                 class diamond {
                     name = CSTRING(ambientFlyby_Shape_Diamond);
@@ -108,6 +114,7 @@ class GVAR(ambientFlyby): GVAR(base) {
             defaultValue = "''";
             validate = "STRING";
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(mode)) isEqualTo 0);
+            ATTRIBUTE_LOCAL;
         };
         class GVAR(flybyDirection): GVAR(dynamicCombo) {
             displayName = CSTRING(ambientFlyby_fromDirection);
@@ -117,6 +124,7 @@ class GVAR(ambientFlyby): GVAR(base) {
             defaultValue = "0";
             GVAR(observeValue) = 1;
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(mode)) isEqualTo 1);
+            ATTRIBUTE_LOCAL;
             class values {
                 class north {
                     name = CSTRING(ambientFlyby_Directions_N);
@@ -160,8 +168,9 @@ class GVAR(ambientFlyby): GVAR(base) {
             defaultValue = "2000";
             typeName = "NUMBER";
             GVAR(range[]) = {200, 20000};
-            GVAR(valueUnit) = "";
+            GVAR(valueUnit) = "m";
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(mode)) isEqualTo 1);
+            ATTRIBUTE_LOCAL;
         };
         class GVAR(height): GVAR(dynamicSlider) {
             displayName = CSTRING(ambientFlyby_Attributes_Height);
@@ -170,8 +179,9 @@ class GVAR(ambientFlyby): GVAR(base) {
             defaultValue = "50";
             typeName = "NUMBER";
             GVAR(range[]) = {50, 5000};
-            GVAR(valueUnit) = "";
+            GVAR(valueUnit) = "m";
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(mode)) isEqualTo 1);
+            ATTRIBUTE_LOCAL;
         };
         class GVAR(moduleDescription): GVAR(moduleDescription) {};
     };

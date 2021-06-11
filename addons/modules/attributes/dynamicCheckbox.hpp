@@ -14,3 +14,8 @@ class GVAR(dynamicCheckbox): Checkbox {
         class GVAR(description): GVAR(description) {};
     };
 };
+
+class GVAR(dynamicHiddenCheckbox): GVAR(dynamicCheckbox) {
+    w = "0";
+    h = "0";
+};

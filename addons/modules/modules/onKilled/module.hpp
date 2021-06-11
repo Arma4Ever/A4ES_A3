@@ -5,7 +5,8 @@ class GVAR(onKilled): GVAR(base) {
     icon = QPATHTOF(modules\onKilled\data\icon.paa);
     category = QGVAR(events);
     function = QFUNC(onKilled_module);
-    functionPriority = 1;
+    // 30 because ModuleEditTerrainObject has 25 - objectsList
+    functionPriority = 30;
     isTriggerActivated = 0;
     GVAR(validator) = QFUNC(onKilled_validate);
 
@@ -13,8 +14,18 @@ class GVAR(onKilled): GVAR(base) {
         class GVAR(moduleShortDescription): GVAR(moduleShortDescription) {};
         class GVAR(moduleWarnings): GVAR(moduleWarnings) {};
 
+        class GVAR(objectsList): GVAR(dynamicEdit) {
+            displayName = CSTRING(onKilled_Attributes_objectsList);
+            tooltip = CSTRING(onKilled_Attributes_objectsList_tooltip);
+            property = QGVAR(objectsList);
+            GVAR(observeValue) = 1;
+            GVAR(description) = CSTRING(onKilled_Attributes_objectsList_desc);
+            ATTRIBUTE_LOCAL;
+        };
+
         #include "\z\a3cs\addons\modules\includes\moduleChangeTaskStateAttributes.hpp"
         #include "\z\a3cs\addons\modules\includes\modulePlaySoundAttributes.hpp"
+        #include "\z\a3cs\addons\modules\includes\moduleSetLogicFlagValueAttributes.hpp"
 
         class GVAR(scriptHandlerSettingsSubCategory): GVAR(moduleSubCategory) {
             displayName = CSTRING(Attributes_scriptHandlerSettingsSubCategory);
@@ -25,6 +36,7 @@ class GVAR(onKilled): GVAR(base) {
             displayName = CSTRING(Attributes_addScriptHandler);
             tooltip = CSTRING(Attributes_addScriptHandler_tooltip);
             property = QGVAR(addScriptHandler);
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(scriptHandler): GVAR(dynamicEditCodeMulti5) {
@@ -35,6 +47,7 @@ class GVAR(onKilled): GVAR(base) {
             defaultValue = "''";
             typeName = "STRING";
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(addScriptHandler)) isEqualTo true);
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};

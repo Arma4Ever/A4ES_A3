@@ -1,3 +1,4 @@
+
 class GVAR(changeTaskStateSettingsSubCategory): GVAR(moduleSubCategory) {
     displayName = CSTRING(Attributes_changeTaskStateSettingsSubCategory);
     property = QGVAR(changeTaskStateSettingsSubCategory);

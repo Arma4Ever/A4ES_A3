@@ -32,7 +32,7 @@ if (_activationMode isEqualTo 3) exitWith {
 
 // Activation by proximity, flags or condition
 if (_activationMode in [0, 1, 2]) exitWith {
-  private _condition = compile ([_logic, _activationMode] call FUNC(getModuleActivatorCond));
+  private _condition =  [_logic, _activationMode] call FUNC(getModuleActivatorCond);
   // Add module to activator system
   [_logic, _condition, _logic, QUOTE(EXEC_MODULE_FNC), _activationDelayTime] call FUNC(addModuleToActivator);
   LOG('Init of EXEC_MODULE_NAME finished - added to activator.');

@@ -16,12 +16,14 @@ class GVAR(addCuratorModule): GVAR(base) {
             displayName = CSTRING(addCuratorModule_Attributes_category);
             tooltip = CSTRING(addCuratorModule_Attributes_category_Tooltip);
             property = QGVAR(category);
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(name): GVAR(dynamicEdit) {
             displayName = CSTRING(addCuratorModule_Attributes_name);
             tooltip = CSTRING(addCuratorModule_Attributes_name_Tooltip);
             property = QGVAR(name);
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(icon): GVAR(dynamicEdit) {
@@ -29,6 +31,7 @@ class GVAR(addCuratorModule): GVAR(base) {
             tooltip = CSTRING(addCuratorModule_Attributes_icon_Tooltip);
             property = QGVAR(icon);
             defaultValue = "'\a3\modules_f\data\portraitmodule_ca.paa'";
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(function): GVAR(dynamicEdit) {
@@ -36,6 +39,7 @@ class GVAR(addCuratorModule): GVAR(base) {
             tooltip = CSTRING(addCuratorModule_Attributes_function_Tooltip);
             GVAR(description) = CSTRING(addCuratorModule_Attributes_function_Description);
             property = QGVAR(function);
+            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};

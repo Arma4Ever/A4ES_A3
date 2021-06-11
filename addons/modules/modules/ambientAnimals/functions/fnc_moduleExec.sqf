@@ -7,14 +7,19 @@
 params ["_logic"];
 TRACE_1("ambientAnimals_moduleExec",_logic);
 
-if (isNull _logic) exitWith {};
+/*
+TODO: Refactor
+*/
+
+if (isNull _logic || {!isServer}) exitWith {};
+if (is3DENPreview) then {
+  [_logic, true] call EFUNC(debug,updateModuleStatus);
+};
 
 _logic spawn {
   params ["_logic"];
 
-  if (is3DENPreview) then {
-    [_logic, true] call EFUNC(debug,updateModuleStatus);
-  };
+
 
   LOG('Starting execution of EXEC_MODULE_NAME.');
 

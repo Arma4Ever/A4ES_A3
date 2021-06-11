@@ -19,12 +19,23 @@ if (isNull _logic || !(local _logic) || _isCuratorPlaced) exitWith {};
 
 LOG_1('Starting execution of EXEC_MODULE_NAME (isActivated: %1).',str _isActivated);
 
+if (is3DENPreview) then {
+  [_logic, _isActivated] call EFUNC(debug,updateModuleStatus);
+};
+
+/*
+TODO: Refactor
+make this override prev covermap, change markers, not create (won't hide markers placed over covers)
+add layers id for changing markers from other module
+*/
+
 if (_isActivated) then {
   // Module activated, create cover markers
   private _pos = position _logic;
   _pos params ["_posX", "_posY"];
   (_logic getVariable ["objectarea", [0, 0, 0]]) params ["_sizeX", "_sizeY", "_dir"];
 
+  // USE LAYER INSTEAD OF LOGIC ID
   private _logicId = _logic call BIS_fnc_netId;
 	private _sizeOut = 50000;
   private _markers = [];

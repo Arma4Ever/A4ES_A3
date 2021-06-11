@@ -6,6 +6,7 @@
  */
 
 params ["_module", ["_validate", true, [true]]];
+TRACE_2("updateModuleValues",_module,_validate);
 
 // Save entityID in case of future unregistration
 _module setVariable [QGVAR(entityID), get3DENEntityID _module];

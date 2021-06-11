@@ -5,7 +5,7 @@ class GVAR(curator): GVAR(base) {
     icon = "\a3\Modules_F_Curator\Data\portraitCurator_ca.paa";
     category = QGVAR(curator);
     function = QFUNC(curator_module);
-    functionPriority = 1;
+    functionPriority = 5;
     isTriggerActivated = 0;
     GVAR(validator) = QFUNC(curator_validate);
 
@@ -20,6 +20,5 @@ class GVAR(curator): GVAR(base) {
         shortDescription = CSTRING(curator_shortDescription);
         canSyncWith[] = {"<anyUnit>"};
         syncRequired = 1;
-        //schema = QPATHTOF(data\schema_placeholder.paa);
     };
 };

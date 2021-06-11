@@ -24,6 +24,14 @@ private _objects = (synchronizedObjects _logic) select {
   !(_x isKindOf "EmptyDetector") && {!(_x isKindOf "Logic")}
 };
 
+private _objectsList = (_logic getVariable [QGVAR(objectsList), ""]) splitString ",";
+{
+  private _object = missionNamespace getVariable [trim _x, objNull];
+  if !(isNull _object) then {
+    _objects pushBackUnique _object;
+  };
+} forEach _objectsList;
+
 // No valid objects
 if (_objects isEqualTo []) exitWith {
   ERROR("Execution of EXEC_MODULE_NAME aborted, no valid objects");

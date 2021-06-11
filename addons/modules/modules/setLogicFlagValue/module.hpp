@@ -5,8 +5,7 @@ class GVAR(setLogicFlagValue): GVAR(base) {
     icon = QPATHTOF(modules\setLogicFlagValue\data\icon.paa);
     category = QGVAR(logicFlags);
     function = QFUNC(setLogicFlagValue_module);
-    functionPriority = 1;
-    isTriggerActivated = 1;
+    functionPriority = 5;
     GVAR(validator) = QFUNC(setLogicFlagValue_validate);
 
     class Attributes: AttributesBase {
@@ -18,11 +17,8 @@ class GVAR(setLogicFlagValue): GVAR(base) {
         #define MODULE_ACTIVATOR_DEFAULT_VALUE QUOTE(1)
         #include "\z\a3cs\addons\modules\includes\moduleActivationAttributes.hpp"
 
-        class GVAR(baseSettingsSubCategory): GVAR(moduleSubCategory) {
-            displayName = CSTRING(setLogicFlagValue_Attributes_baseSettingsSubCategory);
-            property = QGVAR(baseSettingsSubCategory);
-        };
-
+        #define MODULE_SETLOGICFLAGVALUE 1
+        #include "\z\a3cs\addons\modules\includes\moduleSetLogicFlagValueAttributes.hpp"
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};
     };
