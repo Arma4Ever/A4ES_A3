@@ -1575,6 +1575,20 @@
       <Polish>Skrypt uruchomi się tylko na serwerze. Parametry:&lt;br/&gt;#0 _logic - moduł.</Polish>
     </Key>
   </Package>
+  <Package name="Modules_onLogicFlags">
+    <Key ID="STR_A3CS_Modules_onLogicFlags_displayName">
+      <Polish>Gdy flagi logiczne</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onLogicFlags_shortDescription">
+      <Polish>Moduł uruchomi się gdy wybrane flagi logiczne będą miały oczekiwane wartości.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onLogicFlags_Attributes_baseSettingsSubCategory">
+      <Polish>Ustawienia flag</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onLogicFlags_Attributes_scriptHandler_desc">
+      <Polish>Skrypt uruchomi się tylko na serwerze. Parametry:&lt;br/&gt;#0 _logic - moduł.</Polish>
+    </Key>
+  </Package>
   <Package name="Modules_createTask">
     <Key ID="STR_A3CS_Modules_createTask_displayName">
       <Polish>Nowe zadanie</Polish>
@@ -1707,7 +1721,7 @@
       <Polish>Lista elementów na których zabicie/zniszczenie ma reagować modów. Parametr jest uzupełnieniem do zsynchronizowanych elementów, brane pod uwagę będą oba źrodła (synchro + podane zmienne).</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_onKilled_Attributes_objectsList_desc">
-      <Polish>Parametr opcjonalny. Możesz podać zmienne jeśli nie da rady użyć synchronizanji (np. obiekty mapy). Zmienne dla obiektów map możesz ustawić za pomocą modułu edycji obiektów terenu. Zmienne podawaj w formacie: zmienna1, zmienna2 itp.</Polish>
+      <Polish>Parametr opcjonalny. Możesz podać zmienne jeśli nie da rady użyć synchronizacji (np. obiekty mapy). Zmienne dla obiektów map możesz ustawić za pomocą modułu edycji obiektów terenu. Zmienne podawaj w formacie: zmienna1, zmienna2 itp.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_onKilled_Attributes_scriptHandler_desc">
       <Polish>Skrypt uruchomi się tylko na serwerze. Parametry:&lt;br/&gt;#0 _logic - moduł.&lt;br/&gt;#1 _objectList - lista wszystkich zsynchronizowanych jednostek/pojazdów/obiektów.</Polish>
@@ -1810,7 +1824,7 @@
       <Polish>Nazwa flagi</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createLogicFlag_Attributes_title_desc">
-      <Polish>Nazwa flagi wyświetlana jest tylko w edytorze, w ustawieniach aktywacji modułów i innych miejsach korzystajacych flag. Nazwa flagi powinna być jasna, związana z tym czym steruje (dla ułatwienia własnej pracy).</Polish>
+      <Polish>Nazwa flagi wyświetlana jest tylko w edytorze, w ustawieniach aktywacji modułów i innych miejscach korzystajacych z flag. Nazwa flagi powinna być jasna, związana z tym czym steruje (dla ułatwienia własnej pracy).</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createLogicFlag_Attributes_initialValue">
       <Polish>Wartość początkowa</Polish>

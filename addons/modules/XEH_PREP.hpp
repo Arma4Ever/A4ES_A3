@@ -69,6 +69,8 @@ PREP(validateEntity);
 #include "modules\onDeleted\prep.hpp"
 #include "modules\onEntitiesInArea\prep.hpp"
 #include "modules\onKilled\prep.hpp"
+#include "modules\onLogicFlags\prep.hpp"
+#include "modules\onPlayerInArea\prep.hpp"
 #include "modules\playSound\prep.hpp"
 #include "modules\radioJammer\prep.hpp"
 #include "modules\registerArtilleryUnits\prep.hpp"

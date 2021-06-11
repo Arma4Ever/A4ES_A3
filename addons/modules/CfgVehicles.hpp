@@ -312,6 +312,8 @@ class CfgVehicles {
     #include "modules\onDeleted\module.hpp"
     #include "modules\onEntitiesInArea\module.hpp"
     #include "modules\onKilled\module.hpp"
+    #include "modules\onLogicFlags\module.hpp"
+    #include "modules\onPlayerInArea\module.hpp"
     #include "modules\playSound\module.hpp"
     #include "modules\radioJammer\module.hpp"
     #include "modules\registerArtilleryUnits\module.hpp"
