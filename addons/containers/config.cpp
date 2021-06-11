@@ -6,10 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {
-            "a3cs_common",
-            "ace_logistics_wirecutter"
-        };
+        requiredAddons[] = {};
         author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL"};
         url = ECSTRING(main,URL);
@@ -18,4 +15,3 @@ class CfgPatches {
 };
 
 #include "CfgVehicles.hpp"
-#include "CfgWeapons.hpp"

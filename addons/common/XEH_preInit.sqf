@@ -20,6 +20,11 @@ if (GVAR(isMainMenu)) then {
   };
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(switchMove), {
+  params ["_unit", "_anim"];
+  _unit switchMove _anim;
+}] call CBA_fnc_addEventHandler;
+
 if (isServer) then {
   [QGVAR(enableDynSim), {
     {

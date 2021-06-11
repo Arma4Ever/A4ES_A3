@@ -25,4 +25,4 @@ ADDON = true;
   [_x, "Reloaded", {
     _this call FUNC(handleVehicleReloaded);
   }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["Plane", "Helicopter", "Car", "Tank", "Ship", "StaticWeapon"];
+} forEach ["Car", "Tank", "Helicopter", "Plane", "Ship", "StaticWeapon"];

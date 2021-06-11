@@ -15,8 +15,11 @@ class CfgFunctions {
         };
         class Garrison {
             // file = "3denEnhanced\functions\GUI\garrison";
-            class garrison_garrison;
             class garrison_onLoad;
+            class garrison_drawBuildingInfo;
+            class garrison_fillBuildings;
+            class garrison_onUnload;
+            class garrison_updateValues;
         };
         class Extraction {
             // file = "3denEnhanced\functions\GUI\extraction";
@@ -80,17 +83,17 @@ class CfgFunctions {
             class placementTools_radius;
             class placementTools_spacing;
         };
-        class ScenarioAttributesManager {
-            // file = "3denEnhanced\functions\GUI\scenarioAttributesManager";
-            delete scenarioAttributesManager_applyAttribute;
-            delete scenarioAttributesManager_applyTemplate;
-            delete scenarioAttributesManager_createTemplate;
-            delete scenarioAttributesManager_deleteTemplate;
-            delete scenarioAttributesManager_exportToClipboard;
-            delete scenarioAttributesManager_getScenarioAttributes;
-            delete scenarioAttributesManager_loadTemplate;
-            delete scenarioAttributesManager_onLoad;
-            delete scenarioAttributesManager_onUnload;
+        class SAM {
+            // file = "3denEnhanced\functions\GUI\SAM";
+            delete SAM_applyAttribute;
+            delete SAM_applyTemplate;
+            delete SAM_createTemplate;
+            delete SAM_deleteTemplate;
+            delete SAM_exportToClipboard;
+            delete SAM_getScenarioAttributes;
+            delete SAM_loadTemplate;
+            delete SAM_onLoad;
+            delete SAM_onUnload;
         };
         class NameObjects {
             // file = "3denEnhanced\functions\GUI\nameObjects";
@@ -162,6 +165,14 @@ class CfgFunctions {
             class 3DENShortcuts_init;
             class 3DENShortcuts_fillList;
         };
+        class RPTViewer {
+            // file = "3denEnhanced\functions\GUI\RPTViewer";
+            delete RPTViewer;
+        };
+        class ZeusAddons {
+            // file = "3denEnhanced\functions\GUI\ZeusAddons";
+            delete zeusAddons;
+        };
         class Misc {
             // file = "3denEnhanced\functions\Misc";
             class 3denNotificationNoSound;
@@ -185,6 +196,8 @@ class CfgFunctions {
             class toggleDrawHitpoints;
             class toggleGrass;
             class twoDigitsStr;
+            class toggleMarkerAlpha;
+            class getConfigSourceAddon;
         };
         class Interface {
             // file = "3denEnhanced\functions\interface";
@@ -221,11 +234,13 @@ class CfgFunctions {
             delete advancedDamage_onAttributeSave;
             delete airdrop_onAttributeLoad;
             delete airdrop_onAttributeSave;
+            class ambientAnimations_initInEditor {DUMMY_FNC};
             delete ambientAnimations_onAttributeLoad;
             delete ambientAnimations_onAttributeSave;
             delete ambientFlyby_onAttributeLoad;
             delete ambientFlyby_onAttributeSave;
             delete debugOptions_activeScripts;
+            class debugOptions_init {DUMMY_FNC};
             delete dynamicSkill_onAttributeLoad;
             delete dynamicSkill_onAttributeSave;
             delete establishingShot_onAttributeLoad;
@@ -244,11 +259,8 @@ class CfgFunctions {
             delete missionEndingCasualties_onAttributeSave;
             delete SPR_onAttributeLoad;
             delete SPR_onAttributeSave;
-            delete timeMultiplier_onAttributeLoad;
-            delete timeMultiplier_onAttributeSave;
-
-            class ambientAnimations_initInEditor {DUMMY_FNC};
-            class debugOptions_init {DUMMY_FNC};
+            delete slider_onAttributeLoad;
+            delete slider_onAttributeSave;
         };
     };
 };

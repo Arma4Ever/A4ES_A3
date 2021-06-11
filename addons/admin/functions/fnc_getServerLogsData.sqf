@@ -60,6 +60,7 @@ if (tolower _logClass == "debuglogs") then {
         if (side _x isEqualTo civilian) then {_civGroups = _civGroups + 1;};
     } forEach allGroups;
 
+    // INFO: AllVehicles includes Man
     _totalVehicles = count (vehicles select {_x isKindOf "AllVehicles"});
     _totalObjects = count (allMissionObjects "All");
     _modulesGenAI = count (entities QEGVAR(modules,generateSoldiers));

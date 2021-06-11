@@ -10,3 +10,12 @@ class GVAR(disableDynamicSimulation) {
     defaultValue = "false";
     typeName = "BOOL";
 };
+class GVAR(enableGunLights) {
+    displayName = CSTRING(enableGunLights);
+    tooltip = CSTRING(enableGunLights_Tooltip);
+    property = QGVAR(enableGunLights);
+    control = "Checkbox";
+    expression = "if (_value) then {_this enableGunLights 'ForceOn';};";
+    defaultValue = "false";
+    condition = "objectBrain";
+};

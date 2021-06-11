@@ -21,11 +21,7 @@ ADDON = false;
 if (isServer) then {
   GVAR(curatorModulesGroup) = grpNull;
 
-  // Entity inits for adding to curator
-  ["CAManBase", "initPost", {
-    params ["_unit"];
-    [_unit] call FUNC(addCuratorObjects);
-  }, true, [], true] call CBA_fnc_addClassEventHandler;
+  // Add all vehicles to curators
   ["AllVehicles", "initPost", {
     params ["_vehicle"];
     [_vehicle] call FUNC(addCuratorObjects);

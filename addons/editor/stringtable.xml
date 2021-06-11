@@ -130,11 +130,11 @@
     <Key ID="STR_A3CS_Editor_doStop_Tooltip">
       <Polish>Powstrzymuje jednostkę przed ruszeniem do formacji na starcie misji. Jednostka po wejściu w tryb zagrożenia będzie poruszać się normalnie.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Editor_forceGunLights">
-      <Polish>Wymuś włączenie latarki</Polish>
+    <Key ID="STR_A3CS_Editor_enableGunLights">
+      <Polish>Włącz latarki</Polish>
     </Key>
-    <Key ID="STR_A3CS_Editor_forceGunLights_Tooltip">
-      <Polish>Wymusza na jednostce włączenie latarki (jeśli ją posiada). UWAGA: opcja ta może być nadpisana przez ustawienia waypointów.</Polish>
+    <Key ID="STR_A3CS_Editor_enableGunLights_Tooltip">
+      <Polish>Włącza latarki u członków drużyny. UWAGA: opcja ta może być nadpisana przez ustawienia waypointów.</Polish>
     </Key>
     <Key ID="STR_A3CS_Editor_disableRandomization">
       <Polish>Wyłącz randomizację wyposażenia</Polish>
