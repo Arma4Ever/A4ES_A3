@@ -4,4 +4,4 @@
  * Handles onMissionLoad 3DEN event
  */
 
-call FUNC(setupMissionAttributes);
+0 call FUNC(setupMissionAttributes);

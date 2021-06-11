@@ -6,8 +6,14 @@ ADDON = false;
 
 if !(is3DEN) exitWith {};
 
+uiNamespace setVariable [QGVAR(currentAssetsTree), controlNull];
+
+GVAR(assetsTreeFilterLoop) = scriptNull;
+GVAR(currentAssetsTreeCount) = 0;
+
 // Setup mission attributes
-call FUNC(setupMissionAttributes);
+0 call FUNC(setupMissionAttributes);
+0 spawn FUNC(initAssetsTreeFiltering);
 
 // Add units init EH for setup of dynamic simulation
 ["CAManBase", "init", {

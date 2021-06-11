@@ -3,9 +3,16 @@ class Cfg3DEN {
         delete Eden_Extended_Objects_Handlers;
 
         class ADDON {
-            onMissionNew = QUOTE(_this call FUNC(handleMissionNew));
-            onMissionLoad = QUOTE(_this call FUNC(handleMissionLoad));
+            onMissionNew = QUOTE(0 call FUNC(handleMissionNew));
+            onMissionLoad = QUOTE(0 call FUNC(handleMissionLoad));
 			onConnectingEnd = QUOTE(_this call FUNC(handleConnectingEnd));
+        };
+        class DOUBLES(ADDON,assetsTreeFilter) {
+            onMissionNew = QUOTE(0 spawn FUNC(initAssetsTreeFiltering));
+            onMissionLoad = QUOTE(0 spawn  FUNC(initAssetsTreeFiltering));
+            onMissionPreviewEnd = QUOTE(0 spawn FUNC(initAssetsTreeFiltering));
+            onModeChange = QUOTE(0 spawn FUNC(updateCurrentAssetsTree));
+            onSubmodeChange = QUOTE(0 spawn FUNC(updateCurrentAssetsTree));
         };
         #ifdef DEBUG_MODE_FULL
         class DOUBLES(ADDON,debug) {
