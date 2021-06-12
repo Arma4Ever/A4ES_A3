@@ -76,7 +76,9 @@ class Cfg3DEN {
 
 	class Object {
         class AttributeCategories {
-            class State {
+            class GVAR(attributes) {
+                displayName = CSTRING(Settings_Addon);
+                collapsed = 1;
                 class Attributes {
                     class GVAR(baseIconClass) {
                         displayName = CSTRING(Attributes_baseIconClass);
