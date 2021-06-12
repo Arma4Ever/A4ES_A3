@@ -16,6 +16,7 @@ private _unitSkill = (_logic getVariable [QGVAR(skill), 0.5]) max 0.01;
 
 // Get LAMBS vars
 private _disableLambsAI = _logic getVariable [QGVAR(disableLambsAI), false];
+private _enableLambsReinforce = _logic getVariable [QGVAR(enableLambsReinforce), true];
 private _hasLambsRadio = _logic getVariable [QGVAR(hasLambsRadio), true];
 
 // Prep unit init
@@ -33,6 +34,10 @@ if (_applyLoadout) then {
     ],
     []
   ];
+};
+
+if (_enableLambsReinforce) then {
+  _group setVariable ["lambs_danger_enableGroupReinforce", true, true];
 };
 
 // Setup units & exec init

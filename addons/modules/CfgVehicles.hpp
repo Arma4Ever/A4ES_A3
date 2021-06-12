@@ -347,5 +347,5 @@ class CfgVehicles {
     #include "modules\switchLights\module.hpp"
     #include "modules\units3DENComp\module.hpp"
 
-    /*#include "hiddenModules.hpp"*/
+    #include "hiddenModules.hpp"
 };

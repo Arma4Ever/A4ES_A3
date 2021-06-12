@@ -418,6 +418,13 @@ class GVAR(generateSoldiers): GVAR(base) {
             displayName = CSTRING(generateSoldiers_Attributes_disableLambsAI);
             tooltip = CSTRING(generateSoldiers_Attributes_disableLambsAI_Tooltip);
             property = QGVAR(disableLambsAI);
+            defaultValue = "false";
+        };
+        class GVAR(enableLambsReinforce): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(generateSoldiers_Attributes_enableLambsReinforce);
+            tooltip = CSTRING(generateSoldiers_Attributes_enableLambsReinforce_Tooltip);
+            property = QGVAR(enableLambsReinforce);
+            defaultValue = "true";
         };
         class GVAR(hasLambsRadio): GVAR(dynamicCheckbox) {
             displayName = CSTRING(generateSoldiers_Attributes_hasLambsRadio);

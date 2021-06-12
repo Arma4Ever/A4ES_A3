@@ -905,6 +905,12 @@
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_disableLambsAI_Tooltip">
       <Polish>Wyłącza AI LAMBS dla wygenerowanych grup. Pamiętaj, że wyłączenie AI LAMBS bardzo ogranicza jakość zachowań AI. Użyj tej opcji tylko jeśli wiesz co robisz/chcesz osiągnąć.</Polish>
     </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_enableLambsReinforce">
+      <Polish>Oznacz grupy jako grupy wsparcia</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_enableLambsReinforce_Tooltip">
+      <Polish>Pozwala wygenerowanym grupom na przychodzenie z pomocą innym drużynom w zasięgu radia grupy.</Polish>
+    </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_hasLambsRadio">
       <Polish>Pozwól na komunikację radiową</Polish>
     </Key>
