@@ -23,7 +23,7 @@ class GVAR(ambientFlyby): GVAR(base) {
         };
         class GVAR(mode): Default {
             displayName = CSTRING(ambientFlyby_Attributes_mode);
-            tooltip = CSTRING(gambientFlyby_Attributes_mode_Tooltip);
+            tooltip = CSTRING(ambientFlyby_Attributes_mode_Tooltip);
             control = QGVAR(ambientFlyby_mode);
             property = QGVAR(mode);
             typeName = "NUMBER";

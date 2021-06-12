@@ -1,20 +1,27 @@
-class GVAR(fireArtillery_conditionType): GVAR(dynamicToolbox) {
+class GVAR(fireArtillery_conditionType): GVAR(dynamicToolboxPicture) {
     class Controls: Controls {
         class Title: Title {};
         class Value: Value {
-            columns = 3;
+            columns = 4;
             strings[] = {
-                "Limit czasu",
-                "Ilosc strzalow",
-                "Warunek logiczny"
+                "\a3\ui_f\data\igui\cfg\mptable\total_ca.paa",
+                "\a3\modules_f_curator\data\portraitcountdown_ca.paa",
+                "\a3\3den\data\displays\display3den\panelright\submode_logic_logic_ca.paa",
+                "\a3\3den\data\displays\display3den\entitymenu\findconfig_ca.paa"
             };
-            tooltips[] = {"", "", ""};
+            tooltips[] = {
+                CSTRING(fireArtillery_conditionType_count),
+                CSTRING(fireArtillery_conditionType_time),
+                CSTRING(fireArtillery_conditionType_logicFlags),
+                CSTRING(fireArtillery_conditionType_condition)
+            };
             GVAR(descriptions[]) = {
-                "Ostrzal zostanie zakoczony po uplynieciu wyznaczonego czasu",
-                "Ostrzal zostanie zakonczony po podanej ilosci strzalow (lub salw jesli tryb salw jest wlaczony)",
-                "Ostrzal zostanie zakoczony w momencie gdy podany warunek logiczny zwroci nieprawde (false)"
+                CSTRING(fireArtillery_conditionType_count_desc),
+                CSTRING(fireArtillery_conditionType_time_desc),
+                CSTRING(fireArtillery_conditionType_logicFlags_desc),
+                CSTRING(fireArtillery_conditionType_condition_desc)
             };
-            values[] = {0, 1, 2};
+            values[] = {0, 1, 2, 3};
         };
         class GVAR(description): GVAR(description) {};
     };

@@ -46,7 +46,6 @@ VENDOR = {
     "@Extended Fortifications Mod": {},
     "@AVON FM12 Respirator Pack": {},
     "@Blastcore Murr Edition": {},
-    "@Cinematic Lens Flare": {},
     "@Modular Buildings - Laboratory": {},
     "@Swim Faster": {},
     "@L3-GPNVG18 Panoramic Night Vision": {},

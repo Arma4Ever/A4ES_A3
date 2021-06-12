@@ -948,38 +948,6 @@
       <Polish>Nie wybrano żadnej kompozycji.</Polish>
     </Key>
   </Package>
-  <Package name="Modules_generatorComposition">
-    <Key ID="STR_A3CS_Modules_generatorComposition_displayName">
-      <Polish>Kompozycja generatora</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_generatorComposition_shortDescription">
-      <Polish>Moduł tworzy kompozycję (szablonu) grupy na podstawie grupy połączonej z modułem jednostki. Użycie kompozycji pozwala na dokładne odtworzenie grupy (wraz z wyposażeniem) w generatorach. Aby użyć kompozycji wystarzy stworzyć w edytorzę grupę zawierającą typy oraz ilość jednostek którą chcemy później generować, skonfigurować wyposażenie jednostek (za pomocą arsenału w edytorze) a następnie zsynchronizować (połączyć) którąś jednostkę z grupy (najlepiej lidera grupy) z modułem. Po dodaniu modułu kompozycji w edytorze oraz nadaniu jej nazwy, nazwa kompozycji będzie dostępna na liście kompozycji w generatorach.</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_generatorComposition_description">
-      <Polish>Moduł uruchamia się na starcie misji i zapisuje zestaw klas i wyposażenie jednostek połączonej z modułem grupy. Moduł kompozycji zapisuje jedynie klasy i wyposażenie jednostek, pozostałe ustawienia jak poziom umiejętności, ranga itp, nie są używane (obowiązywać będą ustawienia modułu generatora). Jeden moduł może być połączony tylko z jedną jednostką której grupy chcemy użyć jako kompozycji. Jeśli w grupie znajdują się pojazdy, one oraz ich załogi będą ignorowane przy zapisie kompozycji (tylko jednostki piechoty "na nogach" będą zapisane jako kompozycja). Pamiętaj, że użycie kompozycji w module generatora stworzy dokładną kopię użytej w kompozycji grupy, dostosuj ilość jednostek w grupie zgodnie z przeznaczeniem kompozycji (np. osobna kompozycja dla jednostek patrolujących, osobna dla załóg garnizonów itp). Strona użytej grupy nie ma znaczenia przy tworzeniu kompozycji, przy generowaniu jednostek użyta będzie strona ustawiona w generatorze (np. możesz stworzyć kompozycję na podstawie grupy o stronie CIV albo INDEP a następnie użyć jej w generatorze do generowania grup po stronie OPFOR).</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_generatorComposition_syncRequiredInfo">
-      <Polish>Do poprawnego działania, moduł wymaga synchronizacji z jedną jednostką (i tylko jedną!) której grupa zostanie użyta jako kompozycja (najlepiej z liderem tej grupy). Połączenie modułu z więcej niż jedną jednostką będzie traktowane jako błąd! W grupie połączonej jednostki nie powinien znajdować się żaden pojazd (pojazdy oraz ich załogi będą ignorowane).</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_generatorComposition_Attributes_id">
-      <Polish>Nazwa kompozycji</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_generatorComposition_Attributes_id_Tooltip">
-      <Polish>Nazwa kompozycji używana jako identyfikator kompozycji w generatorach.</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_generatorComposition_Attributes_deleteUnits">
-      <Polish>Usuń zapisane jednostki</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_generatorComposition_Attributes_deleteUnits_Tooltip">
-      <Polish>Usuwa jednostki użyte w kompozycji po jej zapisaniu. Włączenie tej opcji jest zalecane jeśli połączona grupa została stworzona tylko na potrzeby kompozycji i sama w sobie nie jest potrzebna w scenariuszu.</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_generatorComposition_Warning_SyncError">
-      <Polish>Brak zsynchronizowanej jednostki</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_generatorComposition_Warning_SyncError_Desc">
-      <Polish>Moduł do poprawnego działania musi być zsynchronizowany z dokładnie jedną (i tylko jedną) jednostką piechoty (pojazdy nie są obsługiwane) której grupa ma być użyta jako kompozycja.</Polish>
-    </Key>
-  </Package>
   <Package name="Modules_registerArtilleryUnits">
     <Key ID="STR_A3CS_Modules_registerArtilleryUnits_displayName">
       <Polish>Zarejestruj artylerię</Polish>
@@ -1065,188 +1033,230 @@
     <Key ID="STR_A3CS_Modules_fireArtillery_shortDescription">
       <Polish>Moduł generuje ostrzał artylerii na danym obszarze.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes">
-      <Polish>Właściwości ostrzału</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_baseSettingsSubCategory">
+      <Polish>Ustawienia ostrzału</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoCat">
-      <Polish>Kategoria pocisków</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_ammoCat">
+      <Polish>Kategoria amunicji</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoCat_Art_Tooltip">
-      <Polish>Pociski artyleryjskie i mozdzieżowe</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_ammoCat_tooltip">
+      <Polish>Jakiej kategorii amunicja ma zostać użyta w ostrzale.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoCat_Granatnik_Tooltip">
-      <Polish>Granaty wystrzelone z granatnika</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoCat_Unguided_Tooltip">
-      <Polish>Proste rakiety niekierowane</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoCat_Guided_Tooltip">
-      <Polish>Rakiety kierowane (Hellfire)</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoCat_VLS_Tooltip">
-      <Polish>Okretowe pociski manewrujace VLS (cruise missile)</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoCat_JDAM_Tooltip">
-      <Polish>Bomby kierowane (JDAM)</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoCat_Art">
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_ammoCat_artillery">
       <Polish>Artyleria</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoCat_Granatnik">
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_ammoCat_artillery_tooltip">
+      <Polish>Artyleria 82mm/155mm.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_ammoCat_grenades">
       <Polish>Granatnik</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoCat_Unguided">
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_ammoCat_grenades_tooltip">
+      <Polish>Granatnik 20mm/40mm.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_ammoCat_rockets">
       <Polish>Rakiety niekierowane</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoCat_Guided">
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_ammoCat_rockets_tooltip">
+      <Polish>Rakiety niekierowane 60mm/80mm/230mm.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_ammoCat_missiles">
       <Polish>Rakiety kierowane</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoCat_VLS">
-      <Polish>VLS</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_ammoCat_missiles_tooltip">
+      <Polish>Rakiety kierowane na cel.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoCat_JDAM">
-      <Polish>Bomby</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_ammoCat_gbombs">
+      <Polish>Bomby kierowane</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_Art_ammoType">
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_ammoCat_gbombs_tooltip">
+      <Polish>Precyzyjne bomby kierowane na cel.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_ammoCat_ubombs">
+      <Polish>Bomby niekierowane</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_ammoCat_ubombs_tooltip">
+      <Polish>Niekierowane bomby spadające pionowo.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_ammoCat_cruiseMissiles">
+      <Polish>Pociski manewrujące</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_ammoCat_cruiseMissiles_tooltip">
+      <Polish>Pociski manewrujące, VLS.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_ammoType">
       <Polish>Typ pocisków</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoType_Art_Tooltip">
-      <Polish>Typ pocisków artyleryjskich używanych w czasie ostrzału</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_ammoType_tooltip">
+      <Polish>Typ pocisków jaki ma zostać użyty w ostrzale.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoType_Granatnik">
-      <Polish>Granatnik</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_targetPosMode">
+      <Polish>Metoda wyboru pozycji pocisków</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoType_Granatnik_Tooltip">
-      <Polish>Typ granatów używanych w czasie ostrzału</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_targetPosMode_tooltip">
+      <Polish>W jaki sposób mają być wybierane pozycje w które mają trafiać pociski.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoType_Rockets">
-      <Polish>Rakiety niekierowane</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_showDebug">
+      <Polish>Pokaż debug przelotu pocisków</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoType_Rockets_Tooltip">
-      <Polish>Typ rakiet niekierowanych używanych w czasie ostrzału</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_showDebug_tooltip">
+      <Polish>Podświetla trasy przelotów pocisków.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoType_Guided">
-      <Polish>Rakiety kierowane</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_showDebug_desc">
+      <Polish>Ta opcja ma znaczenie tylko w edytorze. Niezależnie od wartości tej opcji, debug nie będzie aktywny poza podglądem misji w edytorze.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoType_Guided_Tooltip">
-      <Polish>Typ rakiet kierowanych używanych w czasie ostrzału</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_shellHeight">
+      <Polish>Wysokość pocisków nad celem</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoType_Rockets">
-      <Polish>Rakiety</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_shellHeight_tooltip">
+      <Polish>Ile metrów nad celem (w pionie) mają być tworzone pociski.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoType_Rockets_Tooltip">
-      <Polish>Typ rakiet używanych w czasie ostrzału</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_shellDistance">
+      <Polish>Odległość pocisków od celu</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoType_VLS">
-      <Polish>VLS</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_shellDistance_tooltip">
+      <Polish>Ile metrów od celu (w poziomie) mają być tworzone pociski.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoType_VLS_Tooltip">
-      <Polish>Typ pocisków manewrujących(VLS) używanych w czasie ostrzału</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_hitDir">
+      <Polish>Kierunek z którego nadlecą pociski</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoType_Bombs">
-      <Polish>Bomby</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_hitDir_tooltip">
+      <Polish>Kierunek (względem celu) z którego mają nadlecieć pociski. Np. 0 oznacza, że pociski mają nadlecieć z północy (czyli będą leciały z południa na północ).</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_ammoType_Bombs_Tooltip">
-      <Polish>Typ bomb używanych w czasie ostrzału</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_dropAngle">
+      <Polish>Kąt opadania pocisków</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_targetPosMode">
-      <Polish>Tryb generowania pozycji</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_dropAngle_tooltip">
+      <Polish>Pod jakim kątem mają opadać pociski.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_targetPosMode_Tooltip">
-      <Polish>Sposób, w który będą generowane pozycje, w które mają uderzać pociski</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_dropAngle_desc">
+      <Polish>0 - rakiety rozpoczną lot w poziomie, 90 - w pionie. Aby uzyskać pożądany efekt, należy dostosować odpowiednio odległość, wysokość oraz kąt pocisków. Nie ma gwarancji, iż pociski będą spadać w obszarze modułu - należy to ustawić ręcznie.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_hitAngle">
-      <Polish>Kąt spadania ostrzału</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_salvos">
+      <Polish>Strzelaj salwami</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_hitAngle_Tooltip">
-      <Polish>Kąt, pod którym będzie spadał ostrzał</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_salvos_tooltip">
+      <Polish>Czy ostrzał ma być prowadzony salwami.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_hitDir">
-      <Polish>Kierunek</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_salvoShellsCount">
+      <Polish>Ilość pocisków w każdej salwie</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_hitDir_Tooltip">
-      <Polish>Kierunek, z którego będzie nadchodził ostrzał</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_salvoShellsCount_tooltip">
+      <Polish>Ile pocisków ma zostać wystrzelonych w każdej salwie.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_salvos">
-      <Polish>Strzelaj salwami?</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_salvos_Tooltip">
-      <Polish>Zaznacz jeżeli chcesz, aby ostrzał był wykonywany w salwach</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_salvoShellsCount">
-      <Polish>Ilość pocisków w salwie</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_salvoShellsCount_Tooltip">
-      <Polish>Ilość pocisków wystrzeliwanych w każdej salwie</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_salvosMinDelay">
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_salvosMinDelay">
       <Polish>Min. odstęp między salwami</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_salvosMinDelay_Tooltip">
-      <Polish>Minimalny odstęp pomiędzy kolejnymi salwami. Wyrażony w sekundach</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_salvosMinDelay_tooltip">
+      <Polish>Minimalny odstęp czasowy (w sekundach) między salwami.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_salvosMidDelay">
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_salvosMidDelay">
       <Polish>Śr. odstęp między salwami</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_salvosMidDelay_Tooltip">
-      <Polish>Średni odstęp pomiędzy kolejnymi salwami. Wyrażony w sekundach</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_salvosMidDelay_tooltip">
+      <Polish>Średni odstęp czasowy (w sekundach) między salwami.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_salvosMaxDelay">
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_salvosMaxDelay">
       <Polish>Maks. odstęp między salwami</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_salvosMaxDelay_Tooltip">
-      <Polish>Maksymalny odstęp pomiędzy kolejnymi salwami. Wyrażony w sekundach</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_salvosMaxDelay_tooltip">
+      <Polish>Maksymalny odstęp czasowy (w sekundach) między salwami.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_shellsMinDelay">
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_shellsMinDelay">
       <Polish>Min. odstęp między pociskami</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_shellsMinDelay_Tooltip">
-      <Polish>Minimalny odstęp pomiędzy kolejnymi pociskami. Wyrażony w sekundach</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_shellsMinDelay_tooltip">
+      <Polish>Minimalny odstęp czasowy (w sekundach) między pociskami.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_shellsMidDelay">
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_shellsMidDelay">
       <Polish>Śr. odstęp między pociskami</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_shellsMidDelay_Tooltip">
-      <Polish>Średni odstęp pomiędzy kolejnymi pociskami. Wyrażony w sekundach</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_shellsMidDelay_tooltip">
+      <Polish>Średni odstęp czasowy (w sekundach) między pociskami.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_shellsMaxDelay">
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_shellsMaxDelay">
       <Polish>Maks. odstęp między pociskami</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_shellsMaxDelay_Tooltip">
-      <Polish>Maksymalny odstęp pomiędzy kolejnymi pociskami. Wyrażony w sekundach</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_shellsMaxDelay_tooltip">
+      <Polish>Maksymalny odstęp czasowy (w sekundach) między pociskami.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_conditionSettingsSubCategory">
-      <Polish>Uwarunkowanie ostrzału</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_conditionSettingsSubCategory">
+      <Polish>Ustawienia uwarunkowania ostrzału</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_conditionType">
-      <Polish>Typ warunku ostrzału</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_conditionSalvosCount">
+      <Polish>Liczba salw</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_conditionType_Tooltip">
-      <Polish>Typ warunku, pod którym ma być prowadzony ostrzał</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_conditionSalvosCount_tooltip">
+      <Polish>Liczba salw jaka ma zostać wystrzelona.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_timer">
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_conditionShellsCount">
+      <Polish>Liczba pocisków</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_conditionShellsCount_tooltip">
+      <Polish>Liczba pocisków jaka ma zostać wystrzelona.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_conditionType">
+      <Polish>Typ warunku</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_conditionType_tooltip">
+      <Polish>Typ warunku który musi być prawdziwy aby ostrzał był prowadzony.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_conditionTime">
       <Polish>Czas trwania ostrzału</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_timer_Tooltip">
-      <Polish>Czas, po którym ostrzał zostanie zakończony. Wyrażony w sekundach</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_conditionTime_tooltip">
+      <Polish>Czas (w sekundach) przez jaki ma być prowadzony ostrzał.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_shellsCount">
-      <Polish>Ilość pocisków</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_conditionLogicFlags">
+      <Polish>Flagi logiczne</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_shellsCount_Tooltip">
-      <Polish>Ilość pocisków, po których ostrzał zostanie zakończony</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_conditionLogicFlags_tooltip">
+      <Polish>Do momentu jak wybrane flagi logiczne będą miały oczekiwane wartości, ostrzał będzie prowadzony.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_salvosCount">
-      <Polish>Ilość salw</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_conditionScript">
+      <Polish>Warunek logiczny</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_salvosCount_Tooltip">
-      <Polish>Ilość salw, po których ostrzał zostanie zakończony</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_conditionScript_tooltip">
+      <Polish>Do momentu jak warunek logiczny będzie prawdziwy, ostrzał będzie prowadzony.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_condition">
-      <Polish>Warunek ostrzału</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_Attributes_conditionScript_desc">
+      <Polish>Do momentu jak warunek logiczny będzie prawdziwy, ostrzał będzie prowadzony. Parametry: brak.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_fireArtillery_condition_Tooltip">
-      <Polish>Ostrzał będzie prowadzony do momentu, w którym waruek przestanie być prawdziwy (zwróci nieprawdę - false)</Polish>
+    <Key ID="STR_A3CS_Modules_fireArtillery_targetPosMode_random">
+      <Polish>Losowa w obszarze modułu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_targetPosMode_random_desc">
+      <Polish>Wystrzelone pociski będą uderzać w losowe pozycje w obszarze modułu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_targetPosMode_precise">
+      <Polish>Pozycja modułu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_targetPosMode_precise_desc">
+      <Polish>Wystrzelone pociski będą uderzać w dokładną pozycję modułu. Ta opcja jest przydatna gdy chcemy trafić konkretne miejsca, dobrze współpracuje też pociskami kierowanymi.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_conditionType_count">
+      <Polish>Ilość strzałów/salw</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_conditionType_count_desc">
+      <Polish>Ostrzał zostanie zakończony po podanej ilości strzałów (lub salw jeśli tryb salw jest włączony).</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_conditionType_time">
+      <Polish>Czas trwania ostrzału</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_conditionType_time_desc">
+      <Polish>Ostrzał zostanie zakończony po upłynięciu wyznaczonego czasu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_conditionType_logicFlags">
+      <Polish>Flagi logiczne</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_conditionType_logicFlags_desc">
+      <Polish>Ostrzał będzie prowadzony tak długo jak wybrane flagi logiczne będą miały oczekiwane wartości.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_conditionType_condition">
+      <Polish>Warunek logiczny</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fireArtillery_conditionType_condition_desc">
+      <Polish>Ostrzał będzie prowadzony tak długo jak podany warunek logiczny będzie prawdziwy.</Polish>
     </Key>
   </Package>
   <Package name="Modules_curator">
@@ -1411,9 +1421,6 @@
     <Key ID="STR_A3CS_Modules_ambientFlyby_Warning_NoSyncedTrigger_Desc">
       <Polish>Uruchamianie generatora ambientowych samolotów na starcie misji nie jest dobrą praktyką. Zsynchronizuj moduł z triggerem aby opóźnić jego wykonanie do czasu aktywacji triggera.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_generateSoldiers_Warning_EmptyClasslist_Desc">
-      <Polish>Lista klas generatora jest pusta.</Polish>
-    </Key>
   </Package>
   <Package name="Modules_ambientAnimals">
     <Key ID="STR_A3CS_Modules_ambientAnimals_displayName">
@@ -1452,7 +1459,7 @@
     <Key ID="STR_A3CS_Modules_ambientAnimals_Attributes_addToCurators">
       <Polish>Dodaj zwierzęta do obiektów zeusa</Polish>
     </Key>
-    <Key ID="STR_A3CS_Modules_ambientAnimalszwierzęta_Attributes_addToCurators_Tooltip">
+    <Key ID="STR_A3CS_Modules_ambientAnimals_Attributes_addToCurators_Tooltip">
       <Polish>Dodaje wygenerowane zwierzęta jako obiekty edytowalne wszystkim dostępnym zeusom. Nie można przejmować kontroli nad zwierzętami, ale można je usuwać/przenosić.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_ambientAnimals_shortDescription">

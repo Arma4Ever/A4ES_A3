@@ -164,12 +164,12 @@ force force ace_maptools_drawStraightLines = false;
 
 // ACE Medical
 force force ace_medical_ai_enabledFor = 0;
-force force ace_medical_AIDamageThreshold = 0.85;
+force force ace_medical_AIDamageThreshold = 0.5;
 force force ace_medical_bleedingCoefficient = 0.24;
 force force ace_medical_blood_bloodLifetime = 600;
 force force ace_medical_blood_enabledFor = 2;
-force force ace_medical_blood_maxBloodObjects = 500;
-force force ace_medical_fatalDamageSource = 2;
+force force ace_medical_blood_maxBloodObjects = 300;
+force force ace_medical_fatalDamageSource = 1;
 force force ace_medical_feedback_bloodVolumeEffectType = 2;
 force force ace_medical_feedback_painEffectType = 1;
 force force ace_medical_fractureChance = 0.34;

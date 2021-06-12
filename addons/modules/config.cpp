@@ -9,6 +9,8 @@ class CfgPatches {
         requiredAddons[] = {
             "a3cs_common",
             "a3cs_editor",
+            "A3_Weapons_F",
+            "ace_frag",
             "A3_Modules_F_Curator_Curator",
             "zade_boc",
             "A3_Modules_F_ObjectModifiers",
@@ -63,5 +65,6 @@ class CfgPatches {
 #include "display3DEN.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgFactionClasses.hpp"
+#include "CfgAmmo.hpp"
 #include "CfgVehicles.hpp"
 #include "Cfg3DEN.hpp"
