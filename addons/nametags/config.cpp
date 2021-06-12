@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"a3cs_common", "A3_3DEN"};
+        requiredAddons[] = {"a3cs_common", "A3_3DEN", "a3cs_editor", "a3cs_modules"};
         author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL", "ACE Team"};
         url = ECSTRING(main,URL);
@@ -14,5 +14,9 @@ class CfgPatches {
     };
 };
 
+class ctrlStatic;
+class ctrlCombo;
+
 #include "CfgEventHandlers.hpp"
 #include "Cfg3DEN.hpp"
+#include "ranks.hpp"
