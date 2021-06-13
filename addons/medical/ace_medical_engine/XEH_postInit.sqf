@@ -25,30 +25,32 @@ if (a3cs_medical_systemDisabled) exitWith {};
     _unit setVariable ["a3cs_medical_aceDamageEnabled", true];
     // EDIT
 
+    // Check if last hit point is our dummy.
     private _allHitPoints = getAllHitPointsDamage _unit param [0, []];
+    reverse _allHitPoints;
 
-    // Calling this function inside curly brackets allows the usage of
-    // "exitWith", which would be broken with "HandleDamage" otherwise.
-    _unit setVariable [
-        QEGVAR(medical,HandleDamageEHID),
-        _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]
-    ];
-    _unit setVariable [
-        QEGVAR(medical,HitEHID),
-        _unit addEventHandler ["Hit", {_this call FUNC(hit)}]
-    ];
-
-    _unit setVariable [QEGVAR(medical,HitPoints), _allHitPoints];
-
-    _unit setVariable [QEGVAR(medical,HeadHitPointIdxs), ["hitface", "hitneck", "hithead"]  apply {_allHitPoints find _x} ];
-    _unit setVariable [QEGVAR(medical,BodyHitPointIdxs), ["hitchest", "hitdiaphragm", "hitabdomen", "hitpelvis"]  apply {_allHitPoints find _x} ];
-
-    _unit setVariable [QEGVAR(medical,HitPoints), _allHitPoints];
-    {
-        _unit setVariable [format["%1Idx", _x], _forEachIndex];
-
-    } forEach _allHitPoints;
+    if (_allHitPoints param [0, ""] != "ACE_HDBracket") then {
+        private _config = configOf _unit;
+        if (getText (_config >> "simulation") == "UAVPilot") exitWith {TRACE_1("ignore UAV AI",typeOf _unit);};
+        if (getNumber (_config >> "isPlayableLogic") == 1) exitWith {TRACE_1("ignore logic unit",typeOf _unit)};
+        ERROR_1("Bad hitpoints for unit type ""%1""",typeOf _unit);
+    } else {
+        // Calling this function inside curly brackets allows the usage of
+        // "exitWith", which would be broken with "HandleDamage" otherwise.
+        _unit setVariable [
+            QEGVAR(medical,HandleDamageEHID),
+            _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]
+        ];
+    };
 }, nil, [IGNORE_BASE_UAVPILOTS], true] call CBA_fnc_addClassEventHandler;
+
+#ifdef DEBUG_MODE_FULL
+[QEGVAR(medical,woundReceived), {
+    params ["_unit", "_woundedHitPoint", "_receivedDamage", "_shooter", "_ammo"];
+    TRACE_5("wound",_unit,_woundedHitPoint, _receivedDamage, _shooter, _ammo);
+    //systemChat str _this;
+}] call CBA_fnc_addEventHandler;
+#endif
 
 
 // this handles moving units into vehicles via load functions or zeus
