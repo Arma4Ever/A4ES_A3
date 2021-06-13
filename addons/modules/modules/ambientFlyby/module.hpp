@@ -42,14 +42,14 @@ class GVAR(ambientFlyby): GVAR(base) {
             class values {
                 class random {
                     name = CSTRING(ambientFlyby_Attributes_classListMode_random);
-                    tooltip = CSTRING(ambientFlyby_Attributes_classListMode_random_Desc)
+                    tooltip = CSTRING(ambientFlyby_Attributes_classListMode_random_Desc);
                     value = 0;
                     default = 1;
                 };
                 class strict {
                     name = CSTRING(ambientFlyby_Attributes_classListMode_strict);
                     value = 1;
-                    tooltip = CSTRING(ambientFlyby_Attributes_classListMode_strict_Desc)
+                    tooltip = CSTRING(ambientFlyby_Attributes_classListMode_strict_Desc);
                 };
             };
         };

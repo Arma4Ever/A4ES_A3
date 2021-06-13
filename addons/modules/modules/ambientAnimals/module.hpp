@@ -32,7 +32,7 @@ class GVAR(ambientAnimals): GVAR(base) {
             ATTRIBUTE_LOCAL;
             class values {
                 class Rabbit_F {
-                    name = CSTRING(ambientAnimals_animalsType_Rabbit)
+                    name = CSTRING(ambientAnimals_animalsType_Rabbit);
                     tooltip = "";
                     value = "Rabbit_F";
                     default = 1;

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-/*
+
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
@@ -15,6 +15,7 @@ class CfgPatches {
     };
 };
 
+/*
 class RscText;
 class RscTitle;
 class RscListBox;

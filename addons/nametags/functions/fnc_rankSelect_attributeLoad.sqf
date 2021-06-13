@@ -15,7 +15,6 @@ if (_ranksData isEqualTo []) then {
   {
     private _id = toLower (configName _x);
     private _name = getText (_x >> "displayName");
-    diag_log ["_cat",_id,_name];
     _ranksCats set [_id, _name];
     _catsRanks set [_id, []];
   } foreach (configProperties [configFile >> QGVAR(ranks_categories), 'isClass _x']);
@@ -23,7 +22,6 @@ if (_ranksData isEqualTo []) then {
   {
     private _id = toLower (configName _x);
     private _catId = (_id splitString "_") # 0;
-    diag_log ["_catId", _catId, _id];
     if !(_catId in _catsRanks) then {
       TRACE_2("Unknown rank category",_catId,_id);
       continue;
@@ -44,8 +42,6 @@ if (_ranksData isEqualTo []) then {
 
 private _ctrlRanksCombo = _this controlsGroupCtrl 100;
 private _ctrlRanksCatCombo = _this controlsGroupCtrl 1091;
-
-diag_log ["_value", _value];
 
 // Get current cat
 private _currentCatId = "default";

@@ -7,7 +7,7 @@ class GVAR(ranks_categories) {
         displayName = CSTRING(RankCategory_PL);
     };
     class pol {
-        displayName = "Polska Policja"
+        displayName = "Polska Policja";
     };
     class usnavy {
         displayName = "US Navy";
