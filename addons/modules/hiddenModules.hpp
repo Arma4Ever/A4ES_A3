@@ -216,3 +216,6 @@ HIDE_MODULE(ModuleOmMarket_F,Module_F);
 HIDE_MODULE(ModuleOmRandomConversation_F,Module_F);
 HIDE_MODULE(ModuleOMFastTravel_F,Module_F);
 HIDE_MODULE(ModuleOMFastTravelPos_F,Module_F);
+HIDE_MODULE(ModuleFiringDrill_F,Module_F);
+HIDE_MODULE(ModuleTimeTrial_F,Module_F);
+HIDE_MODULE(ModuleSimpleObject_F,Module_F);
