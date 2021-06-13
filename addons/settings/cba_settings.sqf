@@ -405,27 +405,8 @@ force force acex_fortify_settingHint = 2;
 // ACEX Sitting
 force force acex_sitting_enable = true;
 
-// ACRE2
-force force acre_sys_core_automaticAntennaDirection = false;
-force force acre_sys_core_defaultRadioVolume = 0.8;
-force force acre_sys_core_fullDuplex = true;
-force force acre_sys_core_ignoreAntennaDirection = true;
-force force acre_sys_core_interference = false;
-force force acre_sys_core_postmixGlobalVolume = 1;
-force force acre_sys_core_premixGlobalVolume = 1;
-force force acre_sys_core_revealToAI = 1;
-force force acre_sys_core_spectatorVolume = 1;
-force force acre_sys_core_terrainLoss = 0;
-force force acre_sys_core_ts3ChannelName = "";
-force force acre_sys_core_ts3ChannelPassword = "";
-force force acre_sys_core_ts3ChannelSwitch = false;
-force force acre_sys_core_unmuteClients = true;
-force force acre_sys_signal_signalModel = 0;
-
-// ACRE2 Zeus
-force force acre_sys_zeus_zeusCanSpectate = true;
-force force acre_sys_zeus_zeusCommunicateViaCamera = true;
-force force acre_sys_zeus_zeusDefaultVoiceSource = false;
+// AI
+force cfp_autoEquipNVG = false;
 
 // CBA Weapons
 force force cba_disposable_dropUsedLauncher = 0;
@@ -433,6 +414,14 @@ force force cba_disposable_replaceDisposableLauncher = true;
 
 // Community Base Addons - Network
 force force cba_network_loadoutValidation = 0;
+
+// CUP
+force force CUP_CheckCfgPatches = false;
+force force CUP_Vehicles_PreventBarrelClip = false;
+
+// CUP Static Weapons
+force force CUP_staticWeapons_allowMovement = true;
+force force CUP_staticWeapons_allowRotation = true;
 
 // Enhanced Movement Rework
 force force emr_main_allowMidairClimbing = true;
@@ -446,6 +435,7 @@ force force emr_main_dropDuty = 0.7;
 force force emr_main_dropViewElevation = -0.7;
 force force emr_main_enableWalkableSurface = true;
 force force emr_main_enableWeightCheck = true;
+force emr_main_hintType = 2;
 force force emr_main_jumpDuty = 1;
 force force emr_main_jumpingEnabled = true;
 force force emr_main_jumpingLoadCoefficient = 1;
@@ -504,10 +494,11 @@ force lambs_eventhandlers_ExplosionEventHandlerEnabled = true;
 force lambs_eventhandlers_ExplosionReactionTime = 9;
 
 // LAMBS Danger WP
-force lambs_wp_autoAddArtillery = false;
+force force lambs_wp_autoAddArtillery = false;
 
 // LAMBS Main
 force lambs_main_combatShareRange = 200;
+force lambs_main_debug_drawAllUnitsInVehicles = false;
 force lambs_main_debug_Drawing = false;
 force lambs_main_debug_FSM = false;
 force lambs_main_debug_FSM_civ = false;
@@ -528,6 +519,54 @@ force lambs_main_radioEast = 500;
 force lambs_main_radioGuer = 500;
 force lambs_main_radioShout = 100;
 force lambs_main_radioWest = 500;
+
+// TFAR - Global settings
+force force TFAR_AICanHearPlayer = false;
+force force TFAR_AICanHearSpeaker = false;
+force force TFAR_allowDebugging = false;
+force TFAR_defaultIntercomSlot = 0;
+force TFAR_disableAutoMute = false;
+force force TFAR_enableIntercom = true;
+force force TFAR_experimentalVehicleIsolation = true;
+force force TFAR_fullDuplex = true;
+force TFAR_giveLongRangeRadioToGroupLeaders = false;
+force force TFAR_giveMicroDagrToSoldier = true;
+force TFAR_givePersonalRadioToRegularSoldier = false;
+force force TFAR_globalRadioRangeCoef = 1;
+force TFAR_instantiate_instantiateAtBriefing = false;
+force force TFAR_objectInterceptionEnabled = true;
+force force TFAR_objectInterceptionStrength = 400;
+force tfar_radiocode_east = "_opfor";
+force tfar_radiocode_independent = "_independent";
+force tfar_radiocode_west = "_bluefor";
+force tfar_radioCodesDisabled = false;
+force TFAR_SameLRFrequenciesForSide = false;
+force TFAR_SameSRFrequenciesForSide = false;
+force TFAR_setting_defaultFrequencies_lr_east = "";
+force TFAR_setting_defaultFrequencies_lr_independent = "";
+force TFAR_setting_defaultFrequencies_lr_west = "";
+force TFAR_setting_defaultFrequencies_sr_east = "";
+force TFAR_setting_defaultFrequencies_sr_independent = "";
+force TFAR_setting_defaultFrequencies_sr_west = "";
+force TFAR_setting_DefaultRadio_Airborne_east = "TFAR_mr6000l";
+force TFAR_setting_DefaultRadio_Airborne_Independent = "TFAR_anarc164";
+force TFAR_setting_DefaultRadio_Airborne_West = "TFAR_anarc210";
+force TFAR_setting_DefaultRadio_Backpack_east = "TFAR_mr3000";
+force TFAR_setting_DefaultRadio_Backpack_Independent = "TFAR_anprc155";
+force TFAR_setting_DefaultRadio_Backpack_west = "TFAR_rt1523g";
+force TFAR_setting_DefaultRadio_Personal_east = "TFAR_fadak";
+force TFAR_setting_DefaultRadio_Personal_Independent = "TFAR_anprc148jem";
+force TFAR_setting_DefaultRadio_Personal_West = "TFAR_anprc152";
+force TFAR_setting_DefaultRadio_Rifleman_East = "TFAR_pnr1000a";
+force TFAR_setting_DefaultRadio_Rifleman_Independent = "TFAR_anprc154";
+force TFAR_setting_DefaultRadio_Rifleman_West = "TFAR_rf7800str";
+force force TFAR_spectatorCanHearEnemyUnits = true;
+force force TFAR_spectatorCanHearFriendlies = true;
+force force TFAR_takingRadio = 0;
+force TFAR_Teamspeak_Channel_Name = "TaskForceRadio";
+force TFAR_Teamspeak_Channel_Password = "123";
+force force tfar_terrain_interception_coefficient = 7;
+force force TFAR_voiceCone = true;
 
 // VET_Unflipping
 force force vet_unflipping_require_serviceVehicle = false;
