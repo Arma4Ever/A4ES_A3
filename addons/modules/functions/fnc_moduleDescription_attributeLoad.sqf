@@ -249,7 +249,8 @@ if (_canSyncWithSupported) then {
       ["<anyUnit>", LSTRING(ModuleDescription_canSyncWith_AnyUnit)],
       ["<anyVehicle>", LSTRING(ModuleDescription_canSyncWith_AnyVehicle)],
       ["<anyPlane>", LSTRING(ModuleDescription_canSyncWith_AnyPlane)],
-      ["<anyObject>", LSTRING(ModuleDescription_canSyncWith_AnyObject)]
+      ["<anyObject>", LSTRING(ModuleDescription_canSyncWith_AnyObject)],
+      ["<anyLogic>", LSTRING(ModuleDescription_canSyncWith_AnyLogic)]
     ],
     ""
   ] call CBA_fnc_hashCreate;
