@@ -13,6 +13,7 @@ if (
   {isPlayer _vehicle} ||
   {((crew _vehicle) arrayIntersect playableUnits) isNotEqualTo []}
 ) exitWith {};
+  
 // Reset vehicle ammo
 TRACE_1('Resetting vehicle ammo',_vehicle);
 _vehicle setVehicleAmmo 1;

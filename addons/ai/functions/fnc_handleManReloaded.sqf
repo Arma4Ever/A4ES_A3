@@ -12,10 +12,9 @@ if (
   !(local _unit) ||
   {isPlayer _unit} ||
   {_muzzle isNotEqualTo _weapon} ||
-  {_unit in playableUnits}
+  {_unit in playableUnits} ||
+  {_weapon in ["Throw", "Put"]}
 ) exitWith {};
-// Exit if thrown grenade or put mine
-if (_weapon in ["Throw", "Put"]) exitWith {};
 
 // Add magazine for unit primary weapon
 if (_weapon isEqualTo (primaryWeapon _unit)) then {
