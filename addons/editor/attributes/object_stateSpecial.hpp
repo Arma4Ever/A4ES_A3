@@ -12,6 +12,6 @@ class GVAR(disableRandomization) {
     tooltip = CSTRING(disableRandomization_Tooltip);
     property = QGVAR(disableRandomization);
     control = "Checkbox";
-    expression = QUOTE(if (_value) then {_this call EFUNC(common,disableRandomization)};);
+    expression = "if (_value) then {_this setVariable ['BIS_enableRandomization', false, true];_this setVariable ['ALiVE_OverrideLoadout', true, true];_this setVariable ['CFP_DisableRandom', true, true];_this setVariable ['NoRandom', true, true];};";
     defaultValue = "false";
 };
