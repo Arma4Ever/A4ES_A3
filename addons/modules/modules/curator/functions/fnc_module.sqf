@@ -26,10 +26,17 @@ if (is3DENPreview) then {
 // Get all synced units
 private _syncedUnits = (synchronizedObjects _logic) select {_x isKindOf "CAManBase"};
 
+// Exit if no synced units
+if (_syncedUnits isEqualTo []) exitWith {};
+
 // Debug log
 if (is3DENPreview) then {
   [_logic, "Oznaczam %1 jednostek jako zeus", count _syncedUnits] call EFUNC(debug,moduleLog);
 };
+
+// Activate all addons
+private _addons = configProperties [configFile >> "CfgPatches", "isClass _x"] apply {configName _x};
+_addons call BIS_fnc_activateAddons;
 
 // Mark units as curators
 {
