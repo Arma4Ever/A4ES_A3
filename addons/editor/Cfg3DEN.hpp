@@ -156,11 +156,13 @@ class Cfg3DEN {
 			};
 		};
         class Intel {
-            delete ENH_VisualSettings;
+            class AttributeCategories {
+                delete ENH_VisualSettings;
 
-            class Date {
-                class Attributes {
-                    delete ENH_TimeMultiplier;
+                class Date {
+                    class Attributes {
+                        delete ENH_TimeMultiplier;
+                    };
                 };
             };
         };
