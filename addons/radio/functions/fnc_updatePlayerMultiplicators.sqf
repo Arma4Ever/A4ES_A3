@@ -15,7 +15,7 @@ private _player = vehicle player;
   _x params ["_area", "_jammerSendingMult", "_jammerReceivingMult"];
   if (_player inArea _area) then {
     _sendingMult = _sendingMult * _jammerSendingMult;
-    _receivingMult = _receivingMult * _jammerReceivingMult;
+    _receivingMult = _receivingMult + _jammerReceivingMult;
   };
 } forEach (missionNamespace getVariable [QGVAR(radioJammers), []]);
 
