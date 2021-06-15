@@ -8,10 +8,20 @@ if !(GVAR(showPlayerIcons)) exitWith {};
 
 if ((CBA_missionTime - GVAR(drawPlayersLastCacheRefresh)) >= DRAWPLAYERSICONS_CACHE_LIFETIME) then {
   private _players = ([switchableUnits, playableUnits] select isMultiplayer) select {
-    (_x distance ace_player) < DRAWPLAYERSICONS_MAXDISTANCE
+    ((_x distance ace_player) < DRAWPLAYERSICONS_MAXDISTANCE) &&
+    // Filter out vehicle crews
+    {(effectiveCommander (vehicle _x)) isEqualTo _x}
   };
   GVAR(drawPlayersCache) = _players apply {
-    [_x, _x call EFUNC(common,getUnitName), [side (group _x)] call BIS_fnc_sideColor]
+    // Show data of effective vehicle commander (with crew count)
+    private _vehicle = vehicle _x;
+    private _player = effectiveCommander _vehicle;
+    private _name = _player call EFUNC(common,getUnitName);
+    private _crewCount = count (crew _vehicle);
+    if (_crewCount > 1) then {
+      _name = _name + ("+ " + (str (_crewCount - 1)));
+    };
+    [_vehicle, _name, [side (group _x)] call BIS_fnc_sideColor]
   };
   GVAR(drawPlayersLastCacheRefresh) = CBA_missionTime;
 };
@@ -31,11 +41,12 @@ private _modelName = [0, 0, 2.3];
     1,
     true
   ];
+
   private _iconSize = 5 * _distanceScale;
 
   drawIcon3D [
     "a3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\UnitIcon_ca.paa",
-    _x # 1,
+    _x # 2,
     _unit modelToWorldVisual _modelIcon,
     _iconSize,
     _iconSize,
@@ -52,7 +63,7 @@ private _modelName = [0, 0, 2.3];
     0,
     0,
     0,
-    format ["%1 (%2m)", _x # 2, _distance toFixed 0],
+    format ["%1 (%2m)", _x # 1, _distance toFixed 0],
     2,
     0.037 * _distanceScale,
     "PuristaMedium"
