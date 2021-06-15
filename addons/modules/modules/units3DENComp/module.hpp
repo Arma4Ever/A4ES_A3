@@ -153,5 +153,7 @@ class GVAR(units3DENComp): GVAR(base) {
 
     class GVAR(moduleDescription): GVAR(moduleDescription) {
         shortDescription = CSTRING(units3DENComp_shortDescription);
+        canSyncWith[] = {"<anyUnit>", "<anyVehicle>", "<anyObject>"};
+        syncRequired = 1;
     };
 };

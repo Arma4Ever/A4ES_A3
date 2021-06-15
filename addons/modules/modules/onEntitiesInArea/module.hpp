@@ -51,5 +51,7 @@ class GVAR(onEntitiesInArea): GVAR(base) {
 
     class GVAR(moduleDescription): GVAR(moduleDescription) {
         shortDescription = CSTRING(onEntitiesInArea_shortDescription);
+        canSyncWith[] = {"<anyUnit>", "<anyVehicle>", "<anyObject>"};
+        syncRequired = 1;
     };
 };

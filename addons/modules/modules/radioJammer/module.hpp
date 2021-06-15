@@ -31,6 +31,7 @@ class GVAR(radioJammer): GVAR(base) {
             property = QGVAR(receivingMultiplicator);
             GVAR(description) = CSTRING(radioJammer_Multiplicators_Desc);
             defaultValue = "0.25";
+            GVAR(range[]) = {0, 500};
             ATTRIBUTE_LOCAL;
         };
 
@@ -39,6 +40,5 @@ class GVAR(radioJammer): GVAR(base) {
 
     class GVAR(moduleDescription): GVAR(moduleDescription) {
         shortDescription = CSTRING(radioJammer_shortDescription);
-        description = "";
     };
 };

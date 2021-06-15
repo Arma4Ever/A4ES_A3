@@ -57,5 +57,7 @@ class GVAR(objects3DENComp): GVAR(base) {
 
     class GVAR(moduleDescription): GVAR(moduleDescription) {
         shortDescription = CSTRING(objects3DENComp_shortDescription);
+        canSyncWith[] = {"<anyObject>"};
+        syncRequired = 1;
     };
 };

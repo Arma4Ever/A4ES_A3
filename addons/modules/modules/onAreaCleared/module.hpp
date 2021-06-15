@@ -65,5 +65,7 @@ class GVAR(onAreaCleared): GVAR(base) {
 
     class GVAR(moduleDescription): GVAR(moduleDescription) {
         shortDescription = CSTRING(onAreaCleared_shortDescription);
+        canSyncWith[] = {"<anyLogic>"};
+        syncRequired = 1;
     };
 };
