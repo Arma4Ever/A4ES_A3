@@ -6,6 +6,7 @@ ADDON = false;
 
 if (is3DENPreview) then {
   GVAR(showLogs) = true;
+  GVAR(showDebugMap) = true;
   GVAR(logs) = [];
 
   GVAR(entitiesDrawData) = [];

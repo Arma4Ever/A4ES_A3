@@ -7,6 +7,9 @@
     <Key ID="STR_A3CS_Debug_ToggleLogsAction">
       <Polish>DEBUG - Pokaż/ukryj logi</Polish>
     </Key>
+    <Key ID="STR_A3CS_Debug_ToggleDebugMap">
+      <Polish>DEBUG - Pokaż/ukryj debug na mapie</Polish>
+    </Key>
     <Key ID="STR_A3CS_Debug_Activated">
       <Polish>aktywowany</Polish>
     </Key>

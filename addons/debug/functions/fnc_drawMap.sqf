@@ -6,6 +6,8 @@
 
 params ["_ctrl"];
 
+if !(GVAR(showDebugMap)) exitWith {};
+
 {
   _x params ["", "_pos", "_color", "_a", "_b", "_angle", "_isRect", "_syncs"];
   if (_isRect) then {

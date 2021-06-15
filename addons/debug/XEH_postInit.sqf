@@ -62,6 +62,14 @@ if (_initWatcher isEqualTo "true") then {
   [{"a3cs_debug" callExtension "updateLogsList";}, 0.5] call CBA_fnc_addPerFrameHandler;
 };
 
+player addAction [
+  format ["<t color='#FF0000'>%1</t>", LLSTRING(toggleDebugMap)],
+  {
+    GVAR(showDebugMap) = !GVAR(showDebugMap);
+  }, nil, 0
+];
+
+
 private _pfh = [{0 call FUNC(updateEntitiesDrawData)}, 0.5] call CBA_fnc_addPerFrameHandler;
 
 [QEGVAR(modules,base), "init", {
