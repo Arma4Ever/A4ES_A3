@@ -332,6 +332,7 @@ class CfgVehicles {
     #include "modules\onAreaCleared\module.hpp"
     #include "modules\onDeleted\module.hpp"
     #include "modules\onEntitiesInArea\module.hpp"
+    #include "modules\onHour\module.hpp"
     #include "modules\onKilled\module.hpp"
     #include "modules\onLogicFlags\module.hpp"
     #include "modules\onPlayerInArea\module.hpp"
@@ -343,7 +344,7 @@ class CfgVehicles {
     #include "modules\setLogicFlagValue\module.hpp"
     // // #include "modules\setMarker\module.hpp"
     #include "modules\setTaskState\module.hpp"
-    // #include "modules\setTimeMultiplier\module.hpp"
+    #include "modules\setTimeMultiplier\module.hpp"
     #include "modules\switchLights\module.hpp"
     #include "modules\units3DENComp\module.hpp"
 

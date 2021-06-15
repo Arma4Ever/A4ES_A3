@@ -22,6 +22,14 @@ if (isNil "_currentValue" || {_currentValue isEqualTo _value}) exitWith {
 // Update flag value
 missionNamespace setVariable [_flagVar, _value, true];
 
+// Log flag value change in 3DEN preview
+if (is3DENPreview) then {
+  private _title = GVAR(logicFlagTitles) getOrDefault [_flag, ""];
+  if (_title isNotEqualTo "") then {
+    diag_log text format ["Zmieniam wartosc flagi logicznej '%1' na %2", _title, str _value];
+  };
+};
+
 private _moduleActivatorFlags = GVAR(moduleActivatorFlags);
 if !(_flag in _moduleActivatorFlags) exitWith {
   TRACE_1("flag activators check abort, no module waiting for this flag",_flag);

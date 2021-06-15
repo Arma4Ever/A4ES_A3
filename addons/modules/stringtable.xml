@@ -132,6 +132,9 @@
     <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_AnyObject">
       <Polish>Dowolny obiekt</Polish>
     </Key>
+    <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_AnyLogic">
+      <Polish>Dowolny moduł</Polish>
+    </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_ElementsListTitle">
       <Polish>Moduł może być zsynchronizowany z następującymi elementami</Polish>
     </Key>
@@ -143,6 +146,9 @@
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_SyncRequiredInfo_2">
       <Polish>Do poprawnego działania, moduł wymaga synchronizacji z jednym (i tylko jednym!) elementem o którymś z wymienionych wyżej typie.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_ModuleDescription_canSyncWith_SyncRequiredInfo_3">
+      <Polish>Synchronizacja modułu z powyższymi elementami jest opcjonalna.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_ModuleDescription_apiFunctions_Title">
       <Polish>Funkcje API związane z modułem</Polish>
@@ -1529,7 +1535,7 @@
   </Package>
   <Package name="Modules_addCuratorModule">
     <Key ID="STR_A3CS_Modules_addCuratorModule_displayName">
-      <Polish>Dodaj moduł zeusa</Polish>
+      <Polish>Dodaj moduł do interfejsu zeusa</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_addCuratorModule_shortDescription">
       <Polish>Moduł dodaje moduł do interfejsu zeusa.</Polish>
@@ -1805,6 +1811,32 @@
       <Polish>Skrypt uruchomi się tylko na serwerze. Parametry:&lt;br/&gt;#0 _logic - moduł.&lt;br/&gt;#1 _objectList - lista wszystkich zsynchronizowanych jednostek/pojazdów/obiektów.</Polish>
     </Key>
   </Package>
+  <Package name="Modules_onHour">
+    <Key ID="STR_A3CS_Modules_onHour_displayName">
+      <Polish>Gdy godzina</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onHour_shortDescription">
+      <Polish>Moduł uruchomi się gdy wybije wybrana godzina.&lt;br/&gt;&lt;br/&gt;Aby dodać sprawdzanie godziny dopiero po jakimś czasie, użyj ustawień aktywacji modułu. Sprawdzanie godziny zostanie uruchomione dopiero po aktywacji.&lt;br/&gt;&lt;br/&gt;W momencie w którym wybrana godzina wybije, moduł wykona akcje handlera zdeklarowane pod ustawieniami godziny (zmiana stanu zadania, flagi, itp.).</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onHour_Attributes_baseSettingsSubCategory">
+      <Polish>Ustawienia godziny</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onHour_Attributes_hour">
+      <Polish>Godzina</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onHour_Attributes_hour_tooltip">
+      <Polish>Godzina o której aktywowany ma zostać moduł.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onHour_Attributes_minute">
+      <Polish>Minuta</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onHour_Attributes_minute_tooltip">
+      <Polish>Minuta w wybranej godzinie o której aktywowany ma zostać moduł.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onHour_Attributes_scriptHandler_desc">
+      <Polish>Skrypt uruchomi się tylko na serwerze. Parametry:&lt;br/&gt;#0 _logic - moduł.</Polish>
+    </Key>
+  </Package>
   <Package name="Modules_onDeleted">
     <Key ID="STR_A3CS_Modules_onDeleted_displayName">
       <Polish>Gdy usunięty</Polish>
@@ -1820,6 +1852,26 @@
     </Key>
     <Key ID="STR_A3CS_Modules_onDeleted_Warning_EmptySynced_Desc">
       <Polish>Aby moduł zadziałał, zsynchronizuj go z conajmniej jednym obiektem/pojazdem/jednostką po której/których usunięciu moduł ma się uruchomić.</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_setTimeMultiplier">
+    <Key ID="STR_A3CS_Modules_setTimeMultiplier_displayName">
+      <Polish>Zmień tempo czasu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setTimeMultiplier_shortDescription">
+      <Polish>Moduł zmienia tempo upływania czasu gry. Zmiana tempa dotyczy tylko czasu w grze, tzn. godziny, co wpływa jedynie na pore dnia i datę. Symulacja gry wciąż jest naturalna (nikt nie zacznie biegać szybciej itp).</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setTimeMultiplier_Attributes_baseSettingsSubCategory">
+      <Polish>Ustawienia tempa upływu czasu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setTimeMultiplier_Attributes_timeMultiplier">
+      <Polish>Mnożnik tempa</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setTimeMultiplier_Attributes_timeMultiplier_tooltip">
+      <Polish>W jakim tempie ma upływać czas gry.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_setTimeMultiplier_Attributes_timeMultiplier_desc">
+      <Polish>0 - czas gry będzie stał w miejscu.&lt;br/&gt;1 - normalnie (1:1 czasu realnego).&lt;br/&gt;2 - dwa razy szbyciej niż normalnie (1 minuta w grze to 30 sekund w rzeczywistości), i tak dalej.</Polish>
     </Key>
   </Package>
   <Package name="Modules_addAction">

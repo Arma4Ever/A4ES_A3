@@ -1,36 +1,62 @@
-class GVAR(onAreaCleared): GVAR(base) {
+class GVAR(onHour): GVAR(base) {
     scope = 2;
     author = "SzwedzikPL";
-    displayName = CSTRING(onAreaCleared_displayName);
-    icon = QPATHTOF(modules\onAreaCleared\data\icon.paa);
+    displayName = CSTRING(onHour_displayName);
+    icon = "\a3\modules_f_curator\data\portraitskiptime_ca.paa";
     category = QGVAR(events);
-    function = QFUNC(onAreaCleared_module);
-    functionPriority = 2;
+    function = QFUNC(onHour_module);
+    functionPriority = 5;
     isTriggerActivated = 0;
-    GVAR(validator) = QFUNC(onAreaCleared_validate);
-    canSetArea = 1;
-    canSetAreaShape = 1;
-    class AttributeValues {
-        size3[] = {25, 25, -1};
-        isRectangle = 0;
-    };
+    GVAR(validator) = QFUNC(onHour_validate);
 
     class Attributes: AttributesBase {
         class GVAR(moduleShortDescription): GVAR(moduleShortDescription) {};
         class GVAR(moduleWarnings): GVAR(moduleWarnings) {};
 
+        // Attributes for module activator
+        #define MODULE_ACTIVATOR_CONTROL QGVAR(dynamicToolboxActivationModeMissionStart)
+        #define MODULE_ACTIVATOR_DEFAULT_VALUE QUOTE(-1)
+        #include "\z\a3cs\addons\modules\includes\moduleActivationAttributes.hpp"
+
         class GVAR(baseSettingsSubCategory): GVAR(moduleSubCategory) {
-            displayName = CSTRING(onAreaCleared_Attributes_baseSettingsSubCategory);
+            displayName = CSTRING(onHour_Attributes_baseSettingsSubCategory);
             property = QGVAR(baseSettingsSubCategory);
         };
 
-        class GVAR(side): GVAR(dynamicToolboxSideFull) {
-            displayName = CSTRING(onAreaCleared_Attributes_side);
-            tooltip = CSTRING(onAreaCleared_Attributes_side_Tooltip);
-            property = QGVAR(side);
-            defaultValue = "1";
+        class GVAR(hour): GVAR(dynamicCombo) {
+            displayName = CSTRING(onHour_Attributes_hour);
+            tooltip = CSTRING(onHour_Attributes_hour_tooltip);
+            property = QGVAR(hour);
             typeName = "NUMBER";
+            defaultValue = "'0'";
+            GVAR(insertValues) = QFUNC(onHour_hour_insertValues);
             ATTRIBUTE_LOCAL;
+
+            class values {
+                class hour_0 {
+                    name = "00";
+                    value = 0;
+                    default = 1;
+                };
+            };
+        };
+
+        class GVAR(minute): GVAR(dynamicCombo) {
+            displayName = CSTRING(onHour_Attributes_minute);
+            tooltip = CSTRING(onHour_Attributes_minute_tooltip);
+            property = QGVAR(minute);
+            typeName = "NUMBER";
+            defaultValue = "'0'";
+            GVAR(insertValues) = QFUNC(onHour_minute_insertValues);
+            ATTRIBUTE_LOCAL;
+
+            class values {
+                class hour_0 {
+                    name = "00";
+                    value = 0;
+                    default = 1;
+                };
+            };
         };
 
         #include "\z\a3cs\addons\modules\includes\moduleChangeTaskStateAttributes.hpp"
@@ -52,7 +78,7 @@ class GVAR(onAreaCleared): GVAR(base) {
         class GVAR(scriptHandler): GVAR(dynamicEditCodeMulti5) {
             displayName = CSTRING(Attributes_scriptHandler);
             tooltip = CSTRING(Attributes_scriptHandler_tooltip);
-            GVAR(description) = CSTRING(onAreaCleared_Attributes_scriptHandler_desc);
+            GVAR(description) = CSTRING(onHour_Attributes_scriptHandler_desc);
             property = QGVAR(scriptHandler);
             defaultValue = "''";
             typeName = "STRING";
@@ -64,8 +90,6 @@ class GVAR(onAreaCleared): GVAR(base) {
     };
 
     class GVAR(moduleDescription): GVAR(moduleDescription) {
-        shortDescription = CSTRING(onAreaCleared_shortDescription);
-        canSyncWith[] = {"<anyLogic>"};
-        syncRequired = 3;
+        shortDescription = CSTRING(onHour_shortDescription);
     };
 };

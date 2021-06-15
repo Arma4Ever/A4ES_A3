@@ -320,7 +320,8 @@ if (_canSyncWithSupported) then {
         _syncRequiredInfo,
         [
           LLSTRING(ModuleDescription_canSyncWith_SyncRequiredInfo_1),
-          LLSTRING(ModuleDescription_canSyncWith_SyncRequiredInfo_2)
+          LLSTRING(ModuleDescription_canSyncWith_SyncRequiredInfo_2),
+          LLSTRING(ModuleDescription_canSyncWith_SyncRequiredInfo_3)
         ] select (_syncRequired - 1)
       ] select (_syncRequiredInfo isEqualTo ""),
       "<br/>"
