@@ -68,7 +68,7 @@ if (_mode isEqualTo 0) then {
   private _direction = _direction * 45;
   _posStart = _logic getPos [_distance, _direction];
   _posEnd   = _logic getPos [_distance, _direction - 180];
-  _posStart set [2, _height];
+  _posStart set [2, ((getPosASL _logic) # 2) + _height];
 };
 
 private _dir = _posStart getDir _posEnd;
@@ -78,7 +78,11 @@ private _proxy = createVehicle ["test_EmptyObjectForBubbles", [0, 0, 0], [], 0, 
 _proxy hideObjectGlobal true;
 _proxy setDir _dir;
 _proxy setPosASL _posStart;
-_proxy setVelocity [_speed*(sin(_dir)), _speed*(cos(_dir)) ,0];
+_proxy setVelocity [
+  _speed * (sin _dir),
+  _speed * (cos _dir),
+  0
+];
 
 for "_planeIndex" from 0 to _planeMaxIndex do {
   private _planeClass = if (_randomWeighted) then {
