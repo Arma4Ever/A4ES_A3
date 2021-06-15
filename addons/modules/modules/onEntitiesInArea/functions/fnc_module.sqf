@@ -33,7 +33,7 @@ _logic setVariable [QGVAR(handlerObjects), _objects];
 
 [
   _logic,
-  compile (_logic call FUNC(onEntitiesInArea_getCondition)),
+  _logic call FUNC(onEntitiesInArea_getCondition),
   [_logic, _objects],
   QFUNC(onEntitiesInArea_moduleExec),
   0
