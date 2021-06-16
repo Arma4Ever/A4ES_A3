@@ -97,6 +97,16 @@ class GVAR(addAction): GVAR(base) {
             ATTRIBUTE_LOCAL;
         };
 
+        class GVAR(deleteTarget): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(addAction_Attributes_deleteTarget);
+            tooltip = CSTRING(addAction_Attributes_deleteTarget_tooltip);
+            GVAR(description) = CSTRING(addAction_Attributes_deleteTarget_desc);
+            property = QGVAR(deleteTarget);
+            defaultValue = "false";
+            GVAR(observeValue) = 0;
+            ATTRIBUTE_LOCAL;
+        };
+
         class GVAR(addScriptHandler): GVAR(dynamicCheckbox) {
             displayName = CSTRING(addAction_Attributes_addScriptHandler);
             tooltip = CSTRING(addAction_Attributes_addScriptHandler_tooltip);

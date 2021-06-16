@@ -1944,6 +1944,15 @@
     <Key ID="STR_A3CS_Modules_addAction_Attributes_isDisposable_tooltip">
       <Polish>Czy akcja ma zniknąć po pierwszym użyciu przez dowolnego gracza.</Polish>
     </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_deleteTarget">
+      <Polish>Usuwaj obiekty po wyk. akcji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_deleteTarget_tooltip">
+      <Polish>Czy obiekty do których jest przydzielona akcja mają być usuwane po wykonaniu akcji. Opcja przydatna przy akcjach typu "podnieś intel" itp.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addAction_Attributes_deleteTarget_desc">
+      <Polish>Czy obiekty do których jest przydzielona akcja mają być usuwane po wykonaniu akcji. Opcja przydatna przy akcjach typu "podnieś intel" itp.&lt;br /&gt;&lt;br /&gt;Uwaga! Jeśli chcemy usuwać obiekty po wykonaniu akcji, ważne jest aby były to obiekty a nie itemy. Jeśli chcesz zrobić akcję typu "podnieś intel" użyj obiektów z Rzeczy / Biuro, nie itemów intelu.</Polish>
+    </Key>
     <Key ID="STR_A3CS_Modules_addAction_Attributes_addScriptHandler">
       <Polish>Dodaj skrypt akcji</Polish>
     </Key>

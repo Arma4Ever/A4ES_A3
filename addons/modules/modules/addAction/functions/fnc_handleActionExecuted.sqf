@@ -24,6 +24,11 @@ if (_logic getVariable [QGVAR(addServerScriptHandler), false]) then {
   [_target, _player, _logic] call (compile _scriptHandler);
 };
 
+// Delete target
+if (_logic getVariable [QGVAR(deleteTarget), false]) then {
+  deleteVehicle _target;
+};
+
 // Remove module if action disposable
 if (_logic getVariable [QGVAR(isDisposable), true]) then {
   private _jipId = format [QGVAR(addActionId_%1), _logic call BIS_fnc_netId];
