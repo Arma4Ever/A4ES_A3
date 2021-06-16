@@ -32,6 +32,13 @@ if (isServer) then {
     _this call FUNC(initCuratorModule);
   }, true, [], true] call CBA_fnc_addClassEventHandler;
 
+  // Disable curators ability to trigger dyn sim
+  ["VirtualMan_F", "initPost", {
+    params ["_unit"];
+    [_unit] call FUNC(addCuratorObjects);
+    _unit triggerDynamicSimulation false;
+  }, true, [], true] call CBA_fnc_addClassEventHandler;
+
   // Add objects on server
   [QGVAR(addObjects), {
     _this call FUNC(addCuratorObjects);
