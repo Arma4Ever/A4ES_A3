@@ -86,7 +86,10 @@ private _pfh = [{0 call FUNC(updateEntitiesDrawData)}, 0.5] call CBA_fnc_addPerF
   _x call FUNC(initTrigger);
 } forEach (allMissionObjects "EmptyDetector");
 
-// Add map draw script
-((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", {
-  _this call FUNC(drawMap);
-}];
+0 spawn {
+  waitUntil {!(isNull (findDisplay 12))};
+  // Add map draw script
+  ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", {
+    _this call FUNC(drawMap);
+  }];
+};
