@@ -24,7 +24,9 @@ private _modules = (synchronizedObjects _logic) select {_x isKindOf QGVAR(base)}
 
 // No synced modules
 if (_modules isEqualTo []) exitWith {
-  _logic call FUNC(onAreaCleared_addActivationEHs);
+  [{
+    _this call FUNC(onAreaCleared_addActivationEHs);
+  }, _logic, 10] call CBA_fnc_waitAndExecute;
   LOG('Execution of EXEC_MODULE_NAME finished - activation ehs added.');
 };
 

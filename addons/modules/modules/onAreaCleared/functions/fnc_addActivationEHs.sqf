@@ -30,3 +30,6 @@ private _actPFH = [{_this call FUNC(onAreaCleared_moduleExec)}, 10, _logic] call
 _logic setVariable [QGVAR(activationEHs), [_killedEH, _actPFH]];
 
 TRACE_3("Added module activation event handlers",_logic,_killedEH,_actPFH);
+
+// Activation EHs are added with delay so we can check now is area cleared
+_logic call FUNC(onAreaCleared_moduleExec);

@@ -9,7 +9,9 @@ TRACE_1("onAreaCleared_moduleExec",_logic);
 
 if (isNull _logic) exitWith {};
 
-if !(_logic call (_logic getVariable [QGVAR(activationCond), {false}])) exitWith {
+private _condition = _logic getVariable [QGVAR(activationCond), {false}];
+
+if !(_logic call _condition) exitWith {
   TRACE_1("onAreaCleared_moduleExec - abort, area not cleared yet",_logic);
 };
 

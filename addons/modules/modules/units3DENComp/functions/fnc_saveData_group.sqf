@@ -32,7 +32,7 @@ private _waypointsData = _waypoints apply {[_x] call FUNC(units3DENComp_saveData
   (_group get3DENAttribute "formation") # 0,
   (_group get3DENAttribute "speedMode") # 0,
   (_group get3DENAttribute "garbageCollectGroup") # 0,
-  (_group get3DENAttribute QEGVAR(editor,disableDynamicSimulation)) # 0,
+  (_group get3DENAttribute "dynamicSimulation") # 0,
   (_group get3DENAttribute QEGVAR(editor,enableGunLights)) # 0,
   (_group get3DENAttribute "lambs_danger_disableGroupAI") # 0,
   (_group get3DENAttribute "lambs_danger_enableGroupReinforce") # 0

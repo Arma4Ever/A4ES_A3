@@ -32,6 +32,7 @@ _vehicle set3DENAttribute [QEGVAR(editor,disableRandomization), _disableRandomiz
 _vehicle set3DENAttribute ["ObjectTexture", _texture];
 _vehicle set3DENAttribute ["VehicleCustomization", [[], _animations]];
 _vehicle set3DENAttribute ["dynamicSimulation", _dynamicSimulation];
+_vehicle set3DENAttribute [QEGVAR(editor,dynamicSimulationInited), true];
 _vehicle set3DENAttribute ["reportRemoteTargets", _reportRemoteTargets];
 _vehicle set3DENAttribute ["receiveRemoteTargets", _receiveRemoteTargets];
 _vehicle set3DENAttribute ["reportOwnPosition", _reportOwnPosition];

@@ -42,6 +42,10 @@ _unit set3DENAttribute ["ace_isHandcuffed", _aceIsHandcuffed];
   _unit set3DENAttribute [(format [QEGVAR(editor,DisableAI_%1), _x]), true];
 } forEach _disabledAI;
 
+if (_lambsDangerDisableAI && {"FSM" in _disabledAI} && {"PATH" in _disabledAI}) then {
+  _unit set3DENAttribute [QEGVAR(editor,isStationary), true];
+};
+
 if (_vehicleData isNotEqualTo []) then {
   _vehicleData params ["_vehicleIndex", "_role", "_cargoIndex", "_turretPath"];
   private _vehicle = _vehicles param [_vehicleIndex, objNull];

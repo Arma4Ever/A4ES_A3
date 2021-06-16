@@ -9,10 +9,6 @@ TRACE_1("handleModuleDeleted",_logic);
 
 if (isNull _logic) exitWith {};
 
-if (_logic getVariable [QGVAR(addedToActivator), false]) exitWith {
-  TRACE_1("Adding module to activator aborted - module already added",_logic);
-};
-
 private _modules = _logic getVariable [QGVAR(handlerModules), []];
 private _index = _modules findIf {!(isNull _x)};
 
@@ -21,4 +17,6 @@ if (_index isNotEqualTo -1) exitWith {
 };
 
 // Add activation ehs
-_logic call FUNC(onAreaCleared_addActivationEHs);
+[{
+  _this call FUNC(onAreaCleared_addActivationEHs);
+}, _logic, 10] call CBA_fnc_waitAndExecute;
