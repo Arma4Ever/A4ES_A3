@@ -17,16 +17,26 @@ GVAR(currentAssetsTreeCount) = 0;
 
 // Add units init EH for setup of dynamic simulation
 ["CAManBase", "init", {
-  LOG_1("Handling unit init (%1)",str _this);
+  TRACE_1("CAManBase init",_this);
   _this spawn {
+    params ["_unit"];
     sleep 0.001;
-    _this call FUNC(updateDynamicSimulation);
+    if ("uav_ai" in (toLower (typeOf _unit))) exitWith {
+      TRACE_1("CAManBase init abort, uav ai",_unit);
+      (group _unit) set3DENAttribute [QGVAR(dynamicSimulationInited), true];
+    };
+    [group _unit] call FUNC(initEntityDynSim);
   };
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
-if (cba_xeh_fallbackRunning) then {
-  LOG("Starting CBA fallback loop");
-  call FUNC(startCBAFallbackLoop);
-};
+// Add objects init EH for setup of dynamic simulation
+{
+  [_x, "init", {
+    _this spawn {
+      sleep 0.001;
+      _this call FUNC(initEntityDynSim);
+    };
+  }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach ["ThingX", "Car", "Tank", "Helicopter", "Plane", "Ship", "StaticWeapon"];
 
 ADDON = true;

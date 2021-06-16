@@ -14,6 +14,7 @@ if (GVAR(isMainMenu)) then {
 
 [QGVAR(deleteGroup), {
   params ["_group"];
+  TRACE_1("Event deleteGroup",_group);
 
   if (local _group) then {
     deleteGroup _group;
@@ -22,11 +23,13 @@ if (GVAR(isMainMenu)) then {
 
 [QGVAR(switchMove), {
   params ["_unit", "_anim"];
+  TRACE_2("Event switchMove",_unit,_anim);
   _unit switchMove _anim;
 }] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
   [QGVAR(enableDynSim), {
+    TRACE_1("Event enableDynSim",_this);
     {
       if !(dynamicSimulationEnabled _x) then {
         _x enableDynamicSimulation true;

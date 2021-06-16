@@ -1,14 +1,9 @@
-class dynamicSimulation {
+class GVAR(dynamicSimulationInited) {
+    displayName = QGVAR(dynamicSimulationInited);
     control = QGVAR(hiddenCheckbox);
-};
-class GVAR(disableDynamicSimulation) {
-    displayName = CSTRING(DisableDynamicSimulation);
-    tooltip = CSTRING(DisableDynamicSimulation_Tooltip);
-    property = QGVAR(disableDynamicSimulation);
-    control = "Checkbox";
-    expression = QUOTE(if (is3DEN) then {_this call FUNC(updateDynamicSimulation);};);
+    property = QGVAR(dynamicSimulationInited);
+    expression = "";
     defaultValue = "false";
-    typeName = "BOOL";
 };
 class GVAR(enableGunLights) {
     displayName = CSTRING(enableGunLights);
@@ -17,5 +12,4 @@ class GVAR(enableGunLights) {
     control = "Checkbox";
     expression = "if (_value) then {_this enableGunLights 'ForceOn';};";
     defaultValue = "false";
-    condition = "objectBrain";
 };
