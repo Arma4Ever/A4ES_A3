@@ -25,6 +25,6 @@ private _ownerSide = ([
   east,
   independent,
   civilian
-] param [_ownerId - 1, sideUnknown]);
+] param [_owner - 1, sideUnknown]);
 
 _ownerSide isEqualTo _unitSide
