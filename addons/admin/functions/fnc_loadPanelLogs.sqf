@@ -23,21 +23,16 @@ if (tolower _logClass == "debuglogs") then {
         ["_serverFPS", 0, [0]],
         ["_headless", false, [false]],
         ["_totalAI", 0, [0]],
-        ["_totalGroups", 0, [0]],
-        ["_westGroups", 0, [0]],
-        ["_eastGroups", 0, [0]],
-        ["_greenGroups", 0, [0]],
-        ["_civGroups", 0, [0]],
-        ["_generatedAI", 0, [0]],
         ["_serverAI", 0, [0]],
         ["_headlessAI", 0, [0]],
-        ["_cachedAI", 0, [0]],
-        ["_uncachedAI", 0, [0]],
+        ["_simulatedAI", 0, [0]],
+        ["_notSimulatedAI", 0, [0]],
+        ["_totalGroups", 0, [0]],
         ["_totalWaypoints", 0, [0]],
         ["_totalVehicles", 0, [0]],
+        ["_simulatedVehicles", 0, [0]],
+        ["_notSimulatedVehicles", 0, [0]],
         ["_totalObjects", 0, [0]],
-        ["_modulesGenAI", 0, [0]],
-        ["_modulesGenAttack", 0, [0]],
         ["_curatorCount", 0, [0]]
     ];
 
@@ -47,20 +42,16 @@ if (tolower _logClass == "debuglogs") then {
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_ServerFPS), str _serverFPS];
     if (isMultiplayer) then {_controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_HeadlessOnline), _headlessOnline];};
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_TotalAICount), str _totalAI];
-    _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_TotalGroupCount), str _totalGroups];
-    _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_WestGroupCount), str _westGroups];
-    _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_EastGroupCount), str _eastGroups];
-    _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_GreenGroupCount), str _greenGroups];
-    _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_CivGroupCount), str _civGroups];
-    _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_GeneratedAICount), str _generatedAI];
-    _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_AIOnServer), str _serverAI];
+    if (isMultiplayer) then {_controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_AIOnServer), str _serverAI];};
     if (isMultiplayer && _headless) then {_controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_AIOnHC), str _headlessAI];};
-    _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_CachedAI), str _cachedAI];
-    _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_UncachedAI), str _uncachedAI];
+    _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_SimulatedAI), str _simulatedAI];
+    _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_NotSimulatedAI), str _notSimulatedAI];
+    _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_TotalGroupCount), str _totalGroups];
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_WaypointsCount), str _totalWaypoints];
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_TotalVehicleCount), str _totalVehicles];
+    _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_SimulatedVehicles), str _simulatedVehicles];
+    _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_NotSimulatedVehicles), str _notSimulatedVehicles];
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_TotalObjectCount), str _totalObjects];
-    _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_ModuleGenAICount), str _modulesGenAI];
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_CuratorCount), str _curatorCount];
 };
 if (tolower _logClass == "playerslist") then {

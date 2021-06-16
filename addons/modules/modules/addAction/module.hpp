@@ -204,5 +204,7 @@ class GVAR(addAction): GVAR(base) {
 
     class GVAR(moduleDescription): GVAR(moduleDescription) {
         shortDescription = CSTRING(addAction_shortDescription);
+        canSyncWith[] = {"<anyUnit>", "<anyVehicle>", "<anyObject>"};
+        syncRequired = 1;
     };
 };

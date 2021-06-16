@@ -5,6 +5,7 @@
  */
 
 params ["_unit"];
+TRACE_1("unassignCuratorModule",_unit);
 
 private _module = getAssignedCuratorLogic _unit;
 if (isNull _module) exitWith {};

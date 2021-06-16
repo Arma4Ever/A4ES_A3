@@ -25,11 +25,8 @@ if (!isMultiplayer) then {
 if (!_canAccess) exitWith {};
 if (!isNull (getAssignedCuratorLogic _admin)) exitWith {};
 
-private _curatorModule = (createGroup sideLogic) createUnit ["ModuleCurator_F", [0,0,0], [], 0, "FORM"];
-_curatorModule setVariable [QGVAR(adminCurator), true, true];
-_admin assignCurator _curatorModule;
+_admin setVariable [QEGVAR(curator,isCurator), true, true];
+[_admin, true] call EFUNC(curator,assignCuratorModule);
 
-[{
-    _this addCuratorAddons (("true" configClasses (configFile >> "CfgPatches")) apply {toLower configName _x});
-    _this addCuratorEditableObjects [allMissionObjects "All", false];
-}, _curatorModule, 2] call CBA_fnc_waitAndExecute;
+private _name = _admin call EFUNC(common,getUnitName);
+[QGVAR(debugCuratorActivated), _name] call CBA_fnc_globalEvent;

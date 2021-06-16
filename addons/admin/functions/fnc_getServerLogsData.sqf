@@ -14,22 +14,28 @@ if (tolower _logClass == "debuglogs") then {
     private _serverFPS = floor diag_fps;
     private _headless = false;
     private _totalAI = 0;
-    private _totalGroups = 0;
-    private _westGroups = 0;
-    private _eastGroups = 0;
-    private _greenGroups = 0;
-    private _civGroups = 0;
-    private _generatedAI = 0;
     private _serverAI = 0;
     private _headlessAI = 0;
-    private _cachedAI = 0;
-    private _uncachedAI = 0;
+    private _simulatedAI = 0;
+    private _notSimulatedAI = 0;
     private _totalWaypoints = 0;
-    private _totalVehicles = 0;
-    private _totalObjects = 0;
-    private _modulesGenAI = 0;
-    private _modulesGenAttack = 0;
-    private _curatorCount = 0;
+    private _totalGroups = {
+      _totalWaypoints = _totalWaypoints + (count (waypoints _x));
+      true
+    } count allGroups;
+    private _simulatedVehicles = 0;
+    private _notSimulatedVehicles = 0;
+
+    private _totalVehicles = {
+      if (simulationEnabled _x) then {
+        _simulatedVehicles = _simulatedVehicles + 1;
+      } else {
+        _notSimulatedVehicles = _notSimulatedVehicles + 1;
+      };
+      true
+    } count vehicles;
+    private _totalObjects = count (allMissionObjects "All");
+    private _curatorCount = count allCurators;
 
     private _headlessClient = EGVAR(headless,headlessClient);
     private _headlessClientOwner = 0;
@@ -41,52 +47,30 @@ if (tolower _logClass == "debuglogs") then {
     };
 
     private _allAI = allUnits select {!isPlayer _x};
-    _totalAI = count _allAI;
-    {
-        private _unit = _x;
-        private _ownerUnit = owner _unit;
-        if (_ownerUnit isEqualTo 2) then {_serverAI = _serverAI + 1;};
-        if (_headless && {_ownerUnit isEqualTo _headlessClientOwner}) then {_headlessAI = _headlessAI + 1;};
-        if (_unit getVariable ["a3cs_generated", false]) then {_generatedAI = _generatedAI + 1;};
-        if (_unit getVariable [QEGVAR(mm,cached), false]) then {_cachedAI = _cachedAI + 1;} else {_uncachedAI = _uncachedAI + 1;};
-    } foreach _allAI;
-
-    _totalGroups = count allGroups;
-    {
-        _totalWaypoints = _totalWaypoints + (count waypoints _x);
-        if (side _x isEqualTo west) then {_westGroups = _westGroups + 1;};
-        if (side _x isEqualTo east) then {_eastGroups = _eastGroups + 1;};
-        if (side _x isEqualTo independent) then {_greenGroups = _greenGroups + 1;};
-        if (side _x isEqualTo civilian) then {_civGroups = _civGroups + 1;};
-    } forEach allGroups;
-
-    // INFO: AllVehicles includes Man
-    _totalVehicles = count (vehicles select {_x isKindOf "AllVehicles"});
-    _totalObjects = count (allMissionObjects "All");
-    _modulesGenAI = count (entities QEGVAR(modules,generateSoldiers));
-    _modulesGenAttack = 0;
-    _curatorCount = count (allCurators select {!(_x getVariable [QGVAR(adminCurator), false])});
+    _totalAI = {
+      private _unit = _x;
+      private _ownerUnit = owner _unit;
+      if (_ownerUnit isEqualTo 2) then {_serverAI = _serverAI + 1;};
+      if (_headless && {_ownerUnit isEqualTo _headlessClientOwner}) then {_headlessAI = _headlessAI + 1;};
+      if (simulationEnabled _unit) then {_simulatedAI = _simulatedAI + 1;} else {_notSimulatedAI = _notSimulatedAI + 1;};
+      true
+    } count _allAI;
 
     _logData = [
-        _serverFPS,
-        _headless,
-        _totalAI,
-        _totalGroups,
-        _westGroups,
-        _eastGroups,
-        _greenGroups,
-        _civGroups,
-        _generatedAI,
-        _serverAI,
-        _headlessAI,
-        _cachedAI,
-        _uncachedAI,
-        _totalWaypoints,
-        _totalVehicles,
-        _totalObjects,
-        _modulesGenAI,
-        _modulesGenAttack,
-        _curatorCount
+      _serverFPS,
+      _headless,
+      _totalAI,
+      _serverAI,
+      _headlessAI,
+      _simulatedAI,
+      _notSimulatedAI,
+      _totalGroups,
+      _totalWaypoints,
+      _totalVehicles,
+      _simulatedVehicles,
+      _notSimulatedVehicles,
+      _totalObjects,
+      _curatorCount
     ];
 };
 if (tolower _logClass == "activescriptsserver") then {
@@ -104,12 +88,12 @@ if (tolower _logClass == "adminlogs") then {
 if (tolower _logClass == "curatorlist") then {
     {
         private _curatorUnit = getAssignedCuratorUnit _x;
-        private _curatorUnitName = _curatorUnit call EFUNC(common,getUnitName);
-        if (isNull _curatorUnit) then {
-            _curatorUnitName = "Brak operatora";
+        private _curatorUnitName = "Brak operatora";
+        if !(isNull _curatorUnit) then {
+            _curatorUnitName = _curatorUnit call EFUNC(common,getUnitName);
         };
         _logData pushBack [format ["#%1",_forEachIndex+1], _curatorUnitName];
-    } forEach (allCurators select {!(_x getVariable [QGVAR(adminCurator), false])});
+    } forEach allCurators;
 };
 
 [_logClass, _logData] remoteExecCall [QFUNC(loadPanelLogs), _client];

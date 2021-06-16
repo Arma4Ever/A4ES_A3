@@ -7,6 +7,7 @@
 params ["_curator", "_player"];
 
 if !(local _curator) exitWith {};
+TRACE_2("handleCuratorPinged",_curator,_player);
 
 // Make sure curator module is assigned if curator unit is pinging
 if (_player getVariable [QGVAR(isCurator), false]) then {

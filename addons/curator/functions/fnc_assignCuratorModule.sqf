@@ -5,6 +5,7 @@
  */
 
 params ["_unit", ["_clientPostInit", false, [false]]];
+TRACE_2("assignCuratorModule",_unit,_clientPostInit);
 
 // Exit if unit is not zeus
 if !(_unit getVariable [QGVAR(isCurator), false]) exitWith {};

@@ -5,6 +5,7 @@
  */
 
 if (!isServer) exitWith {};
+LOG("createCuratorModule");
 
 if (isNull GVAR(curatorModulesGroup)) then {
   private _group = grpNull;

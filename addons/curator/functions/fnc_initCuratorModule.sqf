@@ -5,6 +5,7 @@
  */
 
 params ["_curator"];
+TRACE_1("initCuratorModule",_curator);
 
 #ifdef DEBUG_MODE_FULL
 private _editable3DENObjects = missionNamespace getVariable [QGVAR(editable3DENObjects), []];

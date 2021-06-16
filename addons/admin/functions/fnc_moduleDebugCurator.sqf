@@ -21,21 +21,24 @@ private _actionVariable = getText (_actionConfig >> "variable");
 private _buttonControl = controlNull;
 
 if (!_force) then {
-    private _buttonIndex = GVAR(panelActiveButtonsActions) find "debugcurator";
-    if (_buttonIndex < 0) exitWith {};
-    _buttonControl = _display displayCtrl (GVAR(panelActiveButtons) select _buttonIndex);
+  private _buttonIndex = GVAR(panelActiveButtonsActions) find "debugcurator";
+  if (_buttonIndex < 0) exitWith {};
+  _buttonControl = _display displayCtrl (GVAR(panelActiveButtons) select _buttonIndex);
 };
 
-if (!GVAR(debugCuratorEnabled)) then {
-    if (!isNull (getAssignedCuratorLogic player)) exitWith {};
+diag_log ["GVAR(debugCuratorEnabled)", GVAR(debugCuratorEnabled)];
 
-    missionNamespace setVariable [_actionVariable, 1];
-    if (!_force) then {_buttonControl ctrlSetText format [_actionName, _actionValues select 1];};
-    GVAR(debugCuratorEnabled) = true;
-    [player] remoteExecCall [QFUNC(addAdminCurator), 2];
+if (!GVAR(debugCuratorEnabled)) then {
+  if (!isNull (getAssignedCuratorLogic player)) exitWith {};
+
+  missionNamespace setVariable [_actionVariable, 1];
+  if (!_force) then {_buttonControl ctrlSetText format [_actionName, _actionValues select 1];};
+  GVAR(debugCuratorEnabled) = true;
+  [player] remoteExecCall [QFUNC(addAdminCurator), 2];
 } else {
-    missionNamespace setVariable [_actionVariable, 0];
-    if (!_force) then {_buttonControl ctrlSetText format [_actionName, _actionValues select 0];};
-    [player] remoteExecCall [QFUNC(removeAdminCurator), 2];
-    GVAR(debugCuratorEnabled) = false;
+  if (isNull (getAssignedCuratorLogic player)) exitWith {};
+  missionNamespace setVariable [_actionVariable, 0];
+  if (!_force) then {_buttonControl ctrlSetText format [_actionName, _actionValues select 0];};
+  GVAR(debugCuratorEnabled) = false;
+  [player] remoteExecCall [QFUNC(removeAdminCurator), 2];
 };

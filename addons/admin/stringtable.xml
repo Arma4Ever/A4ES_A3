@@ -110,55 +110,40 @@
       <Polish>Headless Client:</Polish>
     </Key>
     <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalAICount">
-      <Polish>Liczba AI:</Polish>
+      <Polish>AI:</Polish>
     </Key>
     <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalGroupCount">
-      <Polish>Liczba grup:</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_WestGroupCount">
-      <Polish>Liczba grup (BLUFOR):</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_EastGroupCount">
-      <Polish>Liczba grup (OPFOR):</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_GreenGroupCount">
-      <Polish>Liczba grup (INDEP):</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_CivGroupCount">
-      <Polish>Liczba grup (CIV):</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_GeneratedAICount">
-      <Polish>Liczba wygenerowanych AI:</Polish>
+      <Polish>Grup:</Polish>
     </Key>
     <Key ID="STR_A3CS_Admin_Module_DebugLogs_AIOnServer">
-      <Polish>Liczba AI na serwerze:</Polish>
+      <Polish>AI na serwerze:</Polish>
     </Key>
     <Key ID="STR_A3CS_Admin_Module_DebugLogs_AIOnHC">
-      <Polish>Liczba AI na Headless Cliencie:</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_CachedAI">
-      <Polish>Liczba ukrytych AI (cache):</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_UncachedAI">
-      <Polish>Liczba odkrytych AI (cache):</Polish>
+      <Polish>AI na headlessie:</Polish>
     </Key>
     <Key ID="STR_A3CS_Admin_Module_DebugLogs_WaypointsCount">
-      <Polish>Liczba waypointów:</Polish>
+      <Polish>Waypointów:</Polish>
     </Key>
     <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalVehicleCount">
-      <Polish>Liczba pojazdów:</Polish>
+      <Polish>Pojazdów:</Polish>
     </Key>
     <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalObjectCount">
-      <Polish>Liczba obiektów:</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_ModuleGenAICount">
-      <Polish>Liczba generatorów AI:</Polish>
-    </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_ModuleGenAttackCount">
-      <Polish>Liczba generatorów ataku:</Polish>
+      <Polish>Obiektów:</Polish>
     </Key>
     <Key ID="STR_A3CS_Admin_Module_DebugLogs_CuratorCount">
-      <Polish>Liczba mistrzów gry (zeus):</Polish>
+      <Polish>Mistrzów gry (zeusów):</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_SimulatedAI">
+      <Polish>Symulowanych AI:</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_NotSimulatedAI">
+      <Polish>Niesymulowanych AI:</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_SimulatedVehicles">
+      <Polish>Symulowanych pojazdów:</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_NotSimulatedVehicles">
+      <Polish>Niesymulowanych pojazdów:</Polish>
     </Key>
     <Key ID="STR_A3CS_Admin_Module_PlayersList_DisplayName">
       <Polish>Lista graczy</Polish>
@@ -189,6 +174,12 @@
     </Key>
     <Key ID="STR_A3CS_Admin_Module_CuratorList_DisplayName">
       <Polish>Lista zeusów</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Admin_DebugCuratorActivated">
+      <Polish>Admin %1 aktywował dostęp do zeusa.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Admin_DebugCuratorDeactivated">
+      <Polish>Admin %1 deaktywował dostęp do zeusa.</Polish>
     </Key>
   </Package>
 </Project>

@@ -48,6 +48,11 @@ if (isServer) then {
   [QGVAR(assignCuratorModule), {
     _this call FUNC(assignCuratorModule);
   }] call CBA_fnc_addEventHandler;
+
+  // Unassign curator
+  [QGVAR(unassignCuratorModule), {
+    _this call FUNC(unassignCuratorModule);
+  }] call CBA_fnc_addEventHandler;
 };
 
 if (hasInterface) then {
