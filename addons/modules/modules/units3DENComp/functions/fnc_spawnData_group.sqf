@@ -16,7 +16,7 @@ _groupData params [
   "_formation",
   "_speedMode",
   "_garbageCollectGroup",
-  "_disableDynamicSimulation",
+  "_dynamicSimulation",
   "_enableGunLights",
   "_lambsDangerDisableGroupAI",
   "_lambsDangerEnableGroupReinforce"
@@ -54,15 +54,9 @@ if (_lambsDangerEnableGroupReinforce) then {
 
 // Gun Lights
 if (_enableGunLights) then {
-  _group enableGunLights "ForceOn";
-};
-
-// Dynamic simulation
-if (
-  (_groupsDynSim isEqualTo 1) ||
-  {(_groupsDynSim isEqualTo 0) && !_disableDynamicSimulation}
-) then {
-  [QEGVAR(common,enableDynSim), [_group]] call CBA_fnc_serverEvent;
+  [{
+    _this enableGunLights "ForceOn";
+  }, _group, 3] call CBA_fnc_waitAndExecute;
 };
 
 // Waypoints
@@ -70,3 +64,14 @@ if (
   [_x, _group] call FUNC(units3DENComp_spawnData_waypoint);
   sleep 0.05;
 } forEach _waypointsData;
+
+// Dynamic simulation
+if (
+  (_groupsDynSim isEqualTo 1) ||
+  {(_groupsDynSim isEqualTo 0) && _dynamicSimulation}
+) then {
+  // Add delay to ensure proper init & sync of all groups
+  [{
+    [QEGVAR(common,enableDynSim), _this] call CBA_fnc_serverEvent;
+  }, [_group], 5] call CBA_fnc_waitAndExecute;
+};

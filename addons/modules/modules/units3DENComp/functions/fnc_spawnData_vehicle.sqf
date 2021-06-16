@@ -46,14 +46,17 @@ private _vehicle = createVehicle [_className, ASLToATL [0, 0, 1000], [], 0, _spe
 _vehicle setPosATL _posATL;
 _vehicle setVectorDirAndUp _vectors;
 
+// Remote targets & radar
 _vehicle setVehicleReportRemoteTargets _reportRemoteTargets;
 _vehicle setVehicleReceiveRemoteTargets _receiveRemoteTargets;
 _vehicle setVehicleReportOwnPosition _reportOwnPosition;
 _vehicle setVehicleRadar _radarUsageAI;
 
+// Cookoff
 if !(_aceCookoffEnable) then {_vehicle setVariable [QACEGVAR(cookoff,enable), false, true];};
 if !(_aceCookoffEnableAmmoCookoff) then {_vehicle setVariable [QACEGVAR(cookoff,enableAmmoCookoff), false, true];};
 
+// Texture
 if (_texture isNotEqualTo "") then {
   private _textures = getArray ((configOf _vehicle) >> "TextureSources" >> _texture >> "textures");
 
@@ -62,23 +65,29 @@ if (_texture isNotEqualTo "") then {
   } forEach _textures;
 };
 
+// Anims
 if (_animations isNotEqualTo []) then {
   {
     _vehicle animate [_x # 0, _x # 1, true];
   } forEach _animations;
 };
 
-if (
-  (_vehiclesDynSim isEqualTo 1) ||
-  {(_vehiclesDynSim isEqualTo 0) && _dynamicSimulation}
-) then {
-  [QEGVAR(common,enableDynSim), [_vehicle]] call CBA_fnc_serverEvent;
-};
-
+// Cargo
 if (_clearVehCargo) then {
   clearWeaponCargoGlobal _vehicle;
   clearMagazineCargoGlobal _vehicle;
   clearItemCargoGlobal _vehicle;
+};
+
+// Dynamic simulation
+if (
+  (_vehiclesDynSim isEqualTo 1) ||
+  {(_vehiclesDynSim isEqualTo 0) && _dynamicSimulation}
+) then {
+  // Add delay to ensure proper init & sync of all vehicles
+  [{
+    [QEGVAR(common,enableDynSim), _this] call CBA_fnc_serverEvent;
+  }, [_vehicle], 5] call CBA_fnc_waitAndExecute;
 };
 
 _vehicle

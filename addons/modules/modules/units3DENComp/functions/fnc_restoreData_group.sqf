@@ -16,7 +16,7 @@ _groupData params [
   "_formation",
   "_speedMode",
   "_garbageCollectGroup",
-  "_disableDynamicSimulation",
+  "_dynamicSimulation",
   "_enableGunLights",
   "_lambsDangerDisableGroupAI",
   "_lambsDangerEnableGroupReinforce"
@@ -41,7 +41,8 @@ _group set3DENAttribute ["behaviour", _behaviour];
 _group set3DENAttribute ["formation", _formation];
 _group set3DENAttribute ["speedMode", _speedMode];
 _group set3DENAttribute ["garbageCollectGroup", _garbageCollectGroup];
-_group set3DENAttribute [QEGVAR(editor,disableDynamicSimulation), _disableDynamicSimulation];
+_group set3DENAttribute ["dynamicSimulation", _dynamicSimulation];
+_group set3DENAttribute [QEGVAR(editor,dynamicSimulationInited), true];
 _group set3DENAttribute [QEGVAR(editor,enableGunLights), _enableGunLights];
 _group set3DENAttribute ["lambs_danger_disableGroupAI", _lambsDangerDisableGroupAI];
 _group set3DENAttribute ["lambs_danger_enableGroupReinforce", _lambsDangerEnableGroupReinforce];

@@ -145,12 +145,15 @@ for "_i" from 1 to _groupCount do {
   [_group, _groupPos, _logic, _boundaryArea] call FUNC(generateSoldiers_initGroup);
   LOG_1('Group "%1" generated.',_groupId);
 
+  // Enable dyn sim
+  if (_enableDynSim) then {
+    [{
+      [QEGVAR(common,enableDynSim), _this] call CBA_fnc_serverEvent;
+    }, [_group], 5] call CBA_fnc_waitAndExecute;
+  };
+
   // Wait a while to avoid sync problems
   sleep 0.5;
-
-  if (_enableDynSim) then {
-    [QEGVAR(common,enableDynSim), [_group]] call CBA_fnc_serverEvent;
-  };
 };
 
 LOG('Generating groups of EXEC_MODULE_NAME finished.');
@@ -164,11 +167,9 @@ if (_logic getVariable [QGVAR(addModulePostExec), false]) then {
   _logic call (compile (_logic getVariable [QGVAR(modulePostExec), ""]));
 };
 
-sleep 10;
+sleep 5;
 
 // Delete module
 deleteVehicle _logic;
 
 LOG('Execution of EXEC_MODULE_NAME local exec function finished.');
-
-true

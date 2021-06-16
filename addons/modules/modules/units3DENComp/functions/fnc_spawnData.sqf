@@ -22,5 +22,7 @@ private _vehicles = [];
   sleep 0.05;
 } forEach _groupsData;
 
+sleep 5;
+
 // Delete module
 deleteVehicle _logic;
