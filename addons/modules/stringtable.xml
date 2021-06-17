@@ -1810,6 +1810,12 @@
     <Key ID="STR_A3CS_Modules_onEntitiesInArea_Attributes_scriptHandler_desc">
       <Polish>Skrypt uruchomi się tylko na serwerze. Parametry:&lt;br/&gt;#0 _logic - moduł.&lt;br/&gt;#1 _objectList - lista wszystkich zsynchronizowanych jednostek/pojazdów/obiektów.</Polish>
     </Key>
+    <Key ID="STR_A3CS_Modules_onEntitiesInArea_Warning_EmptySynced">
+      <Polish>Brak zsynchronizowanych obiektów</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_onEntitiesInArea_Warning_EmptySynced_Desc">
+      <Polish>Aby moduł zadziałał, zsynchronizuj go z conajmniej jednym obiektem/pojazdem/jednostką które muszą się znaleźć w obszarze aby aktywować moduł.</Polish>
+    </Key>
   </Package>
   <Package name="Modules_onHour">
     <Key ID="STR_A3CS_Modules_onHour_displayName">
