@@ -40,19 +40,8 @@ if (_initWatcher isEqualTo "true") then {
   // TODO: Debug control panel
   player addAction [
     format ["<t color='#FF0000'>%1</t>", LLSTRING(toggleLogsAction)],
-    {
-      GVAR(showLogs) = !GVAR(showLogs);
-      private _display = uiNamespace getVariable [QGVAR(logsList), displayNull];
-      if (isNull _display) exitWith {};
-      private _logsListTextCtrl = _display displayCtrl IDC_LOGSLIST;
-      _logsListTextCtrl ctrlSetFade (parseNumber (!GVAR(showLogs)));
-      _logsListTextCtrl ctrlCommit 0;
-
-      // Update logs list text
-      if (GVAR(showLogs)) then {
-        [[]] call FUNC(addLogs);
-      };
-    }, nil, 0
+    {0 call FUNC(toggleLogs);},
+    nil, 0
   ];
 
   /*
