@@ -36,5 +36,12 @@ _module addEventHandler ["UnregisteredFromWorld3DEN", {
    [_module, []] call FUNC(setEntityWarnings);
 }];
 
+if (_module isKindOf QGVAR(objects3DENComp)) then {
+  _module spawn {
+    sleep 0.001;
+    ["registeredToWorld3DEN", [_this]] call FUNC(objects3DENComp_module);
+  };
+};
+
 // Setup module variables
 _module spawn FUNC(updateModuleValues);

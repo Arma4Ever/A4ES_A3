@@ -70,7 +70,7 @@ if (_data isEqualTo []) exitWith {
   deleteVehicle _logic;
 };
 
-// Add objects do list for spawn
+// Add objects to list for spawn
 GVAR(3DENCompObjects) append _data;
 
 // Delete module

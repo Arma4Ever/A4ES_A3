@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: SzwedzikPL
- * Saves connected units in units3DENComp module
+ * Saves connected units in objects3DENComp module
  */
 
 params ["_logic"];
@@ -26,4 +26,4 @@ _logic set3DENAttribute [QGVAR(dataSaved), true];
 
 delete3DENEntities _objectsList;
 
-_logic call FUNC(units3DENComp_spawnPreview);
+_logic call FUNC(objects3DENComp_spawnPreview);

@@ -8,7 +8,7 @@ params ["_logic"];
 TRACE_1("objects3DENComp_spawnPreview",_logic);
 
 // Make sure preview is cleaned
-_logic call FUNC(units3DENComp_cleanPreview);
+_logic call FUNC(objects3DENComp_cleanPreview);
 
 private _data = parseSimpleArray ((_logic get3DENAttribute QGVAR(data)) # 0);
 
