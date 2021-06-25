@@ -28,7 +28,7 @@ class GVAR(doStop) {
     tooltip = CSTRING(doStop_Tooltip);
     property = QGVAR(doStop);
     control = "Checkbox";
-    expression = "if (_value) then {doStop _this;};";
+    expression = "if (_value) then {_this spawn {sleep 0.001;doStop _this;};};";
     defaultValue = "false";
     condition = "objectBrain";
 };
@@ -73,6 +73,6 @@ class GVAR(removeFromRemainsCollector) {
     tooltip = CSTRING(removeFromRemainsCollector_Tooltip);
     property = QGVAR(removeFromRemainsCollector);
     control = "Checkbox";
-    expression = "if (!is3DEN && _value) then {removeFromRemainsCollector [_value];};";
+    expression = "if (!is3DEN && _value) then {_this spawn {sleep 0.001;removeFromRemainsCollector [_this];};};";
     defaultValue = "false";
 };
