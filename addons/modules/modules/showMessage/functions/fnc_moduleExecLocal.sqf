@@ -50,6 +50,11 @@ if (_type isEqualTo 4) exitWith {
   _typeArgs params ["_title", "_message"];
   [
     parseText (_message call EFUNC(common,localize)),
-    _title call EFUNC(common,localize)
+    _title call EFUNC(common,localize),
+    true,
+    false,
+    [] call BIS_fnc_displayMission,
+    false,
+    false
   ] spawn BIS_fnc_guiMessage;
 };

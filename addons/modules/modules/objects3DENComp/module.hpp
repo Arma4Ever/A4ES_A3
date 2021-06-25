@@ -53,8 +53,8 @@ class GVAR(objects3DENComp): GVAR(base) {
         };
 
         class GVAR(addObjectPostInit): GVAR(dynamicCheckbox) {
-            displayName = CSTRING(objects3DENComp_Attributes_addGroupPostInit);
-            tooltip = CSTRING(objects3DENComp_Attributes_addGroupPostInit_Tooltip);
+            displayName = CSTRING(objects3DENComp_Attributes_addObjectPostInit);
+            tooltip = CSTRING(objects3DENComp_Attributes_addObjectPostInit_tooltip);
             property = QGVAR(addObjectPostInit);
         };
 
