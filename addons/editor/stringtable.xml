@@ -172,5 +172,11 @@
     <Key ID="STR_A3CS_Editor_isStationary_Tooltip">
       <Polish>Jednostka będzie stała na swojej pozycji niezależnie od sytuacji, będzie jednak się obracać w kierunku przeciwnika i odpowiadać ogniem.</Polish>
     </Key>
+    <Key ID="STR_A3CS_Editor_Warning_A3CSVersionMismatch_Title">
+      <Polish>Uwaga!</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Editor_Warning_A3CSVersionMismatch_Message">
+      <Polish>Misja została zapisana na starszej wersji A3CS. Aby zapewnić kompatybilność misji z nową wersją należy:&lt;br /&gt;1. Przełączyć każdy moduł kompozycji edytora (zarówno kompozycji jednostek jak i obiektów) w tryb edycji.&lt;br /&gt;2. Zatwierdzić ustawienia modułów (tak aby jednostki/obiekty pokazały się w edytorze).&lt;br /&gt;3. Przełączyć ponownie każdy moduł kompozycji edytora do trybu odczytu oraz zatwierdzić ustawienia modułu.&lt;br /&gt;4. Zapisać misję.&lt;br /&gt;5. Weksportować nową wersję do pbo i wrzucić na serwer (jeśli była już wrzucana).</Polish>
+    </Key>
   </Package>
 </Project>

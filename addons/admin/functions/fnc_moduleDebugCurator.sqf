@@ -26,8 +26,6 @@ if (!_force) then {
   _buttonControl = _display displayCtrl (GVAR(panelActiveButtons) select _buttonIndex);
 };
 
-diag_log ["GVAR(debugCuratorEnabled)", GVAR(debugCuratorEnabled)];
-
 if (!GVAR(debugCuratorEnabled)) then {
   if (!isNull (getAssignedCuratorLogic player)) exitWith {};
 
