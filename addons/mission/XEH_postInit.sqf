@@ -28,7 +28,7 @@ if (isServer) then {
     ["CAManBase", "initPost", {
       params ["_unit"];
 
-      if (isPlayer _unit || {_unit in playableUnits}) then {
+      if (isPlayer _unit || {_unit in (playableUnits + switchableUnits)}) then {
         removeFromRemainsCollector [_unit];
       };
     }, true, [], true] call CBA_fnc_addClassEventHandler;

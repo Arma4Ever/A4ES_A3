@@ -31,10 +31,10 @@ if !(isServer) exitWith {};
     _unit setVariable [QGVAR(assignedTeam), _team, true];
 }] call CBA_fnc_addEventHandler;
 
-// Parse playable units groups one second after start
+// Parse playable units groups some time after start
 // We're giving some time for things like ace setName etc.
 [{
-  private _units = [[player], playableUnits] select isMultiplayer;
+  private _units = playableUnits + switchableUnits;
   private _parsedGroups = [];
   private _squads = [];
 
@@ -48,4 +48,4 @@ if !(isServer) exitWith {};
   } forEach _units;
 
   _squads call FUNC(triggerSquadChanged);
-}, [], 1] call CBA_fnc_waitAndExecute;
+}, [], 3] call CBA_fnc_waitAndExecute;

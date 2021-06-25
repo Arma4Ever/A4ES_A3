@@ -1,7 +1,7 @@
 #include "\z\ace\addons\medical_engine\script_component.hpp"
 
 // EDIT
-if (a3cs_medical_systemDisabled) exitWith {};
+if (getMissionConfigValue ["a3cs_medical_disableSystem", false]) exitWith {};
 // EDIT
 
 [QGVAR(updateDamageEffects), LINKFUNC(updateDamageEffects)] call CBA_fnc_addEventHandler;

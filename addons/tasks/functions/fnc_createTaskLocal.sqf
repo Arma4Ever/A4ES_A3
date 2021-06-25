@@ -37,6 +37,9 @@ if (_parentId isNotEqualTo "") then {
   _parentTask = GVAR(tasks) get _parentId;
 };
 
+_title = _title call EFUNC(common,localize);
+_description = _description call EFUNC(common,localize);
+
 // Create task
 private _task = player createSimpleTask [_title, _parentTask];
 _task setSimpleTaskDescription [_description, _title, _title];
