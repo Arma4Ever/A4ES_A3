@@ -127,6 +127,9 @@
     <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalVehicleCount">
       <Polish>Pojazdów:</Polish>
     </Key>
+    <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalTriggersCount">
+      <Polish>Triggerów:</Polish>
+    </Key>
     <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalObjectCount">
       <Polish>Obiektów:</Polish>
     </Key>

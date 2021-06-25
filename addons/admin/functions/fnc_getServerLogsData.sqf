@@ -34,6 +34,7 @@ if (tolower _logClass == "debuglogs") then {
       };
       true
     } count vehicles;
+    private _totalTriggers = count (allMissionObjects "EmptyDetector");
     private _totalObjects = count (allMissionObjects "All");
     private _curatorCount = count allCurators;
 
@@ -69,6 +70,7 @@ if (tolower _logClass == "debuglogs") then {
       _totalVehicles,
       _simulatedVehicles,
       _notSimulatedVehicles,
+      _totalTriggers,
       _totalObjects,
       _curatorCount
     ];

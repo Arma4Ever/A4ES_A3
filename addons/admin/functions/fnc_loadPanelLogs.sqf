@@ -32,6 +32,7 @@ if (tolower _logClass == "debuglogs") then {
         ["_totalVehicles", 0, [0]],
         ["_simulatedVehicles", 0, [0]],
         ["_notSimulatedVehicles", 0, [0]],
+        ["_totalTriggers", 0, [0]],
         ["_totalObjects", 0, [0]],
         ["_curatorCount", 0, [0]]
     ];
@@ -51,6 +52,7 @@ if (tolower _logClass == "debuglogs") then {
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_TotalVehicleCount), str _totalVehicles];
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_SimulatedVehicles), str _simulatedVehicles];
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_NotSimulatedVehicles), str _notSimulatedVehicles];
+    _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_TotalTriggersCount), str _totalTriggers];
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_TotalObjectCount), str _totalObjects];
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_CuratorCount), str _curatorCount];
 };
