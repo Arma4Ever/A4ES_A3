@@ -24,5 +24,7 @@ private _animations = ((_vehicle get3DENAttribute "VehicleCustomization") # 0) #
   (_vehicle get3DENAttribute "reportOwnPosition") # 0,
   (_vehicle get3DENAttribute "radarUsageAI") # 0,
   (_vehicle get3DENAttribute QACEGVAR(cookoff,enable)) # 0,
-  (_vehicle get3DENAttribute QACEGVAR(cookoff,enableAmmoCookoff)) # 0
+  (_vehicle get3DENAttribute QACEGVAR(cookoff,enableAmmoCookoff)) # 0,
+  (_vehicle get3DENAttribute QEGVAR(editor,engineOn)) # 0,
+  (_vehicle get3DENAttribute QEGVAR(editor,enableHeadlights)) # 0
 ]

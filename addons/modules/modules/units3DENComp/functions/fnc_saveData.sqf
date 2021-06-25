@@ -19,7 +19,15 @@ private _vehiclesList = [];
     continue;
   };
 
-  if (_entity isKindOf "AllVehicles") then {
+  if (
+    (_entity isKindOf "Car") ||
+    {_entity isKindOf "Tank"} ||
+    {_entity isKindOf "Helicopter"} ||
+    {_entity isKindOf "Plane"} ||
+    {_entity isKindOf "Ship"} ||
+    {_entity isKindOf "Motorcycle"} ||
+    {_entity isKindOf "StaticWeapon"}
+  ) then {
     _vehiclesList pushBackUnique _entity;
     {
       _groupsList pushBackUnique (group _x);

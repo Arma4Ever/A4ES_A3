@@ -4,7 +4,7 @@
  * Spawns vehicle from vehicle data during game
  */
 
-params ["_vehicleData", "_vehiclesDynSim", "_clearVehCargo"];
+params ["_vehicleData", "_vehiclesDynSim", "_clearVehCargo", "_vehiclePostInit"];
 TRACE_1("units3DENComp_spawnData_vehicle",_vehicleData);
 
 _vehicleData params [
@@ -21,7 +21,9 @@ _vehicleData params [
   "_reportOwnPosition",
   "_radarUsageAI",
   "_aceCookoffEnable",
-  "_aceCookoffEnableAmmoCookoff"
+  "_aceCookoffEnableAmmoCookoff",
+  "_engineOn",
+  "_enableHeadlights"
 ];
 
 private _special = "CAN_COLLIDE";
@@ -72,6 +74,16 @@ if (_animations isNotEqualTo []) then {
   } forEach _animations;
 };
 
+// Engine
+if (_engineOn) then {
+  _vehicle engineOn true;
+};
+
+// Headlights
+if (_enableHeadlights) then {
+  _vehicle setPilotLight true;
+};
+
 // Cargo
 if (_clearVehCargo) then {
   clearWeaponCargoGlobal _vehicle;
@@ -89,5 +101,8 @@ if (
     [QEGVAR(common,enableDynSim), _this] call CBA_fnc_serverEvent;
   }, [_vehicle], 5] call CBA_fnc_waitAndExecute;
 };
+
+// Call post init
+_vehicle call _vehiclePostInit;
 
 _vehicle

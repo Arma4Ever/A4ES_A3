@@ -4,7 +4,7 @@
  * Spawns group from group data during game
  */
 
-params ["_groupData", "_vehicles", "_groupsDynSim", "_goUpAfterSpawn"];
+params ["_groupData", "_vehicles", "_groupsDynSim", "_goUpAfterSpawn", "_unitPostInit", "_groupPostInit"];
 TRACE_1("units3DENComp_spawnData_group",_groupData);
 
 _groupData params [
@@ -30,7 +30,7 @@ if (isNull _group) exitWith {
 
 // Create units
 {
-  private _unitSpawn = [_x, _group, _vehicles, _goUpAfterSpawn] spawn FUNC(units3DENComp_spawnData_unit);
+  private _unitSpawn = [_x, _group, _vehicles, _goUpAfterSpawn, _unitPostInit] spawn FUNC(units3DENComp_spawnData_unit);
   waitUntil {scriptDone _unitSpawn};
   sleep 0.05;
 } forEach _unitsData;
@@ -75,3 +75,6 @@ if (
     [QEGVAR(common,enableDynSim), _this] call CBA_fnc_serverEvent;
   }, [_group], 5] call CBA_fnc_waitAndExecute;
 };
+
+// Call post init
+_group call _groupPostInit;

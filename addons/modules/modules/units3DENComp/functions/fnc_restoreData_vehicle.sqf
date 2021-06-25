@@ -21,7 +21,9 @@ _vehicleData params [
   "_reportOwnPosition",
   "_radarUsageAI",
   "_aceCookoffEnable",
-  "_aceCookoffEnableAmmoCookoff"
+  "_aceCookoffEnableAmmoCookoff",
+  "_engineOn",
+  "_enableHeadlights"
 ];
 
 private _vehicle = create3DENEntity ["Object", _className, _posATL, true];
@@ -39,6 +41,8 @@ _vehicle set3DENAttribute ["reportOwnPosition", _reportOwnPosition];
 _vehicle set3DENAttribute ["radarUsageAI", _radarUsageAI];
 _vehicle set3DENAttribute [QACEGVAR(cookoff,enable), _aceCookoffEnable];
 _vehicle set3DENAttribute [QACEGVAR(cookoff,enableAmmoCookoff), _aceCookoffEnableAmmoCookoff];
+_vehicle set3DENAttribute [QEGVAR(editor,engineOn), _engineOn];
+_vehicle set3DENAttribute [QEGVAR(editor,enableHeadlights), _enableHeadlights];
 
 add3DENConnection ["Sync", [_vehicle], _logic];
 

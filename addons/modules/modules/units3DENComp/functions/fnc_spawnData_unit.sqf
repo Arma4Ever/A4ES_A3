@@ -4,7 +4,7 @@
  * Spawns unit from unit data during game
  */
 
-params ["_unitData", "_group", "_vehicles", "_goUpAfterSpawn"];
+params ["_unitData", "_group", "_vehicles", "_goUpAfterSpawn", "_unitPostInit"];
 TRACE_2("units3DENComp_spawnData_unit",_unitData,_group);
 
 _unitData params [
@@ -90,13 +90,25 @@ if (_vehicleData isEqualTo []) then {
 };
 
 if (_doStop) then {
-  doStop _unit;
+  _unit spawn {
+    sleep 0.001;
+    doStop _this;
+  };
 };
 
 if (_aceIsSurrendered) then {
-  [_unit, true] call ACEFUNC(captives,setSurrendered);
+  _unit spawn {
+    sleep 0.001;
+    [_this, true] call ACEFUNC(captives,setSurrendered);
+  };
 };
 
 if (_aceIsHandcuffed) then {
-  [_unit, true] call ACEFUNC(captives,setHandcuffed);
+  _unit spawn {
+    sleep 0.001;
+    [_this, true] call ACEFUNC(captives,setHandcuffed);
+  };
 };
+
+// Call post init
+_unit call _unitPostInit;
