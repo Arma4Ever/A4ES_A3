@@ -13,8 +13,8 @@ if (isServer) then {
 
   // Spawn 3DEN Comp objects
   [
-    {_this spawn FUNC(spawn3DENCompObjects);},
-    0,
+    {0 spawn FUNC(spawn3DENCompObjects);},
+    nil,
     [10, 3] select is3DENPreview
   ] call CBA_fnc_waitAndExecute;
 };

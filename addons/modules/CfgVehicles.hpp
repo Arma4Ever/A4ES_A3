@@ -323,7 +323,7 @@ class CfgVehicles {
     // #include "modules\createMarker\module.hpp"
     #include "modules\createTask\module.hpp"
     #include "modules\curator\module.hpp"
-    // #include "modules\deleteMarker\module.hpp"
+    #include "modules\deleteMarker\module.hpp"
     #include "modules\fireArtillery\module.hpp"
     // #include "modules\generateMinefield\module.hpp"
     #include "modules\generateSoldiers\module.hpp"
@@ -345,6 +345,8 @@ class CfgVehicles {
     // // #include "modules\setMarker\module.hpp"
     #include "modules\setTaskState\module.hpp"
     #include "modules\setTimeMultiplier\module.hpp"
+    #include "modules\showMarker\module.hpp"
+    #include "modules\showMessage\module.hpp"
     #include "modules\switchLights\module.hpp"
     #include "modules\units3DENComp\module.hpp"
 

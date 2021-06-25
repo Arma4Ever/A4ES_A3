@@ -35,9 +35,10 @@ if (_logic getVariable [QGVAR(progress), false]) then {
 };
 
 TRACE_6("addAction_moduleExecLocal - adding action",_actionId,_actionTitle,_actionIcon,_actionStatement,_condition,_logic);
+
 private _action = ([
   _actionId,
-  _actionTitle,
+  _actionTitle call EFUNC(common,localize),
   _actionIcon,
   compile _actionStatement,
   compile _condition,

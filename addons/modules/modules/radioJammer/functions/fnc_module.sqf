@@ -35,8 +35,7 @@ if (
 
 if (_isActivated) then {
   // Get logic area
-  private _logicArea = [getPos _logic];
-  _logicArea append (_logic getVariable ["objectarea", []]);
+  private _logicArea = _logic call EFUNC(common,getLogicArea);
 
   GVAR(radioJammerModules) pushBack _logic;
   _jammersData pushBack [

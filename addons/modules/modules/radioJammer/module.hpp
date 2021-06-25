@@ -40,5 +40,7 @@ class GVAR(radioJammer): GVAR(base) {
 
     class GVAR(moduleDescription): GVAR(moduleDescription) {
         shortDescription = CSTRING(radioJammer_shortDescription);
+        isDisposable = 0;
+        deactivationDisablesEffect = 1;
     };
 };

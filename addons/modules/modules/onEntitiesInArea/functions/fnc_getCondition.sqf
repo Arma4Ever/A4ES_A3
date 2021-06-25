@@ -6,8 +6,7 @@
 
 params ["_logic"];
 
-private _logicArea = [getPos _logic];
-_logicArea append (_logic getVariable ["objectarea", []]);
+private _logicArea = _logic call EFUNC(common,getLogicArea);
 
 format ["
 private _area = %1;

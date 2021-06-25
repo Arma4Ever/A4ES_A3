@@ -60,7 +60,6 @@ class GVAR(switchLights): GVAR(base) {
 
     class GVAR(moduleDescription): GVAR(moduleDescription) {
         shortDescription = CSTRING(switchLights_shortDescription);
-        //schema = QPATHTOF(data\schema_placeholder.paa);
         isDisposable = 0;
         deactivationDisablesEffect = 1;
     };

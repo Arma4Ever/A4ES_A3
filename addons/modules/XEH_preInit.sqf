@@ -9,6 +9,9 @@ if (isServer) then {
   GVAR(moduleActivatorCycleIndex) = -1;
   GVAR(activatorModuleCycleList) = [];
 
+  GVAR(moduleActivatorPlayersPFH) = -1;
+  GVAR(moduleActivatorPlayers) = [];
+
   GVAR(createdLogicFlags) = createHashMap;
   GVAR(moduleActivatorFlags) = createHashMap;
   GVAR(activatorModulesFlags) = createHashMap;
@@ -35,6 +38,14 @@ if (isServer) then {
 
 [QGVAR(addAction), {
   _this call FUNC(addAction_moduleExecLocal);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(showMessage), {
+  _this call FUNC(showMessage_moduleExecLocal);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setLogicFlagValue), {
+  _this call FUNC(setLogicFlagValue);
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(addCuratorModule), {

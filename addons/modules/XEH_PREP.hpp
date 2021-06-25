@@ -34,10 +34,13 @@ PREP(handleWarningsTreeClick);
 PREP(initDynamicAttribute);
 PREP(initWarnings);
 PREP(moduleActivatorCycleTick);
+PREP(moduleDeleteMarker);
 PREP(moduleDescription_attributeLoad);
 PREP(modulePlaySound);
 PREP(moduleSetLogicFlagValue);
 PREP(moduleShortDescription_attributeLoad);
+PREP(moduleShowMarker);
+PREP(moduleShowMessage);
 PREP(moduleSubCategory_attributeLoad);
 PREP(moduleWarnings_attributeLoad);
 PREP(refreshAttributes);
@@ -48,6 +51,7 @@ PREP(setUniqueIdAttribute);
 PREP(spawn3DENCompObjects);
 PREP(switchLeftPanelTab);
 PREP(updateDynamicAttribute);
+PREP(updateModuleActivatorPlayers);
 PREP(updateModuleValues);
 PREP(updateWarningsTabUI);
 PREP(validateEntity);
@@ -61,6 +65,7 @@ PREP(validateEntity);
 #include "modules\createLogicFlag\prep.hpp"
 #include "modules\createTask\prep.hpp"
 #include "modules\curator\prep.hpp"
+#include "modules\deleteMarker\prep.hpp"
 #include "modules\fireArtillery\prep.hpp"
 #include "modules\generateSoldiers\prep.hpp"
 #include "modules\generatorComposition\prep.hpp"
@@ -78,5 +83,7 @@ PREP(validateEntity);
 #include "modules\setLogicFlagValue\prep.hpp"
 #include "modules\setTaskState\prep.hpp"
 #include "modules\setTimeMultiplier\prep.hpp"
+#include "modules\showMarker\prep.hpp"
+#include "modules\showMessage\prep.hpp"
 #include "modules\switchLights\prep.hpp"
 #include "modules\units3DENComp\prep.hpp"

@@ -29,6 +29,6 @@ private _progressCondition = _logic setVariable [QGVAR(localProgressCondition), 
   [_target, _player, _logic],
   {(_this # 0) call FUNC(addAction_execActionLocal)},
   compile ("(_this # 0) call {" + _onFail + "}"),
-  _progressTitle,
+  _progressTitle call EFUNC(common,localize),
   compile ("(_this # 0) call {" + _progressCondition + "}")
 ] call ace_common_fnc_progressBar;

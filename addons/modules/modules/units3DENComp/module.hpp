@@ -105,6 +105,38 @@ class GVAR(units3DENComp): GVAR(base) {
             ATTRIBUTE_LOCAL;
         };
 
+        class GVAR(addUnitPostInit): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(units3DENComp_Attributes_addUnitPostInit);
+            tooltip = CSTRING(units3DENComp_Attributes_addUnitPostInit_Tooltip);
+            property = QGVAR(addUnitPostInit);
+        };
+
+        class GVAR(unitPostInit): GVAR(dynamicEditCodeMulti5) {
+            displayName = CSTRING(units3DENComp_Attributes_unitPostInit);
+            tooltip = CSTRING(units3DENComp_Attributes_unitPostInit_tooltip);
+            GVAR(description) = CSTRING(units3DENComp_Attributes_unitPostInit_desc);
+            property = QGVAR(unitPostInit);
+            defaultValue = "''";
+            typeName = "STRING";
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(addUnitPostInit)) isEqualTo true);
+        };
+
+        class GVAR(addGroupPostInit): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(units3DENComp_Attributes_addGroupPostInit);
+            tooltip = CSTRING(units3DENComp_Attributes_addGroupPostInit_Tooltip);
+            property = QGVAR(addGroupPostInit);
+        };
+
+        class GVAR(groupPostInit): GVAR(dynamicEditCodeMulti5) {
+            displayName = CSTRING(units3DENComp_Attributes_groupPostInit);
+            tooltip = CSTRING(units3DENComp_Attributes_groupPostInit_tooltip);
+            GVAR(description) = CSTRING(units3DENComp_Attributes_groupPostInit_desc);
+            property = QGVAR(groupPostInit);
+            defaultValue = "''";
+            typeName = "STRING";
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(addGroupPostInit)) isEqualTo true);
+        };
+
         class GVAR(vehicleSettingsSubCategory): GVAR(moduleSubCategory) {
             displayName = CSTRING(units3DENComp_Attributes_vehicleSettingsSubCategory);
             property = QGVAR(vehicleSettingsSubCategory);
@@ -146,6 +178,22 @@ class GVAR(units3DENComp): GVAR(base) {
             GVAR(description) = CSTRING(units3DENComp_Attributes_clearVehCargo_desc);
             GVAR(observeValue) = 0;
             ATTRIBUTE_LOCAL;
+        };
+
+        class GVAR(addVehiclePostInit): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(units3DENComp_Attributes_addVehiclePostInit);
+            tooltip = CSTRING(units3DENComp_Attributes_addVehiclePostInit_tooltip);
+            property = QGVAR(addVehiclePostInit);
+        };
+
+        class GVAR(vehiclePostInit): GVAR(dynamicEditCodeMulti5) {
+            displayName = CSTRING(units3DENComp_Attributes_vehiclePostInit);
+            tooltip = CSTRING(units3DENComp_Attributes_vehiclePostInit_tooltip);
+            GVAR(description) = CSTRING(units3DENComp_Attributes_vehiclePostInit_desc);
+            property = QGVAR(vehiclePostInit);
+            defaultValue = "''";
+            typeName = "STRING";
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(addVehiclePostInit)) isEqualTo true);
         };
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};

@@ -70,8 +70,13 @@ if (_data isEqualTo []) exitWith {
   deleteVehicle _logic;
 };
 
+private _objectPostInit = {};
+if (_logic getVariable [QGVAR(addObjectPostInit), false]) then {
+  _objectPostInit = compile (_logic getVariable [QGVAR(objectPostInit), ""]);
+};
+
 // Add objects to list for spawn
-GVAR(3DENCompObjects) append _data;
+GVAR(3DENCompObjects) pushBack [_data, _objectPostInit];
 
 // Delete module
 deleteVehicle _logic;

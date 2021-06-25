@@ -10,6 +10,7 @@ class GVAR(playSoundSettingsSubCategory): GVAR(moduleSubCategory) {
         displayName = CSTRING(Attributes_playSound);
         tooltip = CSTRING(Attributes_playSound_tooltip);
         property = QGVAR(playSound);
+        defaultValue = "false";
         ATTRIBUTE_LOCAL;
     };
 #else
@@ -185,3 +186,6 @@ class GVAR(soundRepeatDelay): GVAR(dynamicEdit) {
 };
 
 #undef PLAYSOUND_COND
+#ifdef MODULE_PLAYSOUND
+    #undef MODULE_PLAYSOUND
+#endif

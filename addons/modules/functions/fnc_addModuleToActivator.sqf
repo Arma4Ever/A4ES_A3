@@ -44,3 +44,13 @@ if (GVAR(moduleActivatorCyclePFH) isEqualTo -1) then {
     0 call FUNC(moduleActivatorCycleTick);
   }, 0] call CBA_fnc_addPerFrameHandler;
 };
+
+if (GVAR(moduleActivatorPlayersPFH) isEqualTo -1) then {
+  LOG("Starting module activator players PFH");
+  // Update players
+  0 call FUNC(updateModuleActivatorPlayers);
+  // Start PFH
+  GVAR(moduleActivatorPlayersPFH) = [{
+    0 call FUNC(updateModuleActivatorPlayers);
+  }, 10] call CBA_fnc_addPerFrameHandler;
+};

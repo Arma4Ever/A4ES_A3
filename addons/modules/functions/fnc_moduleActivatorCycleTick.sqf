@@ -14,6 +14,10 @@ if (_moduleList isEqualTo []) exitWith {
   [GVAR(moduleActivatorCyclePFH)] call CBA_fnc_removePerFrameHandler;
   GVAR(moduleActivatorCycleIndex) = -1;
   GVAR(moduleActivatorCyclePFH) = -1;
+
+  LOG("Removing module activator players PFH");
+  [GVAR(moduleActivatorPlayersPFH)] call CBA_fnc_removePerFrameHandler;
+  GVAR(moduleActivatorPlayersPFH) = -1;
 };
 
 private _data = _moduleList param [_index, []];

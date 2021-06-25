@@ -32,7 +32,6 @@ if (_activationArea isEqualTo []) then {
   _activationArea = str _activationArea;
 };
 
-private _units = ["switchableUnits", "playableUnits"] select isMultiplayer;
 private _filterHelicopters = _logic getVariable [QGVAR(activationIgnoreHelicopters), false];
 private _filterPlanes = _logic getVariable [QGVAR(activationIgnorePlanes), false];
 
@@ -56,7 +55,7 @@ if (_filterHelicopters || _filterPlanes) then {
 
 // Return condition
 format ["
-  private _units = %1 inAreaArray %2;
+  private _units = (%1 inAreaArray %2);
   %3
   _units isNotEqualTo []
-", _units, _activationArea, _filter]
+", QGVAR(moduleActivatorPlayers), _activationArea, _filter]

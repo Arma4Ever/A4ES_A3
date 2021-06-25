@@ -41,6 +41,15 @@ _logic call FUNC(handlerModuleChangeTaskState);
 // Set logic flag value
 [_logic, false] call FUNC(moduleSetLogicFlagValue);
 
+// Show message
+[_logic, false] call FUNC(moduleShowMessage);
+
+// Show marker
+[_logic, false] call FUNC(moduleShowMarker);
+
+// Delete marker
+[_logic, false] call FUNC(moduleDeleteMarker);
+
 // Call script handler
 if (_logic getVariable [QGVAR(addScriptHandler), false]) then {
   [_logic, _objects] call compile (_logic getVariable [QGVAR(scriptHandler), ""]);

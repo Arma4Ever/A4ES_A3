@@ -52,6 +52,22 @@ class GVAR(objects3DENComp): GVAR(base) {
             ATTRIBUTE_IGNORED;
         };
 
+        class GVAR(addObjectPostInit): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(objects3DENComp_Attributes_addGroupPostInit);
+            tooltip = CSTRING(objects3DENComp_Attributes_addGroupPostInit_Tooltip);
+            property = QGVAR(addObjectPostInit);
+        };
+
+        class GVAR(objectPostInit): GVAR(dynamicEditCodeMulti5) {
+            displayName = CSTRING(objects3DENComp_Attributes_objectPostInit);
+            tooltip = CSTRING(objects3DENComp_Attributes_objectPostInit_tooltip);
+            GVAR(description) = CSTRING(objects3DENComp_Attributes_objectPostInit_desc);
+            property = QGVAR(objectPostInit);
+            defaultValue = "''";
+            typeName = "STRING";
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(addObjectPostInit)) isEqualTo true);
+        };
+
         class GVAR(moduleDescription): GVAR(moduleDescription) {};
     };
 

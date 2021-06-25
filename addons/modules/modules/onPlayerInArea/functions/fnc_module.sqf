@@ -25,9 +25,7 @@ private _activationDelayTime = [
   _logic getVariable [QGVAR(activationDelayTime), 0]
 ] select _activationDelay;
 
-private _activationArea = [getPos _logic];
-_activationArea append (_logic getVariable ["objectarea", []]);
-
+private _activationArea = _logic call EFUNC(common,getLogicArea);
 private _condition = [_logic, 0, _activationArea] call FUNC(getModuleActivatorCond);
 
 // Add module to activator system

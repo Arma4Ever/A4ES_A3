@@ -8,6 +8,7 @@ class GVAR(changeTaskState): GVAR(dynamicCheckbox) {
     displayName = CSTRING(Attributes_changeTaskState);
     tooltip = CSTRING(Attributes_changeTaskState_tooltip);
     property = QGVAR(changeTaskState);
+    defaultValue = "false";
     ATTRIBUTE_LOCAL;
 };
 

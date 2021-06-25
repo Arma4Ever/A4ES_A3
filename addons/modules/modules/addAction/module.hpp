@@ -198,6 +198,9 @@ class GVAR(addAction): GVAR(base) {
         #include "\z\a3cs\addons\modules\includes\moduleChangeTaskStateAttributes.hpp"
         #include "\z\a3cs\addons\modules\includes\modulePlaySoundAttributes.hpp"
         #include "\z\a3cs\addons\modules\includes\moduleSetLogicFlagValueAttributes.hpp"
+        #include "\z\a3cs\addons\modules\includes\moduleShowMessageAttributes.hpp"
+        #include "\z\a3cs\addons\modules\includes\moduleShowMarkerAttributes.hpp"
+        #include "\z\a3cs\addons\modules\includes\moduleDeleteMarkerAttributes.hpp"
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};
     };

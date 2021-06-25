@@ -31,15 +31,13 @@ if (_className isEqualTo "") exitWith {
   deleteVehicle _logic;
 };
 
-private _func = compile format ["
-  [{
-    params [""_unit""];
-    if (isPlayer _unit || {_unit in playableUnits}) exitWith {};
-    _unit linkItem ""%1"";
-  }, _this] call CBA_fnc_execNextFrame;
-", _className];
+GVAR(aiNightvisionClassName) = _className;
 
-["CAManBase", "init", _func, true, [], true] call CBA_fnc_addClassEventHandler;
+["CAManBase", "initPost", {
+  params ['_unit'];
+  if (isPlayer _unit || {_unit in playableUnits}) exitWith {};
+  [{_this linkItem GVAR(aiNightvisionClassName);}, _unit, 3] call CBA_fnc_waitAndExecute;
+}, true, [], true] call CBA_fnc_addClassEventHandler;
 
 // Delete logic
 deleteVehicle _logic;

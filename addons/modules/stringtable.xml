@@ -377,6 +377,141 @@
     <Key ID="STR_A3CS_Modules_Attributes_logicFlagValue_tooltip">
       <Polish>Wartość jaka ma zostać nadana wybranej fladze.</Polish>
     </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_showMessageSettingsSubCategory">
+      <Polish>Wyświetlenie wiadomości</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_showMessage">
+      <Polish>Wyświetl wiadomość</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_showMessage_tooltip">
+      <Polish>Czy aktywacja akcji/modułu ma wyświetlić wiadomość</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageTarget">
+      <Polish>Grupa docelowa</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageTarget_tooltip">
+      <Polish>Komu ma się wyświetlić wiadomość. Niezależnie od wybranej opcji, wiadomość wyświetli się również zeusom.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageTarget_allPlayers">
+      <Polish>Wszyscy gracze</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageTarget_allPlayers_tooltip">
+      <Polish>Wiadomość wyświetli się wszystkim graczom w grze.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageTarget_playersInArea">
+      <Polish>Gracze w obszarze modułu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageTarget_playersInArea_tooltip">
+      <Polish>Wiadomość wyświetli się tylko graczom w obszarze modułu oraz zeusom.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageTarget_actionPlayer">
+      <Polish>Gracz który wykonał akcję</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageTarget_actionPlayer_tooltip">
+      <Polish>Wiadomość wyświetli się tylko graczowi który wykonał akcję oraz zeusom.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageType">
+      <Polish>Typ wiadomości</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageType_tooltip">
+      <Polish>W jaki sposób ma być wyświetlona wiadomość.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageType_hint">
+      <Polish>Hint</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageType_hint_tooltip">
+      <Polish>Wiadomość zostanie wyświetlona w postaci hinta.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageType_typedTextTop">
+      <Polish>Animowany tekst na górze ekranu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageType_typedTextTop_tooltip">
+      <Polish>Wiadomość zostanie wyświetlona w postaci animowanego tekstu na górze ekranu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageType_typedTextBottom">
+      <Polish>Animowany tekst na dole ekranu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageType_typedTextBottom_tooltip">
+      <Polish>Wiadomość zostanie wyświetlona w postaci animowanego tekstu na dole ekranu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageType_subtitle">
+      <Polish>Napis (kwestia)</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageType_subtitle_tooltip">
+      <Polish>Wiadomość zostanie wyświetlona w postaci napisu, taki sam jak napisy w konwersacjach. Idealnie nadaje się do nadania efektu typu jakaś postać coś mówi.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageType_confirmBox">
+      <Polish>Okienko z potwierdzeniem</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageType_confirmBox_tooltip">
+      <Polish>Wiadomość zostanie wyświetlona w postaci okienka na środku ekranu z koniecznością potwierdzenia przeczytania wiadomości.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageTitle">
+      <Polish>Tytuł wiadomości</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageTitle_tooltip">
+      <Polish>Tytuł wyświetlany w pasku tytułowym okienka wiadomości. Tekst obsługuje lokalizacje (może być kluczem stringtable).</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageName">
+      <Polish>Nazwa autora</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageName_tooltip">
+      <Polish>Nazwa autora wiadomości wyświetlana w napisie np. HQ albo Pan Janek. Tekst obsługuje lokalizacje (może być kluczem stringtable).</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageText">
+      <Polish>Treść wiadomości</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messageText_tooltip">
+      <Polish>Treść wyświetlonej wiadomości. Tekst obsługuje lokalizacje (może być kluczem stringtable).</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messagePlaySound">
+      <Polish>Odtwórz dźwięk wiadomości</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_messagePlaySound_tooltip">
+      <Polish>Czy wraz z wiadomością ma być odtworzony dźwięk. W przypadku hinta jest to dźwięk hinta. W przypadku animowanych tekstów jest to dźwięk pisania pojedynczych liter.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_showMarkerSettingsSubCategory">
+      <Polish>Pokazanie markera</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_showMarker">
+      <Polish>Pokaż marker</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_showMarker_tooltip">
+      <Polish>Czy w momencie aktywacji akcji/modułu ma zostać pokazany marker. Pamiętaj, że aby użyć tej opcji, musisz najpierw stworzyć marker w misji, a następnie ustawić jego widoczność na 0%. Wtedy tą opcją, możesz zmienić widoczność tego markera na podany w opcjach modułu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_showMarkerName">
+      <Polish>Nazwa markera</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_showMarkerName_tooltip">
+      <Polish>Nazwa markera który ma zostać pokazany.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_showMarkerName_desc">
+      <Polish>Nazwa markera który ma zostać pokazany np. marker_05. Jeśli chcesz pokazać więcej niż jeden marker, oddziel ich nazwy przecinkami np. marker_05, marker_07, marker_12 itd.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_showMarkerAlpha">
+      <Polish>Widoczność</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_showMarkerAlpha_tooltip">
+      <Polish>Jak bardzo marker ma być widoczny na mapie.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_deleteMarkerSettingsSubCategory">
+      <Polish>Usunięcie markera</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_deleteMarker">
+      <Polish>Usuń marker</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_deleteMarker_tooltip">
+      <Polish>Czy w momencie aktywacji akcji/modułu ma zostać usunięty marker.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_deleteMarkerName">
+      <Polish>Nazwa markera</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_deleteMarkerName_tooltip">
+      <Polish>Nazwa markera który ma zostać usunięty.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_deleteMarkerName_desc">
+      <Polish>Nazwa markera który ma zostać usunięty np. marker_05. Jeśli chcesz usunąć więcej niż jeden marker, oddziel ich nazwy przecinkami np. marker_05, marker_07, marker_12 itd.</Polish>
+    </Key>
   </Package>
   <Package name="Modules_dynamicToolboxActivationMode">
     <Key ID="STR_A3CS_Modules_dynamicToolboxActivationMode_value_missionStart">
@@ -1486,10 +1621,10 @@
   </Package>
   <Package name="Modules_generatorComposition">
     <Key ID="STR_A3CS_Modules_generatorComposition_displayName">
-      <Polish>Kompozycja generatora</Polish>
+      <Polish>Kompozycja generatora piechoty</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_generatorComposition_shortDescription">
-      <Polish>Moduł tworzy kompozycję (szablonu) grupy na podstawie grupy połączonej z modułem jednostki. Użycie kompozycji pozwala na dokładne odtworzenie grupy (wraz z wyposażeniem) w generatorach. Aby użyć kompozycji wystarzy stworzyć w edytorzę grupę zawierającą typy oraz ilość jednostek którą chcemy później generować, skonfigurować wyposażenie jednostek (za pomocą arsenału w edytorze) a następnie zsynchronizować (połączyć) którąś jednostkę z grupy (najlepiej lidera grupy) z modułem. Po dodaniu modułu kompozycji w edytorze oraz nadaniu jej nazwy, nazwa kompozycji będzie dostępna na liście kompozycji w generatorach.</Polish>
+      <Polish>Moduł tworzy kompozycję (szablonu) grupy na podstawie grupy połączonej z modułem jednostki. Użycie kompozycji pozwala na dokładne odtworzenie grupy (wraz z wyposażeniem) w generatorze piechoty. Aby użyć kompozycji wystarzy stworzyć w edytorzę grupę zawierającą typy oraz ilość jednostek którą chcemy później generować, skonfigurować wyposażenie jednostek (za pomocą arsenału w edytorze) a następnie zsynchronizować (połączyć) którąś jednostkę z grupy (najlepiej lidera grupy) z modułem. Po dodaniu modułu kompozycji w edytorze oraz nadaniu jej nazwy, nazwa kompozycji będzie dostępna na liście kompozycji w generatorach.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_generatorComposition_description">
       <Polish>Moduł uruchamia się na starcie misji i zapisuje zestaw klas i wyposażenie jednostek połączonej z modułem grupy. Moduł kompozycji zapisuje jedynie klasy i wyposażenie jednostek, pozostałe ustawienia jak poziom umiejętności, ranga itp, nie są używane (obowiązywać będą ustawienia modułu generatora). Jeden moduł może być połączony tylko z jedną jednostką której grupy chcemy użyć jako kompozycji. Jeśli w grupie znajdują się pojazdy, one oraz ich załogi będą ignorowane przy zapisie kompozycji (tylko jednostki piechoty "na nogach" będą zapisane jako kompozycja). Pamiętaj, że użycie kompozycji w module generatora stworzy dokładną kopię użytej w kompozycji grupy, dostosuj ilość jednostek w grupie zgodnie z przeznaczeniem kompozycji (np. osobna kompozycja dla jednostek patrolujących, osobna dla załóg garnizonów itp). Strona użytej grupy nie ma znaczenia przy tworzeniu kompozycji, przy generowaniu jednostek użyta będzie strona ustawiona w generatorze (np. możesz stworzyć kompozycję na podstawie grupy o stronie CIV albo INDEP a następnie użyć jej w generatorze do generowania grup po stronie OPFOR).</Polish>
@@ -1608,6 +1743,14 @@
       <Polish>Moduł odtwarza dźwięk 3D.</Polish>
     </Key>
   </Package>
+  <Package name="Modules_showMessage">
+    <Key ID="STR_A3CS_Modules_showMessage_displayName">
+      <Polish>Wyświetl wiadomość</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_showMessage_shortDescription">
+      <Polish>Wyświetla na ekranie wiadomość wybranej grupie graczy. Niezależnie od wybranej grupy, wiadomość wyświetli się również zeusom.</Polish>
+    </Key>
+  </Package>
   <Package name="Modules_onPlayerInArea">
     <Key ID="STR_A3CS_Modules_onPlayerInArea_displayName">
       <Polish>Gdy gracz w obszarze</Polish>
@@ -1650,7 +1793,7 @@
       <Polish>ID zadania</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_id_tooltip">
-      <Polish>Unikalny identyfikator zadania</Polish>
+      <Polish>Unikalny identyfikator zadania.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_id_desc">
       <Polish>ID zadania jest generowane automatycznie w momencie utworzenia modułu zadania (tylko do odczytu). Tego ID można użyć we własnych skryptach do zmiany statusu zadania lub tworzenia podzadań.</Polish>
@@ -1659,61 +1802,61 @@
       <Polish>Grupa docelowa</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_owner_tooltip">
-      <Polish>Grupa której wyświetli się dane zadanie</Polish>
+      <Polish>Grupa której wyświetli się dane zadanie.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_parent">
       <Polish>Zadanie nadrzędne</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_parent_tooltip">
-      <Polish>Zadanie pod którym wyświetlać będzie się to zadanie</Polish>
+      <Polish>Zadanie pod którym wyświetlać będzie się to zadanie.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_parent_none">
       <Polish>Brak</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_parent_none_tooltip">
-      <Polish>Brak zadania nadrzędnego</Polish>
+      <Polish>Brak zadania nadrzędnego.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_title">
       <Polish>Tytuł zadania</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_title_tooltip">
-      <Polish>Tytuł zadania</Polish>
+      <Polish>Tytuł zadania. Tekst obsługuje lokalizacje (może być kluczem z stringtable).</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_description">
       <Polish>Opis zadania</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_description_tooltip">
-      <Polish>Opis zadania</Polish>
+      <Polish>Opis zadania. Tekst obsługuje lokalizacje (może być kluczem z stringtable).</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_type">
       <Polish>Typ zadania</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_type_tooltip">
-      <Polish>Typ zadania</Polish>
+      <Polish>Typ zadania.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_state">
       <Polish>Stan początkowy</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_state_tooltip">
-      <Polish>Stan w jakim ma zostać stworzone zadanie</Polish>
+      <Polish>Stan w jakim ma zostać stworzone zadanie.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_showPos">
       <Polish>Pokaż na mapie</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_showPos_tooltip">
-      <Polish>Czy zadanie ma być wyświetlone na mapie (pozycja modułu)</Polish>
+      <Polish>Czy zadanie ma być wyświetlone na mapie (pozycja modułu).</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_showNotification">
       <Polish>Pokaż powiadomienie</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_showNotification_tooltip">
-      <Polish>Czy ma zostać wyświetlone powiadomienie w momencie dodania zadania</Polish>
+      <Polish>Czy ma zostać wyświetlone powiadomienie w momencie dodania zadania.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Attributes_showNotification_desc">
       <Polish>Powiadomienia o dodaniu zadania są ignorowane na starcie misji.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_createTask_Warning_EmptyTitle_Desc">
-      <Polish>Tytuł nie może być pusty</Polish>
+      <Polish>Tytuł nie może być pusty.</Polish>
     </Key>
   </Package>
   <Package name="Modules_setTaskState">
@@ -1754,6 +1897,25 @@
       <Polish>Nie wykryto żadnych zadań</Polish>
     </Key>
   </Package>
+  <Package name="Modules_showMarker">
+    <Key ID="STR_A3CS_Modules_showMarker_displayName">
+      <Polish>Pokaż marker</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_showMarker_shortDescription">
+      <Polish>Moduł pokazuje ukryty wcześniej marker. Aby móc użyć tego modułu, stwórz w misji marker oraz nadaj mu widoczność 0%. Następnie, nazwę stworzonego markera wpisz w module oraz wybierz nowy % widoczności markera. Po aktywacji modułu, marker pokaże się na mapie na podanym w module poziomie widoczności.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_showMarker_Warning_MissingMarker_Desc">
+      <Polish>Nazwa markera nie może być pusta.</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_deleteMarker">
+    <Key ID="STR_A3CS_Modules_deleteMarker_displayName">
+      <Polish>Usuń marker</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_deleteMarker_shortDescription">
+      <Polish>Moduł usuwa podany marker.</Polish>
+    </Key>
+  </Package>
   <Package name="Modules_onKilled">
     <Key ID="STR_A3CS_Modules_onKilled_displayName">
       <Polish>Gdy zabity/zniszczony</Polish>
@@ -1768,7 +1930,7 @@
       <Polish>Lista elementów na których zabicie/zniszczenie ma reagować modów. Parametr jest uzupełnieniem do zsynchronizowanych elementów, brane pod uwagę będą oba źrodła (synchro + podane zmienne).</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_onKilled_Attributes_objectsList_desc">
-      <Polish>Parametr opcjonalny. Możesz podać zmienne jeśli nie da rady użyć synchronizacji (np. obiekty mapy). Zmienne dla obiektów map możesz ustawić za pomocą modułu edycji obiektów terenu. Zmienne podawaj w formacie: zmienna1, zmienna2 itp.</Polish>
+      <Polish>UWAGA! Lista zmiennych powinna być używana tylko dla elementów mapy. Dla elementów postawionych w edytorze, użyj synchronizacji. Parametr opcjonalny. Możesz podać zmienne jeśli nie da rady użyć synchronizacji (np. obiekty mapy). Zmienne dla obiektów map możesz ustawić za pomocą modułu edycji obiektów terenu. Zmienne podawaj w formacie: zmienna1, zmienna2 itp.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_onKilled_Attributes_scriptHandler_desc">
       <Polish>Skrypt uruchomi się tylko na serwerze. Parametry:&lt;br/&gt;#0 _logic - moduł.&lt;br/&gt;#1 _objectList - lista wszystkich zsynchronizowanych jednostek/pojazdów/obiektów.</Polish>
@@ -1915,7 +2077,7 @@
       <Polish>Nazwa akcji</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_addAction_Attributes_title_tooltip">
-      <Polish>Nazwa akcji wyświetlana w menu interakcji.</Polish>
+      <Polish>Nazwa akcji wyświetlana w menu interakcji. Tekst obsługuje lokalizacje (może być kluczem stringtable).</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_addAction_Attributes_icon">
       <Polish>Ikona akcji</Polish>
@@ -2002,7 +2164,7 @@
       <Polish>Tekst paska postępu</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_addAction_Attributes_progressTitle_tooltip">
-      <Polish>Tekst który wyświetli się na pasku postępu w momencie wykonywania akcji.</Polish>
+      <Polish>Tekst który wyświetli się na pasku postępu w momencie wykonywania akcji. Tekst obsługuje lokalizacje (może być kluczem stringtable).</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_addAction_Attributes_progressTime">
       <Polish>Czas trwania akcji</Polish>
@@ -2092,7 +2254,7 @@
       <Polish>Kompozycja jednostek edytora</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_units3DENComp_shortDescription">
-      <Polish>Moduł tworzy jednostki, wraz z pojazdami oraz waypointami, na podstawie zapisanych w nim jednostek z edytora.&lt;br/&gt;&lt;br/&gt;Aby zapisać w module jednostki, połącz je z modułem a następnie przełącz moduł w tryb odczytu.</Polish>
+      <Polish>Moduł tworzy jednostki, wraz z pojazdami oraz waypointami, na podstawie zapisanych w nim jednostek z edytora.&lt;br/&gt;&lt;br/&gt;Aby zapisać w module jednostki, połącz je z modułem a następnie przełącz moduł w tryb odczytu.&lt;br/&gt;&lt;br/&gt;UWAGA! Jeśli ustawiasz niektórym jednostkom customowe wyposażenie, pamiętaj aby wyłączyć tym jednostkom randomizację. Wyposażenie jednostek z włączoną randomizacją nie jest zapisywane. WAŻNE!!! Należy tak robić (wyłączać randomizację) jedynie w wybranych i uzasadnionych przypadkach, wyłączanie randomizacji dla bardzo wielu jednostek na misji (a następnie zapisanie ich w module kompozycji jednostek edytora) może znacząco zwiększyć ilość danych jaką moduł będzie musiał wysłać przez sieć.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_baseSettingsSubCategory">
       <Polish>Ustawienia modułu</Polish>
@@ -2151,6 +2313,37 @@
     <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_goUpAfterSpawn_tooltip">
       <Polish>Po zaznaczeniu tej opcji, wszystkie jednostki które zostaną stworzone w innej pozie niż stojąca, wstaną zaraz po stworzeniu.\n\nMoże być to przydatna opcja do generowania jednostek w budynkach lub za osłonami, tak aby gracze nie widzieli spawnu.\n\nPamiętaj, że ta opcja dotyczy wszystkich wygenerowanych przez moduł jednostek.</Polish>
     </Key>
+
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_addUnitPostInit">
+      <Polish>Dodaj handler initu jednostek</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_addUnitPostInit_Tooltip">
+      <Polish>Dodaj własny skrypt uruchamiany dla każdej wygenerowanej jednostki.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_unitPostInit">
+      <Polish>Init jednostki</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_unitPostInit_tooltip">
+      <Polish>Skrypt zostanie wykonany dla każdej wygenerowanej jednoski po jej stworzeniu i nadaniu parametrów z modułu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_unitPostInit_desc">
+      <Polish>Skrypt zostanie wykonany na serwerze lub headlessie (zależnie od ustawień i obecności headlessa). Parametry: _this - wygenerowana jednostka.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_addGroupPostInit">
+      <Polish>Dodaj handler initu grupy</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_addGroupPostInit_tooltip">
+      <Polish>Dodaj własny skrypt uruchamiany dla każdej wygenerowanej grupy.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_groupPostInit">
+      <Polish>Init grupy</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_groupPostInit_tooltip">
+      <Polish>Skrypt zostanie wykonany dla każdej wygenerowanej grupy po jej stworzeniu (i wszystkich jej jednostek) i nadaniu parametrów z modułu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_groupPostInit_desc">
+      <Polish>Skrypt zostanie wykonany na serwerze lub headlessie (zależnie od ustawień i obecności headlessa) po wygenerowaniu wszystkich jednostek grupy. Parametry: _this - wygenerowana grupa.</Polish>
+    </Key>
     <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_vehicleSettingsSubCategory">
       <Polish>Ustawienia pojazdów</Polish>
     </Key>
@@ -2189,6 +2382,21 @@
     </Key>
     <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_clearVehCargo_desc">
       <Polish>Po zaznaczeniu tej opcji, wszystkie wygenerowane pojazdy będą miały wyczyszczone cargo (inventory).&lt;br/&gt;&lt;br/&gt;UWAGA! Z przyczyn optymalizacji, moduł NIE zapisuje cargo pojazdów. Tworzone przez moduł pojazdy mają swoje domyślne cargo (inventory - takie samo jak świeżo postawony pojazd w edytorze), ta opcja pozwala jedynie na jego wyczyszczenie.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_addVehiclePostInit">
+      <Polish>Dodaj handler initu pojazdów</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_addVehiclePostInit_tooltip">
+      <Polish>Dodaj własny skrypt uruchamiany dla każdego wygenerowanego pojazdu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_vehiclePostInit">
+      <Polish>Init pojazdu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_vehiclePostInit_tooltip">
+      <Polish>Skrypt zostanie wykonany dla każdego wygenerowanego pojazdu i nadaniu mu parametrów z modułu, ale PRZED stworzeniem jego załogi (jeśli istnieje).</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_vehiclePostInit_desc">
+      <Polish>Skrypt zostanie wykonany na serwerze lub headlessie (zależnie od ustawień i obecności headlessa) po wygenerowaniu pojazdu ale PRZED stworzeniem jego załogi. Parametry: _this - wygenerowany pojazd.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_units3DENComp_Warning_NoSyncedTrigger">
       <Polish>Brak zsynchronizowanego triggera</Polish>
@@ -2245,6 +2453,21 @@
     </Key>
     <Key ID="STR_A3CS_Modules_objects3DENComp_dataStats_format">
       <Polish>Obiektów: %1</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_Attributes_addObjectPostInit">
+      <Polish>Dodaj handler initu obiektów</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_Attributes_addObjectPostInit_tooltip">
+      <Polish>Dodaj własny skrypt uruchamiany dla każdego wygenerowanego obiektu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_Attributes_objectPostInit">
+      <Polish>Init obiektu</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_Attributes_objectPostInit_tooltip">
+      <Polish>Skrypt zostanie wykonany dla każdego wygenerowanego obiektu i nadaniu mu parametrów z modułu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_Attributes_objectPostInit_desc">
+      <Polish>Skrypt zostanie wykonany na serwerze po wygenerowaniu obiektu. Parametry: _this - wygenerowany obiekt.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_objects3DENComp_Warning_NoObjects_Desc">
       <Polish>Brak połączonych z modułem obiektów</Polish>

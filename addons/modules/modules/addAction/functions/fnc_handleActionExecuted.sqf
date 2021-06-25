@@ -18,6 +18,15 @@ _logic call FUNC(handlerModuleChangeTaskState);
 // Set logic flag value
 [_logic, false] call FUNC(moduleSetLogicFlagValue);
 
+// Show message
+[_logic, false, _player] call FUNC(moduleShowMessage);
+
+// Show marker
+[_logic, false] call FUNC(moduleShowMarker);
+
+// Delete marker
+[_logic, false] call FUNC(moduleDeleteMarker);
+
 // Exec server action handler
 if (_logic getVariable [QGVAR(addServerScriptHandler), false]) then {
   private _scriptHandler = _logic getVariable [QGVAR(serverScriptHandler), ""];

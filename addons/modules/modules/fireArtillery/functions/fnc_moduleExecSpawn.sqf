@@ -10,8 +10,7 @@ TRACE_1("fireArtillery_moduleExecSpawn",_logic);
 if (isNull _logic || {!isServer}) exitWith {};
 
 // Get logic area
-private _logicArea = [getPos _logic];
-_logicArea append (_logic getVariable ["objectarea", []]);
+private _logicArea = _logic call EFUNC(common,getLogicArea);
 
 // Target pos params
 private _targetPos = getPos _logic;

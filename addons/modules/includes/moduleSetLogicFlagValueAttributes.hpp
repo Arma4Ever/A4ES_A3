@@ -10,6 +10,7 @@ class GVAR(setLogicFlagValueSettingsSubCategory): GVAR(moduleSubCategory) {
         displayName = CSTRING(Attributes_setLogicFlagValue);
         tooltip = CSTRING(Attributes_setLogicFlagValue_tooltip);
         property = QGVAR(setLogicFlagValue);
+        defaultValue = "false";
         ATTRIBUTE_LOCAL;
     };
 #else
@@ -53,3 +54,6 @@ class GVAR(logicFlagValue): GVAR(dynamicCombo) {
 };
 
 #undef SETLOGICFLAGVALUE_COND
+#ifdef MODULE_SETLOGICFLAGVALUE
+    #undef MODULE_SETLOGICFLAGVALUE
+#endif

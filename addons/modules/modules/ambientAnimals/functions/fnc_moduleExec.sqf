@@ -31,8 +31,7 @@ _logic spawn {
   };
 
   private _animalsMaxIndex = _animalsCount - 1;
-  private _logicArea = [getPos _logic];
-  _logicArea append (_logic getVariable ["objectarea", []]);
+  private _logicArea = _logic call EFUNC(common,getLogicArea);
 
   private _animals = [];
 

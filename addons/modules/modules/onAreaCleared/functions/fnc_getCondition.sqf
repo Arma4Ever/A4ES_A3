@@ -6,8 +6,7 @@
 
 params ["_logic"];
 
-private _logicArea = [getPos _logic];
-_logicArea append (_logic getVariable ["objectarea", []]);
+private _logicArea = _logic call EFUNC(common,getLogicArea);
 
 private _logicRange = (_logicArea # 1) max (_logicArea # 2);
 if (_logicArea # 4) then {_logicRange = _logicRange * 1.4};

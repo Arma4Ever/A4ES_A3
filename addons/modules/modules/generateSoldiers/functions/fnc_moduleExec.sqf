@@ -15,8 +15,7 @@ if (is3DENPreview) then {
 LOG('Starting execution of EXEC_MODULE_NAME.');
 
 // Get logic area
-private _logicArea = [getPos _logic];
-_logicArea append (_logic getVariable ["objectarea", []]);
+private _logicArea = _logic call EFUNC(common,getLogicArea);
 
 // Calc behaviour boundary area
 private _boundaryArea = switch (_logic getVariable [QGVAR(behaviourAreaBoundary), 0]) do {
