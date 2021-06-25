@@ -20,9 +20,7 @@ if (_scriptName isNotEqualTo "") then {
 };
 
 // Localize message
-if (isLocalized _message) then {
-  _message = localize _message;
-};
+_message = _message call FUNC(localize);
 
 // Format message if params are present
 if (_params isNotEqualTo []) then {
