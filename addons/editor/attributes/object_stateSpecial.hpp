@@ -55,7 +55,7 @@ class GVAR(engineOn) {
     tooltip = CSTRING(engineOn_Tooltip);
     property = QGVAR(engineOn);
     control = "Checkbox";
-    expression = "if (_value) then {_this engineOn _value;};";
+    expression = "if (!is3DEN && _value) then {_this engineOn _value;};";
     defaultValue = "false";
     condition = "objectVehicle";
 };
@@ -64,7 +64,7 @@ class GVAR(enableHeadlights) {
     tooltip = CSTRING(enableHeadlights_Tooltip);
     property = QGVAR(enableHeadlights);
     control = "Checkbox";
-    expression = "if (_value) then {_this setPilotLight _value;};";
+    expression = "if (!is3DEN && _value) then {_this setPilotLight _value;};";
     defaultValue = "false";
     condition = "objectVehicle";
 };
