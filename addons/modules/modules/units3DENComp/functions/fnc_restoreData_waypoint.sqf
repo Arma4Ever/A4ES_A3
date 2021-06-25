@@ -14,7 +14,10 @@ _waypointData params [
   "_combatMode",
   "_behaviour",
   "_formation",
-  "_speedMode"
+  "_speedMode",
+  "_condition",
+  "_onActivation",
+  "_script"
 ];
 
 private _waypoint = _group create3DENEntity ["Waypoint", _className, _posATL];
@@ -26,3 +29,6 @@ _waypoint set3DENAttribute ["combatMode", _combatMode];
 _waypoint set3DENAttribute ["behaviour", _behaviour];
 _waypoint set3DENAttribute ["formation", _formation];
 _waypoint set3DENAttribute ["speedMode", _speedMode];
+_waypoint set3DENAttribute ["condition", _speedMode];
+_waypoint set3DENAttribute ["onActivation", _speedMode];
+_waypoint set3DENAttribute ["script", _speedMode];
