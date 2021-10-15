@@ -205,6 +205,6 @@ class GVAR(admins) {
     };
     class kreglu {
         uid = "76561198125906036";
-        allowedModules[] = {"endMission", "adminMessages", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
+        allowedModules[] = {"endMission", "adminMessages", "debugCurator", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
     };
 };
