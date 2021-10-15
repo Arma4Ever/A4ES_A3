@@ -12,10 +12,11 @@ class CfgPatches {
             "A3_Air_F_Jets_Plane_Fighter_02"
         };
         author = ECSTRING(main,Author);
-        authors[] = {"SzwedzikPL"};
+        authors[] = {"SzwedzikPL","Jonpas"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
 #include "CfgVehicles.hpp"
+#include "CfgEventHandlers.hpp"
