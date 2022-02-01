@@ -175,14 +175,6 @@ class GVAR(admins) {
         uid = "76561198044299447";
         allowedModules[] = {"endMission", "adminMessages", "debugCurator", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
     };
-    class jonny {
-        uid = "76561198119088699";
-        allowedModules[] = {"endMission", "adminMessages", "debugCurator", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
-    };
-    class minnow {
-        uid = "76561198264982630";
-        allowedModules[] = {"endMission", "adminMessages", "debugCurator", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
-    };
     class falcon {
         uid = "76561198050226790";
         allowedModules[] = {"endMission", "adminMessages", "debugCurator", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
@@ -195,16 +187,16 @@ class GVAR(admins) {
         uid = "76561198193343497";
         allowedModules[] = {"endMission", "adminMessages", "debugCurator", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
     };
-    class istan {
-        uid = "76561198017443011";
-        allowedModules[] = {"endMission", "adminMessages", "debugCurator", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
-    };
     class chicken {
         uid = "76561198286942055";
         allowedModules[] = {"endMission", "adminMessages", "debugCurator", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
     };
     class kreglu {
         uid = "76561198125906036";
+        allowedModules[] = {"endMission", "adminMessages", "debugCurator", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
+    };
+    class gazela {
+        uid = "76561198062200104";
         allowedModules[] = {"endMission", "adminMessages", "debugCurator", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
     };
 };
