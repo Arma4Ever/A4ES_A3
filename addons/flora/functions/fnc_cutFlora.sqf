@@ -17,8 +17,8 @@ if (isNull _target) exitWith {
 private _bbr = boundingBoxReal _target;
 private _objHeight = abs (((_bbr # 1) # 2) - ((_bbr # 0) # 2));
 
-// 0.95s every 1m
-private _actionTime = _objHeight * 0.95;
+// 0.5s every 1m
+private _actionTime = _objHeight * 0.5;
 
 TRACE_2("cutFlora object data",_target,_actionTime);
 
