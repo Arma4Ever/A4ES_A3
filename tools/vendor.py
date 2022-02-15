@@ -6,15 +6,18 @@ VENDOR = {
             "ace_advanced_fatigue",
             "ace_hearing",
             "ace_nametags",
-            "ace_sandbag"
+            "ace_sandbag",
+            "ace_volume",
+            "ace_viewrestriction",
+            "ace_headless",
+            "ace_killtracker"
+            # "ace_artillerytables",
+            # "ace_csw",
         ],
         "optionals": [
             os.path.join("@ace_nocrosshair", "addons", "ace_nocrosshair.pbo"),
             os.path.join("@ace_nouniformrestrictions", "addons", "ace_nouniformrestrictions.pbo"),
         ],
-    },
-    "@ACEX": {
-        "blacklist": ["acex_volume", "acex_viewrestriction", "acex_headless"],
     },
     "@LAMBS_Danger.fsm": {},
     "@LAMBS_Suppression": {},
@@ -57,6 +60,7 @@ VENDOR = {
     "@FRXA's TFAR Extra Retextured Equipment": {},
     "@ACD - Arma3 Containers And Decorations": {},
     "@Uriki's Mission Items": {},
+    "@Ragdoll Physics Plus+ v1.12": {},
     "-JSHK_Contamination_Gear": {},
     "-A3CS_vendor": {},
 }
