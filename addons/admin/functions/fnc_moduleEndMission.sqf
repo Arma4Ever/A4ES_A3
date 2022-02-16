@@ -76,4 +76,5 @@ if (_mode == "end") then {
     //_dbLog = format [localize LSTRING(Module_EndMission_EndMissionLog), player call EFUNC(common,getUnitName)];
     //_dbLog remoteExecCall [QEFUNC(server,missionLog), 2, false];
     [_endClass, true, true, true, false] remoteExec ["BIS_fnc_endMission", 0, true];
+    ["a3cs_missionEnded", _endClass] call CBA_fnc_globalEvent;
 };
