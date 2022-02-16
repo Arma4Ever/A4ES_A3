@@ -266,7 +266,7 @@ force force ace_nightvision_noiseScaling = 0.2;
 force force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
-force force ace_overheating_cookoffCoef = 1;
+force force ace_overheating_cookoffCoef = 0;
 force force ace_overheating_coolingCoef = 1;
 force force ace_overheating_displayTextOnJam = true;
 force force ace_overheating_enabled = true;
@@ -478,7 +478,7 @@ force emr_main_whitelistStr = "";
 
 // GRAD Trenches
 force force grad_trenches_functions_allowBigEnvelope = true;
-force force grad_trenches_functions_allowCamouflage = true;
+force force grad_trenches_functions_allowCamouflage = false;
 force force grad_trenches_functions_allowDigging = true;
 force force grad_trenches_functions_allowEffects = true;
 force force grad_trenches_functions_allowGiantEnvelope = true;
