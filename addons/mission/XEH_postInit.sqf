@@ -1,6 +1,22 @@
 #include "script_component.hpp"
 
+// Disable CUP lamps check - not pretty but works
+CUP_stopLampCheck = true;
+0 spawn {
+  CUP_stopLampCheck = true;
+  for "_i" from 1 to 10 do {
+    CUP_stopLampCheck = true;
+    sleep 0.5;
+  };
+  sleep 5;
+  // Disable CUP lamps check - make *really* sure
+  CUP_stopLampCheck = true;
+};
+
 if (hasInterface) then {
+  // Set current channel to global
+  setCurrentChannel 0;
+  // Disable client remote sensors
   disableRemoteSensors true;
 
   // Check if player has default "G" as throw keybind
@@ -50,7 +66,11 @@ if (!hasInterface) exitWith {};
 [{
   // Disable ambient life
   enableEnvironment [false, environmentEnabled # 1];
-  [{enableEnvironment [false, environmentEnabled # 1];}, 30] call CBA_fnc_addPerFrameHandler;
+  [{
+    if (environmentEnabled # 0) then {
+      enableEnvironment [false, environmentEnabled # 1];
+    };
+  }, 30] call CBA_fnc_addPerFrameHandler;
 
   // Validate mission template
   if ((getMissionConfigValue ["a3c_missionTemplate", 0]) < REQUIRED_MISSION_TEMPLATE_VERSION) then {
