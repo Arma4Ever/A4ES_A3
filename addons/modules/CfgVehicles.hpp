@@ -337,7 +337,7 @@ class CfgVehicles {
     #include "modules\onLogicFlags\module.hpp"
     #include "modules\onPlayerInArea\module.hpp"
     #include "modules\playSound\module.hpp"
-    #include "modules\radioJammer\module.hpp"
+    // #include "modules\radioJammer\module.hpp"
     #include "modules\registerArtilleryUnits\module.hpp"
     // #include "modules\setDamage\module.hpp"
     // #include "modules\setDraggable\module.hpp"
