@@ -12,6 +12,12 @@ if (
   ((crew _vehicle) select {alive _x}) isNotEqualTo []
 ) exitWith {};
 
+// Exit if air vehicle in motion
+if (
+  (_vehicle isKindOf "Air") &&
+  {(velocity _vehicle) isNotEqualTo [0, 0, 0]}
+) exitWith {};
+
 if !(dynamicSimulationEnabled _vehicle) then {
   TRACE_1("Enabling dyn sim for empty vehicle",_vehicle);
   _vehicle enableDynamicSimulation true;
