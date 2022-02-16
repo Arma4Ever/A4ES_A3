@@ -27,6 +27,11 @@ class CfgFunctions {
             delete extraction_onLoad;
             delete extraction_setup;
         };
+        class CreateObject {
+            // file = "3denEnhanced\functions\GUI\createObject";
+            class createObject_create;
+            class createObject_changeFilter;
+        };
         class TextureFinder {
             // file = "3denEnhanced\functions\GUI\TextureFinder";
             class textureFinder_copyPath;
@@ -53,22 +58,22 @@ class CfgFunctions {
             class functionsViewer_onTreeSelChanged;
             class functionsViewer_recompileSelected;
             class functionsViewer_searchkey;
+            class functionsViewer_setUpMenuStrip;
             class functionsViewer_togglePanel;
         };
         class ActionCreator {
             // file = "3denEnhanced\functions\GUI\actionCreator";
-            delete actionCreator_export;
-            delete actionCreator_onLoad;
+            delete actionCreator;
         };
         class BriefingEditor {
             // file = "3denEnhanced\functions\GUI\briefingEditor";
             delete briefingEditor_addTAG;
-            delete briefingEditor_createTemplate;
+            delete briefingEditor_handleTemplates;
             delete briefingEditor_export;
-            delete briefingEditor_getTemplate;
             delete briefingEditor_onLBSelChanged;
             delete briefingEditor_onLoad;
             delete briefingEditor_onUnload;
+            delete briefingEditor_htmlHighlight;
         };
         class PlacementTools {
             // file = "3denEnhanced\functions\GUI\placementTools";
@@ -131,24 +136,23 @@ class CfgFunctions {
             // file = "3denEnhanced\functions\GUI\VIM";
             class VIM_addItem;
             class VIM_applyAttribute;
+            class VIM_changeFilter;
             class VIM_clearInventory;
-            class VIM_createTemplate;
-            class VIM_deleteTemplate;
-            class VIM_filterList;
+            class VIM_close;
+            class VIM_export;
             class VIM_fullArsenal;
+            class VIM_handleTemplates;
             class VIM_lbAdd;
             class VIM_lnbAdd;
             class VIM_loadAttributeValue;
             class VIM_onModFilterChanged;
             class VIM_open;
-            class VIM_previewTemplate;
             class VIM_removeItem;
             class VIM_resetSearch;
             class VIM_resetStorage;
             class VIM_search;
-            class VIM_showTemplates;
+            class VIM_sort;
             class VIM_toggleVirtual;
-            class VIM_updateTemplateList;
         };
         class CfgSentencesBrowser {
             // file = "3denEnhanced\functions\GUI\CFGS";
@@ -176,43 +180,50 @@ class CfgFunctions {
         class Misc {
             // file = "3denEnhanced\functions\Misc";
             class 3denNotificationNoSound;
+            class alignEntities;
             class all3DENSelected;
             class deleteCrew;
             class deleteEmptyLayers {DUMMY_FNC};
             class dynamicViewDistance {DUMMY_FNC};
+            class exportMissionParams;
             class floatToTime;
             class generateSteamMissionDescription {DUMMY_FNC};
             class getAllItems;
+            class getConfigSourceAddon;
             class hasStorage;
             class loadoutTool;
             class measureDistance;
+            class preloadAmmoAttribute;
+            class pylonTools;
             class removeGear;
             class setOrientation;
+            class spaceEqually;
             class switchTime;
-            class toggleAIFeatures;
-            class toggleAttribute;
+            class systemTimeFormatted;
+            class toggleAttributes;
             class toggleDrawBuildingPositions;
             class toggleDrawDLCIcons;
             class toggleDrawHitpoints;
             class toggleGrass;
-            class twoDigitsStr;
             class toggleMarkerAlpha;
-            class getConfigSourceAddon;
+            class twoDigitsStr;
+            class VHCTools;
         };
         class Interface {
             // file = "3denEnhanced\functions\interface";
-            class 3DENCollapseAssetBrowser;
+            class assetBrowser_collapse;
+            class favoritesList;
             class locationList;
             class menuStrip_removeItems {DUMMY_FNC};
-            class sessionTimer;
             class statusbar_entityCounter;
+            class statusbar_sessionTimer;
         };
         class Log {
             // file = "3denEnhanced\functions\log";
+            class 3DENLog;
             class exportGUIDefines;
             class exportLoadout;
             class exportWithLB;
-            class log;
         };
         class Debug {
             // file = "3denEnhanced\functions\debug";
@@ -247,6 +258,7 @@ class CfgFunctions {
             delete establishingShot_onAttributeSave;
             delete groupMarker_onAttributeLoad;
             delete groupMarker_onAttributeSave;
+            delete groupMarker_onLoad;
             delete holdAction_onAttributeLoad;
             delete holdAction_onAttributeSave;
             delete introText_onAttributeLoad;
