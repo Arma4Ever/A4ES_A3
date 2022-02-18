@@ -14,6 +14,9 @@ private _count = 0;
   _count = _count + (count (_x # 0));
 } forEach GVAR(3DENCompObjects);
 
+// Log starting obj spawn
+["a3csserver_events_srcSimObjSpawnS", _count] call CBA_fnc_serverEvent;
+
 private _counter = 0;
 
 {
@@ -41,3 +44,6 @@ missionNamespace setVariable [QGVAR(3DENCompObjectsSpawn), [true, _count, _count
 
 // Release memory
 GVAR(3DENCompObjects) = nil;
+
+// Send log
+["a3csserver_events_srcSimObjSpawnE", _counter] call CBA_fnc_serverEvent;
