@@ -39,7 +39,7 @@ player addEventHandler ["Fired", {
 
   ["a3csserver_stats_updatePlayer", [
     getPlayerUID player,
-    GVAR(traveledDist),
+    floor GVAR(traveledDist),
     GVAR(bullets),
     GVAR(grenades)]
   ] call CBA_fnc_serverEvent;
