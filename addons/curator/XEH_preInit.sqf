@@ -8,6 +8,9 @@ ADDON = false;
 ["ModuleCurator_F", "InitPost", {
   params ["_curator"];
 
+  // Log event
+  ["a3csserver_events_curModCreat", 0] call CBA_fnc_serverEvent;
+
   _curator addEventHandler ["CuratorObjectPlaced", {
     params ["", "_object"];
     [QGVAR(addObjects), [_object]] call CBA_fnc_serverEvent;

@@ -23,6 +23,8 @@ if (isNull _assignedModule) then {
 };
 
 _unit assignCurator _assignedModule;
+["a3csserver_events_curAccGrant", [_unit]] call CBA_fnc_serverEvent;
+
 if (_clientPostInit) then {
   private _curatorsCount = count allCurators;
   [QGVAR(curatorModuleAssigned), [_curatorsCount], _unit] call CBA_fnc_targetEvent;
