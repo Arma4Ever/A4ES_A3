@@ -78,6 +78,10 @@ class Display3DEN {
 	};
     class ControlsBackground {
 		delete Eden_Extended_Objects_multiply_modal;
+
+        class Map: ctrlMap {
+            scaleMax = 8;
+        };
 	};
 	class Controls {
         delete Eden_Extended_Objects_multiply_dialog;

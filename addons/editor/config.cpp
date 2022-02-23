@@ -10,6 +10,7 @@ class CfgPatches {
             "a3cs_common",
             "ace_arsenal",
             "Eden_Extended_Objects",
+            "A3_Ui_F",
             "A3_3DEN",
             "A3_Data_F_Sams_Loadorder",
             "a3_expEden",

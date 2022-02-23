@@ -37,4 +37,5 @@ class ctrlToolbox;
 class ctrlToolboxPictureKeepAspect;
 class ctrlProgress;
 class ctrlStaticFrame;
+class ctrlMap;
 class scrollbar;
