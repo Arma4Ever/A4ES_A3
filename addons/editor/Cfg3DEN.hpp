@@ -238,6 +238,12 @@ class Cfg3DEN {
 					};
 				};
 			};
+            class Transformation {
+              class Attributes {
+                  delete ENH_SetMass;
+                  delete ENH_ObjectScaling;
+              };
+            };
 
             #include "attributes\object_disableAI.hpp"
 		};
