@@ -8,3 +8,4 @@ params ["_object"];
 
 private _objects = missionNamespace getVariable [QGVAR(editable3DENObjects), []];
 _objects pushBack _object;
+missionNamespace setVariable [QGVAR(editable3DENObjects), _objects];
