@@ -32,7 +32,9 @@ if (isNull _logic) exitWith {
   _moduleList deleteAt _index;
 };
 
-if (_params call _condition) then {
+private _result = _params call _condition;
+
+if (!(isNil "_result") && {_result}) then {
   _moduleList deleteAt _index;
   _params call _activation;
   // Removed current index - no need for index increase
