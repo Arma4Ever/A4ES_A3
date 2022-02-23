@@ -20,12 +20,20 @@ private _count = 0;
 private _counter = 0;
 
 {
-  _x params ["_data", "_initScript"];
+  _x params ["_data", "_initScript", "_spawnAsSuperSimple"];
 
   {
-    _x params ["", "_model", "", "_posWorld", "", "_vectors"];
-    private _object = createSimpleObject [_model, _posWorld];
-    _object setVectorDirAndUp _vectors;
+    _x params ["_class", "_model", "", "_posWorld", "", "_vectors"];
+    private _object = objNull;
+    if (_spawnAsSuperSimple) then {
+      _object = createSimpleObject [_model, _posWorld];
+      _object setVectorDirAndUp _vectors;
+    } else {
+      _object = createSimpleObject [_class, _posWorld];
+      _object setPosWorld _posWorld;
+      _object setVectorDirAndUp _vectors;
+    };
+
     _object call _initScript;
     _counter = _counter + 1;
 
@@ -34,8 +42,10 @@ private _counter = 0;
       missionNamespace setVariable [QGVAR(3DENCompObjectsSpawn), [true, _counter, _count, false], true];
       _lastUpdate = CBA_missionTime;
     };
-    // One object per frame
-    sleep 0.001;
+    // 2 objects per frame
+    if ((_counter mod 2) isEqualTo 0) then {
+      sleep 0.001;
+    };
   } forEach _data;
 } forEach GVAR(3DENCompObjects);
 

@@ -28,7 +28,7 @@ class CfgPatches {
             "A3_Missions_F_Beta",
             "A3_Missions_F_Curator",
             "A3_Modules_F_MP_Mark",
-            "acex_fortify",
+            "ace_fortify",
             "A3_Modules_F_Misc",
             "ace_respawn",
             "A3_Modules_F_Hc",

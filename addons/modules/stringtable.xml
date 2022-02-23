@@ -2434,7 +2434,7 @@
       <Polish>Kompozycja obiektów edytora</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_objects3DENComp_shortDescription">
-      <Polish>Moduł tworzy obiekty proste (super proste - same modele) na podstawie zapisanych w nim obiektów z edytora.&lt;br/&gt;&lt;br/&gt;Aby zapisać w module obiekty, połącz je z modułem a następnie przełącz moduł w tryb odczytu.</Polish>
+      <Polish>Moduł tworzy obiekty proste (super proste - same modele lub proste - obiekt z ograniczoną symulacją) na podstawie zapisanych w nim obiektów z edytora.&lt;br/&gt;&lt;br/&gt;Aby zapisać w module obiekty, połącz je z modułem a następnie przełącz moduł w tryb odczytu.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_objects3DENComp_Attributes_baseSettingsSubCategory">
       <Polish>Ustawienia modułu</Polish>
@@ -2453,6 +2453,12 @@
     </Key>
     <Key ID="STR_A3CS_Modules_objects3DENComp_dataStats_format">
       <Polish>Obiektów: %1</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_Attributes_spawnAsSuperSimple">
+      <Polish>Twórz obiekty super proste</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_Attributes_spawnAsSuperSimple_tooltip">
+      <Polish>Po zaznaczeniu tej opcji obiekty będą tworzone jako obiekty super proste. Użyj tej opcji jeśli w kompozycji zapisałeś obiekty które mają być tylko niezniszczalną dekoracją. Odnaczenie tej opcji spowoduje tworzenie obiektów prostych na których można wykonywać później niektóre operacje skryptowe (np. reskin czy animowanie).</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_objects3DENComp_Attributes_addObjectPostInit">
       <Polish>Dodaj handler initu obiektów</Polish>

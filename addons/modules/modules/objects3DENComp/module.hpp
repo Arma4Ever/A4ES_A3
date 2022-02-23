@@ -52,6 +52,13 @@ class GVAR(objects3DENComp): GVAR(base) {
             ATTRIBUTE_IGNORED;
         };
 
+        class GVAR(spawnAsSuperSimple): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(objects3DENComp_Attributes_spawnAsSuperSimple);
+            tooltip = CSTRING(objects3DENComp_Attributes_spawnAsSuperSimple_tooltip);
+            property = QGVAR(spawnAsSuperSimple);
+            defaultValue = "true";
+        };
+
         class GVAR(addObjectPostInit): GVAR(dynamicCheckbox) {
             displayName = CSTRING(objects3DENComp_Attributes_addObjectPostInit);
             tooltip = CSTRING(objects3DENComp_Attributes_addObjectPostInit_tooltip);
