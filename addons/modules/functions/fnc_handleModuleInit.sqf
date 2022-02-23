@@ -44,4 +44,6 @@ if (_module isKindOf QGVAR(objects3DENComp)) then {
 };
 
 // Setup module variables
-_module spawn FUNC(updateModuleValues);
+_module spawn {
+  _this call FUNC(updateModuleValues);
+};
