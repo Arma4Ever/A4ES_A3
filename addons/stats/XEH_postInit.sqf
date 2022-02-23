@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if !(hasInterface) exitWith {};
+if (!hasInterface || !isMultiplayer) exitWith {};
 
 // Exit if curator/spectator
 if ((side (group player)) isEqualTo sideLogic) exitWith {};
