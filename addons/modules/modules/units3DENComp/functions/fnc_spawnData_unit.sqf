@@ -4,7 +4,7 @@
  * Spawns unit from unit data during game
  */
 
-params ["_unitData", "_group", "_vehicles", "_goUpAfterSpawn", "_unitPostInit"];
+params ["_unitData", "_group", "_initVar", "_vehicles", "_goUpAfterSpawn", "_unitPostInit"];
 TRACE_2("units3DENComp_spawnData_unit",_unitData,_group);
 
 _unitData params [
@@ -25,13 +25,18 @@ _unitData params [
   "_aceIsHandcuffed"
 ];
 
-private _init = format ["%1 = this;", QGVAR(spawnDataUnit)];
-_className createUnit [[0, 0, 0], _group, _init, _skill];
-private _unit = missionNamespace getVariable [QGVAR(spawnDataUnit), objNull];
+private _init = format ["%1 = this;", _initVar];
+_className createUnit [[0, 0, 500], _group, _init, _skill];
+private _unit = objNull;
+private _startTime = CBA_missionTime;
+waitUntil {
+  _unit = missionNamespace getVariable [_initVar, objNull];
+  !(isNull _unit) || {(CBA_missionTime - _startTime) > 5}
+};
 if (isNull _unit) exitWith {
   TRACE_2("units3DENComp_spawnData_unit: getting unit ref failed",_group,_units);
 };
-missionNamespace setVariable [QGVAR(spawnDataUnit), objNull];
+missionNamespace setVariable [_initVar, objNull];
 
 if (_disableRandomization) then {
   _unit call EFUNC(common,disableRandomization);

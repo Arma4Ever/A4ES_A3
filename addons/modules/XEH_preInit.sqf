@@ -4,6 +4,8 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
+GVAR(spawningUnit) = false;
+
 if (isServer) then {
   GVAR(moduleActivatorCyclePFH) = -1;
   GVAR(moduleActivatorCycleIndex) = -1;
