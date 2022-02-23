@@ -15,6 +15,8 @@
 #endif
 
 #define ATTRIBUTE_LOCAL expression = QUOTE(_this setVariable [ARR_2('%s',_value)];)
+#define ATTRIBUTE_LOCAL expression = QUOTE(_this setVariable [ARR_2('%s',_value)];) \
+__isLocalAttr = 1
 #define ATTRIBUTE_IGNORED expression = ""
 
 #define AI_FEATURES ["TARGET", "AUTOTARGET", "MOVE", "ANIM", "TEAMSWITCH", "FSM", "WEAPONAIM", "AIMINGERROR", "SUPPRESSION", "CHECKVISIBLE", "COVER", "AUTOCOMBAT", "PATH", "MINEDETECTION", "NVG", "LIGHTS", "RADIOPROTOCOL"]

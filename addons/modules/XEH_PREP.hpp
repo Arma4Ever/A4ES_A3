@@ -3,6 +3,7 @@ PREP(addModuleFlagActivator);
 PREP(addModuleToActivator);
 PREP(assetsTreeCopy);
 PREP(assetsTreeParse);
+PREP(convertToNamespace);
 PREP(display3DENEditAttributes_onLoad);
 PREP(dynamicCheckbox_attributeLoad);
 PREP(dynamicClassSelect_addClassToList);

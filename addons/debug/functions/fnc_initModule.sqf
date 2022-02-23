@@ -14,20 +14,6 @@ if (_index isNotEqualTo -1) exitWith {
 };
 
 private _logicConfig = configOf _logic;
-private _icon = getText (_logicConfig >> "icon");
-
-_logic addEventHandler ["deleted", {
-  params ["_logic"];
-  private _logicId = _logic call BIS_fnc_netId;
-
-  // Update module status if known id, update all deleted modules if not
-  if (_logicId isEqualTo "") then {
-    0 call FUNC(updateDeletedModules);
-  } else {
-    [_logicId] call FUNC(handleModuleDeleted);
-  };
-}];
-
 private _syncs = (synchronizedObjects _logic) select {
   !(_x isKindOf "EmptyDetector")
 };
@@ -44,13 +30,24 @@ if (
   _activationRange = _logic getVariable [QEGVAR(modules,activationNearestPlayerDistance), 0];
 };
 
+private _saveLogic = _logic;
+private _replaced = false;
+if !(isNull (_logic getVariable [QGVAR(replaceOnInit), locationNull])) then {
+  _saveLogic = _logic getVariable [QGVAR(replaceOnInit), locationNull];
+  _saveLogic call FUNC(addLogicDeletedEH);
+  _replaced = true;
+  TRACE_2("Replacing logic on debug init",_logic,_saveLogic);
+} else {
+  _logic call FUNC(addLogicDeletedEH);
+};
+
 private _index = GVAR(modulesDrawData) pushBack [
-  _logic,
+  _saveLogic,
   _logic call BIS_fnc_netId,
   false,
   [
     getPos _logic,
-    getText ((configOf _logic) >> "icon"),
+    getText (_logicConfig >> "icon"),
     [0, 0, 0, 1],
     [1, 1, 1, 1],
     [0, 0, 0.9, 1],
@@ -63,5 +60,10 @@ private _index = GVAR(modulesDrawData) pushBack [
     _syncs
   ]
 ];
+
+if (_replaced) then {
+  TRACE_1("Removing replaced logic",_logic);
+  _logic call CBA_fnc_deleteEntity;
+};
 
 _index

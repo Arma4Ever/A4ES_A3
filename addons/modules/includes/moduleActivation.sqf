@@ -32,6 +32,21 @@ if (_activationMode isEqualTo 3) exitWith {
 
 // Activation by proximity, flags or condition
 if (_activationMode in [0, 1, 2]) exitWith {
+  // Convert logic to namespace if not synced with anything
+  if ((synchronizedObjects _logic) isEqualTo []) then {
+    private _newLogic = _logic call FUNC(convertToNamespace);
+
+    if (is3DENPreview) then {
+      [_logic, _newLogic] call EFUNC(debug,replaceModuleStatus);
+      _logic setVariable [QEGVAR(debug,replaceOnInit), _newLogic];
+    } else {
+      deleteVehicle _logic;
+    };
+
+    _logic = _newLogic;
+  };
+
+  // Get condition
   private _condition =  [_logic, _activationMode] call FUNC(getModuleActivatorCond);
   // Add module to activator system
   [_logic, _condition, _logic, QUOTE(EXEC_MODULE_FNC), _activationDelayTime] call FUNC(addModuleToActivator);

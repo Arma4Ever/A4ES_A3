@@ -24,12 +24,14 @@ private _initWatcher = "a3cs_debug" callExtension "missionPreviewStart";
 if (_initWatcher isEqualTo "true") then {
   systemChat LLSTRING(StartLogsWatcher);
 
+  private _show = profileNamespace getVariable [QGVAR(showLogs), false];
+
   QGVAR(logsList) cutRsc [QGVAR(logsList), "PLAIN", -1, false];
   private _display = uiNamespace getVariable [QGVAR(logsList), displayNull];
   if !(isNull _display) then {
     private _logsListTextCtrl = _display displayCtrl IDC_LOGSLIST;
     _logsListTextCtrl ctrlSetBackgroundColor [0, 0, 0, 0.45];
-    _logsListTextCtrl ctrlSetFade (parseNumber (!GVAR(showLogs)));
+    _logsListTextCtrl ctrlSetFade (parseNumber (!_show));
     _logsListTextCtrl ctrlCommit 0;
   };
 
