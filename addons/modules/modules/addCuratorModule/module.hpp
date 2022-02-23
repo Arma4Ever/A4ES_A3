@@ -16,6 +16,7 @@ class GVAR(addCuratorModule): GVAR(base) {
             displayName = CSTRING(addCuratorModule_Attributes_category);
             tooltip = CSTRING(addCuratorModule_Attributes_category_Tooltip);
             property = QGVAR(category);
+            GVAR(observeValue) = 1;
             ATTRIBUTE_LOCAL;
         };
 
@@ -23,6 +24,7 @@ class GVAR(addCuratorModule): GVAR(base) {
             displayName = CSTRING(addCuratorModule_Attributes_name);
             tooltip = CSTRING(addCuratorModule_Attributes_name_Tooltip);
             property = QGVAR(name);
+            GVAR(observeValue) = 1;
             ATTRIBUTE_LOCAL;
         };
 
@@ -39,6 +41,7 @@ class GVAR(addCuratorModule): GVAR(base) {
             tooltip = CSTRING(addCuratorModule_Attributes_function_Tooltip);
             GVAR(description) = CSTRING(addCuratorModule_Attributes_function_Description);
             property = QGVAR(function);
+            GVAR(observeValue) = 1;
             ATTRIBUTE_LOCAL;
         };
 
