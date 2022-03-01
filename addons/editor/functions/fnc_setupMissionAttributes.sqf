@@ -23,10 +23,10 @@ if (
   if (_garbageCollectionSetuped) then {
     WARNING_2("Scenario saved on older A3CS version. Scenario created on: '%1', current version: '%2'.",_a3csVersion,_currentVersion);
     // Show info box about version mismatch
-    0 spawn {
+    [_currentVersion, _a3csVersion] spawn {
       sleep 0.001;
       [
-        LLSTRING(Warning_A3CSVersionMismatch_Message),
+        format [LLSTRING(Warning_A3CSVersionMismatch_Message), _this # 1, _this # 0],
         LLSTRING(Warning_A3CSVersionMismatch_Title),
         false,
         'OK'

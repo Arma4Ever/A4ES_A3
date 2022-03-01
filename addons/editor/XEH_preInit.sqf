@@ -12,7 +12,10 @@ GVAR(assetsTreeFilterLoop) = scriptNull;
 GVAR(currentAssetsTreeCount) = 0;
 
 // Setup mission attributes
-0 call FUNC(setupMissionAttributes);
+0 spawn {
+  sleep 1;
+  0 call FUNC(setupMissionAttributes);
+};
 0 spawn FUNC(initAssetsTreeFiltering);
 
 // Add units init EH for setup of dynamic simulation

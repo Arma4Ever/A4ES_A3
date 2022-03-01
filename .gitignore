@@ -17,6 +17,7 @@ texHeaders.bin
 *.biprivatekey
 Thumbs.db
 CHANGELOG.md
+addons/marker_flags/*
 
 __pycache__
 vendor/*

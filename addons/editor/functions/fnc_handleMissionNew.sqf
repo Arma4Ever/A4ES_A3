@@ -4,4 +4,7 @@
  * Handles onMissionNew 3DEN event
  */
 
-0 call FUNC(setupMissionAttributes);
+0 spawn {
+  sleep 1;
+  0 call FUNC(setupMissionAttributes);
+};
