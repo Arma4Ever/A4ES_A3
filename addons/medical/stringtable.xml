@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
   <Package name="Medical">
-    <Key ID="STR_A3CS_Medical_AttributeCategory">
-      <English>ACE Medical system</English>
-      <Polish>System medyczny ACE</Polish>
+    <Key ID="STR_A3CS_Medical_Medications">
+      <English>Medications</English>
+      <Polish>Medykamenty</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_Attributes_disableSystem">
-      <English>Disable medical system ACE</English>
-      <Polish>Wyłącz system medyczny ACE</Polish>
+    <Key ID="STR_A3CS_Medical_DressingSet_Display">
+      <English>Dressing set</English>
+      <Polish>Zestaw opatrunkowy</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_Attributes_disableSystem_Tooltip">
-      <English>Disables ACE medical system. All features of medical system will not work, but medical items will still be availble (but without any use in game). This will NOT enable vanilla medical actions. If you disable ACE medical system you'll need to provide healing mechanics on your own (script in mission).</English>
-      <Polish>Wyłącza system medyczny ACE. Wszystkie funkcje systemu medycznego nie będą działać, lecz itemy medyczne wciąż będą dostępne (ale beż żadnych funkcji z ACE). Wyłączenie systemu medycznego NIE włączy armowych akcji leczenia. Jeśli wyłączysz system medyczny będziesz musiał dostarczyć opcję leczenia samodzielnie (jako skrypt w misji).</Polish>
+    <Key ID="STR_A3CS_Medical_DressingSet_Desc_Short">
+      <English>Speeds up medical actions for medics.</English>
+      <Polish>Przyspiesza medykom akcje medyczne.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_Attributes_enableACEDamage">
-      <English>Enable ACE damage handling</English>
-      <Polish>Włącz obsługę obrażeń ACE</Polish>
+    <Key ID="STR_A3CS_Medical_DressingSet_Desc_Use">
+      <English>When placed, it speeds up medical actions for medics around it.</English>
+      <Polish>Gdy rozłożony, przyspiesza akcje medyczne medykom w jego otoczeniu.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_Attributes_enableACEDamage_Tooltip">
-      <English>Enables ACE damage handling. After enabling this, unit's damage will be handled by ACE medical system. This option can influence ONLY AI UNITS. For players ACE damage handling IS ALWAYS ENABLED. Leaving this option disabled will mean that unit's damage will be handled only by Arma's damage system, without ACE influence, and won't be visible in unit's ACE medical menu.</English>
-      <Polish>Włącza obsługę obrażeń ACE. Włączenie obsługi obrażeń ACE spowoduje, iż obrażenia AI będą rejestrowane przez system medyczny ACE tak jak w przypadku graczy. Ta opcja NIE DOTYCZY GRACZY, dla których obsługa obrażeń przez system medyczny ACE jest ZAWSZE włączona. Wyłączona obsługa obrażeń przez system ACE powoduje, iż wszelkie obrażenia otrzymywane przez AI będą kalkulowane przez armowy system, bez ingerencji ACE, oraz nie będą widoczne w menu medycznym ACE danej jednostki.</Polish>
+    <Key ID="STR_A3CS_Medical_ActionPickUpDressingSet">
+      <English>Pick up dressing set</English>
+      <Polish>Podnieś zestaw opatrunkowy</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Medical_ActionPlaceDressingSet">
+      <English>Place dressing set</English>
+      <Polish>Rozłóż zestaw opatrunkowy</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Medical_DressingSet_NoPlaceInInventory">
+      <English>Not enough place in inventory to pickup dressing set</English>
+      <Polish>Za mało miejsca w ekwipunku aby podnieść zestaw opatrunkowy</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Medical_Painkillers_DisplayName">
+      <English>Painkillers</English>
+      <Polish>Leki przeciwbólowe</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Medical_Painkillers_Progress">
+      <English>Administering painkillers...</English>
+      <Polish>Podawanie leków przeciwbólowych...</Polish>
     </Key>
   </Package>
 </Project>

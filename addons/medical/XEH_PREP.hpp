@@ -1,6 +1,11 @@
 
+PREP(canPlaceDressingSet);
 PREP(ejectPlayerFromWreck);
+PREP(getTreatmentTimeIV);
+PREP(getTreatmentTimeSplint);
 PREP(handleEntityKilled);
-PREP(isMedic);
+PREP(isInDressingSetRange);
+PREP(onSurgicalKitSuccess);
+PREP(pickUpDressingSet);
+PREP(placeDressingSet);
 PREP(startEjectPlayerFromWreck);
-PREP(updateMedicalLocalUnits);

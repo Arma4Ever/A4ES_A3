@@ -1,0 +1,19 @@
+#include "script_component.hpp"
+/*
+ * Author: SzwedzikPL
+ * Returns treatment time for IV action
+ */
+
+params ["_medic"];
+
+private _time = ace_medical_treatment_treatmentTimeIV;
+
+if ([_medic] call ACEFUNC(medical_treatment,isMedic)) then {
+  _time = _time * 0.5;
+
+  if (_medic call a3cs_medical_fnc_isInDressingSetRange) then {
+    _time = _time * 0.5;
+  };
+};
+
+_time
