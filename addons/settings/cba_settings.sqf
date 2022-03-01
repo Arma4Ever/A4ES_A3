@@ -191,7 +191,7 @@ force force ace_maptools_drawStraightLines = false;
 
 // ACE Medical
 force force ace_medical_ai_enabledFor = 0;
-force force ace_medical_AIDamageThreshold = 0.7;
+force force ace_medical_AIDamageThreshold = 0.49;
 force force ace_medical_bleedingCoefficient = 0.36;
 force force ace_medical_blood_bloodLifetime = 600;
 force force ace_medical_blood_enabledFor = 2;
@@ -217,7 +217,7 @@ force force ace_medical_spontaneousWakeUpChance = 0.85;
 force force ace_medical_spontaneousWakeUpEpinephrineBoost = 2.5;
 force force ace_medical_statemachine_AIUnconsciousness = false;
 force force ace_medical_statemachine_cardiacArrestBleedoutEnabled = true;
-force force ace_medical_statemachine_cardiacArrestTime = 600;
+force force ace_medical_statemachine_cardiacArrestTime = 390;
 force force ace_medical_statemachine_fatalInjuriesAI = 0;
 force force ace_medical_statemachine_fatalInjuriesPlayer = 2;
 force force ace_medical_treatment_advancedBandages = 2;
@@ -347,6 +347,7 @@ force force ace_trenches_smallEnvelopeDigDuration = 20;
 force force ace_trenches_smallEnvelopeRemoveDuration = 12;
 
 // ACE Uncategorized
+force force a3cs_marker_flags_placeAnywhere = true;
 force force ace_fastroping_requireRopeItems = false;
 force force ace_gunbag_swapGunbagEnabled = true;
 force force ace_hitreactions_minDamageToTrigger = 0.1;
