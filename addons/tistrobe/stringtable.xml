@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+  <Package name="TIStrobe">
+    <Key ID="STR_A3CS_TIStrobe_StrobeItem_DisplayName">
+      <English>IR-Thermal Strobe</English>
+      <Polish>IR-Thermal Strobe</Polish>
+    </Key>
+    <Key ID="STR_A3CS_TIStrobe_StrobeItem_Description">
+      <English>IR-Thermal Strobe allows to mark your position with light visible only in nightvision and thermalvision</English>
+      <Polish>IR-Thermal Strobe pozwala na oznaczenie swojej pozycji migającym światłem widocznym tylko w noktowizji oraz termowizji</Polish>
+    </Key>
+  </Package>
+</Project>
