@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+    <Package name="Microdagr">
+        <Key ID="STR_A3CS_Microdagr_BroadCastingPosition">
+            <English>Broadcasting position</English>
+            <Polish>Nadawanie pozycji</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_ReceivingPosition">
+            <English>Receiving position</English>
+            <Polish>Odbieranie pozycji</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_CallSign">
+            <English>Call sign</English>
+            <Polish>Call sign</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_CallSign_None">
+            <English>None</English>
+            <Polish>Brak</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_Icon">
+            <English>Icon</English>
+            <Polish>Ikona</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_Icon_Auto">
+            <English>Auto</English>
+            <Polish>Auto</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_Icon_Inf">
+            <English>Infantry</English>
+            <Polish>Piechota</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_Icon_Motor">
+            <English>Motorized</English>
+            <Polish>Zmotoryzowany</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_Icon_Mech">
+            <English>Mechanized</English>
+            <Polish>Zmechanizowany</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_Icon_Med">
+            <English>Medical</English>
+            <Polish>Medyczna</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_Icon_Recon">
+            <English>Recon</English>
+            <Polish>Zwiad</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_Icon_Armor">
+            <English>Armor</English>
+            <Polish>Pancerna</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_Icon_Air">
+            <English>Helicopter</English>
+            <Polish>Śmigłowiec</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_Icon_Plane">
+            <English>Plane</English>
+            <Polish>Samolot</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_Icon_Mortar">
+            <English>Mortar</English>
+            <Polish>Moździerz</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_Icon_Art">
+            <English>Artillery</English>
+            <Polish>Artyleria</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_Icon_Maint">
+            <English>Maintenance</English>
+            <Polish>Serwis</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Microdagr_Icon_Naval">
+            <English>Ship</English>
+            <Polish>Okręt</Polish>
+        </Key>
+    </Package>
+</Project>
