@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+  <Package name="Map">
+    <Key ID="STR_A3CS_Map_Tank">
+      <Polish>Czołg</Polish>
+    </Key>
+  </Package>
+</Project>

@@ -1,5 +1,5 @@
-#define COMPONENT markers
-#define COMPONENT_BEAUTIFIED Markers
+#define COMPONENT map
+#define COMPONENT_BEAUTIFIED Map
 #include "\z\a3cs\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
