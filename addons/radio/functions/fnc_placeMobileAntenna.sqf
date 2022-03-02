@@ -23,4 +23,7 @@ _player removeItem "tfw_rf3080Item";
   if ((getPosATL _antenna select 2) - (getPos _antenna select 2) < 1E-5) then {
       _antenna setVectorUp (surfaceNormal (position _antenna));
   };
+
+  // A3CSServer event
+  ["a3csserver_events_userAntennaDep", [_player]] call CBA_fnc_serverEvent;
 }, [_player], 1] call CBA_fnc_waitAndExecute;

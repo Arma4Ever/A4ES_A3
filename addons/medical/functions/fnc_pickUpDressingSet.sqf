@@ -29,4 +29,7 @@ _player playActionNow "PutDown";
   // Pickup
   deleteVehicle _target;
   _player addItem "A3CS_dressingSet";
+
+  // A3CSServer event
+  ["a3csserver_events_userDressSetRem", [_player]] call CBA_fnc_serverEvent;
 }, [_target, _player], 1] call CBA_fnc_waitAndExecute;

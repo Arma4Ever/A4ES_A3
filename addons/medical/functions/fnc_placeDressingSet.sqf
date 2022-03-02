@@ -15,4 +15,7 @@ _player playActionNow "PutDown";
   private _pos = _player modelToWorld [0, 1.2, 0];
   private _obj = QGVAR(dressingSet) createVehicle _pos;
   _obj setPos _pos;
+
+  // A3CSServer event
+  ["a3csserver_events_userDressSetDep", [_player]] call CBA_fnc_serverEvent;
 }, [_player], 1] call CBA_fnc_waitAndExecute;
