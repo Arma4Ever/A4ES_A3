@@ -13,7 +13,7 @@ if (
 ) exitWith {
   if (_entity isKindOf "AllVehicles") then {
     // Enable dyn sim for wrecks
-    if !(dynamicSimulationEnabled _entity) then {
+    if !(dynamicSimulationEnabled _entity || {_entity isKindOf "CAManBase"}) then {
       TRACE_1("Enabling dyn sim for wreck",_entity);
       _entity enableDynamicSimulation true;
     };
