@@ -61,6 +61,7 @@ VENDOR = {
     "@ACD - Arma3 Containers And Decorations": {},
     "@Uriki's Mission Items": {},
     "@Ragdoll Physics Plus+ v1.12": {},
+    "@Enhanced Map Ace Version": {},
     "-JSHK_Contamination_Gear": {},
     "-A3CS_vendor": {},
 }
