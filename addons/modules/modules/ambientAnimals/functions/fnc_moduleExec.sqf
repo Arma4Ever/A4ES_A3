@@ -18,9 +18,7 @@ if (is3DENPreview) then {
 
 _logic spawn {
   params ["_logic"];
-
-
-
+  
   LOG('Starting execution of EXEC_MODULE_NAME.');
 
   private _animalsType = _logic getVariable [QGVAR(animalsType), ""];

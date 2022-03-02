@@ -13,6 +13,9 @@ CUP_stopLampCheck = true;
   CUP_stopLampCheck = true;
 };
 
+// Schedule first cleanup of empty groups
+[{0 spawn FUNC(cleanupEmptyGroups)}, [], EMPTY_GROUPS_CLEANUP_INTERVAL] call CBA_fnc_waitAndExecute;
+
 if (hasInterface) then {
   // Set current channel to global
   setCurrentChannel 0;
@@ -49,9 +52,6 @@ if (isServer) then {
       };
     }, true, [], true] call CBA_fnc_addClassEventHandler;
   }, [], 0.1] call CBA_fnc_waitAndExecute;
-
-  // Schedule first cleanup of empty groups
-  // [{0 spawn FUNC(cleanupEmptyGroups)}, [], EMPTY_GROUPS_CLEANUP_INTERVAL] call CBA_fnc_waitAndExecute;
 
   // Enable simulation of dead units, it's groups and vehicles for dynamically simulated groups/agents
   addMissionEventHandler ["EntityKilled", {

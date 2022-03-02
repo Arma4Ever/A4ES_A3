@@ -11,14 +11,14 @@ private _groups = allGroups;
   private _group = _x;
   if (
     !(isNull _group) &&
-    // Don't remove logic groups
-    {(side _group) isNotEqualTo sideLogic} &&
-    // Remove only empty groups where every unit is in remains collector (not playable/marked by MM)
-    {({!(!(alive _x) && isInRemainsCollector _x)} count (units _group)) isEqualTo 0}
+    {local _group} &&
+    {(units _group) isEqualTo []} &&
+    {!(_group getVariable [QEGVAR(common,playerGroup), false])}
   ) then {
-    [QEGVAR(common,deleteGroup), _group, _group] call CBA_fnc_targetEvent;
+    TRACE_1("cleanupEmptyGroups - delete group",_group);
+    deleteGroup _group;
   };
-  sleep 0.1;
+  sleep 0.001;
 } forEach _groups;
 
 // Schedule next check
