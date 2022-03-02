@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+    <Package name="Main_Menu">
+        <Key ID="STR_A3CS_Main_Menu_SpotlightHeader">
+            <English>Arma3Coop</English>
+            <Polish>Arma3Coop</Polish>
+        </Key>
+        <Key ID="STR_A3CS_Main_Menu_SpotlightJoin">
+            <English>Join</English>
+            <Polish>Dołącz</Polish>
+        </Key>
+    </Package>
+</Project>
