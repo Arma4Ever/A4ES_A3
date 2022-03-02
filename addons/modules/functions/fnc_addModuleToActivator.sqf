@@ -52,5 +52,5 @@ if (GVAR(moduleActivatorPlayersPFH) isEqualTo -1) then {
   // Start PFH
   GVAR(moduleActivatorPlayersPFH) = [{
     0 call FUNC(updateModuleActivatorPlayers);
-  }, 10] call CBA_fnc_addPerFrameHandler;
+  }, 5] call CBA_fnc_addPerFrameHandler;
 };

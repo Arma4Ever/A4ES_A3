@@ -26,6 +26,9 @@ class GVAR(showMarkerName): GVAR(dynamicEdit) {
     #ifndef MODULE_SHOWMARKER
     GVAR(conditionActive) = QUOTE(SHOWMARKER_COND);
     #endif
+    #ifdef MODULE_SHOWMARKER
+    GVAR(observeValue) = 1;
+    #endif
     ATTRIBUTE_LOCAL;
 };
 

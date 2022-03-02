@@ -26,6 +26,9 @@ class GVAR(deleteMarkerName): GVAR(dynamicEdit) {
     #ifndef MODULE_DELETEMARKER
     GVAR(conditionActive) = QUOTE(DELETEMARKER_COND);
     #endif
+    #ifdef MODULE_DELETEMARKER
+    GVAR(observeValue) = 1;
+    #endif
     ATTRIBUTE_LOCAL;
 };
 

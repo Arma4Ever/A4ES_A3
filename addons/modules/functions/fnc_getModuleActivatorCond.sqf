@@ -35,27 +35,18 @@ if (_activationArea isEqualTo []) then {
 private _filterHelicopters = _logic getVariable [QGVAR(activationIgnoreHelicopters), false];
 private _filterPlanes = _logic getVariable [QGVAR(activationIgnorePlanes), false];
 
-// Create filter for vehicles
-private _filter = "";
-if (_filterHelicopters || _filterPlanes) then {
-  private _bothFilters = (_filterHelicopters && _filterPlanes);
-  _filter = format [
-    "
-      _units = _units select {
-        private _parent = objectParent _x;
-        (isNull _parent) || {%1%2%3%4}
-      };
-    ",
-    ["", "(!(_parent isKindOf 'Helicopter'))"] select _filterHelicopters,
-    ["", " && {"] select _bothFilters,
-    ["", "(!(_parent isKindOf 'Plane'))"] select _filterPlanes,
-    ["", "}"] select _bothFilters
-  ];
+private _unitsSource = QGVAR(moduleActivatorPlayers);
+
+if (_filterHelicopters && _filterPlanes) then {
+  _unitsSource = QGVAR(moduleActivatorPlayersNoAir);
+} else {
+  if (_filterHelicopters) then {
+    _unitsSource = QGVAR(moduleActivatorPlayersNoHelis);
+  };
+  if (_filterPlanes) then {
+    _unitsSource = QGVAR(moduleActivatorPlayersNoPlanes);
+  };
 };
 
 // Return condition
-format ["
-  private _units = (%1 inAreaArray %2);
-  %3
-  _units isNotEqualTo []
-", QGVAR(moduleActivatorPlayers), _activationArea, _filter]
+format ["(%1 inAreaArray %2) isNotEqualTo []", _unitsSource, _activationArea]
