@@ -13,6 +13,9 @@ if (isServer) then {
 
   GVAR(moduleActivatorPlayersPFH) = -1;
   GVAR(moduleActivatorPlayers) = [];
+  GVAR(moduleActivatorPlayersNoHelis) = [];
+  GVAR(moduleActivatorPlayersNoPlanes) = [];
+  GVAR(moduleActivatorPlayersNoAir) = [];
 
   GVAR(createdLogicFlags) = createHashMap;
   GVAR(moduleActivatorFlags) = createHashMap;
