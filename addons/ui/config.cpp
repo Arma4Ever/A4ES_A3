@@ -6,12 +6,13 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"a3cs_common"};
+        requiredAddons[] = {"a3cs_common", "A3_Ui_F"};
         author = ECSTRING(main,Author);
-        authors[] = {"SzwedzikPL"};
+        authors[] = {"SzwedzikPL", "Drofseh"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
 #include "CfgEventHandlers.hpp"
+#include "RscDisplay.hpp"
