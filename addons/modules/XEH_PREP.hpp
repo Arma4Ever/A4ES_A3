@@ -68,6 +68,8 @@ PREP(validateEntity);
 #include "modules\curator\prep.hpp"
 #include "modules\deleteMarker\prep.hpp"
 #include "modules\fireArtillery\prep.hpp"
+#include "modules\fortifyObject\prep.hpp"
+#include "modules\fortifySettings\prep.hpp"
 #include "modules\generateSoldiers\prep.hpp"
 #include "modules\generatorComposition\prep.hpp"
 #include "modules\objects3DENComp\prep.hpp"

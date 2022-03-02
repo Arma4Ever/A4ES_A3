@@ -325,6 +325,8 @@ class CfgVehicles {
     #include "modules\curator\module.hpp"
     #include "modules\deleteMarker\module.hpp"
     #include "modules\fireArtillery\module.hpp"
+    #include "modules\fortifyObject\module.hpp"
+    #include "modules\fortifySettings\module.hpp"
     // #include "modules\generateMinefield\module.hpp"
     #include "modules\generateSoldiers\module.hpp"
     #include "modules\generatorComposition\module.hpp"

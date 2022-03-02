@@ -1420,6 +1420,58 @@
       <Polish>Moduł do działania wymaga zsynchronizacji z conajmniej jedną jednostką która ma mieć dostęp do zeusa.</Polish>
     </Key>
   </Package>
+  <Package name="Modules_fortifySettings">
+    <Key ID="STR_A3CS_Modules_fortifySettings_displayName">
+      <Polish>Ustawienia fortyfikacji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fortifySettings_shortDescription">
+      <Polish>Moduł pozwala na skonfigurowanie ustawień fortyfikowania dla danej strony.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fortifySettings_Attributes_side">
+      <Polish>Strona</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fortifySettings_Attributes_side_Tooltip">
+      <Polish>Strona której dotyczyć mają ustawienia.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fortifySettings_Attributes_budget">
+      <Polish>Budżet</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fortifySettings_Attributes_budget_Tooltip">
+      <Polish>Ile punktów budowania ma mieć dana strona. -1 oznacza brak limitu.</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_fortifyObject">
+    <Key ID="STR_A3CS_Modules_fortifyObject_displayName">
+      <Polish>Obiekt fortyfikacji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fortifyObject_shortDescription">
+      <Polish>Moduł pozwala dodać obiekt który będzie mogła budować dana strona.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fortifyObject_Attributes_side">
+      <Polish>Strona</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fortifyObject_Attributes_side_Tooltip">
+      <Polish>Strona która ma móc budować dany obiekt.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fortifyObject_Attributes_objectClass">
+      <Polish>Klasa</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fortifyObject_Attributes_objectClass_Tooltip">
+      <Polish>Klasa obiektu który będzie można wybudować, np. Land_BagFence_Round_F.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fortifyObject_Attributes_objectCost">
+      <Polish>Koszt</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fortifyObject_Attributes_objectCost_Tooltip">
+      <Polish>Ile punktów budowania ma kosztować dany obiekt. 0 oznacza darmowy obiekt. 75% kosztu to również czas jaki trwa budowanie obiektu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fortifyObject_Warning_ObjectClassEmpty_Desc">
+      <Polish>Klasa obiektu nie może być pusta.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_fortifyObject_Warning_InvalidObjectClass_Desc">
+      <Polish>Niepoprawna klasa obiektu - brak obiektu danej klasy.</Polish>
+    </Key>
+  </Package>
   <Package name="Modules_ambientFlyby">
     <Key ID="STR_A3CS_Modules_ambientFlyby_displayName">
       <Polish>Ambientowy przelot</Polish>

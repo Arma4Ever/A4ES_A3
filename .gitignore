@@ -18,6 +18,7 @@ texHeaders.bin
 Thumbs.db
 CHANGELOG.md
 addons/marker_flags/*
+addons/irlight/*
 
 __pycache__
 vendor/*

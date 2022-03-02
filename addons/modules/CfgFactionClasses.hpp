@@ -40,4 +40,7 @@ class CfgFactionClasses {
     class GVAR(ambient): GVAR(base) {
         displayName = "A3CS Ambient";
     };
+    class GVAR(fortify): GVAR(base) {
+        displayName = "A3CS Fortyfikacje";
+    };
 };
