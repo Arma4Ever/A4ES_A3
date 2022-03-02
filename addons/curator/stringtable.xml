@@ -20,5 +20,11 @@
     <Key ID="STR_A3CS_Curator_CuratorPinged">
       <Polish>Ping zeusa: %1</Polish>
     </Key>
+    <Key ID="STR_A3CS_Curator_Attribute_isCurator">
+      <Polish>Dostęp do zeusa</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Curator_Attribute_isCurator_Tooltip">
+      <Polish>Czy dana jednostka ma mieć dostęp do zeusa</Polish>
+    </Key>
   </Package>
 </Project>

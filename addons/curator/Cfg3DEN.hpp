@@ -3,6 +3,15 @@ class Cfg3DEN {
         class AttributeCategories {
             class StateSpecial {
                 class Attributes {
+                    class GVAR(isCurator) {
+                        displayName = CSTRING(Attribute_isCurator);
+            			tooltip = CSTRING(Attribute_isCurator_Tooltip);
+            			property = QGVAR(isCurator);
+            			control = "Checkbox";
+            			expression = QUOTE(if (_value) then {_this setVariable [ARR_3(QQGVAR(isCurator),true,true)]};);
+            			defaultValue = "false";
+            			condition = "objectControllable";
+                    };
                     class GVAR(addCuratorEditableObject) {
                         displayName = CSTRING(addCuratorEditableObject);
             			tooltip = CSTRING(addCuratorEditableObject_Tooltip);
