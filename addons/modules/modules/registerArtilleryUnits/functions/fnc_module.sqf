@@ -14,8 +14,8 @@ _input params [
   ["_isActivated", false, [true]],
   ["_isCuratorPlaced", false, [true]]
 ];
-// Exit if module is null, not local or placed by zeus (should not happen)
-if (isNull _logic || !(local _logic) || _isCuratorPlaced) exitWith {};
+// Exit if module is null or placed by zeus (should not happen)
+if (isNull _logic || _isCuratorPlaced) exitWith {};
 
 waitUntil {!isNil 'lambs_danger_Loaded_WP'};
 if !(lambs_danger_Loaded_WP) exitWith {};
