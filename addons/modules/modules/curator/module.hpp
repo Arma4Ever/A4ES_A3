@@ -1,5 +1,5 @@
 class GVAR(curator): GVAR(base) {
-    scope = 2;
+    scope = 1;
     author = "SzwedzikPL";
     displayName = CSTRING(curator_displayName);
     icon = "\a3\Modules_F_Curator\Data\portraitCurator_ca.paa";
