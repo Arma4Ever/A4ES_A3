@@ -30,6 +30,13 @@ if (_data isEqualTo []) exitWith {
   deleteVehicle _logic;
 };
 
+private _addSpawnCond = _logic getVariable [QGVAR(addSpawnCond), false];
+private _spawnCond = _logic getVariable [QGVAR(spawnCond), "true"];
+if (_addSpawnCond && {!(_logic call (compile _spawnCond))}) exitWith {
+  TRACE_1("units3DENComp_moduleExec abort: spawn condition false",_spawnCond);
+  deleteVehicle _logic;
+};
+
 // Collect post init handlers
 private _unitPostInit = {};
 if (_logic getVariable [QGVAR(addUnitPostInit), false]) then {

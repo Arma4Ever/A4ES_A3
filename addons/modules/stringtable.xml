@@ -1001,6 +1001,21 @@
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_eventHandlersSubCategory">
       <Polish>Obsługa zdarzeń</Polish>
     </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_addSpawnCond">
+      <Polish>Dodaj warunek spawnu jednostek</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_addSpawnCond_Tooltip">
+      <Polish>Dodaj warunek spawnu który musi być prawdziwy w momencie aktywacji modułu aby jednostki z modułu zostały stworzone.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_spawnCond">
+      <Polish>Warunek spawnu jednostek</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_spawnCond_tooltip">
+      <Polish>Warunek spawnu musi być prawdziwy w momencie aktywacji modułu aby jednostki z modułu zostały stworzone.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_spawnCond_desc">
+      <Polish>Warunek spawnu musi być prawdziwy w momencie aktywacji modułu aby jednostki z modułu zostały stworzone.</Polish>
+    </Key>
     <Key ID="STR_A3CS_Modules_generateSoldiers_Attributes_addUnitPostInit">
       <Polish>Dodaj handler initu jednostki</Polish>
     </Key>
@@ -2328,6 +2343,21 @@
     </Key>
     <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_disableHeadless_tooltip">
       <Polish>Blokuje przekazanie do headlessa (jeśli jest dostępny) wygenerowanych jednostek. Pamiętaj, że ma to realny wpływ na wydajność misji (jeśli headless jest dostępny).\n\nUżyj tej opcji tylko jeśli wiesz co robisz.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_addSpawnCond">
+      <Polish>Dodaj warunek spawnu jednostek</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_addSpawnCond_Tooltip">
+      <Polish>Dodaj warunek spawnu który musi być prawdziwy w momencie aktywacji modułu aby jednostki z modułu zostały stworzone.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_spawnCond">
+      <Polish>Warunek spawnu jednostek</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_spawnCond_tooltip">
+      <Polish>Warunek spawnu musi być prawdziwy w momencie aktywacji modułu aby jednostki z modułu zostały stworzone.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_spawnCond_desc">
+      <Polish>Warunek spawnu musi być prawdziwy w momencie aktywacji modułu aby jednostki z modułu zostały stworzone.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_unitsSettingsSubCategory">
       <Polish>Ustawienia jednostek</Polish>

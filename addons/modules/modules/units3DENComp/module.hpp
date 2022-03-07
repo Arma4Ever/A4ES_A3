@@ -63,6 +63,25 @@ class GVAR(units3DENComp): GVAR(base) {
             ATTRIBUTE_LOCAL;
         };
 
+        class GVAR(addSpawnCond): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(units3DENComp_Attributes_addSpawnCond);
+            tooltip = CSTRING(units3DENComp_Attributes_addSpawnCond_Tooltip);
+            property = QGVAR(addSpawnCond);
+            ATTRIBUTE_LOCAL;
+        };
+
+        class GVAR(spawnCond): GVAR(dynamicEditCodeMulti5) {
+            displayName = CSTRING(units3DENComp_Attributes_spawnCond);
+            tooltip = CSTRING(units3DENComp_Attributes_spawnCond_tooltip);
+            GVAR(description) = CSTRING(units3DENComp_Attributes_spawnCond_desc);
+            property = QGVAR(spawnCond);
+            defaultValue = "'true'";
+            typeName = "STRING";
+            validate = "condition";
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(addSpawnCond)) isEqualTo true);
+            ATTRIBUTE_LOCAL;
+        };
+
         class GVAR(unitsSettingsSubCategory): GVAR(moduleSubCategory) {
             displayName = CSTRING(units3DENComp_Attributes_unitsSettingsSubCategory);
             property = QGVAR(unitsSettingsSubCategory);

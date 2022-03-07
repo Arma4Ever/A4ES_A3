@@ -371,6 +371,23 @@ class GVAR(generateSoldiers): GVAR(base) {
             displayName = CSTRING(generateSoldiers_Attributes_eventHandlersSubCategory);
             property = QGVAR(eventHandlersSubCategory);
         };
+        class GVAR(addSpawnCond): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(generateSoldiers_Attributes_addSpawnCond);
+            tooltip = CSTRING(generateSoldiers_Attributes_addSpawnCond_Tooltip);
+            property = QGVAR(addSpawnCond);
+            ATTRIBUTE_LOCAL;
+        };
+        class GVAR(spawnCond): GVAR(dynamicEditCodeMulti5) {
+            displayName = CSTRING(generateSoldiers_Attributes_spawnCond);
+            tooltip = CSTRING(generateSoldiers_Attributes_spawnCond_tooltip);
+            GVAR(description) = CSTRING(generateSoldiers_Attributes_spawnCond_desc);
+            property = QGVAR(spawnCond);
+            defaultValue = "'true'";
+            typeName = "STRING";
+            validate = "condition";
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(addSpawnCond)) isEqualTo true);
+            ATTRIBUTE_LOCAL;
+        };
         class GVAR(addUnitPostInit): GVAR(dynamicCheckbox) {
             displayName = CSTRING(generateSoldiers_Attributes_addUnitPostInit);
             tooltip = CSTRING(generateSoldiers_Attributes_addUnitPostInit_Tooltip);

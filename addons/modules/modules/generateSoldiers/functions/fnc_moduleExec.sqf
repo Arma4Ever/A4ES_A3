@@ -35,6 +35,13 @@ private _boundaryArea = switch (_logic getVariable [QGVAR(behaviourAreaBoundary)
     default {[]}
 };
 
+private _addSpawnCond = _logic getVariable [QGVAR(addSpawnCond), false];
+private _spawnCond = _logic getVariable [QGVAR(spawnCond), "true"];
+if (_addSpawnCond && {!(_logic call (compile _spawnCond))}) exitWith {
+  TRACE_1("generateSoldiers_moduleExec abort: spawn condition false",_spawnCond);
+  deleteVehicle _logic;
+};
+
 // Call module exec function
 if (
   isMultiplayer
