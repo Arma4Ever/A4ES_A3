@@ -62,6 +62,7 @@ VENDOR = {
     "@Uriki's Mission Items": {},
     "@Ragdoll Physics Plus+ v1.12": {},
     "@Enhanced Map Ace Version": {},
+    "@Improved Melee System": {},
     "-JSHK_Contamination_Gear": {},
     "-A3CS_vendor": {},
 }

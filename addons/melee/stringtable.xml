@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+  <Package name="Melee">
+    <Key ID="STR_A3CS_Melee_AttributeCategory">
+      <Polish>System walki melee</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Melee_Attributes_enableSystem">
+      <Polish>Włączy system melee</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Melee_Attributes_enableSystem_Tooltip">
+      <Polish>Włącza system walki melee. Zaznacz tą opcję jeśli jednostki w misji (gracze lub AI - nie ma znaczenia) mają móc używać broni melee. Bez włączenia systemu, bronie melee dalej będą dostępne, jednakże walka nimi będzie niemożliwa.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Melee_Log_SystemEnabled">
+      <Polish>System Melee został włączony!</Polish>
+    </Key>
+  </Package>
+</Project>
