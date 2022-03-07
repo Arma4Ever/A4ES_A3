@@ -28,17 +28,13 @@ TRACE_2("shape",_bisShapeLB,_curSelShape);
 _bisShapeLB ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedShape)}];
 _bisShapeLB lbSetCurSel _curSelShape;
 */
+// ---- !EDIT
 
 private _bisColorLB = _display displayctrl 1090;
-_bisColorLB ctrlShow false;
-_bisColorLB ctrlCommit 0;
-/*
 private _curSelColor = missionNamespace getVariable [QGVAR(curSelMarkerColor), 0];
 TRACE_2("color",_bisColorLB,_curSelColor);
 _bisColorLB ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedColor)}];
 _bisColorLB lbSetCurSel _curSelColor;
-*/
-// ---- !EDIT
 
 // movable markers
 private _ctrlMap = _display displayCtrl 51;
