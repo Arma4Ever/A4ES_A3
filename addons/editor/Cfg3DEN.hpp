@@ -91,7 +91,7 @@ class Cfg3DEN {
                 delete ENH_Briefing;
                 delete ENH_EstablishingShot;
                 delete ENH_IntroText;
-                delete ENH_MissionEnding;
+                delete ENH_MissionEnding_Casualties;
                 delete ENH_Volume;
                 delete ENH_SPR;
 
