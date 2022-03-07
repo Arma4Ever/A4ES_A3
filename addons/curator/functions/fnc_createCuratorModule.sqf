@@ -8,23 +8,7 @@ if (!isServer) exitWith {};
 LOG("createCuratorModule");
 
 if (isNull GVAR(curatorModulesGroup)) then {
-  private _group = grpNull;
-
-  if (allCurators isNotEqualTo []) then {
-    _group = group (allCurators # 0);
-  } else {
-    private _modules = entities QEGVAR(modules,curator);
-
-    if (_modules isNotEqualTo []) then {
-      _group = group (_modules # 0);
-    };
-  };
-
-  if (isNull _group) then {
-    _group = createGroup sideLogic;
-  };
-
-  GVAR(curatorModulesGroup) = _group;
+  GVAR(curatorModulesGroup) = createGroup sideLogic;
 };
 
 private _module = GVAR(curatorModulesGroup) createUnit ["ModuleCurator_F", [0, 0, 0], [], 0, "NONE"];

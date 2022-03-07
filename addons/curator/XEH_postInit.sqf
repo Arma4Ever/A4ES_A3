@@ -1,10 +1,5 @@
 #include "script_component.hpp"
 
-["VirtualCurator_F", "init", {
-  params ["_unit"];
-  _unit setVariable [QGVAR(isCurator), true];
-}, false, [], true] call CBA_fnc_addClassEventHandler;
-
 if (isServer) then {
   // Unassign player from zeus if player is disconnected
   // Fixes A3 bug when zeus cannot return to slot
@@ -24,9 +19,14 @@ if (isServer) then {
 if (hasInterface) then {
   #include "initKeybinds.sqf"
 
+  if ((typeOf player) == "VirtualCurator_F") then {
+    player setVariable [QGVAR(isCurator), true, true];
+  };
+
   // Assign zeus
   [{
     if (player getVariable [QGVAR(isCurator), false]) then {
+      LOG("Requesting player curator module");
       [QGVAR(assignCuratorModule), [player, true]] call CBA_fnc_serverEvent;
     };
   }, [], ([0.1, 2.5] select isMultiplayer)] call CBA_fnc_waitAndExecute;
