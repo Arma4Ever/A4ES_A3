@@ -51,7 +51,7 @@ force force ace_noradio_enabled = true;
 
 // ACE Cook off
 force force ace_cookoff_ammoCookoffDuration = 0;
-force force ace_cookoff_enable = 2;
+force force ace_cookoff_enable = 1;
 force force ace_cookoff_enableAmmobox = false;
 force force ace_cookoff_enableAmmoCookoff = false;
 force force ace_cookoff_enableFire = true;
