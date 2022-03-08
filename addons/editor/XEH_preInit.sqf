@@ -13,7 +13,8 @@ GVAR(currentAssetsTreeCount) = 0;
 
 // Setup mission attributes
 0 spawn {
-  sleep 1;
+  waitUntil {isGameFocused};
+  sleep 2;
   0 call FUNC(setupMissionAttributes);
 };
 0 spawn FUNC(initAssetsTreeFiltering);

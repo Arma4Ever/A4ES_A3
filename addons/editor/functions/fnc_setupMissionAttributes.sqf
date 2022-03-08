@@ -3,6 +3,7 @@
  * Author: Bohemia Interactive, SzwedzikPL
  * Setups mission attributes default values
  */
+LOG("setupMissionAttributes");
 
 // "Scenario" set3DENMissionAttribute ["SaveBinarized", false];
 // "Preferences" set3DENMissionAttribute ["SaveBinarized", false];
@@ -12,6 +13,7 @@
 
 private _garbageCollectionSetuped = "GarbageCollection" get3DENMissionAttribute QGVAR(garbageCollectionSetuped);
 private _a3csVersion = "Scenario" get3DENMissionAttribute QGVAR(a3csVersion);
+TRACE_2("setupMissionAttributes - loaded mission attributes",_a3csVersion,_garbageCollectionSetuped);
 if (_a3csVersion isEqualTo "") then {_a3csVersion = "0.0.0";};
 private _currentVersion = QUOTE(VERSION_STR);
 

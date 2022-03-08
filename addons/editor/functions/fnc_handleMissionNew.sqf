@@ -5,6 +5,7 @@
  */
 
 0 spawn {
-  sleep 1;
+  waitUntil {isGameFocused};
+  sleep 2;
   0 call FUNC(setupMissionAttributes);
 };

@@ -105,7 +105,7 @@ class Cfg3DEN {
                         };
                         class GVAR(a3csVersion) {
                             property = QGVAR(a3csVersion);
-                            control = QGVAR(hiddenCheckbox);
+                            control = QGVAR(hiddenEdit);
                             defaultValue = "''";
                         };
                     };

@@ -3,8 +3,9 @@
  * Author: SzwedzikPL
  * Handles onMissionLoad 3DEN event
  */
- 
+
 0 spawn {
-  sleep 1;
+  waitUntil {isGameFocused};
+  sleep 2;
   0 call FUNC(setupMissionAttributes);
 };
