@@ -21,6 +21,13 @@ player addEventHandler ["Fired", {
   };
 }];
 
+["ace_advanced_throwing_throwFiredXEH", {
+  params ["_unit", "", "", "", "_ammo"];
+  if (_unit isNotEqualTo player) exitWith {};
+  GVAR(grenades) = GVAR(grenades) + 1;
+  ["a3csserver_events_userGrenThrow", [player, _ammo]] call CBA_fnc_serverEvent;
+}] call CBA_fnc_addEventHandler;
+
 // Add traveled distance updater PFH
 [{
   params ["", "_handle"];
