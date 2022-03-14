@@ -63,6 +63,7 @@ VENDOR = {
     "@Ragdoll Physics Plus+ v1.12": {},
     "@Enhanced Map Ace Version": {},
     "@Improved Melee System": {},
+    "@Simple Armbands": {},
     "-JSHK_Contamination_Gear": {},
     "-A3CS_vendor": {},
 }
