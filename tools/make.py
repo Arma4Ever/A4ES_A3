@@ -1268,7 +1268,10 @@ See the make.cfg file for additional build options.
                         cmd = [makepboTool, "-P","-A","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
 
                     else:
-                        cmd = [pboproject, "+B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
+                        if module == "settings":
+                            cmd = [pboproject, "+B", "-P", os.path.join(work_drive, "cba_settings_userconfig"), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
+                        else:
+                            cmd = [pboproject, "+B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
 
                     color("grey")
                     if quiet:
@@ -1281,6 +1284,10 @@ See the make.cfg file for additional build options.
 
                     if ret == 0:
                         print_green("pboProject return code == {}".format(str(ret)))
+
+                        if module == "settings":
+                            os.rename(os.path.join(module_root, release_dir, project, "addons", "cba_settings_userconfig.pbo"), os.path.join(module_root, release_dir, project, "addons", "settings.pbo"))
+
                         # Prettyprefix rename the PBO if requested.
                         if pbo_name_prefix:
                             try:
