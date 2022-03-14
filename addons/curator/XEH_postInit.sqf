@@ -1,5 +1,9 @@
 #include "script_component.hpp"
 
+// Activate all addons
+private _addons = configProperties [configFile >> "CfgPatches", "isClass _x"] apply {configName _x};
+_addons call BIS_fnc_activateAddons;
+
 if (isServer) then {
   // Unassign player from zeus if player is disconnected
   // Fixes A3 bug when zeus cannot return to slot
