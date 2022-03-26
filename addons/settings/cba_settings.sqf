@@ -192,7 +192,7 @@ force force ace_maptools_drawStraightLines = false;
 // ACE Medical
 force force ace_medical_ai_enabledFor = 0;
 force force ace_medical_AIDamageThreshold = 0.49;
-force force ace_medical_bleedingCoefficient = 0.36;
+force force ace_medical_bleedingCoefficient = 0.43;
 force force ace_medical_blood_bloodLifetime = 600;
 force force ace_medical_blood_enabledFor = 2;
 force force ace_medical_blood_maxBloodObjects = 300;
