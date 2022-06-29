@@ -10,7 +10,8 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "a3cs_common",
-            "A3_Weapons_F_Ammoboxes"
+            "A3_Weapons_F_Ammoboxes",
+            "ace_gunbag"
         };
         author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL"};

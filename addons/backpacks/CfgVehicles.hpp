@@ -8,4 +8,12 @@ class CfgVehicles {
 		hiddenSelectionsTextures[] = {""};
         maximumLoad = 800;
 	};
+
+    class Bag_Base;
+    class ace_gunbag: Bag_Base {
+        maximumLoad = 360;
+    };
+    class ace_gunbag_Tan: ace_gunbag {
+        maximumLoad = 360;
+    };
 };
