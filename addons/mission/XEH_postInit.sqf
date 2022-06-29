@@ -16,6 +16,13 @@ CUP_stopLampCheck = true;
 // Schedule first cleanup of empty groups
 [{0 spawn FUNC(cleanupEmptyGroups)}, [], EMPTY_GROUPS_CLEANUP_INTERVAL] call CBA_fnc_waitAndExecute;
 
+// Disable weight limits for carry & drag actions
+0 spawn {
+  sleep 0.1;
+  ACE_maxWeightDrag = 999999;
+  ACE_maxWeightCarry = 999999;
+};
+
 if (hasInterface) then {
   // Set current channel to global
   setCurrentChannel 0;
