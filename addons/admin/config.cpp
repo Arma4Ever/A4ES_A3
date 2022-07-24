@@ -62,7 +62,7 @@ class GVAR(modules) {
         values[] = {CSTRING(Module_Debug3rdPerson_Enable3rdPerson), CSTRING(Module_Debug3rdPerson_Disable3rdPerson)};
     };
     class debugCurator {
-        mode = 1;
+        mode = 2;
         type = 3;
         serveradmin = 1;
         displayName = "%1";
