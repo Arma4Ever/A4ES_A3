@@ -17,7 +17,21 @@ class CfgWeapons {
         };
         weaponLockDelay = 0.1;
         weaponLockSystem = 0;
+        ace_laser_canSelect = 1;
+        ace_laser_showHud = 1;
+    };
 
+    class GVAR(JASSM_cluster_Launcher): weapon_AGM_65Launcher {
+        author = "Dani (TCVM) / SzwedzikPL";
+        displayname = CSTRING(JASSM_cluster);
+        magazines[] = {
+            QGVAR(JASSM_cluster_magazine_x1),
+            QGVAR(JASSM_cluster_pylonmissile_x1),
+            QGVAR(JASSM_cluster_pylonRack_1Rnd),
+            QGVAR(JASSM_cluster_PylonRack_x1)
+        };
+        weaponLockDelay = 0.1;
+        weaponLockSystem = 0;
         ace_laser_canSelect = 1;
         ace_laser_showHud = 1;
     };
@@ -33,7 +47,20 @@ class CfgWeapons {
         };
         weaponLockDelay = 0.1;
         weaponLockSystem = 0;
-
+        ace_laser_canSelect = 1;
+        ace_laser_showHud = 1;
+    };
+    class GVAR(JASSM_cluster_Launcher_Plane): Missile_AGM_02_Plane_CAS_01_F {
+        author = "Dani (TCVM) / SzwedzikPL";
+        displayname = CSTRING(JASSM_cluster);
+        magazines[] = {
+            QGVAR(JASSM_cluster_magazine_x1),
+            QGVAR(JASSM_cluster_pylonmissile_x1),
+            QGVAR(JASSM_cluster_pylonRack_1Rnd),
+            QGVAR(JASSM_cluster_PylonRack_x1)
+        };
+        weaponLockDelay = 0.1;
+        weaponLockSystem = 0;
         ace_laser_canSelect = 1;
         ace_laser_showHud = 1;
     };

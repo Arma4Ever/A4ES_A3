@@ -5,17 +5,24 @@ class CfgPatches {
         name = COMPONENT_NAME;
         units[] = {};
         ammo[] = {
-            QGVAR(JASSM)
+            QGVAR(JASSM),
+            QGVAR(JASSM_cluster)
         };
         magazines[] = {
             QGVAR(JASSM_magazine_x1),
+            QGVAR(JASSM_cluster_magazine_x1),
             QGVAR(JASSM_pylonmissile_x1),
+            QGVAR(JASSM_cluster_pylonmissile_x1),
             QGVAR(JASSM_pylonRack_1Rnd),
-            QGVAR(JASSM_PylonRack_x1)
+            QGVAR(JASSM_cluster_pylonRack_1Rnd),
+            QGVAR(JASSM_PylonRack_x1),
+            QGVAR(JASSM_cluster_PylonRack_x1)
         };
         weapons[] = {
             QGVAR(JASSM_Launcher),
-            QGVAR(JASSM_Launcher_Plane)
+            QGVAR(JASSM_cluster_Launcher),
+            QGVAR(JASSM_Launcher_Plane),
+            QGVAR(JASSM_cluster_Launcher_Plane)
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {

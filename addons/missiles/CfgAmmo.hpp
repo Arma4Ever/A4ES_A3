@@ -39,4 +39,13 @@ class CfgAmmo {
               attackProfiles[] = {"JDAM"};
         };
     };
+    class GVAR(JASSM_cluster): GVAR(JASSM) {
+        class ace_missileguidance: ace_missileguidance {};
+
+        triggerDistance = 250;
+		triggerSpeedCoef[] = {0.5,1};
+		submunitionConeAngle = 19;
+		submunitionConeType[] = {"randomcenter", 50};
+		submunitionAmmo[] = {"Mo_cluster_AP", 0.93, "Mo_cluster_AP_UXO_deploy", 0.07};
+	};
 };

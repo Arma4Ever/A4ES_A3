@@ -5,17 +5,33 @@
       <English>AGM-158 JASSM</English>
       <Polish>AGM-158 JASSM</Polish>
     </Key>
+    <Key ID="STR_A3CS_missiles_JASSM_cluster">
+      <English>AGM-158 JASSM (Cluster)</English>
+      <Polish>AGM-158 JASSM (Kasetowa)</Polish>
+    </Key>
     <Key ID="STR_A3CS_missiles_JASSM_MAG_x1">
       <English>1x AGM-158 JASSM [A3CS]</English>
       <Polish>1x AGM-158 JASSM [A3CS]</Polish>
+    </Key>
+    <Key ID="STR_A3CS_missiles_JASSM_CLUSTER_MAG_x1">
+      <English>1x AGM-158 JASSM (Cluster) [A3CS]</English>
+      <Polish>1x AGM-158 JASSM (Kasetowa) [A3CS]</Polish>
     </Key>
     <Key ID="STR_A3CS_missiles_JASSM_MAG_DESCR">
       <English>AGM-158 JASSM, GPS Guided Anti-Ground Cruise Missile</English>
       <Polish>AGM-158 JASSM, Pocisk manewrujący powietrze-ziemia naprowadzany GPS</Polish>
     </Key>
+    <Key ID="STR_A3CS_missiles_JASSM_MAG_CLUSTER_DESCR">
+      <English>AGM-158 JASSM, GPS Guided Anti-Ground Cluster Cruise Missile</English>
+      <Polish>AGM-158 JASSM, Pocisk manewrujący powietrze-ziemia z głowicą kasetową naprowadzany GPS</Polish>
+    </Key>
     <Key ID="STR_A3CS_missiles_JASSM_MAG_short">
       <English>JASSM</English>
       <Polish>JASSM</Polish>
+    </Key>
+    <Key ID="STR_A3CS_missiles_JASSM_MAG_CLUSTER_short">
+      <English>JASSM (Cluster)</English>
+      <Polish>JASSM (Kasetowa)</Polish>
     </Key>
   </Package>
 </Project>
