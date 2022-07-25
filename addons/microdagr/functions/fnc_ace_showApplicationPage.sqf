@@ -81,8 +81,11 @@ if (GVAR(currentApplicationPage) == APP_MODE_MARK) then {
         (_display displayCtrl IDC_MODEMARK_HEADER) ctrlSetText (localize LSTRING(wpEnterCords));
         (_display displayCtrl IDC_MODEMARK_CORDSEDIT) ctrlSetText "";
     } else {
-        (_display displayCtrl IDC_MODEMARK_HEADER) ctrlSetText format [(localize LSTRING(wpEnterName)), mapGridPosition GVAR(newWaypointPosition)];
-        (_display displayCtrl IDC_MODEMARK_CORDSEDIT) ctrlSetText format ["[%1]", mapGridPosition GVAR(newWaypointPosition)];
+        private _gridPos = [GVAR(newWaypointPosition)] call EFUNC(common,getMapGridFromPos);
+        private _grid = format ["%1-%2", _gridPos # 0, _gridPos # 1];
+
+        (_display displayCtrl IDC_MODEMARK_HEADER) ctrlSetText format [(localize LSTRING(wpEnterName)), _grid];
+        (_display displayCtrl IDC_MODEMARK_CORDSEDIT) ctrlSetText format ["[%1]", _grid];
     };
     ctrlSetFocus (_display displayCtrl IDC_MODEMARK_CORDSEDIT);
 } else {
