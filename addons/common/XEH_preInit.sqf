@@ -36,6 +36,15 @@ if (isServer) then {
       };
     } forEach _this;
   }] call CBA_fnc_addEventHandler;
+
+  [QGVAR(disableDynSim), {
+    TRACE_1("Event disableDynSim",_this);
+    {
+      if (dynamicSimulationEnabled _x) then {
+        _x enableDynamicSimulation false;
+      };
+    } forEach _this;
+  }] call CBA_fnc_addEventHandler;
 };
 
 ADDON = true;
