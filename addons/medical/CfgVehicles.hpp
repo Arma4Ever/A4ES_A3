@@ -44,7 +44,7 @@ class CfgVehicles {
 				class GVAR(pickUpDressingSet) {
 					displayName = CSTRING(ActionPickUpDressingSet);
 					distance = 3;
-					condition = "true";
+					condition = QUOTE(alive _target);
 					statement = QUOTE(_this call FUNC(pickUpDressingSet));
                     exceptions[] = {};
 					showDisabled = 0;
