@@ -317,6 +317,7 @@ class CfgVehicles {
     #include "modules\aiNightvision\module.hpp"
     #include "modules\ambientAnimals\module.hpp"
     #include "modules\ambientFlyby\module.hpp"
+    #include "modules\bodiesSettings\module.hpp"
     // #include "modules\colorCorrections\module.hpp"
     #include "modules\coverMap\module.hpp"
     #include "modules\createLogicFlag\module.hpp"

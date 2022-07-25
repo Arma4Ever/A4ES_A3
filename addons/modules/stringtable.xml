@@ -1636,6 +1636,26 @@
       <Polish>Uruchamianie generatora ambientowych samolotów na starcie misji nie jest dobrą praktyką. Zsynchronizuj moduł z triggerem aby opóźnić jego wykonanie do czasu aktywacji triggera.</Polish>
     </Key>
   </Package>
+  <Package name="Modules_bodiesSettings">
+    <Key ID="STR_A3CS_Modules_bodiesSettings_displayName">
+      <Polish>Ustawienia prostych ciał</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_bodiesSettings_shortDescription">
+      <Polish>Moduł pozwala na skonfigurowanie ustawień systemu prostych ciał podczas misji.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_bodiesSettings_Attributes_systemEnabled">
+      <Polish>System włączony</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_bodiesSettings_Attributes_systemEnabled_Tooltip">
+      <Polish>Odznacz tą opcję jeśli chcesz aby system był całkowicie wyłączony podczas misji.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_bodiesSettings_Attributes_bodiesLimit">
+      <Polish>Limit prostych ciał</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_bodiesSettings_Attributes_bodiesLimit_Tooltip">
+      <Polish>Ile maksymalnie prostych ciał może być jednocześnie na mapie. W przypadku przekroczenia limitu, najstarsze ciała będą usuwane.</Polish>
+    </Key>
+  </Package>
   <Package name="Modules_ambientAnimals">
     <Key ID="STR_A3CS_Modules_ambientAnimals_displayName">
       <Polish>Generator zwierząt</Polish>

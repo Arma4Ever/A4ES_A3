@@ -12,7 +12,6 @@ class CfgPatches {
             "A3_Weapons_F",
             "ace_frag",
             "A3_Modules_F_Curator_Curator",
-            "zade_boc",
             "A3_Modules_F_ObjectModifiers",
             "ace_missionmodules",
             "A3_Modules_F_Curator_Animals",

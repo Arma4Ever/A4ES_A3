@@ -62,6 +62,7 @@ PREP(validateEntity);
 #include "modules\aiNightvision\prep.hpp"
 #include "modules\ambientAnimals\prep.hpp"
 #include "modules\ambientFlyby\prep.hpp"
+#include "modules\bodiesSettings\prep.hpp"
 #include "modules\coverMap\prep.hpp"
 #include "modules\createLogicFlag\prep.hpp"
 #include "modules\createTask\prep.hpp"
