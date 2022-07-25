@@ -11,8 +11,6 @@ VENDOR = {
             "ace_viewrestriction",
             "ace_headless",
             "ace_killtracker"
-            # "ace_artillerytables",
-            # "ace_csw",
         ],
         "optionals": [
             os.path.join("@ace_nocrosshair", "addons", "ace_nocrosshair.pbo"),
@@ -32,7 +30,7 @@ VENDOR = {
     "@Enhanced Movement Rework": {},
     "@Gruppe Adler Trenches": {},
     "@VET_Unflipping": {},
-    "@BackpackOnChest": {},
+    "@BackpackOnChest - Redux": {},
     "@Breaching Charge": {},
     "@Eden Extended Objects": {},
     "@O&T Expansion Eden": {
@@ -64,6 +62,9 @@ VENDOR = {
     "@Enhanced Map Ace Version": {},
     "@Improved Melee System": {},
     "@Simple Armbands": {},
+    "@MS_IFF_Strobe": {},
+    "@Rismarck's Static Animations": {},
+    "@ZSL Static Poses [WW2]": {},
     "-JSHK_Contamination_Gear": {},
     "-A3CS_vendor": {},
 }
