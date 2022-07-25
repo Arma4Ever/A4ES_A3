@@ -10,7 +10,8 @@ class CfgPatches {
             "a3cs_common",
             "A3_Weapons_F_Mark_LongRangeRifles_DMR_02",
             "vurtual_seat",
-            "vurtual_ship"
+            "vurtual_ship",
+            "3DEN_Globe"
         };
         author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL"};
@@ -21,6 +22,7 @@ class CfgPatches {
 
 class Mode_SemiAuto;
 
+#include "Cfg3DEN.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgCloudlets.hpp"
 #include "CfgFunctions.hpp"
