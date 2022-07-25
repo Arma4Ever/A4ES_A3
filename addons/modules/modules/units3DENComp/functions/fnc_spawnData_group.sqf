@@ -28,30 +28,13 @@ if (isNull _group) exitWith {
   ERROR_1("units3DENComp_spawnData_group abort: cannot create new group (side: %1)",str _side);
 };
 
-// Unique unit init var
-private _netId = _group call BIS_fnc_netId;
-_netId = toArray _netId;
-{
-  // Replace ":" with "_" - used as var name in unit init
-  if (_x == 58) then {_netId set [_forEachIndex, 95];};
-} forEach _netId;
-_netId = toString _netId;
-
-private _initVar = format [QGVAR(unit_%1), _netId];
-
 // Create units
 {
-  waitUntil {!GVAR(spawningUnit)};
-  GVAR(spawningUnit) = true;
-  TRACE_1("units3DENComp_spawnData_group - spawning unit",_initVar);
-  private _unitSpawn = [_x, _group, _initVar, _vehicles, _goUpAfterSpawn, _unitPostInit] spawn FUNC(units3DENComp_spawnData_unit);
+  TRACE_2("units3DENComp_spawnData_group - spawning unit",_group,_forEachIndex);
+  private _unitSpawn = [_x, _group, _vehicles, _goUpAfterSpawn, _unitPostInit] spawn FUNC(units3DENComp_spawnData_unit);
   waitUntil {scriptDone _unitSpawn};
-  sleep 0.1;
-  GVAR(spawningUnit) = false;
+  sleep 0.15;
 } forEach _unitsData;
-
-// Cleanup unit init var
-missionNamespace setVariable [_initVar, nil];
 
 // Group params
 _group setCombatMode _combatMode;
