@@ -24,5 +24,6 @@ params ["_player", ["_cost", 0]];
   private _budget = [side group _player] call FUNC(getBudget);
   ((_budget == -1) || {_budget >= _cost})
 } && {
-  [_player] call EFUNC(repair,isNearRepairVehicle)
+  ([_player] call EFUNC(repair,isNearRepairVehicle)) ||
+  {[_player] call EFUNC(repair,isInRepairFacility)}
 }
