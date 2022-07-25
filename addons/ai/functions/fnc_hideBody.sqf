@@ -12,6 +12,7 @@ if !([_target] call FUNC(canHideBody)) exitWith {};
 [5, [_target, _player], {
   (_this # 0) params ["_target", "_player"];
   if (isNull _target) exitWith {};
+  _target setVariable [QGVAR(hidingBody), true, true];
   // Reset animation instantly
   [_player, "", 2] call ACEFUNC(common,doAnimation);
   // Hide body by vanilla action
