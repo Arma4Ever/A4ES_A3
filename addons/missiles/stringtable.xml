@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+  <Package name="missiles">
+    <Key ID="STR_A3CS_missiles_JASSM">
+      <English>AGM-158 JASSM</English>
+      <Polish>AGM-158 JASSM</Polish>
+    </Key>
+    <Key ID="STR_A3CS_missiles_JASSM_MAG_x1">
+      <English>1x AGM-158 JASSM [A3CS]</English>
+      <Polish>1x AGM-158 JASSM [A3CS]</Polish>
+    </Key>
+    <Key ID="STR_A3CS_missiles_JASSM_MAG_DESCR">
+      <English>AGM-158 JASSM, GPS Guided Anti-Ground Cruise Missile</English>
+      <Polish>AGM-158 JASSM, Pocisk manewrujący powietrze-ziemia naprowadzany GPS</Polish>
+    </Key>
+    <Key ID="STR_A3CS_missiles_JASSM_MAG_short">
+      <English>JASSM</English>
+      <Polish>JASSM</Polish>
+    </Key>
+  </Package>
+</Project>
