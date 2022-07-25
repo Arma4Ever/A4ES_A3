@@ -58,7 +58,7 @@ class CfgVehicles {
 				class GVAR(pickupMobileAntenna) {
 					displayName = CSTRING(PickupMobileAntenna_displayName);
 					distance = 4;
-					condition = 1;
+					condition = QUOTE(alive _target);
 					statement = QUOTE(_this call FUNC(pickupMobileAntenna));
                     exceptions[] = {};
 					showDisabled = 0;
