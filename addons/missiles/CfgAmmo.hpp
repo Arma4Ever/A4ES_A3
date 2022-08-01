@@ -48,4 +48,86 @@ class CfgAmmo {
 		submunitionConeType[] = {"randomcenter", 50};
 		submunitionAmmo[] = {"Mo_cluster_AP", 0.93, "Mo_cluster_AP_UXO_deploy", 0.07};
 	};
+
+  class GVAR(AGM84) : ammo_Missile_Cruise_01 {
+      author = "Dani (TCVM) / Krzyciu";
+      model = "a3\weapons_f_destroyer\Ammo\Missile_Cruise_01_Fly_F.p3d";
+      proxyShape = "a3\weapons_f_destroyer\Ammo\Missile_Cruise_01_F.p3d";
+      initTime = 1;
+      timeToLive = 500;
+      cameraViewAvailable = 1;
+      maxSpeed = 400;
+
+      class ace_missileguidance {
+            enabled = 1;
+
+            pitchRate = 30;
+            yawRate = 30;
+
+            canVanillaLock = 1;
+
+            defaultSeekerType = "DopplerRadar";
+            seekerTypes[] = { "DopplerRadar" };
+            lockableTypes[] = {"Ship"};
+
+            maxTerrainCheck = 16000;
+
+            defaultSeekerLockMode = "LOBL";
+            seekerLockModes[] = { "LOAL", "LOBL" };
+
+            defaultNavigationType = "ZeroEffortMiss";
+            navigationTypes[] = { "ZeroEffortMiss" };
+
+            seekLastTargetPos = 0;
+            seekerAngle = 180;
+            seekerAccuracy = 1;
+
+            seekerMinRange = 20;
+            seekerMaxRange = 16000;
+
+            defaultAttackProfile = "JDAM";
+            attackProfiles[] = {"JDAM"};
+      };
+  };
+
+  class GVAR(C802AK) : ammo_Missile_Cruise_01 {
+      author = "Dani (TCVM) / Krzyciu";
+      model = "a3\weapons_f_destroyer\Ammo\Missile_Cruise_01_Fly_F.p3d";
+      proxyShape = "a3\weapons_f_destroyer\Ammo\Missile_Cruise_01_F.p3d";
+      initTime = 1;
+      timeToLive = 500;
+      cameraViewAvailable = 1;
+      maxSpeed = 500;
+
+      class ace_missileguidance {
+            enabled = 1;
+
+            pitchRate = 30;
+            yawRate = 30;
+
+            canVanillaLock = 1;
+
+            defaultSeekerType = "DopplerRadar";
+            seekerTypes[] = { "DopplerRadar" };
+            lockableTypes[] = {"Ship"};
+
+            maxTerrainCheck = 16000;
+
+            defaultSeekerLockMode = "LOBL";
+            seekerLockModes[] = { "LOAL", "LOBL" };
+
+            defaultNavigationType = "AugmentedProportionalNavigation";
+            navigationTypes[] = { "AugmentedProportionalNavigation" };
+
+            seekLastTargetPos = 0;
+            seekerAngle = 180;
+            seekerAccuracy = 1;
+
+            seekerMinRange = 20;
+            seekerMaxRange = 14000;
+
+            defaultAttackProfile = "JDAM";
+            attackProfiles[] = {"JDAM"};
+      };
+  };
 };
