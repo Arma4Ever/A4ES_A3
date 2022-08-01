@@ -30,7 +30,7 @@ class CfgPatches {
             "ace_missileguidance"
         };
         author = ECSTRING(main,Author);
-        authors[] = {"SzwedzikPL"};
+        authors[] = {"SzwedzikPL", "Krzyciu"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };

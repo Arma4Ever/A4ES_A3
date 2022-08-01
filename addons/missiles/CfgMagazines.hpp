@@ -10,7 +10,6 @@ class CfgMagazines {
 
     class PylonRack_Missile_AGM_02_x1: magazine_Missile_AGM_02_x1 {};
 
-
     class GVAR(JASSM_magazine_x1): magazine_Missile_AGM_02_x1 {
         ammo = QGVAR(JASSM);
         author = "Dani (TCVM) / SzwedzikPL";
