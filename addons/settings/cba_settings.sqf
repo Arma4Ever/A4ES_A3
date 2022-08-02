@@ -54,6 +54,7 @@ force force ace_common_settingFeedbackIcons = 1;
 
 // ACE Cook off
 force force ace_cookoff_ammoCookoffDuration = 0;
+force ace_cookoff_destroyVehicleAfterCookoff = true;
 force force ace_cookoff_enable = 1;
 force force ace_cookoff_enableAmmobox = false;
 force force ace_cookoff_enableAmmoCookoff = false;
@@ -134,6 +135,15 @@ force force ace_interaction_interactWithTerrainObjects = false;
 // ACE Interaction Menu
 force force ace_interact_menu_addBuildingActions = false;
 
+// ACE Iron Dome
+force ace_iron_dome_enable = false;
+force ace_iron_dome_launchAcceptableAngle = 10;
+force ace_iron_dome_launchAcceptableElevation = 5;
+force ace_iron_dome_proximityFuseFailureChance = 0;
+force ace_iron_dome_proximityFuseRange = 10;
+force ace_iron_dome_targetRecycleTime = 15;
+force ace_iron_dome_timeBetweenLaunches = 1;
+
 // ACE Logistics
 force force ace_cargo_enable = true;
 force force ace_cargo_enableRename = true;
@@ -202,6 +212,7 @@ force force ace_medical_bleedingCoefficient = 0.43;
 force force ace_medical_blood_bloodLifetime = 300;
 force force ace_medical_blood_enabledFor = 2;
 force force ace_medical_blood_maxBloodObjects = 200;
+force force ace_medical_considerSelectAIPlayersForMedical = 1;
 force force ace_medical_deathChance = 0.35;
 force force ace_medical_enableVehicleCrashes = true;
 force force ace_medical_fatalDamageSource = 1;
@@ -353,7 +364,6 @@ force force ace_trenches_smallEnvelopeDigDuration = 20;
 force force ace_trenches_smallEnvelopeRemoveDuration = 12;
 
 // ACE Uncategorized
-force force a3cs_marker_flags_placeAnywhere = true;
 force force ace_fastroping_requireRopeItems = false;
 force force ace_gunbag_swapGunbagEnabled = true;
 force force ace_hitreactions_minDamageToTrigger = 0.1;
@@ -386,6 +396,7 @@ force force ace_ui_gunnerWeaponLowerInfoBackground = true;
 force force ace_ui_gunnerWeaponName = true;
 force force ace_ui_gunnerWeaponNameBackground = true;
 force force ace_ui_gunnerZeroing = true;
+force ace_ui_hideDefaultActionIcon = false;
 force force ace_ui_magCount = true;
 force force ace_ui_soldierVehicleWeaponInfo = true;
 force force ace_ui_staminaBar = true;
@@ -457,6 +468,7 @@ WarFXPE_HeatHaze = false;
 WarFXPE_WeatherEffects = true;
 
 // Community Base Addons
+force cba_diagnostic_watchInfoRefreshRate = 0.2;
 force force cba_disposable_dropUsedLauncher = 0;
 force force cba_disposable_replaceDisposableLauncher = true;
 force force cba_network_loadoutValidation = 0;
@@ -465,6 +477,8 @@ force force cba_network_loadoutValidation = 0;
 force force emr_main_allowMidairClimbing = true;
 force force emr_main_animSpeedCoef = 1;
 force force emr_main_animSpeedStaminaCoef = 0.4;
+force emr_main_assistDuty = 1.5;
+force emr_main_assistHeight = 1;
 force emr_main_blacklistStr = "";
 force force emr_main_climbingEnabled = true;
 force force emr_main_climbOnDuty = 3.4;
@@ -475,6 +489,7 @@ force force emr_main_enableWalkableSurface = true;
 force force emr_main_enableWeightCheck = true;
 force emr_main_hintType = 2;
 force force emr_main_jumpDuty = 1;
+force emr_main_jumpForwardVelocity = 1.2;
 force force emr_main_jumpingEnabled = true;
 force force emr_main_jumpingLoadCoefficient = 1;
 force force emr_main_jumpVelocity = 4.5;
@@ -660,3 +675,14 @@ force force zen_vision_enableRedGreenThermal = false;
 force force zen_vision_enableRedHotCold = true;
 force force zen_vision_enableWhiteHot = true;
 force force zen_vision_enableWhiteHotRedCold = false;
+
+// AI
+force cfp_autoEquipNVG = false;
+
+// CUP
+force force CUP_CheckCfgPatches = false;
+force force CUP_Vehicles_PreventBarrelClip = false;
+
+// CUP Static Weapons
+force force CUP_staticWeapons_allowMovement = true;
+force force CUP_staticWeapons_allowRotation = true;
