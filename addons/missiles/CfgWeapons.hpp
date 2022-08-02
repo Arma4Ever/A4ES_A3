@@ -6,6 +6,30 @@ class CfgWeapons {
     class MissileLauncher: LauncherCore {};
     class Missile_AGM_02_Plane_CAS_01_F: MissileLauncher {};
 
+    class rockets_230mm_GAT: RocketPods {
+        class Close: RocketPods {};
+    };
+    class GVAR(ATACMS_launcher): rockets_230mm_GAT {
+        displayName = "ATACMS";
+        modes[] = {QGVAR(mode_ATACMS)};
+
+        class GVAR(mode_ATACMS): Close {
+            displayName = "ATACMS";
+            artilleryCharge = 1;
+            minRange = 0;
+            minRangeProbab = 1;
+            midRange = 45000;
+            midRangeProbab = 1;
+            maxRange = 90000;
+            maxRangeProbab = 1;
+        };
+
+        magazines[]= {
+            QGVAR(2Rnd_ATACMS_rockets),
+            QGVAR(2Rnd_ATACMS_rockets_cluster)
+		};
+    };
+
     class GVAR(JASSM_Launcher): weapon_AGM_65Launcher {
         author = "Dani (TCVM) / SzwedzikPL";
         displayname = CSTRING(JASSM);

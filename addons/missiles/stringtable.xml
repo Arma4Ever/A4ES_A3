@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A3CS">
   <Package name="missiles">
+    <Key ID="STR_A3CS_missiles_GPS_ui_action">
+      <English>GPS Weapon Setup</English>
+      <Polish>Ust. broni GPS</Polish>
+    </Key>
     <Key ID="STR_A3CS_missiles_JASSM">
       <English>AGM-158 JASSM</English>
       <Polish>AGM-158 JASSM</Polish>
@@ -64,6 +68,30 @@
     <Key ID="STR_A3CS_missiles_C802AK_MAG_short">
       <English>C802AK Eagle Strike</English>
       <Polish>C802AK Eagle Strike</Polish>
+    </Key>
+    <Key ID="STR_A3CS_missiles_ATACMS_mag_he_x2_displayName">
+      <English>2x ATACMS HE [A3CS]</English>
+      <Polish>2x ATACMS HE [A3CS]</Polish>
+    </Key>
+    <Key ID="STR_A3CS_missiles_ATACMS_mag_he_x2_short">
+      <English>ATACMS HE</English>
+      <Polish>ATACMS HE</Polish>
+    </Key>
+    <Key ID="STR_A3CS_missiles_ATACMS_mag_he_desc">
+      <English>ATACMS HE, GPS Guided Anti-Ground missile</English>
+      <Polish>ATACMS HE, Pocisk manewrujący ziemia-ziemia naprowadzany GPS</Polish>
+    </Key>
+    <Key ID="STR_A3CS_missiles_ATACMS_mag_cluster_x2_displayName">
+      <English>2x ATACMS CLUSTER [A3CS]</English>
+      <Polish>2x ATACMS CLUSTER [A3CS]</Polish>
+    </Key>
+    <Key ID="STR_A3CS_missiles_ATACMS_mag_cluster_x2_short">
+      <English>ATACMS CLUST</English>
+      <Polish>ATACMS CLUST</Polish>
+    </Key>
+    <Key ID="STR_A3CS_missiles_ATACMS_mag_cluster_desc">
+      <English>ATACMS CLUSTER, GPS Guided Anti-Ground cluster missile</English>
+      <Polish>ATACMS CLUSTER, Pocisk manewrujący ziemia-ziemia z głowicą kasetową naprowadzany GPS</Polish>
     </Key>
   </Package>
 </Project>
