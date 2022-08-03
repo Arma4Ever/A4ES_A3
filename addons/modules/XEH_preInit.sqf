@@ -94,10 +94,16 @@ if (hasInterface) then {
 
 if (is3DEN) then {
   0 call FUNC(initWarnings);
+  GVAR(modulesActRangePreviews) = [];
+  GVAR(modulesActRangePreviewsData) = [];
 
   ["Module_F", "init", {
     _this call FUNC(handleModuleInit);
   }, true, [], false] call CBA_fnc_addClassEventHandler;
+
+  add3DENEventHandler ["OnSelectionChange", {
+    0 call FUNC(updateSelectionPreviews);
+  }];
 };
 
 ADDON = true;
