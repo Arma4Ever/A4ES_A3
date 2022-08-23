@@ -38,11 +38,20 @@ _animData params ["_anim", "_dirFnc", "_posFnc"];
 _agent setDir (_dir call _dirFnc);
 _pos = [_pos, _dir] call _posFnc;
 
-_agent setDamage 1;
+_agent setVariable [QGVAR(anim), _anim];
 _agent setVariable [QGVAR(isSimpleBody), true, true];
+
+// Fix for resetting animation from explosions
+_agent addEventHandler ["HandleDamage", {
+	params ["_unit"];
+  _unit call FUNC(resetSimpleBodyAnim);
+  [{_this call FUNC(resetSimpleBodyAnim)}, _unit] call CBA_fnc_execNextFrame;
+}];
 
 // Update pos and simulation
 [{
+  (_this # 0) setDamage 1;
+
   [{
   	[{
   		params ["_agent", "_pos"];

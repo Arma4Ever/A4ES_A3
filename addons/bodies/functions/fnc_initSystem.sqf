@@ -22,7 +22,7 @@ addMissionEventHandler ["EntityKilled", {
     {_unit getVariable [QGVAR(disableSimpleBody), false]}
   ) exitWith {};
 
-  _this spawn {
+  _unit spawn {
     sleep 3;
     // Wait until ragoll has ended
     waitUntil {
