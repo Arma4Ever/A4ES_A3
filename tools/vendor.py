@@ -65,6 +65,7 @@ VENDOR = {
     "@MS_IFF_Strobe": {},
     "@Rismarck's Static Animations": {},
     "@ZSL Static Poses [WW2]": {},
+    "@Deformer": {},
     "-JSHK_Contamination_Gear": {},
     "-A3CS_vendor": {},
 }

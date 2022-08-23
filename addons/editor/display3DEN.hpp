@@ -135,7 +135,8 @@ class Display3DEN {
                         "ENH_Folder_Loadout",
                         "ENH_Folder_Miscellaneous",
                         "ENH_Folder_Debug",
-                        "ENH_Folder_GUI"
+                        "ENH_Folder_GUI",
+                        "GF_deform"
                         // "ace_arsenal_portVALoadouts"
                     };
                 };
