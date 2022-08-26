@@ -62,4 +62,7 @@ if (_validate) then {
   [_module, _moduleValues] call FUNC(validateEntity);
 };
 
+// Update preview with new values
+0 call FUNC(updateSelectionPreviews);
+
 _moduleValues

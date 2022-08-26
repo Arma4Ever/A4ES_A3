@@ -21,4 +21,7 @@ class Extended_DisplayLoad_EventHandlers {
     class Display3DENEditAttributes {
         ADDON = QUOTE(_this call FUNC(display3DENEditAttributes_onLoad));
     };
+    class Display3DEN {
+        ADDON = QUOTE(_this call (uiNamespace getVariable 'FUNC(display3DEN_onLoad)'));
+    };
 };

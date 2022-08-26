@@ -15,7 +15,8 @@ class CfgPatches {
             "A3_Data_F_Sams_Loadorder",
             "a3_expEden",
             "3denEnhanced",
-            "armaContainersAndDecorations"
+            "armaContainersAndDecorations",
+            "GF_Deformer"
         };
         author = ECSTRING(main,Author);
         authors[] = {"3DEN Enhanced Team", "R3vo", "SzwedzikPL"};
