@@ -13,9 +13,7 @@ class CfgPatches {
             "A3_Air_F_Jets_Plane_Fighter_01",
             "A3_Air_F_Jets_Plane_Fighter_02",
             "A3_Air_F_Jets_Plane_Fighter_04",
-            "A3_Air_F_EPC_Plane_CAS_02",
-            "CUP_AirVehicles_Core",
-            "CUP_Creatures_Military_Taki"
+            "A3_Air_F_EPC_Plane_CAS_02"
         };
         author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL", "Jonpas", "Krzyciu"};
