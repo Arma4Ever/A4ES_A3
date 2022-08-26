@@ -11,10 +11,14 @@ class CfgPatches {
             "A3_Weapons_F",
             "A3_Air_F_Beta_Heli_Attack_01",
             "A3_Air_F_Jets_Plane_Fighter_01",
-            "A3_Air_F_Jets_Plane_Fighter_02"
+            "A3_Air_F_Jets_Plane_Fighter_02",
+            "A3_Air_F_Jets_Plane_Fighter_04",
+            "A3_Air_F_EPC_Plane_CAS_02",
+            "CUP_AirVehicles_Core",
+            "CUP_Creatures_Military_Taki"
         };
         author = ECSTRING(main,Author);
-        authors[] = {"SzwedzikPL", "Jonpas"};
+        authors[] = {"SzwedzikPL", "Jonpas", "Krzyciu"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
