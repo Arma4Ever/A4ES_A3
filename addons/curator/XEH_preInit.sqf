@@ -9,7 +9,9 @@ ADDON = false;
   params ["_curator"];
 
   // Log event
-  ["a3csserver_events_curModCreat", 0] call CBA_fnc_serverEvent;
+  if (isServer) then {
+    ["a3csserver_events_curModCreat", 0] call CBA_fnc_localEvent;
+  };
 
   _curator addEventHandler ["CuratorObjectPlaced", {
     params ["", "_object"];
@@ -56,6 +58,11 @@ if (isServer) then {
   [QGVAR(unassignCuratorModule), {
     _this call FUNC(unassignCuratorModule);
   }] call CBA_fnc_addEventHandler;
+
+  [QGVAR(requestLogicFlagsList), {
+    params ["_player"];
+    [QGVAR(logicFlagsList), EGVAR(modules,logicFlagTitles), [_player]] call CBA_fnc_targetEvent;
+  }] call CBA_fnc_addEventHandler;
 };
 
 if (hasInterface) then {
@@ -64,6 +71,11 @@ if (hasInterface) then {
   GVAR(showPlayerIcons) = false;
   GVAR(drawPlayersCache) = [];
   GVAR(drawPlayersLastCacheRefresh) = DRAWPLAYERSICONS_CACHE_LIFETIME * -1;
+  GVAR(logicFlags) = createHashMap;
+
+  [QGVAR(logicFlagsList), {
+    GVAR(logicFlags) = _this;
+  }] call CBA_fnc_addEventHandler;
 
   [QGVAR(curatorModuleAssigned), {
     params ["_curatorsCount"];

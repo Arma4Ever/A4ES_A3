@@ -27,11 +27,12 @@ if (hasInterface) then {
     player setVariable [QGVAR(isCurator), true, true];
   };
 
-  // Assign zeus
+  // Assign zeus & request logic flags
   [{
     if (player getVariable [QGVAR(isCurator), false]) then {
       LOG("Requesting player curator module");
       [QGVAR(assignCuratorModule), [player, true]] call CBA_fnc_serverEvent;
+      [QGVAR(requestLogicFlagsList), [player]] call CBA_fnc_serverEvent;
     };
   }, [], ([0.1, 2.5] select isMultiplayer)] call CBA_fnc_waitAndExecute;
 

@@ -18,6 +18,11 @@ class CfgVehicles {
     class ace_zeus_moduleBase: Module_F {};
     class zen_modules_moduleBase: Module_F {};
 
+    // Restore ace suppresive fire module - hidden by zen ace compat addon
+    class ace_zeus_moduleSuppressiveFire: ace_zeus_moduleBase {
+        scopeCurator = 2;
+    };
+
     class ModuleCurator_F: Module_F {
         class Attributes: AttributesBase {
             class Addons: Combo {
@@ -37,13 +42,14 @@ class CfgVehicles {
         };
     };
 
+    #include "modules\setLogicFlagValue\module.hpp"
+    #include "modules\setTaskState\module.hpp"
+
+    // #include "modules\toggleDynamicSimulation\module.hpp"
+
     // #include "modules\addIcon\module.hpp"
-    // #include "modules\createTask\module.hpp"
-    // #include "modules\setLogicFlagValue\module.hpp"
-    // #include "modules\setTaskState\module.hpp"
     // #include "modules\showFPS\module.hpp"
     // #include "modules\spawnGeneratorComposition\module.hpp"
-    // #include "modules\toggleDynamicSimulation\module.hpp"
 
     #include "hiddenModules.hpp"
 };

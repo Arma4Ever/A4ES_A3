@@ -18,10 +18,7 @@ if (isServer) then {
   GVAR(createdLogicFlags) = createHashMap;
   GVAR(moduleActivatorFlags) = createHashMap;
   GVAR(activatorModulesFlags) = createHashMap;
-
-  if (is3DENPreview) then {
-    GVAR(logicFlagTitles) = createHashMap;
-  };
+  GVAR(logicFlagTitles) = createHashMap;
 
   GVAR(onKilled_killedEH) = -1;
   GVAR(onKilled_waitingModules) = [];

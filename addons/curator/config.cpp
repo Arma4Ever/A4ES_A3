@@ -3,13 +3,17 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {};
+        units[] = {
+            QGVAR(setLogicFlagValue),
+            QGVAR(setTaskState)
+        };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "a3cs_common",
             "ace_zeus",
             "zen_modules",
+            "zen_compat_ace",
             "A3_Modules_F_Events",
             "A3_Modules_F_Curator_Curator",
             "A3_Modules_F_Curator_Objectives",
@@ -27,5 +31,6 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgFunctions.hpp"
+#include "CfgFactionClasses.hpp"
 #include "CfgVehicles.hpp"
 #include "Cfg3DEN.hpp"

@@ -8,6 +8,10 @@ if (isServer) then {
   GVAR(createdTasks) = createHashMap;
   GVAR(awaitingTasksStates) = createHashMap;
   GVAR(awaitingTasksServer) = createHashMap;
+
+  [QGVAR(setTaskStateServer), {
+    _this call FUNC(setTaskState);
+  }] call CBA_fnc_addEventHandler;
 };
 
 if (hasInterface) then {
