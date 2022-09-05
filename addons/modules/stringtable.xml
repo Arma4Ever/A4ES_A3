@@ -2589,5 +2589,62 @@
     <Key ID="STR_A3CS_Modules_objects3DENComp_Warning_EditMode_Desc">
       <Polish>Moduł jest aktualnie w trybie edycji. Pamiętaj, aby po zakończonej pracy, połączyć odpowiednie obiekty z modułem a następnie przełączyć moduł w tryb odczytu.</Polish>
     </Key>
+    <Key ID="STR_A3CS_Modules_locationName_displayName">
+      <Polish>Zmiana nazwy lokacji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_locationName_shortDescription">
+      <Polish>Moduł pozwala zmienić nazwę lokacji na mapie.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_locationName_positionInfo">
+      <Polish>Pozycja modułu określa nazwę lokacji, która zostanie zmieniona.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_locationName_baseSettingsSubCategory">
+      <Polish>Ustawienia nazwy lokacji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_locationName_Text">
+      <Polish>Nazwa lokacji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_locationName_Tooltip">
+      <Polish>Twoja własna nazwa lokacji.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_locationName_Type">
+      <Polish>Typ lokacji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_locationName_Type_Tooltip">
+      <Polish>Typ lokacji wpływa na styl wyświetlanego tekstu.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_locationName_Type_BorderCrossing">
+      <Polish>Przejście graniczne</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_locationName_Type_CityCenter">
+      <Polish>Bezpieczna Strefa</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_locationName_Type_Hill">
+      <Polish>Wzgórze</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_locationName_Type_FlatArea">
+      <Polish>Tereny zielone</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_locationName_Type_Name">
+      <Polish>Miasteczko</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_locationName_Type_NameCity">
+      <Polish>Miasto</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_locationName_Type_NameLocal">
+      <Polish>Wioska (brązowa)</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_locationName_Type_NameMarine">
+      <Polish>Zbiorniki Wodne</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_locationName_Type_NameCityCapital">
+      <Polish>Stolica</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_locationName_Type_NameVillage">
+      <Polish>Wioska</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_locationName_Type_ViewPoint">
+      <Polish>Punkt widokowy</Polish>
+    </Key>
   </Package>
 </Project>

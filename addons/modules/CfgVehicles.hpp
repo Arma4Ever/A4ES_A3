@@ -352,6 +352,7 @@ class CfgVehicles {
     #include "modules\showMessage\module.hpp"
     #include "modules\switchLights\module.hpp"
     #include "modules\units3DENComp\module.hpp"
+    #include "modules\locationName\module.hpp"
 
     #include "hiddenModules.hpp"
 };
