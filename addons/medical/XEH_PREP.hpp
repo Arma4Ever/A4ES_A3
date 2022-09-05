@@ -1,5 +1,10 @@
 
+PREP(canDrawBlood);
 PREP(canPlaceDressingSet);
+PREP(drawBloodFailure);
+PREP(drawBloodProgress);
+PREP(drawBloodStart);
+PREP(drawBloodSuccess);
 PREP(ejectPlayerFromWreck);
 PREP(getTreatmentTimeIV);
 PREP(getTreatmentTimeSplint);

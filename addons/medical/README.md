@@ -7,3 +7,4 @@ This addon is partially based on medical addon from [Theseus-Aegis](https://gith
 
 ### License
 This addon is distributed under [ACE3 License](https://github.com/acemod/ACE3/blob/master/LICENSE).
+Parts of this addon are distributed under [KAM License](https://github.com/Tomcat-SG/KAM/blob/dev-Tomcat/LICENSE).

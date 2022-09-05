@@ -1,4 +1,5 @@
 class CfgWeapons {
+    class ACE_bloodIV;
     class ACE_ItemCore;
     class CBA_MiscItem_ItemInfo;
 
@@ -25,6 +26,51 @@ class CfgWeapons {
         descriptionShort = "$STR_ACE_Medical_Morphine_Desc_Short";
         descriptionUse = "$STR_ACE_Medical_Morphine_Desc_Use";
 
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 1;
+        };
+    };
+
+    class A3CS_emptyBloodBag: ACE_ItemCore {
+        scope = 2;
+        author = "SzwedzikPL";
+        model = "z\ace\addons\medical_treatment\data\IVBag_250ml.p3d";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\emptybloodbag_model_ca.paa)};
+        picture = QPATHTOF(data\emptybloodbag_inventory_ca.paa);
+        displayName = CSTRING(EmptyBloodBag_DisplayName);
+        descriptionShort = CSTRING(EmptyBloodBag_Desc_Short);
+        descriptionUse = CSTRING(EmptyBloodBag_Desc_Use);
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 1;
+        };
+    };
+
+    class A3CS_usedBloodBag: ACE_ItemCore {
+        scope = 2;
+        author = "SzwedzikPL";
+        model = "z\ace\addons\medical_treatment\data\IVBag_250ml.p3d";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\emptybloodbag_model_ca.paa)};
+        picture = QPATHTOF(data\emptybloodbag_inventory_ca.paa);
+        displayName = CSTRING(UsedBloodBag_DisplayName);
+        descriptionShort = CSTRING(UsedBloodBag_Desc_Short);
+        descriptionUse = CSTRING(UsedBloodBag_Desc_Use);
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 1;
+        };
+    };
+
+    class A3CS_clottedBloodBag: ACE_ItemCore {
+        scope = 2;
+        author = "SzwedzikPL";
+        model = "z\ace\addons\medical_treatment\data\IVBag_250ml.p3d";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"z\ace\addons\medical_treatment\data\IVBag_blood_250ml_ca.paa"};
+        picture = QPATHTOF(data\clottedbloodbag_inventory_ca.paa);
+        displayName = CSTRING(ClottedBloodBag_DisplayName);
+        descriptionShort = CSTRING(ClottedBloodBag_Desc_Short);
+        descriptionUse = CSTRING(ClottedBloodBag_Desc_Use);
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
