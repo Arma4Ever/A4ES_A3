@@ -77,6 +77,10 @@ class GVAR(locationName): GVAR(base) {
                     name = CSTRING(locationName_Type_ViewPoint);
                     value = "ViewPoint";
                 };
+                class Invisible {
+                    name = CSTRING(locationName_Type_Invisible);
+                    value = "Invisible";
+                };
             };
         };
 

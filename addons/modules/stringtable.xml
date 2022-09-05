@@ -2593,7 +2593,7 @@
       <Polish>Zmiana nazwy lokacji</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_locationName_shortDescription">
-      <Polish>Moduł pozwala zmienić nazwę wybranej lokacji na mapie.</Polish>
+      <Polish>Moduł pozwala zmienić nazwę wybranej lokacji na mapie. Jeżeli chcesz ukryć lokację użyj typu "niewidoczny".</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_locationName_positionInfo">
       <Polish>Pozycja modułu określa nazwę lokacji, która zostanie zmieniona.</Polish>
@@ -2611,7 +2611,7 @@
       <Polish>Typ lokacji</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_locationName_Type_Tooltip">
-      <Polish>Typ lokacji wpływa na styl wyświetlanego tekstu.</Polish>
+      <Polish>Typ lokacji wpływa na styl wyświetlanego tekstu. "Niewidoczny" powoduje ukrycie nazwy lokacji.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_locationName_Type_BorderCrossing">
       <Polish>Przejście graniczne</Polish>
@@ -2645,6 +2645,9 @@
     </Key>
     <Key ID="STR_A3CS_Modules_locationName_Type_ViewPoint">
       <Polish>Punkt widokowy</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_locationName_Type_Invisible">
+      <Polish>Niewidoczna</Polish>
     </Key>
   </Package>
 </Project>
