@@ -1,2 +1,2 @@
 
-PREP_MODULE(changeLocationName,module);
+PREP_MODULE(locationName,module);
