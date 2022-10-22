@@ -1,5 +1,5 @@
-# Arma3Coop System
-A collection of mods providing necessary functionalities for Arma3Coop.pl community. This mod is only distributed among community members via private community repository.
+# Arma4Ever System
+A collection of Arma 3 mods providing necessary functionalities for Arma4Ever.pl community. This mod is only distributed among community members via private community repository.
 
 ## Requirements
 - [CBA](https://github.com/CBATeam/CBA_A3)
@@ -49,7 +49,7 @@ Tools scripts and addons macros are based on [ACE3](https://github.com/acemod/AC
 Please check each addon readme for more credits.
 
 ## License
-[MIT](https://github.com/SzwedzikPL/A3CS/blob/master/LICENSE.md)  
-The MIT license grant is not for Arma3Coop community logo designs.  
-License only applies to content of [this repository](https://github.com/SzwedzikPL/A3CS), not external mods included during build process.  
+[MIT](https://github.com/Arma4Ever/A4ES/blob/master/LICENSE.md)  
+The MIT license grant is not for Arma4Ever community logo designs.  
+License only applies to content of [this repository](https://github.com/Arma4Ever/A4ES), not external mods included during build process.  
 Elements of some addons may be available under different license, please check addon readme.
