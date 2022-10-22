@@ -6,6 +6,10 @@ ADDON = false;
 
 ADDON = true;
 
+[QGVAR(defenderBehaviour), {
+  _this call FUNC(defenderBehaviour);
+}] call CBA_fnc_addEventHandler;
+
 // Remove AI NVG from inventory if player has one
 ["loadout", {
   // Use "player" - ignore remote controled units

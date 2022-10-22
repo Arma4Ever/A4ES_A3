@@ -11,7 +11,12 @@ private _objectsList = [];
 
 {
   _x params ["_type", "_entity"];
-  if ((_type isNotEqualTo "Sync")) then {continue};
+  if (
+    (_type isNotEqualTo "Sync") ||
+    {_entity isKindOf "logic"} ||
+    {_entity isKindOf "CAManBase"} ||
+    {((getModelInfo _entity) # 1) == "a3\weapons_f\empty.p3d"}
+  ) then {continue};
 
   _objectsList pushBackUnique _entity;
 } forEach (get3DENConnections _logic);

@@ -61,6 +61,30 @@
     <Key ID="STR_A3CS_AI_skillLevel_eliteVeterans_description">
       <Polish>Żołnierz sił specjalnych z długim doświadczeniem bojowym</Polish>
     </Key>
+    <Key ID="STR_A3CS_AI_defenderBehaviour_displayName">
+      <Polish>Stacjonarny obrońca</Polish>
+    </Key>
+    <Key ID="STR_A3CS_AI_defenderBehaviour_tooltip">
+      <Polish>Ustawienia systemu stacjonarnego obrońcy.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_AI_defenderBehaviour_Attributes_disabled_name">
+      <Polish>Wyłączony</Polish>
+    </Key>
+    <Key ID="STR_A3CS_AI_defenderBehaviour_Attributes_disabled_tooltip">
+      <Polish>System będzie wyłączony dla danej jednostki.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_AI_defenderBehaviour_Attributes_up_name">
+      <Polish>Wstawianie i kładzenie się</Polish>
+    </Key>
+    <Key ID="STR_A3CS_AI_defenderBehaviour_Attributes_up_tooltip">
+      <Polish>Postać będzie wstawać i kłaść się w różnych interwałach czasowych. Na zachowanie jednostki ma też wpływ ostrzał prowadzony w kierunku tej jednostki. W momencie włączenia systemu, poruszanie się tej jednostki zostanie automatycznie wyłączone.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_AI_defenderBehaviour_Attributes_middle_name">
+      <Polish>Kucanie i kładzenie się</Polish>
+    </Key>
+    <Key ID="STR_A3CS_AI_defenderBehaviour_Attributes_middle_tooltip">
+      <Polish>Postać będzie kucać i kłaść się w różnych interwałach czasowych. Na zachowanie jednostki ma też wpływ ostrzał prowadzony w kierunku tej jednostki. W momencie włączenia systemu, poruszanie się tej jednostki zostanie automatycznie wyłączone.</Polish>
+    </Key>
     <Key ID="STR_A3CS_AI_NVGoggles_displayName">
       <English>Hidden AI NVG</English>
       <Polish>Ukryta noktowizja AI</Polish>

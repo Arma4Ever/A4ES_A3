@@ -1,5 +1,14 @@
 #include "script_component.hpp"
 
+["ace_killed", {
+  params ["_unit", "", "_killer", "_instigator"];
+  diag_log ["killed", _unit, _killer, _instigator];
+}] call CBA_fnc_addEventHandler;
+
+
+
+
+
 if (hasInterface) then {
   // Exit if curator/spectator
   if ((side (group player)) isEqualTo sideLogic) exitWith {};
@@ -10,23 +19,38 @@ if (hasInterface) then {
 
   // Add friendly-fire logging
   ["ace_medical_woundReceived", {
-    params ["_unit", "", "", "_shooter", "_ammo"];
+    _this call FUNC(handleFriendlyFire);
+  }] call CBA_fnc_addEventHandler;
 
-    if (
-      (GVAR(ffReported)) ||
-      {_unit isNotEqualTo player} ||
-      {isNull _shooter} ||
-      {!(_shooter getVariable [QEGVAR(common,isPlayer), false])} ||
-      {(side (group _unit)) isNotEqualTo (side (group _shooter))}
-    ) exitWith {};
+  // Head damage healing
+  [{
+    params ["_player", "_handle"];
 
-    ["a3csserver_events_userFF", [_unit, _shooter, _ammo]] call CBA_fnc_serverEvent;
+    if !(alive _player) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
+    private _headDamage = _player getVariable [QGVAR(currentHeadDamage), 0];
+    if (_headDamage <= 0) exitWith {};
 
-    // Wait 3 sec before we can report another FF
-    GVAR(ffReported) = true;
-    0 spawn {
-      sleep 3;
-      GVAR(ffReported) = false;
+    private _newDamage = (_headDamage - (_player getVariable [QGVAR(headDamageHealTick), 0])) max 0;
+
+    // Reset diagnosed injuries if fully healed
+    if (_newDamage == 0) then {
+      _player setVariable [QGVAR(diagnosedBrainInjuries), [], true];
     };
+
+    // Update current head dmg
+    _player setVariable [
+      QGVAR(currentHeadDamage),
+      _newDamage,
+      true
+    ];
+  }, 60, player] call CBA_fnc_addPerFrameHandler;
+
+/*
+Akcja medyka sprawdzajaca dmg
+Zmienic headDamage na brainDamage??????????
+*/
+
+  ["ace_medical_woundReceived", {
+    _this call FUNC(handleHeadshot);
   }] call CBA_fnc_addEventHandler;
 };

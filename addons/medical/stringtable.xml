@@ -37,6 +37,14 @@
       <English>Administering painkillers...</English>
       <Polish>Podawanie leków przeciwbólowych...</Polish>
     </Key>
+    <Key ID="STR_A3CS_Medical_CheckDogtag_DisplayName">
+      <English>Check Dog Tag</English>
+      <Polish>Sprawdź nieśmiertelnik</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Medical_CheckDogtag_Progress">
+      <English>Checking Dog Tag...</English>
+      <Polish>Sprawdzanie nieśmiertelnika...</Polish>
+    </Key>
     <Key ID="STR_A3CS_Medical_DrawBlood500_DisplayName">
       <English>Draw Blood (500ml)</English>
       <Polish>Pobierz krew (500ml)</Polish>
@@ -85,5 +93,45 @@
       <English>Used blood bag, no medical use.</English>
       <Polish>Zużyty worek na krew, brak medycznych zastosowań.</Polish>
     </Key>
+
+
+
+    <Key ID="STR_A3CS_Medical_CheckMedications_DisplayName">
+      <English>Check active medications</English>
+      <Polish>Sprawdź aktywne substancje</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Medical_CheckMedications_Progress">
+      <English>Checking active medications...</English>
+      <Polish>Sprawdzanie aktywnych substancji...</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Medical_CheckMedications_Result">
+      <English>Active medications and effectiveness:</English>
+      <Polish>Aktywne substancje i ich aktywność:</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Medical_CheckMedications_None">
+      <English>No active medications.</English>
+      <Polish>Brak aktywnych substancji.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Medical_CheckNeurologicalInjuries_DisplayName">
+      <English>Check neurological injuries</English>
+      <Polish>Sprawdź urazy neurologiczne</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Medical_CheckNeurologicalInjuries_Progress">
+      <English>Checking neurological injuries...</English>
+      <Polish>Sprawdzanie urazów neurologicznych...</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Medical_CheckNeurologicalInjuries_HealText">
+      <English>Neurological injuries should heal in %1 minutes.</English>
+      <Polish>Urazy neurologiczne powinny zniknąć za %1 minut.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Medical_CheckNeurologicalInjuries_HealText_few">
+      <English>few</English>
+      <Polish>kilka</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Medical_CheckNeurologicalInjuries_HealText_around">
+      <English>around %1</English>
+      <Polish>około %1</Polish>
+    </Key>
+
   </Package>
 </Project>

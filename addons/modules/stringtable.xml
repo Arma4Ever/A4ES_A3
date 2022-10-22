@@ -170,6 +170,18 @@
     <Key ID="STR_A3CS_Modules_Attributes_activationSettingsSubCategory">
       <Polish>Ustawienia aktywacji</Polish>
     </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_addPreActivation">
+      <Polish>Dodaj warunek preaktywacji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_addPreActivation_tooltip">
+      <Polish>Zaznacz tą opcję jeśli chcesz aby warunek aktywacji modułu był sprawdzany dopiero po tym gdy wybrane flagi logiczne będą miały oczekiwane wartości.\n\nDopiero gdy podane flagi będą miały oczekiwane wartości, warunek aktywacji modułu zacznie być sprawdzany.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_preActivationFlags">
+      <Polish>Warunek preaktywacji</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_Attributes_preActivationFlags_Tooltip">
+      <Polish>Dopiero gdy podane flagi będą miały oczekiwane wartości, warunek aktywacji modułu zacznie być sprawdzany.</Polish>
+    </Key>
     <Key ID="STR_A3CS_Modules_Attributes_activationMode">
       <Polish>Metoda aktywacji</Polish>
     </Key>
@@ -661,6 +673,38 @@
     </Key>
     <Key ID="STR_A3CS_Modules_dynamicLogicFlagCond_removedFlagFromList">
       <Polish>Usunięto flagę %1 z listy</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_dynamicDialogueEntity">
+    <Key ID="STR_A3CS_Modules_dynamicDialogueEntity_optionsComboTitle">
+      <Polish>Dostępne opcje dialogowe</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicDialogueEntity_answersComboTitle">
+      <Polish>Dostępne odpowiedzi dialogowe</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicDialogueEntity_ButtonRemoveOption_Tooltip">
+      <Polish>Usuń zaznaczoną opcję (skrót klaw. DEL)</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicDialogueEntity_ButtonRemoveAnswer_Tooltip">
+      <Polish>Usuń zaznaczoną odpowiedź (skrót klaw. DEL)</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicDialogueEntity_OptionTitle">
+      <Polish>Nazwa opcji dialogowej</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicDialogueEntity_AnswerTitle">
+      <Polish>Nazwa odpowiedzi dialogowej</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicDialogueEntity_addedOptionToList">
+      <Polish>Dodano opcję %1 do listy</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicDialogueEntity_addedAnswerToList">
+      <Polish>Dodano odpowiedź %1 do listy</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicDialogueEntity_removedOptionFromList">
+      <Polish>Usunięto opcję %1 z listy</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dynamicDialogueEntity_removedAnswerFromList">
+      <Polish>Usunięto odpowiedź %1 z listy</Polish>
     </Key>
   </Package>
   <Package name="Modules_dynamicOwnerToolbox">
@@ -1799,6 +1843,166 @@
       <Polish>Nazwa funkcji nie może być pusta.</Polish>
     </Key>
   </Package>
+  <Package name="Modules_addDialogue">
+    <Key ID="STR_A3CS_Modules_addDialogue_displayName">
+      <Polish>Dodaj dialog</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_shortDescription">
+      <Polish>shortDescription</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_baseSettingsSubCategory">
+      <Polish>baseSettingsSubCategory</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_id">
+      <Polish>id</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_id_tooltip">
+      <Polish>id_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_id_desc">
+      <Polish>id_desc</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_name">
+      <Polish>name</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_name_tooltip">
+      <Polish>name_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_title">
+      <Polish>title</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_title_tooltip">
+      <Polish>title_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_initialMessage">
+      <Polish>initialMessage</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_initialMessage_tooltip">
+      <Polish>initialMessage_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_addCondition">
+      <Polish>addCondition</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_addCondition_tooltip">
+      <Polish>addCondition_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_conditionType">
+      <Polish>conditionType</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_conditionType_tooltip">
+      <Polish>conditionType_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_conditionLogicFlags">
+      <Polish>conditionLogicFlags</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_conditionLogicFlags_tooltip">
+      <Polish>conditionLogicFlags_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_conditionScript">
+      <Polish>conditionScript</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_conditionScript_tooltip">
+      <Polish>conditionScript_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_conditionScript_desc">
+      <Polish>conditionScript_desc</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_rejectionMessage">
+      <Polish>rejectionMessage</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_rejectionMessage_tooltip">
+      <Polish>rejectionMessage_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_addStartClientHandler">
+      <Polish>addStartClientHandler</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_addStartClientHandler_tooltip">
+      <Polish>addStartClientHandler_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_startClientHandler">
+      <Polish>startClientHandler</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_startClientHandler_tooltip">
+      <Polish>startClientHandler_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_startClientHandler_desc">
+      <Polish>startClientHandler_desc</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_addStartServerHandler">
+      <Polish>addStartServerHandler</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_addStartServerHandler_tooltip">
+      <Polish>addStartServerHandler_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_startServerHandler">
+      <Polish>startServerHandler</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_startServerHandler_tooltip">
+      <Polish>startServerHandler_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_startServerHandler_desc">
+      <Polish>startServerHandler_desc</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_changeLogicFlagOnStart">
+      <Polish>changeLogicFlagOnStart</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_changeLogicFlagOnStart_tooltip">
+      <Polish>changeLogicFlagOnStart_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_changeLogicFlag">
+      <Polish>changeLogicFlag</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_changeLogicFlag_tooltip">
+      <Polish>changeLogicFlag_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_changeLogicFlagValue">
+      <Polish>changeLogicFlagValue</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_changeLogicFlagValue_tooltip">
+      <Polish>changeLogicFlagValue_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_addEndClientHandler">
+      <Polish>addEndClientHandler</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_addEndClientHandler_tooltip">
+      <Polish>addEndClientHandler_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_endClientHandler">
+      <Polish>endClientHandler</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_endClientHandler_tooltip">
+      <Polish>endClientHandler_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_endClientHandler_desc">
+      <Polish>endClientHandler_desc</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_addEndServerHandler">
+      <Polish>addEndServerHandler</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_addEndServerHandler_tooltip">
+      <Polish>addEndServerHandler_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_endServerHandler">
+      <Polish>endServerHandler</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_endServerHandler_tooltip">
+      <Polish>endServerHandler_tooltip</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_addDialogue_Attributes_endServerHandler_desc">
+      <Polish>endServerHandler_desc</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_addDialogueAnswer">
+    <Key ID="STR_A3CS_Modules_addDialogueAnswer_displayName">
+      <Polish>Dodaj odpowiedź</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_addDialogueOption">
+    <Key ID="STR_A3CS_Modules_addDialogueOption_displayName">
+      <Polish>Dodaj opcję dialogową</Polish>
+    </Key>
+  </Package>
+
   <Package name="Modules_aiNightvision">
     <Key ID="STR_A3CS_Modules_radioJammer_displayName">
       <Polish>Zagłuszanie radiowe</Polish>
@@ -2129,6 +2333,12 @@
       <Polish>0 - czas gry będzie stał w miejscu.&lt;br/&gt;1 - normalnie (1:1 czasu realnego).&lt;br/&gt;2 - dwa razy szbyciej niż normalnie (1 minuta w grze to 30 sekund w rzeczywistości), i tak dalej.</Polish>
     </Key>
   </Package>
+  <Package name="Modules_setSideDefaultDialogue">
+    <Key ID="STR_A3CS_Modules_setUnitDialogue_displayName">
+      <Polish>Ustaw dialog jednostek</Polish>
+    </Key>
+  </Package>
+
   <Package name="Modules_addAction">
     <Key ID="STR_A3CS_Modules_addAction_displayName">
       <Polish>Dodaj akcję</Polish>
@@ -2312,6 +2522,7 @@
     <Key ID="STR_A3CS_Modules_createLogicFlag_Attributes_title_desc">
       <Polish>Nazwa flagi wyświetlana jest tylko w edytorze, w ustawieniach aktywacji modułów i innych miejscach korzystajacych z flag. Nazwa flagi powinna być jasna, związana z tym czym steruje (dla ułatwienia własnej pracy).</Polish>
     </Key>
+
     <Key ID="STR_A3CS_Modules_createLogicFlag_Attributes_initialValue">
       <Polish>Wartość początkowa</Polish>
     </Key>
@@ -2334,6 +2545,11 @@
     </Key>
     <Key ID="STR_A3CS_Modules_setLogicFlagValue_Warning_emptyFlags_Tooltip">
       <Polish>Nie wykryto żadnych flag logicznych</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_setSideDefaultDialogue">
+    <Key ID="STR_A3CS_Modules_setSideDefaultDialogue_displayName">
+      <Polish>Ustaw domyślny dialog frakcji</Polish>
     </Key>
   </Package>
   <Package name="Modules_units3DENComp">
@@ -2363,6 +2579,12 @@
     </Key>
     <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_disableHeadless_tooltip">
       <Polish>Blokuje przekazanie do headlessa (jeśli jest dostępny) wygenerowanych jednostek. Pamiętaj, że ma to realny wpływ na wydajność misji (jeśli headless jest dostępny).\n\nUżyj tej opcji tylko jeśli wiesz co robisz.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_deactivationNearestPlayerDistance">
+      <Polish>Minimalny dystans od graczy</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_deactivationNearestPlayerDistance_Tooltip">
+      <Polish>Minimalny dystans od graczy pozwalający na spawn jednostek z modułu. Jeśli w momencie aktywacji modułu gracze będą bliżej modułu niż podana odległość (w metrach), jednostki nie zostaną stworzone. Opcji tej należy używać jako zabezpieczenie (szczególnie w przypadku gdy używamy preaktywacji) przed tworzeniem jednostek na oczach graczy.\n\nWarto pamiętać, iż jeśli gracze znajdą się bliżej niż podany dystans w momencie aktywacji modułu, moduł nie stworzy jednostek i zostanie trwale dezaktywowany - jednostki z tego modułu nigdy już nie zostaną stworzone. Miej to na uwadze używając tej opcji - brak jednostek to mniejsze zło, niż tworzenie ich na oczach graczy, lecz jeśli stworzenie jednostek z tego modułu jest kluczowe dla scenariusza, rozważ inną opcję zabezpieczenia spawnu.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_addSpawnCond">
       <Polish>Dodaj warunek spawnu jednostek</Polish>
@@ -2415,7 +2637,48 @@
     <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_goUpAfterSpawn_tooltip">
       <Polish>Po zaznaczeniu tej opcji, wszystkie jednostki które zostaną stworzone w innej pozie niż stojąca, wstaną zaraz po stworzeniu.\n\nMoże być to przydatna opcja do generowania jednostek w budynkach lub za osłonami, tak aby gracze nie widzieli spawnu.\n\nPamiętaj, że ta opcja dotyczy wszystkich wygenerowanych przez moduł jednostek.</Polish>
     </Key>
-
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_forceSpawnLying">
+      <Polish>Spawn w pozycji leżącej</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_forceSpawnLying_tooltip">
+      <Polish>Po zaznaczeniu tej opcji, wszystkie jednostki piechoty stworzone przez moduł zostaną stworzone w pozycji leżącej.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_forceDisablePATH">
+      <Polish>Wyłącz poruszanie się</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_forceDisablePATH_tooltip">
+      <Polish>Po zaznaczeniu tej opcji, wszystkie jednostki stworzone przez moduł będą miały automatycznie wyłączone poruszanie się (PATH).</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_defenderBehaviour">
+      <Polish>Stacjonarny obrońca</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_defenderBehaviour_tooltip">
+      <Polish>Ustawienia systemu stacjonarnego obrońcy dla jednostek piechoty tworzonych przez moduł.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_defenderBehaviour_unit">
+      <Polish>Ustawienia jednostek</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_defenderBehaviour_unit_tooltip">
+      <Polish>Obowiązywać będzie ustawienie w poszczególnych jednostkach.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_defenderBehaviour_disabled">
+      <Polish>Wyłączony</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_defenderBehaviour_disabled_tooltip">
+      <Polish>System stacjonarnego obrońcy będzie wyłączony dla wszystkich jednostek stworzonych przez moduł.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_defenderBehaviour_up">
+      <Polish>Wstawianie i kładzenie się</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_defenderBehaviour_up_tooltip">
+      <Polish>Jednostki piechoty stworzone przez moduł będą wstawać i kłaść się w różnych interwałach czasowych. Na zachowanie jednostki ma też wpływ ostrzał prowadzony w kierunku tej jednostki. W momencie włączenia systemu, poruszanie się tej jednostki zostanie automatycznie wyłączone.</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_defenderBehaviour_middle">
+      <Polish>Kucanie i kładzenie się</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_dunits3DENComp_Attributes_defenderBehaviour_middle_tooltip">
+      <Polish>Jednostki piechoty stworzone przez moduł będą kucać i kłaść się w różnych interwałach czasowych. Na zachowanie jednostki ma też wpływ ostrzał prowadzony w kierunku tej jednostki. W momencie włączenia systemu, poruszanie się tej jednostki zostanie automatycznie wyłączone.</Polish>
+    </Key>
     <Key ID="STR_A3CS_Modules_units3DENComp_Attributes_addUnitPostInit">
       <Polish>Dodaj handler initu jednostek</Polish>
     </Key>
@@ -2562,6 +2825,12 @@
     <Key ID="STR_A3CS_Modules_objects3DENComp_Attributes_spawnAsSuperSimple_tooltip">
       <Polish>Po zaznaczeniu tej opcji obiekty będą tworzone jako obiekty super proste. Użyj tej opcji jeśli w kompozycji zapisałeś obiekty które mają być tylko niezniszczalną dekoracją. Odnaczenie tej opcji spowoduje tworzenie obiektów prostych na których można wykonywać później niektóre operacje skryptowe (np. reskin czy animowanie).</Polish>
     </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_Attributes_spawnLocally">
+      <Polish>Twórz obiekty lokalnie</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Modules_objects3DENComp_Attributes_spawnLocally_tooltip">
+      <Polish>Po zaznaczeniu tej opcji obiekty będą tworzone lokalnie u każdego klienta osobno. Użycie tej opcji ma sens w przypadku gdy tworzymy kompozycjami obiektów edytora bardzo dużą ilość obiektów i nie chcemy aby ich obecność generowała ciągły ruch sieciowy związany z aktualizowaniem stanu obiektów.</Polish>
+    </Key>
     <Key ID="STR_A3CS_Modules_objects3DENComp_Attributes_addObjectPostInit">
       <Polish>Dodaj handler initu obiektów</Polish>
     </Key>
@@ -2575,7 +2844,7 @@
       <Polish>Skrypt zostanie wykonany dla każdego wygenerowanego obiektu i nadaniu mu parametrów z modułu.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_objects3DENComp_Attributes_objectPostInit_desc">
-      <Polish>Skrypt zostanie wykonany na serwerze po wygenerowaniu obiektu. Parametry: _this - wygenerowany obiekt.</Polish>
+      <Polish>Skrypt zostanie wykonany dla każdego wygenerowanego obiektu, na serwerze jeśli opcja twórz obiekty lokalnie jest odznaczona, globanie u każdego klienta jeśli opcja twórz obiekty lokalnie jest zaznaczona . Parametry: _this - wygenerowany obiekt.</Polish>
     </Key>
     <Key ID="STR_A3CS_Modules_objects3DENComp_Warning_NoObjects_Desc">
       <Polish>Brak połączonych z modułem obiektów</Polish>

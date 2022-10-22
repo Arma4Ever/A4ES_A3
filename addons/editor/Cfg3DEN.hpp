@@ -214,6 +214,13 @@ class Cfg3DEN {
                     // Remove as last - its a base class
                     delete ENH_SetCaptive;
 
+                    class LocalOnly {
+                        displayName = "Local Only";
+                        control = QGVAR(hiddenCheckbox);
+                        defaultValue = "false";
+                        data = "isLocalOnly";
+                    };
+
                     #include "attributes\object_stateSpecial.hpp"
                 };
             };
@@ -248,4 +255,11 @@ class Cfg3DEN {
             #include "attributes\object_disableAI.hpp"
 		};
 	};
+    class Trigger {
+        class Draw {
+            class 3D {
+                fadeDistance = 5000;
+            };
+        };
+    };
 };

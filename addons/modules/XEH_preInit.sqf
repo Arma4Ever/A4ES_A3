@@ -48,6 +48,10 @@ if (isServer) then {
   _this call FUNC(setLogicFlagValue);
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(spawnSimpleObjects), {
+  _this call FUNC(spawn3DENCompObjectsLocal);
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(addCuratorModule), {
   params ["_category", "_name", "_icon", "_function"];
 

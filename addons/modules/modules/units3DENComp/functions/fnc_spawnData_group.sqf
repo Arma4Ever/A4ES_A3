@@ -4,7 +4,17 @@
  * Spawns group from group data during game
  */
 
-params ["_groupData", "_vehicles", "_groupsDynSim", "_goUpAfterSpawn", "_unitPostInit", "_groupPostInit"];
+params [
+  "_groupData",
+  "_vehicles",
+  "_groupsDynSim",
+  "_goUpAfterSpawn",
+  "_forceSpawnLying",
+  "_forceDisablePATH",
+  "_defenderBehaviour",
+  "_unitPostInit",
+  "_groupPostInit"
+];
 TRACE_1("units3DENComp_spawnData_group",_groupData);
 
 _groupData params [
@@ -31,7 +41,16 @@ if (isNull _group) exitWith {
 // Create units
 {
   TRACE_2("units3DENComp_spawnData_group - spawning unit",_group,_forEachIndex);
-  private _unitSpawn = [_x, _group, _vehicles, _goUpAfterSpawn, _unitPostInit] spawn FUNC(units3DENComp_spawnData_unit);
+  private _unitSpawn = [
+    _x,
+    _group,
+    _vehicles,
+    _goUpAfterSpawn,
+    _forceSpawnLying,
+    _forceDisablePATH,
+    _defenderBehaviour,
+    _unitPostInit
+  ] spawn FUNC(units3DENComp_spawnData_unit);
   waitUntil {scriptDone _unitSpawn};
   sleep 0.15;
 } forEach _unitsData;

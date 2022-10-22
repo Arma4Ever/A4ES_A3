@@ -19,6 +19,7 @@ if (
   {(velocity _vehicle) isNotEqualTo [0, 0, 0]}
 ) exitWith {
   _vehicle enableDynamicSimulation false;
+  _vehicle enableSimulationGlobal true;
 };
 
 if !(dynamicSimulationEnabled _vehicle) then {

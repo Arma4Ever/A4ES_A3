@@ -6,7 +6,7 @@ ADDON = false;
 
 if (isServer) then {
   GVAR(createdTasks) = createHashMap;
-  GVAR(awaitingTasksStates) = createHashMap;
+  GVAR(awaitingTasksStatesServer) = createHashMap;
   GVAR(awaitingTasksServer) = createHashMap;
 
   [QGVAR(setTaskStateServer), {
@@ -21,6 +21,8 @@ if (hasInterface) then {
   GVAR(rejectedTasks) = [];
   // Map of awaiting tasks (used if parent task is not created yet)
   GVAR(awaitingTasks) = createHashMap;
+  // Map of awaiting tasks states (used if state is assigned before task creation - JIP)
+  GVAR(awaitingTasksStates) = createHashMap;
   // Notifications awaiting for task (used if notification event reached client before task creation)
   GVAR(awaitingNotifications) = [];
 

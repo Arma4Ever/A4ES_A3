@@ -43,4 +43,7 @@ class CfgFactionClasses {
     class GVAR(fortify): GVAR(base) {
         displayName = "A3CS Fortyfikacje";
     };
+    class GVAR(dialogues): GVAR(base) {
+        displayName = "A3CS Dialogi";
+    };
 };

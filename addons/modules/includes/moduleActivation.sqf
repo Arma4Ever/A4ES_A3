@@ -1,5 +1,28 @@
 
+private _preActivationMode = _logic getVariable [QGVAR(preActivationMode), 0];
+private _preactivated = _logic getVariable [QGVAR(preactivated), false];
 private _activationMode = _logic getVariable [QGVAR(activationMode), 0];
+
+if (_preActivationMode != 0 && {!_preactivated}) exitWith {
+  private _function = getText ((configOf _logic) >> "function");
+  if (_function == "") exitWith {};
+
+  private _condition = parseSimpleArray (_logic getVariable [QGVAR(preActivationFlags), "[]"]);
+
+  // Convert if not activated by trigger
+  if (_activationMode != 3) then {
+    _logic = _logic call FUNC(convertToNamespace);
+  };
+
+  // Mark as preactivated - we're using the same function as init, prevents double preactivation
+  _logic setVariable [QGVAR(preactivated), true];
+
+  // Add module to activator system
+  [_logic, _condition, _logic, _function, 0] call FUNC(addModuleToActivator);
+
+  LOG('Init of EXEC_MODULE_NAME finished - added to activator (preactivation).');
+};
+
 private _activationDelay = _logic getVariable [QGVAR(activationDelay), false];
 private _activationDelayTime = [
   0,
@@ -32,19 +55,7 @@ if (_activationMode isEqualTo 3) exitWith {
 
 // Activation by proximity, flags or condition
 if (_activationMode in [0, 1, 2]) exitWith {
-  // Convert logic to namespace if not synced with anything
-  if ((synchronizedObjects _logic) isEqualTo []) then {
-    private _newLogic = _logic call FUNC(convertToNamespace);
-
-    if (is3DENPreview) then {
-      [_logic, _newLogic] call EFUNC(debug,replaceModuleStatus);
-      _logic setVariable [QEGVAR(debug,replaceOnInit), _newLogic];
-    } else {
-      deleteVehicle _logic;
-    };
-
-    _logic = _newLogic;
-  };
+  _logic = _logic call FUNC(convertToNamespace);
 
   // Get condition
   private _condition =  [_logic, _activationMode] call FUNC(getModuleActivatorCond);

@@ -63,6 +63,17 @@ class GVAR(units3DENComp): GVAR(base) {
             ATTRIBUTE_LOCAL;
         };
 
+        class GVAR(deactivationNearestPlayerDistance): GVAR(dynamicEdit) {
+            displayName = CSTRING(units3DENComp_Attributes_deactivationNearestPlayerDistance);
+            tooltip = CSTRING(units3DENComp_Attributes_deactivationNearestPlayerDistance_tooltip);
+            property = QGVAR(deactivationNearestPlayerDistance);
+            defaultValue = "0";
+            typeName = "NUMBER";
+            validate = "NUMBER";
+            GVAR(observeValue) = 0;
+            ATTRIBUTE_LOCAL;
+        };
+
         class GVAR(addSpawnCond): GVAR(dynamicCheckbox) {
             displayName = CSTRING(units3DENComp_Attributes_addSpawnCond);
             tooltip = CSTRING(units3DENComp_Attributes_addSpawnCond_Tooltip);
@@ -115,6 +126,15 @@ class GVAR(units3DENComp): GVAR(base) {
             };
         };
 
+        class GVAR(forceSpawnLying): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(units3DENComp_Attributes_forceSpawnLying);
+            tooltip = CSTRING(units3DENComp_Attributes_forceSpawnLying_tooltip);
+            property = QGVAR(forceSpawnLying);
+            defaultValue = "false";
+            GVAR(observeValue) = 0;
+            ATTRIBUTE_LOCAL;
+        };
+
         class GVAR(goUpAfterSpawn): GVAR(dynamicCheckbox) {
             displayName = CSTRING(units3DENComp_Attributes_goUpAfterSpawn);
             tooltip = CSTRING(units3DENComp_Attributes_goUpAfterSpawn_tooltip);
@@ -122,6 +142,50 @@ class GVAR(units3DENComp): GVAR(base) {
             defaultValue = "false";
             GVAR(observeValue) = 0;
             ATTRIBUTE_LOCAL;
+        };
+
+        class GVAR(forceDisablePATH): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(units3DENComp_Attributes_forceDisablePATH);
+            tooltip = CSTRING(units3DENComp_Attributes_forceDisablePATH_tooltip);
+            property = QGVAR(forceDisablePATH);
+            defaultValue = "false";
+            GVAR(observeValue) = 0;
+            ATTRIBUTE_LOCAL;
+        };
+
+        class GVAR(defenderBehaviour): GVAR(dynamicCombo) {
+            displayName = CSTRING(units3DENComp_Attributes_defenderBehaviour);
+            tooltip = CSTRING(units3DENComp_Attributes_defenderBehaviour_tooltip);
+            property = QGVAR(defenderBehaviour);
+            typeName = "NUMBER";
+            defaultValue = "'-1'";
+            GVAR(observeValue) = 0;
+            ATTRIBUTE_LOCAL;
+
+            class values {
+                class unit {
+                    name = CSTRING(units3DENComp_Attributes_defenderBehaviour_unit);
+                    tooltip = CSTRING(units3DENComp_Attributes_defenderBehaviour_unit_tooltip);
+                    value = -1;
+                    default = 1;
+                };
+                class disabled {
+                    name = CSTRING(units3DENComp_Attributes_defenderBehaviour_disabled);
+                    tooltip = CSTRING(units3DENComp_Attributes_defenderBehaviour_disabled_tooltip);
+                    value = 0;
+                    default = 1;
+                };
+                class up {
+                    name = CSTRING(units3DENComp_Attributes_defenderBehaviour_up);
+                    tooltip = CSTRING(units3DENComp_Attributes_defenderBehaviour_up_tooltip);
+                    value = 1;
+                };
+                class middle {
+                    name = CSTRING(units3DENComp_Attributes_defenderBehaviour_middle);
+                    tooltip = CSTRING(dunits3DENComp_Attributes_defenderBehaviour_middle_tooltip);
+                    value = 2;
+                };
+            };
         };
 
         class GVAR(addUnitPostInit): GVAR(dynamicCheckbox) {

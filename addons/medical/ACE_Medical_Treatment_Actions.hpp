@@ -3,6 +3,10 @@ class ACE_Medical_Treatment_Actions {
     class BasicBandage {};
     class FieldDressing: BasicBandage {};
 
+    class PersonalAidKit: BasicBandage {
+        condition = QFUNC(canUsePAK);
+    };
+
     class Splint: BasicBandage {
         treatmentTime = QFUNC(getTreatmentTimeSplint);
     };
@@ -32,6 +36,46 @@ class ACE_Medical_Treatment_Actions {
         icon = QPATHTOF(data\painkillers_icon_ca.paa);
         condition = "";
         callbackSuccess = QUOTE(call ACEFUNC(medical_treatment,medication));
+    };
+
+    class Diagnose: BasicBandage {};
+    class A3CS_CheckMedications: Diagnose {
+        displayName = CSTRING(CheckMedications_DisplayName);
+        displayNameProgress = CSTRING(CheckMedications_Progress);
+        allowedSelections[] = {"LeftArm", "RightArm"};
+        treatmentTime = 3.5;
+        medicRequired = 1;
+        allowSelfTreatment = 1;
+        condition = "true";
+        callbackSuccess = QFUNC(checkMedications);
+        animationMedicProne = "";
+        animationMedicSelfProne = "";
+    };
+
+    class A3CS_checkNeurologicalInjuries: Diagnose {
+        displayName = CSTRING(CheckNeurologicalInjuries_DisplayName);
+        displayNameProgress = CSTRING(CheckNeurologicalInjuries_Progress);
+        allowedSelections[] = {"Head"};
+        treatmentTime = 8;
+        medicRequired = 1;
+        allowSelfTreatment = 1;
+        condition = "true";
+        callbackSuccess = QFUNC(checkNeurologicalInjuries);
+        animationMedicProne = "";
+        animationMedicSelfProne = "";
+    };
+
+    class A3CS_CheckDogtag: CheckPulse {
+        displayName = CSTRING(CheckDogtag_DisplayName);
+        displayNameProgress = CSTRING(CheckDogtag_Progress);
+        treatmentTime = 2;
+        allowedSelections[] = {"Head"};
+        allowSelfTreatment = 1;
+        callbackSuccess = "[_medic, _patient] call ace_dogtags_fnc_checkDogtag";
+        condition = "true";
+        animationPatient = "";
+        animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
+        animationPatientUnconsciousExcludeOn[] = {"ainjppnemstpsnonwrfldnon"};
     };
     class A3CS_DrawBlood500: CheckPulse {
         displayName = CSTRING(DrawBlood500_DisplayName);

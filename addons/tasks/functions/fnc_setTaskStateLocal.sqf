@@ -13,6 +13,7 @@ private _tasks = GVAR(tasks);
 
 if !(_id in _tasks) exitWith {
   TRACE_1("setTaskStateLocal - skipping setting task state, task not created",_id);
+  GVAR(awaitingTasksStates) set [_id, _state];
 };
 
 private _task = _tasks get _id;

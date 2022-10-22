@@ -7,15 +7,13 @@
 params ["_entity"];
 TRACE_1("handleEntityKilled",_entity);
 
-if (
-  !(_entity isKindOf "CAManBase") ||
-  {simulationEnabled _entity}
-) exitWith {
-  if (_entity isKindOf "AllVehicles") then {
-    // Enable dyn sim for wrecks
-    if !(dynamicSimulationEnabled _entity || {_entity isKindOf "CAManBase"}) then {
-      TRACE_1("Enabling dyn sim for wreck",_entity);
-      _entity enableDynamicSimulation true;
+if !(_entity isKindOf "CAManBase") exitWith {
+  if (_entity isKindOf "AllVehicles" && {!(simulationEnabled _entity)}) then {
+    // Disable dyn sim for wrecks
+    if (dynamicSimulationEnabled _entity) then {
+      TRACE_1("Disabling dyn sim for wreck",_entity);
+      _entity enableDynamicSimulation false;
+      _entity enableSimulationGlobal true;
     };
   };
 };

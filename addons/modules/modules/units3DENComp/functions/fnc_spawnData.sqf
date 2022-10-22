@@ -9,6 +9,9 @@ TRACE_1("units3DENComp_spawnData",_logic);
 _params params [
   "_groupsDynSim",
   "_goUpAfterSpawn",
+  "_forceSpawnLying",
+  "_forceDisablePATH",
+  "_defenderBehaviour",
   "_vehiclesDynSim",
   "_clearVehCargo",
   "_unitPostInit",
@@ -25,7 +28,17 @@ private _vehicles = [];
 } forEach _vehiclesData;
 
 {
-  private _groupSpawn = [_x, _vehicles, _groupsDynSim, _goUpAfterSpawn, _unitPostInit, _groupPostInit] spawn FUNC(units3DENComp_spawnData_group);
+  private _groupSpawn = [
+    _x,
+    _vehicles,
+    _groupsDynSim,
+    _goUpAfterSpawn,
+    _forceSpawnLying,
+    _forceDisablePATH,
+    _defenderBehaviour,
+    _unitPostInit,
+    _groupPostInit
+  ] spawn FUNC(units3DENComp_spawnData_group);
   waitUntil {scriptDone _groupSpawn};
   sleep 0.05;
 } forEach _groupsData;

@@ -4,6 +4,22 @@ class GVAR(activationSettingsSubCategory): GVAR(moduleSubCategory) {
     property = QGVAR(activationSettingsSubCategory);
 };
 
+class GVAR(addPreActivation): GVAR(dynamicCheckbox) {
+    displayName = CSTRING(Attributes_addPreActivation);
+    tooltip = CSTRING(Attributes_addPreActivation_tooltip);
+    property = QGVAR(addPreActivation);
+    ATTRIBUTE_LOCAL;
+};
+
+class GVAR(preActivationFlags): GVAR(dynamicLogicFlagCondPreActivator) {
+    displayName = CSTRING(Attributes_preActivationFlags);
+    tooltip = CSTRING(Attributes_preActivationFlags_Tooltip);
+    property = QGVAR(preActivationFlags);
+    defaultValue = "'[]'";
+    GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(addPreActivation)) isEqualTo true);
+    ATTRIBUTE_LOCAL;
+};
+
 class GVAR(activationMode): Default {
     displayName = CSTRING(Attributes_activationMode);
     tooltip = CSTRING(Attributes_activationMode_Tooltip);

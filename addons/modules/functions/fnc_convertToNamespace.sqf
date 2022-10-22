@@ -7,6 +7,13 @@
 params ["_logic"];
 TRACE_1("convertToNamespace", _logic);
 
+if (
+  // Exit if logic is already converted
+  isSimpleObject _logic ||
+  // Exit if logic is synced with something
+  {(synchronizedObjects _logic) isNotEqualTo []}
+) exitWith {_logic};
+
 //private _namespace = createSimpleObject ["a3\weapons_f\empty.p3d", getPosWorld _logic, false];
 private _namespace = createSimpleObject ["CBA_NamespaceDummy", getPosASL _logic, false];
 
@@ -31,5 +38,12 @@ _namespace setVariable ["objectarea", _logic getVariable "objectarea", true];
 } forEach _attributes;
 
 TRACE_2("Logic converted",_logic,_namespace);
+
+if (is3DENPreview) then {
+  [_logic, _namespace] call EFUNC(debug,replaceModuleStatus);
+  _logic setVariable [QEGVAR(debug,replaceOnInit), _namespace];
+} else {
+  deleteVehicle _logic;
+};
 
 _namespace

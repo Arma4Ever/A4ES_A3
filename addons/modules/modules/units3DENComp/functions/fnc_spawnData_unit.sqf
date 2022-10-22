@@ -4,7 +4,16 @@
  * Spawns unit from unit data during game
  */
 
-params ["_unitData", "_group", "_vehicles", "_goUpAfterSpawn", "_unitPostInit"];
+params [
+  "_unitData",
+  "_group",
+  "_vehicles",
+  "_goUpAfterSpawn",
+  "_forceSpawnLying",
+  "_forceDisablePATH",
+  "_moduleDefenderBehaviour",
+  "_unitPostInit"
+];
 TRACE_2("units3DENComp_spawnData_unit",_unitData,_group);
 
 _unitData params [
@@ -22,7 +31,8 @@ _unitData params [
   "_lambsDangerDisableAI",
   "_lambsDangerDangerRadio",
   "_aceIsSurrendered",
-  "_aceIsHandcuffed"
+  "_aceIsHandcuffed",
+  ["_defenderBehaviour", 0]
 ];
 
 // Create unit in correct group (side)
@@ -37,6 +47,10 @@ if (_disableRandomization) then {
   _unit setUnitLoadout _unitLoadout;
 };
 
+if (_forceDisablePATH) then {
+  _disabledAI pushBackUnique "PATH";
+};
+
 {_unit disableAI _x} forEach _disabledAI;
 
 if (_lambsDangerDisableAI) then {
@@ -46,9 +60,15 @@ if (_lambsDangerDangerRadio) then {
   _unit setVariable ["lambs_danger_dangerRadio", true, true];
 };
 
-if (_vehicleData isEqualTo []) then {
+private _isOnFoot = _vehicleData isEqualTo [];
+
+if (_isOnFoot) then {
   _unit setPosATL _posATL;
   _unit setVectorDirAndUp _vectors;
+
+  if (_forceSpawnLying) then {
+    _unitPos = 2;
+  };
 
   if (_unitPos in [0, 1, 2]) then {
     private _unitPosAnim = ["amovpercmstpsraswrfldnon", "amovpknlmstpsraswrfldnon", "amovppnemstpsraswrfldnon"] select _unitPos;
@@ -106,6 +126,17 @@ if (_aceIsHandcuffed) then {
   _unit spawn {
     sleep 0.001;
     [_this, true] call ACEFUNC(captives,setHandcuffed);
+  };
+};
+
+if (_isOnFoot) then {
+  if (_moduleDefenderBehaviour != -1) then {
+    _defenderBehaviour = _moduleDefenderBehaviour;
+  };
+
+  if (_defenderBehaviour > 0) then {
+    _unit setVariable [QEGVAR(ai,defenderBehaviour), _defenderBehaviour, true];
+    _unit call EFUNC(ai,defenderBehaviour);
   };
 };
 

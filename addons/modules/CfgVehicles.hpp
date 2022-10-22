@@ -1,4 +1,13 @@
 class CfgVehicles {
+    class NonStrategic;
+	class GVAR(range3DENPreview): NonStrategic {
+        scope = 1;
+        scopeCurator = 0;
+		model = QPATHTOF(data\range_3DEN_preview.p3d);
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"#(argb,8,8,3)color(1,1,1,0)"};
+	};
+
     class Logic;
     class Module_F: Logic {
         class AttributesBase {
@@ -162,6 +171,9 @@ class CfgVehicles {
             class GVAR(dynamicLogicFlagCondActivator): Default {
                 control = QGVAR(dynamicLogicFlagCondActivator);
             };
+            class GVAR(dynamicLogicFlagCondPreActivator): Default {
+                control = QGVAR(dynamicLogicFlagCondPreActivator);
+            };
             class GVAR(dynamicLogicFlagCondSoundRepeat): Default {
                 control = QGVAR(dynamicLogicFlagCondSoundRepeat);
             };
@@ -314,6 +326,9 @@ class CfgVehicles {
 
     #include "modules\addAction\module.hpp"
     #include "modules\addCuratorModule\module.hpp"
+    #include "modules\addDialogue\module.hpp"
+    #include "modules\addDialogueAnswer\module.hpp"
+    #include "modules\addDialogueOption\module.hpp"
     #include "modules\aiNightvision\module.hpp"
     #include "modules\ambientAnimals\module.hpp"
     #include "modules\ambientFlyby\module.hpp"
@@ -346,8 +361,10 @@ class CfgVehicles {
     // #include "modules\setDraggable\module.hpp"
     #include "modules\setLogicFlagValue\module.hpp"
     // // #include "modules\setMarker\module.hpp"
+    #include "modules\setSideDefaultDialogue\module.hpp"
     #include "modules\setTaskState\module.hpp"
     #include "modules\setTimeMultiplier\module.hpp"
+    #include "modules\setUnitDialogue\module.hpp"
     #include "modules\showMarker\module.hpp"
     #include "modules\showMessage\module.hpp"
     #include "modules\switchLights\module.hpp"

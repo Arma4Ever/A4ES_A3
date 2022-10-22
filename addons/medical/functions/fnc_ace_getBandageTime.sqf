@@ -51,7 +51,7 @@ if ([_medic] call FUNC(isMedic)) then {
   _bandageTime = _bandageTime * 0.5;
 
   if (_medic call a3cs_medical_fnc_isInDressingSetRange) then {
-    _bandageTime = _bandageTime * 0.5;
+    _bandageTime = _bandageTime * 0.7;
   };
 };
 

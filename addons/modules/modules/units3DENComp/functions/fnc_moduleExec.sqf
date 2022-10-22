@@ -30,6 +30,18 @@ if (_data isEqualTo []) exitWith {
   deleteVehicle _logic;
 };
 
+private _minPlayerDistance = _logic getVariable [QGVAR(deactivationNearestPlayerDistance), 0];
+if (_minPlayerDistance > 0 && {
+  (GVAR(moduleActivatorPlayersNoAir) inAreaArray [
+    getPos _logic,
+    _minPlayerDistance,
+    _minPlayerDistance
+  ]) isNotEqualTo []
+}) exitWith {
+  TRACE_1("units3DENComp_moduleExec abort: players closer than min distance",_minPlayerDistance);
+  deleteVehicle _logic;
+};
+
 private _addSpawnCond = _logic getVariable [QGVAR(addSpawnCond), false];
 private _spawnCond = _logic getVariable [QGVAR(spawnCond), "true"];
 if (_addSpawnCond && {!(_logic call (compile _spawnCond))}) exitWith {
@@ -55,6 +67,9 @@ if (_logic getVariable [QGVAR(addVehiclePostInit), false]) then {
 private _params = [
   _logic getVariable [QGVAR(groupsDynSim), 1],
   _logic getVariable [QGVAR(goUpAfterSpawn), false],
+  _logic getVariable [QGVAR(forceSpawnLying), false],
+  _logic getVariable [QGVAR(forceDisablePATH), false],
+  _logic getVariable [QGVAR(defenderBehaviour), -1],
   _logic getVariable [QGVAR(vehiclesDynSim), 1],
   _logic getVariable [QGVAR(clearVehCargo), true],
   _unitPostInit,

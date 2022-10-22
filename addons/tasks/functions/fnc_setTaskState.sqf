@@ -14,7 +14,7 @@ if !(isServer) exitWith {false};
 // Ignore setting state of not created tasks
 if !(_id in _createdTasks) exitWith {
   TRACE_1("setTaskState - skipping setting task state, task not created",_id);
-  GVAR(awaitingTasksStates) set [_id, _state];
+  GVAR(awaitingTasksStatesServer) set [_id, _state];
   false
 };
 

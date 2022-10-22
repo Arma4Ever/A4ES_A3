@@ -55,6 +55,36 @@ class Cfg3DEN {
                         expression = "_this setSkill _value;";
                         condition = "objectBrain";
 					};
+
+                    class GVAR(defenderBehaviour) {
+						displayName = CSTRING(defenderBehaviour_displayName);
+						tooltip = CSTRING(defenderBehaviour_tooltip);
+                        control = "Combo";
+                        property = QGVAR(defenderBehaviour);
+                        typeName = "NUMBER";
+                        defaultValue = "0";
+                        expression = QUOTE(if (_value > 0) then {_this setVariable [ARR_3(QQGVAR(defenderBehaviour),_value,true)];_this call FUNC(defenderBehaviour);};);
+                        condition = "objectBrain";
+
+                        class values {
+                            class disabled {
+                                name = CSTRING(defenderBehaviour_Attributes_disabled_name);
+                                tooltip = CSTRING(defenderBehaviour_Attributes_disabled_tooltip);
+                                value = 0;
+                                default = 1;
+                            };
+                            class up {
+                                name = CSTRING(defenderBehaviour_Attributes_up_name);
+                                tooltip = CSTRING(defenderBehaviour_Attributes_up_tooltip);
+                                value = 1;
+                            };
+                            class middle {
+                                name = CSTRING(defenderBehaviour_Attributes_middle_name);
+                                tooltip = CSTRING(defenderBehaviour_Attributes_middle_tooltip);
+                                value = 2;
+                            };
+                        };
+					};
                 };
             };
         };
