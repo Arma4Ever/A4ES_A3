@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3CS">
+  <Package name="Dialogue">
+    <Key ID="STR_A3CS_Dialogue_Actions_Talk_DisplayName">
+      <English>Talk</English>
+      <Polish>Porozmawiaj</Polish>
+    </Key>
+  </Package>
+</Project>

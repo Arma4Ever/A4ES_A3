@@ -2,4 +2,6 @@
 Adds fire support functionalities.
 
 ### Changes
-- Adds support dialog for future use
+- Disables vanilla artillery computer by default.
+- Adds option to enable vanilla artillery computer in mission attributes.
+- Adds support dialog for future use.

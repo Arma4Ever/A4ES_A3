@@ -76,9 +76,10 @@ if (_logic getVariable [QGVAR(addObjectPostInit), false]) then {
 };
 
 private _spawnAsSuperSimple = _logic getVariable [QGVAR(spawnAsSuperSimple), true];
+private _spawnLocally = _logic getVariable [QGVAR(spawnLocally), false];
 
 // Add objects to list for spawn
-GVAR(3DENCompObjects) pushBack [_data, _objectPostInit, _spawnAsSuperSimple];
+GVAR(3DENCompObjects) pushBack [_data, _objectPostInit, _spawnAsSuperSimple, _spawnLocally];
 
 // Delete module
 deleteVehicle _logic;

@@ -28,7 +28,7 @@ if (
 };
 
 // Use task state from setTaskState if task state has been updated before creation
-private _awaitingTasksStates = GVAR(awaitingTasksStates);
+private _awaitingTasksStates = GVAR(awaitingTasksStatesServer);
 if (_id in _awaitingTasksStates) then {
   _state = _awaitingTasksStates get _id;
   _awaitingTasksStates deleteAt _id;

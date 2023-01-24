@@ -8,6 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "a3cs_common",
+            "ace_arsenal",
             "ace_logistics_wirecutter"
         };
         author = ECSTRING(main,Author);
@@ -17,5 +18,12 @@ class CfgPatches {
     };
 };
 
+#include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+
+/*
+
+ZROBIĆ ZAKŁADKE W EDYTORZE Z ITEMAMI OD INTELU
+
+*/

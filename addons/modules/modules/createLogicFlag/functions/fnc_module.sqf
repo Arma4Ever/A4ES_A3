@@ -37,12 +37,12 @@ private _value = [false, true] select _initialValue;
 
 GVAR(createdLogicFlags) set [_id, _value];
 
+private _title = _logic getVariable [QGVAR(title), ""];
+if (_title == "") then {_title = _id;};
+GVAR(logicFlagTitles) set [_id, _title];
+
 // Save titles in 3den preview for logs of change
 if (is3DENPreview) then {
-  private _title = _logic getVariable [QGVAR(title), ""];
-  if (_title isNotEqualTo "") then {
-    GVAR(logicFlagTitles) set [_id, _title];
-  };
   [_logic, "Tworze flage logiczna '%1' z wartoscia %2", _title, str _value] call EFUNC(debug,moduleLog);
 };
 

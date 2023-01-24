@@ -16,3 +16,9 @@
 #define DLFC_IDC_ARLEFT 398103
 #define DLFC_IDC_ARRIGHT 398104
 #include "include_dynamicLogicFlagCond.hpp"
+
+#define DLFC_CLASS GVAR(dynamicLogicFlagCondPreActivator)
+#define DLFC_IDC_LIST 10983
+#define DLFC_IDC_ARLEFT 398105
+#define DLFC_IDC_ARRIGHT 398106
+#include "include_dynamicLogicFlagCond.hpp"

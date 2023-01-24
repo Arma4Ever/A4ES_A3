@@ -40,6 +40,14 @@ if (_parentId isNotEqualTo "") then {
 _title = _title call EFUNC(common,localize);
 _description = _description call EFUNC(common,localize);
 
+// Use task state from setTaskState if task state has been updated before creation
+private _awaitingTasksStates = GVAR(awaitingTasksStates);
+if (_id in _awaitingTasksStates) then {
+  _state = _awaitingTasksStates get _id;
+  _awaitingTasksStates deleteAt _id;
+  TRACE_2("createTaskLocal - task has awaiting state, overriding state",_id,_state);
+};
+
 // Create task
 private _task = player createSimpleTask [_title, _parentTask];
 _task setSimpleTaskDescription [_description, _title, _title];

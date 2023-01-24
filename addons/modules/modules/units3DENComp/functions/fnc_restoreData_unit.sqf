@@ -22,7 +22,8 @@ _unitData params [
   "_lambsDangerDisableAI",
   "_lambsDangerDangerRadio",
   "_aceIsSurrendered",
-  "_aceIsHandcuffed"
+  "_aceIsHandcuffed",
+  ["_defenderBehaviour", 0]
 ];
 
 private _unit = _group create3DENEntity ["object", _className, _posATL];
@@ -37,6 +38,7 @@ _unit set3DENAttribute ["lambs_danger_disableAI", _lambsDangerDisableAI];
 _unit set3DENAttribute ["lambs_danger_dangerRadio", _lambsDangerDangerRadio];
 _unit set3DENAttribute ["ace_isSurrendered", _aceIsSurrendered];
 _unit set3DENAttribute ["ace_isHandcuffed", _aceIsHandcuffed];
+_unit set3DENAttribute [QEGVAR(ai,defenderBehaviour), _defenderBehaviour];
 
 {
   _unit set3DENAttribute [(format [QEGVAR(editor,DisableAI_%1), _x]), true];

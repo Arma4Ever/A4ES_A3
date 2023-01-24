@@ -1,5 +1,7 @@
 
 PREP(canHideBody);
+PREP(defenderBehaviour);
+PREP(defenderBehaviourLoop);
 PREP(getSkillInfo);
 PREP(handleManReloaded);
 PREP(handleVehicleReloaded);

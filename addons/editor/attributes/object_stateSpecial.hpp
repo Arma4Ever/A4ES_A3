@@ -76,3 +76,14 @@ class GVAR(removeFromRemainsCollector) {
     expression = "if (!is3DEN && _value) then {_this spawn {sleep 0.001;removeFromRemainsCollector [_this];};};";
     defaultValue = "false";
 };
+class GVAR(maximumCargoLoad) {
+    displayName = CSTRING(maximumCargoLoad);
+    tooltip = CSTRING(maximumCargoLoad_Tooltip);
+    property = QGVAR(maximumCargoLoad);
+    control = "Edit";
+    expression = "if (_value != (configOf _this >> ""maximumLoad"")) then {_this setMaxLoad _value};";
+    defaultValue = "(getNumber (configOf _this >> ""maximumLoad""))";
+    condition = "objectHasInventoryCargo";
+    typeName = "NUMBER";
+    validate = "number";
+};

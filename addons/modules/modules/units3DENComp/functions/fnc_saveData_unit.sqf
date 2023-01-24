@@ -43,8 +43,6 @@ private _disabledAI = AI_FEATURES select {
   (_unit get3DENAttribute (format [QEGVAR(editor,DisableAI_%1), _x])) # 0
 };
 
-// CAPTIVE
-
 [
   _className,
   _vehicleData,
@@ -60,5 +58,6 @@ private _disabledAI = AI_FEATURES select {
   (_unit get3DENAttribute "lambs_danger_disableAI") # 0,
   (_unit get3DENAttribute "lambs_danger_dangerRadio") # 0,
   (_unit get3DENAttribute "ace_isSurrendered") # 0,
-  (_unit get3DENAttribute "ace_isHandcuffed") # 0
+  (_unit get3DENAttribute "ace_isHandcuffed") # 0,
+  (_unit get3DENAttribute QEGVAR(ai,defenderBehaviour)) # 0
 ]

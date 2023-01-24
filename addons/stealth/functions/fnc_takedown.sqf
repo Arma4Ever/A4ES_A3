@@ -16,7 +16,10 @@ TRACE_2("takedown",_player,_target);
 if (
   !(_target isKindOf "CAManBase") ||
   {!(alive _target)} ||
-  {isPlayer _target} ||
+  //{isPlayer _target} || Check to friendly
+
+
+
   {(_player distance _target) > 2.4} ||
   {!(isNull (objectParent _target))} ||
   {(lineIntersectsSurfaces [
@@ -39,7 +42,7 @@ _player playActionNow "PutDown";
 // Kill target
 [{
   params ["_target"];
-  _target setDamage 1;
+  //_target setDamage 1; - set dead reason: takedown
   private _group = group _target;
   [QEGVAR(common,deleteGroup), _group, _group] call CBA_fnc_targetEvent;
 }, [_target], 0.5] call CBA_fnc_waitAndExecute;

@@ -19,9 +19,14 @@ if (isNull _logic || _isCuratorPlaced) exitWith {};
 
 LOG('Starting execution of EXEC_MODULE_NAME.');
 
-// Get synced objects
-private _objects = (synchronizedObjects _logic) select {
-  !(_x isKindOf "EmptyDetector") && {!(_x isKindOf "Logic")}
+private _objects = _logic getVariable QGVAR(handlerObjects);
+if (isNil "_objects") then {
+  // Get synced objects
+  _objects = (synchronizedObjects _logic) select {
+    !(_x isKindOf "EmptyDetector") && {!(_x isKindOf "Logic")}
+  };
+
+  _logic setVariable [QGVAR(handlerObjects), _objects];
 };
 
 // No valid objects
@@ -29,7 +34,7 @@ if (_objects isEqualTo []) exitWith {
   ERROR("Execution of EXEC_MODULE_NAME aborted, no valid objects");
 };
 
-_logic setVariable [QGVAR(handlerObjects), _objects];
+/* TODO: PREAKTYWACJA */
 
 [
   _logic,

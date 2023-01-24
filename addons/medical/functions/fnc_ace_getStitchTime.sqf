@@ -24,7 +24,7 @@ if ([_medic] call FUNC(isMedic)) then {
   _time = _time * 0.5;
 
   if (_medic call a3cs_medical_fnc_isInDressingSetRange) then {
-    _time = _time * 0.5;
+    _time = _time * 0.7;
   };
 };
 

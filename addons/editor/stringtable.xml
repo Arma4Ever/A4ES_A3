@@ -166,6 +166,16 @@
     <Key ID="STR_A3CS_Editor_removeFromRemainsCollector_Tooltip">
       <Polish>Wyłącza usuwanie ciała/wraku po zabiciu/zniszczeniu.</Polish>
     </Key>
+    <Key ID="STR_A3CS_Editor_maximumCargoLoad">
+      <Polish>Maksymalna pojemność inwentarza</Polish>
+    </Key>
+    <Key ID="STR_A3CS_Editor_maximumCargoLoad_Tooltip">
+      <Polish>Maksymalna pojemność inwentarza danej skrzynki/pojazdu/obiektu.
+        \n\n
+        Domyślnie wyświetlana wartość pochodzi z configu danej skrzynki/obiektu/pojazdu, jej zmiana (niezależnie czy na większą czy mniejszą) poskutkuje nadpisaniem tej wartości na starcie misji.
+        \n\n
+        Opcji tej należy użyć jeśli chcemy np. zablokować możliwość wkładania elementów do inwentarza danej skrzynki/pojazdu/obiektu (w takim wypadku wpisujemy 0 - warto zaznaczyć, że to zablokuje tylko możliwość wkładania rzeczy, wciąż będzie można je wyciągać) lub chcemy aby dana skrzynka/pojazd/obiekt miały większy inwentarz (wtedy podajemy wartość większą niż domyślna, np. 10000) aby np. gracze nie musieli wyrzucać rzeczy na ziemię podczas przezbrojenia, ponieważ brakuje miejsca w skrzynce.</Polish>
+    </Key>
     <Key ID="STR_A3CS_Editor_isStationary">
       <Polish>Jednostka stacjonarna</Polish>
     </Key>
