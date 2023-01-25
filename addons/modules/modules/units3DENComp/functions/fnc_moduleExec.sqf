@@ -63,13 +63,18 @@ if (_logic getVariable [QGVAR(addVehiclePostInit), false]) then {
   _vehiclePostInit = compile (_logic getVariable [QGVAR(vehiclePostInit), ""]);
 };
 
+private _defenderBehaviour = _logic getVariable [QGVAR(defenderBehaviour), -1],
+if (_defenderBehaviour isEqualType "") then {
+  _defenderBehaviour = parseNumber _defenderBehaviour;
+};
+
 // Prep params
 private _params = [
   _logic getVariable [QGVAR(groupsDynSim), 1],
   _logic getVariable [QGVAR(goUpAfterSpawn), false],
   _logic getVariable [QGVAR(forceSpawnLying), false],
   _logic getVariable [QGVAR(forceDisablePATH), false],
-  _logic getVariable [QGVAR(defenderBehaviour), -1],
+  _defenderBehaviour,
   _logic getVariable [QGVAR(vehiclesDynSim), 1],
   _logic getVariable [QGVAR(clearVehCargo), true],
   _unitPostInit,

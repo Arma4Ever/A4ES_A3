@@ -69,9 +69,20 @@ if (_texture isNotEqualTo "") then {
 
 // Anims
 if (_animations isNotEqualTo []) then {
-  {
-    _vehicle animate [_x # 0, _x # 1, true];
-  } forEach _animations;
+  if ((_animations # 0) isEqualType []) then {
+    {
+      _vehicle animate [_x # 0, _x # 1, true];
+    } forEach _animations;
+  } else {
+    private _to = (count _animations) - 1;
+    for "_i" from 0 to _to step 2 do {
+      private _animation = _animations param [_i, ""];
+      private _phase = _animations param [_i + 1, -1];
+
+      if ((_animation isEqualTo "") || (_phase == -1)) then {continue};
+      _vehicle animate [_animation, _phase, true];
+    };
+  };
 };
 
 // Engine

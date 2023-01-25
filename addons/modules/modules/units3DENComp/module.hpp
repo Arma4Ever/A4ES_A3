@@ -158,7 +158,7 @@ class GVAR(units3DENComp): GVAR(base) {
             tooltip = CSTRING(units3DENComp_Attributes_defenderBehaviour_tooltip);
             property = QGVAR(defenderBehaviour);
             typeName = "NUMBER";
-            defaultValue = "'-1'";
+            defaultValue = "-1";
             GVAR(observeValue) = 0;
             ATTRIBUTE_LOCAL;
 
@@ -173,7 +173,6 @@ class GVAR(units3DENComp): GVAR(base) {
                     name = CSTRING(units3DENComp_Attributes_defenderBehaviour_disabled);
                     tooltip = CSTRING(units3DENComp_Attributes_defenderBehaviour_disabled_tooltip);
                     value = 0;
-                    default = 1;
                 };
                 class up {
                     name = CSTRING(units3DENComp_Attributes_defenderBehaviour_up);
