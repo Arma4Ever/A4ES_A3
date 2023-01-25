@@ -3,7 +3,11 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {};
+        units[] = {
+            "A4ES_Plane_Su35",
+            "A4ES_Plane_J10",
+            "A4ES_Plane_Jak135"
+        };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {

@@ -3,7 +3,9 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {};
+        units[] = {
+            "B_MBT_01_mlrs_ATACMS_F"
+        };
         ammo[] = {
             QGVAR(JASSM),
             QGVAR(JASSM_cluster),
