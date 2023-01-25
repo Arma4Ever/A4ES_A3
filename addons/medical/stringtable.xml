@@ -25,6 +25,10 @@
       <English>Place dressing set</English>
       <Polish>Rozłóż zestaw opatrunkowy</Polish>
     </Key>
+    <Key ID="STR_A4ES_Medical_ActionPlaceDressingSet_progress">
+      <English>Placing dressing set...</English>
+      <Polish>Rozkładanie zestaw opatrunkowego...</Polish>
+    </Key>
     <Key ID="STR_A4ES_Medical_DressingSet_NoPlaceInInventory">
       <English>Not enough place in inventory to pickup dressing set</English>
       <Polish>Za mało miejsca w ekwipunku aby podnieść zestaw opatrunkowy</Polish>

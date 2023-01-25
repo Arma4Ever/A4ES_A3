@@ -21,7 +21,7 @@ params ["_player"];
 }, {
   // Reset animation
   [_player, "", 1] call ACEFUNC(common,doAnimation);
-}, "Rozkladanie zestawu !!!!", {
+}, LLSTRING(ActionPlaceDressingSet_progress), {
   _player call FUNC(canPlaceDressingSet);
 }] call ACEFUNC(common,progressBar);
 
