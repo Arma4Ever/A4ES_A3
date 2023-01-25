@@ -25,12 +25,12 @@ if (
   || {IS_BLEEDING(_patient)}
   || {GET_HEART_RATE(_patient) <= 60}
   || {GET_BANDAGED_WOUNDS(_patient) isNotEqualTo []}
-  || {(GET_OPEN_WOUNDS(_patient) findIf {(_x # 2) > 0}) != -1}
+  || {(GET_OPEN_WOUNDS(_patient) findIf {((_x # 2) > 0) && {(_x # 3) > 0}}) != -1}
   || {1 in (GET_FRACTURES(_patient))}
   || {
-    !(_medic call a4es_medical_fnc_isInDressingSetRange) ||
-    {[_patient] call ace_medical_treatment_fnc_isInMedicalFacility} ||
-    {[_patient] call ace_medical_treatment_fnc_isInMedicalVehicle}
+    !(_medic call a4es_medical_fnc_isInDressingSetRange) &&
+    {!([_patient] call ace_medical_treatment_fnc_isInMedicalFacility)} &&
+    {!([_patient] call ace_medical_treatment_fnc_isInMedicalVehicle)}
   }
 ) exitWith {false};
 
