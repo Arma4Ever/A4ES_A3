@@ -7,7 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "a3cs_common",
+            "a4es_common",
             "ace_advanced_ballistics",
             "ace_reload",
             "ace_overheating"
@@ -19,6 +19,7 @@ class CfgPatches {
     };
 };
 
+/*
 #include "CfgEventHandlers.hpp"
 
 class GVAR(AB_weapons) {
@@ -141,3 +142,4 @@ class GVAR(AB_weapons) {
     class CUP_srifle_VSSVintorez_flash_top {};
     class CUP_srifle_VSSVintorez_VFG_top_rail {};
 };
+*/

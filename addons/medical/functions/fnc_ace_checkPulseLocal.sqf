@@ -53,13 +53,13 @@ if (_heartRate > 1) then {
 [QEGVAR(common,displayTextStructured), [[_heartRateOutput, _patient call EFUNC(common,getName), round _heartRate], 1.5, _medic], _medic] call CBA_fnc_targetEvent;
 
 // Send server log if medic is player
-if !(_medic getVariable ["a3cs_common_isPlayer", false]) exitWith {};
+if !(_medic getVariable ["a4es_common_isPlayer", false]) exitWith {};
 if (_medic isEqualTo _patient) then {
-  ["a3csserver_events_userCheckHRSelf", [_medic, _bodyPart, str (round _heartRate)]] call CBA_fnc_serverEvent;
+  ["a4esserver_events_userCheckHRSelf", [_medic, _bodyPart, str (round _heartRate)]] call CBA_fnc_serverEvent;
 } else {
-  if (_patient getVariable ["a3cs_common_isPlayer", false]) then {
-    ["a3csserver_events_userCheckHR", [_medic, _patient, _bodyPart, str (round _heartRate)]] call CBA_fnc_serverEvent;
+  if (_patient getVariable ["a4es_common_isPlayer", false]) then {
+    ["a4esserver_events_userCheckHR", [_medic, _patient, _bodyPart, str (round _heartRate)]] call CBA_fnc_serverEvent;
   } else {
-    ["a3csserver_events_userCheckHRAI", [_medic, _bodyPart, str (round _heartRate)]] call CBA_fnc_serverEvent;
+    ["a4esserver_events_userCheckHRAI", [_medic, _bodyPart, str (round _heartRate)]] call CBA_fnc_serverEvent;
   };
 };

@@ -26,7 +26,7 @@ class RscCombo;
 
 class RscDisplayMPInterrupt: RscStandardDisplay {
     class controls {
-        class A3CS_openAdminPanel : A3CS_openAdminPanel {
+        class A4ES_openAdminPanel : A4ES_openAdminPanel {
             idc = 5040;
             text = CSTRING(AdminPanel);
             action = QUOTE(call DFUNC(openAdminPanel));
@@ -35,7 +35,7 @@ class RscDisplayMPInterrupt: RscStandardDisplay {
 };
 class RscDisplayInterrupt: RscStandardDisplay {
     class controls {
-        class A3CS_openAdminPanel : A3CS_openAdminPanel {
+        class A4ES_openAdminPanel : A4ES_openAdminPanel {
             idc = 5040;
             text = CSTRING(AdminPanelSP);
             action = QUOTE(call DFUNC(openAdminPanel));

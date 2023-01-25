@@ -18,9 +18,9 @@
       true jeśli jednostka jest medykiem danej klasy, false jeśli nie jest <BOOLEAN>
 
   Przykład:
-      private _jestMedykiem = mojaJednostka call A3CS_fnc_isMedic;
-      private _jestDoktorem = [mojaJednostka, 2] call A3CS_fnc_isMedic;
-      private _maAktualnieUprawnieniaMedyka = [mojaJednostka, 1, true] call A3CS_fnc_isMedic;
+      private _jestMedykiem = mojaJednostka call A4ES_fnc_isMedic;
+      private _jestDoktorem = [mojaJednostka, 2] call A4ES_fnc_isMedic;
+      private _maAktualnieUprawnieniaMedyka = [mojaJednostka, 1, true] call A4ES_fnc_isMedic;
 ***/
 
 params [

@@ -33,7 +33,7 @@ private _attributeMargin = 1 * (pixelH * pixelGrid * 0.50);
       _titleFormat,
       [
         "",
-        "<img color='#cd2323' image='\z\a3cs\addons\modules\data\leftpanel\warning.paa'/> "
+        "<img color='#cd2323' image='\z\a4es\addons\modules\data\leftpanel\warning.paa'/> "
       ] select (_configName in _warningSources)
     ];
 

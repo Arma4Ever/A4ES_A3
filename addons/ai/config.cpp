@@ -9,8 +9,8 @@ class CfgPatches {
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "a3cs_common",
-            "a3cs_modules",
+            "a4es_common",
+            "a4es_modules",
             "A3_Data_F",
             "A3_3DEN",
             "lambs_wp",

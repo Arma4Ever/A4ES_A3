@@ -18,13 +18,13 @@
 
   Przykład:
       // Pokaż nametag jednostki AI dla wszystkich graczy
-      jednostkaAI call A3CS_fnc_showUnitNametag;
+      jednostkaAI call A4ES_fnc_showUnitNametag;
 
       // Ukryj nametag jednostki AI dla wszystkich graczy
-      [jednostkaAI, false] call A3CS_fnc_showUnitNametag;
+      [jednostkaAI, false] call A4ES_fnc_showUnitNametag;
 
       // Pokaż nametag jednostki AI tylko dla gracza który wykonuje funkcję
-      [jednostkaAI, true, false] call A3CS_fnc_showUnitNametag;
+      [jednostkaAI, true, false] call A4ES_fnc_showUnitNametag;
 ***/
 
 params [

@@ -7,7 +7,7 @@
 #define X_EDITBOX_OFFSET (X_ORIGINAL(11))
 #define Y_EDITBOX_OFFSET (Y_ORIGINAL(6))
 
-class A3CS_ui_backgroundBase {
+class A4ES_ui_backgroundBase {
     type = CT_STATIC;
     idc = -1;
     style = ST_PICTURE;
@@ -17,7 +17,7 @@ class A3CS_ui_backgroundBase {
     text = "";
     sizeEx = 0.032;
 };
-class A3CS_ui_staticBase {
+class A4ES_ui_staticBase {
     idc = -1;
     type = CT_STATIC;
     x = 0.0;
@@ -31,7 +31,7 @@ class A3CS_ui_staticBase {
     colorBackground[] = {0, 0, 0, 0};
     text = "";
 };
-class A3CS_ui_comboBoxBase: RscCombo {
+class A4ES_ui_comboBoxBase: RscCombo {
     idc = -1;
     type = 4;
     style = "0x10 + 0x200";
@@ -83,7 +83,7 @@ class A3CS_ui_comboBoxBase: RscCombo {
         width = 0;
     };
 };
-class A3CS_ui_listNBoxBase {
+class A4ES_ui_listNBoxBase {
     type = CT_LISTNBOX;
     style =ST_MULTI;
     w = 0.4;
@@ -142,7 +142,7 @@ class A3CS_ui_listNBoxBase {
         width = 0;
     };
 };
-class A3CS_ui_buttonBase {
+class A4ES_ui_buttonBase {
     idc = -1;
     type = CT_SHORTCUTBUTTON;
     style = ST_LEFT;
@@ -208,7 +208,7 @@ class A3CS_ui_buttonBase {
         shadow = "true";
     };
 };
-class A3CS_ui_selectMenuButtonBase {
+class A4ES_ui_selectMenuButtonBase {
     tooltip = "";
     action = "";
 
@@ -245,13 +245,13 @@ class A3CS_ui_selectMenuButtonBase {
     soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick",0.09,1};
     soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1};
 };
-class A3CS_ui_listBox {
+class A4ES_ui_listBox {
     idd = -1;
     movingEnable = 0;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2('A3CS_ui_listBox', _this select 0)];);
-    onUnload = QUOTE(uiNamespace setVariable [ARR_2('A3CS_ui_listBox', nil)];);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2('A4ES_ui_listBox', _this select 0)];);
+    onUnload = QUOTE(uiNamespace setVariable [ARR_2('A4ES_ui_listBox', nil)];);
     class controlsBackground {
-        class HeaderBackground: A3CS_ui_backgroundBase {
+        class HeaderBackground: A4ES_ui_backgroundBase {
             idc = -1;
             type = CT_STATIC;
             style = ST_LEFT + ST_SHADOW;
@@ -264,7 +264,7 @@ class A3CS_ui_listBox {
             colorBackground[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
             text = "";
         };
-        class BodyBackgroud: A3CS_ui_backgroundBase {
+        class BodyBackgroud: A4ES_ui_backgroundBase {
             idc = -1;
             type = CT_STATIC;
             style = ST_LEFT + ST_SHADOW;
@@ -293,7 +293,7 @@ class A3CS_ui_listBox {
             colorBackground[] = {0,0,0,0};
             text = "";
         };
-        class List: A3CS_ui_listNBoxBase {
+        class List: A4ES_ui_listNBoxBase {
             idc = IDC_LISTBOX_LIST;
             style = ST_LEFT + LB_TEXTURES;
             x = X_ORIGINAL(0) + X_LISTBOX_OFFSET;
@@ -311,7 +311,7 @@ class A3CS_ui_listBox {
             onMouseButtonDblClick = "";
             SizeEx = H_ORIGINAL(1);
         };
-        class ButtonOne: A3CS_ui_buttonBase {
+        class ButtonOne: A4ES_ui_buttonBase {
             idc = IDC_LISTBOX_BUTTON1;
             x = X_ORIGINAL(0) + X_LISTBOX_OFFSET;
             y = Y_ORIGINAL(18) + Y_LISTBOX_OFFSET;
@@ -355,13 +355,13 @@ class A3CS_ui_listBox {
         };
     };
 };
-class A3CS_ui_editBox {
+class A4ES_ui_editBox {
     idd = -1;
     movingEnable = 0;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2('A3CS_ui_editBox', _this select 0)];);
-    onUnload = QUOTE(uiNamespace setVariable [ARR_2('A3CS_ui_editBox', nil)];);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2('A4ES_ui_editBox', _this select 0)];);
+    onUnload = QUOTE(uiNamespace setVariable [ARR_2('A4ES_ui_editBox', nil)];);
     class controlsBackground {
-        class HeaderBackground: A3CS_ui_backgroundBase {
+        class HeaderBackground: A4ES_ui_backgroundBase {
             idc = -1;
             type = CT_STATIC;
             style = ST_LEFT + ST_SHADOW;
@@ -374,7 +374,7 @@ class A3CS_ui_editBox {
             colorBackground[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
             text = "";
         };
-        class BodyBackgroud: A3CS_ui_backgroundBase {
+        class BodyBackgroud: A4ES_ui_backgroundBase {
             idc = -1;
             type = CT_STATIC;
             style = ST_LEFT + ST_SHADOW;
@@ -403,7 +403,7 @@ class A3CS_ui_editBox {
             colorBackground[] = {0,0,0,0};
             text = "";
         };
-        class TextInputLabel: A3CS_ui_staticBase {
+        class TextInputLabel: A4ES_ui_staticBase {
             idc = IDC_EDITBOX_TEXTINPUTLABEL;
             x = X_ORIGINAL(0.5) + X_EDITBOX_OFFSET;
             y = Y_ORIGINAL(3) + Y_EDITBOX_OFFSET;
@@ -418,7 +418,7 @@ class A3CS_ui_editBox {
             w = W_ORIGINAL(18.5);
             h = H_ORIGINAL(1);
         };
-        class ButtonOne: A3CS_ui_buttonBase {
+        class ButtonOne: A4ES_ui_buttonBase {
             idc = IDC_EDITBOX_BUTTON1;
             x = X_ORIGINAL(0) + X_EDITBOX_OFFSET;
             y = Y_ORIGINAL(5) + Y_EDITBOX_OFFSET;

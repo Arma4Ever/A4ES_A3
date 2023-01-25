@@ -34,6 +34,6 @@ if (!alive _unit) exitWith {
 
 [_unit] call EFUNC(common,healUnit);
 
-if (_unit getVariable ["a3cs_common_isPlayer", false]) then {
-  ["a3csserver_events_curHeal", [player, _unit]] call CBA_fnc_serverEvent;
+if (_unit getVariable ["a4es_common_isPlayer", false]) then {
+  ["a4esserver_events_curHeal", [player, _unit]] call CBA_fnc_serverEvent;
 };

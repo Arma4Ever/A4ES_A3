@@ -18,10 +18,10 @@ class GVAR(showMessage): GVAR(base) {
         class GVAR(moduleWarnings): GVAR(moduleWarnings) {};
 
         // Attributes for module activator
-        #include "\z\a3cs\addons\modules\includes\moduleActivationAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\moduleActivationAttributes.hpp"
 
         #define MODULE_SHOWMESSAGE
-        #include "\z\a3cs\addons\modules\includes\moduleShowMessageAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\moduleShowMessageAttributes.hpp"
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};
     };

@@ -8,6 +8,7 @@ hemtt.exe
 ArmaScriptCompiler.exe
 *.sqfc
 keys/*
+!keys/.gitkeep
 tools/temp
 *.cache
 *.pbo
@@ -19,12 +20,13 @@ Thumbs.db
 CHANGELOG.md
 addons/marker_flags/*
 addons/irlight/*
+addons/main/script_input.hpp
 
 __pycache__
 vendor/*
 !vendor/.gitkeep
 *.dll
-!a3cs_*.dll
+!a4es_*.dll
 extensions/*/.vs
 extensions/*/bin
 extensions/*/obj

@@ -7,9 +7,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "a3cs_common",
-            "a3cs_squads",
-            "a3cs_nametags",
+            "a4es_common",
+            "a4es_squads",
+            "a4es_nametags",
             "A3_3DEN"
         };
         author = ECSTRING(main,Author);

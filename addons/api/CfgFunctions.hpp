@@ -1,5 +1,5 @@
 class CfgFunctions {
-    class A3CS {
+    class A4ES {
         class ai {
             
         };

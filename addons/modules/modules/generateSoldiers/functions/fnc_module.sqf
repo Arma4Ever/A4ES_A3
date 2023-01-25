@@ -25,7 +25,7 @@ _logic setVariable [QGVAR(executed), true, true];
 
 LOG('Starting init of EXEC_MODULE_NAME.');
 
-#include "\z\a3cs\addons\modules\includes\moduleActivation.sqf"
+#include "\z\a4es\addons\modules\includes\moduleActivation.sqf"
 
 LOG('Init of EXEC_MODULE_NAME finished - added to activator.');
 

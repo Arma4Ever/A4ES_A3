@@ -15,7 +15,7 @@ class GVAR(setTaskState): GVAR(base) {
         // Attributes for module activator
         #define MODULE_ACTIVATOR_CONTROL QGVAR(dynamicToolboxActivationModeNoProxmity)
         #define MODULE_ACTIVATOR_DEFAULT_VALUE QUOTE(1)
-        #include "\z\a3cs\addons\modules\includes\moduleActivationAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\moduleActivationAttributes.hpp"
 
         class GVAR(baseSettingsSubCategory): GVAR(moduleSubCategory) {
             displayName = CSTRING(setTaskState_Attributes_baseSettingsSubCategory);

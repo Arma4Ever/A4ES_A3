@@ -18,7 +18,7 @@ class CfgVehicles {
 	};
 
     class OmniDirectionalAntenna_01_black_F;
-	class a3cs_mobileArtilleryRadar: OmniDirectionalAntenna_01_black_F {
+	class a4es_mobileArtilleryRadar: OmniDirectionalAntenna_01_black_F {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };

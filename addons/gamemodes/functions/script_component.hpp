@@ -1,1 +1,1 @@
-#include "\z\a3cs\addons\gamemodes\script_component.hpp"
+#include "\z\a4es\addons\gamemodes\script_component.hpp"

@@ -4,7 +4,7 @@
 if (!hasInterface) exitWith {};
 
 [
-  "A3CS UI", QGVAR(toggleScreenshotMode),
+  "A4ES UI", QGVAR(toggleScreenshotMode),
   [
     LLSTRING(ToggleScreenshotMode),
     LLSTRING(ToggleScreenshotMode_Tooltip)

@@ -7,7 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "a3cs_common"
+            "a4es_common"
         };
         author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL"};
@@ -16,4 +16,6 @@ class CfgPatches {
     };
 };
 
+/*
 #include "CfgEventHandlers.hpp"
+*/

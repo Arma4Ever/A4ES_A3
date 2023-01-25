@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"a3cs_common", "A3_Data_F_ParticleEffects"};
+        requiredAddons[] = {"a4es_common", "A3_Data_F_ParticleEffects"};
         author = ECSTRING(main,Author);
         authors[] = {"Zabuza", "SzwedzikPL"};
         url = ECSTRING(main,URL);

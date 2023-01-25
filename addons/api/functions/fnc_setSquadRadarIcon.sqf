@@ -4,7 +4,7 @@
 
   Opis:
       Zmienia ikonkę podanych jednostek na radarze drużynowym. Efekt działania
-      tej funkcji można cofnąć/wyłączyć poprzez użycie A3CS_fnc_resetSquadRadarIcon
+      tej funkcji można cofnąć/wyłączyć poprzez użycie A4ES_fnc_resetSquadRadarIcon
 
   Parametry:
       _units - lista jednostek których ikony chcemy zmienić <ARRAY>
@@ -26,7 +26,7 @@
         true,
         false,
         false
-      ] call A3CS_fnc_setSquadRadarIcon;
+      ] call A4ES_fnc_setSquadRadarIcon;
 
       //
       [
@@ -37,7 +37,7 @@
         true,
         [209/255, 196/255, 15/255],
         true
-      ] call A3CS_fnc_setSquadRadarIcon;
+      ] call A4ES_fnc_setSquadRadarIcon;
 ***/
 
 params [

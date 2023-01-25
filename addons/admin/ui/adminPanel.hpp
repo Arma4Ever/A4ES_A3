@@ -1,10 +1,10 @@
-class A3CS_adminPanel {
+class A4ES_adminPanel {
     idd = -1;
     movingEnable = false;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2('A3CS_adminPanel', _this select 0)];0 call FUNC(onLoadAdminPanel););
-    onUnload = QUOTE(uiNamespace setVariable [ARR_2('A3CS_adminPanel', nil)];);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2('A4ES_adminPanel', _this select 0)];0 call FUNC(onLoadAdminPanel););
+    onUnload = QUOTE(uiNamespace setVariable [ARR_2('A4ES_adminPanel', nil)];);
     class controlsBackground {
-        class HeaderBackground: A3CS_ui_backgroundBase {
+        class HeaderBackground: A4ES_ui_backgroundBase {
             idc = -1;
             type = CT_STATIC;
             x = X_PART(1);
@@ -54,7 +54,7 @@ class A3CS_adminPanel {
             colorBackground[] = {0,0,0,0};
             text = "";
         };
-        class LogsTypeLabel: A3CS_ui_staticBase {
+        class LogsTypeLabel: A4ES_ui_staticBase {
             idc = IDC_ADMINPANEL_LOGSTYPELABEL;
             x = X_PART(1);
             y = Y_PART(3.4);
@@ -64,7 +64,7 @@ class A3CS_adminPanel {
             text = "";
         };
         //wybor logow
-        class LogsTypeSelection: A3CS_ui_comboBoxBase {
+        class LogsTypeSelection: A4ES_ui_comboBoxBase {
             idc = IDC_ADMINPANEL_LOGSTYPESELECTION;
             x = X_PART(10.5);
             y = Y_PART(3.4);
@@ -74,7 +74,7 @@ class A3CS_adminPanel {
             onLBSelChanged = QUOTE(call FUNC(onPanelLogTypeChange));
             SizeEx = H_PART(0.9);
         };
-        class PanelAction_1: A3CS_ui_buttonBase {
+        class PanelAction_1: A4ES_ui_buttonBase {
             idc = IDC_ADMINPANEL_PANELACTION_1;
             text = "";
             x = X_PART(1);
@@ -124,7 +124,7 @@ class A3CS_adminPanel {
             x = X_PART(31.4);
             action = "";
         };
-        class LogList: A3CS_ui_listNBoxBase {
+        class LogList: A4ES_ui_listNBoxBase {
             idc = IDC_ADMINPANEL_LOGLIST;
             x = X_PART(2);
             y = Y_PART(5.5);
@@ -136,7 +136,7 @@ class A3CS_adminPanel {
             columns[] = {0.0, 0.45};
             onLBSelChanged = "";
         };
-        class MissionDataLabel: A3CS_ui_staticBase {
+        class MissionDataLabel: A4ES_ui_staticBase {
             idc = IDC_ADMINPANEL_MISSIONDATALABEL;
             x = X_PART(26.5);
             y = Y_PART(5.1);
@@ -145,7 +145,7 @@ class A3CS_adminPanel {
             text = "";
             SizeEx = H_PART(1);
         };
-        class MissionDataText: A3CS_ui_listNBoxBase {
+        class MissionDataText: A4ES_ui_listNBoxBase {
             idc = IDC_ADMINPANEL_MISSIONDATATEXT;
             x = X_PART(26.5);
             y = Y_PART(7);
@@ -157,7 +157,7 @@ class A3CS_adminPanel {
             columns[] = {0.0, 0.45};
             onLBSelChanged = "";
         };
-        class PanelActionClose: A3CS_ui_buttonBase {
+        class PanelActionClose: A4ES_ui_buttonBase {
             idc = IDC_ADMINPANEL_PANELACTIONCLOSE;
             text = ECSTRING(Common,Close);
             x = X_PART(1);

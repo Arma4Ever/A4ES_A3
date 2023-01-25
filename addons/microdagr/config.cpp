@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"a3cs_common", "ace_microdagr"};
+        requiredAddons[] = {"a4es_common", "ace_microdagr"};
         author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL", "ACE-Team"};
         url = ECSTRING(main,URL);
@@ -18,5 +18,5 @@ class CfgPatches {
 #include "CfgFunctions.hpp"
 
 class ace_microdagr_TheDialog {
-    onLoad = "uiNamespace setVariable ['ace_microdagr_DialogDisplay', _this select 0];(_this select 0) spawn a3cs_microdagr_fnc_onDialog;";
+    onLoad = "uiNamespace setVariable ['ace_microdagr_DialogDisplay', _this select 0];(_this select 0) spawn a4es_microdagr_fnc_onDialog;";
 };

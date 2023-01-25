@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="API">
-    <Key ID="STR_A3CS_API_squadRadar_emptyUnits">
+    <Key ID="STR_A4ES_API_squadRadar_emptyUnits">
       <Polish>_units - lista jednostek nie może być pusta</Polish>
     </Key>
-    <Key ID="STR_A3CS_API_squadRadar_nonObjectUnits">
+    <Key ID="STR_A4ES_API_squadRadar_nonObjectUnits">
       <Polish>_units - podane jednostki muszą być obiektami</Polish>
     </Key>
-    <Key ID="STR_A3CS_API_squadRadar_emptyIcon">
-      <Polish>_icon - Ikona nie może być pusta. Jeśli chcesz zresetować ikonę jednostki użyj A3CS_fnc_resetSquadRadarIcon</Polish>
+    <Key ID="STR_A4ES_API_squadRadar_emptyIcon">
+      <Polish>_icon - Ikona nie może być pusta. Jeśli chcesz zresetować ikonę jednostki użyj A4ES_fnc_resetSquadRadarIcon</Polish>
     </Key>
-    <Key ID="STR_A3CS_API_squadRadar_wrongColorFormat">
+    <Key ID="STR_A4ES_API_squadRadar_wrongColorFormat">
       <Polish>_iconColor - kolor musi być w formacie [R,G,B] gdzie każda z wartości to liczba z przedziału 0 - 1</Polish>
     </Key>
   </Package>

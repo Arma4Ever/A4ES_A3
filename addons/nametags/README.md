@@ -1,4 +1,4 @@
-# A3CS Nametags
+# A4ES Nametags
 Displays 2D and 3D unit name tags.
 
 ### Changes

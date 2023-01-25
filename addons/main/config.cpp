@@ -7,7 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"cba_main", "A3_Ui_F"};
-        author = CSTRING(Author);
+        author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL"};
         url = CSTRING(URL);
         VERSION_CONFIG;
@@ -16,11 +16,11 @@ class CfgPatches {
 
 class CfgMods {
     class PREFIX {
-        dir = "@A3CS";
-        name = "Arma3Coop System";
+        dir = "@A4ES";
+        name = "Arma4Ever System";
         actionName = "Forum";
         action = CSTRING(URL);
-        description = "Arma3Coop.pl";
+        description = "Arma4Ever.pl";
     };
 };
 
@@ -46,7 +46,7 @@ class RscDisplayStart: RscStandardDisplay {
         class LoadingStart: RscControlsGroupNoScrollbars {
             class controls {
                 class Logo: RscPictureKeepAspect {
-                    text = PATHTOF(data\a3c_logo_512.paa);
+                    text = PATHTOF(data\a4e_logo_512.paa);
                     x="0.125 * safezoneW";
 					y="0.234375 * safezoneH";
 					w="0.75 * safezoneW";
@@ -61,7 +61,7 @@ class RscDisplayNotFreeze: RscStandardDisplay {
         class LoadingStart: RscControlsGroupNoScrollbars {
             class controls {
                 class Logo: RscPictureKeepAspect {
-                    text = PATHTOF(data\a3c_logo_512.paa);
+                    text = PATHTOF(data\a4e_logo_512.paa);
                     x="0.125 * safezoneW";
 					y="0.234375 * safezoneH";
 					w="0.75 * safezoneW";
@@ -76,7 +76,7 @@ class RscDisplayLoadMission: RscStandardDisplay {
         class LoadingStart: RscControlsGroupNoScrollbars {
             class controls {
                 class Logo: RscPictureKeepAspect {
-                    text = PATHTOF(data\a3c_logo_512.paa);
+                    text = PATHTOF(data\a4e_logo_512.paa);
                     x="0.125 * safezoneW";
 					y="0.234375 * safezoneH";
 					w="0.75 * safezoneW";
@@ -94,12 +94,12 @@ class RscDisplayMain: RscStandardDisplay {
         delete Spotlight;
         delete LogoApex;
 		class Logo: RscActivePicture {
-			text = PATHTOF(data\a3c_logo_shadow.paa);
-			tooltip = "Arma3Coop.pl";
+			text = PATHTOF(data\a4e_logo_shadow.paa);
+			tooltip = "Arma4Ever.pl";
 			color[] = {0.89999998,0.89999998,0.89999998,1};
 			colorActive[] = {1,1,1,1};
 			shadow = 0;
-            url = "https://arma3coop.pl";
+            url = "https://arma4ever.pl";
 			onButtonClick = "";
 			onSetFocus = "(_this select 0) ctrlsettextcolor [1,1,1,1];";
 			onKillFocus = "(_this select 0) ctrlsettextcolor [0.9,0.9,0.9,1];";

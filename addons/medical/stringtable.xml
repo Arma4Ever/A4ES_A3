@@ -1,134 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="Medical">
-    <Key ID="STR_A3CS_Medical_Medications">
+    <Key ID="STR_A4ES_Medical_Medications">
       <English>Medications</English>
       <Polish>Medykamenty</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_DressingSet_Display">
+    <Key ID="STR_A4ES_Medical_DressingSet_Display">
       <English>Dressing set</English>
       <Polish>Zestaw opatrunkowy</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_DressingSet_Desc_Short">
+    <Key ID="STR_A4ES_Medical_DressingSet_Desc_Short">
       <English>Speeds up medical actions for medics.</English>
       <Polish>Przyspiesza medykom akcje medyczne.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_DressingSet_Desc_Use">
+    <Key ID="STR_A4ES_Medical_DressingSet_Desc_Use">
       <English>When placed, it speeds up medical actions for medics around it.</English>
       <Polish>Gdy rozłożony, przyspiesza akcje medyczne medykom w jego otoczeniu.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_ActionPickUpDressingSet">
+    <Key ID="STR_A4ES_Medical_ActionPickUpDressingSet">
       <English>Pick up dressing set</English>
       <Polish>Podnieś zestaw opatrunkowy</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_ActionPlaceDressingSet">
+    <Key ID="STR_A4ES_Medical_ActionPlaceDressingSet">
       <English>Place dressing set</English>
       <Polish>Rozłóż zestaw opatrunkowy</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_DressingSet_NoPlaceInInventory">
+    <Key ID="STR_A4ES_Medical_DressingSet_NoPlaceInInventory">
       <English>Not enough place in inventory to pickup dressing set</English>
       <Polish>Za mało miejsca w ekwipunku aby podnieść zestaw opatrunkowy</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_Painkillers_DisplayName">
+    <Key ID="STR_A4ES_Medical_Painkillers_DisplayName">
       <English>Painkillers</English>
       <Polish>Leki przeciwbólowe</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_Painkillers_Progress">
+    <Key ID="STR_A4ES_Medical_Painkillers_Progress">
       <English>Administering painkillers...</English>
       <Polish>Podawanie leków przeciwbólowych...</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_CheckDogtag_DisplayName">
+    <Key ID="STR_A4ES_Medical_CheckDogtag_DisplayName">
       <English>Check Dog Tag</English>
       <Polish>Sprawdź nieśmiertelnik</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_CheckDogtag_Progress">
+    <Key ID="STR_A4ES_Medical_CheckDogtag_Progress">
       <English>Checking Dog Tag...</English>
       <Polish>Sprawdzanie nieśmiertelnika...</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_DrawBlood500_DisplayName">
+    <Key ID="STR_A4ES_Medical_DrawBlood500_DisplayName">
       <English>Draw Blood (500ml)</English>
       <Polish>Pobierz krew (500ml)</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_DrawBlood250_DisplayName">
+    <Key ID="STR_A4ES_Medical_DrawBlood250_DisplayName">
       <English>Draw Blood (250ml)</English>
       <Polish>Pobierz krew (250ml)</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_DrawBlood_Progress">
+    <Key ID="STR_A4ES_Medical_DrawBlood_Progress">
       <English>Drawing blood...</English>
       <Polish>Pobieranie krwi...</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_EmptyBloodBag_DisplayName">
+    <Key ID="STR_A4ES_Medical_EmptyBloodBag_DisplayName">
       <English>Empty blood bag</English>
       <Polish>Pusty worek na krew</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_EmptyBloodBag_Desc_Short">
+    <Key ID="STR_A4ES_Medical_EmptyBloodBag_Desc_Short">
       <English>Used to draw blood.</English>
       <Polish>Pozwala na pobieranie krwi.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_EmptyBloodBag_Desc_Use">
+    <Key ID="STR_A4ES_Medical_EmptyBloodBag_Desc_Use">
       <English>Can be used to draw blood from patients.</English>
       <Polish>Może być użyty do pobierania krwi z pacjentów.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_ClottedBloodBag_DisplayName">
+    <Key ID="STR_A4ES_Medical_ClottedBloodBag_DisplayName">
       <English>Clotted Blood</English>
       <Polish>Zakrzepła krew</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_ClottedBloodBag_Desc_Short">
+    <Key ID="STR_A4ES_Medical_ClottedBloodBag_Desc_Short">
       <English>Clotted Blood, no medical use.</English>
       <Polish>Zakrzepła krew, brak medycznych zastosowań.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_ClottedBloodBag_Desc_Use">
+    <Key ID="STR_A4ES_Medical_ClottedBloodBag_Desc_Use">
       <English>Clotted Blood, no medical use.</English>
       <Polish>Zakrzepła krew, brak medycznych zastosowań.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_UsedBloodBag_DisplayName">
+    <Key ID="STR_A4ES_Medical_UsedBloodBag_DisplayName">
       <English>Used blood bag</English>
       <Polish>Zużyty worek na krew</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_UsedBloodBag_Desc_Short">
+    <Key ID="STR_A4ES_Medical_UsedBloodBag_Desc_Short">
       <English>Used blood bag, no medical use.</English>
       <Polish>Zużyty worek na krew, brak medycznych zastosowań.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_UsedBloodBag_Desc_Use">
+    <Key ID="STR_A4ES_Medical_UsedBloodBag_Desc_Use">
       <English>Used blood bag, no medical use.</English>
       <Polish>Zużyty worek na krew, brak medycznych zastosowań.</Polish>
     </Key>
 
 
 
-    <Key ID="STR_A3CS_Medical_CheckMedications_DisplayName">
+    <Key ID="STR_A4ES_Medical_CheckMedications_DisplayName">
       <English>Check active medications</English>
       <Polish>Sprawdź aktywne substancje</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_CheckMedications_Progress">
+    <Key ID="STR_A4ES_Medical_CheckMedications_Progress">
       <English>Checking active medications...</English>
       <Polish>Sprawdzanie aktywnych substancji...</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_CheckMedications_Result">
+    <Key ID="STR_A4ES_Medical_CheckMedications_Result">
       <English>Active medications and effectiveness:</English>
       <Polish>Aktywne substancje i ich aktywność:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_CheckMedications_None">
+    <Key ID="STR_A4ES_Medical_CheckMedications_None">
       <English>No active medications.</English>
       <Polish>Brak aktywnych substancji.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_CheckNeurologicalInjuries_DisplayName">
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_DisplayName">
       <English>Check neurological injuries</English>
       <Polish>Sprawdź urazy neurologiczne</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_CheckNeurologicalInjuries_Progress">
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_Progress">
       <English>Checking neurological injuries...</English>
       <Polish>Sprawdzanie urazów neurologicznych...</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_CheckNeurologicalInjuries_HealText">
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_HealText">
       <English>Neurological injuries should heal in %1 minutes.</English>
       <Polish>Urazy neurologiczne powinny zniknąć za %1 minut.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_CheckNeurologicalInjuries_HealText_few">
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_HealText_few">
       <English>few</English>
       <Polish>kilka</Polish>
     </Key>
-    <Key ID="STR_A3CS_Medical_CheckNeurologicalInjuries_HealText_around">
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_HealText_around">
       <English>around %1</English>
       <Polish>około %1</Polish>
     </Key>

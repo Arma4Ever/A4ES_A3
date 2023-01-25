@@ -12,7 +12,7 @@
       true jeśli jednostka jest liderem swojej grupy, false jeśli nie jest <BOOLEAN>
 
   Przykład:
-      private _jestLiderem = mojaJednostka call A3CS_fnc_isSquadLeader;
+      private _jestLiderem = mojaJednostka call A4ES_fnc_isSquadLeader;
 ***/
 
 params [["_unit", objNull, [objNull]]];

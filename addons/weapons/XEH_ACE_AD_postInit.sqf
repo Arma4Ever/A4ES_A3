@@ -21,8 +21,8 @@ if (!hasInterface) exitWith {};
     // Register fire event handler
     //["ace_firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;
     //["ace_firedPlayerNonLocal", DFUNC(handleFired)] call CBA_fnc_addEventHandler;
-    ["ace_firedPlayer", {_this call a3cs_weapons_fnc_handleFired}] call CBA_fnc_addEventHandler;
-    ["ace_firedPlayerNonLocal", {_this call a3cs_weapons_fnc_handleFired}] call CBA_fnc_addEventHandler;
+    ["ace_firedPlayer", {_this call a4es_weapons_fnc_handleFired}] call CBA_fnc_addEventHandler;
+    ["ace_firedPlayerNonLocal", {_this call a4es_weapons_fnc_handleFired}] call CBA_fnc_addEventHandler;
 
     // Register Perframe Handler
     [FUNC(handleFirePFH), GVAR(simulationInterval)] call CBA_fnc_addPerFrameHandler;

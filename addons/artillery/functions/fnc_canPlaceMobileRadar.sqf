@@ -7,6 +7,6 @@
 params ["_target", "_player"];
 TRACE_2("canPlaceMobileRadar",_target,_player);
 
-("a3cs_mobileArtilleryRadarItem" in (itemsWithMagazines _player)) &&
+("a4es_mobileArtilleryRadarItem" in (itemsWithMagazines _player)) &&
 {isNull (objectParent _player)} &&
 {!(_player getVariable ["ACE_isUnconscious", false])}

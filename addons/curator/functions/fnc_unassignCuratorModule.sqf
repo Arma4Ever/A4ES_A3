@@ -12,4 +12,4 @@ if (isNull _module) exitWith {};
 
 LOG_1("Unassigning curator module from '%1'", _unit);
 unassignCurator _module;
-["a3csserver_events_curAccRev", [_unit]] call CBA_fnc_serverEvent;
+["a4esserver_events_curAccRev", [_unit]] call CBA_fnc_serverEvent;

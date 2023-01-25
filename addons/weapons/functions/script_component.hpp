@@ -1,1 +1,1 @@
-#include "\z\a3cs\addons\weapons\script_component.hpp"
+#include "\z\a4es\addons\weapons\script_component.hpp"

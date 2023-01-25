@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="Briefing">
-    <Key ID="STR_A3CS_Briefing_Character">
+    <Key ID="STR_A4ES_Briefing_Character">
       <English>Character</English>
       <Polish>Postać</Polish>
     </Key>
-    <Key ID="STR_A3CS_Briefing_CharacterInfo">
+    <Key ID="STR_A4ES_Briefing_CharacterInfo">
       <English>Character info</English>
       <Polish>Informacje o postaci</Polish>
     </Key>
-    <Key ID="STR_A3CS_Briefing_CharacterInfo_Title">
+    <Key ID="STR_A4ES_Briefing_CharacterInfo_Title">
       <English>Info</English>
       <Polish>Informacje</Polish>
     </Key>
-    <Key ID="STR_A3CS_Briefing_CharacterDesc">
+    <Key ID="STR_A4ES_Briefing_CharacterDesc">
       <English>Character description</English>
       <Polish>Opis postaci</Polish>
     </Key>
-    <Key ID="STR_A3CS_Briefing_CharacterDesc_Title">
+    <Key ID="STR_A4ES_Briefing_CharacterDesc_Title">
       <English>Description</Original>
       <Polish>Opis</Polish>
     </Key>
-    <Key ID="STR_A3CS_Briefing_Attributes_characterDesc">
+    <Key ID="STR_A4ES_Briefing_Attributes_characterDesc">
       <English>Opis postaci</English>
     </Key>
-    <Key ID="STR_A3CS_Briefing_Attributes_characterDesc_Tooltip">
+    <Key ID="STR_A4ES_Briefing_Attributes_characterDesc_Tooltip">
       <English>Opis postaci widoczny tylko dla gracza grającego daną jednostką (dostępny w briefingu). Tekst parsowany jak normalny briefing, wszystkie tagi z briefingów będą działać.</English>
     </Key>
   </Package>

@@ -3,7 +3,7 @@
  * Loads logs in panel
  */
 #include "script_component.hpp"
-#include "\z\a3cs\addons\admin\ui\idcAdminPanel.hpp"
+#include "\z\a4es\addons\admin\ui\idcAdminPanel.hpp"
 
 params [["_logClass", "", [""]], ["_serverData", [], [[]]]];
 TRACE_2("loadPanelLogs",_logClass,_serverData);
@@ -12,7 +12,7 @@ private _access = _logClass call FUNC(canAccessPanelModule);
 if (!_access) exitWith {hint localize LSTRING(NoAccess);};
 
 disableSerialization;
-private _display = uiNamespace getVariable ["A3CS_adminPanel", displayNull];
+private _display = uiNamespace getVariable ["A4ES_adminPanel", displayNull];
 if (isNull _display) exitWith {};
 
 private _controlLogs = _display displayCtrl IDC_ADMINPANEL_LOGLIST;

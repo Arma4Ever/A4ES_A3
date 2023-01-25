@@ -7,7 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "a3cs_common",
+            "a4es_common",
             "A3_Weapons_F",
             "A3_Air_F_Beta_Heli_Attack_01",
             "A3_Air_F_Jets_Plane_Fighter_01",

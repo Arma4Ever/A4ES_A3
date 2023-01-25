@@ -3,10 +3,10 @@
  * OnLoad EH of admin panel
  */
 #include "script_component.hpp"
-#include "\z\a3cs\addons\admin\ui\idcAdminPanel.hpp"
+#include "\z\a4es\addons\admin\ui\idcAdminPanel.hpp"
 
 disableSerialization;
-private _display = uiNamespace getVariable ["A3CS_adminPanel", displayNull];
+private _display = uiNamespace getVariable ["A4ES_adminPanel", displayNull];
 if (isNull _display) exitWith {};
 
 private _headerText = [localize LSTRING(AdminPanelSP), localize LSTRING(AdminPanel)] select (isMultiplayer);

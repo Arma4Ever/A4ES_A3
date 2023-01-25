@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="Headless">
-    <Key ID="STR_A3CS_Headless_headlessConnectedInfo">
+    <Key ID="STR_A4ES_Headless_headlessConnectedInfo">
       <Polish>Headless client połączył się poprawnie.</Polish>
     </Key>
   </Package>

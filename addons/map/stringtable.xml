@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="Map">
-    <Key ID="STR_A3CS_Map_Tank">
+    <Key ID="STR_A4ES_Map_Tank">
       <Polish>Czołg</Polish>
     </Key>
   </Package>

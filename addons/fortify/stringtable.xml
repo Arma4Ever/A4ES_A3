@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="Fortify">
-    <Key ID="STR_A3CS_Fortify_FortifyItem_DisplayName">
+    <Key ID="STR_A4ES_Fortify_FortifyItem_DisplayName">
       <English>Fortify toolkit</English>
       <Polish>Narzędzia do budowania</Polish>
     </Key>
-    <Key ID="STR_A3CS_Fortify_FortifyItem_Desc_Short">
+    <Key ID="STR_A4ES_Fortify_FortifyItem_Desc_Short">
       <English>Toolkit for building fortifications by engineers.</English>
       <Polish>Narzędzia umożliwające inżynierom budowanie fortyfikacji.</Polish>
     </Key>

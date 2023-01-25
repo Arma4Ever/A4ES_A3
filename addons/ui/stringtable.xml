@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="UI">
-    <Key ID="STR_A3CS_UI_ToggleScreenshotMode">
+    <Key ID="STR_A4ES_UI_ToggleScreenshotMode">
       <English>Toogle screenshot mode</English>
       <Polish>Włącz/Wyłącz tryb zdjęć</Polish>
     </Key>
-    <Key ID="STR_A3CS_UI_ToggleScreenshotMode_Tooltip">
+    <Key ID="STR_A4ES_UI_ToggleScreenshotMode_Tooltip">
       <English>Hides game HUD for making screenshots/videos.</English>
       <Polish>Ukrywa HUD gry by umożliwić robienie zrzutów ekranu lub nagrywanie filmów.</Polish>
     </Key>
-    <Key ID="STR_A3CS_UI_ScreenshotModeDisabled">
+    <Key ID="STR_A4ES_UI_ScreenshotModeDisabled">
       <English>Screenshot mode disabled</English>
       <Polish>Tryb zdjęć wyłączony</Polish>
     </Key>

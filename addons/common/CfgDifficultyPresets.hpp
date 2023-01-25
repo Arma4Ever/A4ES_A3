@@ -1,7 +1,7 @@
 class CfgDifficultyPresets {
     defaultPreset = "Veteran";
     class Recruit {
-        displayName = "A3C Debug";
+        displayName = "A4E Debug";
         levelAI = "AILevelHigh";
         class Options {
             reducedDamage = 0;
@@ -27,7 +27,7 @@ class CfgDifficultyPresets {
         };
     };
     class Regular {
-        displayName = "A3C Mission";
+        displayName = "A4E Mission";
         levelAI = "AILevelHigh";
         class Options {
             reducedDamage = 0;
@@ -53,7 +53,7 @@ class CfgDifficultyPresets {
         };
     };
     class Veteran {
-        displayName = "A3C Mission";
+        displayName = "A4E Mission";
         levelAI = "AILevelHigh";
         class Options {
             reducedDamage = 0;

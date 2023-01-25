@@ -13,7 +13,7 @@ private _volumeToDraw = _drawVolumeTotal - _drawedBlood;
 private _bloodVolume = _patient getVariable ["ace_medical_bloodVolume", 6.0];
 
 if (_bloodVolume < _volumeToDraw) exitWith {
-  _medic addItem "A3CS_usedBloodBag";
+  _medic addItem "A4ES_usedBloodBag";
 };
 
 if (_volumeToDraw > 0) then {

@@ -14,9 +14,9 @@
 
   Przykład:
       // Zmiana flagi flag_21 na true
-      ["flag_21", true] call A3CS_fnc_setLogicFlagValue;
+      ["flag_21", true] call A4ES_fnc_setLogicFlagValue;
       // Zmiana flagi flag_21 na false
-      ["flag_21", false] call A3CS_fnc_setLogicFlagValue;
+      ["flag_21", false] call A4ES_fnc_setLogicFlagValue;
 ***/
 
 params [["_flag", "", [""]], ["_value", false, [false]]];

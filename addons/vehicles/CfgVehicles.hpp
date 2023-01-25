@@ -31,7 +31,7 @@ class CfgVehicles {
     };
 
     class O_Plane_Fighter_02_F;
-    class A3CS_Plane_Su35: O_Plane_Fighter_02_F {
+    class A4ES_Plane_Su35: O_Plane_Fighter_02_F {
         maxSpeed = 1145;
         displayName = "Su-35";
         hiddenSelectionsTextures[] = {
@@ -45,7 +45,7 @@ class CfgVehicles {
     };
 
     class I_Plane_Fighter_04_F;
-    class A3CS_Plane_J10: I_Plane_Fighter_04_F {
+    class A4ES_Plane_J10: I_Plane_Fighter_04_F {
         maxSpeed = 1200;
         displayName = "J-10";
         acceleration = 210;
@@ -60,7 +60,7 @@ class CfgVehicles {
     };
 
     class O_Plane_CAS_02_dynamicLoadout_F;
-    class A3CS_Plane_Jak135: O_Plane_CAS_02_dynamicLoadout_F {
+    class A4ES_Plane_Jak135: O_Plane_CAS_02_dynamicLoadout_F {
         maxSpeed = 1100;
         acceleration = 200;
         displayName = "Jak-135";

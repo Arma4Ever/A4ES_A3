@@ -3,11 +3,11 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {"a3cs_mobileArtilleryRadar"};
-        weapons[] = {"a3cs_mobileArtilleryRadarItem"};
+        units[] = {"a4es_mobileArtilleryRadar"};
+        weapons[] = {"a4es_mobileArtilleryRadarItem"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "a3cs_common",
+            "a4es_common",
             "cba_common",
             "A3_Props_F_Enoch_Military_Equipment"
         };

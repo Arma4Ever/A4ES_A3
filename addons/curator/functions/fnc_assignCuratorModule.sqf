@@ -23,7 +23,7 @@ if (isNull _assignedModule) then {
 };
 
 _unit assignCurator _assignedModule;
-["a3csserver_events_curAccGrant", [_unit]] call CBA_fnc_serverEvent;
+["a4esserver_events_curAccGrant", [_unit]] call CBA_fnc_serverEvent;
 
 if (_clientPostInit) then {
   private _curatorsCount = count allCurators;

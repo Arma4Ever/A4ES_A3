@@ -24,6 +24,6 @@ _player removeItem "tfw_rf3080Item";
       _antenna setVectorUp (surfaceNormal (position _antenna));
   };
 
-  // A3CSServer event
-  ["a3csserver_events_userAntennaDep", [_player]] call CBA_fnc_serverEvent;
+  // A4ESServer event
+  ["a4esserver_events_userAntennaDep", [_player]] call CBA_fnc_serverEvent;
 }, [_player], 1] call CBA_fnc_waitAndExecute;

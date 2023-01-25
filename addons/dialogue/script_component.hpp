@@ -1,12 +1,12 @@
 #define COMPONENT dialogue
 #define COMPONENT_BEAUTIFIED Dialogue
-#include "\z\a3cs\addons\main\script_mod.hpp"
+#include "\z\a4es\addons\main\script_mod.hpp"
 
 #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
-#include "\z\a3cs\addons\main\script_macros.hpp"
+#include "\z\a4es\addons\main\script_macros.hpp"
 
 #define IDC_DIALOGUE_UI_BG 1780
 #define IDC_DIALOGUE_UI_TITLE 4700

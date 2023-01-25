@@ -6,5 +6,5 @@
 
 params ["_player"];
 
-("A3CS_dressingSet" in (_player call ACEFUNC(common,uniqueItems))) &&
+("A4ES_dressingSet" in (_player call ACEFUNC(common,uniqueItems))) &&
 {isNull (objectParent _player)}

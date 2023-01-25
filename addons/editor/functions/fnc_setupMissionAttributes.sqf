@@ -12,24 +12,24 @@ LOG("setupMissionAttributes");
 "GarbageCollection" set3DENMissionAttribute ["WreckManagerMode", 1];
 
 private _garbageCollectionSetuped = "GarbageCollection" get3DENMissionAttribute QGVAR(garbageCollectionSetuped);
-private _a3csVersion = "Scenario" get3DENMissionAttribute QGVAR(a3csVersion);
-TRACE_2("setupMissionAttributes - loaded mission attributes",_a3csVersion,_garbageCollectionSetuped);
-if (_a3csVersion isEqualTo "") then {_a3csVersion = "0.0.0";};
+private _a4esVersion = "Scenario" get3DENMissionAttribute QGVAR(a4esVersion);
+TRACE_2("setupMissionAttributes - loaded mission attributes",_a4esVersion,_garbageCollectionSetuped);
+if (_a4esVersion isEqualTo "") then {_a4esVersion = "0.0.0";};
 private _currentVersion = QUOTE(VERSION_STR);
 
 // Setup garbage collector & dynamic sim default settings if not setuped yet
 if (
   !_garbageCollectionSetuped ||
-  {_a3csVersion isNotEqualTo _currentVersion}
+  {_a4esVersion isNotEqualTo _currentVersion}
 ) then {
   if (_garbageCollectionSetuped) then {
-    WARNING_2("Scenario saved on older A3CS version. Scenario created on: '%1', current version: '%2'.",_a3csVersion,_currentVersion);
+    WARNING_2("Scenario saved on older A4ES version. Scenario created on: '%1', current version: '%2'.",_a4esVersion,_currentVersion);
     // Show info box about version mismatch
-    [_currentVersion, _a3csVersion] spawn {
+    [_currentVersion, _a4esVersion] spawn {
       sleep 0.001;
       [
-        format [LLSTRING(Warning_A3CSVersionMismatch_Message), _this # 1, _this # 0],
-        LLSTRING(Warning_A3CSVersionMismatch_Title),
+        format [LLSTRING(Warning_A4ESVersionMismatch_Message), _this # 1, _this # 0],
+        LLSTRING(Warning_A4ESVersionMismatch_Title),
         false,
         'OK'
       ] call BIS_fnc_3DENShowMessage;
@@ -51,5 +51,5 @@ if (
   "GarbageCollection" set3DENMissionAttribute ["DynSimMovingCoef", 1.3];
 
   "GarbageCollection" set3DENMissionAttribute [QGVAR(garbageCollectionSetuped), true];
-  "Scenario" set3DENMissionAttribute [QGVAR(a3csVersion), _currentVersion];
+  "Scenario" set3DENMissionAttribute [QGVAR(a4esVersion), _currentVersion];
 };

@@ -1,107 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="AI">
-    <Key ID="STR_A3CS_AI_skill_displayName">
+    <Key ID="STR_A4ES_AI_skill_displayName">
       <Polish>Umiejętności</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_skill_tooltip">
+    <Key ID="STR_A4ES_AI_skill_tooltip">
       <Polish>Umiejętności AI. Poziom umiejętności ma wpływ tylko na celność ostrzału oraz szybkość celowania, wszystkie inne umiejętności jak poruszanie się, dowodzenie, czy odwaga są jednakowe, niezależnie od ogólnego poziomu umiejętności.</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_skillLevel_partisans">
+    <Key ID="STR_A4ES_AI_skillLevel_partisans">
       <Polish>Partyzant</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_skillLevel_partisans_description">
+    <Key ID="STR_A4ES_AI_skillLevel_partisans_description">
       <Polish>Członek partyzantki, ochotnik bez wyszkolenia</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_skillLevel_partisanVeterans">
+    <Key ID="STR_A4ES_AI_skillLevel_partisanVeterans">
       <Polish>Doświadczony partyzant</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_skillLevel_partisanVeterans_description">
+    <Key ID="STR_A4ES_AI_skillLevel_partisanVeterans_description">
       <Polish>Partyzant z krótkim doświadczeniem bojowym</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_skillLevel_militia">
+    <Key ID="STR_A4ES_AI_skillLevel_militia">
       <Polish>Milicjant</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_skillLevel_militia_description">
+    <Key ID="STR_A4ES_AI_skillLevel_militia_description">
       <Polish>Żołnierz zorganizowanej milicji z amatorskim wyszkoleniem</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_skillLevel_guards">
+    <Key ID="STR_A4ES_AI_skillLevel_guards">
       <Polish>Gwardzista</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_skillLevel_guards_description">
+    <Key ID="STR_A4ES_AI_skillLevel_guards_description">
       <Polish>Żołnierz gwardii narodowej z minimalnym wyszkoleniem</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_skillLevel_conscripts">
+    <Key ID="STR_A4ES_AI_skillLevel_conscripts">
       <Polish>Poborowy</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_skillLevel_conscripts_description">
+    <Key ID="STR_A4ES_AI_skillLevel_conscripts_description">
       <Polish>Żołnierz armii poborowej z podstawowym wyszkoleniem</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_skillLevel_professionals">
+    <Key ID="STR_A4ES_AI_skillLevel_professionals">
       <Polish>Zawodowy</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_skillLevel_professionals_description">
+    <Key ID="STR_A4ES_AI_skillLevel_professionals_description">
       <Polish>Żołnierz armii zawodowej z dobrym wyszkoleniem</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_skillLevel_professionalVeterans">
+    <Key ID="STR_A4ES_AI_skillLevel_professionalVeterans">
       <Polish>Doświadczony zawodowy</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_skillLevel_professionalVeterans_description">
+    <Key ID="STR_A4ES_AI_skillLevel_professionalVeterans_description">
       <Polish>Żołnierz zawodowy z doświadczeniem bojowym</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_skillLevel_elite">
+    <Key ID="STR_A4ES_AI_skillLevel_elite">
       <Polish>Specjalista</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_skillLevel_elite_description">
+    <Key ID="STR_A4ES_AI_skillLevel_elite_description">
       <Polish>Żołnierz sił specjalnych z doskonałym wyszkoleniem</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_skillLevel_eliteVeterans">
+    <Key ID="STR_A4ES_AI_skillLevel_eliteVeterans">
       <Polish>Weteran sił specjalnych</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_skillLevel_eliteVeterans_description">
+    <Key ID="STR_A4ES_AI_skillLevel_eliteVeterans_description">
       <Polish>Żołnierz sił specjalnych z długim doświadczeniem bojowym</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_defenderBehaviour_displayName">
+    <Key ID="STR_A4ES_AI_defenderBehaviour_displayName">
       <Polish>Stacjonarny obrońca</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_defenderBehaviour_tooltip">
+    <Key ID="STR_A4ES_AI_defenderBehaviour_tooltip">
       <Polish>Ustawienia systemu stacjonarnego obrońcy.</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_defenderBehaviour_Attributes_disabled_name">
+    <Key ID="STR_A4ES_AI_defenderBehaviour_Attributes_disabled_name">
       <Polish>Wyłączony</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_defenderBehaviour_Attributes_disabled_tooltip">
+    <Key ID="STR_A4ES_AI_defenderBehaviour_Attributes_disabled_tooltip">
       <Polish>System będzie wyłączony dla danej jednostki.</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_defenderBehaviour_Attributes_up_name">
+    <Key ID="STR_A4ES_AI_defenderBehaviour_Attributes_up_name">
       <Polish>Wstawianie i kładzenie się</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_defenderBehaviour_Attributes_up_tooltip">
+    <Key ID="STR_A4ES_AI_defenderBehaviour_Attributes_up_tooltip">
       <Polish>Postać będzie wstawać i kłaść się w różnych interwałach czasowych. Na zachowanie jednostki ma też wpływ ostrzał prowadzony w kierunku tej jednostki. W momencie włączenia systemu, poruszanie się tej jednostki zostanie automatycznie wyłączone.</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_defenderBehaviour_Attributes_middle_name">
+    <Key ID="STR_A4ES_AI_defenderBehaviour_Attributes_middle_name">
       <Polish>Kucanie i kładzenie się</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_defenderBehaviour_Attributes_middle_tooltip">
+    <Key ID="STR_A4ES_AI_defenderBehaviour_Attributes_middle_tooltip">
       <Polish>Postać będzie kucać i kłaść się w różnych interwałach czasowych. Na zachowanie jednostki ma też wpływ ostrzał prowadzony w kierunku tej jednostki. W momencie włączenia systemu, poruszanie się tej jednostki zostanie automatycznie wyłączone.</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_NVGoggles_displayName">
+    <Key ID="STR_A4ES_AI_NVGoggles_displayName">
       <English>Hidden AI NVG</English>
       <Polish>Ukryta noktowizja AI</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_NVGoggles_description">
+    <Key ID="STR_A4ES_AI_NVGoggles_description">
       <English>Invisible NV goggles, usable only by AI units</English>
       <Polish>Niewidzialne gogle NV, używalne tylko przez jednostki AI</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_hideBody_displayName">
+    <Key ID="STR_A4ES_AI_hideBody_displayName">
       <English>Hide body</English>
       <Polish>Ukryj ciało</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_hideBody_hidingBody">
+    <Key ID="STR_A4ES_AI_hideBody_hidingBody">
       <English>Hiding body...</English>
       <Polish>Ukrywanie ciała...</Polish>
     </Key>
-    <Key ID="STR_A3CS_AI_hideBody_bodyHidden">
+    <Key ID="STR_A4ES_AI_hideBody_bodyHidden">
       <English>Body has been hidden</English>
       <Polish>Ciało zostało ukryte</Polish>
     </Key>

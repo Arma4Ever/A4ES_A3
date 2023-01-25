@@ -103,8 +103,8 @@ class Cfg3DEN {
                         class Binarize {
                             // control = QGVAR(hiddenCheckbox);
                         };
-                        class GVAR(a3csVersion) {
-                            property = QGVAR(a3csVersion);
+                        class GVAR(a4esVersion) {
+                            property = QGVAR(a4esVersion);
                             control = QGVAR(hiddenEdit);
                             defaultValue = "''";
                         };

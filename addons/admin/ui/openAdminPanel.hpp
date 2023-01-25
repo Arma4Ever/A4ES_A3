@@ -1,4 +1,4 @@
-class A3CS_openAdminPanel : A3CS_ui_buttonBase {
+class A4ES_openAdminPanel : A4ES_ui_buttonBase {
     class Attributes {
         font = "PuristaMedium";
         color = "#E5E5E5";

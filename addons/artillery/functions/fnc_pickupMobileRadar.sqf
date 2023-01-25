@@ -9,7 +9,7 @@ TRACE_2("pickupMobileRadar",_target,_player);
 
 if !(alive _target) exitWith {};
 
-if (!([_player, "a3cs_mobileArtilleryRadarItem"] call CBA_fnc_canAddItem)) exitWith {
+if (!([_player, "a4es_mobileArtilleryRadarItem"] call CBA_fnc_canAddItem)) exitWith {
   [LSTRING(NoPlaceInInventory)] call ACEFUNC(common,displayTextStructured);
 };
 
@@ -22,14 +22,14 @@ _player playActionNow "PutDown";
   if (isNull _target) exitWith {};
 
   // Check is there still room in inventory
-  if (!([_player, "a3cs_mobileArtilleryRadarItem"] call CBA_fnc_canAddItem)) exitWith {
+  if (!([_player, "a4es_mobileArtilleryRadarItem"] call CBA_fnc_canAddItem)) exitWith {
     [LSTRING(NoPlaceInInventory)] call ACEFUNC(common,displayTextStructured);
   };
 
   // Pickup
   deleteVehicle _target;
-  _player addItem "a3cs_mobileArtilleryRadarItem";
+  _player addItem "a4es_mobileArtilleryRadarItem";
 
-  // A3CSServer event
-  ["a3csserver_events_userArtRadRem", [_player]] call CBA_fnc_serverEvent;
+  // A4ESServer event
+  ["a4esserver_events_userArtRadRem", [_player]] call CBA_fnc_serverEvent;
 }, [_target, _player], 1] call CBA_fnc_waitAndExecute;

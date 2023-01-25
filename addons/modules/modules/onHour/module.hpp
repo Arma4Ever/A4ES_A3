@@ -16,7 +16,7 @@ class GVAR(onHour): GVAR(base) {
         // Attributes for module activator
         #define MODULE_ACTIVATOR_CONTROL QGVAR(dynamicToolboxActivationModeMissionStart)
         #define MODULE_ACTIVATOR_DEFAULT_VALUE QUOTE(-1)
-        #include "\z\a3cs\addons\modules\includes\moduleActivationAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\moduleActivationAttributes.hpp"
 
         class GVAR(baseSettingsSubCategory): GVAR(moduleSubCategory) {
             displayName = CSTRING(onHour_Attributes_baseSettingsSubCategory);
@@ -59,12 +59,12 @@ class GVAR(onHour): GVAR(base) {
             };
         };
 
-        #include "\z\a3cs\addons\modules\includes\moduleChangeTaskStateAttributes.hpp"
-        #include "\z\a3cs\addons\modules\includes\modulePlaySoundAttributes.hpp"
-        #include "\z\a3cs\addons\modules\includes\moduleSetLogicFlagValueAttributes.hpp"
-        #include "\z\a3cs\addons\modules\includes\moduleShowMessageAttributes.hpp"
-        #include "\z\a3cs\addons\modules\includes\moduleShowMarkerAttributes.hpp"
-        #include "\z\a3cs\addons\modules\includes\moduleDeleteMarkerAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\moduleChangeTaskStateAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\modulePlaySoundAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\moduleSetLogicFlagValueAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\moduleShowMessageAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\moduleShowMarkerAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\moduleDeleteMarkerAttributes.hpp"
 
         class GVAR(scriptHandlerSettingsSubCategory): GVAR(moduleSubCategory) {
             displayName = CSTRING(Attributes_scriptHandlerSettingsSubCategory);

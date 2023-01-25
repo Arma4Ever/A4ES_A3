@@ -5,12 +5,12 @@ if !(is3DENPreview) exitWith {};
 addMissionEventHandler ["ExtensionCallback", {
   params ["_name", "_function"];
 
-  if (_name isNotEqualTo "a3cs_debug") exitWith {};
+  if (_name isNotEqualTo "a4es_debug") exitWith {};
   if (_function isEqualTo "logsListUpdated") exitWith {
     private _logs = [];
 
     while {true} do {
-      private _log = "a3cs_debug" callExtension "getLog";
+      private _log = "a4es_debug" callExtension "getLog";
       if (_log isEqualTo "") exitWith {};
       _logs pushBack _log;
     };
@@ -20,7 +20,7 @@ addMissionEventHandler ["ExtensionCallback", {
   };
 }];
 
-private _initWatcher = "a3cs_debug" callExtension "missionPreviewStart";
+private _initWatcher = "a4es_debug" callExtension "missionPreviewStart";
 if (_initWatcher isEqualTo "true") then {
   systemChat LLSTRING(StartLogsWatcher);
 
@@ -50,7 +50,7 @@ if (_initWatcher isEqualTo "true") then {
     FileSystemWatcher often don't trigger if focus is on arma app
     Async polling for updates forces callback if logsList updated
   */
-  [{"a3cs_debug" callExtension "updateLogsList";}, 0.5] call CBA_fnc_addPerFrameHandler;
+  [{"a4es_debug" callExtension "updateLogsList";}, 0.5] call CBA_fnc_addPerFrameHandler;
 };
 
 player addAction [

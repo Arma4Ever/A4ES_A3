@@ -6,8 +6,8 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"a3cs_common", "a3_ui_f"};
-        author = CSTRING(Author);
+        requiredAddons[] = {"a4es_common", "a3_ui_f"};
+        author = ECSTRING(main,Author);
         authors[] = {"veteran29", "SzwedzikPL"};
         url = CSTRING(URL);
         VERSION_CONFIG;

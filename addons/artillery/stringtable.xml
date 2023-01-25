@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="Artillery">
-    <Key ID="STR_A3CS_Artillery_Refresh">
+    <Key ID="STR_A4ES_Artillery_Refresh">
       <English>Refresh</English>
       <Polish>Odśwież</Polish>
     </Key>
-    <Key ID="STR_A3CS_Artillery_PlaceMobileRadar_displayName">
+    <Key ID="STR_A4ES_Artillery_PlaceMobileRadar_displayName">
       <English>Place mobile artillery radar</English>
       <Polish>Rozłóż mobilny radar artyleryjski</Polish>
     </Key>
-    <Key ID="STR_A3CS_Artillery_PickupMobileRadar_displayName">
+    <Key ID="STR_A4ES_Artillery_PickupMobileRadar_displayName">
       <English>Fold and pickup radar</English>
       <Polish>Złóż i podnieś radar</Polish>
     </Key>
-    <Key ID="STR_A3CS_Artillery_NoPlaceInInventory">
+    <Key ID="STR_A4ES_Artillery_NoPlaceInInventory">
       <English>Not enough place in inventory to pickup radar</English>
       <Polish>Za mało miejsca w ekwipunku aby podnieść radar</Polish>
     </Key>
-    <Key ID="STR_A3CS_Artillery_MobileArtilleryRadarItem_displayName">
+    <Key ID="STR_A4ES_Artillery_MobileArtilleryRadarItem_displayName">
       <English>Mobile Artillery Radar</English>
       <Polish>Mobilny Radar Artyleryjski</Polish>
     </Key>
-    <Key ID="STR_A3CS_Artillery_MobileArtilleryRadarItem_descriptionShort">
+    <Key ID="STR_A4ES_Artillery_MobileArtilleryRadarItem_descriptionShort">
       <English>Allows for detection and tracking of flying shells and rockets.</English>
       <Polish>Pozwala na wykrycie oraz namierzanie lecących pocisków i rakiet.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Artillery_MobileArtilleryRadar_displayName">
+    <Key ID="STR_A4ES_Artillery_MobileArtilleryRadar_displayName">
       <English>Mobile artillery radar</English>
       <Polish>Mobilny radar artyleryjski</Polish>
     </Key>
-    <Key ID="STR_A3CS_Artillery_OpenRadarDialog_displayName">
+    <Key ID="STR_A4ES_Artillery_OpenRadarDialog_displayName">
       <English>Open radar panel</English>
       <Polish>Otwórz panel radaru</Polish>
     </Key>
-    <Key ID="STR_A3CS_Artillery_WaitingForData">
+    <Key ID="STR_A4ES_Artillery_WaitingForData">
       <English>Waiting for data...</English>
       <Polish>Oczekiwanie na dane...</Polish>
     </Key>
-    <Key ID="STR_A3CS_Artillery_LastUpdateTime">
+    <Key ID="STR_A4ES_Artillery_LastUpdateTime">
       <English>Last update: %1 ago</English>
       <Polish>Ostatnia aktualizacja: %1 temu</Polish>
     </Key>
-    <Key ID="STR_A3CS_Artillery_Unknown">
+    <Key ID="STR_A4ES_Artillery_Unknown">
       <English>Unknown</English>
       <Polish>Nieznany</Polish>
     </Key>
-    <Key ID="STR_A3CS_Artillery_RadarDialog_Id">
+    <Key ID="STR_A4ES_Artillery_RadarDialog_Id">
       <English>ID</English>
       <Polish>ID</Polish>
     </Key>
-    <Key ID="STR_A3CS_Artillery_RadarDialog_Type">
+    <Key ID="STR_A4ES_Artillery_RadarDialog_Type">
       <English>Type</English>
       <Polish>Typ</Polish>
     </Key>
-    <Key ID="STR_A3CS_Artillery_RadarDialog_Dir">
+    <Key ID="STR_A4ES_Artillery_RadarDialog_Dir">
       <English>Direction</English>
       <Polish>Kierunek</Polish>
     </Key>
-    <Key ID="STR_A3CS_Artillery_RadarDialog_DistTraveled">
+    <Key ID="STR_A4ES_Artillery_RadarDialog_DistTraveled">
       <English>Distance traveled</English>
       <Polish>Przebyty dystans</Polish>
     </Key>
-    <Key ID="STR_A3CS_Artillery_RadarDialog_Status">
+    <Key ID="STR_A4ES_Artillery_RadarDialog_Status">
       <English>Status</English>
       <Polish>Status</Polish>
     </Key>
-    <Key ID="STR_A3CS_Artillery_RadarDialog_Status_Active">
+    <Key ID="STR_A4ES_Artillery_RadarDialog_Status_Active">
       <English>Active</English>
       <Polish>Aktywny</Polish>
     </Key>
-    <Key ID="STR_A3CS_Artillery_RadarDialog_Status_Inctive">
+    <Key ID="STR_A4ES_Artillery_RadarDialog_Status_Inctive">
       <English>Inactive</English>
       <Polish>Nieaktywny</Polish>
     </Key>

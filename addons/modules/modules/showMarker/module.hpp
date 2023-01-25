@@ -12,10 +12,10 @@ class GVAR(showMarker): GVAR(base) {
         class GVAR(moduleWarnings): GVAR(moduleWarnings) {};
 
         // Attributes for module activator
-        #include "\z\a3cs\addons\modules\includes\moduleActivationAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\moduleActivationAttributes.hpp"
 
         #define MODULE_SHOWMARKER
-        #include "\z\a3cs\addons\modules\includes\moduleShowMarkerAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\moduleShowMarkerAttributes.hpp"
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};
     };

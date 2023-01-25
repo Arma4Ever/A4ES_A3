@@ -1,6 +1,6 @@
 {
     "inputDirs": [
-        "P:/z/a3cs/addons/"
+        "P:/z/a4es/addons/"
     ],
     "includePaths": [
         "P:/"
@@ -10,7 +10,9 @@
         "initkeybinds.sqf",
         "xeh_prep.sqf",
         "common\\functions\\fnc_dummy.sqf",
-        "modules\\includes\\moduleActivation.sqf"
+        "modules\\includes\\moduleActivation.sqf",
+		"main_menu\\functions\\fnc_join.sqf"
+		
     ],
     "outputDir": "P:/",
     "workerThreads": 8

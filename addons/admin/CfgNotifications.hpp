@@ -1,5 +1,5 @@
 class CfgNotifications {
-    class a3cs_adminMessage {
+    class a4es_adminMessage {
         title = "%1";
         colorIconPicture[] = {1.0,1.0,1.0,1.0};
         iconPicture = "\a3\ui_f\data\map\Markers\Military\warning_ca.paa";

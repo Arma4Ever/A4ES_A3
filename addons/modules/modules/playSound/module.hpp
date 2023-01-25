@@ -15,10 +15,10 @@ class GVAR(playSound): GVAR(base) {
         // Attributes for module activator
         #define MODULE_ACTIVATOR_CONTROL QGVAR(dynamicToolboxActivationModeMissionStart)
         #define MODULE_ACTIVATOR_DEFAULT_VALUE QUOTE(-1)
-        #include "\z\a3cs\addons\modules\includes\moduleActivationAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\moduleActivationAttributes.hpp"
 
         #define MODULE_PLAYSOUND
-        #include "\z\a3cs\addons\modules\includes\modulePlaySoundAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\modulePlaySoundAttributes.hpp"
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};
     };

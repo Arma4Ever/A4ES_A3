@@ -1,6 +1,6 @@
 class ACE_Medical_Treatment {
     class Medication {
-        class A3CS_painkillers {
+        class A4ES_painkillers {
             painReduce = 0.20;
             hrIncreaseLow[] = {-5, -10};
             hrIncreaseNormal[] = {-5, -15};

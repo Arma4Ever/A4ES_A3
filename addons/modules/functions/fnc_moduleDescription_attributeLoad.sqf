@@ -1,5 +1,5 @@
 #include "script_component.hpp"
-#include "\z\a3cs\addons\modules\controlDefines.hpp"
+#include "\z\a4es\addons\modules\controlDefines.hpp"
 /*
  * Author: Bohemia Interactive, SzwedzikPL
  * 3DEN moduleDescription attributeLoad handler

@@ -9,7 +9,7 @@ import datetime
 ######## GLOBALS #########
 from vendor import VENDOR
 MAINPREFIX = "z"
-PREFIX = "a3cs_"
+PREFIX = "a4es_"
 IGNOREADDONS = [
     "camofaces",
 ]
@@ -54,7 +54,7 @@ def copy_vendor_file(source, target):
 def main():
     print("""
   ####################
-  # A3CS Debug Build #
+  # A4ES Debug Build #
   ####################
 """)
 
@@ -185,11 +185,11 @@ def main():
     for file in vendoraddons:
         os.rename(file, "{}.vendor".format(file[:-4]))
 
-    ### Build A3CS
+    ### Build A4ES
 
     os.chdir(projectpath)
 
-    print("  Building A3CS")
+    print("  Building A4ES")
     print("")
     hemttRet = subprocess.call([hemttExe, "pack"], stderr=subprocess.STDOUT)
     print("Result: {}".format(hemttRet));
@@ -204,7 +204,7 @@ def main():
     ### Log finish
 
     print("")
-    print("\n# A3CS debug build done\n")
+    print("\n# A4ES debug build done\n")
     print("  {}".format(datetime.datetime.now()))
     print("")
 

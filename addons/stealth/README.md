@@ -1,4 +1,4 @@
-# A3CS Stealth
+# A4ES Stealth
 Provides functionalities related to stealth gameplay - sneaking, silent takedowns etc.
 
 ### Changes

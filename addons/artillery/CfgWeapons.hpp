@@ -2,7 +2,7 @@ class CfgWeapons {
 	class CBA_MiscItem;
     class CBA_MiscItem_ItemInfo;
 
-    class a3cs_mobileArtilleryRadarItem: CBA_MiscItem {
+    class a4es_mobileArtilleryRadarItem: CBA_MiscItem {
 		scope = 2;
 		scopeArsenal = 2;
 		scopeCurator = 2;

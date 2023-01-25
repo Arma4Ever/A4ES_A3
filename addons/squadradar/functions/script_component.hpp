@@ -1,1 +1,1 @@
-#include "\z\a3cs\addons\squadradar\script_component.hpp"
+#include "\z\a4es\addons\squadradar\script_component.hpp"

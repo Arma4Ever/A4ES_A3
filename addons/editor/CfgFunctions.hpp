@@ -65,6 +65,10 @@ class CfgFunctions {
             // file = "3denEnhanced\functions\GUI\actionCreator";
             delete actionCreator;
         };
+        class AttributeSearch {
+            // file = "3denEnhanced\functions\GUI\attributeSearch";
+            class attributeSearch_onLoad;
+        };
         class BriefingEditor {
             // file = "3denEnhanced\functions\GUI\briefingEditor";
             delete briefingEditor_addTAG;
@@ -164,6 +168,10 @@ class CfgFunctions {
             class CFGS_onLoad;
             class CFGS_playOrCopy;
         };
+        class SelectionFilter {
+            // file = "3denEnhanced\functions\GUI\selectionFilter";
+            class selectionFilter_init;
+        };
         class 3DENShortcuts {
             // file = "3denEnhanced\functions\GUI\3DENShortcuts";
             class 3DENShortcuts_init;
@@ -179,7 +187,6 @@ class CfgFunctions {
         };
         class Misc {
             // file = "3denEnhanced\functions\Misc";
-            class 3denNotificationNoSound;
             class alignEntities;
             class all3DENSelected;
             class deleteCrew;
@@ -208,6 +215,7 @@ class CfgFunctions {
             class toggleMarkerAlpha;
             class twoDigitsStr;
             class VHCTools;
+            class centerMapOnSelection;
         };
         class Interface {
             // file = "3denEnhanced\functions\interface";

@@ -1,199 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="NameTags">
-    <Key ID="STR_A3CS_NameTags_Settings_Addon">
-      <English>A3CS Name Tags</English>
+    <Key ID="STR_A4ES_NameTags_Settings_Addon">
+      <English>A4ES Name Tags</English>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_show2DNameTag">
+    <Key ID="STR_A4ES_NameTags_Settings_show2DNameTag">
       <English>Show 2D tag</English>
       <Polish>Wyświetl tag 2D</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_show2DNameTag_Desc">
+    <Key ID="STR_A4ES_NameTags_Settings_show2DNameTag_Desc">
       <English>Show 2D tag on cursor</English>
       <Polish>Wyświetl tag 2D pod kursorem</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_show3DNameTag">
+    <Key ID="STR_A4ES_NameTags_Settings_show3DNameTag">
       <English>Show 3D tag</English>
       <Polish>Wyświetl tag 3D</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_show3DNameTag_Desc">
+    <Key ID="STR_A4ES_NameTags_Settings_show3DNameTag_Desc">
       <English>Show 3D tag above unit head</English>
       <Polish>Wyświetl tag 3D nad głowami jednostek</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_show3DNameTag_Freelook">
+    <Key ID="STR_A4ES_NameTags_Settings_show3DNameTag_Freelook">
       <English>Only during freelook</English>
       <Polish>Tylko podczas rozglądania (domyślnie lewy alt)</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_show3DNameTag_OnCursor">
+    <Key ID="STR_A4ES_NameTags_Settings_show3DNameTag_OnCursor">
       <English>Only on cursor</English>
       <Polish>Tylko po najechaniu kursorem</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_show3DNameTag_Both">
+    <Key ID="STR_A4ES_NameTags_Settings_show3DNameTag_Both">
       <English>In both cases</English>
       <Polish>W obu przypadkach</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_showSpeaking">
+    <Key ID="STR_A4ES_NameTags_Settings_showSpeaking">
       <English>Show speaking</English>
       <Polish>Wyświetl ikonkę mówienia</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_showSpeaking_Desc">
+    <Key ID="STR_A4ES_NameTags_Settings_showSpeaking_Desc">
       <English>Show animation above unit head when speaking (ACRE) on 3D tag</English>
       <Polish>Wyświetl animację nad głową jednostki podczas mówienia (ACRE) na tagu 3D</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_showLeaderIcon">
+    <Key ID="STR_A4ES_NameTags_Settings_showLeaderIcon">
       <English>Show group leader icon</English>
       <Polish>Wyświetl ikonkę dowódcy drużyny</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_showLeaderIcon_Desc">
+    <Key ID="STR_A4ES_NameTags_Settings_showLeaderIcon_Desc">
       <English>Show group leader icon above unit head on 3D tag</English>
       <Polish>Wyświetl ikonkę dowódcy drużyny na tagu 3D</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_2DNameTagShowTraits">
+    <Key ID="STR_A4ES_NameTags_Settings_2DNameTagShowTraits">
       <English>Show unit traits on 2D tag</English>
       <Polish>Wyświetl uprawnienia jednostki na tagu 2D</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_2DNameTagPosition">
+    <Key ID="STR_A4ES_NameTags_Settings_2DNameTagPosition">
       <English>2D tag position on screen</English>
       <Polish>Miejsce wyświetlania taga 2D na ekranie</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_2DNameTagPosition_Center">
+    <Key ID="STR_A4ES_NameTags_Settings_2DNameTagPosition_Center">
       <English>Screen center</English>
       <Polish>Środek ekranu</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_2DNameTagPosition_Bottom">
+    <Key ID="STR_A4ES_NameTags_Settings_2DNameTagPosition_Bottom">
       <English>Screen bottom</English>
       <Polish>Dół ekranu</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_3DNameTagScale">
+    <Key ID="STR_A4ES_NameTags_Settings_3DNameTagScale">
       <English>3D tag scale</English>
       <Polish>Wielkość taga 3D</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_3DNameTagScale_VerySmall">
+    <Key ID="STR_A4ES_NameTags_Settings_3DNameTagScale_VerySmall">
       <English>Very small</English>
       <Polish>Bardzo mały</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_3DNameTagScale_Small">
+    <Key ID="STR_A4ES_NameTags_Settings_3DNameTagScale_Small">
       <English>Small</English>
       <Polish>Mały</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_3DNameTagScale_Normal">
+    <Key ID="STR_A4ES_NameTags_Settings_3DNameTagScale_Normal">
       <English>Normal</English>
       <Polish>Normalny</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Settings_3DNameTagScale_Big">
+    <Key ID="STR_A4ES_NameTags_Settings_3DNameTagScale_Big">
       <English>Big</English>
       <Polish>Duży</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Attributes_showNameTag">
+    <Key ID="STR_A4ES_NameTags_Attributes_showNameTag">
       <Polish>Wyświetlaj nametag jednostki (AI)</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Attributes_showNameTag_Tooltip">
+    <Key ID="STR_A4ES_NameTags_Attributes_showNameTag_Tooltip">
       <Polish>Czy nametag jednostki ma być wyświetlany. Ta opcja dotyczy tylko AI, nametag dla graczy jest zawsze włączony.</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Attributes_rank">
+    <Key ID="STR_A4ES_NameTags_Attributes_rank">
       <Polish>Ranga</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Attributes_rank_Tooltip">
+    <Key ID="STR_A4ES_NameTags_Attributes_rank_Tooltip">
       <Polish>Ranga jednostki wyświetlana w nametagu.</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Attributes_rankName">
+    <Key ID="STR_A4ES_NameTags_Attributes_rankName">
       <Polish>Customowa ranga: nazwa</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Attributes_rankName_Tooltip">
+    <Key ID="STR_A4ES_NameTags_Attributes_rankName_Tooltip">
       <Polish>Nazwa customowej rangi.\n\nNadpisuje gotowe rangi wybierane z listy (oraz armowe).</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Attributes_rankIcon">
+    <Key ID="STR_A4ES_NameTags_Attributes_rankIcon">
       <Polish>Customowa ranga: ikona</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Attributes_rankIcon_Tooltip">
+    <Key ID="STR_A4ES_NameTags_Attributes_rankIcon_Tooltip">
       <Polish>Ikona customowej rangi np. data\rank.paa dla ikony rangi w folderze misji folderMisji\data\rank.paa.\n\nNadpisuje gotowe rangi wybierane z listy (oraz armowe).</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Attributes_specialIcon">
+    <Key ID="STR_A4ES_NameTags_Attributes_specialIcon">
       <Polish>Ikona specjalna</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Attributes_specialIcon_Tooltip">
+    <Key ID="STR_A4ES_NameTags_Attributes_specialIcon_Tooltip">
       <Polish>Ikona specjalna, nadpisuje ikonę rangi, wyświetla się również w 3D nad głową jednostki, np. data\icon.paa dla ikony w folderze misji folderMisji\data\icon.paa.</Polish>
     </Key>
   </Package>
   <Package name="NameTags_RankCategory">
-    <Key ID="STR_A3CS_NameTags_RankCategory_Default">
+    <Key ID="STR_A4ES_NameTags_RankCategory_Default">
       <Polish>Domyślna</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_RankCategory_PL">
+    <Key ID="STR_A4ES_NameTags_RankCategory_PL">
       <Polish>Polskie Siły Zbrojne</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_RankCategory_POL">
+    <Key ID="STR_A4ES_NameTags_RankCategory_POL">
       <Polish></Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_RankCategory_RU">
+    <Key ID="STR_A4ES_NameTags_RankCategory_RU">
       <Polish>Rosyjskie Siły Zbrojne</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_RankCategory_CDF">
+    <Key ID="STR_A4ES_NameTags_RankCategory_CDF">
       <Polish>Siły Obrony Czernorusi</Polish>
     </Key>
   </Package>
   <Package name="NameTags_Ranks">
-    <Key ID="STR_A3CS_NameTags_Ranks_Sierzant">
+    <Key ID="STR_A4ES_NameTags_Ranks_Sierzant">
       <Polish>Sierżant</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_Ml_Sierzant">
+    <Key ID="STR_A4ES_NameTags_Ranks_Ml_Sierzant">
       <Polish>Mł. Sierżant</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_St_Sierzant">
+    <Key ID="STR_A4ES_NameTags_Ranks_St_Sierzant">
       <Polish>St. Sierżant</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_Ml_Chorazy">
+    <Key ID="STR_A4ES_NameTags_Ranks_Ml_Chorazy">
       <Polish>Mł. Chorąży</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_Ml_Kapral">
+    <Key ID="STR_A4ES_NameTags_Ranks_Ml_Kapral">
       <Polish>Mł. Kapral</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_Chorazy">
+    <Key ID="STR_A4ES_NameTags_Ranks_Chorazy">
       <Polish>Chorąży</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_Chorazy_Sztabowy">
+    <Key ID="STR_A4ES_NameTags_Ranks_Chorazy_Sztabowy">
       <Polish>Chorąży Sztabowy</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_St_Chorazy">
+    <Key ID="STR_A4ES_NameTags_Ranks_St_Chorazy">
       <Polish>St. Chorąży</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_Podpulkownik">
+    <Key ID="STR_A4ES_NameTags_Ranks_Podpulkownik">
       <Polish>Podpułkownik</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_Pulkownik">
+    <Key ID="STR_A4ES_NameTags_Ranks_Pulkownik">
       <Polish>Pułkownik</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_General_Brygady">
+    <Key ID="STR_A4ES_NameTags_Ranks_General_Brygady">
       <Polish>Generał brygady</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_General_Dywizji">
+    <Key ID="STR_A4ES_NameTags_Ranks_General_Dywizji">
       <Polish>Generał dywizji</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_General_Broni">
+    <Key ID="STR_A4ES_NameTags_Ranks_General_Broni">
       <Polish>Generał broni</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_General">
+    <Key ID="STR_A4ES_NameTags_Ranks_General">
       <Polish>Generał</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_Marszalek">
+    <Key ID="STR_A4ES_NameTags_Ranks_Marszalek">
       <Polish>Marszałek</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_Ml_Aspirant">
+    <Key ID="STR_A4ES_NameTags_Ranks_Ml_Aspirant">
       <Polish>Mł. Aspirant</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_Ml_Inspektor">
+    <Key ID="STR_A4ES_NameTags_Ranks_Ml_Inspektor">
       <Polish>Mł. Inspektor</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_St_Sierzant_Sztabowy">
+    <Key ID="STR_A4ES_NameTags_Ranks_St_Sierzant_Sztabowy">
       <Polish>St. Sierżant Sztabowy</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_Admiral">
+    <Key ID="STR_A4ES_NameTags_Ranks_Admiral">
       <Polish>Admirał</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_Ml_Podporucznik">
+    <Key ID="STR_A4ES_NameTags_Ranks_Ml_Podporucznik">
       <Polish>Mł. Podporucznik</Polish>
     </Key>
-    <Key ID="STR_A3CS_NameTags_Ranks_Sierzant_Technik">
+    <Key ID="STR_A4ES_NameTags_Ranks_Sierzant_Technik">
       <Polish>Sierżant - Technik</Polish>
     </Key>
 

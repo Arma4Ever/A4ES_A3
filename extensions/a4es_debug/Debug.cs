@@ -9,9 +9,9 @@ using System.IO;
 using RGiesecke.DllExport;
 using System.Net.Http;
 
-namespace a3cs_debug
+namespace a4es_debug
 {
-    class A3CSDebugExtension
+    class A4ESDebugExtension
     {
 
         public static ExtensionCallback callback;
@@ -42,7 +42,7 @@ namespace a3cs_debug
 #endif
         public static void RvExtensionVersion(StringBuilder output, int outputSize)
         {
-            output.Append("A3CS Debug Extension v1.0.0");
+            output.Append("A4ES Debug Extension v1.0.0");
         }
 
 #if WIN64
@@ -275,7 +275,7 @@ namespace a3cs_debug
             // Notify arma about new logs
             if (logsCount > 0)
             {
-                callback?.Invoke("a3cs_debug", "logsListUpdated", "" + logsCount);
+                callback?.Invoke("a4es_debug", "logsListUpdated", "" + logsCount);
             }
         }
     }

@@ -57,13 +57,13 @@ if (_bloodPressureHigh > 20) then {
 [QEGVAR(common,displayTextStructured), [[_bloodPressureOutput, _patient call EFUNC(common,getName), round _bloodPressureHigh, round _bloodPressureLow], 1.75, _medic], _medic] call CBA_fnc_targetEvent;
 
 // Send server log if medic is player
-if !(_medic getVariable ["a3cs_common_isPlayer", false]) exitWith {};
+if !(_medic getVariable ["a4es_common_isPlayer", false]) exitWith {};
 if (_medic isEqualTo _patient) then {
-  ["a3csserver_events_userCheckBPSelf", [_medic, _bodyPart, format ["%1/%2", round _bloodPressureHigh, round _bloodPressureLow]]] call CBA_fnc_serverEvent;
+  ["a4esserver_events_userCheckBPSelf", [_medic, _bodyPart, format ["%1/%2", round _bloodPressureHigh, round _bloodPressureLow]]] call CBA_fnc_serverEvent;
 } else {
-  if (_patient getVariable ["a3cs_common_isPlayer", false]) then {
-    ["a3csserver_events_userCheckBP", [_medic, _patient, _bodyPart, format ["%1/%2", round _bloodPressureHigh, round _bloodPressureLow]]] call CBA_fnc_serverEvent;
+  if (_patient getVariable ["a4es_common_isPlayer", false]) then {
+    ["a4esserver_events_userCheckBP", [_medic, _patient, _bodyPart, format ["%1/%2", round _bloodPressureHigh, round _bloodPressureLow]]] call CBA_fnc_serverEvent;
   } else {
-    ["a3csserver_events_userCheckBPAI", [_medic, _bodyPart, format ["%1/%2", round _bloodPressureHigh, round _bloodPressureLow]]] call CBA_fnc_serverEvent;
+    ["a4esserver_events_userCheckBPAI", [_medic, _bodyPart, format ["%1/%2", round _bloodPressureHigh, round _bloodPressureLow]]] call CBA_fnc_serverEvent;
   };
 };

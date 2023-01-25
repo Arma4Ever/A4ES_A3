@@ -23,7 +23,7 @@ class Extended_InitPost_EventHandlers {
             serverInit = QUOTE(_this call FUNC(initVehicle));
         };
     };
-    class a3cs_mobileArtilleryRadar {
+    class a4es_mobileArtilleryRadar {
         class GVAR(initRadarObject) {
             serverInit = QUOTE(_this call FUNC(initRadarObject));
         };

@@ -5,7 +5,7 @@ if (!hasInterface) exitWith {};
 
 // Add takedown keybind
 [
-  "A3CS Stealth", QGVAR(takedown),
+  "A4ES Stealth", QGVAR(takedown),
   [
     LLSTRING(Takedown),
     LLSTRING(Takedown_Tooltip)

@@ -1,76 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
     <Package name="Gamemodes">
-      <Key ID="STR_A3CS_Gamemodes_Coop_name">
+      <Key ID="STR_A4ES_Gamemodes_Coop_name">
         <Polish>Coop</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_Coop_shortcut">
+      <Key ID="STR_A4ES_Gamemodes_Coop_shortcut">
         <Polish>Coop</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_Coop_description">
+      <Key ID="STR_A4ES_Gamemodes_Coop_description">
         <Polish>Standardowa kooperacja, gracze vs AI.</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_CoopRespawn_name">
+      <Key ID="STR_A4ES_Gamemodes_CoopRespawn_name">
         <Polish>Coop + Respawn</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_CoopRespawn_shortcut">
+      <Key ID="STR_A4ES_Gamemodes_CoopRespawn_shortcut">
         <Polish>Coop + Respawn</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_CoopRespawn_description">
+      <Key ID="STR_A4ES_Gamemodes_CoopRespawn_description">
         <Polish>Standardowa kooperacja, gracze vs AI z możliwością respawnu.</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_TvT_name">
+      <Key ID="STR_A4ES_Gamemodes_TvT_name">
         <Polish>Team vs Team</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_TvT_shortcut">
+      <Key ID="STR_A4ES_Gamemodes_TvT_shortcut">
         <Polish>TvT</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_TvT_description">
+      <Key ID="STR_A4ES_Gamemodes_TvT_description">
         <Polish>Gracze vs graczem, każda ze stron/drużyn posiada własne cele/zadania.</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_TvTRespawn_name">
+      <Key ID="STR_A4ES_Gamemodes_TvTRespawn_name">
         <Polish>Team vs Team + Respawn</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_TvTRespawn_shortcut">
+      <Key ID="STR_A4ES_Gamemodes_TvTRespawn_shortcut">
         <Polish>TvT + Respawn</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_TvTRespawn_description">
+      <Key ID="STR_A4ES_Gamemodes_TvTRespawn_description">
         <Polish>Gracze vs gracze z możliwością respawnu, każda ze stron/drużyn posiada własne cele/zadania.</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_Custom_name">
+      <Key ID="STR_A4ES_Gamemodes_Custom_name">
         <Polish>Niestandardowy</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_Custom_shortcut">
+      <Key ID="STR_A4ES_Gamemodes_Custom_shortcut">
         <Polish>Niestandardowy</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_Custom_description">
+      <Key ID="STR_A4ES_Gamemodes_Custom_description">
         <Polish>Własny tryb.</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_Rules_PvE">
+      <Key ID="STR_A4ES_Gamemodes_Rules_PvE">
         <Polish>Gracze vs AI</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_Rules_TvT">
+      <Key ID="STR_A4ES_Gamemodes_Rules_TvT">
         <Polish>Gracze vs gracze</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_Rules_OneLife">
+      <Key ID="STR_A4ES_Gamemodes_Rules_OneLife">
         <Polish>Jeden gracz - jedno życie</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_Rules_CanHaveRespawn">
+      <Key ID="STR_A4ES_Gamemodes_Rules_CanHaveRespawn">
         <Polish>Możliwy respawn po śmierci</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_Rules_CanHaveZeus">
+      <Key ID="STR_A4ES_Gamemodes_Rules_CanHaveZeus">
         <Polish>Może zawierać sloty zeusa</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_Rules_CanBeOfficial">
+      <Key ID="STR_A4ES_Gamemodes_Rules_CanBeOfficial">
         <Polish>Może być misją oficjalną</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_Rules_CanHaveExtraAI">
+      <Key ID="STR_A4ES_Gamemodes_Rules_CanHaveExtraAI">
         <Polish>Może zawierać AI jako dodatkowe urudnienie lub urozmaicenie rozgrywki</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_Limit_NotOfficial">
+      <Key ID="STR_A4ES_Gamemodes_Limit_NotOfficial">
         <Polish>Nie może być misją oficjalną</Polish>
       </Key>
-      <Key ID="STR_A3CS_Gamemodes_Warning_InfoOnly">
+      <Key ID="STR_A4ES_Gamemodes_Warning_InfoOnly">
         <Polish>Pamiętaj, że ustawienie trybu gry ma charakter czysto informacyjny. Wciąż musisz dostosować misję do danego trybu, włączyć respawn itp.</Polish>
       </Key>
     </Package>

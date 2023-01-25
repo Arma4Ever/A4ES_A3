@@ -8,12 +8,12 @@ class CfgPatches {
             QGVAR(painkillersItem)
         };
         weapons[] = {
-            "A3CS_dressingSet",
-            "A3CS_painkillers"
+            "A4ES_dressingSet",
+            "A4ES_painkillers"
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "a3cs_common",
+            "a4es_common",
             "ace_arsenal",
             "ace_interaction",
             "ace_medical",

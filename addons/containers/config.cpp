@@ -33,7 +33,7 @@ class CfgPatches {
 
 class CfgEditorCategories {
     class GVAR(edCat) {
-        displayName = "A3CS Kontenery";
+        displayName = "A4ES Kontenery";
     };
 };
 

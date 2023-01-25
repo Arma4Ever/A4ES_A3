@@ -23,10 +23,10 @@
 
   Przykład:
       // Zakłóca radar i listę członków drużyny wszystkim graczom na serwerze globalnie
-      [playableUnits] call A3CS_fnc_jamSquadRadar;
+      [playableUnits] call A4ES_fnc_jamSquadRadar;
 
       // Zakłóca radar i listę członków drużyny lokalnie (np. część initu misji lub triggera)
-      [[player], true, true, true, false] call A3CS_fnc_jamSquadRadar;
+      [[player], true, true, true, false] call A4ES_fnc_jamSquadRadar;
 ***/
 
 params [

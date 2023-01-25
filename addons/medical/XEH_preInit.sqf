@@ -13,7 +13,7 @@ GVAR(medicalArsenalButton) = [
     "ACE_bloodIV", "ACE_bloodIV_500", "ACE_bloodIV_250",
     "ACE_salineIV", "ACE_salineIV_500", "ACE_salineIV_250",
     "ACE_personalAidKit", "ACE_surgicalKit", "ACE_bodyBag",
-    "A3CS_dressingSet", "A3CS_painkillers", "A3CS_emptyBloodBag"
+    "A4ES_dressingSet", "A4ES_painkillers", "A4ES_emptyBloodBag"
   ],
   LLSTRING(Medications),
   "\z\ace\addons\medical_gui\data\categories\medication.paa"

@@ -10,7 +10,7 @@ ADDON = false;
 
   // Log event
   if (isServer) then {
-    ["a3csserver_events_curModCreat", 0] call CBA_fnc_localEvent;
+    ["a4esserver_events_curModCreat", 0] call CBA_fnc_localEvent;
   };
 
   _curator addEventHandler ["CuratorObjectPlaced", {

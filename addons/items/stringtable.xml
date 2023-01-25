@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="Items">
-    <Key ID="STR_A3CS_Items_placeableItems">
+    <Key ID="STR_A4ES_Items_placeableItems">
       <English>Placeable items</English>
       <Polish>Rozkładane itemy</Polish>
     </Key>
-    <Key ID="STR_A3CS_Items_roleplayItems">
+    <Key ID="STR_A4ES_Items_roleplayItems">
       <English>Role-play items</English>
       <Polish>Itemy role-playowe</Polish>
     </Key>

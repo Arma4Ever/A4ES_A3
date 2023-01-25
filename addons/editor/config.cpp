@@ -7,8 +7,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "a3cs_common",
+            "a4es_common",
             "ace_arsenal",
+            "cba_ui",
             "Eden_Extended_Objects",
             "A3_Ui_F",
             "A3_3DEN",

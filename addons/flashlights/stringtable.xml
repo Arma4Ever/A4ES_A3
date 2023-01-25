@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="Flashlights">
-    <Key ID="STR_A3CS_Flashlights_MX991_Description">
+    <Key ID="STR_A4ES_Flashlights_MX991_Description">
         <Polish>Latarka z czerwonym filtrem. Używana do podświetlania mapy lub podczepiania do munduru.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Flashlights_KSF1_Description">
+    <Key ID="STR_A4ES_Flashlights_KSF1_Description">
         <Polish>Latarka z czerwonym filtrem. Używana do podświetlania mapy lub podczepiania do munduru.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Flashlights_XL50_Description">
+    <Key ID="STR_A4ES_Flashlights_XL50_Description">
         <Polish>Mini latarka. Światło białe. Używana do podświetlania mapy lub podczepiania do munduru.</Polish>
     </Key>
   </Package>

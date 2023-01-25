@@ -1,4 +1,4 @@
-// CBA Settings [ADDON: a3cs_squadradar]:
+// CBA Settings [ADDON: a4es_squadradar]:
 
 [
     QGVAR(enable), "CHECKBOX",

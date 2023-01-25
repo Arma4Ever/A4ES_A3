@@ -1,4 +1,4 @@
-// CBA Settings [ADDON: a3cs_nametags]:
+// CBA Settings [ADDON: a4es_nametags]:
 
 [
     QGVAR(show2DNameTag), "CHECKBOX",

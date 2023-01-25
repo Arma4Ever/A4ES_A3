@@ -28,7 +28,7 @@ if (
   || {(GET_OPEN_WOUNDS(_patient) findIf {(_x # 2) > 0}) != -1}
   || {1 in (GET_FRACTURES(_patient))}
   || {
-    !(_medic call a3cs_medical_fnc_isInDressingSetRange) ||
+    !(_medic call a4es_medical_fnc_isInDressingSetRange) ||
     {[_patient] call ace_medical_treatment_fnc_isInMedicalFacility} ||
     {[_patient] call ace_medical_treatment_fnc_isInMedicalVehicle}
   }

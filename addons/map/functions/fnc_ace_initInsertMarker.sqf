@@ -358,6 +358,6 @@
   _aceScaleSlider ctrlAddEventHandler ["MouseButtonUp", {_this call FUNC(onSliderMouseButtonUpScale)}];
 
 
-  [_display, _posX, _posY, _posW, _posH, [ACE_player] call FUNC(canTimestamp)] call a3cs_map_fnc_initInsertMarker;
+  [_display, _posX, _posY, _posW, _posH, [ACE_player] call FUNC(canTimestamp)] call a4es_map_fnc_initInsertMarker;
 
 }, _this] call CBA_fnc_execNextFrame;

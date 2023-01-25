@@ -1,5 +1,11 @@
 
-#define A3CS_MANUAL_AMMO_CFG manualControl = 1; \
+/****
+
+WIP: SzwedzikPL
+
+****/
+
+#define A4ES_MANUAL_AMMO_CFG manualControl = 1; \
 maxControlRange = 20000; \
 missileManualControlCone = 360; \
 missileKeepLockedCone = 360; \
@@ -17,20 +23,10 @@ class CfgAmmo {
     class ammo_Bomb_LaserGuidedBase;
     class Bo_GBU12_LGB: ammo_Bomb_LaserGuidedBase {};
     class GVAR(manual_Bo_GBU12_LGB): Bo_GBU12_LGB {
-        A3CS_MANUAL_AMMO_CFG;
+        A4ES_MANUAL_AMMO_CFG;
     };
-
-
-
-
-
-
+    
 ammo_Missile_KH58
-
-
-
-
-
 
     Bomb_03_F
     Bomb_04_F
@@ -81,16 +77,10 @@ private _ammo = "getNumber (_x >> 'missileKeepLockedCone') > 0" configClasses (c
     diag_log (configName _x);
 } forEach _ammo;
 
-
-
-
 private _missile = createVehicle ["Missile_AGM_01_F", getPos spwn, [], 0, "CAN_COLLIDE"];
 _missile setDir (getDir spwn);
 t2 setVehicleTiPars [1,1,1];
 _missile spawn {sleep 0.1;_this setMissileTarget t2;};
-
-
-
 
 getPos spwn
 getDir spwn

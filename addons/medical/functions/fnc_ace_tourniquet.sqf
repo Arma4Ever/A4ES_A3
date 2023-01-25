@@ -33,13 +33,13 @@ if ([_patient, _bodyPart] call FUNC(hasTourniquetAppliedTo)) exitWith {
 [QGVAR(tourniquetLocal), [_patient, _bodyPart], _patient] call CBA_fnc_targetEvent;
 
 // Send server log if medic is player
-if !(_medic getVariable ["a3cs_common_isPlayer", false]) exitWith {};
+if !(_medic getVariable ["a4es_common_isPlayer", false]) exitWith {};
 if (_medic isEqualTo _patient) then {
-  ["a3csserver_events_userSetTourSelf", [_medic, _bodyPart]] call CBA_fnc_serverEvent;
+  ["a4esserver_events_userSetTourSelf", [_medic, _bodyPart]] call CBA_fnc_serverEvent;
 } else {
-  if (_patient getVariable ["a3cs_common_isPlayer", false]) then {
-    ["a3csserver_events_userSetTour", [_medic, _patient, _bodyPart]] call CBA_fnc_serverEvent;
+  if (_patient getVariable ["a4es_common_isPlayer", false]) then {
+    ["a4esserver_events_userSetTour", [_medic, _patient, _bodyPart]] call CBA_fnc_serverEvent;
   } else {
-    ["a3csserver_events_userSetTourAI", [_medic, _bodyPart]] call CBA_fnc_serverEvent;
+    ["a4esserver_events_userSetTourAI", [_medic, _bodyPart]] call CBA_fnc_serverEvent;
   };
 };

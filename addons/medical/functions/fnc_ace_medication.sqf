@@ -28,13 +28,13 @@ params ["_medic", "_patient", "_bodyPart", "_classname", "", "_usedItem"];
 [QGVAR(medicationLocal), [_patient, _bodyPart, _classname], _patient] call CBA_fnc_targetEvent;
 
 // Send server log if medic is player
-if !(_medic getVariable ["a3cs_common_isPlayer", false]) exitWith {};
+if !(_medic getVariable ["a4es_common_isPlayer", false]) exitWith {};
 if (_medic isEqualTo _patient) then {
-  ["a3csserver_events_userMedSelf", [_medic, _classname, _bodyPart]] call CBA_fnc_serverEvent;
+  ["a4esserver_events_userMedSelf", [_medic, _classname, _bodyPart]] call CBA_fnc_serverEvent;
 } else {
-  if (_patient getVariable ["a3cs_common_isPlayer", false]) then {
-    ["a3csserver_events_userMed", [_medic, _patient, _classname, _bodyPart]] call CBA_fnc_serverEvent;
+  if (_patient getVariable ["a4es_common_isPlayer", false]) then {
+    ["a4esserver_events_userMed", [_medic, _patient, _classname, _bodyPart]] call CBA_fnc_serverEvent;
   } else {
-    ["a3csserver_events_userMedAI", [_medic, _classname, _bodyPart]] call CBA_fnc_serverEvent;
+    ["a4esserver_events_userMedAI", [_medic, _classname, _bodyPart]] call CBA_fnc_serverEvent;
   };
 };

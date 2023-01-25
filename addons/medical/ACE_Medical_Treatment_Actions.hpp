@@ -28,18 +28,18 @@ class ACE_Medical_Treatment_Actions {
     };
 
     class Morphine;
-    class A3CS_painkillers: Morphine {
+    class A4ES_painkillers: Morphine {
         displayName = CSTRING(Painkillers_DisplayName);
         displayNameProgress = CSTRING(Painkillers_Progress);
         allowedSelections[] = {"head"};
-        items[] = {"A3CS_painkillers"};
+        items[] = {"A4ES_painkillers"};
         icon = QPATHTOF(data\painkillers_icon_ca.paa);
         condition = "";
         callbackSuccess = QUOTE(call ACEFUNC(medical_treatment,medication));
     };
 
     class Diagnose: BasicBandage {};
-    class A3CS_CheckMedications: Diagnose {
+    class A4ES_CheckMedications: Diagnose {
         displayName = CSTRING(CheckMedications_DisplayName);
         displayNameProgress = CSTRING(CheckMedications_Progress);
         allowedSelections[] = {"LeftArm", "RightArm"};
@@ -52,7 +52,7 @@ class ACE_Medical_Treatment_Actions {
         animationMedicSelfProne = "";
     };
 
-    class A3CS_checkNeurologicalInjuries: Diagnose {
+    class A4ES_checkNeurologicalInjuries: Diagnose {
         displayName = CSTRING(CheckNeurologicalInjuries_DisplayName);
         displayNameProgress = CSTRING(CheckNeurologicalInjuries_Progress);
         allowedSelections[] = {"Head"};
@@ -65,7 +65,7 @@ class ACE_Medical_Treatment_Actions {
         animationMedicSelfProne = "";
     };
 
-    class A3CS_CheckDogtag: CheckPulse {
+    class A4ES_CheckDogtag: CheckPulse {
         displayName = CSTRING(CheckDogtag_DisplayName);
         displayNameProgress = CSTRING(CheckDogtag_Progress);
         treatmentTime = 2;
@@ -77,7 +77,7 @@ class ACE_Medical_Treatment_Actions {
         animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
         animationPatientUnconsciousExcludeOn[] = {"ainjppnemstpsnonwrfldnon"};
     };
-    class A3CS_DrawBlood500: CheckPulse {
+    class A4ES_DrawBlood500: CheckPulse {
         displayName = CSTRING(DrawBlood500_DisplayName);
         displayNameProgress = CSTRING(DrawBlood_Progress);
         treatmentTime = 30;
@@ -91,12 +91,12 @@ class ACE_Medical_Treatment_Actions {
         callbackFailure = QUOTE([ARR_3(_medic,_patient,500)] call FUNC(drawBloodFailure));
         callbackSuccess = QUOTE([ARR_3(_medic,_patient,500)] call FUNC(drawBloodSuccess));
         condition = QUOTE([ARR_3(_medic, _patient,500)] call FUNC(canDrawBlood));
-        items[] = {"A3CS_emptyBloodBag"};
+        items[] = {"A4ES_emptyBloodBag"};
         animationPatient = "";
         animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
         animationPatientUnconsciousExcludeOn[] = {"ainjppnemstpsnonwrfldnon"};
     };
-    class A3CS_DrawBlood250: CheckPulse {
+    class A4ES_DrawBlood250: CheckPulse {
         displayName = CSTRING(DrawBlood250_DisplayName);
         displayNameProgress = CSTRING(DrawBlood_Progress);
         treatmentTime = 15;
@@ -110,7 +110,7 @@ class ACE_Medical_Treatment_Actions {
         callbackFailure = QUOTE([ARR_3(_medic,_patient,250)] call FUNC(drawBloodFailure));
         callbackSuccess = QUOTE([ARR_3(_medic,_patient,250)] call FUNC(drawBloodSuccess));
         condition = QUOTE([ARR_3(_medic, _patient,250)] call FUNC(canDrawBlood));
-        items[] = {"A3CS_emptyBloodBag"};
+        items[] = {"A4ES_emptyBloodBag"};
         animationPatient = "";
         animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
         animationPatientUnconsciousExcludeOn[] = {"ainjppnemstpsnonwrfldnon"};

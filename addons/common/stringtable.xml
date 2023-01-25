@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="Common">
-    <Key ID="STR_A3CS_Common_Yes">
+    <Key ID="STR_A4ES_Common_Yes">
       <English>Yes</English>
       <Polish>Tak</Polish>
     </Key>
-    <Key ID="STR_A3CS_Common_No">
+    <Key ID="STR_A4ES_Common_No">
       <English>No</English>
       <Polish>Nie</Polish>
     </Key>
-    <Key ID="STR_A3CS_Common_True">
+    <Key ID="STR_A4ES_Common_True">
       <English>True</English>
       <Polish>Prawda</Polish>
     </Key>
-    <Key ID="STR_A3CS_Common_False">
+    <Key ID="STR_A4ES_Common_False">
       <English>False</English>
       <Polish>Fałsz</Polish>
     </Key>
-    <Key ID="STR_A3CS_Common_None">
+    <Key ID="STR_A4ES_Common_None">
       <English>None</English>
       <Polish>Brak</Polish>
     </Key>
-    <Key ID="STR_A3CS_Common_NoName">
+    <Key ID="STR_A4ES_Common_NoName">
       <English>No name</English>
       <Polish>Imię nieznane</Polish>
     </Key>
-    <Key ID="STR_A3CS_Common_Close">
+    <Key ID="STR_A4ES_Common_Close">
       <English>Close</English>
       <Polish>Zamknij</Polish>
     </Key>
-    <Key ID="STR_A3CS_Common_Add">
+    <Key ID="STR_A4ES_Common_Add">
       <English>Add</English>
       <Polish>Dodaj</Polish>
     </Key>
-    <Key ID="STR_A3CS_Common_Remove">
+    <Key ID="STR_A4ES_Common_Remove">
       <English>Remove</English>
       <Polish>Usuń</Polish>
     </Key>
-    <Key ID="STR_A3CS_Common_Rank">
+    <Key ID="STR_A4ES_Common_Rank">
       <English>Rank</English>
       <Polish>Ranga</Polish>
     </Key>
-    <Key ID="STR_A3CS_Common_Traits">
+    <Key ID="STR_A4ES_Common_Traits">
       <English>Traits</English>
       <Polish>Uprawnienia</Polish>
     </Key>
-    <Key ID="STR_A3CS_Common_Medic">
+    <Key ID="STR_A4ES_Common_Medic">
       <English>Medic</English>
       <Polish>Medyk</Polish>
     </Key>
-    <Key ID="STR_A3CS_Common_Doctor">
+    <Key ID="STR_A4ES_Common_Doctor">
       <English>Doctor</English>
       <Polish>Doktor</Polish>
     </Key>
-    <Key ID="STR_A3CS_Common_Engineer">
+    <Key ID="STR_A4ES_Common_Engineer">
       <English>Engineer</English>
       <Polish>Inżynier</Polish>
     </Key>
-    <Key ID="STR_A3CS_Common_AdvEngineer">
+    <Key ID="STR_A4ES_Common_AdvEngineer">
       <English>Advanced engineer</English>
       <Polish>Zaawansowany inżynier</Polish>
     </Key>
-    <Key ID="STR_A3CS_Common_EOD">
+    <Key ID="STR_A4ES_Common_EOD">
       <English>EOD</English>
       <Polish>Saper</Polish>
     </Key>

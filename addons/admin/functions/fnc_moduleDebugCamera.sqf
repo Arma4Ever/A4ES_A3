@@ -8,7 +8,7 @@ private _access = "debugcamera" call FUNC(canAccessPanelModule);
 if (!_access) exitWith {hint localize LSTRING(NoAccess);};
 
 disableSerialization;
-private _display = uiNamespace getVariable ["A3CS_adminPanel", displayNull];
+private _display = uiNamespace getVariable ["A4ES_adminPanel", displayNull];
 if (isNull _display) exitWith {[_this select 1] call CBA_fnc_removePerFrameHandler;};
 
 private _actionConfig = (configFile >> QGVAR(modules) >> "debugcamera");

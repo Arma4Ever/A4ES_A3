@@ -50,7 +50,7 @@ if (_medic == _patient) then {
 if ([_medic] call FUNC(isMedic)) then {
   _bandageTime = _bandageTime * 0.5;
 
-  if (_medic call a3cs_medical_fnc_isInDressingSetRange) then {
+  if (_medic call a4es_medical_fnc_isInDressingSetRange) then {
     _bandageTime = _bandageTime * 0.7;
   };
 };

@@ -21,7 +21,7 @@ player addEventHandler ["FiredMan", {
 
   if (_weapon == "Throw") then {
     GVAR(grenades) = GVAR(grenades) + 1;
-    ["a3csserver_events_userGrenThrow", [player, _ammo]] call CBA_fnc_serverEvent;
+    ["a4esserver_events_userGrenThrow", [player, _ammo]] call CBA_fnc_serverEvent;
   } else {
     private _shots = GVAR(shots);
     if (_weapon in _shots) then {
@@ -36,14 +36,19 @@ player addEventHandler ["FiredMan", {
   params ["_unit", "", "", "", "_ammo"];
   if (_unit isNotEqualTo player) exitWith {};
   GVAR(grenades) = GVAR(grenades) + 1;
-  ["a3csserver_events_userGrenThrow", [player, _ammo]] call CBA_fnc_serverEvent;
+  ["a4esserver_events_userGrenThrow", [player, _ammo]] call CBA_fnc_serverEvent;
 }] call CBA_fnc_addEventHandler;
 
-///!!!!!!!!!!!!!! DO POPRAWKI NA NOWYM ACE - wyszukać woundReceived
 ["ace_medical_woundReceived", {
-  params ["_unit", "", "_damage"];
+  params ["_unit", "_damages"];
   if (_unit != player) exitWith {};
   GVAR(woundsReceived) = GVAR(woundsReceived) + 1;
+
+  private _damage = 0;
+  {
+      _damage = _damage + ((_x # 0) max (_x # 2));
+  } forEach _damages;
+
   GVAR(damageReceived) = GVAR(damageReceived) + _damage;
 }] call CBA_fnc_addEventHandler;
 
@@ -78,7 +83,7 @@ player addEventHandler ["FiredMan", {
 // Add server updates PFH
 [{
   [
-    "a3csserver_stats_updatePlayer",
+    "a4esserver_stats_updatePlayer",
     [
       getPlayerID player,
       getPlayerUID player,

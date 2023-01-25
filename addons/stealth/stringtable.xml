@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="Stealth">
-    <Key ID="STR_A3CS_Stealth_Takedown">
+    <Key ID="STR_A4ES_Stealth_Takedown">
       <English>Silent takedown</English>
       <Polish>Ciche zabójstwo</Polish>
     </Key>
-    <Key ID="STR_A3CS_Stealth_Takedown_Tooltip">
+    <Key ID="STR_A4ES_Stealth_Takedown_Tooltip">
       <English>Silently kills unit under cursor</English>
       <Polish>Zabija po cichu jednostkę pod kursorem</Polish>
     </Key>

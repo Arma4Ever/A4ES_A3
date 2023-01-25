@@ -28,20 +28,20 @@ if ((random 1) < _successChance) then {
     [QEGVAR(medical,CPRSucceeded), _patient] call CBA_fnc_localEvent;
 
     // Send server log if medic is player
-    if !(_medic getVariable ["a3cs_common_isPlayer", false]) exitWith {};
-    if (_patient getVariable ["a3cs_common_isPlayer", false]) then {
-      ["a3csserver_events_userCPR", [_medic, _patient, "true"]] call CBA_fnc_serverEvent;
+    if !(_medic getVariable ["a4es_common_isPlayer", false]) exitWith {};
+    if (_patient getVariable ["a4es_common_isPlayer", false]) then {
+      ["a4esserver_events_userCPR", [_medic, _patient, "true"]] call CBA_fnc_serverEvent;
     } else {
-      ["a3csserver_events_userCPRAI", [_medic, "true"]] call CBA_fnc_serverEvent;
+      ["a4esserver_events_userCPRAI", [_medic, "true"]] call CBA_fnc_serverEvent;
     };
 } else {
     TRACE_2("CPR random fail",_bloodVolume,_successChance);
 
     // Send server log if medic is player
-    if !(_medic getVariable ["a3cs_common_isPlayer", false]) exitWith {};
-    if (_patient getVariable ["a3cs_common_isPlayer", false]) then {
-      ["a3csserver_events_userCPR", [_medic, _patient, "false"]] call CBA_fnc_serverEvent;
+    if !(_medic getVariable ["a4es_common_isPlayer", false]) exitWith {};
+    if (_patient getVariable ["a4es_common_isPlayer", false]) then {
+      ["a4esserver_events_userCPR", [_medic, _patient, "false"]] call CBA_fnc_serverEvent;
     } else {
-      ["a3csserver_events_userCPRAI", [_medic, "false"]] call CBA_fnc_serverEvent;
+      ["a4esserver_events_userCPRAI", [_medic, "false"]] call CBA_fnc_serverEvent;
     };
 };

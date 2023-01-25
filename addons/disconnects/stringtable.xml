@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="Disconnects">
-    <Key ID="STR_A3CS_Disconnects_Prepare">
+    <Key ID="STR_A4ES_Disconnects_Prepare">
       <Polish>Przygotuj się!</Polish>
     </Key>
-    <Key ID="STR_A3CS_Disconnects_UnlockTimeInfo">
+    <Key ID="STR_A4ES_Disconnects_UnlockTimeInfo">
       <Polish>Twoja postać zostanie odblokowana za:</Polish>
     </Key>
   </Package>

@@ -3,10 +3,10 @@
  * Updates admin panel mission data
  */
 #include "script_component.hpp"
-#include "\z\a3cs\addons\admin\ui\idcAdminPanel.hpp"
+#include "\z\a4es\addons\admin\ui\idcAdminPanel.hpp"
 
 disableSerialization;
-private _display = uiNamespace getVariable ["A3CS_adminPanel", displayNull];
+private _display = uiNamespace getVariable ["A4ES_adminPanel", displayNull];
 if (isNull _display) exitWith {[_this select 1] call CBA_fnc_removePerFrameHandler;};
 
 private _controlList = (_display displayCtrl IDC_ADMINPANEL_MISSIONDATATEXT);

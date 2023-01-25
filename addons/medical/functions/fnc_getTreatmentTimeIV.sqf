@@ -11,7 +11,7 @@ private _time = ace_medical_treatment_treatmentTimeIV;
 if ([_medic] call ACEFUNC(medical_treatment,isMedic)) then {
   _time = _time * 0.5;
 
-  if (_medic call a3cs_medical_fnc_isInDressingSetRange) then {
+  if (_medic call a4es_medical_fnc_isInDressingSetRange) then {
     _time = _time * 0.5;
   };
 };

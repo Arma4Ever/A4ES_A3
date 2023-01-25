@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="Squads">
-    <Key ID="STR_A3CS_Squads_JoinSquad">
+    <Key ID="STR_A4ES_Squads_JoinSquad">
       <English>Join group</English>
       <Polish>Dołącz do grupy</Polish>
     </Key>
-    <Key ID="STR_A3CS_Squads_RemoveFromSquad">
+    <Key ID="STR_A4ES_Squads_RemoveFromSquad">
       <English>Remove from group</English>
       <Polish>Usuń z grupy</Polish>
     </Key>
-    <Key ID="STR_A3CS_Squads_RemoveSquadMember">
+    <Key ID="STR_A4ES_Squads_RemoveSquadMember">
       <English>Remove group member</English>
       <Polish>Usuń członka grupy</Polish>
     </Key>

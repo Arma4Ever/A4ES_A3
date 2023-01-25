@@ -37,7 +37,7 @@ if (
 };
 
 if !(_unit getVariable [QGVAR(defenderInited), false]) then {
-  ["a3cs_common_switchMove", [_unit, "amovppnemstpsraswrfldnon"]] call CBA_fnc_globalEvent;
+  ["a4es_common_switchMove", [_unit, "amovppnemstpsraswrfldnon"]] call CBA_fnc_globalEvent;
   _unit setVariable [QGVAR(defenderInited), true, true];
 };
 

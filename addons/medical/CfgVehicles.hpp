@@ -11,7 +11,7 @@ class CfgVehicles {
         author = "Alganthe";
         vehicleClass = "Items";
         class TransportItems {
-            MACRO_ADDITEM(A3CS_painkillers,1);
+            MACRO_ADDITEM(A4ES_painkillers,1);
         };
     };
 

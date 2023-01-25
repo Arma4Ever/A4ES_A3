@@ -53,11 +53,10 @@ class CfgMPGameTypes {
                 CSTRING(Rules_TvT),
                 CSTRING(Rules_OneLife),
                 CSTRING(Rules_CanHaveExtraAI),
-                CSTRING(Rules_CanHaveZeus)
+                CSTRING(Rules_CanHaveZeus),
+                CSTRING(Rules_CanBeOfficial),
             };
-            limitations[] = {
-                CSTRING(Limit_NotOfficial)
-            };
+            limitations[] = {};
             warnings[] = {};
         };
     };

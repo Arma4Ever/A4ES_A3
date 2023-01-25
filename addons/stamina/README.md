@@ -1,4 +1,4 @@
-# A3CS Stamina
+# A4ES Stamina
 Tweak vanilla stamina config.
 
 ### Changes

@@ -8,7 +8,7 @@ if (_medications isEqualTo []) exitWith {
   hint format [
     "%1<br /><br />%2",
     [_patient] call ace_common_fnc_getName,
-    localize "STR_A3CS_Medical_CheckMedications_None"
+    localize "STR_A4ES_Medical_CheckMedications_None"
   ];
 };
 
@@ -27,14 +27,14 @@ if (_text == "") exitWith {
   hint format [
     "%1<br /><br />%2",
     [_patient] call ace_common_fnc_getName,
-    localize "STR_A3CS_Medical_CheckMedications_None"
+    localize "STR_A4ES_Medical_CheckMedications_None"
   ];
 };
 
 _text = (format [
   "%1<br /><br />%2<br /><br />",
   [_patient] call ace_common_fnc_getName,
-  localize "STR_A3CS_Medical_CheckMedications_Result"
+  localize "STR_A4ES_Medical_CheckMedications_Result"
 ]) + _text;
 
 hint parseText _text;

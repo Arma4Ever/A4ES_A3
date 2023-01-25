@@ -3,18 +3,18 @@
  * Open debug console module
  */
 #include "script_component.hpp"
-#include "\z\a3cs\addons\admin\ui\idcDebugConsole.hpp"
+#include "\z\a4es\addons\admin\ui\idcDebugConsole.hpp"
 
 private _access = "debugconsole" call FUNC(canAccessPanelModule);
 if (!_access) exitWith {hint localize LSTRING(NoAccess);};
 
 while {dialog} do {closeDialog 0;};
 
-private _dialog = createDialog "A3CS_debugConsole";
+private _dialog = createDialog "A4ES_debugConsole";
 if (!_dialog) exitWith {};
 
 disableSerialization;
-private _display = uiNamespace getVariable ["A3CS_debugConsole", displayNull];
+private _display = uiNamespace getVariable ["A4ES_debugConsole", displayNull];
 if (isNull _display) exitWith {};
 
 _display displayAddEventHandler ["Unload", {

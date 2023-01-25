@@ -1,1 +1,1 @@
-#include "\z\a3cs\addons\briefing\script_component.hpp"
+#include "\z\a4es\addons\briefing\script_component.hpp"

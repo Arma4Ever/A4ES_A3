@@ -80,7 +80,7 @@ if (!hasInterface) exitWith {};
   }, 30] call CBA_fnc_addPerFrameHandler;
 
   // Validate mission template
-  if ((getMissionConfigValue ["a3c_missionTemplate", 0]) < REQUIRED_MISSION_TEMPLATE_VERSION) then {
+  if ((getMissionConfigValue ["a4e_missionTemplate", 0]) < REQUIRED_MISSION_TEMPLATE_VERSION) then {
     0 spawn {
       sleep 3;
       diag_log text LLSTRING(WrongMissionTemplateWarning);

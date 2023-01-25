@@ -13,8 +13,8 @@
       true jeśli podana flaga ma podaną wartość, false jeśli wartość flagi jest inna lub flaga nie istnieje <BOOLEAN>
 
   Przykład:
-      private _flagaPrawdziwa = ["flag_21", true] call A3CS_fnc_isLogicFlag;
-      private _flagaFalszywa = ["flag_21", false] call A3CS_fnc_isLogicFlag;
+      private _flagaPrawdziwa = ["flag_21", true] call A4ES_fnc_isLogicFlag;
+      private _flagaFalszywa = ["flag_21", false] call A4ES_fnc_isLogicFlag;
 ***/
 
 params [["_flag", "", [""]], ["_value", false, [false]]];

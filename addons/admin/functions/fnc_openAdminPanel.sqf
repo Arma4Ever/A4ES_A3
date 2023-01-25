@@ -11,4 +11,4 @@ private _access = "adminpanel" call FUNC(canAccessPanelModule);
 if (!_access) exitWith {hint localize LSTRING(NoAccess);};
 
 "adminpanel" call FUNC(sendAdminActionLog);
-createDialog 'A3CS_adminPanel';
+createDialog 'A4ES_adminPanel';

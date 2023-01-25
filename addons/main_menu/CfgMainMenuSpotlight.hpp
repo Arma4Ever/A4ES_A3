@@ -3,7 +3,7 @@ class CfgMainMenuSpotlight {
     class GVAR(server1) {
         text = CSTRING(SpotlightJoin);
         textIsQuote = 0;
-        picture = QUOTE(\z\a3cs\addons\main\data\a3c_logo_512.paa);
+        picture = QUOTE(\z\a4es\addons\main_menu\data\a4e_join_picture.paa);
         action = QUOTE(_this call (uiNamespace getVariable QQFUNC(join)));
         actionText = CSTRING(SpotlightHeader);
         condition = QUOTE(true);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="Cameras">
-    <Key ID="STR_A3CS_Cameras_RemoteCamera_displayName">
+    <Key ID="STR_A4ES_Cameras_RemoteCamera_displayName">
       <English>Remote camera</English>
       <Polish>Zdalna kamera</Polish>
     </Key>

@@ -1,1 +1,1 @@
-#include "\z\a3cs\addons\curator\script_component.hpp"
+#include "\z\a4es\addons\curator\script_component.hpp"

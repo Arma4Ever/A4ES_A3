@@ -7,8 +7,8 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "a3cs_common",
-            "a3cs_editor",
+            "a4es_common",
+            "a4es_editor",
             "A3_Weapons_F",
             "ace_frag",
             "A3_Modules_F_Curator_Curator",

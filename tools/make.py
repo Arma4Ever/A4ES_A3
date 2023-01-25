@@ -57,7 +57,7 @@ if sys.platform == "win32":
     import winreg
 
 ######## GLOBALS #########
-project = "@a3cs"
+project = "@a4es"
 project_version = "0.0.0"
 arma3tools_path = ""
 work_drive = ""
@@ -66,14 +66,14 @@ make_root = ""
 release_dir = ""
 module_root_parent = ""
 optionals_root = ""
-key_name = "a3cs"
+key_name = "a4es"
 key = ""
 dssignfile = ""
-prefix = "a3cs"
-pbo_name_prefix = "a3cs_"
+prefix = "a4es"
+pbo_name_prefix = "a4es_"
 signature_blacklist = []
-importantFiles = ["mod.cpp", "README.md", "LICENSE", "logo_a3cs.paa", "logosmall_a3cs.paa", "picture_a3cs.paa", "version.a3c"]
-versionFiles = ["mod.cpp", "version.a3c"]
+importantFiles = ["mod.cpp", "README.md", "LICENSE", "logo_a4es.paa", "logosmall_a4es.paa", "picture_a4es.paa", "version.a4e"]
+versionFiles = ["mod.cpp", "version.a4e"]
 
 ciBuild = False # Used for CI builds
 

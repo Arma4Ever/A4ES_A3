@@ -5,7 +5,7 @@ if !(hasInterface) exitWith {};
 // Add character info
 player createDiarySubject [QGVAR(characterInfo), LLSTRING(Character)];
 
-// TODO: Add A3CS settings with info about enabled/disabled features (i.e. disabled squad radar)
+// TODO: Add A4ES settings with info about enabled/disabled features (i.e. disabled squad radar)
 // This will remove needless confusion
 
 private _rankInfo = player call EFUNC(nametags,getUnitRank);

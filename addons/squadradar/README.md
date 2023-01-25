@@ -1,9 +1,9 @@
-# A3CS Squad radar
+# A4ES Squad radar
 Adds squad radar UI.
 
 ### Changes
 - Adds map based squad radar UI.
-- Adds a3cs_squads based squad memberlist UI.
+- Adds a4es_squads based squad memberlist UI.
 
 ### Credits
 Some radar textures (data/radar) are inspired by [DUI - Squad Radar](https://github.com/diwako/diwako_dui) project.

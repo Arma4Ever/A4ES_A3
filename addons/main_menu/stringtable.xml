@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
     <Package name="Main_Menu">
-        <Key ID="STR_A3CS_Main_Menu_SpotlightHeader">
-            <English>Arma3Coop</English>
-            <Polish>Arma3Coop</Polish>
+        <Key ID="STR_A4ES_Main_Menu_SpotlightHeader">
+            <English>Arma4Ever</English>
+            <Polish>Arma4Ever</Polish>
         </Key>
-        <Key ID="STR_A3CS_Main_Menu_SpotlightJoin">
+        <Key ID="STR_A4ES_Main_Menu_SpotlightJoin">
             <English>Join</English>
             <Polish>Dołącz</Polish>
         </Key>

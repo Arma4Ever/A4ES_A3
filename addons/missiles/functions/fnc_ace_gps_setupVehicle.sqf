@@ -48,5 +48,5 @@ private _statement = {
     createDialog QGVAR(gpsAttackOptionsUI);
 };
 
-private _action = [QUOTE(ADDON), localize "STR_A3CS_missiles_GPS_ui_action", "", _statement, _condition] call EFUNC(interact_menu,createAction);
+private _action = [QUOTE(ADDON), localize "STR_A4ES_missiles_GPS_ui_action", "", _statement, _condition] call EFUNC(interact_menu,createAction);
 [_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);

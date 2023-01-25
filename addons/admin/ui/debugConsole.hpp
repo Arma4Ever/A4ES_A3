@@ -1,9 +1,9 @@
-class A3CS_debugConsole {
+class A4ES_debugConsole {
     idd = -1;
     movingEnable = 1;
     enableSimulation = 1;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2('A3CS_debugConsole', _this select 0)];);
-    onUnload = QUOTE(uiNamespace setVariable [ARR_2('A3CS_debugConsole', nil)];);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2('A4ES_debugConsole', _this select 0)];);
+    onUnload = QUOTE(uiNamespace setVariable [ARR_2('A4ES_debugConsole', nil)];);
     class controlsBackground {};
     class controls {
         class DebugConsole: RscControlsGroupNoScrollbars {

@@ -1,187 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="Admin">
-    <Key ID="STR_A3CS_Admin_DefaultEnding">
+    <Key ID="STR_A4ES_Admin_DefaultEnding">
       <Polish>Zakończenie domyślne</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_EndDefault_Title">
+    <Key ID="STR_A4ES_Admin_EndDefault_Title">
       <Polish>Misja zakończona</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_NoAccess">
+    <Key ID="STR_A4ES_Admin_NoAccess">
       <Polish>Brak dostępu</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_AdminPanel">
+    <Key ID="STR_A4ES_Admin_AdminPanel">
       <Polish>Panel admina</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_AdminPanelSP">
+    <Key ID="STR_A4ES_Admin_AdminPanelSP">
       <Polish>Panel debugowy</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_SelectLogsLabel">
+    <Key ID="STR_A4ES_Admin_SelectLogsLabel">
       <Polish>Wyświetl logi:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_MissionDataLabel">
+    <Key ID="STR_A4ES_Admin_MissionDataLabel">
       <Polish>Dane misji</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_RefreshLogs">
+    <Key ID="STR_A4ES_Admin_RefreshLogs">
       <Polish>Odśwież logi</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_NoLogs">
+    <Key ID="STR_A4ES_Admin_NoLogs">
       <Polish>Brak logów</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_LoadingLogs">
+    <Key ID="STR_A4ES_Admin_LoadingLogs">
       <Polish>Wczytywanie logów...</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_MissionData_MissionName">
+    <Key ID="STR_A4ES_Admin_MissionData_MissionName">
       <Polish>Nazwa misji:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_MissionData_MissionAuthor">
+    <Key ID="STR_A4ES_Admin_MissionData_MissionAuthor">
       <Polish>Autor:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_MissionData_MapName">
+    <Key ID="STR_A4ES_Admin_MissionData_MapName">
       <Polish>Mapa:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_MissionData_TimeElapsed">
+    <Key ID="STR_A4ES_Admin_MissionData_TimeElapsed">
       <Polish>Czas trwania:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_MissionData_Slots">
+    <Key ID="STR_A4ES_Admin_MissionData_Slots">
       <Polish>Sloty:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_MissionData_OnlineAdmins">
+    <Key ID="STR_A4ES_Admin_MissionData_OnlineAdmins">
       <Polish>Admini online:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_MissionData_ServerAdmin">
+    <Key ID="STR_A4ES_Admin_MissionData_ServerAdmin">
       <Polish>Admin serwera:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_EndMission_DisplayName">
+    <Key ID="STR_A4ES_Admin_Module_EndMission_DisplayName">
       <Polish>Zakończ misję</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_EndMission_SelectMissionEnding">
+    <Key ID="STR_A4ES_Admin_Module_EndMission_SelectMissionEnding">
       <Polish>Wybierz typ zakończenia misji</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_EndMission_EndMissionLog">
+    <Key ID="STR_A4ES_Admin_Module_EndMission_EndMissionLog">
       <Polish>Admin %1 zakonczyl misje</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_AdminMessages_DisplayName">
+    <Key ID="STR_A4ES_Admin_Module_AdminMessages_DisplayName">
       <Polish>Komunikaty</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_AdminMessages_Header">
+    <Key ID="STR_A4ES_Admin_Module_AdminMessages_Header">
       <Polish>Komunikaty administratora</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_AdminMessages_InputLabel">
+    <Key ID="STR_A4ES_Admin_Module_AdminMessages_InputLabel">
       <Polish>Treść:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_AdminMessages_SendToAdmins">
+    <Key ID="STR_A4ES_Admin_Module_AdminMessages_SendToAdmins">
       <Polish>Wyślij do adminów</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_AdminMessages_SendToAll">
+    <Key ID="STR_A4ES_Admin_Module_AdminMessages_SendToAll">
       <Polish>Wyślij do wszystkich</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_AdminMessages_MessageTitle">
+    <Key ID="STR_A4ES_Admin_Module_AdminMessages_MessageTitle">
       <Polish>Admin: %1</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugConsole_DisplayName">
+    <Key ID="STR_A4ES_Admin_Module_DebugConsole_DisplayName">
       <Polish>Konsola</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_Debug3rdPerson_Enable3rdPerson">
+    <Key ID="STR_A4ES_Admin_Module_Debug3rdPerson_Enable3rdPerson">
       <Polish>Włącz tryb 3 osoby</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_Debug3rdPerson_Disable3rdPerson">
+    <Key ID="STR_A4ES_Admin_Module_Debug3rdPerson_Disable3rdPerson">
       <Polish>Wyłącz tryb 3 osoby</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugCurator_EnableCurator">
+    <Key ID="STR_A4ES_Admin_Module_DebugCurator_EnableCurator">
       <Polish>Aktywuj zeusa</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugCurator_DisableCurator">
+    <Key ID="STR_A4ES_Admin_Module_DebugCurator_DisableCurator">
       <Polish>Wyłącz zeusa</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugCamera_EnableCamera">
+    <Key ID="STR_A4ES_Admin_Module_DebugCamera_EnableCamera">
       <Polish>Włącz kamerę</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugCamera_DisableCamera">
+    <Key ID="STR_A4ES_Admin_Module_DebugCamera_DisableCamera">
       <Polish>Wyłącz kamerę</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_DisplayName">
+    <Key ID="STR_A4ES_Admin_Module_DebugLogs_DisplayName">
       <Polish>Logi debugowe</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_ServerFPS">
+    <Key ID="STR_A4ES_Admin_Module_DebugLogs_ServerFPS">
       <Polish>FPS serwera:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_HeadlessOnline">
+    <Key ID="STR_A4ES_Admin_Module_DebugLogs_HeadlessOnline">
       <Polish>Headless Client:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalAICount">
+    <Key ID="STR_A4ES_Admin_Module_DebugLogs_TotalAICount">
       <Polish>AI:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalGroupCount">
+    <Key ID="STR_A4ES_Admin_Module_DebugLogs_TotalGroupCount">
       <Polish>Grup:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_AIOnServer">
+    <Key ID="STR_A4ES_Admin_Module_DebugLogs_AIOnServer">
       <Polish>AI na serwerze:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_AIOnHC">
+    <Key ID="STR_A4ES_Admin_Module_DebugLogs_AIOnHC">
       <Polish>AI na headlessie:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_WaypointsCount">
+    <Key ID="STR_A4ES_Admin_Module_DebugLogs_WaypointsCount">
       <Polish>Waypointów:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalVehicleCount">
+    <Key ID="STR_A4ES_Admin_Module_DebugLogs_TotalVehicleCount">
       <Polish>Pojazdów:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalTriggersCount">
+    <Key ID="STR_A4ES_Admin_Module_DebugLogs_TotalTriggersCount">
       <Polish>Triggerów:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_TotalObjectCount">
+    <Key ID="STR_A4ES_Admin_Module_DebugLogs_TotalObjectCount">
       <Polish>Obiektów:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_CuratorCount">
+    <Key ID="STR_A4ES_Admin_Module_DebugLogs_CuratorCount">
       <Polish>Mistrzów gry (zeusów):</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_SimulatedAI">
+    <Key ID="STR_A4ES_Admin_Module_DebugLogs_SimulatedAI">
       <Polish>Symulowanych AI:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_NotSimulatedAI">
+    <Key ID="STR_A4ES_Admin_Module_DebugLogs_NotSimulatedAI">
       <Polish>Niesymulowanych AI:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_SimulatedVehicles">
+    <Key ID="STR_A4ES_Admin_Module_DebugLogs_SimulatedVehicles">
       <Polish>Symulowanych pojazdów:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_DebugLogs_NotSimulatedVehicles">
+    <Key ID="STR_A4ES_Admin_Module_DebugLogs_NotSimulatedVehicles">
       <Polish>Niesymulowanych pojazdów:</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_PlayersList_DisplayName">
+    <Key ID="STR_A4ES_Admin_Module_PlayersList_DisplayName">
       <Polish>Lista graczy</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_AdminList_DisplayName">
+    <Key ID="STR_A4ES_Admin_Module_AdminList_DisplayName">
       <Polish>Lista adminów</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_AdminList_Admin">
+    <Key ID="STR_A4ES_Admin_Module_AdminList_Admin">
       <Polish>Administrator</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_AdminList_ServerAdmin">
+    <Key ID="STR_A4ES_Admin_Module_AdminList_ServerAdmin">
       <Polish>Administrator serwera</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_PlayersList_UnitDesc">
+    <Key ID="STR_A4ES_Admin_Module_PlayersList_UnitDesc">
       <Polish>Czas gry: %1 || Żywy: %2</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_ActiveScripts_DisplayName">
+    <Key ID="STR_A4ES_Admin_Module_ActiveScripts_DisplayName">
       <Polish>Aktywne skrypty</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_ActiveScriptsServer_DisplayName">
+    <Key ID="STR_A4ES_Admin_Module_ActiveScriptsServer_DisplayName">
       <Polish>Aktywne skrypty (server)</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_MissionLogs_DisplayName">
+    <Key ID="STR_A4ES_Admin_Module_MissionLogs_DisplayName">
       <Polish>Logi z misji</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_AdminLogs_DisplayName">
+    <Key ID="STR_A4ES_Admin_Module_AdminLogs_DisplayName">
       <Polish>Logi z misji (admin)</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_Module_CuratorList_DisplayName">
+    <Key ID="STR_A4ES_Admin_Module_CuratorList_DisplayName">
       <Polish>Lista zeusów</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_DebugCuratorActivated">
+    <Key ID="STR_A4ES_Admin_DebugCuratorActivated">
       <Polish>Admin %1 aktywował dostęp do zeusa.</Polish>
     </Key>
-    <Key ID="STR_A3CS_Admin_DebugCuratorDeactivated">
+    <Key ID="STR_A4ES_Admin_DebugCuratorDeactivated">
       <Polish>Admin %1 deaktywował dostęp do zeusa.</Polish>
     </Key>
   </Package>

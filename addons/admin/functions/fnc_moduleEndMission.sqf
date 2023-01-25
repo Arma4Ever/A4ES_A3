@@ -3,7 +3,7 @@
  * Toggle debug camera
  */
 #include "script_component.hpp"
-#include "\z\a3cs\addons\admin\ui\idcListBox.hpp"
+#include "\z\a4es\addons\admin\ui\idcListBox.hpp"
 
 params [["_mode", "init", [""]]];
 
@@ -12,11 +12,11 @@ if (!_access) exitWith {hint localize LSTRING(NoAccess);};
 
 if (_mode == "init") then {
     while {dialog} do {closeDialog 0;};
-    private _dialog = createDialog "A3CS_ui_listBox";
+    private _dialog = createDialog "A4ES_ui_listBox";
     if (!_dialog) exitWith {};
 
     disableSerialization;
-    private _display = uiNamespace getVariable ["A3CS_ui_listBox", displayNull];
+    private _display = uiNamespace getVariable ["A4ES_ui_listBox", displayNull];
     if (isNull _display) exitWith {};
 
     hint localize LSTRING(Module_EndMission_SelectMissionEnding);
@@ -33,7 +33,7 @@ if (_mode == "init") then {
     (_display displayCtrl IDC_LISTBOX_BUTTON3) buttonSetAction QUOTE('end' call FUNC(moduleEndMission));
 
     //Collect endings
-    private _possibleEndings = [["a3c_endDefault", localize LSTRING(DefaultEnding)]];
+    private _possibleEndings = [["a4e_endDefault", localize LSTRING(DefaultEnding)]];
     private _missionDebriefing = (missionConfigFile >> "CfgDebriefing");
     if (isClass _missionDebriefing) then {
         private _debriefings = "true" configClasses _missionDebriefing;
@@ -62,7 +62,7 @@ if (_mode == "init") then {
 };
 if (_mode == "end") then {
     disableSerialization;
-    private _display = uiNamespace getVariable ["A3CS_ui_listBox", displayNull];
+    private _display = uiNamespace getVariable ["A4ES_ui_listBox", displayNull];
     if (isNull _display) exitWith {};
 
     private _controlList = _display displayCtrl IDC_LISTBOX_LIST;
@@ -76,5 +76,5 @@ if (_mode == "end") then {
     //_dbLog = format [localize LSTRING(Module_EndMission_EndMissionLog), player call EFUNC(common,getUnitName)];
     //_dbLog remoteExecCall [QEFUNC(server,missionLog), 2, false];
     [_endClass, true, true, true, false] remoteExec ["BIS_fnc_endMission", 0, true];
-    ["a3cs_missionEnded", _endClass] call CBA_fnc_globalEvent;
+    ["a4es_missionEnded", _endClass] call CBA_fnc_globalEvent;
 };

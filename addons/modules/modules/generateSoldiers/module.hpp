@@ -18,7 +18,7 @@ class GVAR(generateSoldiers): GVAR(base) {
         class GVAR(moduleWarnings): GVAR(moduleWarnings) {};
 
         // Attributes for module activator
-        #include "\z\a3cs\addons\modules\includes\moduleActivationAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\moduleActivationAttributes.hpp"
 
         class GVAR(baseSettingsSubCategory): GVAR(moduleSubCategory) {
             displayName = CSTRING(generateSoldiers_Attributes_baseSettingsSubCategory);

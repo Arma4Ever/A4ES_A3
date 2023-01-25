@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="Support">
-    <Key ID="STR_A3CS_Support_Title">
+    <Key ID="STR_A4ES_Support_Title">
       <Original>Support</Original>
       <Polish>Wsparcie</Polish>
     </Key>
-    <Key ID="STR_A3CS_Support_SendMission">
+    <Key ID="STR_A4ES_Support_SendMission">
       <Original>Send mission</Original>
       <Polish>Wyślij misję</Polish>
     </Key>
-    <Key ID="STR_A3CS_Support_AttributeCategory">
+    <Key ID="STR_A4ES_Support_AttributeCategory">
       <Polish>Wsparcie</Polish>
     </Key>
-    <Key ID="STR_A3CS_Melee_Attributes_enableArtComputer">
+    <Key ID="STR_A4ES_Support_Attributes_enableArtComputer">
       <Polish>Włącz komputer artyleryjski</Polish>
     </Key>
-    <Key ID="STR_A3CS_Melee_Attributes_enableArtComputer_Tooltip">
+    <Key ID="STR_A4ES_Support_Attributes_enableArtComputer_Tooltip">
       <Polish>Włącza armowy komputer artyleryjski. Zaznacz tą opcję jeśli komputer artyleryjski ma być dostępny dla graczy podczas misji. Miej na uwadzę, że dostępnośc komputera znacząco spłyca i upraszcza korzystanie z artylerii, zaznacz tą opcję tylko jeśli wiesz co robisz.</Polish>
     </Key>
   </Package>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="A3CS">
+<Project name="A4ES">
   <Package name="Dialogue">
-    <Key ID="STR_A3CS_Dialogue_Actions_Talk_DisplayName">
+    <Key ID="STR_A4ES_Dialogue_Actions_Talk_DisplayName">
       <English>Talk</English>
       <Polish>Porozmawiaj</Polish>
     </Key>

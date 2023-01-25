@@ -3,7 +3,7 @@
  * Admin panel messages module
  */
 #include "script_component.hpp"
-#include "\z\a3cs\addons\admin\ui\idcEditBox.hpp"
+#include "\z\a4es\addons\admin\ui\idcEditBox.hpp"
 
 params [["_targetClass", "", [""]]];
 
@@ -16,11 +16,11 @@ if (!(_targetClass in _targetClasses)) then {
     //First open
     while {dialog} do {closeDialog 0;};
 
-    private _dialog = createDialog "A3CS_ui_editBox";
+    private _dialog = createDialog "A4ES_ui_editBox";
     if (!_dialog) exitWith {};
 
     disableSerialization;
-    private _display = uiNamespace getVariable ["A3CS_ui_editBox", displayNull];
+    private _display = uiNamespace getVariable ["A4ES_ui_editBox", displayNull];
     if (isNull _display) exitWith {};
 
     (_display displayCtrl IDC_EDITBOX_HEADER) ctrlsetText localize LSTRING(Module_AdminMessages_Header);
@@ -34,7 +34,7 @@ if (!(_targetClass in _targetClasses)) then {
 } else {
     //Button click
     disableSerialization;
-    private _display = uiNamespace getVariable ["A3CS_ui_editBox", displayNull];
+    private _display = uiNamespace getVariable ["A4ES_ui_editBox", displayNull];
     if (isNull _display) exitWith {};
 
     private _playerName = player call EFUNC(common,getUnitName);

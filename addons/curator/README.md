@@ -1,4 +1,4 @@
-# A3CS Curator
+# A4ES Curator
 Hides unnecessary curator-related elements, setups curator editableObjects on init.
 
 ### Changes

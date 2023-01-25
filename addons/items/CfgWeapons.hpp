@@ -9,7 +9,6 @@ class CfgWeapons {
     };
     /*
        TODO:
-	   PAM
 	   Uriki
        Próbki krwi
        Elementy PLP

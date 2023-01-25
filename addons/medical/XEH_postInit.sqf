@@ -1,13 +1,11 @@
 #include "script_component.hpp"
 
+/*
 ["ace_killed", {
   params ["_unit", "", "_killer", "_instigator"];
   diag_log ["killed", _unit, _killer, _instigator];
 }] call CBA_fnc_addEventHandler;
-
-
-
-
+*/
 
 if (hasInterface) then {
   // Exit if curator/spectator
@@ -44,11 +42,6 @@ if (hasInterface) then {
       true
     ];
   }, 60, player] call CBA_fnc_addPerFrameHandler;
-
-/*
-Akcja medyka sprawdzajaca dmg
-Zmienic headDamage na brainDamage??????????
-*/
 
   ["ace_medical_woundReceived", {
     _this call FUNC(handleHeadshot);

@@ -1,5 +1,5 @@
-name = "A3CS"
-prefix = "a3cs"
+name = "A4ES"
+prefix = "a4es"
 author = "SzwedzikPL oraz twórcy addonów zewnętrznych"
 mainprefix = "z"
 files = [
@@ -9,10 +9,10 @@ files = [
     "README.md",
     "AUTHORS.txt",
     "LICENSE",
-    "logo_a3cs.paa",
-    "logosmall_a3cs.paa",
-    "picture_a3cs.paa",
-    "version.a3c"
+    "logo_a4es.paa",
+    "logosmall_a4es.paa",
+    "picture_a4es.paa",
+    "version.a4e"
 ]
 
 modname = "{{name}}"
@@ -20,7 +20,7 @@ key_name = "{{prefix}}_{{version}}"
 authority = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
 
 releasebuild = [
-    "@zip a3cs_{{semver.major}}.{{semver.minor}}.{{semver.patch}}"
+    "@zip a4es_{{semver.major}}.{{semver.minor}}.{{semver.patch}}"
 ]
 
 [header_exts]

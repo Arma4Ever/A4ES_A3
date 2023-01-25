@@ -62,13 +62,17 @@ PREP(validateEntity);
 
 #include "modules\addAction\prep.hpp"
 #include "modules\addCuratorModule\prep.hpp"
+/*
 #include "modules\addDialogue\prep.hpp"
 #include "modules\addDialogueAnswer\prep.hpp"
 #include "modules\addDialogueOption\prep.hpp"
+*/
 #include "modules\aiNightvision\prep.hpp"
 #include "modules\ambientAnimals\prep.hpp"
 #include "modules\ambientFlyby\prep.hpp"
+/*
 #include "modules\bodiesSettings\prep.hpp"
+*/
 #include "modules\coverMap\prep.hpp"
 #include "modules\createLogicFlag\prep.hpp"
 #include "modules\createTask\prep.hpp"

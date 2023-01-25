@@ -23,7 +23,7 @@ if !(alive _patient) exitWith {
 };
 
 private _headShotCount = _patient getVariable [QGVAR(headshotCount), 0];
-diag_log ["_headShotCount", _headShotCount];
+// diag_log ["_headShotCount", _headShotCount];
 if (_headShotCount == 0) exitWith {
   [
     parseText format [
@@ -47,7 +47,7 @@ private _injuryCountSignsText = if (_headShotCount > 1) then {
 
 // ---- 2. Active head injuries
 private _damage = _patient getVariable [QGVAR(currentHeadDamage), 0];
-diag_log ["_damage", _damage];
+// diag_log ["_damage", _damage];
 private _chance = (linearConversion [
   MEDICAL_HEADSHOT_MIN_DAMAGE,
   MEDICAL_HEADSHOT_SCALE_MAX_DAMAGE,
@@ -55,15 +55,15 @@ private _chance = (linearConversion [
   0,
   MEDICAL_HEADSHOT_SCALE_MAX_CHANCE
 ]) * 100;
-diag_log ["_chance", _chance];
+// diag_log ["_chance", _chance];
 
 private _activeInjuriesCount = (floor (_chance / 10)) + 1;
 private _diagnosedBrainInjuries = _patient getVariable [QGVAR(diagnosedBrainInjuries), []];
 private _diagnosedBrainInjuriesCount = count _diagnosedBrainInjuries;
 
-diag_log ["_activeInjuriesCount", _activeInjuriesCount];
-diag_log ["_diagnosedBrainInjuries", _diagnosedBrainInjuries];
-diag_log ["_diagnosedBrainInjuriesCount", _diagnosedBrainInjuriesCount];
+//diag_log ["_activeInjuriesCount", _activeInjuriesCount];
+//diag_log ["_diagnosedBrainInjuries", _diagnosedBrainInjuries];
+//diag_log ["_diagnosedBrainInjuriesCount", _diagnosedBrainInjuriesCount];
 
 if (_activeInjuriesCount > _diagnosedBrainInjuriesCount) then {
   private _possibleInjuries = [0,1,2,3,4,5,6,7,8,9,10,11,12,13];
@@ -79,7 +79,7 @@ if (_activeInjuriesCount > _diagnosedBrainInjuriesCount) then {
   _patient setVariable [QGVAR(diagnosedBrainInjuries), _diagnosedBrainInjuries, true];
 };
 
-diag_log ["_diagnosedBrainInjuries", _diagnosedBrainInjuries];
+//diag_log ["_diagnosedBrainInjuries", _diagnosedBrainInjuries];
 
 private _possibleInjuriesTexts = [
   "- Krwawienie podpajęczynówkowe.",
@@ -100,7 +100,7 @@ private _possibleInjuriesTexts = [
 private _activeInjuries = _diagnosedBrainInjuries apply {/*localize */(_possibleInjuriesTexts select _x)};
 private _activeInjuriesText = "Aktywne urazy neurologiczne:<br/>" + (_activeInjuries joinString "<br/>");
 
-diag_log ["_activeInjuries", _activeInjuries];
+// diag_log ["_activeInjuries", _activeInjuries];
 
 // ---- 3. Death chance
 private _chanceFormatText = switch true do {

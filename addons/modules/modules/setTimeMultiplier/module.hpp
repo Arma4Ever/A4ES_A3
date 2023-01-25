@@ -15,7 +15,7 @@ class GVAR(setTimeMultiplier): GVAR(base) {
         // Attributes for module activator
         #define MODULE_ACTIVATOR_CONTROL QGVAR(dynamicToolboxActivationModeMissionStart)
         #define MODULE_ACTIVATOR_DEFAULT_VALUE QUOTE(-1)
-        #include "\z\a3cs\addons\modules\includes\moduleActivationAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\moduleActivationAttributes.hpp"
 
         class GVAR(baseSettingsSubCategory): GVAR(moduleSubCategory) {
             displayName = CSTRING(setTimeMultiplier_Attributes_baseSettingsSubCategory);

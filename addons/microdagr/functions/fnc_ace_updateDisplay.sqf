@@ -201,7 +201,7 @@ case (APP_MODE_SETUP): {
         _settingListBox lbSetSelectColorRight [1, [1, 1, 1, 1]];
 
         // Broadcasting
-        _settingListBox lbAdd localize "STR_A3CS_Microdagr_BroadCastingPosition";
+        _settingListBox lbAdd localize "STR_A4ES_Microdagr_BroadCastingPosition";
         if (ace_player getVariable [QGVAR(broadcastPos), false]) then {
             _settingListBox lbSetTextRight [2, (localize LSTRING(settingOn))];
         } else {
@@ -210,7 +210,7 @@ case (APP_MODE_SETUP): {
         _settingListBox lbSetSelectColorRight [2, [1, 1, 1, 1]];
 
         // Receiving
-        _settingListBox lbAdd localize "STR_A3CS_Microdagr_ReceivingPosition";
+        _settingListBox lbAdd localize "STR_A4ES_Microdagr_ReceivingPosition";
         if (ace_player getVariable [QGVAR(receivePos), false]) then {
             _settingListBox lbSetTextRight [3, (localize LSTRING(settingOn))];
         } else {
@@ -219,21 +219,21 @@ case (APP_MODE_SETUP): {
         _settingListBox lbSetSelectColorRight [3, [1, 1, 1, 1]];
 
         // Callsign
-        _settingListBox lbAdd localize "STR_A3CS_Microdagr_CallSign";
+        _settingListBox lbAdd localize "STR_A4ES_Microdagr_CallSign";
 
         private _markerTitle = ace_player getVariable [QGVAR(broadcastMarkerTitle), ""];
         if (_markerTitle != "") then {
             _settingListBox lbSetTextRight [4, _markerTitle];
         } else {
-            _settingListBox lbSetTextRight [4, localize "STR_A3CS_Microdagr_CallSign_None"];
+            _settingListBox lbSetTextRight [4, localize "STR_A4ES_Microdagr_CallSign_None"];
         };
         _settingListBox lbSetSelectColorRight [4, [1, 1, 1, 1]];
 
         // Icon
-        _settingListBox lbAdd localize "STR_A3CS_Microdagr_Icon";
+        _settingListBox lbAdd localize "STR_A4ES_Microdagr_Icon";
         private _markerId = ace_player getVariable [QGVAR(broadcastMarkerId), 0];
         if (_markerId == 0) then {
-            _settingListBox lbSetTextRight [5, localize "STR_A3CS_Microdagr_Icon_Auto"];
+            _settingListBox lbSetTextRight [5, localize "STR_A4ES_Microdagr_Icon_Auto"];
         } else {
             private _markerData = _markerId call FUNC(getMarkerData);
             private _markerIconColor = (_markerData # 2) # 0;

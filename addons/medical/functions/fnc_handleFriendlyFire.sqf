@@ -5,9 +5,9 @@
  */
 params ["_unit", "", "_instigator", "_ammo"];
 
-// Sprawdzic mozdzierz
+// TODO: Check mortar damage
 
-diag_log ["handleFF", _unit, _instigator];
+// diag_log ["handleFF", _unit, _instigator];
 
 if (
   (GVAR(ffReported)) ||
@@ -30,7 +30,7 @@ if (
   {(side (group _unit)) != (side (group _instigator))}
 ) exitWith {};
 
-["a3csserver_events_userFF", [_unit, _instigator, _ammo]] call CBA_fnc_serverEvent;
+["a4esserver_events_userFF", [_unit, _instigator, _ammo]] call CBA_fnc_serverEvent;
 
 // Wait 1 sec before we can report another FF
 GVAR(ffReported) = true;

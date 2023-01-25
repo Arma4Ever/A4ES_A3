@@ -7,7 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "a3cs_common",
+            "a4es_common",
             "ace_arsenal",
             "ace_logistics_wirecutter"
         };
@@ -18,12 +18,10 @@ class CfgPatches {
     };
 };
 
+/*
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 
-/*
-
-ZROBIĆ ZAKŁADKE W EDYTORZE Z ITEMAMI OD INTELU
-
+TODO: Arsenal tab with intel items
 */

@@ -3,7 +3,7 @@ class CfgWeapons {
     class ACE_ItemCore;
     class CBA_MiscItem_ItemInfo;
 
-    class A3CS_dressingSet: ACE_ItemCore {
+    class A4ES_dressingSet: ACE_ItemCore {
         scope = 2;
         author = ECSTRING(main,Author);
         model = "a3\props_f_orange\humanitarian\camps\firstaidkit_01_closed_f.p3d";
@@ -17,7 +17,7 @@ class CfgWeapons {
         };
     };
 
-    class A3CS_painkillers: ACE_ItemCore {
+    class A4ES_painkillers: ACE_ItemCore {
         scope = 2;
         author = "Alganthe";
         model = "\A3\Structures_F_EPA\Items\Medical\PainKillers_F.p3d";
@@ -31,7 +31,7 @@ class CfgWeapons {
         };
     };
 
-    class A3CS_emptyBloodBag: ACE_ItemCore {
+    class A4ES_emptyBloodBag: ACE_ItemCore {
         scope = 2;
         author = "SzwedzikPL";
         model = "z\ace\addons\medical_treatment\data\IVBag_250ml.p3d";
@@ -46,7 +46,7 @@ class CfgWeapons {
         };
     };
 
-    class A3CS_usedBloodBag: ACE_ItemCore {
+    class A4ES_usedBloodBag: ACE_ItemCore {
         scope = 2;
         author = "SzwedzikPL";
         model = "z\ace\addons\medical_treatment\data\IVBag_250ml.p3d";
@@ -61,7 +61,7 @@ class CfgWeapons {
         };
     };
 
-    class A3CS_clottedBloodBag: ACE_ItemCore {
+    class A4ES_clottedBloodBag: ACE_ItemCore {
         scope = 2;
         author = "SzwedzikPL";
         model = "z\ace\addons\medical_treatment\data\IVBag_250ml.p3d";

@@ -44,12 +44,12 @@ class GVAR(onLogicFlags): GVAR(base) {
             ATTRIBUTE_LOCAL;
         };
 
-        #include "\z\a3cs\addons\modules\includes\moduleChangeTaskStateAttributes.hpp"
-        #include "\z\a3cs\addons\modules\includes\modulePlaySoundAttributes.hpp"
-        #include "\z\a3cs\addons\modules\includes\moduleSetLogicFlagValueAttributes.hpp"
-        #include "\z\a3cs\addons\modules\includes\moduleShowMessageAttributes.hpp"
-        #include "\z\a3cs\addons\modules\includes\moduleShowMarkerAttributes.hpp"
-        #include "\z\a3cs\addons\modules\includes\moduleDeleteMarkerAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\moduleChangeTaskStateAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\modulePlaySoundAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\moduleSetLogicFlagValueAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\moduleShowMessageAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\moduleShowMarkerAttributes.hpp"
+        #include "\z\a4es\addons\modules\includes\moduleDeleteMarkerAttributes.hpp"
 
         class GVAR(scriptHandlerSettingsSubCategory): GVAR(moduleSubCategory) {
             displayName = CSTRING(Attributes_scriptHandlerSettingsSubCategory);

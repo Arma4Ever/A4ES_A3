@@ -7,5 +7,5 @@ addMissionEventHandler ["EntityKilled", {
   params ["_unit"];
 
   if !(_unit isKindOf "CAManBase") exitWith {};
-  _unit unlinkItem "a3cs_ai_NVGoggles";
+  _unit unlinkItem "a4es_ai_NVGoggles";
 }];

@@ -7,8 +7,8 @@
     <ProjectGuid>{3FA5C1A6-4B15-4E17-A341-86B0BCD0F052}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>a3cs_debug</RootNamespace>
-    <AssemblyName>a3cs_debug_x64</AssemblyName>
+    <RootNamespace>a4es_debug</RootNamespace>
+    <AssemblyName>a4es_debug_x64</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

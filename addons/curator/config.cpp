@@ -10,7 +10,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "a3cs_common",
+            "a4es_common",
             "ace_zeus",
             "zen_modules",
             "zen_compat_ace",
