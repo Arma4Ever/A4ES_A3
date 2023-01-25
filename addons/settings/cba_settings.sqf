@@ -682,6 +682,7 @@ force cfp_autoEquipNVG = false;
 // CUP
 force force CUP_CheckCfgPatches = false;
 force force CUP_Vehicles_PreventBarrelClip = false;
+force force cba_ui_StorePasswords = -1;
 
 // CUP Static Weapons
 force force CUP_staticWeapons_allowMovement = true;
