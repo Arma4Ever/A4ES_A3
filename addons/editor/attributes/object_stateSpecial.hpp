@@ -81,7 +81,7 @@ class GVAR(maximumCargoLoad) {
     tooltip = CSTRING(maximumCargoLoad_Tooltip);
     property = QGVAR(maximumCargoLoad);
     control = "Edit";
-    expression = "if (_value != (configOf _this >> ""maximumLoad"")) then {_this setMaxLoad _value};";
+    expression = "if (_value != (getNumber (configOf _this >> ""maximumLoad""))) then {_this setMaxLoad _value};";
     defaultValue = "(getNumber (configOf _this >> ""maximumLoad""))";
     condition = "objectHasInventoryCargo";
     typeName = "NUMBER";
