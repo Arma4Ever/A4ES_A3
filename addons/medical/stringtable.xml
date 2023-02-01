@@ -97,9 +97,6 @@
       <English>Used blood bag, no medical use.</English>
       <Polish>Zużyty worek na krew, brak medycznych zastosowań.</Polish>
     </Key>
-
-
-
     <Key ID="STR_A4ES_Medical_CheckMedications_DisplayName">
       <English>Check active medications</English>
       <Polish>Sprawdź aktywne substancje</Polish>
@@ -110,7 +107,11 @@
     </Key>
     <Key ID="STR_A4ES_Medical_CheckMedications_Result">
       <English>Active medications and effectiveness:</English>
-      <Polish>Aktywne substancje i ich aktywność:</Polish>
+      <Polish>Aktywne substancje i ich efektywność:</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckMedications_Result_Title">
+      <English>%1: Active medications</English>
+      <Polish>%1: Aktywne substancje</Polish>
     </Key>
     <Key ID="STR_A4ES_Medical_CheckMedications_None">
       <English>No active medications.</English>
@@ -124,6 +125,102 @@
       <English>Checking neurological injuries...</English>
       <Polish>Sprawdzanie urazów neurologicznych...</Polish>
     </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_NoInjuries">
+      <English>No signs of previous neurological injuries.</English>
+      <Polish>Brak oznak przebytych urazów neurologicznych.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_InjuryCountSigns_One">
+      <English>Visible signs from one neurological injury.</English>
+      <Polish>Widoczne oznaki po przebytym jednym urazie neurologicznym.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_InjuryCountSigns_Many">
+      <English>Visible signs from %1 neurological injuries.</English>
+      <Polish>Widoczne oznaki po przebytych %1 urazach neurologicznych.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_AllInjuriesHealed">
+      <English>All injuries appear to be healed.</English>
+      <Polish>Wszystkie urazy wyglądają na zagojone.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_ActiveInjuriesText_Title">
+      <English>Active neurological injuries:</English>
+      <Polish>Aktywne urazy neurologiczne:</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_PossibleInjuries_1">
+      <English>- Subarachnoid bleeding.</English>
+      <Polish>- Krwawienie podpajęczynówkowe.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_PossibleInjuries_2">
+      <English>- Possible minor internal bleeding</English>
+      <Polish>- Możliwy niewielki krwotok wewnętrzny.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_PossibleInjuries_3">
+      <English>- Post-traumatic brain tissue damage.</English>
+      <Polish>- Pourazowe uszkodzenie tkanek mózgu.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_PossibleInjuries_4">
+      <English>- Edema in the left hemisphere of the brain.</English>
+      <Polish>- Obrzęk w zakresie lewej półkuli mózgu.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_PossibleInjuries_5">
+      <English>- Edema in the right hemisphere of the brain.</English>
+      <Polish>- Obrzęk w zakresie prawej półkuli mózgu.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_PossibleInjuries_6">
+      <English>- Increasing swelling of the brain.</English>
+      <Polish>- Narastający obrzęk mózgu.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_PossibleInjuries_7">
+      <English>- Head damage.</English>
+      <Polish>- Uraz głowy.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_PossibleInjuries_8">
+      <English>- Skull trauma.</English>
+      <Polish>- Uraz czaszki.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_PossibleInjuries_9">
+      <English>- Craniofacial trauma.</English>
+      <Polish>- Uraz twarzoczaszki.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_PossibleInjuries_10">
+      <English>- Craniocerebral trauma.</English>
+      <Polish>- Uraz czaszkowo-mózgowy.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_PossibleInjuries_11">
+      <English>- Damage to the left temporal lobe.</English>
+      <Polish>- Uszkodzenie lewego płata skroniowego.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_PossibleInjuries_12">
+      <English>- Damage to the right temporal lobe.</English>
+      <Polish>- Uszkodzenie prawego płata skroniowego.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_PossibleInjuries_13">
+      <English>- Damage to the occipital bone.</English>
+      <Polish>- Uszkodzenie kości potylicznej.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_PossibleInjuries_14">
+      <English>- Concussion.</English>
+      <Polish>- Wstrząśnienie mózgu.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_ChanceText_40">
+      <English>I assess the current neurological condition as very severe, very significantly increasing the probability of death with another head injury (~%1%2).</English>
+      <Polish>Aktualny stan neurologiczny oceniam jako bardzo ciężki, bardzo znacząco podnosi prawdopodobieństwo zgonu przy kolejnym urazie głowy (~%1%2).</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_ChanceText_30">
+      <English>I assess the current neurological condition as severe, significantly increasing the probability of death with another head injury (~%1%2).</English>
+      <Polish>Aktualny stan neurologiczny oceniam jako ciężki, znacząco podnosi prawdopodobieństwo zgonu przy kolejnym urazie głowy (~%1%2).</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_ChanceText_20">
+      <English>I assess the current neurological condition as moderate, it noticeably increases the probability of death with another head injury (~%1%2).</English>
+      <Polish>Aktualny stan neurologiczny oceniam jako umiarkowany, zauważalnie podnosi prawdopodobieństwo zgonu przy kolejnym urazie głowy (~%1%2).</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_ChanceText_10">
+      <English>I assess the current neurological condition as light, slightly increasing the probability of death with another head injury (~%1%2).</English>
+      <Polish>Aktualny stan neurologiczny oceniam jako lekki, w małym stopniu podnosi prawdopodobieństwo zgonu przy kolejnym urazie głowy (~%1%2).</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_ChanceText_Default">
+      <English>I assess the current neurological condition as very light, slightly increasing the probability of death in the event of another head injury (~%1%2).</English>
+      <Polish>Aktualny stan neurologiczny oceniam jako bardzo lekki, w niewielkim stopniu podnosi prawdopodobieństwo zgonu przy kolejnym urazie głowy (~%1%2).</Polish>
+    </Key>
     <Key ID="STR_A4ES_Medical_CheckNeurologicalInjuries_HealText">
       <English>Neurological injuries should heal in %1 minutes.</English>
       <Polish>Urazy neurologiczne powinny zniknąć za %1 minut.</Polish>
@@ -136,6 +233,5 @@
       <English>around %1</English>
       <Polish>około %1</Polish>
     </Key>
-
   </Package>
 </Project>

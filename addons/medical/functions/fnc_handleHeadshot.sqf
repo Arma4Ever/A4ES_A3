@@ -7,11 +7,15 @@
 params ["_unit", "_damages", "_instigator"];
 
 if (
-  !(hasInterface) ||
+  !hasInterface ||
   {_unit != player} ||
   {_unit getVariable [QGVAR(disableHSHandling), false]} ||
   {!(isNull (objectParent _unit))}
 ) exitWith {};
+
+#ifdef DEBUG_MODE_FULL
+diag_log ["_damages", _damages];
+#endif
 
 private _index = _damages findIf {(_x # 1) == "Head"};
 if (_index == -1) exitWith {};
@@ -20,7 +24,6 @@ private _damageData = _damages select _index;
 private _damage = (_damageData # 0) max (_damageData # 2);
 
 #ifdef DEBUG_MODE_FULL
-diag_log ["_damages", _damages];
 diag_log ["_damageData", _damageData, _damage];
 systemChat format ["_damageData: %1", str _damageData];
 #endif

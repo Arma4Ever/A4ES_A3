@@ -2,14 +2,23 @@
 
 params ["_medic", "_patient"];
 
+private _patientName = [_patient] call ace_common_fnc_getName;
 private _medications = _patient getVariable [VAR_MEDICATIONS,[]];
+private _messageTitle = format [localize "STR_A4ES_Medical_CheckMedications_Result_Title", _patientName];
 
 if (_medications isEqualTo []) exitWith {
-  hint parseText format [
-    "<t size='2'>%1</t><br /><br />%2",
-    [_patient] call ace_common_fnc_getName,
-    localize "STR_A4ES_Medical_CheckMedications_None"
-  ];
+  // No medications, show none
+  [
+    parseText format [
+      "<t size='1.2'>%1</t>", localize "STR_A4ES_Medical_CheckMedications_None"
+    ],
+    _messageTitle,
+    true,
+    false,
+    [] call BIS_fnc_displayMission,
+    false,
+    false
+  ] spawn BIS_fnc_guiMessage;
 };
 
 private _text = "";
@@ -24,17 +33,34 @@ private _text = "";
 } forEach _medications;
 
 if (_text == "") exitWith {
-  hint parseText format [
-    "<t size='2'>%1</t><br /><br />%2",
-    [_patient] call ace_common_fnc_getName,
-    localize "STR_A4ES_Medical_CheckMedications_None"
-  ];
+  // Text empty, show none
+  [
+    parseText format [
+      "<t size='1.2'>%1</t>", localize "STR_A4ES_Medical_CheckMedications_None"
+    ],
+    _messageTitle,
+    true,
+    false,
+    [] call BIS_fnc_displayMission,
+    false,
+    false
+  ] spawn BIS_fnc_guiMessage;
 };
 
+// Add results head
 _text = (format [
-  "<t size='2'>%1</t><br /><br />%2<br /><br />",
-  [_patient] call ace_common_fnc_getName,
+  "%1<br /><br />",
   localize "STR_A4ES_Medical_CheckMedications_Result"
 ]) + _text;
 
-hint parseText _text;
+// Show results
+[
+  parseText _text,
+  _messageTitle,
+  true,
+  false,
+  [] call BIS_fnc_displayMission,
+  false,
+  false
+] spawn BIS_fnc_guiMessage;
+

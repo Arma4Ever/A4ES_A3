@@ -23,11 +23,15 @@ if !(alive _patient) exitWith {
 };
 
 private _headShotCount = _patient getVariable [QGVAR(headshotCount), 0];
-// diag_log ["_headShotCount", _headShotCount];
-if (_headShotCount == 0) exitWith {
+
+#ifdef DEBUG_MODE_FULL
+diag_log ["_headShotCount", _headShotCount];
+#endif
+
+if (_headShotCount == 0 || {!(_patient getVariable [QEGVAR(common,isPlayer), false])}) exitWith {
   [
     parseText format [
-      "<t size='1.2'>%1</t>", "Brak oznak przebytych urazów neurologicznych."
+      "<t size='1.2'>%1</t>", LLSTRING(CheckNeurologicalInjuries_NoInjuries)
     ],
     _messageTitle,
     true,
@@ -40,33 +44,49 @@ if (_headShotCount == 0) exitWith {
 
 // ---- 1. Injury count
 private _injuryCountSignsText = if (_headShotCount > 1) then {
-  format ["Widoczne oznaki po przebytych %1 urazach neurologicznych.", _headShotCount]
+  format [LLSTRING(CheckNeurologicalInjuries_InjuryCountSigns_Many), _headShotCount]
 } else {
-  "Widoczne oznaki po przebytym jednym urazie neurologicznym."
+  LLSTRING(CheckNeurologicalInjuries_InjuryCountSigns_One)
 };
 
 // ---- 2. Active head injuries
-private _damage = _patient getVariable [QGVAR(currentHeadDamage), 0];
-// diag_log ["_damage", _damage];
+private _damage = (_patient getVariable [QGVAR(currentHeadDamage), 0]);
+if (_damage == 0) exitWith {
+  [
+    parseText format [
+      "<t size='1.1'>%1<br /><br />%2</t>", _injuryCountSignsText, LLSTRING(CheckNeurologicalInjuries_AllInjuriesHealed)
+    ],
+    _messageTitle,
+    true,
+    false,
+    [] call BIS_fnc_displayMission,
+    false,
+    false
+  ] spawn BIS_fnc_guiMessage;
+};
+
 private _chance = (linearConversion [
-  MEDICAL_HEADSHOT_MIN_DAMAGE,
-  MEDICAL_HEADSHOT_SCALE_MAX_DAMAGE,
+  0,
+  MEDICAL_HEADSHOT_SCALE_MAX_DAMAGE - MEDICAL_HEADSHOT_MIN_DAMAGE,
   _damage,
   0,
   MEDICAL_HEADSHOT_SCALE_MAX_CHANCE
 ]) * 100;
-// diag_log ["_chance", _chance];
 
 private _activeInjuriesCount = (floor (_chance / 10)) + 1;
 private _diagnosedBrainInjuries = _patient getVariable [QGVAR(diagnosedBrainInjuries), []];
 private _diagnosedBrainInjuriesCount = count _diagnosedBrainInjuries;
 
-//diag_log ["_activeInjuriesCount", _activeInjuriesCount];
-//diag_log ["_diagnosedBrainInjuries", _diagnosedBrainInjuries];
-//diag_log ["_diagnosedBrainInjuriesCount", _diagnosedBrainInjuriesCount];
+#ifdef DEBUG_MODE_FULL
+diag_log ["_damage", _damage];
+diag_log ["_chance", _chance];
+diag_log ["_activeInjuriesCount", _activeInjuriesCount];
+diag_log ["_diagnosedBrainInjuries", _diagnosedBrainInjuries];
+diag_log ["_diagnosedBrainInjuriesCount", _diagnosedBrainInjuriesCount];
+#endif
 
 if (_activeInjuriesCount > _diagnosedBrainInjuriesCount) then {
-  private _possibleInjuries = [0,1,2,3,4,5,6,7,8,9,10,11,12,13];
+  private _possibleInjuries = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
   {
     _possibleInjuries deleteAt (_possibleInjuries find _x);
   } forEach _diagnosedBrainInjuries;
@@ -79,36 +99,23 @@ if (_activeInjuriesCount > _diagnosedBrainInjuriesCount) then {
   _patient setVariable [QGVAR(diagnosedBrainInjuries), _diagnosedBrainInjuries, true];
 };
 
-//diag_log ["_diagnosedBrainInjuries", _diagnosedBrainInjuries];
+private _activeInjuries = _diagnosedBrainInjuries apply {
+  localize format [LSTRING(CheckNeurologicalInjuries_PossibleInjuries_%1), _x]
+};
+private _activeInjuriesText = (LLSTRING(CheckNeurologicalInjuries_ActiveInjuriesText_Title)) + "<br/>" + (_activeInjuries joinString "<br/>");
 
-private _possibleInjuriesTexts = [
-  "- Krwawienie podpajęczynówkowe.",
-  "- Możliwy niewielki krwotok wewnętrzny.",
-  "- Pourazowe uszkodzenie tkanek mózgu.",
-  "- Obrzęk w zakresie lewej półkuli mózgu.",
-  "- Obrzęk w zakresie prawej półkuli mózgu.",
-  "- Narastający obrzęk mózgu.",
-  "- Uraz głowy.",
-  "- Uraz czaszki.",
-  "- Uraz twarzo-czaszki.",
-  "- Uraz czaszkowo-mózgowy.",
-  "- Uszkodzenie płata skroniowego lewego.",
-  "- Uszkodzenie płata skroniowego prawego.",
-  "- Uszkodzenie kości potylicznej.",
-  "- Wstrząśnienie mózgu."
-];
-private _activeInjuries = _diagnosedBrainInjuries apply {/*localize */(_possibleInjuriesTexts select _x)};
-private _activeInjuriesText = "Aktywne urazy neurologiczne:<br/>" + (_activeInjuries joinString "<br/>");
-
-// diag_log ["_activeInjuries", _activeInjuries];
+#ifdef DEBUG_MODE_FULL
+diag_log ["_diagnosedBrainInjuries new", _diagnosedBrainInjuries];
+diag_log ["_activeInjuries", _activeInjuries];
+#endif
 
 // ---- 3. Death chance
 private _chanceFormatText = switch true do {
-	case (_chance > 40): {"Aktualny stan neurologiczny oceniam jako bardzo ciężki, bardzo znacząco podnosi prawdopodobieństwo zgonu przy kolejnym urazie głowy (~%1%2)."};
-	case (_chance > 30): {"Aktualny stan neurologiczny oceniam jako ciężki, znacząco podnosi prawdopodobieństwo zgonu przy kolejnym urazie głowy (~%1%2)."};
-  case (_chance > 20): {"Aktualny stan neurologiczny oceniam jako umiarkowany, zauważalnie podnosi prawdopodobieństwo zgonu przy kolejnym urazie głowy (~%1%2)."};
-  case (_chance > 10): {"Aktualny stan neurologiczny oceniam jako lekki, w małym stopniu podnosi prawdopodobieństwo zgonu przy kolejnym urazie głowy (~%1%2)."};
-  default {"Aktualny stan neurologiczny oceniam jako bardzo lekki, w niewielkim stopniu podnosi prawdopodobieństwo zgonu przy kolejnym urazie głowy (~%1%2)."};
+	case (_chance > 40): {LLSTRING(CheckNeurologicalInjuries_ChanceText_40)};
+	case (_chance > 30): {LLSTRING(CheckNeurologicalInjuries_ChanceText_30)};
+  case (_chance > 20): {LLSTRING(CheckNeurologicalInjuries_ChanceText_20)};
+  case (_chance > 10): {LLSTRING(CheckNeurologicalInjuries_ChanceText_10)};
+  default {LLSTRING(CheckNeurologicalInjuries_ChanceText_Default)};
 };
 private _chanceText = format [_chanceFormatText, floor _chance, "%"];
 

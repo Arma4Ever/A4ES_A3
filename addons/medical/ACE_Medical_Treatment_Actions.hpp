@@ -43,7 +43,7 @@ class ACE_Medical_Treatment_Actions {
         displayName = CSTRING(CheckMedications_DisplayName);
         displayNameProgress = CSTRING(CheckMedications_Progress);
         allowedSelections[] = {"LeftArm", "RightArm"};
-        treatmentTime = 3.5;
+        treatmentTime = 3;
         medicRequired = 1;
         allowSelfTreatment = 1;
         condition = "true";
@@ -56,10 +56,10 @@ class ACE_Medical_Treatment_Actions {
         displayName = CSTRING(CheckNeurologicalInjuries_DisplayName);
         displayNameProgress = CSTRING(CheckNeurologicalInjuries_Progress);
         allowedSelections[] = {"Head"};
-        treatmentTime = 8;
+        treatmentTime = 6;
         medicRequired = 1;
         allowSelfTreatment = 1;
-        condition = "true";
+        condition = QUOTE(_patient getVariable [ARR_2(QQEGVAR(common,isPlayer),false)]);
         callbackSuccess = QFUNC(checkNeurologicalInjuries);
         animationMedicProne = "";
         animationMedicSelfProne = "";
