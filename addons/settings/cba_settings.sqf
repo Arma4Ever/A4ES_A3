@@ -1,3 +1,7 @@
+// !ACE View Distance Limiter
+force ace_viewdistance_enabled = true;
+force ace_viewdistance_limitViewDistance = 12000;
+
 // ACE Advanced Ballistics
 force ace_advanced_ballistics_ammoTemperatureEnabled = true;
 force ace_advanced_ballistics_barrelLengthInfluenceEnabled = true;
@@ -153,6 +157,7 @@ force force ace_rearm_distance = 20;
 force force ace_rearm_level = 0;
 force force ace_rearm_supply = 0;
 force force ace_refuel_hoseLength = 12;
+force ace_refuel_progressDuration = 2;
 force force ace_refuel_rate = 1;
 force force ace_repair_addSpareParts = true;
 force force ace_repair_autoShutOffEngineWhenStartingRepair = true;
@@ -168,6 +173,7 @@ force force ace_repair_miscRepairRequiredItems = ["ace_repair_anyToolKit"];
 force force ace_repair_repairDamageThreshold = 0.6;
 force force ace_repair_repairDamageThreshold_engineer = 0.4;
 force force ace_repair_wheelRepairRequiredItems = [];
+force ace_towing_addRopeToVehicleInventory = true;
 
 // ACE Magazine Repack
 force force ace_magazinerepack_repackAnimation = true;
@@ -285,13 +291,14 @@ force force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
 force force ace_overheating_cookoffCoef = 0;
-force force ace_overheating_coolingCoef = 1;
+force force ace_overheating_coolingCoef = 1.5;
 force force ace_overheating_displayTextOnJam = true;
 force force ace_overheating_enabled = true;
 force force ace_overheating_heatCoef = 1;
 force force ace_overheating_jamChanceCoef = 1;
 force force ace_overheating_overheatingDispersion = true;
 force force ace_overheating_overheatingRateOfFire = true;
+force force ace_overheating_particleEffectsAndDispersionDistance = 1000;
 force force ace_overheating_showParticleEffects = true;
 force force ace_overheating_showParticleEffectsForEveryone = false;
 force force ace_overheating_suppressorCoef = 1;
@@ -396,7 +403,6 @@ force force ace_ui_gunnerWeaponLowerInfoBackground = true;
 force force ace_ui_gunnerWeaponName = true;
 force force ace_ui_gunnerWeaponNameBackground = true;
 force force ace_ui_gunnerZeroing = true;
-force ace_ui_hideDefaultActionIcon = false;
 force force ace_ui_magCount = true;
 force force ace_ui_soldierVehicleWeaponInfo = true;
 force force ace_ui_staminaBar = true;
@@ -423,13 +429,10 @@ force force ace_vehiclelock_lockVehicleInventory = true;
 force force ace_vehiclelock_vehicleStartingLockState = -1;
 
 // ACE Vehicles
+force force ace_novehicleclanlogo_enabled = true;
 force force ace_vehicles_keepEngineRunning = false;
 force force ace_vehicles_speedLimiterStep = 5;
 force force ace_viewports_enabled = true;
-
-// ACE View Distance Limiter
-force ace_viewdistance_enabled = true;
-force ace_viewdistance_limitViewDistance = 12000;
 
 // ACE Weapons
 force force ace_common_persistentLaserEnabled = false;
@@ -463,6 +466,8 @@ force bocr_main_disabled = false;
 force bocr_main_walk = true;
 
 // Blastcore Murr Edition
+
+// SPRAWDZIĆ
 WarFXPE_BlastWave = 0;
 WarFXPE_HeatHaze = false;
 WarFXPE_WeatherEffects = true;
@@ -472,8 +477,10 @@ force cba_diagnostic_watchInfoRefreshRate = 0.2;
 force force cba_disposable_dropUsedLauncher = 0;
 force force cba_disposable_replaceDisposableLauncher = true;
 force force cba_network_loadoutValidation = 0;
+force force cba_ui_StorePasswords = -1;
 
 // Enhanced Movement Rework
+force force emr_main_allowClimbOnStandingUnits = false;
 force force emr_main_allowMidairClimbing = true;
 force force emr_main_animSpeedCoef = 1;
 force force emr_main_animSpeedStaminaCoef = 0.4;
@@ -499,9 +506,11 @@ force force emr_main_maxWeightClimb1 = 100;
 force force emr_main_maxWeightClimb2 = 85;
 force force emr_main_maxWeightClimb3 = 60;
 force force emr_main_maxWeightJump = 100;
+force emr_main_minClimbTerrain = 0.3;
 force force emr_main_preventHighVaulting = false;
 force force emr_main_staminaCoefficient = 1;
 force emr_main_whitelistStr = "";
+force emr_main_yeetCoefficient = 1.4;
 
 // GRAD Trenches
 force force grad_trenches_functions_allowBigEnvelope = true;
@@ -578,12 +587,12 @@ force lambs_main_maxRevealValue = 4;
 force lambs_main_minFriendlySuppressionDistance = 0;
 force lambs_main_minObstacleProximity = 5;
 force lambs_main_minSuppressionRange = 20;
-force lambs_main_radioBackpack = 2000;
+force lambs_main_radioBackpack = 4000;
 force lambs_main_radioDisabled = false;
-force lambs_main_radioEast = 500;
-force lambs_main_radioGuer = 500;
-force lambs_main_radioShout = 100;
-force lambs_main_radioWest = 500;
+force lambs_main_radioEast = 1700;
+force lambs_main_radioGuer = 1700;
+force lambs_main_radioShout = 170;
+force lambs_main_radioWest = 1700;
 
 // TFAR - Global settings
 force TFAR_AICanHearPlayer = false;
@@ -676,14 +685,3 @@ force force zen_vision_enableRedHotCold = true;
 force force zen_vision_enableWhiteHot = true;
 force force zen_vision_enableWhiteHotRedCold = false;
 
-// AI
-force cfp_autoEquipNVG = false;
-
-// CUP
-force force CUP_CheckCfgPatches = false;
-force force CUP_Vehicles_PreventBarrelClip = false;
-force force cba_ui_StorePasswords = -1;
-
-// CUP Static Weapons
-force force CUP_staticWeapons_allowMovement = true;
-force force CUP_staticWeapons_allowRotation = true;
