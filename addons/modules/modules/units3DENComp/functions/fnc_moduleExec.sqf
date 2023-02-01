@@ -86,11 +86,11 @@ private _params = [
 if (
   isMultiplayer
   && {!(_logic getVariable [QGVAR(disableHeadless), false])}
-  && {!(isNull EGVAR(headless,headlessClient))}
+  && {0 call EFUNC(headless,canExecute)}
 ) then {
   // Exec on headless
-  LOG_1('Spawning EXEC_MODULE_NAME exec function on headless (owner: %1)', str (owner EGVAR(headless,headlessClient)));
-  [_logic, _data, _params] remoteExec [QFUNC(units3DENComp_spawnData), owner EGVAR(headless,headlessClient)];
+  LOG('Spawning EXEC_MODULE_NAME exec function on headless');
+  [QFUNC(units3DENComp_spawnData), [_logic, _data, _params]] call EFUNC(headless,execute);
 } else {
   // Exec on server
   LOG('Spawning EXEC_MODULE_NAME exec function on server');

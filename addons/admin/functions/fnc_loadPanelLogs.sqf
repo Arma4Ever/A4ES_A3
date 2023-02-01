@@ -21,10 +21,10 @@ lnbClear _controlLogs;
 if (tolower _logClass == "debuglogs") then {
     _serverData params [
         ["_serverFPS", 0, [0]],
-        ["_headless", false, [false]],
+        ["_headlessFPS", [], [[]]],
         ["_totalAI", 0, [0]],
         ["_serverAI", 0, [0]],
-        ["_headlessAI", 0, [0]],
+        ["_headlessAI", [], [[]]],
         ["_simulatedAI", 0, [0]],
         ["_notSimulatedAI", 0, [0]],
         ["_totalGroups", 0, [0]],
@@ -37,14 +37,23 @@ if (tolower _logClass == "debuglogs") then {
         ["_curatorCount", 0, [0]]
     ];
 
-    _headlessOnline = [localize ELSTRING(common,No), localize ELSTRING(common,Yes)] select _headless;
+    private _hasHeadless = _headlessFPS isNotEqualTo [];
 
     //Show logs
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_ServerFPS), str _serverFPS];
-    if (isMultiplayer) then {_controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_HeadlessOnline), _headlessOnline];};
+    
+    if (isMultiplayer) then {_controlLogs lnbAddRow [
+        localize LSTRING(Module_DebugLogs_HeadlessFPS),
+        if (_hasHeadless) then {str _headlessFPS} else {LLSTRING(Module_DebugLogs_Headless_none)}
+    ];};
+
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_TotalAICount), str _totalAI];
     if (isMultiplayer) then {_controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_AIOnServer), str _serverAI];};
-    if (isMultiplayer && _headless) then {_controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_AIOnHC), str _headlessAI];};
+
+    if (isMultiplayer && _hasHeadless) then {
+        _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_AIOnHC), str _headlessAI];
+    };
+
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_SimulatedAI), str _simulatedAI];
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_NotSimulatedAI), str _notSimulatedAI];
     _controlLogs lnbAddRow [localize LSTRING(Module_DebugLogs_TotalGroupCount), str _totalGroups];
