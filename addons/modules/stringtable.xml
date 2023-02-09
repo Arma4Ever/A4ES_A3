@@ -2873,7 +2873,7 @@
       <Polish>Maks. wyśw. podglądów modułów</Polish>
     </Key>
     <Key ID="STR_A4ES_Modules_Preferences_actRangePreviewsCount_Tooltip">
-      <Polish>W przypadku zaznaczenia wielu modułów, ile maksymalnie ma się wyświetlać wizualizacji zasięgu (niebieskie okręgi zasięgu aktywacji modułów)</Polish>
+      <Polish>W przypadku zaznaczenia wielu modułów, ile maksymalnie ma się wyświetlać wizualizacji zasięgu (niebieskie okręgi zasięgu aktywacji modułów).</Polish>
     </Key>
   </Package>
 </Project>
