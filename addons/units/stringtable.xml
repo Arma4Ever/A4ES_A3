@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A4ES">
+  <Package name="Units">
+    <Key ID="STR_A4ES_Units_checkGear_displayName">
+      <English>Check gear</English>
+      <Polish>Sprawdź ekwipunek</Polish>
+    </Key>
+  </Package>
+</Project>
