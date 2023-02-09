@@ -257,4 +257,25 @@ class Cfg3DEN {
             onMissionPreviewEnd = QUOTE(call FUNC(initWarnings));
         };
 	};
+	class Mission {
+		class Preferences {
+			class AttributeCategories {
+				class ADDON {
+					displayName = CSTRING(Preferences_displayName);
+					class Attributes {
+						class GVAR(actRangePreviewsCount) {
+							control = "Edit";
+							displayName = CSTRING(Preferences_actRangePreviewsCount);
+							tooltip = CSTRING(Preferences_actRangePreviewsCount_Tooltip);
+							defaultValue = 10;
+							typeName = "number";
+							validate = "number";
+							expression = "";
+							property = QGVAR(actRangePreviewsCount);
+						};
+					};
+				};
+			};
+		};
+	};
 };

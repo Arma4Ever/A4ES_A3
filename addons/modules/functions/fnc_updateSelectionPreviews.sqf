@@ -10,6 +10,13 @@
 private _previews = [];
 private _data = [];
 
+private _selected = get3DENSelected "logic";
+
+private _selectedLimit = "Preferences" get3DENMissionAttribute QGVAR(actRangePreviewsCount);
+if ((count _selected) > _selectedLimit) then {
+  _selected resize _selectedLimit;
+};
+
 {
   private _values = _x getVariable [QGVAR(moduleValues), objNull];
   private _range = 0;
@@ -39,7 +46,7 @@ private _data = [];
     _x enableSimulation true;
     _data pushBack [_x, _range, _minRange];
   };
-} forEach (get3DENSelected "logic");
+} forEach _selected;
 
 GVAR(modulesActRangePreviews) = _previews;
 GVAR(modulesActRangePreviewsData) = _data;

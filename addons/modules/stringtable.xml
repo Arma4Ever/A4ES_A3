@@ -1115,7 +1115,7 @@
       <Polish>Pozwól na komunikację radiową</Polish>
     </Key>
     <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_hasLambsRadio_Tooltip">
-      <Polish>Pozwala wygenerowanym grupom (LAMBS) na zaawansowaną komunikację radiową między sobą. Dzięki temu, wygenerowane grupy mogą m.in. koordynować swoje działania i przychodzić sobie z pomocą. Zasięg komunikacji możesz ustawić z poziomu ustawień addonów w misji (domyślnie 2km). UWAGA, wyłączenie tej opcji nie wyłącza komunikacji całkowicie - ogranicza jedynie znacząco jej zasięg.</Polish>
+      <Polish>Pozwala wygenerowanym grupom (LAMBS) na zaawansowaną komunikację radiową między sobą. Dzięki temu, wygenerowane grupy mogą m.in. koordynować swoje działania i przychodzić sobie z pomocą. Zasięg komunikacji możesz ustawić z poziomu ustawień addonów w misji (domyślnie 4km). UWAGA, wyłączenie tej opcji nie wyłącza komunikacji całkowicie - ogranicza jedynie znacząco jej zasięg.</Polish>
     </Key>
     <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_disableRandomization">
       <Polish>Wyłącz randomizację wyglądu</Polish>
@@ -2649,6 +2649,12 @@
     <Key ID="STR_A4ES_Modules_units3DENComp_Attributes_forceDisablePATH_tooltip">
       <Polish>Po zaznaczeniu tej opcji, wszystkie jednostki stworzone przez moduł będą miały automatycznie wyłączone poruszanie się (PATH).</Polish>
     </Key>
+    <Key ID="STR_A4ES_Modules_units3DENComp_Attributes_lambsRadio">
+      <Polish>Włącz radia AI (lambs)</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_units3DENComp_Attributes_lambsRadio_tooltip">
+      <Polish>Po zaznaczeniu tej opcji, wszystkie jednostki stworzone przez moduł będą miały włączone długie radia lambs. Dzięki temu, AI będą komunikować się na większą odległość (domyślnie 4km) aby np. wezwać wsparcie QRF lub artylerię. Jeśli ta opcja nie będzie zaznaczona, użyte zostaną ustawienia poszczególnych jednostek zapisanych w module.</Polish>
+    </Key>
     <Key ID="STR_A4ES_Modules_units3DENComp_Attributes_defenderBehaviour">
       <Polish>Stacjonarny obrońca</Polish>
     </Key>
@@ -2857,6 +2863,17 @@
     </Key>
     <Key ID="STR_A4ES_Modules_objects3DENComp_Warning_EditMode_Desc">
       <Polish>Moduł jest aktualnie w trybie edycji. Pamiętaj, aby po zakończonej pracy, połączyć odpowiednie obiekty z modułem a następnie przełączyć moduł w tryb odczytu.</Polish>
+    </Key>
+  </Package>
+  <Package name="Preferences">
+    <Key ID="STR_A4ES_Modules_Preferences_displayName">
+      <Polish>A4ES - Moduły</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_Preferences_actRangePreviewsCount">
+      <Polish>Maks. wyśw. podglądów modułów</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_Preferences_actRangePreviewsCount_Tooltip">
+      <Polish>W przypadku zaznaczenia wielu modułów, ile maksymalnie ma się wyświetlać wizualizacji zasięgu (niebieskie okręgi zasięgu aktywacji modułów)</Polish>
     </Key>
   </Package>
 </Project>

@@ -77,6 +77,7 @@ private _params = [
   _defenderBehaviour,
   _logic getVariable [QGVAR(vehiclesDynSim), 1],
   _logic getVariable [QGVAR(clearVehCargo), true],
+  _logic getVariable [QGVAR(lambsRadio), false],
   _unitPostInit,
   _groupPostInit,
   _vehiclePostInit

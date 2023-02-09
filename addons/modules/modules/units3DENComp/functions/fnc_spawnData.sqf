@@ -14,6 +14,7 @@ _params params [
   "_defenderBehaviour",
   "_vehiclesDynSim",
   "_clearVehCargo",
+  "_lambsRadio",
   "_unitPostInit",
   "_groupPostInit",
   "_vehiclePostInit"
@@ -36,6 +37,7 @@ private _vehicles = [];
     _forceSpawnLying,
     _forceDisablePATH,
     _defenderBehaviour,
+    _lambsRadio,
     _unitPostInit,
     _groupPostInit
   ] spawn FUNC(units3DENComp_spawnData_group);

@@ -12,6 +12,7 @@ params [
   "_forceSpawnLying",
   "_forceDisablePATH",
   "_defenderBehaviour",
+  "_lambsRadio",
   "_unitPostInit",
   "_groupPostInit"
 ];
@@ -49,6 +50,7 @@ if (isNull _group) exitWith {
     _forceSpawnLying,
     _forceDisablePATH,
     _defenderBehaviour,
+    _lambsRadio,
     _unitPostInit
   ] spawn FUNC(units3DENComp_spawnData_unit);
   waitUntil {scriptDone _unitSpawn};

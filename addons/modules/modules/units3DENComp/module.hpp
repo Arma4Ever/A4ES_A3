@@ -153,6 +153,15 @@ class GVAR(units3DENComp): GVAR(base) {
             ATTRIBUTE_LOCAL;
         };
 
+        class GVAR(lambsRadio): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(units3DENComp_Attributes_lambsRadio);
+            tooltip = CSTRING(units3DENComp_Attributes_lambsRadio_tooltip);
+            property = QGVAR(lambsRadio);
+            defaultValue = "false";
+            GVAR(observeValue) = 0;
+            ATTRIBUTE_LOCAL;
+        };
+
         class GVAR(defenderBehaviour): GVAR(dynamicCombo) {
             displayName = CSTRING(units3DENComp_Attributes_defenderBehaviour);
             tooltip = CSTRING(units3DENComp_Attributes_defenderBehaviour_tooltip);

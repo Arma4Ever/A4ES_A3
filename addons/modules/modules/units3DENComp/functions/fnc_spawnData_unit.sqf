@@ -12,6 +12,7 @@ params [
   "_forceSpawnLying",
   "_forceDisablePATH",
   "_moduleDefenderBehaviour",
+  "_lambsRadio",
   "_unitPostInit"
 ];
 TRACE_2("units3DENComp_spawnData_unit",_unitData,_group);
@@ -56,7 +57,7 @@ if (_forceDisablePATH) then {
 if (_lambsDangerDisableAI) then {
   _unit setVariable ["lambs_danger_disableAI", true, true];
 };
-if (_lambsDangerDangerRadio) then {
+if (_lambsDangerDangerRadio || _lambsRadio) then {
   _unit setVariable ["lambs_danger_dangerRadio", true, true];
 };
 
