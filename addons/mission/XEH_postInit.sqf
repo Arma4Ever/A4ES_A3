@@ -1,7 +1,11 @@
 #include "script_component.hpp"
 
+// Disable RHS Engine startup script
+RHS_ENGINE_STARTUP_OFF = true;
+
 // Disable CUP lamps check - not pretty but works
 CUP_stopLampCheck = true;
+
 0 spawn {
   CUP_stopLampCheck = true;
   for "_i" from 1 to 10 do {
@@ -11,6 +15,9 @@ CUP_stopLampCheck = true;
   sleep 5;
   // Disable CUP lamps check - make *really* sure
   CUP_stopLampCheck = true;
+
+  // Disable RHS Engine startup script
+  RHS_ENGINE_STARTUP_OFF = true;
 };
 
 // Schedule first cleanup of empty groups

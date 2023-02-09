@@ -4,6 +4,9 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
+// Disable RHS Engine startup script
+RHS_ENGINE_STARTUP_OFF = true;
+
 if (hasInterface) then {
   // Add fix invisible gear pause menu option
   [[LLSTRING(fixInvisibleGear), LLSTRING(fixInvisibleGear_Tooltip)], QGVAR(invisibleGearFix)] call CBA_fnc_addPauseMenuOption;
