@@ -1,9 +1,3 @@
-class RscControlsGroupNoScrollbars;
-class RscStructuredText;
-class RscButtonMenu;
-class RscText;
-class RscEdit;
-
 #define SERVER_STATUS_H 5
 #define SERVER_STATUS_W 20
 
@@ -15,4 +9,15 @@ class RscEdit;
 #define SERVER_STATUS_BUTTONS_Y (SERVER_STATUS_TITLE_H + SERVER_STATUS_CONTENT_H)
 
 class RscStandardDisplay;
+class RscVignette;
+class RscControlsGroupNoScrollbars;
+class RscText;
+class RscStructuredText;
+class RscTitle;
+class RscButtonMenu;
+class RscButtonMenuOK;
+class RscButtonMenuCancel;
+class RscEdit;
+
 #include "RscDisplayMain.hpp"
+#include "RscDisplayA4ESServerToken.hpp"
