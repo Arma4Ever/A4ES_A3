@@ -236,7 +236,7 @@ force force ace_medical_ivFlowRate = 1.5;
 force force ace_medical_limping = 1;
 force force ace_medical_painCoefficient = 1.25;
 force force ace_medical_painUnconsciousChance = 0.5;
-force force ace_medical_playerDamageThreshold = 7;
+force force ace_medical_playerDamageThreshold = 5;
 force force ace_medical_spontaneousWakeUpChance = 0.85;
 force force ace_medical_spontaneousWakeUpEpinephrineBoost = 2.5;
 force force ace_medical_statemachine_AIUnconsciousness = false;
@@ -278,7 +278,7 @@ force force ace_medical_treatment_treatmentTimeCPR = 10;
 force force ace_medical_treatment_treatmentTimeIV = 8;
 force force ace_medical_treatment_treatmentTimeSplint = 8;
 force force ace_medical_treatment_treatmentTimeTourniquet = 2.5;
-force force ace_medical_treatment_woundReopenChance = 0.4;
+force force ace_medical_treatment_woundReopenChance = 0.6;
 force force ace_medical_treatment_woundStitchTime = 5;
 
 // ACE Nightvision
