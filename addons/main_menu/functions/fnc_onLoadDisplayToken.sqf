@@ -33,20 +33,20 @@ _ctrlButtonOk setVariable [QGVAR(ctrlLoadingText), _ctrlLoadingText];
 
 private _test = "a4es_common" callExtension "test";
 if (_test != "true") exitWith {
-	_ctrlEditToken ctrlShow false;
-	_ctrlEditLabel ctrlShow false;
-	_ctrlButtonOk ctrlShow false;
-	_ctrlButtonCancel ctrlShow false;
-	_ctrlSubtext ctrlShow false;
-	_ctrlLoadingText ctrlShow true;
-	_ctrlLoadingText ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'><t color='#e01709'>Błąd odpowiedzi rozszerzenia ""a4es_common"".</t><br/>Upewnij się, że Battleye jest wyłączony a mody poprawnie zainstalowane.</t>";
+    _ctrlEditToken ctrlShow false;
+    _ctrlEditLabel ctrlShow false;
+    _ctrlButtonOk ctrlShow false;
+    _ctrlButtonCancel ctrlShow false;
+    _ctrlSubtext ctrlShow false;
+    _ctrlLoadingText ctrlShow true;
+    _ctrlLoadingText ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'><t color='#e01709'>Błąd odpowiedzi rozszerzenia ""a4es_common"".</t><br/>Upewnij się, że Battleye jest wyłączony a mody poprawnie zainstalowane.</t>";
 };
 
 _ctrlSubtext ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'>Podaj swój token weryfikacyjny. Możesz go wygenerować na forum w panelu gracza, <a href='https://forum.arma4ever.pl/playercp#/server'>zakładka serwer</a>.</t>";
 
 _ctrlButtonCancel ctrlAddEventHandler ["buttonClick", {
-	(uiNamespace getVariable [QGVAR(RscDisplayA4ESServerToken), displayNull]) closeDisplay 2;
+    (uiNamespace getVariable [QGVAR(RscDisplayA4ESServerToken), displayNull]) closeDisplay 2;
 }];
 _ctrlButtonOk ctrlAddEventHandler ["buttonClick", {
-	_this call (uiNamespace getVariable QFUNC(joinClick));
+    _this call (uiNamespace getVariable QFUNC(joinClick));
 }];

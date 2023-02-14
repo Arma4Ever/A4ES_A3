@@ -32,20 +32,20 @@ if (isNull (uiNamespace getVariable [QGVAR(RscDisplayA4ESServerToken), displayNu
 
 // Success
 if (_code == 1) exitWith {
-	private _resultArray = parseSimpleArray _result;
+    private _resultArray = parseSimpleArray _result;
 
-	_ctrlLoadingText ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'><t color='#1ad40d'>Weryfikacja poprawna.</t></t>";
+    _ctrlLoadingText ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'><t color='#1ad40d'>Weryfikacja poprawna.</t></t>";
 
-	profileNamespace setVariable [QGVAR(actkn), _resultArray deleteAt 3];
-	saveProfileNamespace;
+    profileNamespace setVariable [QGVAR(actkn), _resultArray deleteAt 3];
+    saveProfileNamespace;
 
-	// Update info spotlight
-	if (uiNamespace getVariable [QGVAR(spotlightInfoError), false]) then {
-		(findDisplay 0) call (uiNamespace getVariable QFUNC(updateInfoSpotlight));
-	};
+    // Update info spotlight
+    if (uiNamespace getVariable [QGVAR(spotlightInfoError), false]) then {
+        (findDisplay 0) call (uiNamespace getVariable QFUNC(updateInfoSpotlight));
+    };
 
-	(uiNamespace getVariable [QGVAR(RscDisplayA4ESServerToken), displayNull]) closeDisplay 1;
-	connectToServer _resultArray;
+    (uiNamespace getVariable [QGVAR(RscDisplayA4ESServerToken), displayNull]) closeDisplay 1;
+    connectToServer _resultArray;
 };
 
 _ctrlLoadingText ctrlShow false;
@@ -57,19 +57,19 @@ _ctrlSubtext ctrlShow true;
 
 // Error
 if (_code == 2) exitWith {
-	_ctrlSubtext ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'><t color='#e01709'>Weryfikacja nie powiodła się.</t><br />Wygeneruj <a href='https://forum.arma4ever.pl/playercp#/server'>na forum</a> nowy token i spróbuj ponownie.</t>";
-	profileNamespace setVariable [QGVAR(actkn), ""];
-	saveProfileNamespace;
+    _ctrlSubtext ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'><t color='#e01709'>Weryfikacja nie powiodła się.</t><br />Wygeneruj <a href='https://forum.arma4ever.pl/playercp#/server'>na forum</a> nowy token i spróbuj ponownie.</t>";
+    profileNamespace setVariable [QGVAR(actkn), ""];
+    saveProfileNamespace;
 };
 
 // Only cadre is allowed to enter
 if (_code == 3) exitWith {
-	_ctrlSubtext ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'><t color='#e01709'>Serwer jest tymczasowo dostępny tylko dla członków kadry.</t><br />Po więcej informacji zgłoś się do dowolnego członka kadry.</t>";
+    _ctrlSubtext ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'><t color='#e01709'>Serwer jest tymczasowo dostępny tylko dla członków kadry.</t><br />Po więcej informacji zgłoś się do dowolnego członka kadry.</t>";
 };
 
 // Only selected users are allowed to enter
 if (_code == 4) exitWith {
-	_ctrlSubtext ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'><t color='#e01709'>Serwer jest tymczasowo dostępny tylko dla wybranej grupy osób.</t><br />Po więcej informacji zgłoś się do dowolnego członka kadry.</t>";
+    _ctrlSubtext ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'><t color='#e01709'>Serwer jest tymczasowo dostępny tylko dla wybranej grupy osób.</t><br />Po więcej informacji zgłoś się do dowolnego członka kadry.</t>";
 };
 
 // Unknown code
