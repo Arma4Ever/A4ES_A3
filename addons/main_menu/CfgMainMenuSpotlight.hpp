@@ -1,14 +1,5 @@
 
 class CfgMainMenuSpotlight {
-    class GVAR(server1) {
-        text = CSTRING(SpotlightJoin);
-        textIsQuote = 0;
-        picture = QUOTE(\z\a4es\addons\main_menu\data\a4e_join_picture.paa);
-        action = QUOTE(_this call (uiNamespace getVariable QQFUNC(join)));
-        actionText = CSTRING(SpotlightHeader);
-        condition = QUOTE(true);
-    };
-
     delete ApexProtocol;
     delete BootCamp;
     delete EastWind;

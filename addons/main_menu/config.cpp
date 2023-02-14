@@ -15,5 +15,44 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+
+class RscStandardDisplay;
+class RscVignette;
+class RscControlsGroupNoScrollbars;
+class RscText;
+class RscStructuredText;
+class RscTitle;
+class RscPicture;
+class RscPictureKeepAspect;
+class RscVideo;
+class RscButton;
+class RscButtonMenu;
+class RscButtonMenuOK;
+class RscButtonMenuCancel;
+class RscEdit;
+
+class RscMainMenuSpotlight: RscControlsGroupNoScrollbars {
+	class Controls {
+		class GroupPicture: RscControlsGroupNoScrollbars {
+			class Controls {
+				class Picture: RscPictureKeepAspect {};
+				class Video: RscVideo {};
+			};
+		};
+		class GroupHover: RscControlsGroupNoScrollbars {
+			class Controls {
+				class Overlay: RscPicture {};
+				class LineLeft: RscText {};
+				class LineRight: LineLeft {};
+				class LineTop: LineLeft {};
+				class LineBottom: LineTop {};
+			};
+		};
+		class TextBackground: RscPicture {};
+		class Text: RscStructuredText {};
+		class Button: RscButton {};
+	};
+};
+
 #include "CfgMainMenuSpotlight.hpp"
 #include "gui.hpp"

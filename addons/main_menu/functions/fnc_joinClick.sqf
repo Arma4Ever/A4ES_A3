@@ -4,21 +4,17 @@
  * Join dialog button handler
  */
 
-params ["_ctrlButtonOk", ["_token", ""]];
+params ["_ctrlButtonOk"];
+TRACE_1("joinClick", _ctrlButtonOk);
+
+// Exit if dialog closed
+if (isNull (uiNamespace getVariable [QGVAR(RscDisplayA4ESServerToken), displayNull])) exitWith {};
 
 private _ctrlEditToken = _ctrlButtonOk getVariable [QGVAR(ctrlEditToken), controlNull];
 private _ctrlEditLabel = _ctrlButtonOk getVariable [QGVAR(ctrlEditLabel), controlNull];
 private _ctrlSubtext = _ctrlButtonOk getVariable [QGVAR(ctrlSubtext), controlNull];
 private _ctrlButtonCancel = _ctrlButtonOk getVariable [QGVAR(ctrlButtonCancel), controlNull];
 private _ctrlLoadingText = _ctrlButtonOk getVariable [QGVAR(ctrlLoadingText), controlNull];
-
-private _method = "connectAccessToken";
-
-// If no access token, user has typed ID token
-if (_token == "") then {
-	_method = "connectIDToken";
-	_token = ctrlText _ctrlEditToken;
-};
 
 _ctrlEditToken ctrlShow false;
 _ctrlEditLabel ctrlShow false;
@@ -28,10 +24,11 @@ _ctrlSubtext ctrlShow false;
 _ctrlLoadingText ctrlShow true;
 _ctrlLoadingText ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'>Weryfikacja...</t>";
 
-//sleep 0.1;
-
-private _response = "a4es_common" callExtension [_method, [A4ES_C_G, _token, profileNameSteam]];
+private _response = "a4es_common" callExtension ["connectIDToken", [A4ES_C_G, ctrlText _ctrlEditToken, profileNameSteam]];
 _response params ["_result", "_code"];
+
+// Exit if dialog closed
+if (isNull (uiNamespace getVariable [QGVAR(RscDisplayA4ESServerToken), displayNull])) exitWith {};
 
 // Success
 if (_code == 1) exitWith {
@@ -39,15 +36,15 @@ if (_code == 1) exitWith {
 
 	_ctrlLoadingText ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'><t color='#1ad40d'>Weryfikacja poprawna.</t></t>";
 
-	//sleep 0.5;
+	profileNamespace setVariable [QGVAR(actkn), _resultArray deleteAt 3];
+	saveProfileNamespace;
 
-	if (_method == "connectIDToken") then {
-		private _token = _resultArray deleteAt 3;
-		profileNamespace setVariable [QGVAR(actkn), _token];
-		saveProfileNamespace;
+	// Update info spotlight
+	if (uiNamespace getVariable [QGVAR(spotlightInfoError), false]) then {
+		(findDisplay 0) call (uiNamespace getVariable QFUNC(updateInfoSpotlight));
 	};
 
-	(_ctrlButtonOk getVariable [QGVAR(display), displayNull]) closeDisplay 1;
+	(uiNamespace getVariable [QGVAR(RscDisplayA4ESServerToken), displayNull]) closeDisplay 1;
 	connectToServer _resultArray;
 };
 

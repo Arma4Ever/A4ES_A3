@@ -1,5 +1,7 @@
 class RscDisplayA4ESServerToken: RscStandardDisplay {
     idd = -1;
+    onLoad = QUOTE(_this call (uiNamespace getVariable QQFUNC(onLoadDisplayToken)));
+    onUnload = QUOTE(_this call (uiNamespace getVariable QQFUNC(onUnloadDisplayToken)));
 
 	class controlsbackground {
 		class Vignette: RscVignette {

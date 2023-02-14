@@ -45,6 +45,46 @@ namespace a4es_common
             [MarshalAs(UnmanagedType.LPStr)] string function,
             [MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.LPStr, SizeParamIndex = 4)] string[] args, int argCount)
         {
+            if (function == "playerInfo")
+            {
+                string key = args[0].Trim('"');
+                if (key != EXT_KEY)
+                {
+                    output.Append("null");
+                    return 9;
+                }
+
+                Dictionary<string, string> data = new Dictionary<string, string> { };
+
+                data.Add("key", API_KEY);
+                data.Add("token", args[1].Trim('"'));
+                data.Add("profile", args[2].Trim('"'));
+                data.Add("device", A4ESCommonExtension.GetDeviceId());
+
+                FormUrlEncodedContent content = new FormUrlEncodedContent(data);
+
+                HttpClient client = new HttpClient();
+
+                string apiUrl = API_URL + "player";
+
+                Task<HttpResponseMessage> taskPost = Task.Run(() => client.PostAsync(apiUrl, content));
+                taskPost.Wait();
+                HttpResponseMessage response = taskPost.Result;
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    int code = (int) response.StatusCode;
+                    output.Append(string.Format("error {0}", code));
+                    return 2;
+                }
+
+                Task<string> taskRead = Task.Run(() => response.Content.ReadAsStringAsync());
+                taskRead.Wait();
+                string result = taskRead.Result;
+
+                output.Append(result);
+                return 1;
+            }
 
             if (function == "connectAccessToken" || function == "connectIDToken")
             {
@@ -66,7 +106,7 @@ namespace a4es_common
 
                 HttpClient client = new HttpClient();
 
-                string apiUrl = API_URL + ((function == "connectAccessToken") ? "access" : "id");
+                string apiUrl = API_URL + "connect/" + ((function == "connectAccessToken") ? "access" : "id");
 
                 Task<HttpResponseMessage> taskPost = Task.Run(() => client.PostAsync(apiUrl, content));
                 taskPost.Wait();
@@ -75,7 +115,7 @@ namespace a4es_common
                 if (!response.IsSuccessStatusCode)
                 {
                     int code = (int) response.StatusCode;
-                    output.Append("error");
+                    output.Append(string.Format("error {0}", code));
 
                     // Only cadre is allowed to enter
                     if (code == 409)

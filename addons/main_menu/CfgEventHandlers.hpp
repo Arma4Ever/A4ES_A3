@@ -8,3 +8,9 @@ class Extended_PreInit_EventHandlers {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
     };
 };
+
+class Extended_DisplayLoad_EventHandlers {
+    class RscDisplayMain {
+        ADDON = QUOTE(_this call (uiNamespace getVariable QQFUNC(onLoadDisplayMain)));
+    };
+};
