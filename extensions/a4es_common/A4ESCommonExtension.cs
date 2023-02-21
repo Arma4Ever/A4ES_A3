@@ -9,6 +9,7 @@ using System.IO;
 using RGiesecke.DllExport;
 using System.Net.Http;
 using System.Net.NetworkInformation;
+using System.Net;
 
 namespace a4es_common
 {
@@ -22,7 +23,7 @@ namespace a4es_common
         [DllExport("RVExtensionVersion", CallingConvention = CallingConvention.Winapi)]
         public static void RvExtensionVersion(StringBuilder output, int outputSize)
         {
-            output.Append("A4ESCommonExtension v1.0.0");
+            output.Append("A4ESCommonExtension v1.1.0");
             return;
         }
 
@@ -62,27 +63,29 @@ namespace a4es_common
                 data.Add("device", A4ESCommonExtension.GetDeviceId());
 
                 FormUrlEncodedContent content = new FormUrlEncodedContent(data);
-
-                HttpClient client = new HttpClient();
-
                 string apiUrl = API_URL + "player";
 
-                Task<HttpResponseMessage> taskPost = Task.Run(() => client.PostAsync(apiUrl, content));
-                taskPost.Wait();
-                HttpResponseMessage response = taskPost.Result;
+                Task<Array> taskRequest = Task.Run(() => A4ESCommonExtension.MakeRequest(apiUrl, content));
+                taskRequest.Wait();
+                Array requestSummary = taskRequest.Result;
 
-                if (!response.IsSuccessStatusCode)
+                string success = (string) requestSummary.GetValue(0);
+                string code = (string) requestSummary.GetValue(1);
+                string message = (string) requestSummary.GetValue(2);
+
+                output.Append(message);
+
+                if (success != "true")
                 {
-                    int code = (int) response.StatusCode;
-                    output.Append(string.Format("error {0}", code));
-                    return 2;
+                    if (code == "-1")
+                    {
+                        return 9;
+                    } else
+                    {
+                        return 2;
+                    }
                 }
 
-                Task<string> taskRead = Task.Run(() => response.Content.ReadAsStringAsync());
-                taskRead.Wait();
-                string result = taskRead.Result;
-
-                output.Append(result);
                 return 1;
             }
 
@@ -103,45 +106,84 @@ namespace a4es_common
                 data.Add("device", A4ESCommonExtension.GetDeviceId());
 
                 FormUrlEncodedContent content = new FormUrlEncodedContent(data);
-
-                HttpClient client = new HttpClient();
-
                 string apiUrl = API_URL + "connect/" + ((function == "connectAccessToken") ? "access" : "id");
 
-                Task<HttpResponseMessage> taskPost = Task.Run(() => client.PostAsync(apiUrl, content));
-                taskPost.Wait();
-                HttpResponseMessage response = taskPost.Result;
+                Task<Array> taskRequest = Task.Run(() => A4ESCommonExtension.MakeRequest(apiUrl, content));
+                taskRequest.Wait();
+                Array requestSummary = taskRequest.Result;
 
-                if (!response.IsSuccessStatusCode)
+                string success = (string) requestSummary.GetValue(0);
+                string code = (string) requestSummary.GetValue(1);
+                string message = (string) requestSummary.GetValue(2);
+
+                output.Append(message);
+
+                if (success != "true")
                 {
-                    int code = (int) response.StatusCode;
-                    output.Append(string.Format("error {0}", code));
+                    if (code == "-1")
+                    {
+                        return 9;
+                    }
 
                     // Only cadre is allowed to enter
-                    if (code == 409)
+                    if (code == "409")
                     {
                         return 3;
                     }
 
                     // Only selected users are allowed to enter
-                    if (code == 410)
+                    if (code == "410")
                     {
                         return 4;
                     }
-
+                    
                     return 2;
                 }
 
-                Task<string> taskRead = Task.Run(() => response.Content.ReadAsStringAsync());
-                taskRead.Wait();
-                string result = taskRead.Result;
-
-                output.Append(result);
                 return 1;
             }
 
             output.Append("null");
             return 0;
+        }
+        
+        async public static Task<Array> MakeRequest(string apiUrl, FormUrlEncodedContent content)
+        {
+            HttpClient client = new HttpClient();
+            bool success = true;
+            int code = -1;
+            string result = "";
+
+            try
+            {
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                HttpResponseMessage response = await client.PostAsync(apiUrl, content);
+
+                code = (int)response.StatusCode;
+                success = response.IsSuccessStatusCode;
+
+                if (success)
+                {
+                    result = await response.Content.ReadAsStringAsync();
+                } else
+                {
+                    result = string.Format("error {0}", code);
+                }
+
+            } catch (Exception e)
+            {
+                File.WriteAllText("a4es_common_x64_error.log", e.ToString());
+                success = false;
+                result = e.Message;
+            }
+
+            string[] requestSummary = {
+                success ? "true" : "false",
+                string.Format("{0}", code),
+                result
+            };
+
+            return requestSummary;
         }
 
         static string HashString(string text)
