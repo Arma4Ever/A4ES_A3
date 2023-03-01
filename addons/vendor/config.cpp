@@ -9,8 +9,6 @@ class CfgPatches {
         requiredAddons[] = {
             "a4es_common",
             "A3_Weapons_F_Mark_LongRangeRifles_DMR_02",
-            "vurtual_seat",
-            "vurtual_ship",
             "3DEN_Globe"
         };
         author = ECSTRING(main,Author);
@@ -25,10 +23,8 @@ class Mode_SemiAuto;
 #include "Cfg3DEN.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgCloudlets.hpp"
-#include "CfgFunctions.hpp"
 #include "CfgLights.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgSoundEffects.hpp"
-#include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "effects.hpp"
