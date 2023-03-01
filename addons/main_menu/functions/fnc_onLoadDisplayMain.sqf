@@ -7,6 +7,15 @@
 params ["_display"];
 TRACE_1("onLoadDisplayMain", _display);
 
+// Disable SOG main menu and multiplayer menu
+private _emmMainMenuEnabled = profileNamespace getVariable ["emm_mainmenu_enabled", true];
+private _emmMPMainMenuEnabled = profileNamespace getVariable ["emm_multiplayermenu_enabled", true];
+if (_emmMainMenuEnabled || _emmMPMainMenuEnabled) then {
+	profileNamespace setVariable ["emm_mainmenu_enabled", false];
+    profileNamespace setVariable ["emm_multiplayermenu_enabled", false];
+	saveProfileNamespace;
+};
+
 /* Spotlight info box */
 
 _this call (uiNamespace getVariable QFUNC(updateInfoSpotlight));
