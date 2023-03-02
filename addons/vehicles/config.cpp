@@ -6,7 +6,13 @@ class CfgPatches {
         units[] = {
             "A4ES_Plane_Su35",
             "A4ES_Plane_J10",
-            "A4ES_Plane_Jak135"
+            "A4ES_Plane_Jak135",
+            "A4ES_Kamikaze_Drone_B",
+            "A4ES_Kamikaze_Drone_O",
+            "A4ES_Kamikaze_Drone_I",
+            "A4ES_Combat_Drone_B",
+            "A4ES_Combat_Drone_O",
+            "A4ES_Combat_Drone_I"
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
