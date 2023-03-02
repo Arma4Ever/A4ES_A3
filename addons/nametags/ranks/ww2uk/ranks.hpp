@@ -3,13 +3,13 @@ class WW2UK_szeregowy {
     icon = QPATHTOF(ranks\ww2uk\private_gs.paa);
     importance = 0;
  };
-class WW2UK_st_szeregowy {
-    name = "St. Szeregowy";
+class WW2UK_kapral {
+    name = "Kapral";
     icon = QPATHTOF(ranks\ww2uk\lanceCorporal_gs.paa);
     importance = 1;
  };
-class WW2UK_kapral {
-    name = "Kapral";
+class WW2UK_st_kapral {
+    name = "St. Kapral";
     icon = QPATHTOF(ranks\ww2uk\corporal_gs.paa);
     importance = 2;
  };
