@@ -131,6 +131,9 @@
     <Key ID="STR_A4ES_NameTags_RankCategory_CDF">
       <Polish>Siły Obrony Czernorusi</Polish>
     </Key>
+    <Key ID="STR_A4ES_NameTags_RankCategory_UKR">
+      <Polish>Siły Zbrojne Ukrainy</Polish>
+    </Key>
   </Package>
   <Package name="NameTags_Ranks">
     <Key ID="STR_A4ES_NameTags_Ranks_Sierzant">
@@ -141,6 +144,9 @@
     </Key>
     <Key ID="STR_A4ES_NameTags_Ranks_St_Sierzant">
       <Polish>St. Sierżant</Polish>
+    </Key>
+    <Key ID="STR_A4ES_NameTags_Ranks_Sierzant_Sztabowy">
+      <Polish>Sierżant Sztabowy</Polish>
     </Key>
     <Key ID="STR_A4ES_NameTags_Ranks_Ml_Chorazy">
       <Polish>Mł. Chorąży</Polish>
