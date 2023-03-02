@@ -27,6 +27,9 @@ class GVAR(ranks_categories) {
     class cdf {
         displayName = CSTRING(RankCategory_CDF);
     };
+    class ukr {
+        displayName = CSTRING(RankCategory_UKR);
+    };
     class ww2us {
         displayName = "[WW2] US Army";
     };
@@ -63,6 +66,7 @@ class GVAR(ranks) {
     #include "ranks\usaf\ranks.hpp"
     #include "ranks\ru\ranks.hpp"
     #include "ranks\cdf\ranks.hpp"
+    #include "ranks\ukr\ranks.hpp"
     #include "ranks\ww2us\ranks.hpp"
     #include "ranks\ww2usmc\ranks.hpp"
     #include "ranks\ww2uk\ranks.hpp"
