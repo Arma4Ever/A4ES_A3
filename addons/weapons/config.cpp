@@ -4,9 +4,17 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {};
-        weapons[] = {};
+        weapons[] = {
+            "optic_AMS_NVG",
+            "optic_KHS_blk_NVG",
+            "optic_LRPS_NVG",
+            "optic_DMS_NVG",
+            "optic_SOS_NVG"
+        };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
+            "A3_Weapons_F_Acc",
+            "A3_Weapons_F_Mark_Acc",
             "a4es_common",
             "ace_advanced_ballistics",
             "ace_reload",
@@ -19,6 +27,7 @@ class CfgPatches {
     };
 };
 
+#include "CfgWeapons.hpp"
 /*
 #include "CfgEventHandlers.hpp"
 
