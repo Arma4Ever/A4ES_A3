@@ -4,6 +4,10 @@
     <Key ID="STR_A4ES_Squadradar_Settings_Addon">
       <English>A4ES Squad Radar</English>
     </Key>
+    <Key ID="STR_A4ES_Squadradar_Chat_RadarDisabledByMission">
+      <English>[A4ES] Squad radar has been disabled in mission settings!</English>
+      <Polish>[A4ES] Radar drużynowy został wyłączony w ustawieniach misji!</Polish>
+    </Key>
     <Key ID="STR_A4ES_Squadradar_Settings_GUI">
       <English>GUI</English>
       <Polish>Wygląd</Polish>
