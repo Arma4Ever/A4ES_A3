@@ -68,7 +68,7 @@ class CfgVehicles {
 
     class B_UAV_01_F;
     class A4ES_Kamikaze_Drone_B: B_UAV_01_F {
-        displayNam = "Mavic 3 - C4";
+        displayName = "Mavic 3 - C4";
         ExplosionShielding = 30;
         Fuelexplosionpower = 120;
     };
