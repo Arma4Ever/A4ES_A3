@@ -25,7 +25,7 @@ namespace a4es_editor
         [DllExport("RVExtensionVersion", CallingConvention = CallingConvention.Winapi)]
         public static void RvExtensionVersion(StringBuilder output, int outputSize)
         {
-            output.Append("A4ESEditorExtension v1.0.0");
+            output.Append("A4ESEditorExtension v1.0.1");
             return;
         }
 
@@ -160,7 +160,6 @@ namespace a4es_editor
 
                 try
                 {
-
                     File.WriteAllText(MISSION_PATH + SIMPLE_OBJECTS_LOG_FILE_NAME, String.Format("Saved modules: {0}", SIMPLE_OBJECTS_MODULES_LIST.Count()) + Environment.NewLine);
                     File.AppendAllText(MISSION_PATH + SIMPLE_OBJECTS_LOG_FILE_NAME, "==========" + Environment.NewLine);
                 }
@@ -171,47 +170,56 @@ namespace a4es_editor
                     return 3;
                 }
 
-                SIMPLE_OBJECTS_MODULES_LIST.ForEach(delegate (List<string> objectsList)
+                if (SIMPLE_OBJECTS_MODULES_LIST.Count() > 0)
                 {
-                    string moduleText = "[[";
-                    string postInit = objectsList.Last();
-                    objectsList.RemoveAt(objectsList.Count - 1);
-
-                    int moduleObjectsCount = objectsList.Count();
-                    objectsCount += moduleObjectsCount;
-
-                    try
+                    SIMPLE_OBJECTS_MODULES_LIST.ForEach(delegate (List<string> objectsList)
                     {
-                        File.WriteAllText(MISSION_PATH + SIMPLE_OBJECTS_FILE_NAME, "\"[" + fileText + "]\"");
-                        File.AppendAllText(MISSION_PATH + SIMPLE_OBJECTS_LOG_FILE_NAME, String.Format("Module saved objects: {0}", moduleObjectsCount) + Environment.NewLine);
-                        File.AppendAllText(MISSION_PATH + SIMPLE_OBJECTS_LOG_FILE_NAME, String.Format("Module post init: {0}", postInit) + Environment.NewLine);
-                        File.AppendAllText(MISSION_PATH + SIMPLE_OBJECTS_LOG_FILE_NAME, "----------" + Environment.NewLine);
-                    }
-                    catch (Exception e)
-                    {
-                        File.WriteAllText("a4es_editor_x64_error.log", e.ToString());
-                        output.Append("false");
-                    }
+                        if (objectsList.Count() > 1)
+                        {
+                            string moduleText = "[[";
+                            string postInit = objectsList.Last();
+                            objectsList.RemoveAt(objectsList.Count - 1);
 
-                    objectsList.ForEach(delegate (string simpleObject) {
-                        moduleText += simpleObject;
-                        moduleText += (",");
+                            int moduleObjectsCount = objectsList.Count();
+                            objectsCount += moduleObjectsCount;
+
+                            try
+                            {
+                                File.WriteAllText(MISSION_PATH + SIMPLE_OBJECTS_FILE_NAME, "\"[" + fileText + "]\"");
+                                File.AppendAllText(MISSION_PATH + SIMPLE_OBJECTS_LOG_FILE_NAME, String.Format("Module saved objects: {0}", moduleObjectsCount) + Environment.NewLine);
+                                File.AppendAllText(MISSION_PATH + SIMPLE_OBJECTS_LOG_FILE_NAME, String.Format("Module post init: {0}", postInit) + Environment.NewLine);
+                                File.AppendAllText(MISSION_PATH + SIMPLE_OBJECTS_LOG_FILE_NAME, "----------" + Environment.NewLine);
+                            }
+                            catch (Exception e)
+                            {
+                                File.WriteAllText("a4es_editor_x64_error.log", e.ToString());
+                                output.Append("false");
+                            }
+
+                            objectsList.ForEach(delegate (string simpleObject) {
+                                moduleText += simpleObject;
+                                moduleText += (",");
+                            });
+
+                            // Remove last comma
+                            moduleText = moduleText.Remove(moduleText.Length - 1);
+
+                            moduleText += ("],\"" + postInit + "\"],");
+                            fileText += moduleText;
+                        }
                     });
-
-                    // Remove last comma
-                    moduleText = moduleText.Remove(moduleText.Length - 1);
-
-                    moduleText += ("],\"" + postInit + "\"],");
-                    fileText += moduleText;
-                });
+                }
 
                 // Clear memory
                 SIMPLE_OBJECTS_LIST = new List<string>();
                 SIMPLE_OBJECTS_MODULES_LIST = new List<List<string>>();
 
                 // Remove last comma
-                fileText = fileText.Remove(fileText.Length - 1);
-
+                if (fileText != "")
+                {
+                    fileText = fileText.Remove(fileText.Length - 1);
+                }
+                
                 try
                 {
                     File.WriteAllText(MISSION_PATH + SIMPLE_OBJECTS_FILE_NAME, "[" + fileText + "]");
