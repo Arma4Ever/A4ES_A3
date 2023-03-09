@@ -41,8 +41,20 @@ private _vehiclesData = _vehiclesList apply {_x call FUNC(units3DENComp_saveData
 private _groupsData = _groupsList apply {[_x, _vehiclesList, _vehiclesCrewList] call FUNC(units3DENComp_saveData_group)};
 
 _logic set3DENAttribute [QGVAR(data), str [_vehiclesData, _groupsData]];
-_logic set3DENAttribute [QGVAR(dataStats), [_vehiclesData, _groupsData] call FUNC(units3DENComp_getDataStats)];
-_logic set3DENAttribute [QGVAR(dataSaved), true];
 
+private _dataStats = [_vehiclesData, _groupsData] call FUNC(units3DENComp_getDataStats);
+_logic set3DENAttribute [QGVAR(dataStats), format [
+  "%1: %2
+%3: %4
+%5: %6
+%7: %8",
+  LLSTRING(units3DENComp_DataStats_Vehicles), _dataStats # 0,
+  LLSTRING(units3DENComp_DataStats_Groups), _dataStats # 1,
+  LLSTRING(units3DENComp_DataStats_Units), _dataStats # 2,
+  LLSTRING(units3DENComp_DataStats_Waypoints), _dataStats # 3
+]];
+_logic set3DENAttribute [QGVAR(dataStatsArr), str _dataStats];
+
+_logic set3DENAttribute [QGVAR(dataSaved), true];
 delete3DENEntities _groupsList;
 delete3DENEntities _vehiclesList;

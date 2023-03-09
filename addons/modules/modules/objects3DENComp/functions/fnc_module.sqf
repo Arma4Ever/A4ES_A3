@@ -19,12 +19,14 @@ if (
 
   if ((_mode isEqualTo 0) && _dataSaved) exitWith {
     _logic call FUNC(objects3DENComp_restoreData);
+    0 call FUNC(objects3DENComp_saveLocalObjectsData);
   };
   if ((_mode isEqualTo 0) && _previewObjects) exitWith {
     _logic call FUNC(objects3DENComp_cleanPreview);
   };
   if ((_mode isEqualTo 1) && !_dataSaved) exitWith {
     _logic call FUNC(objects3DENComp_saveData);
+    0 call FUNC(objects3DENComp_saveLocalObjectsData);
   };
   if ((_mode isEqualTo 1) && _dataSaved && !_previewObjects) exitWith {
     _logic call FUNC(objects3DENComp_spawnPreview);
@@ -34,6 +36,7 @@ if (
 if (_mode isEqualTo "unregisteredFromWorld3DEN") exitWith {
   _input params ["_logic"];
   _logic call FUNC(objects3DENComp_cleanPreview);
+  0 call FUNC(objects3DENComp_saveLocalObjectsData);
 };
 
 // Exit if module executed inside editor, not on server or not in init mode
@@ -50,6 +53,12 @@ LOG('Starting init of EXEC_MODULE_NAME.');
 
 if (is3DENPreview) then {
   [_logic, true] call EFUNC(debug,updateModuleStatus);
+};
+
+private _spawnLocally = _logic getVariable [QGVAR(spawnLocally), false];
+if (_spawnLocally) exitWith {
+  TRACE_1("objects3DENComp_module abort: module spawns objects locally",_spawnLocally);
+  deleteVehicle _logic;
 };
 
 private _mode = _logic getVariable [QGVAR(mode), 0];
@@ -76,10 +85,9 @@ if (_logic getVariable [QGVAR(addObjectPostInit), false]) then {
 };
 
 private _spawnAsSuperSimple = _logic getVariable [QGVAR(spawnAsSuperSimple), true];
-private _spawnLocally = _logic getVariable [QGVAR(spawnLocally), false];
 
 // Add objects to list for spawn
-GVAR(3DENCompObjects) pushBack [_data, _objectPostInit, _spawnAsSuperSimple, _spawnLocally];
+GVAR(3DENCompObjects) pushBack [_data, _objectPostInit, _spawnAsSuperSimple];
 
 // Delete module
 deleteVehicle _logic;

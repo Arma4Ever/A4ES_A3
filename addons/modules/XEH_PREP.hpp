@@ -62,17 +62,13 @@ PREP(validateEntity);
 
 #include "modules\addAction\prep.hpp"
 #include "modules\addCuratorModule\prep.hpp"
-/*
-#include "modules\addDialogue\prep.hpp"
-#include "modules\addDialogueAnswer\prep.hpp"
-#include "modules\addDialogueOption\prep.hpp"
-*/
+// #include "modules\addDialogue\prep.hpp"
+// #include "modules\addDialogueAnswer\prep.hpp"
+// #include "modules\addDialogueOption\prep.hpp"
 #include "modules\aiNightvision\prep.hpp"
 #include "modules\ambientAnimals\prep.hpp"
 #include "modules\ambientFlyby\prep.hpp"
-/*
 #include "modules\bodiesSettings\prep.hpp"
-*/
 #include "modules\coverMap\prep.hpp"
 #include "modules\createLogicFlag\prep.hpp"
 #include "modules\createTask\prep.hpp"
@@ -95,10 +91,10 @@ PREP(validateEntity);
 #include "modules\radioJammer\prep.hpp"
 #include "modules\registerArtilleryUnits\prep.hpp"
 #include "modules\setLogicFlagValue\prep.hpp"
-#include "modules\setSideDefaultDialogue\prep.hpp"
+// #include "modules\setSideDefaultDialogue\prep.hpp"
 #include "modules\setTaskState\prep.hpp"
 #include "modules\setTimeMultiplier\prep.hpp"
-#include "modules\setUnitDialogue\prep.hpp"
+// #include "modules\setUnitDialogue\prep.hpp"
 #include "modules\showMarker\prep.hpp"
 #include "modules\showMessage\prep.hpp"
 #include "modules\switchLights\prep.hpp"

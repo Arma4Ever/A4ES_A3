@@ -25,6 +25,14 @@ class GVAR(objects3DENComp): GVAR(base) {
             ATTRIBUTE_LOCAL;
         };
 
+        class GVAR(objectsCount): GVAR(dynamicHiddenEdit) {
+            displayName = "objectsCount";
+            tooltip = "objectsCount";
+            property = QGVAR(objectsCount);
+            defaultValue = "'0'";
+            ATTRIBUTE_LOCAL;
+        };
+
         class GVAR(dataSaved): GVAR(dynamicHiddenCheckbox) {
             displayName = "dataSaved";
             tooltip = "dataSaved";
@@ -57,6 +65,7 @@ class GVAR(objects3DENComp): GVAR(base) {
             tooltip = CSTRING(objects3DENComp_Attributes_spawnAsSuperSimple_tooltip);
             property = QGVAR(spawnAsSuperSimple);
             defaultValue = "true";
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(dataSaved)) isNotEqualTo true);
             ATTRIBUTE_LOCAL;
         };
 
@@ -64,7 +73,8 @@ class GVAR(objects3DENComp): GVAR(base) {
             displayName = CSTRING(objects3DENComp_Attributes_spawnLocally);
             tooltip = CSTRING(objects3DENComp_Attributes_spawnLocally_tooltip);
             property = QGVAR(spawnLocally);
-            defaultValue = "false";
+            defaultValue = "true";
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(dataSaved)) isNotEqualTo true);
             ATTRIBUTE_LOCAL;
         };
 
@@ -72,6 +82,7 @@ class GVAR(objects3DENComp): GVAR(base) {
             displayName = CSTRING(objects3DENComp_Attributes_addObjectPostInit);
             tooltip = CSTRING(objects3DENComp_Attributes_addObjectPostInit_tooltip);
             property = QGVAR(addObjectPostInit);
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(dataSaved)) isNotEqualTo true);
             ATTRIBUTE_LOCAL;
         };
 
@@ -82,7 +93,7 @@ class GVAR(objects3DENComp): GVAR(base) {
             property = QGVAR(objectPostInit);
             defaultValue = "''";
             typeName = "STRING";
-            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(addObjectPostInit)) isEqualTo true);
+            GVAR(conditionActive) = QUOTE(((_this getVariable QQGVAR(addObjectPostInit)) isEqualTo true) && ((_this getVariable QQGVAR(dataSaved)) isNotEqualTo true));
             ATTRIBUTE_LOCAL;
         };
 

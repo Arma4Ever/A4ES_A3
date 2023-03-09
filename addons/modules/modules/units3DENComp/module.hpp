@@ -35,6 +35,14 @@ class GVAR(units3DENComp): GVAR(base) {
             ATTRIBUTE_LOCAL;
         };
 
+        class GVAR(dataStatsArr): GVAR(dynamicHiddenEdit) {
+            displayName = "dataStatsArr";
+            tooltip = "dataStatsArr";
+            property = QGVAR(dataStatsArr);
+            defaultValue = "'[]'";
+            ATTRIBUTE_LOCAL;
+        };
+
         class GVAR(mode): GVAR(dynamicToolbox3DENCompMode) {
             displayName = CSTRING(units3DENComp_Attributes_mode);
             tooltip = CSTRING(units3DENComp_Attributes_mode_tooltip);

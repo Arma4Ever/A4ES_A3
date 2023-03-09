@@ -5,14 +5,24 @@
  */
 LOG("spawn3DENCompObjectsLocal");
 
+if !(fileExists "_objects_data.sqf") exitWith {
+  LOG("spawn3DENCompObjectsLocal abort: _objects_data.sqf does not exist");
+};
+
+private _dataArray = parseSimpleArray loadFile "_objects_data.sqf";
+private _count = 0;
+
 {
   _x params ["_data", "_initScript"];
-
   {
-    _x params ["_type", "_posWorld", "_vectors"];
-    private _object = createSimpleObject [_type, _posWorld, true];
+    _x params ["_source", "_posWorld", "_vectors"];
+
+    _object = createSimpleObject [_source, _posWorld, true];
     _object setPosWorld _posWorld;
     _object setVectorDirAndUp _vectors;
-    _object call _initScript;
+    _object call (compile _initScript);
+    _count = _count + 1;
   } forEach _data;
-} forEach _this;
+} forEach _dataArray;
+
+systemChat format ["[A4ES] Stworzono %1 obiektów prostych", _count];
