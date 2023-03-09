@@ -12,9 +12,11 @@ class CfgWeapons {
     };
     class optic_SOS_NVG: optic_SOS {
         displayName = "MOS (NVG)";
-        ACE_NightVision_radBlur=0;
-		ACE_NightVision_blur=0;
-        ACE_NightVision_grain=0;
+
+        ACE_NightVision_radBlur = 0;
+        ACE_NightVision_blur = 0;
+        ACE_NightVision_grain = 0;
+
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
@@ -35,9 +37,11 @@ class CfgWeapons {
     };
     class optic_DMS_NVG: optic_DMS {
         displayName = "Burris XTR II (NVG)";
-        ACE_NightVision_radBlur=0;
-		ACE_NightVision_blur=0;
-        ACE_NightVision_grain=0;
+
+        ACE_NightVision_radBlur = 0;
+        ACE_NightVision_blur = 0;
+        ACE_NightVision_grain = 0;
+
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
@@ -57,9 +61,11 @@ class CfgWeapons {
     };
     class optic_LRPS_NVG: optic_LRPS {
         displayName = "Nightforce NXS (NVG)";
-        ACE_NightVision_radBlur=0;
-		ACE_NightVision_blur=0;
-        ACE_NightVision_grain=0;
+
+        ACE_NightVision_radBlur = 0;
+        ACE_NightVision_blur = 0;
+        ACE_NightVision_grain = 0;
+
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
@@ -80,9 +86,11 @@ class CfgWeapons {
     class optic_KHS_blk: optic_KHS_base {};
     class optic_KHS_blk_NVG: optic_KHS_blk {
         displayName = "KAHLES Helia (NVG)";
-        ACE_NightVision_radBlur=0;
-		ACE_NightVision_blur=0;
-        ACE_NightVision_grain=0;
+
+        ACE_NightVision_radBlur = 0;
+        ACE_NightVision_blur = 0;
+        ACE_NightVision_grain = 0;
+        
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class KHS: KHS {
@@ -104,9 +112,11 @@ class CfgWeapons {
     class optic_AMS: optic_AMS_base {};
     class optic_AMS_NVG: optic_AMS {
         displayName = "US Optics MR-10 (NVG)";
-        ACE_NightVision_radBlur=0;
-		ACE_NightVision_blur=0;
-        ACE_NightVision_grain=0;
+
+        ACE_NightVision_radBlur = 0;
+        ACE_NightVision_blur = 0;
+        ACE_NightVision_grain = 0;
+
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class AMS: AMS {
