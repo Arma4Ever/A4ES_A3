@@ -233,5 +233,13 @@
       <English>around %1</English>
       <Polish>około %1</Polish>
     </Key>
+    <Key ID="STR_A4ES_Medical_crate_big">
+      <English>[A4ES] Medical Crate (Big)</English>
+      <Polish>[A4ES] Skrzynia Medyczna (Duża)</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_crate_standard">
+      <English>[A4ES] Medical Crate (Standard)</English>
+      <Polish>[A4ES] Skrzynia Medyczna (Standardowa)</Polish>
+    </Key>
   </Package>
 </Project>

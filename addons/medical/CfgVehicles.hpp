@@ -54,6 +54,57 @@ class CfgVehicles {
 		};
     };
 
+    class ACE_medicalSupplyCrate;
+    class GVAR(crateBig): ACE_medicalSupplyCrate {
+        displayName = CSTRING(crate_big);
+        class TransportItems {
+            MACRO_ADDITEM(ACE_fieldDressing,100);
+            MACRO_ADDITEM(ACE_packingBandage,300);
+            MACRO_ADDITEM(ACE_elasticBandage,150);
+            MACRO_ADDITEM(ACE_quikClot,100);
+            MACRO_ADDITEM(ACE_tourniquet,60);
+            MACRO_ADDITEM(ACE_splint,60);
+            MACRO_ADDITEM(ACE_morphine,20);
+            MACRO_ADDITEM(ACE_adenosine,20);
+            MACRO_ADDITEM(ACE_epinephrine,20);
+            MACRO_ADDITEM(ACE_salineIV,20);
+            MACRO_ADDITEM(ACE_salineIV_500,30);
+            MACRO_ADDITEM(ACE_salineIV_250,20);
+            MACRO_ADDITEM(ACE_personalAidKit,20);
+            MACRO_ADDITEM(ACE_surgicalKit,2);
+            MACRO_ADDITEM(ACE_bodyBag,20);
+            MACRO_ADDITEM(ACE_CableTie,20);
+            MACRO_ADDITEM(A4ES_dressingSet,2);
+            MACRO_ADDITEM(A4ES_painkillers,50);
+            MACRO_ADDITEM(A4ES_emptyBloodBag,10);
+        };
+    };
+
+    class GVAR(crateStandard): ACE_medicalSupplyCrate {
+        displayName = CSTRING(crate_standard);
+        class TransportItems {
+            MACRO_ADDITEM(ACE_fieldDressing,50);
+            MACRO_ADDITEM(ACE_packingBandage,150);
+            MACRO_ADDITEM(ACE_elasticBandage,100);
+            MACRO_ADDITEM(ACE_quikClot,50);
+            MACRO_ADDITEM(ACE_tourniquet,50);
+            MACRO_ADDITEM(ACE_splint,40);
+            MACRO_ADDITEM(ACE_morphine,10);
+            MACRO_ADDITEM(ACE_adenosine,10);
+            MACRO_ADDITEM(ACE_epinephrine,20);
+            MACRO_ADDITEM(ACE_salineIV,15);
+            MACRO_ADDITEM(ACE_salineIV_500,15);
+            MACRO_ADDITEM(ACE_salineIV_250,15);
+            MACRO_ADDITEM(ACE_personalAidKit,12);
+            MACRO_ADDITEM(ACE_surgicalKit,2);
+            MACRO_ADDITEM(ACE_bodyBag,10);
+            MACRO_ADDITEM(ACE_CableTie,20);
+            MACRO_ADDITEM(A4ES_dressingSet,2);
+            MACRO_ADDITEM(A4ES_painkillers,30);
+            MACRO_ADDITEM(A4ES_emptyBloodBag,5);
+        };
+    };
+
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
