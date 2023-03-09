@@ -2841,7 +2841,7 @@
       <Polish>Twórz obiekty lokalnie</Polish>
     </Key>
     <Key ID="STR_A4ES_Modules_objects3DENComp_Attributes_spawnLocally_tooltip">
-      <Polish>Po zaznaczeniu tej opcji obiekty będą tworzone lokalnie u każdego klienta osobno. Użycie tej opcji ma sens w przypadku gdy tworzymy kompozycjami obiektów edytora bardzo dużą ilość obiektów i nie chcemy aby ich obecność generowała ciągły ruch sieciowy związany z aktualizowaniem stanu obiektów.</Polish>
+      <Polish>Po zaznaczeniu tej opcji obiekty będą tworzone lokalnie u każdego klienta osobno. W ogromnej większości przypadków ta opcja powinna być zaznaczona. Odznaczenie tej opcji ma sens tylko w przypadku gdy chcemy manipulować stworzonymi przez moduł obiektami w trakcie gry (np. usuwać je).</Polish>
     </Key>
     <Key ID="STR_A4ES_Modules_objects3DENComp_Attributes_addObjectPostInit">
       <Polish>Dodaj handler initu obiektów</Polish>
