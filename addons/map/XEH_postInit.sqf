@@ -1,5 +1,11 @@
 #include "script_component.hpp"
 
+addMissionEventHandler ["MarkerDeleted", {
+	params ["", "_local"];
+  if (!_local || {CBA_missionTime > 1}) exitWith {};
+  [QGVAR(playerDeletedMarker), name player] call CBA_fnc_globalEvent;
+}];
+
 if (!isNil "ace_markers_MarkersCache") then {
   private _orgCache = ace_markers_MarkersCache;
   private _newCache = [
