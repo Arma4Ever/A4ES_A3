@@ -11,7 +11,7 @@ if !(isServer) exitWith {};
 
 private _client = 0 call FUNC(getBestClient);
 
-// Client is null, exec locally instead
+// Client is null, execute locally instead
 if (isNull _client) exitWith {
 	ERROR_1('getBestClient failed to find client, executing locally instead',_function);
 	_params spawn (missionNamespace getVariable [_function, {}]);

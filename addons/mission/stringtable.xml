@@ -2,7 +2,7 @@
 <Project name="A4ES">
   <Package name="Mission">
     <Key ID="STR_A4ES_Mission_WrongMissionTemplateWarning">
-      <Polish>Nie wykryto szablonu misji lub jest on nieaktualny. Pobierz najnowszy szablon misji z repozytorium A4E i wklej go do misji.</Polish>
+      <Polish>[A4ES] Nie wykryto szablonu misji lub jest on nieaktualny. Pobierz najnowszy szablon misji z repozytorium A4E i wklej go do misji.</Polish>
     </Key>
     <Key ID="STR_A4ES_Mission_FixInvisibleGear">
       <English>A4ES Refresh gear</English>

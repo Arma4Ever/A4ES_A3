@@ -2,7 +2,7 @@
 <Project name="A4ES">
   <Package name="Headless">
     <Key ID="STR_A4ES_Headless_headlessConnectedInfo">
-      <Polish>Headless client #%1 połączył się poprawnie.</Polish>
+      <Polish>[A4ES] Headless client #%1 połączył się poprawnie.</Polish>
     </Key>
   </Package>
 </Project>

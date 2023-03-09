@@ -2,7 +2,7 @@
 <Project name="A4ES">
   <Package name="Debug">
     <Key ID="STR_A4ES_Debug_StartLogsWatcher">
-      <Polish>Uruchamiam obserwację logów</Polish>
+      <Polish>[A4ES] Uruchamiam obserwację logów</Polish>
     </Key>
     <Key ID="STR_A4ES_Debug_ToggleLogsAction">
       <Polish>DEBUG - Pokaż/ukryj logi</Polish>
