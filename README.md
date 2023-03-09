@@ -21,19 +21,8 @@ A collection of Arma 3 mods providing necessary functionalities for Arma4Ever.pl
 - [Metis Nature](https://steamcommunity.com/sharedfiles/filedetails/?id=1951690856)
 - [Eden Extended Objects](https://steamcommunity.com/sharedfiles/filedetails/?id=882231372)
 - [PLP Markers](https://steamcommunity.com/sharedfiles/filedetails/?id=495275491)
-- [Extended Fortifications Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=1109237932)
-- [Camofaces](https://steamcommunity.com/sharedfiles/filedetails/?id=346665985)
-- [AVON FM12 Respirator Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=793350643)
 - [Blastcore Murr Edition](https://steamcommunity.com/sharedfiles/filedetails/?id=2257686620)
-- [Cinematic Lens Flare](https://steamcommunity.com/sharedfiles/filedetails/?id=878502647)
-- [Modular Buildings - Laboratory](https://steamcommunity.com/sharedfiles/filedetails/?id=2279479517)
 - [Swim Faster](https://steamcommunity.com/sharedfiles/filedetails/?id=1808723766)
-- [L3-GPNVG18 Panoramic Night Vision](https://steamcommunity.com/sharedfiles/filedetails/?id=313041182)
-- [PMK-1 Gas mask](https://steamcommunity.com/sharedfiles/filedetails/?id=2277535247)
-- [M40 protective mask](https://steamcommunity.com/sharedfiles/filedetails/?id=2264164522)
-- Modified version of [JSHK Contamination Gear](https://steamcommunity.com/sharedfiles/filedetails/?id=1738216191)
-- [Vurtual's Car Seat & Stretcher](https://steamcommunity.com/sharedfiles/filedetails/?id=1381327410)
-- [Vurtual's Ships](https://steamcommunity.com/sharedfiles/filedetails/?id=1564445550)
 - [ArmaZeusCache](https://steamcommunity.com/sharedfiles/filedetails/?id=1908099028)
 - [Blurry Laser](https://steamcommunity.com/sharedfiles/filedetails/?id=2079283616)
 - [Ladder Tweak](https://steamcommunity.com/sharedfiles/filedetails/?id=1803586009)
@@ -41,7 +30,6 @@ A collection of Arma 3 mods providing necessary functionalities for Arma4Ever.pl
 - [ILBE Assault Pack - Rewrite](https://github.com/Grezvany13/ILBE-Assault-Pack-Rewrite)
 - [FRXA's TFAR Extra Retextured Equipment](https://steamcommunity.com/sharedfiles/filedetails/?id=1606874412)
 - [ACD - Arma3 Containers And Decorations](https://steamcommunity.com/sharedfiles/filedetails/?id=689845793)
-- [Uriki's Mission Items](https://steamcommunity.com/sharedfiles/filedetails/?id=940841212)
 
 ## Credits
 Authors of external mods.  
