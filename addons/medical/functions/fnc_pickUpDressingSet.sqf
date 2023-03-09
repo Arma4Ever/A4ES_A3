@@ -30,6 +30,6 @@ _player playActionNow "PutDown";
   deleteVehicle _target;
   _player addItem "A4ES_dressingSet";
 
-  // A4ESServer event
-  ["a4esserver_events_userDressSetRem", [_player]] call CBA_fnc_serverEvent;
+  // A4ES Server event
+  ["a4es_dressingSetPickedUp", [_player, "A4ES_dressingSet"]] call CBA_fnc_serverEvent;
 }, [_target, _player], 1] call CBA_fnc_waitAndExecute;

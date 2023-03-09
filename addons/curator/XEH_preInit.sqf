@@ -8,11 +8,6 @@ ADDON = false;
 ["ModuleCurator_F", "InitPost", {
   params ["_curator"];
 
-  // Log event
-  if (isServer) then {
-    ["a4esserver_events_curModCreat", 0] call CBA_fnc_localEvent;
-  };
-
   _curator addEventHandler ["CuratorObjectPlaced", {
     params ["", "_object"];
     [QGVAR(addObjects), [_object]] call CBA_fnc_serverEvent;
@@ -20,6 +15,14 @@ ADDON = false;
 
   _curator addEventHandler ["CuratorPinged", {
 	   _this call FUNC(handleCuratorPinged);
+  }];
+
+  _curator addEventHandler ["CuratorObjectDeleted", {
+    params ["_curator", "_entity"];
+
+    if (player == (getAssignedCuratorUnit _curator)) then {
+      ["a4es_curatorObjectDeleted", [player, _entity]] call CBA_fnc_serverEvent;
+    };
   }];
 }] call CBA_fnc_addClassEventHandler;
 

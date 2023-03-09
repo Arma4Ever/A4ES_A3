@@ -22,6 +22,9 @@
   // Show confirmation message
   [LLSTRING(GrenadeThrownIn), 2] call ACEFUNC(common,displayTextStructured);
 
+  // Log throw
+  ["a4es_grenadeThrowInTank", [_player, _target, _magazine]] call CBA_fnc_serverEvent;
+
   // Schedule explosion in 5 sec
   [{
     params ["_target"];

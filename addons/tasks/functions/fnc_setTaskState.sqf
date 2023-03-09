@@ -24,6 +24,9 @@ if (_currentState isEqualTo _state) exitWith {
   false
 };
 
+// Log change
+["a4es_taskStateChanged", [_id, _state call FUNC(getTaskStateClass)]] call CBA_fnc_serverEvent;
+
 // Update task state info
 _createdTasks set [_id, _state];
 

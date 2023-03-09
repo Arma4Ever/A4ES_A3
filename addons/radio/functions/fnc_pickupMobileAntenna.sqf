@@ -30,6 +30,6 @@ _player playActionNow "PutDown";
   deleteVehicle _target;
   _player addItem "tfw_rf3080Item";
 
-  // A4ESServer event
-  ["a4esserver_events_userAntennaRem", [_player]] call CBA_fnc_serverEvent;
+  // A4ES Server event
+  ["a4es_mobileAntennaPickedUp", [_player, "tfw_rf3080Item"]] call CBA_fnc_serverEvent;
 }, [_target, _player], 1] call CBA_fnc_waitAndExecute;

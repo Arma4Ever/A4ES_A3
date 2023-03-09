@@ -35,13 +35,9 @@ _patient setVariable [VAR_TOURNIQUET, _tourniquets, true];
 // Send server log if medic is player
 if (_medic getVariable ["a4es_common_isPlayer", false]) then {
   if (_medic isEqualTo _patient) then {
-    ["a4esserver_events_userRemTourSelf", [_medic, _bodyPart]] call CBA_fnc_serverEvent;
+    ["a4es_playerRemTourniqSelf", [_medic, _bodyPart]] call CBA_fnc_serverEvent;
   } else {
-    if (_patient getVariable ["a4es_common_isPlayer", false]) then {
-      ["a4esserver_events_userRemTour", [_medic, _patient, _bodyPart]] call CBA_fnc_serverEvent;
-    } else {
-      ["a4esserver_events_userRemTourAI", [_medic, _bodyPart]] call CBA_fnc_serverEvent;
-    };
+    ["a4es_playerRemTourniq", [_medic, _patient, _bodyPart]] call CBA_fnc_serverEvent;
   };
 };
 

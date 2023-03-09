@@ -12,4 +12,6 @@ if (isNull _module) exitWith {};
 
 LOG_1("Unassigning curator module from '%1'", _unit);
 unassignCurator _module;
-["a4esserver_events_curAccRev", [_unit]] call CBA_fnc_serverEvent;
+
+// A4ES Server log
+["a4es_curatorAccess", [_unit, false]] call CBA_fnc_serverEvent;

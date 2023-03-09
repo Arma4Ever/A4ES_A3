@@ -14,6 +14,7 @@ private _bloodVolume = _patient getVariable ["ace_medical_bloodVolume", 6.0];
 
 if (_bloodVolume < _volumeToDraw) exitWith {
   _medic addItem "A4ES_usedBloodBag";
+  ["a4es_playerDrawedBlood", [_medic, _patient, _drawedBlood, false, "A4ES_usedBloodBag"]] call CBA_fnc_serverEvent;
 };
 
 if (_volumeToDraw > 0) then {
@@ -21,4 +22,7 @@ if (_volumeToDraw > 0) then {
 };
 
 // Add correct blood bag
-_medic addItem (format ["ACE_bloodIV_%1", _volume]);
+private _item = format ["ACE_bloodIV_%1", _volume];
+_medic addItem _item;
+
+["a4es_playerDrawedBlood", [_medic, _patient, _volume, true, _item]] call CBA_fnc_serverEvent;

@@ -7,18 +7,19 @@ ADDON = false;
 GVAR(medicalArsenalButton) = [
   [
     "ACE_fieldDressing", "ACE_packingBandage", "ACE_elasticBandage", "ACE_quikclot",
-    "ACE_tourniquet", "ACE_splint",
-    "ACE_morphine", "ACE_adenosine", "ACE_atropine", "ACE_epinephrine",
-    "ACE_plasmaIV", "ACE_plasmaIV_500", "ACE_plasmaIV_250",
-    "ACE_bloodIV", "ACE_bloodIV_500", "ACE_bloodIV_250",
-    "ACE_salineIV", "ACE_salineIV_500", "ACE_salineIV_250",
-    "ACE_personalAidKit", "ACE_surgicalKit", "ACE_bodyBag",
-    "A4ES_dressingSet", "A4ES_painkillers", "A4ES_emptyBloodBag"
+    "ACE_tourniquet", "ACE_splint", "ACE_morphine", "ACE_adenosine", "ACE_atropine",
+    "ACE_epinephrine", "ACE_plasmaIV", "ACE_plasmaIV_500", "ACE_plasmaIV_250",
+    "ACE_bloodIV", "ACE_bloodIV_500", "ACE_bloodIV_250", "ACE_salineIV", 
+    "ACE_salineIV_500", "ACE_salineIV_250", "ACE_personalAidKit", "ACE_surgicalKit",
+    "ACE_bodyBag", "A4ES_dressingSet", "A4ES_painkillers", "A4ES_emptyBloodBag",
+    "A4ES_usedBloodBag", "A4ES_clottedBloodBag"
   ],
   LLSTRING(Medications),
   "\z\ace\addons\medical_gui\data\categories\medication.paa"
 ] call ace_arsenal_fnc_addRightPanelButton;
 
-GVAR(ffReported) = false;
+GVAR(friendlyFireLock) = false;
+GVAR(friendlyFireSource) = objNull;
+GVAR(friendlyFireID) = 0;
 
 ADDON = true;

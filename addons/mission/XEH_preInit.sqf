@@ -4,6 +4,20 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
+["a4es_missionStart", {
+  if !(hasInterface) exitWith {};
+
+  // Lock player weapon
+  [player, currentWeapon player, true] call ACEFUNC(safemode,setWeaponSafety);
+
+  [{
+    // Lower player weapon
+    if !(weaponLowered player) then {
+      player action ["WeaponOnBack", player];
+    };
+  }, [], 0.1] call CBA_fnc_waitAndExecute;
+}] call CBA_fnc_addEventHandler;
+
 // Disable RHS Engine startup script
 RHS_ENGINE_STARTUP_OFF = true;
 

@@ -1,49 +1,63 @@
 #include "script_component.hpp"
 
-/*
-["ace_killed", {
-  params ["_unit", "", "_killer", "_instigator"];
-  diag_log ["killed", _unit, _killer, _instigator];
+if !(hasInterface) exitWith {};
+
+// exit if curator/spectator
+if ((side (group player)) isEqualTo sideLogic) exitWith {};
+
+// Add extra vehicle explosion damage and wreck ejecting
+addMissionEventHandler ["EntityKilled", {
+  _this call FUNC(handleEntityKilled);
+}];
+
+// Add friendly-fire logging
+["ace_medical_woundReceived", {
+  _this call FUNC(handleFriendlyFire);
 }] call CBA_fnc_addEventHandler;
-*/
 
-if (hasInterface) then {
-  // Exit if curator/spectator
-  if ((side (group player)) isEqualTo sideLogic) exitWith {};
+// Handle headshots
+["ace_medical_woundReceived", {
+  _this call FUNC(handleHeadshot);
+}] call CBA_fnc_addEventHandler;
 
-  addMissionEventHandler ["EntityKilled", {
-    _this call FUNC(handleEntityKilled);
-  }];
+// Save last damage source
+["ace_medical_woundReceived", {
+  params ["_unit", "", "", "_damageType"];
+  _unit setVariable [QGVAR(lastDamageType), _damageType];
+}] call CBA_fnc_addEventHandler;
 
-  // Add friendly-fire logging
-  ["ace_medical_woundReceived", {
-    _this call FUNC(handleFriendlyFire);
-  }] call CBA_fnc_addEventHandler;
+// Publish last damage type of dead players
+["ace_medical_death", {
+  params ["_unit"];
 
-  // Head damage healing
-  [{
-    params ["_player", "_handle"];
+  if (_unit isNotEqualTo player) exitWith {};
 
-    if !(alive _player) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
-    private _headDamage = _player getVariable [QGVAR(currentHeadDamage), 0];
-    if (_headDamage <= 0) exitWith {};
+  private _lastDamageType = _unit getVariable [QGVAR(lastDamageType), ""];
+  TRACE_2("ace_medical_death: publishing lastDamageType"_unit, _lastDamageType);
+  _unit setVariable [QGVAR(lastDamageType), _lastDamageType, true];
+}] call CBA_fnc_addEventHandler;
 
-    private _newDamage = (_headDamage - (_player getVariable [QGVAR(headDamageHealTick), 0])) max 0;
+// Head damage healing
+[{
+  params ["_player", "_handle"];
 
-    // Reset diagnosed injuries if fully healed
-    if (_newDamage == 0) then {
-      _player setVariable [QGVAR(diagnosedBrainInjuries), [], true];
-    };
+  if !(alive _player) exitWith {
+    [_handle] call CBA_fnc_removePerFrameHandler;
+  };
+  private _headDamage = _player getVariable [QGVAR(currentHeadDamage), 0];
+  if (_headDamage <= 0) exitWith {};
 
-    // Update current head dmg
-    _player setVariable [
-      QGVAR(currentHeadDamage),
-      _newDamage,
-      true
-    ];
-  }, 60, player] call CBA_fnc_addPerFrameHandler;
+  private _newDamage = (_headDamage - (_player getVariable [QGVAR(headDamageHealTick), 0])) max 0;
 
-  ["ace_medical_woundReceived", {
-    _this call FUNC(handleHeadshot);
-  }] call CBA_fnc_addEventHandler;
-};
+  // Reset diagnosed injuries if fully healed
+  if (_newDamage == 0) then {
+    _player setVariable [QGVAR(diagnosedBrainInjuries), [], true];
+  };
+
+  // Update current head dmg
+  _player setVariable [
+    QGVAR(currentHeadDamage),
+    _newDamage,
+    true
+  ];
+}, 60, player] call CBA_fnc_addPerFrameHandler;

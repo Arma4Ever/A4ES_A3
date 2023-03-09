@@ -24,6 +24,6 @@ _player removeItem "a4es_mobileArtilleryRadarItem";
       _radar setVectorUp (surfaceNormal (position _radar));
   };
 
-  // A4ESServer event
-  ["a4esserver_events_userArtRadDep", [_player]] call CBA_fnc_serverEvent;
+  // A4ES Server event
+  ["a4es_mobileArtRadarPlaced", [_player, "a4es_mobileArtilleryRadar"]] call CBA_fnc_serverEvent;
 }, [_player], 1] call CBA_fnc_waitAndExecute;

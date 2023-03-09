@@ -35,6 +35,9 @@ if (_id in _awaitingTasksStates) then {
   TRACE_2("createTask - task has awaiting state, overriding state",_id,_state);
 };
 
+// Log creation
+["a4es_taskCreated", [_id, _state call FUNC(getTaskStateClass), _title]] call CBA_fnc_serverEvent;
+
 _createdTasks set [_id, _state];
 [QGVAR(createTask), [
   _id,

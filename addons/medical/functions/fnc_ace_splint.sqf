@@ -24,12 +24,9 @@ TRACE_3("splint",_medic,_patient,_bodyPart);
 
 // Send server log if medic is player
 if !(_medic getVariable ["a4es_common_isPlayer", false]) exitWith {};
+
 if (_medic isEqualTo _patient) then {
-  ["a4esserver_events_userSplintSelf", [_medic, _bodyPart]] call CBA_fnc_serverEvent;
+  ["a4es_playerSplintSelf", [_medic, _bodyPart]] call CBA_fnc_serverEvent;
 } else {
-  if (_patient getVariable ["a4es_common_isPlayer", false]) then {
-    ["a4esserver_events_userSplint", [_medic, _patient, _bodyPart]] call CBA_fnc_serverEvent;
-  } else {
-    ["a4esserver_events_userSplintAI", [_medic, _bodyPart]] call CBA_fnc_serverEvent;
-  };
+  ["a4es_playerSplint", [_medic, _patient, _bodyPart]] call CBA_fnc_serverEvent;
 };

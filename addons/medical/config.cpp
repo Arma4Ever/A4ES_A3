@@ -11,7 +11,10 @@ class CfgPatches {
         };
         weapons[] = {
             "A4ES_dressingSet",
-            "A4ES_painkillers"
+            "A4ES_painkillers",
+            "A4ES_emptyBloodBag",
+            "A4ES_usedBloodBag",
+            "A4ES_clottedBloodBag"
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {

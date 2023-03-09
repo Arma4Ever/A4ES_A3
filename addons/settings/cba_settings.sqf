@@ -58,7 +58,7 @@ force force ace_common_settingFeedbackIcons = 1;
 
 // ACE Cook off
 force force ace_cookoff_ammoCookoffDuration = 0;
-force ace_cookoff_destroyVehicleAfterCookoff = true;
+force force ace_cookoff_destroyVehicleAfterCookoff = true;
 force force ace_cookoff_enable = 1;
 force force ace_cookoff_enableAmmobox = false;
 force force ace_cookoff_enableAmmoCookoff = false;

@@ -26,6 +26,9 @@ if (is3DENPreview) then {
 private _enabled = _logic getVariable [QGVAR(systemEnabled), true];
 private _bodiesLimit = _logic getVariable [QGVAR(bodiesLimit), 100];
 
+// Log settings
+["a4es_simpleBodiesSettings", [_enabled, _bodiesLimit]] call CBA_fnc_serverEvent;
+
 if !(_enabled) then {
   missionNamespace setVariable [QEGVAR(bodies,systemDisabled), true, true];
 } else {

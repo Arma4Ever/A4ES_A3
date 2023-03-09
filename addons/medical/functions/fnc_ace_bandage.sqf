@@ -26,12 +26,9 @@ params ["_medic", "_patient", "_bodyPart", "_classname"];
 
 // Send server log if medic is player
 if !(_medic getVariable ["a4es_common_isPlayer", false]) exitWith {};
+
 if (_medic isEqualTo _patient) then {
-  ["a4esserver_events_userBandSelf", [_medic, _classname, _bodyPart]] call CBA_fnc_serverEvent;
+  ["a4es_playerBandagedSelf", [_medic, _classname, _bodyPart]] call CBA_fnc_serverEvent;
 } else {
-  if (_patient getVariable ["a4es_common_isPlayer", false]) then {
-    ["a4esserver_events_userBand", [_medic, _patient, _classname, _bodyPart]] call CBA_fnc_serverEvent;
-  } else {
-    ["a4esserver_events_userBandAI", [_medic, _classname, _bodyPart]] call CBA_fnc_serverEvent;
-  };
+  ["a4es_playerBandaged", [_medic, _patient, _classname, _bodyPart]] call CBA_fnc_serverEvent;
 };

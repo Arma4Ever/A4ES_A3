@@ -241,5 +241,9 @@
       <English>[A4ES] Medical Crate (Standard)</English>
       <Polish>[A4ES] Skrzynia Medyczna (Standardowa)</Polish>
     </Key>
+    <Key ID="STR_A4ES_Medical_Headshot_Death_Info">
+      <English>[A4ES] You have been killed by your %1 headshot. Chance of death was %2%3</English>
+      <Polish>[A4ES] Zginąłeś od swojego %1 headshota. Szansa na zgon wynosiła %2%3</Polish>
+    </Key>
   </Package>
 </Project>
