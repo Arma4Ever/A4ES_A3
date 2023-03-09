@@ -72,8 +72,8 @@ dssignfile = ""
 prefix = "a4es"
 pbo_name_prefix = "a4es_"
 signature_blacklist = []
-importantFiles = ["mod.cpp", "README.md", "LICENSE", "logo_a4es.paa", "logosmall_a4es.paa", "picture_a4es.paa", "version.a4e"]
-versionFiles = ["mod.cpp", "version.a4e"]
+importantFiles = ["mod.cpp", "README.md", "LICENSE", "logo_a4es.paa", "logosmall_a4es.paa", "picture_a4es.paa"]
+versionFiles = ["mod.cpp"]
 
 ciBuild = False # Used for CI builds
 
