@@ -1,7 +1,7 @@
 
 class CfgAISkill {                            // Skill 50% (default)
-    aimingAccuracy[] = {0, 0.075, 1, 0.4};    // 0.2375
-    aimingShake[] = {0, 0.25, 1, 0.6};        // 0.4
+    aimingAccuracy[] = {0, 0.075, 1, 0.5};    // 0.2875
+    aimingShake[] = {0, 0.15, 1, 0.4};        // 0.275
     aimingSpeed[] = {0, 1, 1, 1};             // 1
 
     spotDistance[] = {0, 0.25, 1, 1};         // 0.625
