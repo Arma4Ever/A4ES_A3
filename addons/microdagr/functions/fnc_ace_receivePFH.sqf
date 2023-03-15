@@ -16,6 +16,7 @@ _receiveMarkers = [];
 
 private _units = (playableUnits + switchableUnits) select {(_x getVariable [QGVAR(broadcastPos), false]) && (alive _x)};
 private _index = 0;
+private _alpha = [0, 1] select (GVAR(showMicrodagrMarkersOnMap) || !visibleMap);
 
 GVAR(receiveMarkers) = _units apply {
   _index = _index + 1;
@@ -32,6 +33,7 @@ GVAR(receiveMarkers) = _units apply {
   _marker setMarkerTypeLocal (_x getVariable [QGVAR(markerTypeCache), "b_unknown"]);
   _marker setMarkerColorLocal (_x getVariable [QGVAR(markerColorCache), "ColorWEST"]);
   _marker setMarkerTextLocal (_x getVariable [QGVAR(broadcastMarkerTitle), ""]);
+  _marker setMarkerAlphaLocal _alpha;
 
   _marker
 };
