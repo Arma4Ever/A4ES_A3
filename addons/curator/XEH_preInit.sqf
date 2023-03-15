@@ -20,8 +20,8 @@ ADDON = false;
   _curator addEventHandler ["CuratorObjectDeleted", {
     params ["_curator", "_entity"];
 
-    if (player == (getAssignedCuratorUnit _curator)) then {
-      ["a4es_curatorObjectDeleted", [player, _entity]] call CBA_fnc_serverEvent;
+    if (player isEqualTo (getAssignedCuratorUnit _curator)) then {
+      ["a4es_curatorObjectDeleted", [player, typeOf _entity]] call CBA_fnc_serverEvent;
     };
   }];
 }] call CBA_fnc_addClassEventHandler;
@@ -86,6 +86,16 @@ if (hasInterface) then {
       LLSTRING(CuratorModuleAssigned),
       _curatorsCount
     ];
+  }] call CBA_fnc_addEventHandler;
+
+  ["zen_remoteControlStarted", {
+    params ["_unit"];
+    ["a4es_curatorRemCtrlStarted", [player, _unit]] call CBA_fnc_serverEvent;
+  }] call CBA_fnc_addEventHandler;
+
+  ["zen_remoteControlStopped", {
+    params ["_unit"];
+    ["a4es_curatorRemCtrlEnded", [player, _unit]] call CBA_fnc_serverEvent;
   }] call CBA_fnc_addEventHandler;
 };
 
