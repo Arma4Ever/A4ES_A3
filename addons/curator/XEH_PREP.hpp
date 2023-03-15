@@ -8,5 +8,7 @@ PREP(handleCuratorPinged);
 PREP(initCuratorModule);
 PREP(unassignCuratorModule);
 
+PREP_MODULE(moveHeadlessClients,module);
 PREP_MODULE(setLogicFlagValue,module);
 PREP_MODULE(setTaskState,module);
+

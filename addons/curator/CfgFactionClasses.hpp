@@ -9,4 +9,9 @@ class CfgFactionClasses {
         priority = 2;
         side = 7;
     };
+    class GVAR(headlessClients) {
+        displayName = CSTRING(FactionClass_headlessClients);
+        priority = 2;
+        side = 7;
+    };
 };

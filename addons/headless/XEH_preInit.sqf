@@ -21,6 +21,11 @@ if !(isServer) exitWith {};
 GVAR(headlessClients) = [];
 GVAR(lastAIBasedSelection) = 0;
 
+[QGVAR(moveHeadlessClients), {
+  params ["_pos"];
+  {_x setPos _pos;} forEach GVAR(headlessClients);
+}] call CBA_fnc_addEventHandler; 
+
 [QGVAR(headlessFPS), {
   params ["_client", "_fps"];
 

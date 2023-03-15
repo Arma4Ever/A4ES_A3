@@ -324,6 +324,7 @@ class CfgVehicles {
         curatorInfoType = "";
     };
 
+    // #include "modules\lockWeather\module.hpp"
     #include "modules\addAction\module.hpp"
     #include "modules\addCuratorModule\module.hpp"
     // #include "modules\addDialogue\module.hpp"

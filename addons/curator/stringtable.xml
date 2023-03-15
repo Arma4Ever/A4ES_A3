@@ -34,6 +34,16 @@
       <English>A4ES Tasks</English>
       <Polish>A4ES Zadania</Polish>
     </Key>
+    <Key ID="STR_A4ES_Curator_FactionClass_headlessClients">
+      <English>A4ES Headless clients</English>
+      <Polish>A4ES Headless klienci</Polish>
+    </Key>
+  </Package>
+  <Package name="Curator_moveHeadlessClients">
+    <Key ID="STR_A4ES_Curator_moveHeadlessClients_displayName">
+      <English>Move headless clients</English>
+      <Polish>Przenieś headless klientów</Polish>
+    </Key>
   </Package>
   <Package name="Curator_setLogicFlagValue">
     <Key ID="STR_A4ES_Curator_setLogicFlagValue_displayName">
