@@ -44,6 +44,9 @@ private _chance = linearConversion [
   true
 ];
 
+private _headShotCount = (_unit getVariable [QGVAR(headshotCount), 0]) + 1;
+TRACE_7("headshotHandling: headshot",_unit,_fullDamage,_chance,_random,_damage,_currentDamage,_headShotCount);
+
 // Log headshot
 ["a4es_playerHeadshot", [
   _unit,
@@ -55,9 +58,6 @@ private _chance = linearConversion [
   _headShotCount,
   _damageType
 ]] call CBA_fnc_serverEvent;
-
-private _headShotCount = (_unit getVariable [QGVAR(headshotCount), 0]) + 1;
-TRACE_7("headshotHandling: headshot",_unit,_fullDamage,_chance,_random,_damage,_currentDamage,_headShotCount);
 
 if (_random < _chance) exitWith {
   TRACE_1("headshotHandling: headshotDead",_random);
