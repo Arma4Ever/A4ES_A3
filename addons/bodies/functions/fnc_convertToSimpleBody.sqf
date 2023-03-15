@@ -73,7 +73,6 @@ if (_corpseVest != "" || {_corpseBackpack != ""}) then {
   } forEach (everyContainer _corpseCargo);
 };
 
-
 _loadout params ["", "_vest", "_backpack", "_helmet", "_goggles", "_assignedItems"];
 
 // Add assigned items to uniform

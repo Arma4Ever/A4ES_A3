@@ -8,6 +8,7 @@ if (isServer) then {
   GVAR(simpleBodiesGroup) = grpNull;
   GVAR(simpleBodies) = [];
   GVAR(simpleBodiesLimit) = 100;
+  GVAR(simpleBodyID) = 0;
 };
 
 ADDON = true;
