@@ -20,23 +20,6 @@ addMissionEventHandler ["EntityKilled", {
   _this call FUNC(handleHeadshot);
 }] call CBA_fnc_addEventHandler;
 
-// Save last damage source
-["ace_medical_woundReceived", {
-  params ["_unit", "", "", "_damageType"];
-  _unit setVariable [QGVAR(lastDamageType), _damageType];
-}] call CBA_fnc_addEventHandler;
-
-// Publish last damage type of dead players
-["ace_medical_death", {
-  params ["_unit"];
-
-  if (_unit isNotEqualTo player) exitWith {};
-
-  private _lastDamageType = _unit getVariable [QGVAR(lastDamageType), ""];
-  TRACE_2("ace_medical_death: publishing lastDamageType"_unit, _lastDamageType);
-  _unit setVariable [QGVAR(lastDamageType), _lastDamageType, true];
-}] call CBA_fnc_addEventHandler;
-
 // Head damage healing
 [{
   params ["_player", "_handle"];

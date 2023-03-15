@@ -44,6 +44,18 @@ private _chance = linearConversion [
   true
 ];
 
+// Log headshot
+["a4es_playerHeadshot", [
+  _unit,
+  _fullDamage toFixed 2,
+  (_chance * 100) toFixed 2,
+  (_random * 100) toFixed 2,
+  _damage toFixed 2,
+  _currentDamage toFixed 2,
+  _headShotCount,
+  _damageType
+]] call CBA_fnc_serverEvent;
+
 private _headShotCount = (_unit getVariable [QGVAR(headshotCount), 0]) + 1;
 TRACE_7("headshotHandling: headshot",_unit,_fullDamage,_chance,_random,_damage,_currentDamage,_headShotCount);
 
@@ -62,15 +74,7 @@ if (_random < _chance) exitWith {
     // Kill player
     [
       _unit,
-      format [
-        "#headshot [%1,%2,%3,%4,%5,%6]",
-        _fullDamage toFixed 2,
-        (_chance * 100) toFixed 2,
-        (_random * 100) toFixed 2,
-        _damage toFixed 2,
-        _currentDamage toFixed 2,
-        _headShotCount
-      ],
+      "#headshot",
       _instigator
     ] call ace_medical_status_fnc_setDead;
 

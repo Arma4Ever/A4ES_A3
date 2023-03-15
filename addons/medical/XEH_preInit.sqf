@@ -22,4 +22,19 @@ GVAR(friendlyFireLock) = false;
 GVAR(friendlyFireSource) = objNull;
 GVAR(friendlyFireID) = 0;
 
+// Save last damage source
+["ace_medical_woundReceived", {
+  params ["_unit", "", "", "_damageType"];
+  _unit setVariable [QGVAR(lastDamageType), _damageType];
+}] call CBA_fnc_addEventHandler;
+
+// Publish last damage type of dead units
+["ace_medical_death", {
+  params ["_unit"];
+
+  private _lastDamageType = _unit getVariable [QGVAR(lastDamageType), ""];
+  TRACE_2("ace_medical_death: publishing lastDamageType"_unit, _lastDamageType);
+  _unit setVariable [QGVAR(lastDamageType), _lastDamageType, true];
+}] call CBA_fnc_addEventHandler;
+
 ADDON = true;
