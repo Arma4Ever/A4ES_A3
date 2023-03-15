@@ -28,6 +28,18 @@ GVAR(friendlyFireID) = 0;
   _unit setVariable [QGVAR(lastDamageType), _damageType];
 }] call CBA_fnc_addEventHandler;
 
+["ace_unconscious", {
+  params ["_unit", "_active"];
+  TRACE_2("ace_unconscious",_unit,_active);
+
+  if (player isEqualTo _unit) exitWith {};
+  if (_active) then {
+    player disableCollisionWith _unit; 
+  } else {
+    player enableCollisionWith _unit; 
+  };
+}] call CBA_fnc_addEventHandler;
+
 // Publish last damage type of dead units
 ["ace_medical_death", {
   params ["_unit"];
