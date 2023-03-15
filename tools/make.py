@@ -58,7 +58,7 @@ if sys.platform == "win32":
 
 ######## GLOBALS #########
 project = "@a4es"
-project_version = "0.0.0"
+project_version = "0.0.0.0"
 arma3tools_path = ""
 work_drive = ""
 module_root = ""
@@ -72,8 +72,8 @@ dssignfile = ""
 prefix = "a4es"
 pbo_name_prefix = "a4es_"
 signature_blacklist = []
-importantFiles = ["mod.cpp", "README.md", "LICENSE", "logo_a4es.paa", "logosmall_a4es.paa", "picture_a4es.paa"]
-versionFiles = ["mod.cpp"]
+importantFiles = ["mod.cpp", "README.md", "LICENSE", "logo_a4es.paa", "logosmall_a4es.paa", "picture_a4es.paa", "version.txt"]
+versionFiles = ["mod.cpp", "version.txt"]
 
 ciBuild = False # Used for CI builds
 
