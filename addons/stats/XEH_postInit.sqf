@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Exit if dedicated/HC
+if (!hasInterface) exitWith {};
+
 /*
   LOCAL STATE OBSERVER
 */
@@ -10,8 +13,8 @@ GVAR(escortedUnit) = player getVariable ["ace_captives_escortedUnit", objNull];
 GVAR(isCarrying) = player getVariable ["ace_dragging_isCarrying", false];
 GVAR(carriedObject) = player getVariable ["ace_dragging_carriedObject", objNull];
 
-GVAR(isDragging) = player getVariable ["ace_captives_isDragging", false];
-GVAR(draggedObject) = player getVariable ["ace_captives_draggedObject", objNull];
+GVAR(isDragging) = player getVariable ["ace_dragging_isDragging", false];
+GVAR(draggedObject) = player getVariable ["ace_dragging_draggedObject", objNull];
 
 GVAR(isBurning) = player getVariable ["ace_fire_burning", false];
 
@@ -32,10 +35,11 @@ GVAR(isDiggingTrench) = ((player getVariable ["ace_trenches_isDiggingId", -1]) !
   };
 
   private _isCarrying = _player getVariable ["ace_dragging_isCarrying", false];
-  if (_isCarrying != GVAR(isCarrying)) then {
+  private _carriedObject = _player getVariable ["ace_dragging_carriedObject", objNull];
+  if ((_isCarrying != GVAR(isCarrying)) && {_carriedObject isNotEqualTo GVAR(carriedObject)}) then {
     GVAR(isCarrying) = _isCarrying;
     if (_isCarrying) then {
-      GVAR(carriedObject) = _player getVariable ["ace_dragging_carriedObject", objNull];
+      GVAR(carriedObject) = _carriedObject;
       ["a4es_carryingObject", [_player, GVAR(carriedObject), true]] call CBA_fnc_serverEvent;
     } else {
       ["a4es_carryingObject", [_player, GVAR(carriedObject), false]] call CBA_fnc_serverEvent;
@@ -44,10 +48,11 @@ GVAR(isDiggingTrench) = ((player getVariable ["ace_trenches_isDiggingId", -1]) !
   };
 
   private _isDragging = _player getVariable ["ace_dragging_isDragging", false];
-  if (_isDragging != GVAR(isDragging)) then {
+  private _draggedObject = _player getVariable ["ace_dragging_draggedObject", objNull];
+  if ((_isDragging != GVAR(isDragging)) && {_draggedObject isNotEqualTo GVAR(draggedObject)}) then {
     GVAR(isDragging) = _isDragging;
     if (_isDragging) then {
-      GVAR(draggedObject) = _player getVariable ["ace_captives_draggedObject", objNull];
+      GVAR(draggedObject) = _draggedObject;
       ["a4es_draggingObject", [_player, GVAR(draggedObject), true]] call CBA_fnc_serverEvent;
     } else {
       ["a4es_draggingObject", [_player, GVAR(draggedObject), false]] call CBA_fnc_serverEvent;
@@ -77,12 +82,11 @@ GVAR(isDiggingTrench) = ((player getVariable ["ace_trenches_isDiggingId", -1]) !
   STATS
 */
 
+// Move to server-side?
 player addEventHandler ["FiredMan", {
-  params ["", "_weapon", "", "", "_ammo", "_magazine", "", "_vehicle"];
+  params ["", "_weapon", "", "", "_ammo"];
 
-  if (_weapon == "Throw") then {
+  if (_weapon == "Throw") exitWith {
     ["a4es_playerThrowGrenade", [player, _ammo]] call CBA_fnc_serverEvent;
   };
-
-  // TODO! (X+random)
 }];
