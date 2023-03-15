@@ -90,11 +90,10 @@ if (_random < _chance) exitWith {
   }, [_unit, _instigator, _fullDamage, _chance, _random, _damage, _currentDamage, _headShotCount, _damageType], 0.15] call CBA_fnc_waitAndExecute;
 };
 
-// This level of head injury will make unit unconscious for a few seconds
-[_unit, true] call ace_medical_fnc_setUnconscious;
-[{
-  [_this, false] call ace_medical_fnc_setUnconscious;
-}, _unit, 5] call CBA_fnc_waitAndExecute;
+// This level of head injury will make unit unconscious
+if !(_unit getVariable ["ACE_isUnconscious", false]) then {
+  [_unit, true] call ace_medical_fnc_setUnconscious;
+};
 
 // Save data globally for JIP
 _unit setVariable [QGVAR(headshotCount), _headShotCount, true];
