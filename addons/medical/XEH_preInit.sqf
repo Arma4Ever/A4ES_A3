@@ -22,6 +22,8 @@ GVAR(friendlyFireLock) = false;
 GVAR(friendlyFireSource) = objNull;
 GVAR(friendlyFireID) = 0;
 
+GVAR(fatalStateCheckScheduled) = false;
+
 // Save last damage source
 ["ace_medical_woundReceived", {
   params ["_unit", "", "", "_damageType"];

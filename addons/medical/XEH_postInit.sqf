@@ -20,6 +20,11 @@ addMissionEventHandler ["EntityKilled", {
   _this call FUNC(handleHeadshot);
 }] call CBA_fnc_addEventHandler;
 
+// Handle fatal state
+["ace_medical_woundReceived", {
+  _this call FUNC(handleFatalState);
+}] call CBA_fnc_addEventHandler;
+
 // Head damage healing
 [{
   params ["_player", "_handle"];
