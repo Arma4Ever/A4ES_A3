@@ -11,8 +11,7 @@ files = [
     "LICENSE",
     "logo_a4es.paa",
     "logosmall_a4es.paa",
-    "picture_a4es.paa",
-    "version.a4e"
+    "picture_a4es.paa"
 ]
 
 modname = "{{name}}"

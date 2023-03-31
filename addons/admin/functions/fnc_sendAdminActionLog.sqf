@@ -16,7 +16,7 @@ if (count _adminConfigs > 0) then {
     } foreach allPlayers;
     if (count _admins > 0) then {
         private _name = player call EFUNC(common,getUnitName);
-        private _log = format ["[%1]: %2", _name, _moduleClass];
+        private _log = format ["[A4ES] %1: %2", _name, _moduleClass];
         _log remoteExecCall ["systemChat", _admins, false];
     };
 };

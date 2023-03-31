@@ -73,5 +73,13 @@
             <English>Ship</English>
             <Polish>Okręt</Polish>
         </Key>
+        <Key ID="STR_A4ES_Microdagr_showMarkersOnMap">
+            <English>Show unit markers on map</English>
+            <Polish>Wyświetlaj markery jednostek na mapie</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Microdagr_hideMarkersOnMap">
+            <English>Hide unit markers on map</English>
+            <Polish>Ukryj markery jednostek na mapie</Polish>
+        </Key>
     </Package>
 </Project>

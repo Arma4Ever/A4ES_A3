@@ -7,10 +7,4 @@ class CfgWeapons {
             mass = 15;
         };
     };
-    /*
-       TODO:
-	   Uriki
-       Próbki krwi
-       Elementy PLP
-    */
 };

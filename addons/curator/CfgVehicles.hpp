@@ -42,11 +42,12 @@ class CfgVehicles {
         };
     };
 
+    #include "modules\moveHeadlessClients\module.hpp"
     #include "modules\setLogicFlagValue\module.hpp"
     #include "modules\setTaskState\module.hpp"
 
+    // #include "modules\lockWeather\module.hpp"
     // #include "modules\toggleDynamicSimulation\module.hpp"
-
     // #include "modules\addIcon\module.hpp"
     // #include "modules\showFPS\module.hpp"
     // #include "modules\spawnGeneratorComposition\module.hpp"

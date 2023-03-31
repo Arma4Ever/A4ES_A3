@@ -57,6 +57,7 @@ class GVAR(activationIgnoreHelicopters): GVAR(dynamicCheckbox) {
     displayName = CSTRING(Attributes_activationIgnoreHelicopters);
     tooltip = CSTRING(Attributes_activationIgnoreHelicopters_tooltip);
     property = QGVAR(activationIgnoreHelicopters);
+    defaultValue = "true";
     GVAR(observeValue) = 0;
     GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(activationMode)) isEqualTo 0);
     ATTRIBUTE_LOCAL;
@@ -65,6 +66,7 @@ class GVAR(activationIgnorePlanes): GVAR(dynamicCheckbox) {
     displayName = CSTRING(Attributes_activationIgnorePlanes);
     tooltip = CSTRING(Attributes_activationIgnorePlanes_tooltip);
     property = QGVAR(activationIgnorePlanes);
+    defaultValue = "true";
     GVAR(observeValue) = 0;
     GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(activationMode)) isEqualTo 0);
     ATTRIBUTE_LOCAL;

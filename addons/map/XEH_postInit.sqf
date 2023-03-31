@@ -1,5 +1,11 @@
 #include "script_component.hpp"
 
+addMissionEventHandler ["MarkerDeleted", {
+	params ["_marker", "_local"];
+  if (!_local || {CBA_missionTime > 1}) exitWith {};
+  ["a4es_briefMarkerDeleted", [_marker, player]] call CBA_fnc_serverEvent;
+}];
+
 if (!isNil "ace_markers_MarkersCache") then {
   private _orgCache = ace_markers_MarkersCache;
   private _newCache = [

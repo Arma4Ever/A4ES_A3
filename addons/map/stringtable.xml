@@ -4,5 +4,8 @@
     <Key ID="STR_A4ES_Map_Tank">
       <Polish>Czołg</Polish>
     </Key>
+    <Key ID="STR_A4ES_Map_PlayerDeletedMarker">
+      <Polish>%1 usunął marker</Polish>
+    </Key>
   </Package>
 </Project>

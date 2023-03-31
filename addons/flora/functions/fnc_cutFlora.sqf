@@ -22,9 +22,9 @@ private _actionTime = _objHeight * 0.5;
 
 TRACE_2("cutFlora object data",_target,_actionTime);
 
-[_actionTime, [_target, _player], {
-  (_this # 0) params ["_target", "_player"];
-  [QGVAR(cutFloraObject), [_target]] call CBA_fnc_serverEvent;
+[_actionTime, [_target, _player, _objHeight, _actionTime], {
+  (_this # 0) params ["_target", "_player", "_objHeight", "_actionTime"];
+  [QGVAR(cutFloraObject), [_target, _player, _objHeight toFixed 2, _actionTime toFixed 2]] call CBA_fnc_serverEvent;
   [LLSTRING(cutFlora_objectCut), 2] call ACEFUNC(common,displayTextStructured);
   // Reset animation
   [_player, "", 1] call ACEFUNC(common,doAnimation);

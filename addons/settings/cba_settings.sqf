@@ -58,7 +58,7 @@ force force ace_common_settingFeedbackIcons = 1;
 
 // ACE Cook off
 force force ace_cookoff_ammoCookoffDuration = 0;
-force ace_cookoff_destroyVehicleAfterCookoff = true;
+force force ace_cookoff_destroyVehicleAfterCookoff = true;
 force force ace_cookoff_enable = 1;
 force force ace_cookoff_enableAmmobox = false;
 force force ace_cookoff_enableAmmoCookoff = false;
@@ -237,8 +237,8 @@ force force ace_medical_limping = 1;
 force force ace_medical_painCoefficient = 1.25;
 force force ace_medical_painUnconsciousChance = 0.5;
 force force ace_medical_playerDamageThreshold = 5;
-force force ace_medical_spontaneousWakeUpChance = 0.85;
-force force ace_medical_spontaneousWakeUpEpinephrineBoost = 2.5;
+force force ace_medical_spontaneousWakeUpChance = 0.5;
+force force ace_medical_spontaneousWakeUpEpinephrineBoost = 3;
 force force ace_medical_statemachine_AIUnconsciousness = false;
 force force ace_medical_statemachine_cardiacArrestBleedoutEnabled = true;
 force force ace_medical_statemachine_cardiacArrestTime = 390;

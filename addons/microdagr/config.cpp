@@ -16,6 +16,7 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgFunctions.hpp"
+#include "CfgVehicles.hpp"
 
 class ace_microdagr_TheDialog {
     onLoad = "uiNamespace setVariable ['ace_microdagr_DialogDisplay', _this select 0];(_this select 0) spawn a4es_microdagr_fnc_onDialog;";

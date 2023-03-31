@@ -18,6 +18,12 @@
     <Key ID="STR_A4ES_Modules_EditingMultipleModulesError_Message">
       <Polish>Możesz edytować tylko jeden moduł jednocześnie.</Polish>
     </Key>
+    <Key ID="STR_A4ES_Modules_EditorExtensionError_Message">
+      <Polish>Błąd odpowiedzi rozszerzenia a4es_editor przy próbie zapisu lokalnych obiektów do pliku. Sprawdź poprawność zainstalowanych modów oraz to, że Battleye jest wyłączony.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_EmptyMissionPathError_Message">
+      <Polish>Zapisz misję zanim zaczniesz zapisywać moduły obiektów. Przełącz moduł w tryb edycji, zapisz misję i zmień tryb na odczyt ponownie.</Polish>
+    </Key>
     <Key ID="STR_A4ES_Modules_ModuleDescription_Title">
       <Polish>Szczegóły</Polish>
     </Key>
@@ -2822,8 +2828,8 @@
     <Key ID="STR_A4ES_Modules_objects3DENComp_Attributes_dataStats_tooltip">
       <Polish>Podsumowanie aktualnie zapisanych w module jednostek.</Polish>
     </Key>
-    <Key ID="STR_A4ES_Modules_objects3DENComp_dataStats_format">
-      <Polish>Obiektów: %1</Polish>
+    <Key ID="STR_A4ES_Modules_objects3DENComp_dataStats_objects">
+      <Polish>Obiektów</Polish>
     </Key>
     <Key ID="STR_A4ES_Modules_objects3DENComp_Attributes_spawnAsSuperSimple">
       <Polish>Twórz obiekty super proste</Polish>
@@ -2835,7 +2841,7 @@
       <Polish>Twórz obiekty lokalnie</Polish>
     </Key>
     <Key ID="STR_A4ES_Modules_objects3DENComp_Attributes_spawnLocally_tooltip">
-      <Polish>Po zaznaczeniu tej opcji obiekty będą tworzone lokalnie u każdego klienta osobno. Użycie tej opcji ma sens w przypadku gdy tworzymy kompozycjami obiektów edytora bardzo dużą ilość obiektów i nie chcemy aby ich obecność generowała ciągły ruch sieciowy związany z aktualizowaniem stanu obiektów.</Polish>
+      <Polish>Po zaznaczeniu tej opcji obiekty będą tworzone lokalnie u każdego klienta osobno. W ogromnej większości przypadków ta opcja powinna być zaznaczona. Odznaczenie tej opcji ma sens tylko w przypadku gdy chcemy manipulować stworzonymi przez moduł obiektami w trakcie gry (np. usuwać je).</Polish>
     </Key>
     <Key ID="STR_A4ES_Modules_objects3DENComp_Attributes_addObjectPostInit">
       <Polish>Dodaj handler initu obiektów</Polish>
@@ -2854,6 +2860,9 @@
     </Key>
     <Key ID="STR_A4ES_Modules_objects3DENComp_Warning_NoObjects_Desc">
       <Polish>Brak połączonych z modułem obiektów</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_objects3DENComp_Warning_NoExtension_Desc">
+      <Polish>Błąd odpowiedzi rozszerzenia a4es_editor</Polish>
     </Key>
     <Key ID="STR_A4ES_Modules_objects3DENComp_Warning_NoSavedObjects_Desc">
       <Polish>W module nie zostały zapisane żadne obiekty</Polish>

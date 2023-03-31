@@ -4,6 +4,7 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {
+            QGVAR(moveHeadlessClients),
             QGVAR(setLogicFlagValue),
             QGVAR(setTaskState)
         };

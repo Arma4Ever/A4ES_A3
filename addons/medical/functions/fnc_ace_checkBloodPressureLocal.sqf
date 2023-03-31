@@ -58,12 +58,11 @@ if (_bloodPressureHigh > 20) then {
 
 // Send server log if medic is player
 if !(_medic getVariable ["a4es_common_isPlayer", false]) exitWith {};
+
+private _result = format ["%1/%2", round _bloodPressureHigh, round _bloodPressureLow];
+
 if (_medic isEqualTo _patient) then {
-  ["a4esserver_events_userCheckBPSelf", [_medic, _bodyPart, format ["%1/%2", round _bloodPressureHigh, round _bloodPressureLow]]] call CBA_fnc_serverEvent;
+  ["a4es_playerCheckedBPSelf", [_medic, _result, _bodyPart]] call CBA_fnc_serverEvent;
 } else {
-  if (_patient getVariable ["a4es_common_isPlayer", false]) then {
-    ["a4esserver_events_userCheckBP", [_medic, _patient, _bodyPart, format ["%1/%2", round _bloodPressureHigh, round _bloodPressureLow]]] call CBA_fnc_serverEvent;
-  } else {
-    ["a4esserver_events_userCheckBPAI", [_medic, _bodyPart, format ["%1/%2", round _bloodPressureHigh, round _bloodPressureLow]]] call CBA_fnc_serverEvent;
-  };
+  ["a4es_playerCheckedBP", [_medic, _patient, _result, _bodyPart]] call CBA_fnc_serverEvent;
 };

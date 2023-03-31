@@ -182,10 +182,10 @@
       <Polish>Lista zeusów</Polish>
     </Key>
     <Key ID="STR_A4ES_Admin_DebugCuratorActivated">
-      <Polish>Admin %1 aktywował dostęp do zeusa.</Polish>
+      <Polish>[A4ES] Admin %1 aktywował dostęp do zeusa.</Polish>
     </Key>
     <Key ID="STR_A4ES_Admin_DebugCuratorDeactivated">
-      <Polish>Admin %1 deaktywował dostęp do zeusa.</Polish>
+      <Polish>[A4ES] Admin %1 deaktywował dostęp do zeusa.</Polish>
     </Key>
   </Package>
 </Project>

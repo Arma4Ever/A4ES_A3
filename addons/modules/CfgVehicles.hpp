@@ -324,6 +324,7 @@ class CfgVehicles {
         curatorInfoType = "";
     };
 
+    // #include "modules\lockWeather\module.hpp"
     #include "modules\addAction\module.hpp"
     #include "modules\addCuratorModule\module.hpp"
     // #include "modules\addDialogue\module.hpp"
@@ -332,7 +333,7 @@ class CfgVehicles {
     #include "modules\aiNightvision\module.hpp"
     #include "modules\ambientAnimals\module.hpp"
     #include "modules\ambientFlyby\module.hpp"
-    // #include "modules\bodiesSettings\module.hpp"
+    #include "modules\bodiesSettings\module.hpp"
     // #include "modules\colorCorrections\module.hpp"
     #include "modules\coverMap\module.hpp"
     #include "modules\createLogicFlag\module.hpp"
@@ -360,7 +361,7 @@ class CfgVehicles {
     // #include "modules\setDamage\module.hpp"
     // #include "modules\setDraggable\module.hpp"
     #include "modules\setLogicFlagValue\module.hpp"
-    // // #include "modules\setMarker\module.hpp"
+    // #include "modules\setMarker\module.hpp"
     // #include "modules\setSideDefaultDialogue\module.hpp"
     #include "modules\setTaskState\module.hpp"
     #include "modules\setTimeMultiplier\module.hpp"

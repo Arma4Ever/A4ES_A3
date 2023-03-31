@@ -3,6 +3,10 @@
 // Exit if no interface or it's main menu intro
 if (!hasInterface || EGVAR(common,isMainMenu)) exitWith {};
 
+if (GVAR(disabledInMission)) then {
+  systemChat LLSTRING(Chat_RadarDisabledByMission);
+};
+
 ["CBA_settingsInitialized", {
   LOG("CBA_settingsInitialized event");
   GVAR(settingsInitialized) = true;

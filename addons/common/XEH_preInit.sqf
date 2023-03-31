@@ -12,6 +12,18 @@ if (GVAR(isMainMenu)) then {
   LOG("Main menu intro detected");
 };
 
+["a4es_simpleObjectsCreated", {
+  if !(isServer) exitWith {};
+  LOG("Event: a4es_simpleObjectsCreated");
+
+  // TODO: desync detection
+  0 spawn {
+    sleep 20;
+    // Send signal to start intro on clients
+    ["a4es_startIntro", 0] call CBA_fnc_globalEvent;
+  };
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(deleteGroup), {
   params ["_group"];
   TRACE_1("Event deleteGroup",_group);

@@ -46,6 +46,9 @@ if (is3DENPreview) then {
   [_logic, "Tworze flage logiczna '%1' z wartoscia %2", _title, str _value] call EFUNC(debug,moduleLog);
 };
 
+// Log creation
+["a4es_logicFlagCreated", [_id, _value, _title]] call CBA_fnc_serverEvent;
+
 private _flagVar = format [QGVAR(%1), _id];
 missionNamespace setVariable [_flagVar, _value, true];
 

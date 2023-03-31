@@ -23,7 +23,9 @@ if (isNull _assignedModule) then {
 };
 
 _unit assignCurator _assignedModule;
-["a4esserver_events_curAccGrant", [_unit]] call CBA_fnc_serverEvent;
+
+// A4ES Server log
+["a4es_curatorAccess", [_unit, true]] call CBA_fnc_serverEvent;
 
 if (_clientPostInit) then {
   private _curatorsCount = count allCurators;

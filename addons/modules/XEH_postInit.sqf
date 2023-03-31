@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Spawn local simple objects
+0 call FUNC(spawn3DENCompObjectsLocal);
+
 if (isServer) then {
   /*
   TODO: Curator module

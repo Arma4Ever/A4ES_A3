@@ -13,8 +13,8 @@ params ["_player"];
   private _obj = QGVAR(dressingSet) createVehicle _pos;
   _obj setPos _pos;
 
-  // A4ESServer event
-  ["a4esserver_events_userDressSetDep", [_player]] call CBA_fnc_serverEvent;
+  // A4ES Server event
+  ["a4es_dressingSetPlaced", [_player, "A4ES_dressingSet"]] call CBA_fnc_serverEvent;
 
   // Reset animation
   [_player, "", 1] call ACEFUNC(common,doAnimation);

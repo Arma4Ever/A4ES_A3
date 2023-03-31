@@ -70,7 +70,8 @@ private _chance = (linearConversion [
   MEDICAL_HEADSHOT_SCALE_MAX_DAMAGE - MEDICAL_HEADSHOT_MIN_DAMAGE,
   _damage,
   0,
-  MEDICAL_HEADSHOT_SCALE_MAX_CHANCE
+  MEDICAL_HEADSHOT_SCALE_MAX_CHANCE,
+  true
 ]) * 100;
 
 private _activeInjuriesCount = (floor (_chance / 10)) + 1;

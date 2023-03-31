@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: SzwedzikPL
- * Adds answer to gien option
+ * Adds answer to given option
  */
 
 params [

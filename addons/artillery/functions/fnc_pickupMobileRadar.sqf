@@ -30,6 +30,6 @@ _player playActionNow "PutDown";
   deleteVehicle _target;
   _player addItem "a4es_mobileArtilleryRadarItem";
 
-  // A4ESServer event
-  ["a4esserver_events_userArtRadRem", [_player]] call CBA_fnc_serverEvent;
+  // A4ES Server event
+  ["a4es_mobileArtRadarPickedUp", [_player, "a4es_mobileArtilleryRadarItem"]] call CBA_fnc_serverEvent;
 }, [_target, _player], 1] call CBA_fnc_waitAndExecute;

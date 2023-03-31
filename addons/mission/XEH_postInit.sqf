@@ -20,6 +20,14 @@ CUP_stopLampCheck = true;
   RHS_ENGINE_STARTUP_OFF = true;
 };
 
+// Disable ambient life
+enableEnvironment [false, environmentEnabled # 1, environmentEnabled # 2];
+[{
+  if (environmentEnabled # 0) then {
+    enableEnvironment [false, environmentEnabled # 1, environmentEnabled # 2];
+  };
+}, 30] call CBA_fnc_addPerFrameHandler;
+
 // Schedule first cleanup of empty groups
 [{0 spawn FUNC(cleanupEmptyGroups)}, [], EMPTY_GROUPS_CLEANUP_INTERVAL] call CBA_fnc_waitAndExecute;
 
@@ -30,28 +38,10 @@ CUP_stopLampCheck = true;
   ACE_maxWeightCarry = 999999;
 };
 
-if (hasInterface) then {
-  // Set current channel to global
-  setCurrentChannel 0;
-  // Disable client remote sensors
-  disableRemoteSensors true;
-
-  // Check if player has default "G" as throw keybind
-  if ((actionKeys "Throw") isEqualTo [34]) then {
-    [{!(isNull (findDisplay 46))}, {
-        [
-          LLSTRING(Warning_Message),
-          LLSTRING(Warning_Message_Header),
-          true
-        ] spawn BIS_fnc_guiMessage;
-    }] call CBA_fnc_waitUntilAndExecute;
-  };
-};
-
-// Exit if main menu
-if (EGVAR(common,isMainMenu)) exitWith {};
-
+// Server side stuff
 if (isServer) then {
+  addMissionEventHandler ["EntityKilled", {_this call FUNC(handleEntityKilled);}];
+
   [{
     private _respawn = getMissionConfigValue ["respawn", 0];
     // Exit if respawn enabled
@@ -66,45 +56,55 @@ if (isServer) then {
       };
     }, true, [], true] call CBA_fnc_addClassEventHandler;
   }, [], 0.1] call CBA_fnc_waitAndExecute;
-
-  // Enable simulation of dead units, it's groups and vehicles for dynamically simulated groups/agents
-  addMissionEventHandler ["EntityKilled", {
-    _this call FUNC(handleEntityKilled);
-  }];
 };
 
-// Exit if no interface
-if (!hasInterface) exitWith {};
-
-// Exec after mission start
-[{
-  // Disable ambient life
-  enableEnvironment [false, environmentEnabled # 1];
-  [{
-    if (environmentEnabled # 0) then {
-      enableEnvironment [false, environmentEnabled # 1];
-    };
-  }, 30] call CBA_fnc_addPerFrameHandler;
+// Client side stuff
+if (hasInterface) then {
+  // Set current channel to global
+  setCurrentChannel 0;
+  // Disable client remote sensors
+  disableRemoteSensors true;
 
   // Validate mission template
   if ((getMissionConfigValue ["a4e_missionTemplate", 0]) < REQUIRED_MISSION_TEMPLATE_VERSION) then {
     0 spawn {
       sleep 3;
+      if (EGVAR(common,isMainMenu)) exitWith {};
       diag_log text LLSTRING(WrongMissionTemplateWarning);
       systemChat LLSTRING(WrongMissionTemplateWarning);
     };
   };
 
-  // Exit if player joined in progress
-  if (didJIP) exitWith {};
+  // Check if player has default "G" as throw keybind
+  if ((actionKeys "Throw") isEqualTo [34]) then {
+    [{!(isNull (findDisplay 46))}, {
+        [
+          LLSTRING(Warning_Message),
+          LLSTRING(Warning_Message_Header),
+          true
+        ] spawn BIS_fnc_guiMessage;
+    }] call CBA_fnc_waitUntilAndExecute;
+  };
 
-  // Lock player weapon
-  [player, currentWeapon player, true] call ACEFUNC(safemode,setWeaponSafety);
+  // Add handle chat message handler in multiplayer
+  if (isMultiplayer) then {
+    addMissionEventHandler ["HandleChatMessage", {
+      params ["_channel", "", "_from", "_message", "", "", "", "", "", "", "", "_input"];
 
-  [{
-    // Lower player weapon
-    if !(weaponLowered player) then {
-      player action ["WeaponOnBack", player];
-    };
-  }, [], 0.1] call CBA_fnc_waitAndExecute;
-}, [], 0.01] call CBA_fnc_waitAndExecute;
+      if (
+        (_channel != 16) ||
+        {CBA_missionTime < 10} ||
+        {serverCommandAvailable "#logout"} ||
+        {!(
+          ((_message select [0, 6]) != "[A4ES]") &&
+          {(_input param [0, ""]) != "$STR_MP_CONNECTION_LOOSING"}
+        )}
+      ) exitWith {};
+
+      diag_log text ("Message blocked: " + _message);
+      true
+    }];
+
+    // TODO: Add all systemChat messages to admin panel (like last 30 or something like that)
+  };
+};

@@ -30,6 +30,9 @@ if (is3DENPreview) then {
   };
 };
 
+// Log change
+["a4es_logicFlagChanged", [_flag, _value]] call CBA_fnc_serverEvent;
+
 private _moduleActivatorFlags = GVAR(moduleActivatorFlags);
 if !(_flag in _moduleActivatorFlags) exitWith {
   TRACE_1("flag activators check abort, no module waiting for this flag",_flag);

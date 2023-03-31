@@ -1,11 +1,11 @@
-name = "Arma4Ever System 0.0.0";
+name = "Arma4Ever System";
 picture = "picture_a4es.paa";
 logo = "logo_a4es.paa";
 logoOver = "logo_a4es.paa";
 logoSmall = "logosmall_a4es.paa";
 actionName = "Forum";
 action = "http://arma4ever.pl";
-description = "Arma4Ever System 0.0.0";
+description = "Arma4Ever System";
 tooltip = "Arma4Ever System";
 tooltipOwned = "Arma4Ever System";
 overview = "Arma4Ever System";

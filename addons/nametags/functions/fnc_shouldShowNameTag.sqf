@@ -7,12 +7,14 @@
 
 params ["_target"];
 
-if (
-  !(_target isKindOf "CAManBase")
-  || {_target == ace_player}
-  || {!(alive _target)}
-  || {((side ace_player) getFriend (side _target)) < 0.6}
-  || {!(_target getVariable [QGVAR(showNameTag), [_target, false] call ACEFUNC(common,isPlayer)])}
-) exitWith {false};
-
-true
+(_target isKindOf "CAManBase") &&
+{_target isNotEqualTo ace_player} &&
+{alive _target} &&
+{!(_target getVariable ["ACE_isUnconscious", false])} &&
+{((side (group ace_player)) getFriend (side (group _target))) >= 0.6} &&
+{
+  _target getVariable [
+    QGVAR(showNameTag),
+    _target getVariable [QEGVAR(common,isPlayer), false]
+  ]
+}

@@ -68,40 +68,40 @@ class CfgVehicles {
 
     class B_UAV_01_F;
     class A4ES_Kamikaze_Drone_B: B_UAV_01_F {
-        displayName="Mavic 3 - C4";
-        ExplosionShielding=30;
-        Fuelexplosionpower=120;
+        displayName = "Mavic 3 - C4";
+        ExplosionShielding = 30;
+        Fuelexplosionpower = 120;
     };
 
     class A4ES_Combat_Drone_B: B_UAV_01_F {
-        displayName="Mavic 3 - M67";
+        displayName = "Mavic 3 - M67";
         weapons[] = {"BombDemine_01_F"};
-        magazines[]={"PylonRack_4Rnd_BombDemine_01_F"};
+        magazines[] = {"PylonRack_4Rnd_BombDemine_01_F"};
     };
 
     class O_UAV_01_F;
     class A4ES_Kamikaze_Drone_O: O_UAV_01_F {
-        displayName="Mavic 3 - C4";
-        ExplosionShielding=30;
-        Fuelexplosionpower=120;
+        displayName = "Mavic 3 - C4";
+        ExplosionShielding = 30;
+        Fuelexplosionpower = 120;
     };
 
     class A4ES_Combat_Drone_O: O_UAV_01_F {
-        displayName="Mavic 3 - M67";
+        displayName = "Mavic 3 - M67";
         weapons[] = {"BombDemine_01_F"};
-        magazines[]={"PylonRack_4Rnd_BombDemine_01_F"};
+        magazines[] = {"PylonRack_4Rnd_BombDemine_01_F"};
     };
 
     class I_UAV_01_F;
     class A4ES_Kamikaze_Drone_I: I_UAV_01_F {
-        displayName="Mavic 3 - C4";
-        ExplosionShielding=30;
-        Fuelexplosionpower=120;
+        displayName = "Mavic 3 - C4";
+        ExplosionShielding = 30;
+        Fuelexplosionpower = 120;
     };
 
     class A4ES_Combat_Drone_I: I_UAV_01_F {
-        displayName="Mavic 3 - M67";
+        displayName = "Mavic 3 - M67";
         weapons[] = {"BombDemine_01_F"};
-        magazines[]={"PylonRack_4Rnd_BombDemine_01_F"};
+        magazines[] = {"PylonRack_4Rnd_BombDemine_01_F"};
     };
 };

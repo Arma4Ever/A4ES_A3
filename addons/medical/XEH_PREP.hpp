@@ -13,6 +13,7 @@ PREP(getTreatmentTimeIV);
 PREP(getTreatmentTimeSplint);
 PREP(getVehicleDeathChance);
 PREP(handleEntityKilled);
+PREP(handleFatalState);
 PREP(handleFriendlyFire);
 PREP(handleHeadshot);
 PREP(isInDressingSetRange);

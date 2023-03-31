@@ -5,11 +5,16 @@ class CfgPatches {
         name = COMPONENT_NAME;
         units[] = {
             QGVAR(dressingSet),
-            QGVAR(painkillersItem)
+            QGVAR(painkillersItem),
+            QGVAR(crateBig),
+            QGVAR(crateStandard)
         };
         weapons[] = {
             "A4ES_dressingSet",
-            "A4ES_painkillers"
+            "A4ES_painkillers",
+            "A4ES_emptyBloodBag",
+            "A4ES_usedBloodBag",
+            "A4ES_clottedBloodBag"
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
@@ -27,6 +32,7 @@ class CfgPatches {
             "ace_medical_status",
             "ace_medical_treatment",
             "ace_medical_vitals",
+            "ace_captives",
             "A3_Props_F_Orange_Humanitarian_Camps"
         };
         author = ECSTRING(main,Author);

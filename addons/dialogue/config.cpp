@@ -16,7 +16,5 @@ class CfgPatches {
     };
 };
 
-/*
-#include "CfgEventHandlers.hpp"
-#include "dialogs.hpp"
-*/
+// #include "CfgEventHandlers.hpp"
+// #include "dialogs.hpp"

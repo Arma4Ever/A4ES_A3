@@ -34,12 +34,10 @@ if ([_patient, _bodyPart] call FUNC(hasTourniquetAppliedTo)) exitWith {
 
 // Send server log if medic is player
 if !(_medic getVariable ["a4es_common_isPlayer", false]) exitWith {};
+
 if (_medic isEqualTo _patient) then {
-  ["a4esserver_events_userSetTourSelf", [_medic, _bodyPart]] call CBA_fnc_serverEvent;
+  ["a4es_playerTourniqSelf", [_medic, _bodyPart, _usedItem]] call CBA_fnc_serverEvent;
 } else {
-  if (_patient getVariable ["a4es_common_isPlayer", false]) then {
-    ["a4esserver_events_userSetTour", [_medic, _patient, _bodyPart]] call CBA_fnc_serverEvent;
-  } else {
-    ["a4esserver_events_userSetTourAI", [_medic, _bodyPart]] call CBA_fnc_serverEvent;
-  };
+  ["a4es_playerTourniq", [_medic, _patient, _bodyPart, _usedItem]] call CBA_fnc_serverEvent;
 };
+
