@@ -34,7 +34,7 @@
       <Polish>Klucze</Polish>
     </Key>
     <Key ID="STR_A4ES_RolePlayItems_phoneItem_displayName">
-      <English>Phone</English>
+      <English>Mobile Phone</English>
       <Polish>Telefon</Polish>
     </Key>
     <Key ID="STR_A4ES_RolePlayItems_knifeItem_displayName">
@@ -86,7 +86,7 @@
       <Polish>Przepustka</Polish>
     </Key>
     <Key ID="STR_A4ES_RolePlayItems_alcoholConcessionItem_displayName">
-      <English>Alcohol Concession</English>
+      <English>Liquor License</English>
       <Polish>Koncesja na alkohol</Polish>
     </Key>
     <Key ID="STR_A4ES_RolePlayItems_narcoticsItem_displayName">
