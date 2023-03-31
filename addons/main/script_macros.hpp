@@ -5,7 +5,7 @@
 #include "\z\a4es\addons\main\script_input.hpp"
 #endif
 
-#include "script_input.hpp"
+//#include "script_input.hpp"
 
 #define DFUNC(var1) TRIPLES(ADDON,fnc,var1)
 #define DEFUNC(var1,var2) TRIPLES(DOUBLES(PREFIX,var1),fnc,var2)
