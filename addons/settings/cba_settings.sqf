@@ -37,7 +37,7 @@ force force ace_artillerytables_disableArtilleryComputer = false;
 force force ace_mk6mortar_airResistanceEnabled = false;
 force force ace_mk6mortar_allowCompass = true;
 force force ace_mk6mortar_allowComputerRangefinder = true;
-force force ace_mk6mortar_useAmmoHandling = true;
+force ace_mk6mortar_useAmmoHandling = false;
 
 // ACE Captives
 force force ace_captives_allowHandcuffOwnSide = true;
@@ -208,9 +208,6 @@ force force ace_map_gestures_maxRange = 7;
 force force ace_map_gestures_maxRangeCamera = 14;
 force force ace_map_gestures_onlyShowFriendlys = false;
 
-// ACE Map Tools
-force force ace_maptools_drawStraightLines = false;
-
 // ACE Medical
 force force ace_medical_ai_enabledFor = 0;
 force force ace_medical_AIDamageThreshold = 0.2;
@@ -317,7 +314,7 @@ force ace_finger_sizeCoef = 1;
 force force ace_pylons_enabledForZeus = true;
 force force ace_pylons_enabledFromAmmoTrucks = true;
 force force ace_pylons_rearmNewPylons = true;
-force force ace_pylons_requireEngineer = false;
+force ace_pylons_requireEngineer = false;
 force force ace_pylons_requireToolkit = true;
 force force ace_pylons_searchDistance = 15;
 force force ace_pylons_timePerPylon = 3;
@@ -383,7 +380,7 @@ force force ace_noradio_enabled = true;
 force force ace_optionsmenu_showNewsOnMainMenu = false;
 force force ace_overpressure_distanceCoefficient = 1;
 force force ace_parachute_failureChance = 0;
-force force ace_parachute_hideAltimeter = true;
+force ace_parachute_hideAltimeter = true;
 force force ace_tagging_quickTag = 1;
 
 // ACE User Interface
@@ -522,7 +519,7 @@ force force grad_trenches_functions_allowHitDecay = true;
 force force grad_trenches_functions_allowLongEnvelope = true;
 force force grad_trenches_functions_allowShortEnvelope = true;
 force force grad_trenches_functions_allowSmallEnvelope = true;
-force force grad_trenches_functions_allowTrenchDecay = true;
+force grad_trenches_functions_allowTrenchDecay = true;
 force force grad_trenches_functions_allowVehicleEnvelope = true;
 force force grad_trenches_functions_bigEnvelopeDamageMultiplier = 2;
 force force grad_trenches_functions_bigEnvelopeDigTime = 60;
@@ -530,7 +527,7 @@ force force grad_trenches_functions_bigEnvelopeRemovalTime = -1;
 force force grad_trenches_functions_buildFatigueFactor = 0;
 force force grad_trenches_functions_camouflageRequireEntrenchmentTool = true;
 force force grad_trenches_functions_createTrenchMarker = false;
-force force grad_trenches_functions_decayTime = 900;
+force grad_trenches_functions_decayTime = 900;
 force force grad_trenches_functions_giantEnvelopeDamageMultiplier = 1;
 force force grad_trenches_functions_giantEnvelopeDigTime = 75;
 force force grad_trenches_functions_giantEnvelopeRemovalTime = -1;
@@ -544,7 +541,7 @@ force force grad_trenches_functions_smallEnvelopeDamageMultiplier = 3;
 force force grad_trenches_functions_smallEnvelopeDigTime = 45;
 force force grad_trenches_functions_smallEnvelopeRemovalTime = -1;
 force force grad_trenches_functions_stopBuildingAtFatigueMax = true;
-force force grad_trenches_functions_timeoutToDecay = 1500;
+force grad_trenches_functions_timeoutToDecay = 1500;
 force force grad_trenches_functions_vehicleEnvelopeDamageMultiplier = 1;
 force force grad_trenches_functions_vehicleEnvelopeDigTime = 105;
 force force grad_trenches_functions_vehicleEnvelopeRemovalTime = -1;
@@ -605,7 +602,7 @@ force force TFAR_enableIntercom = true;
 force force TFAR_experimentalVehicleIsolation = true;
 force force TFAR_fullDuplex = true;
 force TFAR_giveLongRangeRadioToGroupLeaders = false;
-force force TFAR_giveMicroDagrToSoldier = true;
+force TFAR_giveMicroDagrToSoldier = true;
 force TFAR_givePersonalRadioToRegularSoldier = false;
 force force TFAR_globalRadioRangeCoef = 1;
 force TFAR_instantiate_instantiateAtBriefing = false;
@@ -675,13 +672,13 @@ force force zen_editor_removeWatermark = true;
 force force zen_editor_unitRadioMessages = 2;
 force force zen_placement_enabled = true;
 force force zen_visibility_enabled = false;
-force force zen_vision_enableBlackHot = false;
-force force zen_vision_enableBlackHotGreenCold = false;
-force force zen_vision_enableBlackHotRedCold = false;
-force force zen_vision_enableGreenHotCold = true;
-force force zen_vision_enableNVG = true;
-force force zen_vision_enableRedGreenThermal = false;
-force force zen_vision_enableRedHotCold = true;
-force force zen_vision_enableWhiteHot = true;
-force force zen_vision_enableWhiteHotRedCold = false;
+force zen_vision_enableBlackHot = false;
+force zen_vision_enableBlackHotGreenCold = false;
+force zen_vision_enableBlackHotRedCold = false;
+force zen_vision_enableGreenHotCold = false;
+force zen_vision_enableNVG = true;
+force zen_vision_enableRedGreenThermal = false;
+force zen_vision_enableRedHotCold = false;
+force zen_vision_enableWhiteHot = true;
+force zen_vision_enableWhiteHotRedCold = false;
 
