@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A4ES">
+  <Package name="RolePlayItems">
+    <Key ID="STR_A4ES_RolePlayItems_roleplayItems">
+      <English>Role-play items</English>
+      <Polish>Itemy role-playowe</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_generalItem_descriptionShort">
+      <English>Role-play item withouht in-game functionality</English>
+      <Polish>Przedmiot fabularny bez funkcjonalności w grze</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_antibioticsItem_displayName">
+      <English>Antibiotic</English>
+      <Polish>Antybiotyk</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_gasCanisterItem_displayName">
+      <English>Gas Canister</English>
+      <Polish>Kanister z benzyną</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_gasCanisterItem_descriptionShort">
+      <English>Allows refueling of vehicles</English>
+      <Polish>Pozwala uzupełniać paliwo w pojazdach.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_matchesItem_displayName">
+      <English>Matches</English>
+      <Polish>Zapałki</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_IDItem_displayName">
+      <English>ID Card</English>
+      <Polish>Dowód Osobisty</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_keyItem_displayName">
+      <English>Key</English>
+      <Polish>Klucze</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_phoneItem_displayName">
+      <English>Mobile Phone</English>
+      <Polish>Telefon</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_knifeItem_displayName">
+      <English>Knife</English>
+      <Polish>Nóż</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_vodkaItem_displayName">
+      <English>Vodka</English>
+      <Polish>Wódka</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_moneyItem_displayName">
+      <English>Money roll</English>
+      <Polish>Plik pieniędzy</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_usbItem_displayName">
+      <English>USB Stick</English>
+      <Polish>Pendrive</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_milIDItem_displayName">
+      <English>Military ID Card</English>
+      <Polish>Legitymacja Wojskowa</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_passportItem_displayName">
+      <English>Passport</English>
+      <Polish>Paszport</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_drivingLicenseItem_displayName">
+      <English>Driving License</English>
+      <Polish>Prawo Jazdy</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_gunLicenseItem_displayName">
+      <English>Gun License</English>
+      <Polish>Pozwolenie na broń</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_cigarettesItem_displayName">
+      <English>Cigarettes</English>
+      <Polish>Papierosy</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_cameraItem_displayName">
+      <English>Camera</English>
+      <Polish>Aparat Fotograficzny</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_policeBadgeItem_displayName">
+      <English>Police Badge</English>
+      <Polish>Odznaka Policyjna</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_passItem_displayName">
+      <English>Pass</English>
+      <Polish>Przepustka</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_alcoholConcessionItem_displayName">
+      <English>Liquor License</English>
+      <Polish>Koncesja na alkohol</Polish>
+    </Key>
+    <Key ID="STR_A4ES_RolePlayItems_narcoticsItem_displayName">
+      <English>Weed</English>
+      <Polish>Marihuana</Polish>
+    </Key>
+  </Package>
+</Project>

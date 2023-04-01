@@ -15,23 +15,12 @@ GVAR(placeableItemsArsenalButton) = [
     "ace_marker_flags_blue",
     "ace_marker_flags_yellow",
     "ace_marker_flags_orange",
-    "ace_marker_flags_purple"
-    // SPOTTING SCOPE
-    // ROZKLADANY TROJNG
+    "ace_marker_flags_purple",
+    "ACE_SpottingScope",
+    "ACE_Tripod"
   ],
   LLSTRING(placeableItems),
-  "" //TODO: ICON
-] call ace_arsenal_fnc_addRightPanelButton;
-
-// Role-play items arsenal tab
-GVAR(roleplayItemsArsenalButton) = [
-  [
-    // Itemy armowe, dowod osobsty, laptopy itp
-    // https://github.com/acemod/ACE3/blob/master/addons/field_rations/CfgWeapons.hpp
-    //
-  ],
-  LLSTRING(roleplayItems),
-  "" //TODO: ICON
+  "\z\a4es\addons\items\data\logoArsenal.paa"
 ] call ace_arsenal_fnc_addRightPanelButton;
 
 ADDON = true;

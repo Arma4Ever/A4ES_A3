@@ -8,8 +8,12 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "a4es_common",
+            "a4es_artillery",
             "ace_arsenal",
-            "ace_logistics_wirecutter"
+            "ace_logistics_wirecutter",
+            "ace_marker_flags",
+            "ace_spottingscope",
+            "ace_tripod"
         };
         author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL"};
@@ -18,10 +22,10 @@ class CfgPatches {
     };
 };
 
-/*
 #include "CfgEventHandlers.hpp"
+
+/*
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 
-TODO: Arsenal tab with intel items
 */
