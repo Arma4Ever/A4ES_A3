@@ -7,3 +7,7 @@
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #include "\z\a4es\addons\main\script_macros.hpp"
+
+#define ALLOW_INF \
+    allowAgainstInfantry = 1; \
+    aiAmmoUsageFlags = "64 + 128 + 256 + 512"

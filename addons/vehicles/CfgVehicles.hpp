@@ -1,4 +1,16 @@
 class CfgVehicles {
+    // Make planes and helicopters visible in terrain-render distance
+    // Ref - https://community.bistudio.com/wiki/CfgVehicles_Config_Reference#featureType
+    class Plane;
+    class Plane_Base_F: Plane {
+        featureType = 2;
+    };
+
+    class Helicopter;
+    class Helicopter_Base_F: Helicopter {
+        featureType = 2;
+    };
+
     class UAV;
     class UAV_05_Base_F: UAV {
         radarTargetSize = 0.1; // 0.15;
