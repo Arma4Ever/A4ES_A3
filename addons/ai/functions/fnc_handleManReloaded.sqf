@@ -10,9 +10,8 @@ TRACE_4('handleManReloaded',_unit,_weapon,_muzzle,_newMagazine);
 // Exit if unit not local, is player or not fired from correct (main) muzzle
 if (
   !(local _unit) ||
-  {isPlayer _unit} ||
+  {_unit getVariable [QEGVAR(common,isPlayer), false]} ||
   {_muzzle isNotEqualTo _weapon} ||
-  {_unit in playableUnits} ||
   {_weapon in ["Throw", "Put"]}
 ) exitWith {};
 
