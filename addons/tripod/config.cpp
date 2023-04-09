@@ -14,5 +14,9 @@ class CfgPatches {
     };
 };
 
+class a4es_functions_overrides {
+    ace_tripod_fnc_pickup = QPATHTOF(functions\fnc_ace_pickup.sqf);
+    ace_tripod_fnc_place = QPATHTOF(functions\fnc_ace_place.sqf);
+};
+
 #include "CfgEventHandlers.hpp"
-#include "CfgFunctions.hpp"

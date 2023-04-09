@@ -14,7 +14,12 @@ class CfgPatches {
     };
 };
 
+class a4es_functions_overrides {
+    ace_markers_fnc_initInsertMarker = QPATHTOF(functions\fnc_ace_initInsertMarker.sqf);
+    ace_markers_fnc_mapDisplayInitEH = QPATHTOF(functions\fnc_ace_mapDisplayInitEH.sqf);
+    ace_markers_fnc_onLBSelChangedShape = QPATHTOF(functions\fnc_ace_onLBSelChangedShape.sqf);
+};
+
 #include "CfgEventHandlers.hpp"
-#include "CfgFunctions.hpp"
 #include "InsertMarker.hpp"
 #include "CfgMarkers.hpp"

@@ -14,5 +14,8 @@ class CfgPatches {
     };
 };
 
+class a4es_functions_overrides {
+    ace_repair_fnc_repair_success = QPATHTOF(functions\fnc_ace_repair_success.sqf);
+};
+
 #include "CfgEventHandlers.hpp"
-#include "CfgFunctions.hpp"

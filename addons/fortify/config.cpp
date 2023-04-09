@@ -14,6 +14,10 @@ class CfgPatches {
     };
 };
 
+class a4es_functions_overrides {
+    ace_fortify_fnc_canFortify = QPATHTOF(functions\fnc_ace_canFortify.sqf);
+    ace_fortify_fnc_updateBudget = QPATHTOF(functions\fnc_ace_updateBudget.sqf);
+};
+
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
-#include "CfgFunctions.hpp"

@@ -55,12 +55,17 @@ class CfgPatches {
     };
 };
 
+class a4es_functions_overrides {
+    ace_missileguidance_fnc_gps_setupVehicle = QPATHTOF(functions\fnc_ace_gps_setupVehicle.sqf);
+    ace_missileguidance_fnc_shouldFilterRadarHit = QPATHTOF(functions\fnc_ace_shouldFilterRadarHit.sqf);
+};
+
 #include "CfgEventHandlers.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
-#include "CfgFunctions.hpp"
+#include "GPSDialog.hpp"
 
 class ace_missileguidance_AttackProfiles {
     class ATACMS {

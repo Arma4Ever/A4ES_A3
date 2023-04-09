@@ -14,5 +14,9 @@ class CfgPatches {
     };
 };
 
+class a4es_functions_overrides {
+    ace_towing_fnc_detach = QPATHTOF(functions\fnc_ace_detach.sqf);
+    ace_towing_fnc_startTow = QPATHTOF(functions\fnc_ace_startTow.sqf);
+};
+
 #include "CfgEventHandlers.hpp"
-#include "CfgFunctions.hpp"

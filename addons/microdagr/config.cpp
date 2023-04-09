@@ -14,8 +14,16 @@ class CfgPatches {
     };
 };
 
+class a4es_functions_overrides {
+    ace_microdagr_fnc_appMarkKeypadEntry = QPATHTOF(functions\fnc_ace_appMarkKeypadEntry.sqf);
+    ace_microdagr_fnc_appSettingsLBClick = QPATHTOF(functions\fnc_ace_appSettingsLBClick.sqf);
+    ace_microdagr_fnc_getMarkerData = QPATHTOF(functions\fnc_ace_getMarkerData.sqf);
+    ace_microdagr_fnc_receivePFH = QPATHTOF(functions\fnc_ace_receivePFH.sqf);
+    ace_microdagr_fnc_showApplicationPage = QPATHTOF(functions\fnc_ace_showApplicationPage.sqf);
+    ace_microdagr_fnc_updateDisplay = QPATHTOF(functions\fnc_ace_updateDisplay.sqf);
+};
+
 #include "CfgEventHandlers.hpp"
-#include "CfgFunctions.hpp"
 #include "CfgVehicles.hpp"
 
 class ace_microdagr_TheDialog {

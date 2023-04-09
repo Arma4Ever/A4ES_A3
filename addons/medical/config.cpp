@@ -42,10 +42,26 @@ class CfgPatches {
     };
 };
 
+class a4es_functions_overrides {
+    ace_medical_treatment_fnc_getBandageTime = QPATHTOF(functions\fnc_ace_getBandageTime.sqf);
+    ace_medical_treatment_fnc_getHealTime = QPATHTOF(functions\fnc_ace_getHealTime.sqf);
+    ace_medical_treatment_fnc_getStitchTime = QPATHTOF(functions\fnc_ace_getStitchTime.sqf);
+    ace_medical_treatment_fnc_cprLocal = QPATHTOF(functions\fnc_ace_cprLocal.sqf);
+    ace_medical_treatment_fnc_checkPulseLocal = QPATHTOF(functions\fnc_ace_checkPulseLocal.sqf);
+    ace_medical_treatment_fnc_checkBloodPressureLocal = QPATHTOF(functions\fnc_ace_checkBloodPressureLocal.sqf);
+    ace_medical_treatment_fnc_ivBag = QPATHTOF(functions\fnc_ace_ivBag.sqf);
+    ace_medical_treatment_fnc_medication = QPATHTOF(functions\fnc_ace_medication.sqf);
+    ace_medical_treatment_fnc_splint = QPATHTOF(functions\fnc_ace_splint.sqf);
+    ace_medical_treatment_fnc_tourniquet = QPATHTOF(functions\fnc_ace_tourniquet.sqf);
+    ace_medical_treatment_fnc_tourniquetRemove = QPATHTOF(functions\fnc_ace_tourniquetRemove.sqf);
+    ace_medical_treatment_fnc_bandage = QPATHTOF(functions\fnc_ace_bandage.sqf);
+    ace_medical_treatment_fnc_fullHeal = QPATHTOF(functions\fnc_ace_fullHeal.sqf);
+
+};
+
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
-#include "CfgFunctions.hpp"
 
 #include "ACE_Medical_Treatment.hpp"
 #include "ACE_Medical_Treatment_Actions.hpp"

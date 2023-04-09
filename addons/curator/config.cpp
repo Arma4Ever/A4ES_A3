@@ -30,8 +30,11 @@ class CfgPatches {
     };
 };
 
+class a4es_functions_overrides {
+    zen_modules_fnc_moduleHeal = QPATHTOF(functions\fnc_zen_moduleHeal.sqf);
+};
+
 #include "CfgEventHandlers.hpp"
-#include "CfgFunctions.hpp"
 #include "CfgFactionClasses.hpp"
 #include "CfgVehicles.hpp"
 #include "Cfg3DEN.hpp"
