@@ -28,6 +28,19 @@ if (hasInterface) then {
 };
 
 if (isServer) then {
+  GVAR(objectsCleanupIndex) = 0;
+  GVAR(objectsCleanupData) = [];
+  GVAR(objectsCleanupPFH) = [{0 call FUNC(objectsCleanupTick);}, 0] call CBA_fnc_addPerFrameHandler;
+
+  addMissionEventHandler ["EntityCreated", {
+    params ["_entity"];
+
+    if ((typeOf _entity) == "GroundWeaponHolder") then {
+      _entity setVariable [QGVAR(cleanupNET), CBA_missionTime + (15 * 60)];
+      GVAR(objectsCleanupData) pushBack _entity;
+    };
+  }];
+
   {
     [_x, "GetOut", {
       [{

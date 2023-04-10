@@ -5,3 +5,4 @@ PREP(handleEntityKilled);
 PREP(handleGetOut);
 PREP(handleVehicleHit);
 PREP(handleVehicleHitExec);
+PREP(objectsCleanupTick);
