@@ -6,6 +6,7 @@ PREP(createCuratorModule);
 PREP(drawPlayersIcons);
 PREP(handleCuratorPinged);
 PREP(initCuratorModule);
+PREP(transferCuratorGroup);
 PREP(unassignCuratorModule);
 
 PREP_MODULE(moveHeadlessClients,module);

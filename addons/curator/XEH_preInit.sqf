@@ -10,7 +10,12 @@ ADDON = false;
 
   _curator addEventHandler ["CuratorObjectPlaced", {
     params ["", "_object"];
-    [QGVAR(addObjects), [_object]] call CBA_fnc_serverEvent;
+    [QGVAR(curatorObjectPlaced), _object] call CBA_fnc_serverEvent;
+  }];
+
+  _curator addEventHandler ["CuratorGroupPlaced", {
+    params ["", "_group"];
+    [QGVAR(curatorGroupPlaced), _group] call CBA_fnc_serverEvent;
   }];
 
   _curator addEventHandler ["CuratorPinged", {
@@ -46,6 +51,22 @@ if (isServer) then {
     [_unit] call FUNC(addCuratorObjects);
     _unit triggerDynamicSimulation false;
   }, true, [], true] call CBA_fnc_addClassEventHandler;
+
+  // Parse curator placed object
+  [QGVAR(curatorObjectPlaced), {
+    params ["_object"];
+    
+    if (_object isKindOf "CAManBase") then {
+      (group _object) call FUNC(transferCuratorGroup);
+    };
+
+    [_object] call FUNC(addCuratorObjects);
+  }] call CBA_fnc_addEventHandler;
+
+  // Parse curator placed group
+  [QGVAR(curatorGroupPlaced), {
+    _this call FUNC(transferCuratorGroup);
+  }] call CBA_fnc_addEventHandler;
 
   // Add objects on server
   [QGVAR(addObjects), {
