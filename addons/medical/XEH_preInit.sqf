@@ -21,6 +21,7 @@ GVAR(medicalArsenalButton) = [
 GVAR(friendlyFireLock) = false;
 GVAR(friendlyFireSource) = objNull;
 GVAR(friendlyFireID) = 0;
+GVAR(disabledCollisionUnits) = [];
 
 GVAR(fatalStateCheckScheduled) = false;
 
@@ -34,9 +35,18 @@ GVAR(fatalStateCheckScheduled) = false;
   params ["_unit", "_active"];
   TRACE_2("ace_unconscious",_unit,_active);
 
-  if (player isEqualTo _unit) exitWith {};
+  if (player isEqualTo _unit) exitWith {
+    if (_active) then {
+      GVAR(disabledCollisionUnits) = playableUnits + switchableUnits;
+      {player disableCollisionWith _x} forEach GVAR(disabledCollisionUnits);
+    } else {
+      {player enableCollisionWith _x} forEach GVAR(disabledCollisionUnits);
+      GVAR(disabledCollisionUnits) = [];
+    };
+  };
+
   if (_active) then {
-    player disableCollisionWith _unit; 
+    player disableCollisionWith _unit;
   } else {
     player enableCollisionWith _unit; 
   };
