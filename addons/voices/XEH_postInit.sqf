@@ -9,14 +9,6 @@ GVAR(voiceLinesData) = createHashMapFromArray [
   ["reloading", ["ReloadingE"]]
 ];
 
-/*
-FXDeath[] = {"RadioProtocolENG\Normal\999_FX\FXDeath_1.ogg","RadioProtocolENG\Normal\999_FX\FXDeath_2.ogg","RadioProtocolENG\Normal\999_FX\FXDeath_3.ogg","RadioProtocolENG\Normal\999_FX\FXDeath_4.ogg","RadioProtocolENG\Normal\999_FX\FXDeath_5.ogg"};
-FXHurt[] = {"RadioProtocolENG\Normal\999_FX\FXHurt_1.ogg","RadioProtocolENG\Normal\999_FX\FXHurt_2.ogg","RadioProtocolENG\Normal\999_FX\FXHurt_3.ogg","RadioProtocolENG\Normal\999_FX\FXHurt_4.ogg","RadioProtocolENG\Normal\999_FX\FXHurt_5.ogg"};
-FXHit[] = {"RadioProtocolENG\Normal\999_FX\FXHit_1.ogg","RadioProtocolENG\Normal\999_FX\FXHit_2.ogg","RadioProtocolENG\Normal\999_FX\FXHit_3.ogg","RadioProtocolENG\Normal\999_FX\FXHit_4.ogg","RadioProtocolENG\Normal\999_FX\FXHit_5.ogg"};
-FXDrowning[] = {"RadioProtocolENG\Normal\999_FX\FXDrowning_1.ogg","RadioProtocolENG\Normal\999_FX\FXDrowning_2.ogg","RadioProtocolENG\Normal\999_FX\FXDrowning_3.ogg","RadioProtocolENG\Normal\999_FX\FXDrowning_4.ogg","RadioProtocolENG\Normal\999_FX\FXDrowning_5.ogg"};
-FXEffort[] = {"RadioProtocolENG\Normal\999_FX\FXEffort_1.ogg","RadioProtocolENG\Normal\999_FX\FXEffort_2.ogg","RadioProtocolENG\Normal\999_FX\FXEffort_3.ogg","RadioProtocolENG\Normal\999_FX\FXEffort_4.ogg","RadioProtocolENG\Normal\999_FX\FXEffort_5.ogg"};
-*/
-
 ["CAManBase", "Killed", {
   _this call FUNC(handleKilled);
 }] call CBA_fnc_addClassEventHandler;
