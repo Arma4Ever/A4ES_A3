@@ -7,8 +7,14 @@ class CfgCloudlets {
         particleFSFrameCount = 1;
         particleFSLoop = 0;
         lifeTime = 0.5;
-        size[] = {"((hit factor [3,100])/50 + 0.5)", "2*((hit factor [3,100])/50 + 0.5)"};
-        color[] = {{0.7,0,0,0.2},{0.7,0,0,0.1}};
+        size[] = {
+            "((hit factor [3,100])/50 + 0.35)", //"((hit factor [3,100])/80 + 0.30)"
+            "2*((hit factor [3,100])/50 + 0.05)" //"2*((hit factor [3,100])/80 + 0.4)"
+        };
+        color[] = {
+            {0.7, 0, 0, 0.2},
+            {0.7, 0, 0, 0.1}
+        };
         randomDirectionPeriod = 0.3;
         randomDirectionIntensity = 0.3;
         weight = 0.127;
