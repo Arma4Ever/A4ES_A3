@@ -1,13 +1,20 @@
 #include "script_component.hpp"
 
-
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"a4es_common", "A3_Ui_F"};
+        requiredAddons[] = {
+			"a4es_common",
+			"a4es_particles",
+			"A3_Ui_F",
+			"A3_Weapons_F",
+			"A3_Weapons_F_Jets",
+			"A3_Weapons_F_Sams",
+			"A3_Static_F_Destroyer_Ship_MRLS_01"
+		};
         author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL"};
         url = ECSTRING(main,URL);
@@ -16,6 +23,8 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgVehicles.hpp"
+#include "CfgAmmo.hpp"
 #include "Cfg3DEN.hpp"
 
 /*

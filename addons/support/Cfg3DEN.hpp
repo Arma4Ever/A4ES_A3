@@ -5,22 +5,22 @@ class Cfg3DEN {
                 class Misc {
                     class Attributes {
                         class GVAR(subCategory) {
-							data = "AttributeSystemSubcategory";
-							control = "SubCategory";
+                            data = "AttributeSystemSubcategory";
+                            control = "SubCategory";
                             displayName = CSTRING(AttributeCategory);
-							description = "";
-						};
+                            description = "";
+                        };
                         class GVAR(enableArtComputer) {
-							property = QGVAR(enableArtComputer);
-							control = "Checkbox";
-							displayName = CSTRING(Attributes_enableArtComputer);
-							tooltip = CSTRING(Attributes_enableArtComputer_Tooltip);
+                            property = QGVAR(enableArtComputer);
+                            control = "Checkbox";
+                            displayName = CSTRING(Attributes_enableArtComputer);
+                            tooltip = CSTRING(Attributes_enableArtComputer_Tooltip);
                             typeName = "BOOL";
                             defaultValue = "false";
-						};
+                        };
                     };
                 };
             };
         };
-	};
+    };
 };
