@@ -52,7 +52,7 @@ class A4ES_VLSExplosion: HeavyBombExplosion {
 		lifeTime = 0;
 	};
 	class mk82_light: mk82_light {
-		intensity = 3
+		intensity = 3;
 		interval = 1;
 		lifeTime = 0.70000001;
 	};
