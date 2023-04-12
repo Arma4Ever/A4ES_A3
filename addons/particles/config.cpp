@@ -47,7 +47,7 @@ class A4ES_VLSExplosion: HeavyBombExplosion {
 		lifeTime = 0.70000001;
 	};
 	class BombExp1: BombExp1 {
-		intensity = 3
+		intensity = 3;
 		interval = 1;
 		lifeTime = 0;
 	};
@@ -57,7 +57,7 @@ class A4ES_VLSExplosion: HeavyBombExplosion {
 		lifeTime = 0.70000001;
 	};
 	class MK82_Explosion_01: MK82_Explosion_01 {
-		intensity = 3
+		intensity = 3;
 		interval = 1;
 		lifeTime = 0.2;
 		smokeGenMinDist = 1;
@@ -66,7 +66,7 @@ class A4ES_VLSExplosion: HeavyBombExplosion {
 		smokeIntervalCoef = 0;
 	};
 	class MK82_Explosion_02: MK82_Explosion_02 {
-		intensity = 3
+		intensity = 3;
 		interval = 1;
 		lifeTime = 0.2;
 		smokeGenMinDist = 1;
@@ -75,7 +75,7 @@ class A4ES_VLSExplosion: HeavyBombExplosion {
 		smokeIntervalCoef = 0;
 	};
 	class explosion_glow_01: explosion_glow_01 {
-		intensity = 3
+		intensity = 3;
 		interval = 1;
 		lifeTime = 0.70000001;
 		smokeGenMinDist = 1;
@@ -84,7 +84,7 @@ class A4ES_VLSExplosion: HeavyBombExplosion {
 		smokeIntervalCoef = 0;
 	};
 	class mk82_glow: mk82_glow {
-		intensity = 3
+		intensity = 3;
 		interval = 1;
 		lifeTime = 0.70000001;
 		smokeGenMinDist = 1;
