@@ -17,17 +17,24 @@ if (_missionPath == "") exitWith {
   ] call BIS_fnc_3DENNotification;
 };
 
-if (("a4es_editor" callExtension "test") != "true") exitWith {
+private _response = "a4es_editor" callExtension "test";
+if (_response != "true") exitWith {
+  diag_log text format ["a4es_editor extension: invalid response for test - %1", _response];
   0 call FUNC(objects3DENComp_extensionErrorNotification);
 };
 
 LOG("saveLocalObjectsData - setMissionPath");
-if ((("a4es_editor" callExtension ["setMissionPath", [_missionPath]]) # 0) != "true") exitWith {
+
+_response = "a4es_editor" callExtension ["setMissionPath", [_missionPath]];
+if ((_response # 0) != "true") exitWith {
+  diag_log text format ["a4es_editor extension: invalid response for setMissionPath - %1", str _response];
   0 call FUNC(objects3DENComp_extensionErrorNotification);
 };
 
 LOG("saveLocalObjectsData - newSimpleObjectsFile");
-if ((("a4es_editor" callExtension ["newSimpleObjectsFile", []]) # 0) != "true") exitWith {
+_response = "a4es_editor" callExtension ["newSimpleObjectsFile", []];
+if ((_response # 0) != "true") exitWith {
+  diag_log text format ["a4es_editor extension: invalid response for newSimpleObjectsFile - %1", str _response];
   0 call FUNC(objects3DENComp_extensionErrorNotification);
 };
 
@@ -79,6 +86,8 @@ private _modules = (all3DENEntities # 3) select {_x isKindOf QGVAR(objects3DENCo
 
 
 LOG("saveLocalObjectsData - saveSimpleObjectsFile");
-if ((("a4es_editor" callExtension ["saveSimpleObjectsFile", []]) # 0) != "true") exitWith {
+_response = "a4es_editor" callExtension ["saveSimpleObjectsFile", []];
+if ((_response # 0) != "true") exitWith {
+  diag_log text format ["a4es_editor extension: invalid response for saveSimpleObjectsFile - %1", str _response];
   0 call FUNC(objects3DENComp_extensionErrorNotification);
 };

@@ -30,6 +30,7 @@ PREP(dynamicToolbox_attributeLoad);
 PREP(dynamicToolbox_attributeSave);
 PREP(getLogicFlagsCondition);
 PREP(getModuleActivatorCond);
+PREP(handleMissionSave);
 PREP(handleModuleInit);
 PREP(handlerModuleChangeTaskState);
 PREP(handleWarningsTreeClick);

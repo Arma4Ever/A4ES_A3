@@ -19,14 +19,14 @@ if (
 
   if ((_mode isEqualTo 0) && _dataSaved) exitWith {
     _logic call FUNC(objects3DENComp_restoreData);
-    0 call FUNC(objects3DENComp_saveLocalObjectsData);
+    //0 call FUNC(objects3DENComp_saveLocalObjectsData);
   };
   if ((_mode isEqualTo 0) && _previewObjects) exitWith {
     _logic call FUNC(objects3DENComp_cleanPreview);
   };
   if ((_mode isEqualTo 1) && !_dataSaved) exitWith {
     _logic call FUNC(objects3DENComp_saveData);
-    0 call FUNC(objects3DENComp_saveLocalObjectsData);
+    //0 call FUNC(objects3DENComp_saveLocalObjectsData);
   };
   if ((_mode isEqualTo 1) && _dataSaved && !_previewObjects) exitWith {
     _logic call FUNC(objects3DENComp_spawnPreview);
@@ -36,7 +36,7 @@ if (
 if (_mode isEqualTo "unregisteredFromWorld3DEN") exitWith {
   _input params ["_logic"];
   _logic call FUNC(objects3DENComp_cleanPreview);
-  0 call FUNC(objects3DENComp_saveLocalObjectsData);
+  //0 call FUNC(objects3DENComp_saveLocalObjectsData);
 };
 
 // Exit if module executed inside editor, not on server or not in init mode
