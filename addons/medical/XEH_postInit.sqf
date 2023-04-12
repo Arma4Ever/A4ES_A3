@@ -10,18 +10,20 @@ addMissionEventHandler ["EntityKilled", {
   _this call FUNC(handleEntityKilled);
 }];
 
-// Add friendly-fire logging
+[QGVAR(showTreatmentMessage), {
+  _this call FUNC(showTreatmentMessage);
+}] call CBA_fnc_addEventHandler;
+
+["ace_treatmentStarted", {
+  _this call FUNC(handleTreatmentStarted);
+}] call CBA_fnc_addEventHandler;
+
 ["ace_medical_woundReceived", {
+  // Add friendly-fire logging
   _this call FUNC(handleFriendlyFire);
-}] call CBA_fnc_addEventHandler;
-
-// Handle headshots
-["ace_medical_woundReceived", {
+  // Handle headshots
   _this call FUNC(handleHeadshot);
-}] call CBA_fnc_addEventHandler;
-
-// Handle fatal state
-["ace_medical_woundReceived", {
+  // Handle fatal state
   _this call FUNC(handleFatalState);
 }] call CBA_fnc_addEventHandler;
 

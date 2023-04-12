@@ -25,6 +25,41 @@ GVAR(disabledCollisionUnits) = [];
 
 GVAR(fatalStateCheckScheduled) = false;
 
+GVAR(treatmentMessageTypes) = createHashMapFromArray [
+  ["A4ES_CheckMedications", "examine"],
+  ["A4ES_checkNeurologicalInjuries", "examine"],
+  ["A4ES_DrawBlood250", "drawing"],
+  ["A4ES_DrawBlood500", "drawing"],
+  ["A4ES_painkillers", "painkillers"],
+  ["Adenosine", "injection"],
+  ["ApplyTourniquet", "applyTourniquet"],
+  ["BasicBandage", "bandage"],
+  ["BloodIV", "transfusion"],
+  ["BloodIV_250", "transfusion"],
+  ["BloodIV_500", "transfusion"],
+  ["CheckBloodPressure", "examine"],
+  ["CheckPulse", "examine"],
+  ["CheckResponse", "examine"],
+  ["CPR", "cpr"],
+  ["ElasticBandage", "bandage"],
+  ["Epinephrine", "injection"],
+  ["FieldDressing", "bandage"],
+  ["Morphine", "injection"],
+  ["PackingBandage", "bandage"],
+  ["PatDown", "patting"],
+  ["PersonalAidKit", "healing"],
+  ["PlasmaIV", "transfusion"],
+  ["PlasmaIV_250", "transfusion"],
+  ["PlasmaIV_500", "transfusion"],
+  ["QuikClot", "bandage"],
+  ["RemoveTourniquet", "removeTourniquet"],
+  ["SalineIV", "transfusion"],
+  ["SalineIV_250", "transfusion"],
+  ["SalineIV_500", "transfusion"],
+  ["Splint", "splint"],
+  ["SurgicalKit", "suturing"]
+];
+
 // Save last damage source
 ["ace_medical_woundReceived", {
   params ["_unit", "", "", "_damageType"];

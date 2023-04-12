@@ -245,5 +245,61 @@
       <English>[A4ES] You have been killed by your %1 headshot. Chance of death was %2%3</English>
       <Polish>[A4ES] Zginąłeś od swojego %1 headshota. Szansa na zgon wynosiła %2%3</Polish>
     </Key>
+    <Key ID="STR_A4ES_Medical_TreatmentMessage_author_somebody">
+      <English>Somebody</English>
+      <Polish>Ktoś</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_TreatmentMessage_examine">
+      <English>%1 is examining you...</English>
+      <Polish>%1 Cię bada...</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_TreatmentMessage_drawing">
+      <English>%1 is drawing your blood...</English>
+      <Polish>%1 pobiera Ci krew...</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_TreatmentMessage_painkillers">
+      <English>%1 is giving you painkillers...</English>
+      <Polish>%1 podaje Ci środki przeciwbólowe...</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_TreatmentMessage_injection">
+      <English>%1 is giving you injection...</English>
+      <Polish>%1 robi Ci zastrzyk...</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_TreatmentMessage_applyTourniquet">
+      <English>%1 is applying tourniquet...</English>
+      <Polish>%1 zakłada Ci opaskę zaciskową...</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_TreatmentMessage_removeTourniquet">
+      <English>%1 is removing tourniquet...</English>
+      <Polish>%1 ściąga Ci opaskę zaciskową...</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_TreatmentMessage_bandage">
+      <English>%1 bandages you...</English>
+      <Polish>%1 Cię bandażuje...</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_TreatmentMessage_transfusion">
+      <English>%1 is giving you a transfusion...</English>
+      <Polish>%1 wykonuje Ci transfuzję...</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_TreatmentMessage_cpr">
+      <English>%1 is performing CPR...</English>
+      <Polish>%1 wykonuje CPR...</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_TreatmentMessage_patting">
+      <English>%1 is trying to extinguish you...</English>
+      <Polish>%1 stara się Cię ugasić...</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_TreatmentMessage_healing">
+      <English>%1 is healing you...</English>
+      <Polish>%1 Cię leczy...</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_TreatmentMessage_splint">
+      <English>%1 puts a splint on you...</English>
+      <Polish>%1 zakłada Ci szynę...</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Medical_TreatmentMessage_suturing">
+      <English>%1 stitches your wounds...</English>
+      <Polish>%1 zszywa Twoje rany...</Polish>
+    </Key>
   </Package>
 </Project>
