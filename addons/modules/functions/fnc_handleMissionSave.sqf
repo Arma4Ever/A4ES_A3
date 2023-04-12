@@ -4,5 +4,4 @@
  * Handles missionSave 3DEN event
  */
 
-diag_log "handleMissionSave";
 0 call FUNC(objects3DENComp_saveLocalObjectsData);
