@@ -46,7 +46,8 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "a4es_common",
-            "ace_missileguidance"
+            "ace_missileguidance",
+            "a4es_support"
         };
         author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL", "Krzyciu"};

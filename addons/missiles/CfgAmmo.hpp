@@ -7,6 +7,7 @@ class CfgAmmo {
         maneuvrability = 0;
         initTime = 3;
         timeToLive = 600;
+        explosionEffects = "A4ES_VLSExplosion";
 
         class ace_missileguidance {
             enabled = 1;
@@ -57,6 +58,7 @@ class CfgAmmo {
         timeToLive = 500;
         cameraViewAvailable = 1;
         maxSpeed = 400;
+        explosionEffects = "A4ES_VLSExplosion";
 
         class ace_missileguidance {
             enabled = 1;
@@ -98,6 +100,7 @@ class CfgAmmo {
         timeToLive = 500;
         cameraViewAvailable = 1;
         maxSpeed = 500;
+        explosionEffects = "A4ES_VLSExplosion";
 
         class ace_missileguidance {
             enabled = 1;
@@ -135,6 +138,7 @@ class CfgAmmo {
         author = "Dani (TCVM) / SzwedzikPL";
         maneuvrability = 0;
         timeToLive = 600;
+        explosionEffects = "A4ES_VLSExplosion";
 
         class ace_missileguidance {
             enabled = 1;

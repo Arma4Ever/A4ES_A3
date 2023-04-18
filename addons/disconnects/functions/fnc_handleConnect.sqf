@@ -13,8 +13,7 @@ private _lockedUnits = GVAR(lockedUnits);
 if !(_unit in _lockedUnits) exitWith {};
 // Exit with cleanup if unit is dead
 if !(alive _unit) exitWith {
-  _lockedUnits = _lockedUnits select {alive _x};
-  GVAR(lockedUnits) = _lockedUnits;
+  GVAR(lockedUnits) = _lockedUnits select {alive _x};
 };
 
 GVAR(prepUnlockUnits) pushBack _unit;

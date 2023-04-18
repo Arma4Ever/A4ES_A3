@@ -40,7 +40,7 @@ if (_enableLambsReinforce) then {
   _group setVariable ["lambs_danger_enableGroupReinforce", true, true];
 };
 
-// Setup units & exec init
+// Setup units & execute init
 {
   _x setSkill _unitSkill;
 

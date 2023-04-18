@@ -6,7 +6,7 @@
 
 if (hasInterface) then {
   // Exit for curators
-  if ((side (group player)) == sideLogic) exitWith {};
+  if ((side (group player)) isEqualTo sideLogic) exitWith {};
   [QGVAR(handleConnect), player] call CBA_fnc_serverEvent;
 };
 
