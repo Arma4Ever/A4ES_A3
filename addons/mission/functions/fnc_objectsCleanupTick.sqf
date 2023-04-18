@@ -14,6 +14,7 @@ if (
   {(_object nearEntities ["CAManBase", 200]) isEqualTo []}
 ) exitWith {
   _object setVariable [QGVAR(cleanupDeletion), true];
+  diag_log format ["objectsCleanupDeletion", _object getVariable [QGVAR(cleanupNET), -1], _object, typeOf _object, CBA_missionTime];
   deleteVehicle _object;
 };
 
