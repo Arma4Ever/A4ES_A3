@@ -267,11 +267,11 @@
     </Key>
     <Key ID="STR_A4ES_Medical_TreatmentMessage_applyTourniquet">
       <English>%1 is applying tourniquet...</English>
-      <Polish>%1 zakłada Ci opaskę zaciskową...</Polish>
+      <Polish>%1 zakłada Ci stazę...</Polish>
     </Key>
     <Key ID="STR_A4ES_Medical_TreatmentMessage_removeTourniquet">
       <English>%1 is removing tourniquet...</English>
-      <Polish>%1 ściąga Ci opaskę zaciskową...</Polish>
+      <Polish>%1 ściąga Ci stazę...</Polish>
     </Key>
     <Key ID="STR_A4ES_Medical_TreatmentMessage_bandage">
       <English>%1 bandages you...</English>
