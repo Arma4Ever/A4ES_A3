@@ -24,6 +24,11 @@ ADDON = true;
   _this call FUNC(handleManReloaded);
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
+// Prevent AI from shooting just after getting out from vehicle
+["CAManBase", "GetOutMan", {
+  _this call FUNC(handleGetOut);
+}] call CBA_fnc_addClassEventHandler;
+
 // Reset AI vehicle ammo on reload
 {
   [_x, "Reloaded", {
