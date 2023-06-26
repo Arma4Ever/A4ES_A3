@@ -14,7 +14,7 @@ if (_clients isEqualTo []) exitWith {};
 
 _group spawn {
   sleep 4;
-  if ((isNull _group) || {(units _this) isEqualTo []}) exitWith {};
+  if ((isNull _this) || {(units _this) isEqualTo []}) exitWith {};
   private _client = 0 call EFUNC(headless,getBestClient);
   if (isNull _client) exitWith {};
   _this setGroupOwner (owner _client);
