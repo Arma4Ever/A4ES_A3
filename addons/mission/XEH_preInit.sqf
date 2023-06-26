@@ -30,7 +30,10 @@ if (hasInterface) then {
 if (isServer) then {
   GVAR(objectsCleanupIndex) = 0;
   GVAR(objectsCleanupData) = [];
-  GVAR(objectsCleanupPFH) = [{0 call FUNC(objectsCleanupTick);}, 0] call CBA_fnc_addPerFrameHandler;
+
+  if !(is3DEN || is3DENMultiplayer || is3DENPreview) then {
+    GVAR(objectsCleanupPFH) = [{0 call FUNC(objectsCleanupTick);}, 0] call CBA_fnc_addPerFrameHandler;
+  };
 
   addMissionEventHandler ["EntityCreated", {
     params ["_entity"];
