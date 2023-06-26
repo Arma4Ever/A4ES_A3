@@ -25,7 +25,6 @@ if (
   || {IS_BLEEDING(_patient)}
   || {GET_HEART_RATE(_patient) <= 60}
   || {GET_BANDAGED_WOUNDS(_patient) isNotEqualTo []}
-  || {(GET_OPEN_WOUNDS(_patient) findIf {((_x # 2) > 0) && {(_x # 3) > 0}}) != -1}
   || {1 in (GET_FRACTURES(_patient))}
   || {
     !(_medic call a4es_medical_fnc_isInDressingSetRange) &&
@@ -33,6 +32,23 @@ if (
     {!([_patient] call ace_medical_treatment_fnc_isInMedicalVehicle)}
   }
 ) exitWith {false};
+
+private _wounds = GET_OPEN_WOUNDS(_unit);
+private _hasBleedingWounds = false;
+
+{
+  private _bodyPart = _x;
+  {
+    _x params ["", "", "_xBleeding", "_xDamage"];
+
+    if (_xBleeding > 0 && {_xDamage > 0}) exitWith {
+      _hasBleedingWounds = true;
+    };
+  } forEach _y;
+  if (_hasBleedingWounds) exitWith {};
+} forEach _wounds;
+
+if (_hasBleedingWounds) exitWith {false};
 
 private _requiredBloodVolume = DEFAULT_BLOOD_VOLUME * 0.85;
 if (GET_BLOOD_VOLUME(_patient) < _requiredBloodVolume) exitWith {false};

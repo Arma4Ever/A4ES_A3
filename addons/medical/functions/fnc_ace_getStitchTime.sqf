@@ -18,7 +18,13 @@
 
 params ["_medic", "_patient"];
 
-private _time = (count (_patient call FUNC(getStitchableWounds))) * GVAR(woundStitchTime);
+private _stitchableTotal = 0;
+
+{
+    _stitchableTotal = _stitchableTotal + count _y;
+} forEach (_patient call FUNC(getStitchableWounds));
+
+private _time = _stitchableTotal * GVAR(woundStitchTime);
 
 if ([_medic] call FUNC(isMedic)) then {
   _time = _time * 0.5;
