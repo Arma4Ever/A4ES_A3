@@ -29,6 +29,33 @@ ADDON = true;
   _this call FUNC(handleGetOut);
 }] call CBA_fnc_addClassEventHandler;
 
+// Make AI hide from fire
+["CAManBase", "InitPost", {
+  params ["_unit"];
+
+  _unit addEventHandler ["Suppressed", {
+    params ["_unit"];
+    if (
+      !(local _unit) ||
+      {!(_unit checkAIFeature "PATH")} ||
+      {!(_unit checkAIFeature "AUTOCOMBAT")} ||
+      {!(_unit checkAIFeature "SUPPRESSION")} ||
+      {!(isNull (objectParent _unit))} ||
+      {(currentWeapon _unit) == ""}
+    ) exitWith {};
+    TRACE_1("ai suppressed",_unit);
+
+    if ((unitPos _unit) != "down") then {
+      if ((random 1) > 0.4) exitWith {};
+      _unit setUnitPos "DOWN";
+      _unit spawn {
+        sleep (2 + (random 4));
+        _this setUnitPos "AUTO";
+      };
+    };
+  }];
+}] call CBA_fnc_addClassEventHandler;
+
 // Reset AI vehicle ammo on reload
 {
   [_x, "Reloaded", {
