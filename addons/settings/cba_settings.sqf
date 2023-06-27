@@ -156,8 +156,9 @@ force force ace_cargo_paradropTimeCoefficent = 1;
 force force ace_rearm_distance = 20;
 force force ace_rearm_level = 0;
 force force ace_rearm_supply = 0;
+force force ace_refuel_cargoRate = 18;
 force force ace_refuel_hoseLength = 12;
-force ace_refuel_progressDuration = 2;
+force force ace_refuel_progressDuration = 2;
 force force ace_refuel_rate = 1;
 force force ace_repair_addSpareParts = true;
 force force ace_repair_autoShutOffEngineWhenStartingRepair = true;
@@ -463,8 +464,6 @@ force bocr_main_disabled = false;
 force bocr_main_walk = true;
 
 // Blastcore Murr Edition
-
-// SPRAWDZIĆ
 WarFXPE_BlastWave = 0;
 WarFXPE_HeatHaze = false;
 WarFXPE_WeatherEffects = true;
@@ -474,7 +473,17 @@ force cba_diagnostic_watchInfoRefreshRate = 0.2;
 force force cba_disposable_dropUsedLauncher = 0;
 force force cba_disposable_replaceDisposableLauncher = true;
 force force cba_network_loadoutValidation = 0;
-force force cba_ui_StorePasswords = -1;
+
+// Death and Hit Reactions
+force force WBK_DeathAnimMod_Death_Chance = "100";
+force WBK_DeathAnimMod_Deaths_AI = true;
+force WBK_DeathAnimMod_Deaths_HUGEANIMS = true;
+force WBK_DeathAnimMod_Deaths_PLR = true;
+force WBK_DeathAnimMod_Flinch_AI = true;
+force WBK_DeathAnimMod_Flinch_PLR = true;
+force WBK_DeathAnimMod_Hit_AI = true;
+force force WBK_DeathAnimMod_Hit_Chance = "100";
+force force WBK_DeathAnimMod_Hit_PLR = false;
 
 // Enhanced Movement Rework
 force force emr_main_allowClimbOnStandingUnits = false;
@@ -534,7 +543,8 @@ force force grad_trenches_functions_giantEnvelopeRemovalTime = -1;
 force force grad_trenches_functions_hitDecayMultiplier = 1;
 force force grad_trenches_functions_LongEnvelopeDigTime = 90;
 force force grad_trenches_functions_LongEnvelopeRemovalTime = -1;
-force grad_trenches_functions_shortEnvelopeDamageMultiplier = 2;
+force force grad_trenches_functions_playersInAreaRadius = 0;
+force force grad_trenches_functions_shortEnvelopeDamageMultiplier = 2;
 force force grad_trenches_functions_shortEnvelopeDigTime = 30;
 force force grad_trenches_functions_shortEnvelopeRemovalTime = -1;
 force force grad_trenches_functions_smallEnvelopeDamageMultiplier = 3;
@@ -545,6 +555,7 @@ force grad_trenches_functions_timeoutToDecay = 1500;
 force force grad_trenches_functions_vehicleEnvelopeDamageMultiplier = 1;
 force force grad_trenches_functions_vehicleEnvelopeDigTime = 105;
 force force grad_trenches_functions_vehicleEnvelopeRemovalTime = -1;
+force force grad_trenches_functions_vehicleTrenchBuildSpeed = 5;
 
 // LAMBS Danger
 force lambs_danger_cqbRange = 60;
@@ -566,7 +577,7 @@ force lambs_eventhandlers_ExplosionReactionTime = 9;
 force force lambs_wp_autoAddArtillery = false;
 
 // LAMBS Main
-force lambs_main_combatShareRange = 200;
+force lambs_main_combatShareRange = 500;
 force lambs_main_debug_drawAllUnitsInVehicles = false;
 force lambs_main_debug_Drawing = false;
 force lambs_main_debug_FSM = false;
@@ -584,12 +595,12 @@ force lambs_main_maxRevealValue = 4;
 force lambs_main_minFriendlySuppressionDistance = 0;
 force lambs_main_minObstacleProximity = 5;
 force lambs_main_minSuppressionRange = 20;
-force lambs_main_radioBackpack = 4000;
+force lambs_main_radioBackpack = 5000;
 force lambs_main_radioDisabled = false;
-force lambs_main_radioEast = 1700;
-force lambs_main_radioGuer = 1700;
-force lambs_main_radioShout = 170;
-force lambs_main_radioWest = 1700;
+force lambs_main_radioEast = 2500;
+force lambs_main_radioGuer = 2500;
+force lambs_main_radioShout = 250;
+force lambs_main_radioWest = 2500;
 
 // TFAR - Global settings
 force TFAR_AICanHearPlayer = false;
@@ -600,6 +611,9 @@ force TFAR_defaultIntercomSlot = 0;
 force TFAR_disableAutoMute = false;
 force force TFAR_enableIntercom = true;
 force force TFAR_experimentalVehicleIsolation = true;
+force force TFAR_externalIntercomEnable = 0;
+force force TFAR_externalIntercomMaxRange_Phone = 5;
+force force TFAR_externalIntercomMaxRange_Wireless = 15;
 force force TFAR_fullDuplex = true;
 force TFAR_giveLongRangeRadioToGroupLeaders = false;
 force TFAR_giveMicroDagrToSoldier = true;
@@ -632,6 +646,7 @@ force TFAR_setting_DefaultRadio_Personal_West = "TFAR_anprc152";
 force TFAR_setting_DefaultRadio_Rifleman_East = "TFAR_pnr1000a";
 force TFAR_setting_DefaultRadio_Rifleman_Independent = "TFAR_anprc154";
 force TFAR_setting_DefaultRadio_Rifleman_West = "TFAR_rf7800str";
+force TFAR_setting_externalIntercomWirelessHeadgear = "";
 force force TFAR_spectatorCanHearEnemyUnits = true;
 force force TFAR_spectatorCanHearFriendlies = true;
 force force TFAR_takingRadio = 0;
@@ -639,6 +654,93 @@ force TFAR_Teamspeak_Channel_Name = "TaskForceRadio";
 force TFAR_Teamspeak_Channel_Password = "123";
 force tfar_terrain_interception_coefficient = 8;
 force force TFAR_voiceCone = false;
+
+// VCOM AI East Skill
+force force Vcm_AISkills_East_AimingAccuracy = 0.65;
+force force Vcm_AISkills_East_aimingShake = 0.65;
+force force Vcm_AISkills_East_aimingSpeed = 0.65;
+force force Vcm_AISkills_East_commanding = 1;
+force force Vcm_AISkills_East_courage = 0.85;
+force force Vcm_AISkills_East_general = 0.5;
+force force Vcm_AISkills_East_reloadSpeed = 1;
+force force Vcm_AISkills_East_spotDistance = 0.85;
+force force Vcm_AISkills_East_spotTime = 0.85;
+
+// VCOM AI General Skill
+force force Vcm_AISkills_General_AimingAccuracy = 0.65;
+force force Vcm_AISkills_General_aimingShake = 0.65;
+force force Vcm_AISkills_General_aimingSpeed = 0.65;
+force force Vcm_AISkills_General_commanding = 1;
+force force Vcm_AISkills_General_courage = 1;
+force force Vcm_AISkills_General_general = 0.65;
+force force Vcm_AISkills_General_GrenadeCoolDown = 10;
+force force Vcm_AISkills_General_reloadSpeed = 1;
+force force Vcm_AISkills_General_SmokeCoolDown = 10;
+force force Vcm_AISkills_General_spotDistance = 0.85;
+force force Vcm_AISkills_General_spotTime = 0.85;
+
+// VCOM AI Resistance Skill
+force force Vcm_AISkills_Resistance_AimingAccuracy = 0.65;
+force force Vcm_AISkills_Resistance_aimingShake = 0.65;
+force force Vcm_AISkills_Resistance_aimingSpeed = 0.55;
+force force Vcm_AISkills_Resistance_commanding = 1;
+force force Vcm_AISkills_Resistance_courage = 0.85;
+force force Vcm_AISkills_Resistance_general = 0.5;
+force force Vcm_AISkills_Resistance_reloadSpeed = 1;
+force force Vcm_AISkills_Resistance_spotDistance = 0.85;
+force force Vcm_AISkills_Resistance_spotTime = 0.85;
+
+// VCOM AI West Skill
+force force Vcm_AISkills_West_AimingAccuracy = 0.65;
+force force Vcm_AISkills_West_aimingShake = 0.65;
+force force Vcm_AISkills_West_aimingSpeed = 0.65;
+force force Vcm_AISkills_West_commanding = 1;
+force force Vcm_AISkills_West_courage = 0.85;
+force force Vcm_AISkills_West_general = 0.5;
+force force Vcm_AISkills_West_reloadSpeed = 1;
+force force Vcm_AISkills_West_spotDistance = 0.85;
+force force Vcm_AISkills_West_spotTime = 0.85;
+
+// VCOM SETTINGS
+force VCM_ActivateAI = true;
+force force VCM_ADVANCEDMOVEMENT = true;
+force force VCM_AIDISTANCEVEHPATH = 100;
+force force VCM_AIMagLimit = 1;
+force force VCM_AISkills_General_EM = true;
+force force VCM_AISkills_General_EM_CHN = 10;
+force force VCM_AISkills_General_EM_CLDWN = 10;
+force force Vcm_AISkills_SideSpecific = false;
+force force VCM_AISNIPERS = true;
+force force VCM_ARTYDELAY = 60;
+force force VCM_ARTYENABLE = true;
+force force VCM_CARGOCHNG = true;
+force force VCM_ClassSteal = false;
+force force VCM_DebugAIPathing = false;
+force force VCM_DebugCombatMove = false;
+force force VCM_DebugFSM = false;
+force force VCM_DebugOld = false;
+force force VCM_DebugSuppression = false;
+force force VCM_DISEMBARKRANGE = 200;
+force force Vcm_DrivingActivated = false;
+force force VCM_ForceSpeed = true;
+force force VCM_FRMCHANGE = true;
+force force Vcm_GrenadeChance = 30;
+force force VCM_HEARINGDISTANCE = 1200;
+force force Vcm_IdleAnimationChnc = 2;
+force force Vcm_IdleAnimationsEnabled = false;
+force force VCM_MINECHANCE = 75;
+force force Vcm_RadioChatter = false;
+force force VCM_RAGDOLL = false;
+force force VCM_RAGDOLLCHC = 0;
+force force VCM_SKILLCHANGE = false;
+force force Vcm_SmokeGrenadeChance = 30;
+force force VCM_STATICARMT = 300;
+force force Vcm_StaticWeapons = false;
+force force VCM_StealVeh = true;
+force force VCM_TURRETUNLOAD = true;
+force force VCM_USECBASETTINGS = true;
+force force VCM_WARNDELAY = 30;
+force force VCM_WARNDIST = 1200;
 
 // VET_Unflipping
 force force vet_unflipping_require_serviceVehicle = false;
@@ -649,6 +751,8 @@ force force vet_unflipping_unit_mass_limit = 3000;
 force force vet_unflipping_vehicle_mass_limit = 100000;
 
 // Zeus Enhanced
+force zen_area_markers_editableMarkers = 0;
+force zen_building_markers_enabled = false;
 force force zen_camera_adaptiveSpeed = true;
 force force zen_camera_defaultSpeedCoef = 1;
 force force zen_camera_fastSpeedCoef = 1;
@@ -671,7 +775,8 @@ force force zen_editor_randomizeCopyPaste = false;
 force force zen_editor_removeWatermark = true;
 force force zen_editor_unitRadioMessages = 2;
 force force zen_placement_enabled = true;
-force force zen_visibility_enabled = false;
+force force zen_visibility_enabled = 0;
+force zen_visibility_maxDistance = 3000;
 force zen_vision_enableBlackHot = false;
 force zen_vision_enableBlackHotGreenCold = false;
 force zen_vision_enableBlackHotRedCold = false;
@@ -681,4 +786,3 @@ force zen_vision_enableRedGreenThermal = false;
 force zen_vision_enableRedHotCold = false;
 force zen_vision_enableWhiteHot = true;
 force zen_vision_enableWhiteHotRedCold = false;
-
