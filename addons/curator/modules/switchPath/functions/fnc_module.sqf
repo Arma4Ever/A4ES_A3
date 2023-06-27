@@ -17,8 +17,6 @@ if (isNull _target || {!(_target isKindOf "CAManBase")}) exitWith {};
   params ["_values", "_target"];
   _values params ["_enabled", "_forGroup"];
 
-  diag_log _this;
-
   private _units = [_target];
   if (_forGroup) then {
     _units = units (group _target);
