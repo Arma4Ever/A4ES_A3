@@ -55,6 +55,9 @@ _corpse removeWeaponGlobal (secondaryWeapon _corpse);
 _corpse removeWeaponGlobal (handgunWeapon _corpse);
 _corpse removeWeaponGlobal (binocular _corpse);
 
+// Clear unit gear globally (fixes local syncs)
+[QGVAR(clearGear), _corpse] call CBA_fnc_globalEvent;
+
 // Move all gear to corpse uniform
 if (_corpseVest != "") then {
 	_corpseCargo addItemCargoGlobal [_corpseVest, 1];
@@ -63,7 +66,7 @@ if (_corpseBackpack != "") then {
 	_corpseCargo addBackpackCargoGlobal [_corpseBackpack, 1];
 };
 
-// Clear added vest and bacpack
+// Clear added vest and backpack
 if (_corpseVest != "" || {_corpseBackpack != ""}) then {
   {
     _x params ["", "_container"];

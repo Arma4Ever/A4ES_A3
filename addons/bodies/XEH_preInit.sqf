@@ -4,6 +4,10 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
+[QGVAR(clearGear), {
+  _this call FUNC(clearGear);
+}] call CBA_fnc_addEventHandler;
+
 if (isServer) then {
   GVAR(simpleBodiesGroup) = grpNull;
   GVAR(simpleBodies) = [];
