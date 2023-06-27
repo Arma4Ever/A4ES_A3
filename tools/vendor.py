@@ -48,6 +48,9 @@ VENDOR = {
     "@Enhanced Map Ace Version": {},
     "@MS_IFF_Strobe": {},
     "@Deformer": {},
+    "@Death and Hit reactions": {},
+    "@VcomAI Development Build": {},
+    "@Snapping for Eden and Zeus": {},
 
     #"@L3-GPNVG18 Panoramic Night Vision": {},
     #"@Uriki's Mission Items": {},
