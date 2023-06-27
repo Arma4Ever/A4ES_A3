@@ -4,9 +4,14 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {
+            QGVAR(defenderBehaviour),
             QGVAR(moveHeadlessClients),
+            QGVAR(revealAllPlayers),
+            QGVAR(revealUnit),
             QGVAR(setLogicFlagValue),
-            QGVAR(setTaskState)
+            QGVAR(setTaskState),
+            QGVAR(switchPath),
+            QGVAR(toggleDynamicSimulation)
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;

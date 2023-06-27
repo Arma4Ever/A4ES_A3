@@ -14,4 +14,14 @@ class CfgFactionClasses {
         priority = 2;
         side = 7;
     };
+    class GVAR(AI) {
+        displayName = CSTRING(FactionClass_AI);
+        priority = 2;
+        side = 7;
+    };
+    class GVAR(Players) {
+        displayName = CSTRING(FactionClass_Players);
+        priority = 2;
+        side = 7;
+    };
 };

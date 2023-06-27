@@ -30,6 +30,14 @@
       <English>A4ES Logic flags</English>
       <Polish>A4ES Flagi logiczne</Polish>
     </Key>
+    <Key ID="STR_A4ES_Curator_FactionClass_AI">
+      <English>A4ES AI</English>
+      <Polish>A4ES AI</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Curator_FactionClass_Players">
+      <English>A4ES Players</English>
+      <Polish>A4ES Gracze</Polish>
+    </Key>
     <Key ID="STR_A4ES_Curator_FactionClass_tasks">
       <English>A4ES Tasks</English>
       <Polish>A4ES Zadania</Polish>
@@ -43,6 +51,104 @@
     <Key ID="STR_A4ES_Curator_moveHeadlessClients_displayName">
       <English>Move headless clients</English>
       <Polish>Przenieś headless klientów</Polish>
+    </Key>
+  </Package>
+  <Package name="Curator_revealUnit">
+    <Key ID="STR_A4ES_Curator_revealUnit_displayName">
+      <English>Reveal unit</English>
+      <Polish>Ujawnij jednostkę</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Curator_revealUnit_UnitRevealed">
+      <English>Unit revealed</English>
+      <Polish>Jednostka ujawniona</Polish>
+    </Key>
+  </Package>
+  <Package name="Curator_revealAllPlayers">
+    <Key ID="STR_A4ES_Curator_revealAllPlayers_displayName">
+      <English>Reveal all players</English>
+      <Polish>Ujawnij wszystkich graczy</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Curator_revealAllPlayers_PlayersRevealed">
+      <English>Players revealed</English>
+      <Polish>Gracze ujawnieni</Polish>
+    </Key>
+  </Package>
+  <Package name="Curator_switchPath">
+    <Key ID="STR_A4ES_Curator_switchPath_displayName">
+      <English>Toggle walking</English>
+      <Polish>Przełącz chodzenie</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Curator_switchPath_Attributes_PathEnabled">
+      <English>Walking enabled</English>
+      <Polish>Chodzenie włączone</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Curator_switchPath_Attributes_ForGroup">
+      <English>Set for whole group</English>
+      <Polish>Zastosuj dla całej grupy</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Curator_switchPath_Path_enabled_unit">
+      <English>Walking enabled for unit</English>
+      <Polish>Chodzenie włączone dla jednostki</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Curator_switchPath_Path_enabled_group">
+      <English>Walking enabled for group</English>
+      <Polish>Chodzenie włączone dla grupy</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Curator_switchPath_Path_disabled_unit">
+      <English>Walking disabled for unit</English>
+      <Polish>Chodzenie wyłączone dla jednostki</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Curator_switchPath_Path_disabled_group">
+      <English>Walking disabled for group</English>
+      <Polish>Chodzenie wyłączone dla grupy</Polish>
+    </Key>
+  </Package>
+  <Package name="Curator_defenderBehaviour">
+    <Key ID="STR_A4ES_Curator_defenderBehaviour_displayName">
+      <English>Static defender</English>
+      <Polish>Stacjonarny obrońca</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Curator_defenderBehaviour_Attributes_Behaviour">
+      <English>Behaviour</English>
+      <Polish>Zachowanie</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Curator_defenderBehaviour_Attributes_ForGroup">
+      <English>Set for whole group</English>
+      <Polish>Zastosuj dla całej grupy</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Curator_defenderBehaviour_disabled_unit">
+      <English>Static defender disabled for unit</English>
+      <Polish>Wyłączono stacjonarnego obrońcę dla jednostki</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Curator_defenderBehaviour_disabled_group">
+      <English>Static defender disabled for group</English>
+      <Polish>Wyłączono stacjonarnego obrońcę dla grupy</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Curator_defenderBehaviour_setFor_unit">
+      <English>Static defender settings set for unit</English>
+      <Polish>Zmieniono ustawienia stacjonarnego obrońcy dla jednostki</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Curator_defenderBehaviour_setFor_group">
+      <English>Static defender settings set for group</English>
+      <Polish>Zmieniono ustawienia stacjonarnego obrońcy dla grupy</Polish>
+    </Key>
+  </Package>
+  <Package name="Curator_toggleDynamicSimulation">
+    <Key ID="STR_A4ES_Curator_toggleDynamicSimulation_displayName">
+      <English>Toggle dynamic simulation</English>
+      <Polish>Przełącz dynamiczną symulację</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Curator_toggleDynamicSimulation_Attributes_Enabled">
+      <English>Enabled</English>
+      <Polish>Włączona</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Curator_toggleDynamicSimulation_sim_enabled">
+      <English>Dynamic simulation enabled</English>
+      <Polish>Włączono dynamiczną symulację</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Curator_toggleDynamicSimulation_sim_disabled">
+      <English>Dynamic simulation disabled</English>
+      <Polish>Wyłączono dynamiczną symulację</Polish>
     </Key>
   </Package>
   <Package name="Curator_setLogicFlagValue">

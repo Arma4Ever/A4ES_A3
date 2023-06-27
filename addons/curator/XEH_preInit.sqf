@@ -4,6 +4,40 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
+[QGVAR(revealUnit), {
+  params ["_entity"];
+  {
+    _x reveal [_entity, 4];
+  } forEach allGroups;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(revealAllPlayers), {
+  private _players = allPlayers select {alive _x && {!(_x isKindOf "VirtualMan_F")}};
+  {
+    private _player = _x;
+    {
+      _x reveal [_player, 4];
+    } forEach allGroups;
+  } forEach _players;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(switchPATH), {
+  params ["_unit", "_state"];
+
+  if (
+    !(local _unit) ||
+    {!(_unit isKindOf "CAManBase")}
+  ) exitWith {};
+
+  if (_state) then {
+    _unit enableAI "PATH";
+    _unit enableAI "FSM";
+  } else {
+    _unit disableAI "PATH";
+    _unit disableAI "FSM";
+  };
+}] call CBA_fnc_addEventHandler;
+
 // Add objects/group placed by curator to all curators
 ["ModuleCurator_F", "InitPost", {
   params ["_curator"];
