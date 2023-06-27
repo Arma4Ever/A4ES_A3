@@ -24,12 +24,14 @@ LOG("Scheduling fatal state check");
   private _woundsCount = 0;
 
   // Count bleeding chest wounds
+  private _chestWounds = (_unit getVariable ["ace_medical_openWounds", createHashMap]) getOrDefault ["body", []];
   {
-    
-    if (((_x # 1) == 1) && {(_x # 2) > 0} && {(_x # 3) > 0}) then {
-      _woundsCount = _woundsCount + (_x # 2);
+    _x params ["", "_xAmountOf", "_xBleeding", "_xDamage"];
+
+    if (_xBleeding > 0 && {_xDamage > 0}) then {
+      _woundsCount = _woundsCount + _xAmountOf;
     };
-  } forEach (_unit getVariable ["ace_medical_openWounds", []]);
+  } forEach _chestWounds;
 
   TRACE_2("Fatal state checked",_unit,_woundsCount);
   if (_woundsCount > MEDICAL_FATALSTATE_MAX_WOUNDS_COUNT) exitWith {
