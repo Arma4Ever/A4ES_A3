@@ -43,7 +43,6 @@ class Display3DEN {
                 "ENH_MeasureDistance",
                 "ENH_ShowModuleInformation",
                 "ENH_Garrison",
-                //"ENH_Extraction",
                 "ENH_AddToFavorites",
                 "ENH_MoveToLayer"
             };
@@ -76,13 +75,6 @@ class Display3DEN {
                 delete ENH_About_Documentation;
                 delete ENH_About_Steam;
                 delete ENH_About_Translation;
-                delete ENH_Folder_VHC;
-                delete ENH_CopyVHC;
-                delete ENH_ApplyVHC;
-                delete ENH_RandomVHC;
-                delete ENH_CopyPylonSettings;
-                delete ENH_ApplyPylonSettings;
-                delete ENH_ExportPylonsToSQF;
                 delete ENH_3DENCamPositions;
                 delete ENH_SAM;
                 delete ENH_BriefingEditor;
@@ -132,7 +124,7 @@ class Display3DEN {
                         "ENH_Folder_Utilities",
                         "ENH_Folder_Placement",
                         "ENH_Folder_Loadout",
-                        // "ENH_Folder_VHC",
+                        "ENH_Folder_VHC",
                         "ENH_Folder_Debug",
                         "ENH_Folder_Miscellaneous",
                         "cba_ui_LobbyManager"
@@ -149,7 +141,6 @@ class Display3DEN {
                         "ENH_ScriptCommands",
                         "Separator",
                         "ENH_3DENRadio",
-                        // "ENH_3DENCamPositions",
                         // "ENH_SAM",
                         "ENH_CfgSentencesBrowser",
                         "ENH_TextureFinder",
@@ -158,7 +149,7 @@ class Display3DEN {
                         // "ENH_AttributeSearch",
                         // "ENH_ActionCreator",
                         "ENH_BatchReplace",
-                        "ENH_NameObjects",
+                        "ENH_NameObjects"
                         // "ENH_ZeusAddons"
                     };
                 };
@@ -184,12 +175,11 @@ class Display3DEN {
                 class ENH_Folder_Miscellaneous {
                     items[] = {
                         // "ENH_CreateTrigger",
-                        "ENH_DeleteEmptyLayers",
                         // "ENH_ExportMissionParameters",
                         // "ENH_GenerateSteamMissionDescription",
-                        "Separator",
+                        // "Separator",
                         // "ENH_SwitchTime",
-                        "ENH_ToggleGrass",
+                        "ENH_ToggleGrass"
                         // "Separator",
                         // "ENH_ToggleSimpleObject",
                         // "ENH_ToggleSimulation",
