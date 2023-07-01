@@ -18,6 +18,8 @@ PREP(handleFriendlyFire);
 PREP(handleHeadshot);
 PREP(handleTreatmentStarted);
 PREP(isInDressingSetRange);
+PREP(onSurgicalKitProgress);
+PREP(onSurgicalKitStart);
 PREP(onSurgicalKitSuccess);
 PREP(pickUpDressingSet);
 PREP(placeDressingSet);

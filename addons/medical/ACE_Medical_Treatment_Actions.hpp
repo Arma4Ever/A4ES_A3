@@ -24,7 +24,9 @@ class ACE_Medical_Treatment_Actions {
     class SalineIV_250: SalineIV {};
 
     class SurgicalKit: FieldDressing {
+        callbackStart = QFUNC(onSurgicalKitStart);
         callbackSuccess = QFUNC(onSurgicalKitSuccess);
+        callbackProgress = QFUNC(onSurgicalKitProgress);
     };
 
     class Morphine;

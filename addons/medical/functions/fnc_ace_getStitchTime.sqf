@@ -16,15 +16,9 @@
  * Public: No
  */
 
-params ["_medic", "_patient"];
+params ["_medic", "_patient", "_bodyPart"];
 
-private _stitchableTotal = 0;
-
-{
-    _stitchableTotal = _stitchableTotal + count _y;
-} forEach (_patient call FUNC(getStitchableWounds));
-
-private _time = _stitchableTotal * GVAR(woundStitchTime);
+private _time = count (GET_BANDAGED_WOUNDS(_patient) getOrDefault [_bodyPart, []]) * GVAR(woundStitchTime);
 
 if ([_medic] call FUNC(isMedic)) then {
   _time = _time * 0.5;
