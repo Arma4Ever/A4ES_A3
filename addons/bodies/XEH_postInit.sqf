@@ -29,7 +29,14 @@ if (hasInterface) then {
 
     if (_container getVariable [QGVAR(isSimpleBody), false]) then {
       TRACE_1("InventoryOpened - simple body, enabling sim",_container);
+      // Update accessing units
+      private _units = _container getVariable [QGVAR(inventoryAccessUnits), []];
+      _units pushBack player;
+      _container setVariable [QGVAR(inventoryAccessUnits), _units, true];
+      // Enable sim locally
       _container enableSimulation true;
+      // Enable sim globally
+      [QGVAR(toggleContainerSim), [_container, true]] call CBA_fnc_serverEvent;
     };
     false
   }];
@@ -39,7 +46,16 @@ if (hasInterface) then {
 
     if (_container getVariable [QGVAR(isSimpleBody), false]) then {
       TRACE_1("InventoryClosed - simple body, disabling sim",_container);
+      // Update accessing units
+      private _units = _container getVariable [QGVAR(inventoryAccessUnits), []];
+      _units deleteAt (_units find player);
+      _container setVariable [QGVAR(inventoryAccessUnits), _units, true];
+      // Disable sim locally
       _container enableSimulation false;
+      // Disable sim globally
+      if (_units isEqualTo []) then {
+        [QGVAR(toggleContainerSim), [_container, false]] call CBA_fnc_serverEvent;
+      };
     };
   }];
 };
