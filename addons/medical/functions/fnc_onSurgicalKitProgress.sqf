@@ -23,8 +23,6 @@
 params ["_args", "_elapsedTime", "_totalTime"];
 _args params ["_medic", "_patient", "_bodyPart"];
 
-diag_log ["surgicalKitProgress", _this];
-
 private _bandagedWounds = GET_BANDAGED_WOUNDS(_patient);
 private _bandagedWoundsOnPart = _bandagedWounds get _bodyPart;
 
