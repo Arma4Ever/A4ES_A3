@@ -171,6 +171,11 @@ force force ace_repair_fullRepairLocation = 3;
 force force ace_repair_fullRepairRequiredItems = ["ace_repair_anyToolKit"];
 force force ace_repair_locationsBoostTraining = false;
 force force ace_repair_miscRepairRequiredItems = ["ace_repair_anyToolKit"];
+force force ace_repair_patchWheelEnabled = 0;
+force force ace_repair_patchWheelLocation = ["ground","vehicle"];
+force force ace_repair_patchWheelMaximumRepair = 0.3;
+force force ace_repair_patchWheelRequiredItems = ["ace_repair_anyToolKit"];
+force force ace_repair_patchWheelTime = 5;
 force force ace_repair_repairDamageThreshold = 0.6;
 force force ace_repair_repairDamageThreshold_engineer = 0.4;
 force force ace_repair_wheelRepairRequiredItems = [];
@@ -209,6 +214,9 @@ force force ace_map_gestures_maxRange = 7;
 force force ace_map_gestures_maxRangeCamera = 14;
 force force ace_map_gestures_onlyShowFriendlys = false;
 
+// ACE Map Tools
+force force ace_maptools_drawStraightLines = false;
+
 // ACE Medical
 force force ace_medical_ai_enabledFor = 0;
 force force ace_medical_AIDamageThreshold = 0.2;
@@ -221,15 +229,18 @@ force force ace_medical_deathChance = 0.35;
 force force ace_medical_enableVehicleCrashes = true;
 force force ace_medical_fatalDamageSource = 1;
 force force ace_medical_feedback_bloodVolumeEffectType = 2;
+force force ace_medical_feedback_enableHUDIndicators = true;
 force force ace_medical_feedback_painEffectType = 1;
 force force ace_medical_fractureChance = 0.425;
 force force ace_medical_fractures = 2;
 force force ace_medical_gui_enableActions = 1;
 force force ace_medical_gui_enableMedicalMenu = 1;
 force force ace_medical_gui_enableSelfActions = true;
+force force ace_medical_gui_interactionMenuShowTriage = 1;
 force force ace_medical_gui_maxDistance = 3;
 force force ace_medical_gui_openAfterTreatment = true;
 force force ace_medical_gui_showBloodlossEntry = true;
+force force ace_medical_gui_showDamageEntry = true;
 force force ace_medical_ivFlowRate = 1.5;
 force force ace_medical_limping = 1;
 force force ace_medical_painCoefficient = 1.25;
@@ -599,7 +610,7 @@ force lambs_main_radioBackpack = 5000;
 force lambs_main_radioDisabled = false;
 force lambs_main_radioEast = 2500;
 force lambs_main_radioGuer = 2500;
-force lambs_main_radioShout = 250;
+force lambs_main_radioShout = 200;
 force lambs_main_radioWest = 2500;
 
 // TFAR - Global settings
@@ -705,7 +716,7 @@ force force Vcm_AISkills_West_spotTime = 0.85;
 force VCM_ActivateAI = true;
 force force VCM_ADVANCEDMOVEMENT = true;
 force force VCM_AIDISTANCEVEHPATH = 100;
-force force VCM_AIMagLimit = 1;
+force force VCM_AIMagLimit = 2;
 force force VCM_AISkills_General_EM = true;
 force force VCM_AISkills_General_EM_CHN = 10;
 force force VCM_AISkills_General_EM_CLDWN = 10;
