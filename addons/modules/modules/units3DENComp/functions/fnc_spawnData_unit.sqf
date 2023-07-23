@@ -37,7 +37,7 @@ _unitData params [
 ];
 
 // Create unit in correct group (side)
-private _unit = _group createUnit [_className, [0, 0, 500], [], 0, "NONE"];
+private _unit = _group createUnit [_className, ASLToAGL (ATLToASL _posATL), [], 0, "NONE"];
 [_unit] joinSilent _group;
 
 // Update skill

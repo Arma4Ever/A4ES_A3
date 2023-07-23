@@ -44,7 +44,10 @@ if (_className isKindOf "Air") then {
   _special = "FLY";
 };
 
-private _vehicle = createVehicle [_className, ASLToATL [0, 0, 1000], [], 0, _special];
+private _vehicle = createVehicle [_className, ASLToAGL (ATLToASL _posATL), [], 0, _special];
+
+_vehicle allowDamage false;
+
 _vehicle setPosATL _posATL;
 _vehicle setVectorDirAndUp _vectors;
 
@@ -114,6 +117,10 @@ if (
 };
 
 // Call post init
-_vehicle call _vehiclePostInit;
+_vehicle spawn {
+  sleep 1;
+  _this allowDamage true;
+  _this call _vehiclePostInit;
+};
 
 _vehicle
