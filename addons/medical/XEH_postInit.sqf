@@ -1,5 +1,18 @@
 #include "script_component.hpp"
 
+0 spawn {
+  sleep 0.001;
+
+  if (
+    isClass (configFile >> "CfgPatches" >> "rhs_main") ||
+    {isClass (configFile >> "CfgPatches" >> "rhsusf_main")}
+  ) then {
+    ace_medical_playerDamageThreshold = ace_medical_playerDamageThreshold * 0.34;
+    ace_medical_AIDamageThreshold = ace_medical_AIDamageThreshold * 0.34;
+    ace_medical_const_penetrationThreshold = 0.1;
+  };
+};
+
 if !(hasInterface) exitWith {};
 
 // exit if curator/spectator

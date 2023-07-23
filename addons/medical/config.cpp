@@ -55,13 +55,17 @@ class a4es_functions_overrides {
     ace_medical_treatment_fnc_tourniquet = QPATHTOF(functions\fnc_ace_tourniquet.sqf);
     ace_medical_treatment_fnc_tourniquetRemove = QPATHTOF(functions\fnc_ace_tourniquetRemove.sqf);
     ace_medical_treatment_fnc_bandage = QPATHTOF(functions\fnc_ace_bandage.sqf);
+    ace_medical_treatment_fnc_canStitch = QPATHTOF(functions\fnc_ace_canStitch.sqf);
     ace_medical_treatment_fnc_fullHeal = QPATHTOF(functions\fnc_ace_fullHeal.sqf);
+    ace_medical_treatment_fnc_findMostEffectiveWound = QPATHTOF(functions\fnc_ace_findMostEffectiveWound.sqf);
 
+    ace_medical_damage_fnc_handleIncapacitation = QPATHTOF(functions\fnc_ace_handleIncapacitation.sqf);
 };
 
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 
+#include "ACE_Medical_Injuries.hpp"
 #include "ACE_Medical_Treatment.hpp"
 #include "ACE_Medical_Treatment_Actions.hpp"
