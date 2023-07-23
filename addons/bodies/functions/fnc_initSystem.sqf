@@ -36,7 +36,7 @@ addMissionEventHandler ["EntityKilled", {
   // Remove from remains collector to prevent deletion of corpse
   removeFromRemainsCollector [_unit];
   // Schedule adding corpse to simple bodies system
-  [{_this call FUNC(addCorpseToSystem);}, [_unit, _id], (15 + random 2)] call CBA_fnc_waitAndExecute;
+  [{_this call FUNC(addCorpseToSystem);}, [_unit, _id], (25 + random 5)] call CBA_fnc_waitAndExecute;
 }];
 
 LOG("System started");
