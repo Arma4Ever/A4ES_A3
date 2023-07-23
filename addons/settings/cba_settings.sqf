@@ -219,8 +219,8 @@ force force ace_maptools_drawStraightLines = false;
 
 // ACE Medical
 force force ace_medical_ai_enabledFor = 0;
-force force ace_medical_AIDamageThreshold = 0.2;
-force force ace_medical_bleedingCoefficient = 0.43;
+force force ace_medical_AIDamageThreshold = 0.12;
+force force ace_medical_bleedingCoefficient = 0.55;
 force force ace_medical_blood_bloodLifetime = 300;
 force force ace_medical_blood_enabledFor = 2;
 force force ace_medical_blood_maxBloodObjects = 200;
@@ -231,7 +231,7 @@ force force ace_medical_fatalDamageSource = 1;
 force force ace_medical_feedback_bloodVolumeEffectType = 2;
 force force ace_medical_feedback_enableHUDIndicators = true;
 force force ace_medical_feedback_painEffectType = 1;
-force force ace_medical_fractureChance = 0.425;
+force force ace_medical_fractureChance = 0.15;
 force force ace_medical_fractures = 2;
 force force ace_medical_gui_enableActions = 1;
 force force ace_medical_gui_enableMedicalMenu = 1;
@@ -243,11 +243,11 @@ force force ace_medical_gui_showBloodlossEntry = true;
 force force ace_medical_gui_showDamageEntry = true;
 force force ace_medical_ivFlowRate = 1.5;
 force force ace_medical_limping = 1;
-force force ace_medical_painCoefficient = 1.25;
-force force ace_medical_painUnconsciousChance = 0.5;
-force force ace_medical_playerDamageThreshold = 5;
+force force ace_medical_painCoefficient = 1;
+force force ace_medical_painUnconsciousChance = 0;
+force force ace_medical_playerDamageThreshold = 10;
 force force ace_medical_spontaneousWakeUpChance = 0.5;
-force force ace_medical_spontaneousWakeUpEpinephrineBoost = 3;
+force force ace_medical_spontaneousWakeUpEpinephrineBoost = 5;
 force force ace_medical_statemachine_AIUnconsciousness = false;
 force force ace_medical_statemachine_cardiacArrestBleedoutEnabled = true;
 force force ace_medical_statemachine_cardiacArrestTime = 390;
@@ -287,7 +287,7 @@ force force ace_medical_treatment_treatmentTimeCPR = 10;
 force force ace_medical_treatment_treatmentTimeIV = 8;
 force force ace_medical_treatment_treatmentTimeSplint = 8;
 force force ace_medical_treatment_treatmentTimeTourniquet = 2.5;
-force force ace_medical_treatment_woundReopenChance = 0.6;
+force force ace_medical_treatment_woundReopenChance = 0.75;
 force force ace_medical_treatment_woundStitchTime = 5;
 
 // ACE Nightvision
@@ -489,12 +489,14 @@ force force cba_network_loadoutValidation = 0;
 force force WBK_DeathAnimMod_Death_Chance = "100";
 force WBK_DeathAnimMod_Deaths_AI = true;
 force WBK_DeathAnimMod_Deaths_HUGEANIMS = true;
+force WBK_DeathAnimMod_Deaths_NECKSHOTS = true;
 force WBK_DeathAnimMod_Deaths_PLR = true;
 force WBK_DeathAnimMod_Flinch_AI = true;
 force WBK_DeathAnimMod_Flinch_PLR = true;
 force WBK_DeathAnimMod_Hit_AI = true;
 force force WBK_DeathAnimMod_Hit_Chance = "100";
-force force WBK_DeathAnimMod_Hit_PLR = false;
+force force WBK_DeathAnimMod_Hit_Chance_PLR = "15";
+force force WBK_DeathAnimMod_Hit_PLR = true;
 
 // Enhanced Movement Rework
 force force emr_main_allowClimbOnStandingUnits = false;
@@ -539,6 +541,7 @@ force force grad_trenches_functions_allowHitDecay = true;
 force force grad_trenches_functions_allowLongEnvelope = true;
 force force grad_trenches_functions_allowShortEnvelope = true;
 force force grad_trenches_functions_allowSmallEnvelope = true;
+force grad_trenches_functions_allowTextureLock = true;
 force grad_trenches_functions_allowTrenchDecay = true;
 force force grad_trenches_functions_allowVehicleEnvelope = true;
 force force grad_trenches_functions_bigEnvelopeDamageMultiplier = 2;
@@ -562,6 +565,7 @@ force force grad_trenches_functions_smallEnvelopeDamageMultiplier = 3;
 force force grad_trenches_functions_smallEnvelopeDigTime = 45;
 force force grad_trenches_functions_smallEnvelopeRemovalTime = -1;
 force force grad_trenches_functions_stopBuildingAtFatigueMax = true;
+force grad_trenches_functions_textureLockDistance = 5;
 force grad_trenches_functions_timeoutToDecay = 1500;
 force force grad_trenches_functions_vehicleEnvelopeDamageMultiplier = 1;
 force force grad_trenches_functions_vehicleEnvelopeDigTime = 105;
@@ -665,93 +669,6 @@ force TFAR_Teamspeak_Channel_Name = "TaskForceRadio";
 force TFAR_Teamspeak_Channel_Password = "123";
 force tfar_terrain_interception_coefficient = 8;
 force force TFAR_voiceCone = false;
-
-// VCOM AI East Skill
-force force Vcm_AISkills_East_AimingAccuracy = 0.65;
-force force Vcm_AISkills_East_aimingShake = 0.65;
-force force Vcm_AISkills_East_aimingSpeed = 0.65;
-force force Vcm_AISkills_East_commanding = 1;
-force force Vcm_AISkills_East_courage = 0.85;
-force force Vcm_AISkills_East_general = 0.5;
-force force Vcm_AISkills_East_reloadSpeed = 1;
-force force Vcm_AISkills_East_spotDistance = 0.85;
-force force Vcm_AISkills_East_spotTime = 0.85;
-
-// VCOM AI General Skill
-force force Vcm_AISkills_General_AimingAccuracy = 0.65;
-force force Vcm_AISkills_General_aimingShake = 0.65;
-force force Vcm_AISkills_General_aimingSpeed = 0.65;
-force force Vcm_AISkills_General_commanding = 1;
-force force Vcm_AISkills_General_courage = 1;
-force force Vcm_AISkills_General_general = 0.65;
-force force Vcm_AISkills_General_GrenadeCoolDown = 10;
-force force Vcm_AISkills_General_reloadSpeed = 1;
-force force Vcm_AISkills_General_SmokeCoolDown = 10;
-force force Vcm_AISkills_General_spotDistance = 0.85;
-force force Vcm_AISkills_General_spotTime = 0.85;
-
-// VCOM AI Resistance Skill
-force force Vcm_AISkills_Resistance_AimingAccuracy = 0.65;
-force force Vcm_AISkills_Resistance_aimingShake = 0.65;
-force force Vcm_AISkills_Resistance_aimingSpeed = 0.55;
-force force Vcm_AISkills_Resistance_commanding = 1;
-force force Vcm_AISkills_Resistance_courage = 0.85;
-force force Vcm_AISkills_Resistance_general = 0.5;
-force force Vcm_AISkills_Resistance_reloadSpeed = 1;
-force force Vcm_AISkills_Resistance_spotDistance = 0.85;
-force force Vcm_AISkills_Resistance_spotTime = 0.85;
-
-// VCOM AI West Skill
-force force Vcm_AISkills_West_AimingAccuracy = 0.65;
-force force Vcm_AISkills_West_aimingShake = 0.65;
-force force Vcm_AISkills_West_aimingSpeed = 0.65;
-force force Vcm_AISkills_West_commanding = 1;
-force force Vcm_AISkills_West_courage = 0.85;
-force force Vcm_AISkills_West_general = 0.5;
-force force Vcm_AISkills_West_reloadSpeed = 1;
-force force Vcm_AISkills_West_spotDistance = 0.85;
-force force Vcm_AISkills_West_spotTime = 0.85;
-
-// VCOM SETTINGS
-force VCM_ActivateAI = true;
-force force VCM_ADVANCEDMOVEMENT = true;
-force force VCM_AIDISTANCEVEHPATH = 100;
-force force VCM_AIMagLimit = 2;
-force force VCM_AISkills_General_EM = true;
-force force VCM_AISkills_General_EM_CHN = 10;
-force force VCM_AISkills_General_EM_CLDWN = 10;
-force force Vcm_AISkills_SideSpecific = false;
-force force VCM_AISNIPERS = true;
-force force VCM_ARTYDELAY = 60;
-force force VCM_ARTYENABLE = true;
-force force VCM_CARGOCHNG = true;
-force force VCM_ClassSteal = false;
-force force VCM_DebugAIPathing = false;
-force force VCM_DebugCombatMove = false;
-force force VCM_DebugFSM = false;
-force force VCM_DebugOld = false;
-force force VCM_DebugSuppression = false;
-force force VCM_DISEMBARKRANGE = 200;
-force force Vcm_DrivingActivated = false;
-force force VCM_ForceSpeed = true;
-force force VCM_FRMCHANGE = true;
-force force Vcm_GrenadeChance = 30;
-force force VCM_HEARINGDISTANCE = 1200;
-force force Vcm_IdleAnimationChnc = 2;
-force force Vcm_IdleAnimationsEnabled = false;
-force force VCM_MINECHANCE = 75;
-force force Vcm_RadioChatter = false;
-force force VCM_RAGDOLL = false;
-force force VCM_RAGDOLLCHC = 0;
-force force VCM_SKILLCHANGE = false;
-force force Vcm_SmokeGrenadeChance = 30;
-force force VCM_STATICARMT = 300;
-force force Vcm_StaticWeapons = false;
-force force VCM_StealVeh = true;
-force force VCM_TURRETUNLOAD = true;
-force force VCM_USECBASETTINGS = true;
-force force VCM_WARNDELAY = 30;
-force force VCM_WARNDIST = 1200;
 
 // VET_Unflipping
 force force vet_unflipping_require_serviceVehicle = false;
