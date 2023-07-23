@@ -29,7 +29,16 @@ class ACE_Medical_Treatment_Actions {
         callbackProgress = QFUNC(onSurgicalKitProgress);
     };
 
-    class Morphine;
+    class Morphine: FieldDressing {
+        treatmentTime = QFUNC(getTreatmentTimeAutoinjector);
+    };
+    class Adenosine: Morphine {
+        treatmentTime = QFUNC(getTreatmentTimeAutoinjector);
+    };
+    class Epinephrine: Morphine {
+        treatmentTime = QFUNC(getTreatmentTimeAutoinjector);
+    };
+
     class A4ES_painkillers: Morphine {
         displayName = CSTRING(Painkillers_DisplayName);
         displayNameProgress = CSTRING(Painkillers_Progress);
@@ -37,6 +46,7 @@ class ACE_Medical_Treatment_Actions {
         items[] = {"A4ES_painkillers"};
         icon = QPATHTOF(data\painkillers_icon_ca.paa);
         condition = "";
+        treatmentTime = "ace_medical_treatment_treatmentTimeAutoinjector";
         callbackSuccess = QUOTE(call ACEFUNC(medical_treatment,medication));
     };
 

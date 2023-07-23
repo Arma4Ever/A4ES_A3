@@ -9,6 +9,7 @@ PREP(drawBloodProgress);
 PREP(drawBloodStart);
 PREP(drawBloodSuccess);
 PREP(ejectPlayerFromWreck);
+PREP(getTreatmentTimeAutoinjector);
 PREP(getTreatmentTimeIV);
 PREP(getTreatmentTimeSplint);
 PREP(getVehicleDeathChance);
