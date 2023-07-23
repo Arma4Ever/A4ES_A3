@@ -47,6 +47,10 @@ private _chance = linearConversion [
 private _headShotCount = (_unit getVariable [QGVAR(headshotCount), 0]) + 1;
 TRACE_7("headshotHandling: headshot",_unit,_fullDamage,_chance,_random,_damage,_currentDamage,_headShotCount);
 
+if ((_headShotCount == 1) && {_fullDamage < (MEDICAL_HEADSHOT_SCALE_MAX_DAMAGE / 2)}) then {
+  _chance = _chance * 0.5;
+};
+
 // Log headshot
 ["a4es_playerHeadshot", [
   _unit,
