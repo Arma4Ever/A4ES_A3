@@ -13,7 +13,7 @@ class CfgWeapons {
         descriptionUse = CSTRING(DressingSet_Desc_Use);
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 16;
+            mass = 22;
         };
     };
 
