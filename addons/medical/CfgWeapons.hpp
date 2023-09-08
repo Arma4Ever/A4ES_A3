@@ -11,6 +11,7 @@ class CfgWeapons {
         displayName = CSTRING(DressingSet_Display);
         descriptionShort = CSTRING(DressingSet_Desc_Short);
         descriptionUse = CSTRING(DressingSet_Desc_Use);
+        ACE_isMedicalItem = 1;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 22;
@@ -25,6 +26,7 @@ class CfgWeapons {
         displayName = CSTRING(Painkillers_DisplayName);
         descriptionShort = "$STR_ACE_Medical_Morphine_Desc_Short";
         descriptionUse = "$STR_ACE_Medical_Morphine_Desc_Use";
+        ACE_isMedicalItem = 1;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
@@ -41,6 +43,7 @@ class CfgWeapons {
         displayName = CSTRING(EmptyBloodBag_DisplayName);
         descriptionShort = CSTRING(EmptyBloodBag_Desc_Short);
         descriptionUse = CSTRING(EmptyBloodBag_Desc_Use);
+        ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
