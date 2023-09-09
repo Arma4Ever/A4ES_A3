@@ -142,7 +142,7 @@ class GVAR(admins) {
         allowedModules[] = {"endMission", "adminMessages", "debugConsole", "debugCamera", "debugCurator", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
     };
 
-    CADRE_ADMIN(76561197960287930,Diamentowy);
+    CADRE_ADMIN(76561198090975186,Diamentowy);
     CADRE_ADMIN(76561198091312264,Radrix);
     CADRE_ADMIN(76561198055300928,Modzyn);
     CADRE_ADMIN(76561197964250959,Foton);
