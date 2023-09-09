@@ -6,6 +6,7 @@ class CfgWeapons {
 		scope = 0;
         author = "Krzyciu";
 		descriptionShort = CSTRING(generalItem_descriptionShort);
+		A4ES_isRPItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };

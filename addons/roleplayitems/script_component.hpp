@@ -7,3 +7,5 @@
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #include "\z\a4es\addons\main\script_macros.hpp"
+
+#define ROLEPLAY_ITEMS (call (uiNamespace getVariable [QGVAR(rpItems), {[]}]))
