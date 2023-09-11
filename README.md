@@ -23,7 +23,6 @@ A collection of Arma 3 mods providing necessary functionalities for Arma4Ever.pl
 - [PLP Markers](https://steamcommunity.com/sharedfiles/filedetails/?id=495275491)
 - [Blastcore Murr Edition](https://steamcommunity.com/sharedfiles/filedetails/?id=2257686620)
 - [Swim Faster](https://steamcommunity.com/sharedfiles/filedetails/?id=1808723766)
-- [ArmaZeusCache](https://steamcommunity.com/sharedfiles/filedetails/?id=1908099028)
 - [Blurry Laser](https://steamcommunity.com/sharedfiles/filedetails/?id=2079283616)
 - [Ladder Tweak](https://steamcommunity.com/sharedfiles/filedetails/?id=1803586009)
 - [Hate's Hidden Cameras](https://steamcommunity.com/sharedfiles/filedetails/?id=2404750021)
