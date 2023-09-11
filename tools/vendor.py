@@ -41,7 +41,6 @@ VENDOR = {
     "@Blastcore Murr Edition": {},
     "@Swim Faster": {},
     "@Hate's Hidden Cameras": {},
-    "@ArmaZeusCache": {},
     "@ILBE Assault Pack - Rewrite": {},
     "@FRXA's TFAR Extra Retextured Equipment": {},
     "@ACD - Arma3 Containers And Decorations": {},
