@@ -142,18 +142,15 @@ class GVAR(admins) {
         allowedModules[] = {"endMission", "adminMessages", "debugConsole", "debugCamera", "debugCurator", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
     };
 
-    CADRE_ADMIN(76561198017606120,Krzyciu);
+    CADRE_ADMIN(76561198090975186,Diamentowy);
     CADRE_ADMIN(76561198091312264,Radrix);
     CADRE_ADMIN(76561198055300928,Modzyn);
     CADRE_ADMIN(76561197964250959,Foton);
 
     CADRE_ADMIN(76561198119905360,Symbiotyk);
-    CADRE_ADMIN(76561197960287930,Diamentowy);
-    CADRE_ADMIN(76561198193343497,Faraon);
     CADRE_ADMIN(76561198192520870,Oscar);
     CADRE_ADMIN(76561198062200104,Gazela);
     CADRE_ADMIN(76561198286942055,McChicken);
     CADRE_ADMIN(76561198034966085,Rafimus);
-    CADRE_ADMIN(76561198050226790,Falcon);
-    CADRE_ADMIN(76561198074608139,LimonQa);
+    CADRE_ADMIN(76561198001065845,Bohun);
 };

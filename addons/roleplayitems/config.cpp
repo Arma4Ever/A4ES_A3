@@ -39,7 +39,7 @@ class CfgPatches {
             "A3_weapons_f_orange"
         };
         author = ECSTRING(main,Author);
-        authors[] = {"SzwedzikPL, Krzyciu"};
+        authors[] = {"SzwedzikPL, Krzyciu, LinkIsGrim"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
