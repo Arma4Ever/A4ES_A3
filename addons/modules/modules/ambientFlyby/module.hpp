@@ -71,7 +71,7 @@ class GVAR(ambientFlyby): GVAR(base) {
             property = QGVAR(classList);
             typeName = "STRING";
             defaultValue = '[]';
-            GVAR(assetsTypes[]) = {"Plane"};
+            GVAR(assetsTypes[]) = {"Plane","Helicopter"};
             GVAR(onValuesChanged) = QFUNC(dynamicClassSelect_updateUI);
             ATTRIBUTE_LOCAL;
         };
@@ -82,7 +82,7 @@ class GVAR(ambientFlyby): GVAR(base) {
             defaultValue = "80";
             typeName = "NUMBER";
             GVAR(range[]) = {20, 300};
-            GVAR(valueUnit) = "km/h";
+            GVAR(valueUnit) = "m/s";
             ATTRIBUTE_LOCAL;
         };
         class GVAR(flybyShape): GVAR(dynamicCombo) {

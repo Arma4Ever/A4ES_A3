@@ -2336,7 +2336,7 @@
       <Polish>W jakim tempie ma upływać czas gry.</Polish>
     </Key>
     <Key ID="STR_A4ES_Modules_setTimeMultiplier_Attributes_timeMultiplier_desc">
-      <Polish>0 - czas gry będzie stał w miejscu.&lt;br/&gt;1 - normalnie (1:1 czasu realnego).&lt;br/&gt;2 - dwa razy szbyciej niż normalnie (1 minuta w grze to 30 sekund w rzeczywistości), i tak dalej.</Polish>
+      <Polish>0 - spowolniony (1:10 czasu realnego - minuta w grze to 10 minut w rzeczywistości).&lt;br/&gt;1 - normalnie (1:1 czasu realnego).&lt;br/&gt;2 - dwa razy szbyciej niż normalnie (1 minuta w grze to 30 sekund w rzeczywistości), i tak dalej.</Polish>
     </Key>
   </Package>
   <Package name="Modules_setSideDefaultDialogue">
