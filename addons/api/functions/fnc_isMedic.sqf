@@ -31,4 +31,11 @@ params [
 
 if (isNull _unit) exitWith {false};
 
-_this call EFUNC(medical,isMedic)
+private _class = _unit getVariable ["ace_medical_medicClass", parseNumber (_unit getUnitTrait "medic")];
+if (_class >= _minClass) exitWith {true};
+
+if (_useLocationBoost) exitWith {
+    [_unit, _minClass] call ace_medical_treatment_fnc_isMedic
+};
+
+false
