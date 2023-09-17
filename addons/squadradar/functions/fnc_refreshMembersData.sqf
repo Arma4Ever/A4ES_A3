@@ -22,7 +22,7 @@ private ["_baseIcon", "_baseIconClass"];
         if (_this call EFUNC(squads,isLeader)) exitWith {
           "squadleader"
         };
-        if (_this call EFUNC(medical,isMedic)) exitWith {
+        if (_this call ACEFUNC(medical_treatment,isMedic)) exitWith {
           "medic"
         };
         if (_this call ACEFUNC(common,isEngineer)) exitWith {
