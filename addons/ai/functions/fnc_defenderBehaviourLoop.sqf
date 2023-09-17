@@ -13,7 +13,7 @@ if (_mode == 0) exitWith {};
 private _maxPos = ["UP", "MIDDLE"] select (_mode - 1);
 
 while {alive _unit} do {
-  sleep (1 + (random 14));
+  sleep (1 + (random 5));
 
   if (
     !(alive _unit) ||
@@ -23,10 +23,10 @@ while {alive _unit} do {
     _unit setVariable [QGVAR(defenderEnabled), false];
   };
 
-  if (((_unit getVariable [QGVAR(lastSuppress), 0]) + 4) < CBA_missionTime) then {
+  if (((_unit getVariable [QGVAR(lastSuppress), 0]) + 5) < CBA_missionTime) then {
     _unit setUnitPos _maxPos;
     TRACE_2("defenderBehaviourLoop setUnitPos",_unit,_maxPos);
-    sleep (2 + (random 6));
+    sleep (2 + (random 18));
   };
 
   if (
