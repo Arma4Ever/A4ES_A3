@@ -9,7 +9,15 @@ player setVariable [QGVAR(UID), getPlayerUID player, true];
 if (isServer) then {
   [{
     LOG("Event: a4es_missionStart");
-	  ["a4es_missionStart", 0] call CBA_fnc_globalEvent;
+    ["a4es_missionStart", 0] call CBA_fnc_globalEvent;
   }, [], 0.01] call CBA_fnc_waitAndExecute;
 };
 
+if (hasInterface) then {
+  0 spawn {
+    sleep 1;
+    if ((side (group player)) isEqualTo sideLogic) exitWith {};
+    private _rank = player call a4es_nametags_fnc_getUnitRank;
+    ["a4es_playerRank", [profileName, getPlayerUID player, _rank # 0]] call CBA_fnc_serverEvent;
+  };
+};
