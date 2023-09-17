@@ -21,7 +21,7 @@ CHANGELOG.md
 addons/marker_flags/*
 addons/irlight/*
 addons/main/script_input.hpp
-
+stats/*
 __pycache__
 vendor/*
 !vendor/.gitkeep
