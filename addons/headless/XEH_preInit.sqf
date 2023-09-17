@@ -12,7 +12,7 @@ ADDON = true;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(requestFPS), {
-  [QGVAR(headlessFPS), [player, floor diag_fps]] call CBA_fnc_serverEvent;
+  [QGVAR(headlessFPS), [player, floor diag_fps, floor diag_fpsMin]] call CBA_fnc_serverEvent;
 }] call CBA_fnc_addEventHandler;
 
 
@@ -24,12 +24,13 @@ GVAR(lastAIBasedSelection) = 0;
 [QGVAR(moveHeadlessClients), {
   params ["_pos"];
   {_x setPos _pos;} forEach GVAR(headlessClients);
-}] call CBA_fnc_addEventHandler; 
+}] call CBA_fnc_addEventHandler;
 
 [QGVAR(headlessFPS), {
-  params ["_client", "_fps"];
+  params ["_client", "_fps", "_fpsMin"];
 
   _client setVariable [QGVAR(diagFPS), _fps];
+  _client setVariable [QGVAR(diagFPSMin), _fpsMin];
 }] call CBA_fnc_addEventHandler;
 
 // Handle headless connected
