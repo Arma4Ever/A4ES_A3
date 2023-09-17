@@ -117,10 +117,11 @@ if (
 };
 
 // Call post init
-_vehicle spawn {
+[_vehicle, _vehiclePostInit] spawn {
+  params ["_vehicle", "_vehiclePostInit"];
   sleep 1;
-  _this allowDamage true;
-  _this call _vehiclePostInit;
+  _vehicle allowDamage true;
+  _vehicle call _vehiclePostInit;
 };
 
 _vehicle
