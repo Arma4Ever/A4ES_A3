@@ -6,7 +6,11 @@
 
 params ["_unit"];
 
-if (!(local _unit) || {_unit getVariable [QEGVAR(common,isPlayer), false]}) exitWith {};
+if (
+  !(local _unit) ||
+  {_unit getVariable [QEGVAR(common,isPlayer), false]} ||
+  {_unit getVariable [QGVAR(speakingDisabled), false]}
+) exitWith {};
 
 private _sound = "A3\Sounds_F\characters\human-sfx\";
 private _soundData = selectRandom [
