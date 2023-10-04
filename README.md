@@ -1,3 +1,21 @@
+<p align="center">
+    <img src="https://i.imgur.com/UkiM2LM.png" width="256">
+</p>
+<p align="center">
+    <a href="https://arma4ever.pl/">
+        <img src="https://img.shields.io/badge/Forum-Do%C5%82%C4%85cz-1d8521" alt="A4E Forum">
+    </a>
+    <a href="https://discord.com/invite/bUawduRKSC">
+        <img src="https://img.shields.io/badge/Discord-Do%C5%82%C4%85cz-darkviolet" alt="A4E Discord">
+    </a>
+   <a href="https://www.youtube.com/@arma4everpl">
+        <img src="https://img.shields.io/badge/YouTube-Subskrybuj-c4302b" alt="A4E YouTube">
+    </a>
+    <a href="https://github.com/Arma4Ever/A4ES/blob/master/LICENSE">
+        <img src="https://img.shields.io/badge/License-MIT-yellow" alt="A4E Missions License">
+    </a>
+</p>
+
 # Arma4Ever System
 A collection of Arma 3 mods providing necessary functionalities for Arma4Ever.pl community. This mod is only distributed among community members via private community repository.
 
