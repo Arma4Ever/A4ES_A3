@@ -12,7 +12,7 @@
         <img src="https://img.shields.io/badge/YouTube-Subskrybuj-c4302b" alt="A4E YouTube">
     </a>
     <a href="https://github.com/Arma4Ever/A4ES/blob/master/LICENSE">
-        <img src="https://img.shields.io/badge/License-MIT-yellow" alt="A4E Missions License">
+        <img src="https://img.shields.io/badge/License-MIT-yellow" alt="A4ES License">
     </a>
 </p>
 
