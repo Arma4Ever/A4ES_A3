@@ -44,5 +44,5 @@ if (_setVolume) then {
     _unit setVariable ["tf_globalVolume", NO_SOUND];
 
     // ACRE2
-    if (!isNil "acre_api_fnc_setGlobalVolume") then { [MUTED_LEVEL^0.33] call acre_api_fnc_setGlobalVolume; };
+    if (!isNil "acre_api_fnc_setGlobalVolume") then { [NO_SOUND^0.33] call acre_api_fnc_setGlobalVolume; };
 };
