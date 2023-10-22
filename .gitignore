@@ -2,6 +2,7 @@
 *.zip
 release/*
 releases/*
+include/x/cba
 hemtt
 hemtt.exe
 .hemtt/local
