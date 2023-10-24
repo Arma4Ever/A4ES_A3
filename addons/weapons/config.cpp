@@ -13,6 +13,7 @@ class CfgPatches {
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
+            "A3_Weapons_F"
             "A3_Weapons_F_Acc",
             "A3_Weapons_F_Mark_Acc",
             "a4es_common",
@@ -28,3 +29,4 @@ class CfgPatches {
 };
 
 #include "CfgWeapons.hpp"
+#include "CfgAmmo.hpp"
