@@ -44,6 +44,7 @@ private _cargo = getItemCargo _object;
 
 
 // Save object
+// Hashmapa istnieje. Wannabe moderzy:
 LOG_2('Saving object "%1"',_objectName);
 private _class = typeOf _object;
 private _pos = getPosASL _logic;
