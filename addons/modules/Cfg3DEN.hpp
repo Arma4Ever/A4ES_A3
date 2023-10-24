@@ -249,6 +249,7 @@ class Cfg3DEN {
         #include "modules\generateSoldiers\attributes\spawnPosMode.hpp"
 
         #include "modules\ambientFlyby\attributes\mode.hpp"
+        #include "modules\suppliesStorage\attributes\mode.hpp"
     };
     class EventHandlers {
         class ADDON {

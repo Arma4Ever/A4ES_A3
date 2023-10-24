@@ -4,6 +4,9 @@
     <Key ID="STR_A4ES_Modules_FactionClasses_events_displayName">
       <Polish>A4ES Obsługa zdarzeń</Polish>
     </Key>
+    <Key ID="STR_A4ES_Modules_FactionClasses_supplies_displayName">
+      <Polish>A4ES Zaopatrzenie</Polish>
+    </Key>
     <Key ID="STR_A4ES_Modules_Warnings">
       <English>Warnings</English>
       <Polish>Ostrzeżenia</Polish>
@@ -2528,7 +2531,6 @@
     <Key ID="STR_A4ES_Modules_createLogicFlag_Attributes_title_desc">
       <Polish>Nazwa flagi wyświetlana jest tylko w edytorze, w ustawieniach aktywacji modułów i innych miejscach korzystajacych z flag. Nazwa flagi powinna być jasna, związana z tym czym steruje (dla ułatwienia własnej pracy).</Polish>
     </Key>
-
     <Key ID="STR_A4ES_Modules_createLogicFlag_Attributes_initialValue">
       <Polish>Wartość początkowa</Polish>
     </Key>
@@ -2872,6 +2874,113 @@
     </Key>
     <Key ID="STR_A4ES_Modules_objects3DENComp_Warning_EditMode_Desc">
       <Polish>Moduł jest aktualnie w trybie edycji. Pamiętaj, aby po zakończonej pracy, połączyć odpowiednie obiekty z modułem a następnie przełączyć moduł w tryb odczytu.</Polish>
+    </Key>
+  </Package>
+    <Package name="Modules_suppliesObject">
+    <Key ID="STR_A4ES_Modules_suppliesObject_displayName">
+      <Polish>Obiekt zaopatrzenia</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_name">
+      <Polish>Nazwa zaopatrzenia</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_name_tooltip">
+      <Polish>Nazwa zaopatrzenia wyświetlana jako nazwa interakacji, a także jako nazwa w cargo pojazdu - w przypadku skrzynek.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_objectCount">
+      <Polish>Ilość obiektów zaopatrzenia</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_objectCount_Tooltip">
+      <Polish>Ilość obiektów zaopatrzenia, która będzie dostępna w magazynie</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_deleteObject">
+      <Polish>Usuń obiekt</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_deleteObject_tooltip">
+      <Polish>Usuń zsynchronizowany obiekt po starcie misji</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_shortDescription">
+      <Polish>Krótki opis modułu</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_description">
+      <Polish>Dłuższy opis modułu</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_syncRequiredInfo">
+      <Polish>Opis synchronizacji</Polish>
+    </Key>
+     <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_addObjectPostInit">
+      <Polish>Dodaj handler initu obiektów</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_addObjectPostInit_tooltip">
+      <Polish>Dodaj własny skrypt uruchamiany dla każdego obiektu danego typu wyjętego z magazynu.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_objectPostInit">
+      <Polish>Init obiektu</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_objectPostInit_tooltip">
+      <Polish>Skrypt zostanie wykonany dla każdego wygenerowanego obiektu po jego wyjęciu z magazynu.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_objectPostInit_desc">
+      <Polish>Skrypt zostanie wykonany na serwerze dla każdego wygenerowanego obiektu. Parametry: _this - wygenerowany obiekt.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Warning_countEmpty_Desc">
+      <Polish>Liczba obiektów wynosi 0. Gracze nie będą mogli pobrać obiektów z magazynu.</Polish>
+    </Key>
+  </Package>
+    </Package>
+    <Package name="Modules_suppliesStorage">
+    <Key ID="STR_A4ES_Modules_suppliesStorage_displayName">
+      <Polish>Ustawienia Zaopatrzenia</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Attributes_id">
+      <Polish>ID Zaopatrzenia</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Attributes_id_tooltip">
+      <Polish>Nazwa zaopatrzenia wyświetlana jako nazwa interakacji, a także jako nazwa w cargo pojazdu.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Attributes_id_desc">
+      <Polish>Koszt zaopatrzenia</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Attributes_budget">
+      <Polish>Budżet</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Attributes_budget_Tooltip">
+      <Polish>Usuń obiekt</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Attributes_unloadTime">
+      <Polish>Czas wyładowywania</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Attributes_unloadTime_tooltip">
+      <Polish>Czas co</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Attributes_mode">
+      <Polish>Tryb spawnu zaopatrzenia</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Attributes_mode_Tooltip">
+      <Polish>Tryb spawnu zaopatrzeniaaaaa</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Attributes_spawnMarker">
+      <Polish>Marker</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Attributes_spawnMarker_Tooltip">
+      <Polish>Tooltip Markera</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Attributes_spawnModulePos">
+      <Polish>Pozycja Modułu</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Attributes_spawnModulePos_tooltip">
+      <Polish>Pozycja modułu</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_shortDescription">
+      <Polish>Krótki Opis</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_description">
+      <Polish>Dłuższy Opis</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Action_Title">
+      <Polish>Pobierz:</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Action_Left">
+      <Polish>Zostało:</Polish>
     </Key>
   </Package>
   <Package name="Preferences">

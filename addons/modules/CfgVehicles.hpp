@@ -368,6 +368,8 @@ class CfgVehicles {
     // #include "modules\setUnitDialogue\module.hpp"
     #include "modules\showMarker\module.hpp"
     #include "modules\showMessage\module.hpp"
+    #include "modules\suppliesObject\module.hpp"
+    #include "modules\suppliesStorage\module.hpp"
     #include "modules\switchLights\module.hpp"
     #include "modules\units3DENComp\module.hpp"
 

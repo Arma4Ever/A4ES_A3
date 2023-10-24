@@ -48,6 +48,14 @@ if (isServer) then {
   _this call FUNC(setLogicFlagValue);
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(addSuppliesAction), {
+  _this call FUNC(suppliesStorage_moduleExecLocal);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(spawnSupply), {
+  _this call FUNC(suppliesStorage_spawnSupply);
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(addCuratorModule), {
   params ["_category", "_name", "_icon", "_function"];
 
