@@ -26,7 +26,8 @@ private _insertChildren = {
   private _objectsVar = format ["a4es_modules_supplies_%1", _side];
   private _objects = missionNamespace getVariable [_objectsVar, []]; 
   {  
-    private _childStatement = { 
+    private _childStatement = {
+      // Everytime you do this, hamster dies:
       _this#2 params ["_objectName", "_class", "_objectCount", "_pos", "_items", "_objectPostInit"];
       private _side = side _player; 
       [QGVAR(spawnSupply), [_objectName, _class, _objectCount, _pos, _items, _objectPostInit, _side]] call CBA_fnc_serverEvent; 
