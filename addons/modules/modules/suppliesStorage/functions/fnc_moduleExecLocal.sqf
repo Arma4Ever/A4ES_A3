@@ -23,8 +23,7 @@ private _insertChildren = {
 
   private _actions = [];
   private _side = side _player;   
-  private _objectsVar = format ["a4es_modules_supplies_%1", _side];
-  private _objects = missionNamespace getVariable [_objectsVar, []]; 
+  private _objects = missionNamespace getVariable [format [QGVAR(supplies_%1), _side], []];
   {  
     private _childStatement = {
       // Everytime you do this, hamster dies:
