@@ -54,11 +54,9 @@ if (_logic getVariable [QGVAR(addObjectPostInit), false]) then {
   private _objectPostInit = compile (_logic getVariable [QGVAR(objectPostInit), ""]);
 };
 
-private _objectsVar = format ["a4es_modules_supplies_%1", _side];
-private _objects = missionNamespace getVariable [_objectsVar, []];
+private _objects = missionNamespace getVariable [format [QGVAR(supplies_%1), _side], []];
 _objects pushBack [_objectName, _class, _objectCount, _pos, _items, _objectPostInit];
-missionNamespace setVariable [_objectsVar, _objects, true];
-
+missionNamespace setVariable [format [QGVAR(supplies_%1), _side], _objects, true];
 
 // Delete object
 if (_deleteobject) then {
