@@ -51,7 +51,7 @@ private _pos = getPosASL _logic;
 
 private _objectPostInit = {};
 if (_logic getVariable [QGVAR(addObjectPostInit), false]) then {
-  _objectPostInit = compile (_logic getVariable [QGVAR(objectPostInit), ""]);
+  private _objectPostInit = compile (_logic getVariable [QGVAR(objectPostInit), ""]);
 };
 
 private _objectsVar = format ["a4es_modules_supplies_%1", _side];
