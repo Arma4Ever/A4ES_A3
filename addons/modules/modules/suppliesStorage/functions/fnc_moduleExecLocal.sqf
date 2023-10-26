@@ -4,8 +4,8 @@
  * suppliesStorage module local exec function
  */
 
-params ["_logic", "_target", "_condition"];
-TRACE_3("suppliesStorage_moduleExecLocal",_logic,_targets,_condition);
+params ["_logic", "_target", "_storageID"];
+TRACE_3("suppliesStorage_moduleExecLocal",_logic,_targets,_storageID);
 
 if (!hasInterface || {isNull _logic}) exitWith {
   TRACE_1("suppliesStorage_moduleExecLocal abort: no interface or logic null",_logic);
@@ -17,16 +17,14 @@ if (_validTargets isEqualTo []) exitWith {
 };
 
 TRACE_6("suppliesStorage_moduleExecLocal - adding action");
-
 private _insertChildren = { 
-  params ["_target", "_player", "_params"];  
-
+  params ["_target", "_player", "_storageID"];
   private _actions = [];
-  private _side = side _player;   
-  private _objects = missionNamespace getVariable [format [QGVAR(supplies_%1), _side], []];
+  private _side = side _player;
+  private _objects = missionNamespace getVariable [format [QGVAR(supplies_%1_%2), _storageID, _side]];
+
   {  
     private _childStatement = {
-      // Everytime you do this, hamster dies:
       _this#2 params ["_objectName", "_class", "_objectCount", "_pos", "_items", "_objectPostInit"];
       private _side = side _player; 
       [QGVAR(spawnSupply), [_objectName, _class, _objectCount, _pos, _items, _objectPostInit, _side]] call CBA_fnc_serverEvent; 
@@ -60,7 +58,8 @@ private _baseAction = [
   "",
   {true},
   {true},
-  _insertChildren
+  _insertChildren,
+  _storageID
 ] call ACEFUNC(interact_menu,createAction); 
 
 {

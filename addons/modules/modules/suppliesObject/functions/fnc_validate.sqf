@@ -7,6 +7,9 @@
 params ["_module", "_values"];
 
 private _warnings = [];
+
+[_module, QGVAR(id), "SupplyObject_%1"] call FUNC(setUniqueIdAttribute);
+
 private _syncedObject = (get3DENConnections _module) select {
   ((_x #0) isEqualTo "Sync")
 };

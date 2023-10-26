@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Krzyciu, SzwedzikPL
- * suppliesBox module exec function
+ * suppliesObject module exec function
  */
 
 params ["_mode", "_input"];
@@ -24,6 +24,7 @@ if (is3DENPreview) then {
 };
 
 // Load logic params
+private _id = _logic getVariable [QGVAR(id), ""];
 private _objectName = _logic getVariable [QGVAR(name), ""];
 private _objectCount = _logic getVariable [QGVAR(objectCount), 0];
 private _deleteObject = _logic getVariable [QGVAR(deleteObject), ""];
@@ -31,9 +32,9 @@ private _side = [west, east, resistance, civilian] select (_logic getVariable [Q
 
 // Get synced vehicle or object with cargo space
 private _object = (synchronizedObjects _logic) select {(_x isKindOf "AllVehicles") || {_x isKindOf "ReammoBox_F"}};
-// Exit if there're no synced object or more than one
-if ((count _object) isNotEqualTo 1) exitWith {
-  LOG_1('Execution of EXEC_MODULE_NAME aborted - no synced object (object: %1).',str _object);
+// Exit if there're no synced object
+if ((count _object) isEqualTo 0) exitWith {
+  LOG_1('Execution of EXEC_MODULE_NAME aborted - no synced object.');
   deleteVehicle _logic;
 };
 _object = _object#0;
@@ -54,17 +55,13 @@ if (_logic getVariable [QGVAR(addObjectPostInit), false]) then {
   private _objectPostInit = compile (_logic getVariable [QGVAR(objectPostInit), ""]);
 };
 
-private _objects = missionNamespace getVariable [format [QGVAR(supplies_%1), _side], []];
-_objects pushBack [_objectName, _class, _objectCount, _pos, _items, _objectPostInit];
-missionNamespace setVariable [format [QGVAR(supplies_%1), _side], _objects, true];
+private _objects = [_objectName, _class, _objectCount, _pos, _items, _objectPostInit];
+missionNamespace setVariable [format [QGVAR(supplies_%1), _id], _objects];
 
 // Delete object
 if (_deleteobject) then {
   LOG('Deleting saved object of EXEC_MODULE_NAME.');
   deleteVehicle _object;
 };
-
-// Delete module
-deleteVehicle _logic;
 
 LOG('Execution of EXEC_MODULE_NAME finished.');

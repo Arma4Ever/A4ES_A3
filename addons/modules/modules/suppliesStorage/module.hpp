@@ -13,15 +13,17 @@ class GVAR(suppliesStorage): GVAR(base) {
         class GVAR(moduleShortDescription): GVAR(moduleShortDescription) {};
         class GVAR(moduleWarnings): GVAR(moduleWarnings) {};
 
-        class GVAR(unloadTime): GVAR(dynamicEdit) {
-            displayName = CSTRING(suppliesStorage_Attributes_unloadTime);
-            tooltip = CSTRING(suppliesStorage_Attributes_unloadTime_tooltip);
-            property = QGVAR(unloadTime);
-            defaultValue = "5";
-            typeName = "NUMBER";
-            validate = "number";
+        class GVAR(storageID): GVAR(dynamicEdit) {
+            displayName = CSTRING(suppliesObject_Attributes_id);
+            tooltip = CSTRING(suppliesObject_Attributes_id_tooltip);
+            property = QGVAR(id);
+            defaultValue = "''";
+            unique = 1;
+            GVAR(description) = CSTRING(suppliesObject_Attributes_id_desc);
+            GVAR(disabled) = 1;
+            ATTRIBUTE_LOCAL;
         };
-
+        
         class GVAR(moduleDescription): GVAR(moduleDescription) {};
     };
     

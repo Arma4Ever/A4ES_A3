@@ -19,12 +19,7 @@ if (isServer) then {
   GVAR(moduleActivatorFlags) = createHashMap;
   GVAR(activatorModulesFlags) = createHashMap;
   GVAR(logicFlagTitles) = createHashMap;
-
-  GVAR(supplies_east) = createHashMap;
-  GVAR(supplies_west) = createHashMap;
-  GVAR(supplies_independent) = createHashMap;
-  GVAR(supplies_civilian) = createHashMap;
-
+  
   GVAR(onKilled_killedEH) = -1;
   GVAR(onKilled_waitingModules) = [];
 

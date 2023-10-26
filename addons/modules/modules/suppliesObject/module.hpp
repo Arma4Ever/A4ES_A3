@@ -13,6 +13,17 @@ class GVAR(suppliesObject): GVAR(base) {
         class GVAR(moduleShortDescription): GVAR(moduleShortDescription) {};
         class GVAR(moduleWarnings): GVAR(moduleWarnings) {};
 
+        class GVAR(id): GVAR(dynamicEdit) {
+            displayName = CSTRING(suppliesObject_Attributes_id);
+            tooltip = CSTRING(suppliesObject_Attributes_id_tooltip);
+            property = QGVAR(id);
+            defaultValue = "''";
+            unique = 1;
+            GVAR(description) = CSTRING(suppliesObject_Attributes_id_desc);
+            GVAR(disabled) = 1;
+            ATTRIBUTE_LOCAL;
+        };
+
         class GVAR(side): GVAR(dynamicToolboxSideFull) {
             displayName = CSTRING(fortifyObject_Attributes_side);
             tooltip = CSTRING(fortifyObject_Attributes_side_Tooltip);
