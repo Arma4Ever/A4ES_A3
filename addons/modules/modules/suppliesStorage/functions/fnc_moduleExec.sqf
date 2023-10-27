@@ -33,9 +33,11 @@ private _side = "west";
   _id = _x getVariable [QGVAR(id), ""];
   _objects = missionNamespace getVariable [format [QGVAR(supplies_%1), _id], []];
   _side = [west, east, resistance, civilian] select (_x getVariable [QGVAR(side), 0]);
+
   _moduleObjects = missionNamespace getVariable [format [QGVAR(storage_%1_%2), _storageID, _side], []];
   _moduleObjects pushback _objects;
   missionNamespace setVariable [format [QGVAR(storage_%1_%2), _storageID, _side], _moduleObjects, true];
+  
   deleteVehicle _x;
 } forEach _modules;
 

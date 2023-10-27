@@ -17,6 +17,7 @@ if (_validTargets isEqualTo []) exitWith {
 };
 
 TRACE_6("suppliesStorage_moduleExecLocal - adding action");
+
 // Child interactions - generated per each object
 private _insertChildren = { 
   params ["_target", "_player", "_storageID"];

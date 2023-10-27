@@ -17,7 +17,6 @@ clearMagazineCargoGlobal _object;
 clearItemCargoGlobal _object;
 clearBackpackCargoGlobal _object;
 _object setMaxLoad 99999;
-
 {_object addItemCargoGlobal _x} forEach _items;
 
 _object setVariable ["ace_cargo_customName", _objectName, true];
