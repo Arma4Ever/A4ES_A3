@@ -17,32 +17,37 @@ if (_validTargets isEqualTo []) exitWith {
 };
 
 TRACE_6("suppliesStorage_moduleExecLocal - adding action");
+// Child interactions - generated per each object
 private _insertChildren = { 
   params ["_target", "_player", "_storageID"];
   private _actions = [];
   private _side = side _player;
-  private _objects = missionNamespace getVariable [format [QGVAR(supplies_%1_%2), _storageID, _side]];
+  private _objects = missionNamespace getVariable [format [QGVAR(storage_%1_%2), _storageID, _side],[]];
 
   {  
     private _childStatement = {
-      _this#2 params ["_objectName", "_class", "_objectCount", "_pos", "_items", "_objectPostInit"];
+      params ["", "_player", "_args"];
+      _args#0 params ["_objectName", "_class", "_objectCount", "_pos", "_items", "_objectPostInit"];
+      _args#1 params ["_storageID"];
+
       private _side = side _player; 
-      [QGVAR(spawnSupply), [_objectName, _class, _objectCount, _pos, _items, _objectPostInit, _side]] call CBA_fnc_serverEvent; 
+      [QGVAR(spawnSupply), [_objectName, _class, _objectCount, _pos, _items, _objectPostInit, _side, _storageID]] call CBA_fnc_serverEvent; 
     }; 
   
-    private _childCondition = { 
-      _this#2 params ["", "", "_objectCount"]; 
+    private _childCondition = {
+      params ["", "", "_args"];
+      _args#0 params ["", "", "_objectCount"];
       _objectCount>0;
     }; 
   
     private _action = [ 
-      format ["storage:%1",(_x select 0)], 
-      format ["%1 - %2 %3",(_x select 0), LLSTRING(suppliesStorage_Action_Left), (_x select 2)], 
+      format ["storage_%1",(_x #0)], 
+      format ["%1 - %2 %3",(_x #0), LLSTRING(suppliesStorage_Action_Left),(_x #2)], 
       "", 
       _childStatement, 
       _childCondition, 
       {}, 
-      _x 
+      [_x, _storageID] 
     ] call ACEFUNC(interact_menu,createAction);
   
     _actions pushBack [_action, [], _target];  
@@ -51,9 +56,9 @@ private _insertChildren = {
   _actions 
 }; 
 
-
+// Base interaction
 private _baseAction = [
-  QGVAR(suppliesStorage), 
+  format ["storage_%1",(_this#2)], 
   LLSTRING(suppliesStorage_Action_Title),
   "",
   {true},

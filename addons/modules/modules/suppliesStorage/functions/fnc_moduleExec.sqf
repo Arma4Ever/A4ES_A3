@@ -17,29 +17,32 @@ _input params [
 // Exit if module is null or placed by zeus (should not happen)
 if (isNull _logic || _isCuratorPlaced) exitWith {};
 
-LOG('Starting init of EXEC_MODULE_NAME.');
+if (is3DENPreview) then {
+  [_logic, true] call EFUNC(debug,updateModuleStatus);
+};
 
+LOG('Starting init of EXEC_MODULE_NAME.');
 private _storageID = _logic getVariable [QGVAR(storageID), ""];
-private _modules = (all3DENEntities # 3) select {_x isKindOf QGVAR(suppliesObject)};\
+private _modules = (synchronizedObjects _logic) select {_x isKindOf QGVAR(suppliesObject)};
 private _moduleObjects = [];
 private _objects = [];
 private _id = "";
-private _side = "";
+private _side = "west";
+
 {
   _id = _x getVariable [QGVAR(id), ""];
   _objects = missionNamespace getVariable [format [QGVAR(supplies_%1), _id], []];
-
   _side = [west, east, resistance, civilian] select (_x getVariable [QGVAR(side), 0]);
-  _moduleObjects = missionNamespace getVariable [format [QGVAR(supplies_%1_%2), _storageID, _side], []];
-  hint str _objects;
+  _moduleObjects = missionNamespace getVariable [format [QGVAR(storage_%1_%2), _storageID, _side], []];
   _moduleObjects pushback _objects;
-  missionNamespace setVariable [format [QGVAR(supplies_%1_%2), _storageID, _side], _objects];
+  missionNamespace setVariable [format [QGVAR(storage_%1_%2), _storageID, _side], _moduleObjects, true];
   deleteVehicle _x;
 } forEach _modules;
 
 private _target = (synchronizedObjects _logic) select {!(_x isKindOf "EmptyDetector") || !(_x isKindOf QGVAR(suppliesObject))};
+
 // Send global event and save for JIP
-[QGVAR(addSuppliesAction), [_logic,_target, _storageID]] call CBA_fnc_globalEventJIP;
+[QGVAR(addSuppliesAction), [_logic, _target, _storageID]] call CBA_fnc_globalEventJIP;
 
 // Delete module
 deleteVehicle _logic;

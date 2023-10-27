@@ -1,8 +1,8 @@
 class GVAR(suppliesStorage): GVAR(base) {
     scope = 2;
-    author = "Krzyciu";
+    author = "Krzyciu, SzwedzikPL";
     displayName = CSTRING(suppliesStorage_displayName);
-    icon = "\a3\3den\data\displays\display3den\panelright\modegroups_ca.paa";
+    icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\interact_ca.paa";
     category = QGVAR(supplies);
     function = QFUNC(suppliesStorage_moduleExec);
     functionPriority = 10;
@@ -14,12 +14,12 @@ class GVAR(suppliesStorage): GVAR(base) {
         class GVAR(moduleWarnings): GVAR(moduleWarnings) {};
 
         class GVAR(storageID): GVAR(dynamicEdit) {
-            displayName = CSTRING(suppliesObject_Attributes_id);
-            tooltip = CSTRING(suppliesObject_Attributes_id_tooltip);
-            property = QGVAR(id);
+            displayName = CSTRING(suppliesStorage_Attributes_id);
+            tooltip = CSTRING(suppliesStorage_Attributes_id_tooltip);
+            property = QGVAR(storageid);
             defaultValue = "''";
             unique = 1;
-            GVAR(description) = CSTRING(suppliesObject_Attributes_id_desc);
+            GVAR(description) = CSTRING(suppliesStorage_Attributes_id_desc);
             GVAR(disabled) = 1;
             ATTRIBUTE_LOCAL;
         };
@@ -32,6 +32,6 @@ class GVAR(suppliesStorage): GVAR(base) {
         description = CSTRING(suppliesStorage_description);
         canSyncWith[] = {"<anyVehicle>", "<anyObject>"};
         syncRequired = 1;
-        syncRequiredInfo = CSTRING(suppliesObject_syncRequiredInfo);
+        syncRequiredInfo = CSTRING(suppliesStorage_syncRequiredInfo);
     };
 };

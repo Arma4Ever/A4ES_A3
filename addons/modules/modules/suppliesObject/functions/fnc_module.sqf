@@ -32,27 +32,27 @@ private _side = [west, east, resistance, civilian] select (_logic getVariable [Q
 
 // Get synced vehicle or object with cargo space
 private _object = (synchronizedObjects _logic) select {(_x isKindOf "AllVehicles") || {_x isKindOf "ReammoBox_F"}};
+
 // Exit if there're no synced object
 if ((count _object) isEqualTo 0) exitWith {
   LOG_1('Execution of EXEC_MODULE_NAME aborted - no synced object.');
   deleteVehicle _logic;
 };
+
 _object = _object#0;
 // Get object content
 private _items = [];
 private _cargo = getItemCargo _object;
 {_items pushBack [_x, (_cargo # 1) # _forEachIndex];} forEach (_cargo #0);
 
-
 // Save object
-// Hashmapa istnieje. Wannabe moderzy:
 LOG_2('Saving object "%1"',_objectName);
 private _class = typeOf _object;
 private _pos = getPosASL _logic;
 
-private _objectPostInit = {};
+private _objectPostInit = "";
 if (_logic getVariable [QGVAR(addObjectPostInit), false]) then {
-  private _objectPostInit = compile (_logic getVariable [QGVAR(objectPostInit), ""]);
+  _objectPostInit = compile (_logic getVariable [QGVAR(_objectPostInit), ""]);
 };
 
 private _objects = [_objectName, _class, _objectCount, _pos, _items, _objectPostInit];

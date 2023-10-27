@@ -1,8 +1,8 @@
 class GVAR(suppliesObject): GVAR(base) {
     scope = 2;
-    author = "Krzyciu,SzwedzikPL";
+    author = "Krzyciu, SzwedzikPL";
     displayName = CSTRING(suppliesObject_displayName);
-    icon = "\a3\3den\data\displays\display3den\panelright\modegroups_ca.paa";
+    icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\box_ca.paa";
     category = QGVAR(supplies);
     function = QFUNC(suppliesObject_module);
     functionPriority = 5;
@@ -25,8 +25,8 @@ class GVAR(suppliesObject): GVAR(base) {
         };
 
         class GVAR(side): GVAR(dynamicToolboxSideFull) {
-            displayName = CSTRING(fortifyObject_Attributes_side);
-            tooltip = CSTRING(fortifyObject_Attributes_side_Tooltip);
+            displayName = CSTRING(suppliesObject_Attributes_side);
+            tooltip = CSTRING(suppliesObject_Attributes_side_Tooltip);
             property = QGVAR(side);
             defaultValue = "0";
             typeName = "NUMBER";
@@ -63,7 +63,6 @@ class GVAR(suppliesObject): GVAR(base) {
             displayName = CSTRING(suppliesObject_Attributes_addObjectPostInit);
             tooltip = CSTRING(suppliesObject_Attributes_addObjectPostInit_tooltip);
             property = QGVAR(addObjectPostInit);
-            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(objectPostInit): GVAR(dynamicEditCodeMulti5) {
@@ -74,7 +73,6 @@ class GVAR(suppliesObject): GVAR(base) {
             defaultValue = "''";
             typeName = "STRING";
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(addObjectPostInit)) isEqualTo true);
-            ATTRIBUTE_LOCAL;
         };
 
         class GVAR(moduleDescription): GVAR(moduleDescription) {};
