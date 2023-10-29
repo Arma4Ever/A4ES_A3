@@ -19,7 +19,7 @@ if (isServer) then {
   GVAR(moduleActivatorFlags) = createHashMap;
   GVAR(activatorModulesFlags) = createHashMap;
   GVAR(logicFlagTitles) = createHashMap;
-
+  
   GVAR(onKilled_killedEH) = -1;
   GVAR(onKilled_waitingModules) = [];
 
@@ -46,6 +46,14 @@ if (isServer) then {
 
 [QGVAR(setLogicFlagValue), {
   _this call FUNC(setLogicFlagValue);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(addSuppliesAction), {
+  _this call FUNC(suppliesStorage_moduleExecLocal);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(spawnSupply), {
+  _this call FUNC(suppliesStorage_spawnSupply);
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(addCuratorModule), {

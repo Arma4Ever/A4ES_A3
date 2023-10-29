@@ -98,5 +98,7 @@ PREP(validateEntity);
 // #include "modules\setUnitDialogue\prep.hpp"
 #include "modules\showMarker\prep.hpp"
 #include "modules\showMessage\prep.hpp"
+#include "modules\suppliesObject\prep.hpp"
+#include "modules\suppliesStorage\prep.hpp"
 #include "modules\switchLights\prep.hpp"
 #include "modules\units3DENComp\prep.hpp"

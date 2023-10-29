@@ -4,6 +4,9 @@
     <Key ID="STR_A4ES_Modules_FactionClasses_events_displayName">
       <Polish>A4ES Obsługa zdarzeń</Polish>
     </Key>
+    <Key ID="STR_A4ES_Modules_FactionClasses_supplies_displayName">
+      <Polish>A4ES Zaopatrzenie</Polish>
+    </Key>
     <Key ID="STR_A4ES_Modules_Warnings">
       <English>Warnings</English>
       <Polish>Ostrzeżenia</Polish>
@@ -2528,7 +2531,6 @@
     <Key ID="STR_A4ES_Modules_createLogicFlag_Attributes_title_desc">
       <Polish>Nazwa flagi wyświetlana jest tylko w edytorze, w ustawieniach aktywacji modułów i innych miejscach korzystajacych z flag. Nazwa flagi powinna być jasna, związana z tym czym steruje (dla ułatwienia własnej pracy).</Polish>
     </Key>
-
     <Key ID="STR_A4ES_Modules_createLogicFlag_Attributes_initialValue">
       <Polish>Wartość początkowa</Polish>
     </Key>
@@ -2872,6 +2874,122 @@
     </Key>
     <Key ID="STR_A4ES_Modules_objects3DENComp_Warning_EditMode_Desc">
       <Polish>Moduł jest aktualnie w trybie edycji. Pamiętaj, aby po zakończonej pracy, połączyć odpowiednie obiekty z modułem a następnie przełączyć moduł w tryb odczytu.</Polish>
+    </Key>
+  </Package>
+    <Package name="Modules_suppliesObject">
+    <Key ID="STR_A4ES_Modules_suppliesObject_displayName">
+      <Polish>Obiekt Zaopatrzenia</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_id">
+      <Polish>ID Obiektu</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_id_tooltip">
+      <Polish>ID generowane automatycznie.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_id_desc">
+      <Polish>ID generowane automatycznie, używane do przydzielenia obiektów do konkretnego magazynu.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_name">
+      <Polish>Nazwa zaopatrzenia</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_name_tooltip">
+      <Polish>Nazwa zaopatrzenia wyświetlana jako nazwa interakacji, a także jako nazwa w cargo pojazdu - w przypadku skrzynek.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_objectCount">
+      <Polish>Ilość obiektów zaopatrzenia</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_objectCount_Tooltip">
+      <Polish>Ilość obiektów zaopatrzenia, która będzie dostępna w magazynie</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_side">
+      <Polish>Strona</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_objectCount_Tooltip">
+      <Polish>Strona dla której będzie dostępny zsynchronizowany obiekt.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_deleteObject">
+      <Polish>Usuń obiekt</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_deleteObject_tooltip">
+      <Polish>Usuń zsynchronizowany obiekt po starcie misji.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_shortDescription">
+      <Polish>Moduł obiektów zaopatrzenia - dodaje obiekty do zsynchronizowanego magazynu.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_description">
+      <Polish>Moduł obiektu zaopatrzenia - pozwala na dodanie skrzyń/pojazdów/broni statycznych do magazynu, do którego podpięty jest moduł.&lt;br/&gt;&lt;br/&gt;Konieczne jest wybranie strony, dla której zostaną dodane obiekty. Nazwy obiektu - która jednocześnie jest nazwą wyświetlaną w menu interakcji. Ilości obiektów - ilości dostępnej do pobrania z magazynu.&lt;br/&gt;&lt;br/&gt;Moduł obsługuje kasowanie obiektów po starcie misji a także wykonanie kodu na obiekcie po jego spawnie.&lt;br/&gt;&lt;br/&gt;Do poprawnego działania moduł wymaga zsynchronizowania z TYLKO jednym obiektem, oraz CO NAJMNIEJ jednym modułem magazynu zaopatrzenia.</Polish>
+    </Key>
+     <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_addObjectPostInit">
+      <Polish>Dodaj handler initu obiektów</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_addObjectPostInit_tooltip">
+      <Polish>Dodaj własny skrypt uruchamiany dla każdego obiektu danego typu wyjętego z magazynu.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_objectPostInit">
+      <Polish>Init obiektu</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_objectPostInit_tooltip">
+      <Polish>Skrypt zostanie wykonany dla każdego wygenerowanego obiektu po jego wyjęciu z magazynu.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Attributes_objectPostInit_desc">
+      <Polish>Skrypt zostanie wykonany na serwerze dla każdego wygenerowanego obiektu. Parametry: _this - wygenerowany obiekt.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_syncRequiredInfo">
+      <Polish>Moduł wymaga zsynchronizowania z jednym obiektem oraz z conajmniej jednym modułem magazynu zaopatrzenia.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Warning_countEmpty_Desc">
+      <Polish>Liczba obiektów wynosi 0. Gracze nie będą mogli pobrać obiektów z magazynu.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Warning_SyncError">
+      <Polish>Błąd synchronizacji</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Warning_SyncError_Desc">
+      <Polish>Zsynchronizowano mniejszą liczbę modułów niż wymagana - upewnij się, że zsynchronizowałeś przynajmniej jeden moduł ustawień zaopatrzenia oraz dokładnie jeden obiekt.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Warning_NameEmpty_Desc">
+      <Polish>Nazwa obiektu w module nie może być pusta.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesObject_Warning_WrongSync_Desc">
+      <Polish>Nie można synchronizować dwóch modułów obiektów zaopatrzenia.</Polish>
+    </Key>
+  </Package>
+    </Package>
+    <Package name="Modules_suppliesStorage">
+    <Key ID="STR_A4ES_Modules_suppliesStorage_displayName">
+      <Polish>Magazyn Zaopatrzenia</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Attributes_id">
+      <Polish>ID Magazynu</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Attributes_id_tooltip">
+      <Polish>ID generowane automatycznie.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Attributes_id_desc">
+      <Polish>ID generowane automatycznie, używane do przydzielenia obiektów do konkretnego magazynu.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_shortDescription">
+      <Polish>Moduł magazynu zaopatrzenia - dodaje interakcję pozwalającą wyjmować obiekty z magazynu.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_description">
+      <Polish>Moduł magazynu zaopatrzenia - pozwala na pobieranie skrzyń/pojazdów/broni statycznych z obiektu, do którego podpięty jest moduł.&lt;br/&gt;&lt;br/&gt;Pobrane obiekty pojawią się dokładnie w miejscu, w którym postawiony jest moduł.&lt;br/&gt;&lt;br/&gt;Do poprawnego działania moduł wymaga zsynchronizowania z TYLKO jednym obiektem, na którym będzie interakcja, oraz CO NAJMNIEJ jednym modułem obiektów zaopatrzenia.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_syncRequiredInfo">
+      <Polish>Do poprawnego działania, moduł wymaga synchronizacji z jednym pojazdem lub obiektem, który będzie pełnił rolę magazynu oraz z co najmniej jednym modułem obiektu zaopatrzenia.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Warning_SyncError">
+      <Polish>Błąd Synchronizacji</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Warning_SyncError_Desc">
+      <Polish>Moduł nie jest zsynchronizowany z wymaganą liczbą obiektów/modułów</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Warning_WrongSync_Desc">
+      <Polish>Moduł nie może być zsynchronizowany z innymi modułami magazynów</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Action_Title">
+      <Polish>Pobierz:</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_suppliesStorage_Action_Left">
+      <Polish>Zostało:</Polish>
     </Key>
   </Package>
   <Package name="Preferences">

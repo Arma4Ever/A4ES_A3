@@ -46,4 +46,7 @@ class CfgFactionClasses {
     class GVAR(dialogues): GVAR(base) {
         displayName = "A4ES Dialogi";
     };
+    class GVAR(supplies): GVAR(base) {
+        displayName = CSTRING(FactionClasses_supplies_displayName);
+    };
 };
