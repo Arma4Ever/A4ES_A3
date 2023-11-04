@@ -347,6 +347,7 @@ class CfgVehicles {
     // #include "modules\generateMinefield\module.hpp"
     #include "modules\generateSoldiers\module.hpp"
     #include "modules\generatorComposition\module.hpp"
+    #include "modules\locationName\module.hpp"
     #include "modules\objects3DENComp\module.hpp"
     #include "modules\onAreaCleared\module.hpp"
     #include "modules\onDeleted\module.hpp"
