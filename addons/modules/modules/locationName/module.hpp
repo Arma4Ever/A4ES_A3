@@ -86,11 +86,11 @@ class GVAR(locationName): GVAR(base) {
                 class BorderCrossing {
                     name = CSTRING(locationName_locationType_BorderCrossing);
                     value = "BorderCrossing";
-                }
+                };
                 class Hill {
                     name = CSTRING(locationName_locationType_Hill);
                     value = "Hill";
-                }
+                };
             };
         };
 
