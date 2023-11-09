@@ -2992,6 +2992,36 @@
       <Polish>Zostało:</Polish>
     </Key>
   </Package>
+  </Package>
+    <Package name="Modules_setFace">
+    <Key ID="STR_A4ES_Modules_setFace_displayName">
+      <Polish>Ustawienia twarzy</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_setFace_Attributes_faceOrigin">
+      <Polish>Pochodzenie</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_setFace_Attributes_faceOrigin_Tooltip">
+      <Polish>Pochodzenie definiuje kolor skóry jednostek graczy</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_setFace_Attributes_white">
+      <Polish>Europejskie</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_setFace_Attributes_black">
+      <Polish>Afrykańskie</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_setFace_Attributes_asian">
+      <Polish>Azjatyckie</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_setFace_Attributes_arabic">
+      <Polish>Arabskie</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_setFace_Attributes_whiteCamo">
+      <Polish>Europejskie (kamuflaż)</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_setFace_shortDescription">
+      <Polish>Moduł pozwala na wybranie koloru twarzy jednostek graczy. Zostaną zmienione twarze wszystkich graczy, także tych, którzy dołączą w trakcie rozgrywki.</Polish>
+    </Key>
+  </Package>
   <Package name="Preferences">
     <Key ID="STR_A4ES_Modules_Preferences_displayName">
       <Polish>A4ES - Moduły</Polish>
