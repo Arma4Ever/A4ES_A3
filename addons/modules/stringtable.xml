@@ -3001,7 +3001,7 @@
       <Polish>Poziom wyszkolenia wszystkich jednostek na misji</Polish>
     </Key>
     <Key ID="STR_A4ES_Modules_setSkill_shortDescription">
-      <Polish>Moduł pozwala ustawić poziom wyszkolenia dla wszystkich jednostek na misji - także tych, postawionych przez zeusa.</Polish>
+      <Polish>Moduł pozwala ustawić poziom wyszkolenia dla wszystkich jednostek na misji - także tych, postawionych przez zeusa. UWAGA! Moduł nadpisuje ustawienia generatorów/kompozycji jednostek.</Polish>
     </Key>
   </Package>
   <Package name="Preferences">
