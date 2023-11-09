@@ -93,6 +93,7 @@ PREP(validateEntity);
 #include "modules\registerArtilleryUnits\prep.hpp"
 #include "modules\setLogicFlagValue\prep.hpp"
 // #include "modules\setSideDefaultDialogue\prep.hpp"
+#include "modules\setSkill\prep.hpp"
 #include "modules\setTaskState\prep.hpp"
 #include "modules\setTimeMultiplier\prep.hpp"
 // #include "modules\setUnitDialogue\prep.hpp"

@@ -363,6 +363,7 @@ class CfgVehicles {
     #include "modules\setLogicFlagValue\module.hpp"
     // #include "modules\setMarker\module.hpp"
     // #include "modules\setSideDefaultDialogue\module.hpp"
+    #include "modules\setSkill\module.hpp"
     #include "modules\setTaskState\module.hpp"
     #include "modules\setTimeMultiplier\module.hpp"
     // #include "modules\setUnitDialogue\module.hpp"
