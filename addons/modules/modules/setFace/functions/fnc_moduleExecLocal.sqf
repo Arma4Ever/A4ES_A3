@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Krzyciu
+ * Author: Krzyciu, BrettMayson
  * setFace module local exec function
  */
 
