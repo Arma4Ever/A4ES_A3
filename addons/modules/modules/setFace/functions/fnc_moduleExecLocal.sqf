@@ -9,7 +9,6 @@ params ["_origin"];
 LOG('Starting execution of EXEC_MODULE_NAME local exec function.');
 
 private _faces = [];
-hint "xd";
 switch (_origin) do {
 	case 0: {
 		// White
@@ -151,8 +150,13 @@ switch (_origin) do {
 };
 
 private _count = count _faces;
+private _face = "WhiteHead_01";
 
-private _idx = round (ceil (((parseNumber getPlayerUID ace_player) random [_count, _count]) * 10000) random _count);
-private _face = _faces select _idx;
+if (isMultiplayer) then {
+    private _idx = round (ceil (((parseNumber getPlayerUID ace_player) random [_count, _count]) * 10000) random _count);
+    _face = _faces select _idx;
+} else {
+    _face = selectRandom _faces;
+};
 
 [ace_player, _face] remoteExec ["setFace", 0, true];
