@@ -7,8 +7,9 @@
 params ["_logic"];
 
 private _previous = _logic getVariable [QGVAR(previous), []];
+_previous params ["_mapLocation", "_text", "_locationType"];
 
 if (_previous isNotEqualTo []) then {
-  _previous#0 setText _previous#1;
-  _previous#0 setType _previous#2;
+  _mapLocation setText _text;
+  _mapLocation setType _locationType;
 };
