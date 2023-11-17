@@ -2991,6 +2991,17 @@
       <Polish>Zostało:</Polish>
     </Key>
   </Package>
+  <Package name="Modules_setSkill">
+    <Key ID="STR_A4ES_Modules_setSkill_displayName">
+      <Polish>Wyszkolenie AI</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_setSkill_Attributes_unitSkill_Tooltip">
+      <Polish>Poziom wyszkolenia wszystkich jednostek na misji</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_setSkill_shortDescription">
+      <Polish>Moduł pozwala ustawić poziom wyszkolenia dla wszystkich jednostek na misji - także tych, postawionych przez zeusa. UWAGA! Moduł nadpisuje ustawienia generatorów/kompozycji jednostek.</Polish>
+    </Key>
+  </Package>
   <Package name="Modules_setFace">
     <Key ID="STR_A4ES_Modules_setFace_displayName">
       <Polish>Ustawienia twarzy</Polish>
