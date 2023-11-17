@@ -361,6 +361,7 @@ class CfgVehicles {
     #include "modules\registerArtilleryUnits\module.hpp"
     // #include "modules\setDamage\module.hpp"
     // #include "modules\setDraggable\module.hpp"
+    #include "modules\setFace\module.hpp"
     #include "modules\setLogicFlagValue\module.hpp"
     // #include "modules\setMarker\module.hpp"
     // #include "modules\setSideDefaultDialogue\module.hpp"

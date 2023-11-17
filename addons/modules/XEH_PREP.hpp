@@ -92,6 +92,7 @@ PREP(validateEntity);
 #include "modules\playSound\prep.hpp"
 #include "modules\radioJammer\prep.hpp"
 #include "modules\registerArtilleryUnits\prep.hpp"
+#include "modules\setFace\prep.hpp"
 #include "modules\setLogicFlagValue\prep.hpp"
 // #include "modules\setSideDefaultDialogue\prep.hpp"
 #include "modules\setTaskState\prep.hpp"

@@ -99,6 +99,10 @@ if (hasInterface) then {
   [QGVAR(diagFPS_receive), {
     _this call FUNC(curator_diagFPS_handleReceive);
   }] call CBA_fnc_addEventHandler;
+
+  [QGVAR(setFace), {
+    _this call FUNC(setFace_moduleExecLocal);
+  }] call CBA_fnc_addEventHandler;
 };
 
 if (is3DEN) then {
