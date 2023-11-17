@@ -80,6 +80,7 @@ PREP(validateEntity);
 #include "modules\fortifySettings\prep.hpp"
 #include "modules\generateSoldiers\prep.hpp"
 #include "modules\generatorComposition\prep.hpp"
+#include "modules\locationName\prep.hpp"
 #include "modules\objects3DENComp\prep.hpp"
 #include "modules\onAreaCleared\prep.hpp"
 #include "modules\onDeleted\prep.hpp"

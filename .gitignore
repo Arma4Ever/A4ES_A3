@@ -24,8 +24,8 @@ addons/irlight/*
 addons/main/script_input.hpp
 stats/*
 __pycache__
+vendor
 vendor/*
-!vendor/.gitkeep
 *.dll
 !a4es_*.dll
 extensions/*/.vs
