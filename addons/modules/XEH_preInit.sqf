@@ -40,6 +40,10 @@ if (isServer) then {
   _this call FUNC(addAction_moduleExecLocal);
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(locationName), {
+  _this call FUNC(locationName_moduleExecLocal);
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(showMessage), {
   _this call FUNC(showMessage_moduleExecLocal);
 }] call CBA_fnc_addEventHandler;
