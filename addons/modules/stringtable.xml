@@ -2876,7 +2876,7 @@
       <Polish>Moduł jest aktualnie w trybie edycji. Pamiętaj, aby po zakończonej pracy, połączyć odpowiednie obiekty z modułem a następnie przełączyć moduł w tryb odczytu.</Polish>
     </Key>
   </Package>
-    <Package name="Modules_suppliesObject">
+  <Package name="Modules_suppliesObject">
     <Key ID="STR_A4ES_Modules_suppliesObject_displayName">
       <Polish>Obiekt Zaopatrzenia</Polish>
     </Key>
@@ -2953,8 +2953,7 @@
       <Polish>Nie można synchronizować dwóch modułów obiektów zaopatrzenia.</Polish>
     </Key>
   </Package>
-    </Package>
-    <Package name="Modules_suppliesStorage">
+  <Package name="Modules_suppliesStorage">
     <Key ID="STR_A4ES_Modules_suppliesStorage_displayName">
       <Polish>Magazyn Zaopatrzenia</Polish>
     </Key>
@@ -2992,8 +2991,7 @@
       <Polish>Zostało:</Polish>
     </Key>
   </Package>
-  </Package>
-    <Package name="Modules_setSkill">
+  <Package name="Modules_setSkill">
     <Key ID="STR_A4ES_Modules_setSkill_displayName">
       <Polish>Wyszkolenie AI</Polish>
     </Key>
@@ -3002,6 +3000,109 @@
     </Key>
     <Key ID="STR_A4ES_Modules_setSkill_shortDescription">
       <Polish>Moduł pozwala ustawić poziom wyszkolenia dla wszystkich jednostek na misji - także tych, postawionych przez zeusa. UWAGA! Moduł nadpisuje ustawienia generatorów/kompozycji jednostek.</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_setFace">
+    <Key ID="STR_A4ES_Modules_setFace_displayName">
+      <Polish>Ustawienia twarzy</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_setFace_Attributes_faceOrigin">
+      <Polish>Pochodzenie</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_setFace_Attributes_faceOrigin_Tooltip">
+      <Polish>Pochodzenie definiuje kolor skóry jednostek graczy</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_setFace_Attributes_white">
+      <Polish>Europejskie</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_setFace_Attributes_black">
+      <Polish>Afrykańskie</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_setFace_Attributes_asian">
+      <Polish>Azjatyckie</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_setFace_Attributes_arabic">
+      <Polish>Arabskie</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_setFace_Attributes_whiteCamo">
+      <Polish>Europejskie (kamuflaż)</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_setFace_shortDescription">
+      <Polish>Moduł pozwala na wybranie koloru twarzy jednostek graczy. Zostaną zmienione twarze wszystkich graczy, także tych, którzy dołączą w trakcie rozgrywki.</Polish>
+    </Key>
+  </Package>
+  <Package name="Modules_locationName">
+    <Key ID="STR_A4ES_Modules_locationName_displayName">
+      <Polish>Zmiana Nazwy Lokacji</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_Attributes_mapName">
+      <Polish>Nazwa Lokacji</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_Attributes_mapName_tooltip">
+      <Polish>Nazwa lokacji, która będzie zmieniona.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_Attributes_mapName_desc">
+      <Polish>ID generowane automatycznie, używane do sprawdzenia, czy edytowana jest właściwa lokacja.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_Attributes_replaceName">
+      <Polish>Zmień Nazwę</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_Attributes_replaceName_tooltip">
+      <Polish>Zaznaczenie tej opcji pozwala na nadpisanie wyświetlanej nazwy.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_Attributes_customName">
+      <Polish>Nowa Nazwa Lokacji</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_Attributes_customName_tooltip">
+      <Polish>Nowa nazwa, która będzie wyświetlana na mapie zamiast starej.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_Attributes_customName_desc">
+      <Polish>Nowa nazwa obsługuje znaki specjalne, może być także kluczem stringtable.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_Attributes_locationType">
+      <Polish>Typ Lokacji</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_Attributes_locationType_tooltip">
+      <Polish>Typ lokacji ma wpływ na to, jak będzie wyglądała wyświetlana nazwa.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_locationType_FlatArea">
+      <Polish>Zielony duży tekst</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_locationType_Name">
+      <Polish>Czarny mały tekst</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_locationType_NameCity">
+      <Polish>Czarny średni tekst</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_locationType_NameCityCapital">
+      <Polish>Czarny duży tekst</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_locationType_NameLocal">
+      <Polish>Pomarańczowy średni tekst</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_locationType_NameMarine">
+      <Polish>Niebieski średni tekst</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_locationType_SafetyZone">
+      <Polish>Biały średni tekst</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_locationType_BorderCrossing">
+      <Polish>Czerwony mały tekst z symbolem</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_locationType_Hill">
+      <Polish>Czany mały tekst z symbolem wzgórza</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_shortDescription">
+      <Polish>Moduł pozwala na zmianę nazwy lub usunięcie nazwy lokacji.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_description">
+      <Polish>Domyślnie moduł ukrywa lokację. Po zaznaczeniu opcji 'Zmień Nazwę', moduł zmienia nazwę lokacji na podaną przez gracza. Możliwe jest wybranie koloru oraz wielkości tekstu z predefiniowanej listy. Moduł obsługuje znaki specjalne.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_Warning_CustomNameEmpty_Desc">
+      <Polish>Nowa nazwa lokacji nie może być pusta.</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Modules_locationName_positionInfo">
+      <Polish>Pozycja modułu ma znaczenie. Moduł przyciąga się do najbliższej lokacji, która następnie będzie edytowana.</Polish>
     </Key>
   </Package>
   <Package name="Preferences">

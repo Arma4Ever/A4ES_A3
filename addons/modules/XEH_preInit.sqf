@@ -40,6 +40,10 @@ if (isServer) then {
   _this call FUNC(addAction_moduleExecLocal);
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(locationName), {
+  _this call FUNC(locationName_moduleExecLocal);
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(showMessage), {
   _this call FUNC(showMessage_moduleExecLocal);
 }] call CBA_fnc_addEventHandler;
@@ -94,6 +98,10 @@ if (hasInterface) then {
   }] call CBA_fnc_addEventHandler;
   [QGVAR(diagFPS_receive), {
     _this call FUNC(curator_diagFPS_handleReceive);
+  }] call CBA_fnc_addEventHandler;
+
+  [QGVAR(setFace), {
+    _this call FUNC(setFace_moduleExecLocal);
   }] call CBA_fnc_addEventHandler;
 };
 
