@@ -1,192 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A4ES">
-  <Package name="Editor">
-    <Key ID="STR_A4ES_Editor_Scenario_AttributeCategory_States_displayName">
-      <Polish>Debug</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_IncompatibleModsDetected_Title">
-      <Polish>Wykryto niekompatybilne mody</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_IncompatibleModsDetected_Message">
-      <Polish>Wyłącz %1 i uruchom grę ponownie. Jeśli brakuje Ci jakichś funkcjonalności w edytorze daj nam o tym znać na forum.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI">
-      <Polish>Wyłącz funkcję AI</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_TARGET">
-      <Polish>TARGET</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_TARGET_Tooltip">
-      <Polish>Wyłącza obserwację celów przez AI i wskazywanie celów przez dowódcę.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_AUTOTARGET">
-      <Polish>AUTOTARGET</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_AUTOTARGET_Tooltip">
-      <Polish>Wyłącza samodzielne szukanie celów i obserwację podejrzanych obiektów.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_MOVE">
-      <Polish>MOVE</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_MOVE_Tooltip">
-      <Polish>Wyłącza możliwość poruszania się przez AI (dotyczy również pojazdu jeśli jednostka jest kierowcą). UWAGA! Ta opcja wyłącza poruszanie się jednostki niezależnie od sytuacji. Jesli chcesz powstrzymać jednostę przed ruszeniem do formacji na starcie misji ale umożliwić poruszanie się podczas walki użyć opcji "Zatrzymaj jednostkę".</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_ANIM">
-      <Polish>ANIM</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_ANIM_Tooltip">
-      <Polish>Wyłącza możliwość zmiany animacji przez AI.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_TEAMSWITCH">
-      <Polish>TEAMSWITCH</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_TEAMSWITCH_Tooltip">
-      <Polish>Wyłącza możliwość zmiany drużyny przez AI.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_FSM">
-      <Polish>FSM</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_FSM_Tooltip">
-      <Polish>Wyłącza uruchamianie skryptów zachowań i reakcji AI.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_WEAPONAIM">
-      <Polish>WEAPONAIM</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_WEAPONAIM_Tooltip">
-      <Polish>Wyłącza celowanie przez AI.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_AIMINGERROR">
-      <Polish>AIMINGERROR</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_AIMINGERROR_Tooltip">
-      <Polish>Wyłącza pogarszanie celności AI ze względu na przygwożdżenie, poruszanie się, rany itp.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_SUPPRESSION">
-      <Polish>SUPPRESSION</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_SUPPRESSION_Tooltip">
-      <Polish>Wyłącza możliwość przygwożdżenia AI.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_CHECKVISIBLE">
-      <Polish>CHECKVISIBLE</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_CHECKVISIBLE_Tooltip">
-      <Polish>Wyłącza sprawdzanie widoczności celów.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_COVER">
-      <Polish>COVER</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_COVER_Tooltip">
-      <Polish>Wyłącza szukanie i wykorzystywanie obiektów jako osłony.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_AUTOCOMBAT">
-      <Polish>AUTOCOMBAT</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_AUTOCOMBAT_Tooltip">
-      <Polish>Wyłącza automatyczne przełączanie się AI w tryb walki w przypadku zagrożenia.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_PATH">
-      <Polish>PATH</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_PATH_Tooltip">
-      <Polish>Wyłącza wyszukiwanie scieżek (path finding) co efektywnie unieruchamia AI.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_MINEDETECTION">
-      <Polish>MINEDETECTION</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_MINEDETECTION_Tooltip">
-      <Polish>Wyłącza wykrywanie min przez AI.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_NVG">
-      <Polish>NVG</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_NVG_Tooltip">
-      <Polish>Wyłącza zakładanie noktowizji przez AI.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_LIGHTS">
-      <Polish>LIGHTS</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_LIGHTS_Tooltip">
-      <Polish>Wyłącza używanie reflektorów i świateł kolizyjnych w pojazdach przez AI.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_RADIOPROTOCOL">
-      <Polish>RADIOPROTOCOL</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_DisableAI_RADIOPROTOCOL_Tooltip">
-      <Polish>Wyłącza możliwość komunikacji AI ale nie wydawanie rozkazów.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_roleDescription_Tooltip">
-      <Polish>Opis roli w grze wieloosobowej widoczny w lobby trybu wieloosobowego. Jeśli nie zostanie zdefiniowana, przypisana zostanie domyślna nazwa jednostki. UWAGA! Aby zmienić nazwę drużyny w lobby w opisie roli *dowódcy drużyny* dodaj "@Nazwa druzyny" np. "Dowódca drużyny@Charlie". Poza tym przypadkiem nie używaj "@" w opisie roli!</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_doStop">
-      <Polish>Zatrzymaj szyk</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_doStop_Tooltip">
-      <Polish>Powstrzymuje jednostkę przed ruszeniem do szyku na starcie misji. Jednostka po wejściu w tryb zagrożenia będzie poruszać się normalnie.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_enableGunLights">
-      <Polish>Włącz latarki</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_enableGunLights_Tooltip">
-      <Polish>Włącza latarki u członków drużyny. UWAGA: opcja ta może być nadpisana przez ustawienia waypointów.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_disableRandomization">
-      <Polish>Wyłącz randomizację wyposażenia</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_disableRandomization_Tooltip">
-      <Polish>Wyłącza randomizację wyglądu oraz wyposażenia jednostki/pojazdu. Zaznaczenie tej opcji pozwala na ogórne zdefiniowane wyposażenia i wyglądu pojazdu/jednostki w edytorze. Ta opcja wyłącza zarówno system losowania Bohemii jak i Community Factions Project.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_disableTIEquipment">
-      <Polish>Wyłącz pojazdową termowizję</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_disableTIEquipment_Tooltip">
-      <Polish>Wyłącza termowizję w wizjerach pojazdu (np. celownik strzelca, wizjer dowódcy pojazdu itp).</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_disableNVGEquipment">
-      <Polish>Wyłącz pojazdową noktowizję</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_disableNVGEquipment_Tooltip">
-      <Polish>Wyłącza noktowizję w wizjerach pojazdu (np. celownik strzelca, wizjer dowódcy pojazdu itp).</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_engineOn">
-      <Polish>Włącz silnik</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_engineOn_Tooltip">
-      <Polish>Włącza silnik pojazdu na starcie misji (niezależnie czy jest w nim załoga).</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_enableHeadlights">
-      <Polish>Włącz reflektory</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_enableHeadlights_Tooltip">
-      <Polish>Włącza reflektory (światła główne) pojazdu na starcie misji (niezależnie czy jest w nim załoga).</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_removeFromRemainsCollector">
-      <Polish>Wyłącz usunięcie ciała/wraku</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_removeFromRemainsCollector_Tooltip">
-      <Polish>Wyłącza usuwanie ciała/wraku po zabiciu/zniszczeniu.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_maximumCargoLoad">
-      <Polish>Maksymalna pojemność inwentarza</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_maximumCargoLoad_Tooltip">
-      <Polish>Maksymalna pojemność inwentarza danej skrzynki/pojazdu/obiektu.
+    <Package name="Editor">
+        <Key ID="STR_A4ES_Editor_Scenario_AttributeCategory_States_displayName">
+            <Polish>Debug</Polish>
+            <English>Debug</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_IncompatibleModsDetected_Title">
+            <Polish>Wykryto niekompatybilne mody</Polish>
+            <English>Incompatible mods detected</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_IncompatibleModsDetected_Message">
+            <Polish>Wyłącz %1 i uruchom grę ponownie. Jeśli brakuje Ci jakichś funkcjonalności w edytorze daj nam o tym znać na forum.</Polish>
+            <English>Turn %1 off and restart the game. If you are missing any functionality in the editor let us know on forum.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI">
+            <Polish>Wyłącz funkcję AI</Polish>
+            <English>Disable AI functions</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_TARGET">
+            <Polish>TARGET</Polish>
+            <English>TARGET</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_TARGET_Tooltip">
+            <Polish>Wyłącza obserwację celów przez AI i wskazywanie celów przez dowódcę.</Polish>
+            <English>Disables AI observation of targets and target pointing by the commander.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_AUTOTARGET">
+            <Polish>AUTOTARGET</Polish>
+            <English>AUTOTARGET</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_AUTOTARGET_Tooltip">
+            <Polish>Wyłącza samodzielne szukanie celów i obserwację podejrzanych obiektów.</Polish>
+            <English>Disables autonomous target searching and observation of suspicious objects.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_MOVE">
+            <Polish>MOVE</Polish>
+            <English>MOVE</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_MOVE_Tooltip">
+            <Polish>Wyłącza możliwość poruszania się przez AI (dotyczy również pojazdu jeśli jednostka jest kierowcą). UWAGA! Ta opcja wyłącza poruszanie się jednostki niezależnie od sytuacji. Jesli chcesz powstrzymać jednostę przed ruszeniem do formacji na starcie misji ale umożliwić poruszanie się podczas walki użyć opcji "Zatrzymaj jednostkę".</Polish>
+            <English>Disables the ability of the AI to move (also applies to the vehicle if the unit is the driver). WARNING: This option disables the movement of the unit regardless of the situation. If you want to stop the unit from moving into formation at the start of the mission but allow it to move during combat use the "Stop Unit" option.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_ANIM">
+            <Polish>ANIM</Polish>
+            <English>ANIM</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_ANIM_Tooltip">
+            <Polish>Wyłącza możliwość zmiany animacji przez AI.</Polish>
+            <English>Disables AI's ability to change animations.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_TEAMSWITCH">
+            <Polish>TEAMSWITCH</Polish>
+            <English>TEAMSWITCH</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_TEAMSWITCH_Tooltip">
+            <Polish>Wyłącza możliwość zmiany drużyny przez AI.</Polish>
+            <English>Disables the AI's ability to change teams.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_FSM">
+            <Polish>FSM</Polish>
+            <English>FSM</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_FSM_Tooltip">
+            <Polish>Wyłącza uruchamianie skryptów zachowań i reakcji AI.</Polish>
+            <English>Disables the running of scripts and AI reactions.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_WEAPONAIM">
+            <Polish>WEAPONAIM</Polish>
+            <English>WEAPONAIM</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_WEAPONAIM_Tooltip">
+            <Polish>Wyłącza celowanie przez AI.</Polish>
+            <English>Disables targeting by AI.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_AIMINGERROR">
+            <Polish>AIMINGERROR</Polish>
+            <English>AIMINGERROR</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_AIMINGERROR_Tooltip">
+            <Polish>Wyłącza pogarszanie celności AI ze względu na przygwożdżenie, poruszanie się, rany itp.</Polish>
+            <English>Disables deterioration of AI accuracy due to suppresion, moving, wounds, etc.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_SUPPRESSION">
+            <Polish>SUPPRESSION</Polish>
+            <English>SUPPRESSION</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_SUPPRESSION_Tooltip">
+            <Polish>Wyłącza możliwość przygwożdżenia AI.</Polish>
+            <English>Disables the ability to suppres AI.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_CHECKVISIBLE">
+            <Polish>CHECKVISIBLE</Polish>
+            <English>CHECKVISIBLE</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_CHECKVISIBLE_Tooltip">
+            <Polish>Wyłącza sprawdzanie widoczności celów.</Polish>
+            <English>Disables target visibility checking.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_COVER">
+            <Polish>COVER</Polish>
+            <English>COVER</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_COVER_Tooltip">
+            <Polish>Wyłącza szukanie i wykorzystywanie obiektów jako osłony.</Polish>
+            <English>Disables searching and using objects as cover.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_AUTOCOMBAT">
+            <Polish>AUTOCOMBAT</Polish>
+            <English>AUTOCOMBAT</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_AUTOCOMBAT_Tooltip">
+            <Polish>Wyłącza automatyczne przełączanie się AI w tryb walki w przypadku zagrożenia.</Polish>
+            <English>Disables the AI's automatic switching to combat mode when threatened.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_PATH">
+            <Polish>PATH</Polish>
+            <English>PATH</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_PATH_Tooltip">
+            <Polish>Wyłącza wyszukiwanie scieżek (path finding) co efektywnie unieruchamia AI.</Polish>
+            <English>Disables path finding, which effectively disables AI.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_MINEDETECTION">
+            <Polish>MINEDETECTION</Polish>
+            <English>MINEDETECTION</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_MINEDETECTION_Tooltip">
+            <Polish>Wyłącza wykrywanie min przez AI.</Polish>
+            <English>Disables AI detection of mines.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_NVG">
+            <Polish>NVG</Polish>
+            <English>NVG</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_NVG_Tooltip">
+            <Polish>Wyłącza zakładanie noktowizji przez AI.</Polish>
+            <English>Disables using of night vision by AI.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_LIGHTS">
+            <Polish>LIGHTS</Polish>
+            <English>LIGHTS</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_LIGHTS_Tooltip">
+            <Polish>Wyłącza używanie reflektorów i świateł kolizyjnych w pojazdach przez AI.</Polish>
+            <English>Disables the use of headlights and collision lights on vehicles by AI.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_RADIOPROTOCOL">
+            <Polish>RADIOPROTOCOL</Polish>
+            <English>RADIOPROTOCOL</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_DisableAI_RADIOPROTOCOL_Tooltip">
+            <Polish>Wyłącza możliwość komunikacji AI ale nie wydawanie rozkazów.</Polish>
+            <English>Disables the ability of AI to communicate but not to issue orders.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_roleDescription_Tooltip">
+            <Polish>Opis roli w grze wieloosobowej widoczny w lobby trybu wieloosobowego. Jeśli nie zostanie zdefiniowana, przypisana zostanie domyślna nazwa jednostki. UWAGA! Aby zmienić nazwę drużyny w lobby w opisie roli *dowódcy drużyny* dodaj "@Nazwa druzyny" np. "Dowódca drużyny@Charlie". Poza tym przypadkiem nie używaj "@" w opisie roli!</Polish>
+            <English>The multiplayer role description shown in the multiplayer lobby. If not defined, the default unit name will be assigned. WARNING: To change the team name in the lobby in the role description of *team commander* add "@Team Name" e.g. "Team Leader@Charlie". Except this case, do not use "@" in the role description!</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_doStop">
+            <Polish>Zatrzymaj szyk</Polish>
+            <English>Stop the formation</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_doStop_Tooltip">
+            <Polish>Powstrzymuje jednostkę przed ruszeniem do szyku na starcie misji. Jednostka po wejściu w tryb zagrożenia będzie poruszać się normalnie.</Polish>
+            <English>Stops the unit from moving into formation at the start of the mission. The unit will move normally after entering threat mode.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_enableGunLights">
+            <Polish>Włącz latarki</Polish>
+            <English>Turn on the flashlights</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_enableGunLights_Tooltip">
+            <Polish>Włącza latarki u członków drużyny. UWAGA: opcja ta może być nadpisana przez ustawienia waypointów.</Polish>
+            <English>Turns on flashlights in team. WARNING: this option can be overridden by waypoint settings.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_disableRandomization">
+            <Polish>Wyłącz randomizację wyposażenia</Polish>
+            <English>Disable equipment randomization</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_disableRandomization_Tooltip">
+            <Polish>Wyłącza randomizację wyglądu oraz wyposażenia jednostki/pojazdu. Zaznaczenie tej opcji pozwala na ogórne zdefiniowane wyposażenia i wyglądu pojazdu/jednostki w edytorze. Ta opcja wyłącza zarówno system losowania Bohemii jak i Community Factions Project.</Polish>
+            <English>Disables randomization of appearance and equipment of the unit/vehicle. Checking this option allows you to pedefine equipment and appearance of the vehicle/unit in the editor. This option disables both the Bohemia and Community Factions Project randomization system.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_disableTIEquipment">
+            <Polish>Wyłącz pojazdową termowizję</Polish>
+            <English>Turn off vehicle thermal imaging</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_disableTIEquipment_Tooltip">
+            <Polish>Wyłącza termowizję w wizjerach pojazdu (np. celownik strzelca, wizjer dowódcy pojazdu itp).</Polish>
+            <English>Disables thermal imaging in vehicle visors (e.g. gunner's sight, vehicle commander's visor, etc.).</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_disableNVGEquipment">
+            <Polish>Wyłącz pojazdową noktowizję</Polish>
+            <English>Turn off vehicle night vision</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_disableNVGEquipment_Tooltip">
+            <Polish>Wyłącza noktowizję w wizjerach pojazdu (np. celownik strzelca, wizjer dowódcy pojazdu itp).</Polish>
+            <English>Disables night vision in vehicle visors (e.g., gunner's sight, vehicle commander's visor, etc.).</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_engineOn">
+            <Polish>Włącz silnik</Polish>
+            <English>Turn on engine</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_engineOn_Tooltip">
+            <Polish>Włącza silnik pojazdu na starcie misji (niezależnie czy jest w nim załoga).</Polish>
+            <English>Starts engine of the vehicle at the start of the mission (regardless of whether there is a crew in it).</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_enableHeadlights">
+            <Polish>Włącz reflektory</Polish>
+            <English>Turn on headlights</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_enableHeadlights_Tooltip">
+            <Polish>Włącza reflektory (światła główne) pojazdu na starcie misji (niezależnie czy jest w nim załoga).</Polish>
+            <English>Turns on headlights of the vehicle at the start of the mission (regardless of whether there is a crew in it).</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_removeFromRemainsCollector">
+            <Polish>Wyłącz usunięcie ciała/wraku</Polish>
+            <English>Disable body/wreck removal</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_removeFromRemainsCollector_Tooltip">
+            <Polish>Wyłącza usuwanie ciała/wraku po zabiciu/zniszczeniu.</Polish>
+            <English>Disables body/wreck removal after kill/destruction.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_maximumCargoLoad">
+            <Polish>Maksymalna pojemność inwentarza</Polish>
+            <English>Maximum inventory capacity</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_maximumCargoLoad_Tooltip">
+            <Polish>Maksymalna pojemność inwentarza danej skrzynki/pojazdu/obiektu.
         \n\n
         Domyślnie wyświetlana wartość pochodzi z configu danej skrzynki/obiektu/pojazdu, jej zmiana (niezależnie czy na większą czy mniejszą) poskutkuje nadpisaniem tej wartości na starcie misji.
         \n\n
         Opcji tej należy użyć jeśli chcemy np. zablokować możliwość wkładania elementów do inwentarza danej skrzynki/pojazdu/obiektu (w takim wypadku wpisujemy 0 - warto zaznaczyć, że to zablokuje tylko możliwość wkładania rzeczy, wciąż będzie można je wyciągać) lub chcemy aby dana skrzynka/pojazd/obiekt miały większy inwentarz (wtedy podajemy wartość większą niż domyślna, np. 10000) aby np. gracze nie musieli wyrzucać rzeczy na ziemię podczas przezbrojenia, ponieważ brakuje miejsca w skrzynce.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_isStationary">
-      <Polish>Jednostka stacjonarna</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_isStationary_Tooltip">
-      <Polish>Jednostka będzie stała na swojej pozycji niezależnie od sytuacji, będzie jednak się obracać w kierunku przeciwnika i odpowiadać ogniem.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_Warning_A4ESVersionMismatch_Title">
-      <Polish>Uwaga!</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Editor_Warning_A4ESVersionMismatch_Message">
-      <Polish>Misja została zapisana na starszej wersji A4ES.&lt;br /&gt;&lt;br /&gt;Wersja A4ES z misji: %1&lt;br /&gt;Aktualna wersja A4ES: %2&lt;br /&gt;&lt;br /&gt;Ustawienia dynamicznej symulacji oraz limitu ciał i wraków zostały zresetowane do domyślnych, popraw je w razie potrzeby.&lt;br /&gt;&lt;br /&gt;Parametry i funkcje niektórych elementów edytora oraz modułów mogły ulec zmianie. W razie problemów zasięgnij pomocy na forum.</Polish>
-    </Key>
-  </Package>
+        <English>Maximum crate/vehicle/object capacity.
+        \n\n
+        By default, the displayed value comes from the config of the given crate/object/vehicle, changing it (whether to a higher or lower value) will result in overwriting this value at the start of the mission.
+        \n\n
+        Use this option if you want, for example, block the ability to put items into the inventory of a given crate/vehicle/object (in this case, enter 0 - it is worth noting that this will only block the ability to put things in, you will still be able to take them out) or if you want a given crate/vehicle/object to have a larger inventory (then enter a value greater than the default, e.g. 10000) so that, for example, players do not have to throw things on the ground when rearming because there is not enough space in the crate.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_isStationary">
+            <Polish>Jednostka stacjonarna</Polish>
+            <English>Stationary unit</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_isStationary_Tooltip">
+            <Polish>Jednostka będzie stała na swojej pozycji niezależnie od sytuacji, będzie jednak się obracać w kierunku przeciwnika i odpowiadać ogniem.</Polish>
+            <English>The unit will stand in its position regardless of the situation, but will turn toward the enemy and return fire.</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_Warning_A4ESVersionMismatch_Title">
+            <Polish>Uwaga!</Polish>
+            <English>Warning!</English>
+        </Key>
+        <Key ID="STR_A4ES_Editor_Warning_A4ESVersionMismatch_Message">
+            <Polish>Misja została zapisana na starszej wersji A4ES.&lt;br /&gt;&lt;br /&gt;Wersja A4ES z misji: %1&lt;br /&gt;Aktualna wersja A4ES: %2&lt;br /&gt;&lt;br /&gt;Ustawienia dynamicznej symulacji oraz limitu ciał i wraków zostały zresetowane do domyślnych, popraw je w razie potrzeby.&lt;br /&gt;&lt;br /&gt;Parametry i funkcje niektórych elementów edytora oraz modułów mogły ulec zmianie. W razie problemów zasięgnij pomocy na forum.</Polish>
+            <English>Mission was saved on older version of A4ES.&lt;br /&gt;&lt;br /&gt;Mission A4ES version: %1&lt;br /&gt;Current A4ES version: %2&lt;br /&gt;&lt;br /&gt;Dynamic simulation, body and wreck limit settings have been reset to defaults, correct them as needed.&lt;br /&gt;&lt;br /&gt;The parameters and functions of some editor elements and modules may have changed. If you have problems, seek help on Github.</English>
+        </Key>
+    </Package>
 </Project>

@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A4ES">
-  <Package name="Support">
-    <Key ID="STR_A4ES_Support_Title">
-      <Original>Support</Original>
-      <Polish>Wsparcie</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Support_SendMission">
-      <Original>Send mission</Original>
-      <Polish>Wyślij misję</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Support_AttributeCategory">
-      <Polish>Wsparcie</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Support_Attributes_enableArtComputer">
-      <Polish>Włącz komputer artyleryjski</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Support_Attributes_enableArtComputer_Tooltip">
-      <Polish>Włącza armowy komputer artyleryjski. Zaznacz tą opcję jeśli komputer artyleryjski ma być dostępny dla graczy podczas misji. Miej na uwadzę, że dostępnośc komputera znacząco spłyca i upraszcza korzystanie z artylerii, zaznacz tą opcję tylko jeśli wiesz co robisz.</Polish>
-    </Key>
-  </Package>
+    <Package name="Support">
+        <Key ID="STR_A4ES_Support_Title">
+            <Polish>Wsparcie</Polish>
+            <English>Support</English>
+        </Key>
+        <Key ID="STR_A4ES_Support_SendMission">
+            <Polish>Wyślij misję</Polish>
+            <English>Send mission</English>
+        </Key>
+        <Key ID="STR_A4ES_Support_AttributeCategory">
+            <Polish>Wsparcie</Polish>
+            <English>Support</English>
+        </Key>
+        <Key ID="STR_A4ES_Support_Attributes_enableArtComputer">
+            <Polish>Włącz komputer artyleryjski</Polish>
+            <English>Turn on the artillery computer</English>
+        </Key>
+        <Key ID="STR_A4ES_Support_Attributes_enableArtComputer_Tooltip">
+            <Polish>Włącza armowy komputer artyleryjski. Zaznacz tą opcję jeśli komputer artyleryjski ma być dostępny dla graczy podczas misji. Miej na uwadzę, że dostępnośc komputera znacząco spłyca i upraszcza korzystanie z artylerii, zaznacz tą opcję tylko jeśli wiesz co robisz.</Polish>
+            <English>Enables the Arma artillery computer. Check this option if the artillery computer is meant to be available to players during missions. Keep in mind that having the computer available significantly shortens and simplifies the use of artillery, check this option only if you know what you are doing.</English>
+        </Key>
+    </Package>
 </Project>

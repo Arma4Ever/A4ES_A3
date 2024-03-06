@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A4ES">
-  <Package name="Flashlights">
-    <Key ID="STR_A4ES_Flashlights_MX991_Description">
-        <Polish>Latarka z czerwonym filtrem. Używana do podświetlania mapy lub podczepiania do munduru.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Flashlights_KSF1_Description">
-        <Polish>Latarka z czerwonym filtrem. Używana do podświetlania mapy lub podczepiania do munduru.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Flashlights_XL50_Description">
-        <Polish>Mini latarka. Światło białe. Używana do podświetlania mapy lub podczepiania do munduru.</Polish>
-    </Key>
-  </Package>
+    <Package name="Flashlights">
+        <Key ID="STR_A4ES_Flashlights_MX991_Description">
+            <Polish>Latarka z czerwonym filtrem. Używana do podświetlania mapy lub podczepiania do munduru.</Polish>
+            <English>Flashlight with red filter. Used to illuminate a map or attach to a uniform.</English>
+        </Key>
+        <Key ID="STR_A4ES_Flashlights_KSF1_Description">
+            <Polish>Latarka z czerwonym filtrem. Używana do podświetlania mapy lub podczepiania do munduru.</Polish>
+            <English>Flashlight with red filter. Used to illuminate a map or attach to a uniform.</English>
+        </Key>
+        <Key ID="STR_A4ES_Flashlights_XL50_Description">
+            <Polish>Mini latarka. Światło białe. Używana do podświetlania mapy lub podczepiania do munduru.</Polish>
+            <English>Mini flashlight. White light. Used to illuminate a map or attach to a uniform.</English>
+        </Key>
+    </Package>
 </Project>

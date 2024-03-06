@@ -1,77 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A4ES">
     <Package name="Gamemodes">
-      <Key ID="STR_A4ES_Gamemodes_Coop_name">
-        <Polish>Coop</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_Coop_shortcut">
-        <Polish>Coop</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_Coop_description">
-        <Polish>Standardowa kooperacja, gracze vs AI.</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_CoopRespawn_name">
-        <Polish>Coop + Respawn</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_CoopRespawn_shortcut">
-        <Polish>Coop + Respawn</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_CoopRespawn_description">
-        <Polish>Standardowa kooperacja, gracze vs AI z możliwością respawnu.</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_TvT_name">
-        <Polish>Team vs Team</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_TvT_shortcut">
-        <Polish>TvT</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_TvT_description">
-        <Polish>Gracze vs graczem, każda ze stron/drużyn posiada własne cele/zadania.</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_TvTRespawn_name">
-        <Polish>Team vs Team + Respawn</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_TvTRespawn_shortcut">
-        <Polish>TvT + Respawn</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_TvTRespawn_description">
-        <Polish>Gracze vs gracze z możliwością respawnu, każda ze stron/drużyn posiada własne cele/zadania.</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_Custom_name">
-        <Polish>Niestandardowy</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_Custom_shortcut">
-        <Polish>Niestandardowy</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_Custom_description">
-        <Polish>Własny tryb.</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_Rules_PvE">
-        <Polish>Gracze vs AI</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_Rules_TvT">
-        <Polish>Gracze vs gracze</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_Rules_OneLife">
-        <Polish>Jeden gracz - jedno życie</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_Rules_CanHaveRespawn">
-        <Polish>Możliwy respawn po śmierci</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_Rules_CanHaveZeus">
-        <Polish>Może zawierać sloty zeusa</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_Rules_CanBeOfficial">
-        <Polish>Może być misją oficjalną</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_Rules_CanHaveExtraAI">
-        <Polish>Może zawierać AI jako dodatkowe urudnienie lub urozmaicenie rozgrywki</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_Limit_NotOfficial">
-        <Polish>Nie może być misją oficjalną</Polish>
-      </Key>
-      <Key ID="STR_A4ES_Gamemodes_Warning_InfoOnly">
-        <Polish>Pamiętaj, że ustawienie trybu gry ma charakter czysto informacyjny. Wciąż musisz dostosować misję do danego trybu, włączyć respawn itp.</Polish>
-      </Key>
+        <Key ID="STR_A4ES_Gamemodes_Coop_name">
+            <Polish>Coop</Polish>
+            <English>Coop</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_Coop_shortcut">
+            <Polish>Coop</Polish>
+            <English>Coop</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_Coop_description">
+            <Polish>Standardowa kooperacja, gracze vs AI.</Polish>
+            <English>Standard co-op, players vs AI.</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_CoopRespawn_name">
+            <Polish>Coop + Respawn</Polish>
+            <English>Coop + Respawn</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_CoopRespawn_shortcut">
+            <Polish>Coop + Respawn</Polish>
+            <English>Coop + Respawn</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_CoopRespawn_description">
+            <Polish>Standardowa kooperacja, gracze vs AI z możliwością respawnu.</Polish>
+            <English>Standard co-op, players vs AI with respawns.</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_TvT_name">
+            <Polish>Team vs Team</Polish>
+            <English>Team vs Team</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_TvT_shortcut">
+            <Polish>TvT</Polish>
+            <English>TvT</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_TvT_description">
+            <Polish>Gracze vs gracze, każda ze stron/drużyn posiada własne cele/zadania.</Polish>
+            <English>Players vs players, each side/team has its own goals/tasks.</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_TvTRespawn_name">
+            <Polish>Team vs Team + Respawn</Polish>
+            <English>Team vs Team + Respawn</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_TvTRespawn_shortcut">
+            <Polish>TvT + Respawn</Polish>
+            <English>TvT + Respawn</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_TvTRespawn_description">
+            <Polish>Gracze vs gracze z możliwością respawnu, każda ze stron/drużyn posiada własne cele/zadania.</Polish>
+            <English>Players vs players with the possibility of respawning, each side/team has its own goals/tasks.</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_Custom_name">
+            <Polish>Niestandardowy</Polish>
+            <English>Custom</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_Custom_shortcut">
+            <Polish>Niestandardowy</Polish>
+            <English>Custom</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_Custom_description">
+            <Polish>Własny tryb.</Polish>
+            <English>Custom mode.</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_Rules_PvE">
+            <Polish>Gracze vs AI</Polish>
+            <English>Players vs AI</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_Rules_TvT">
+            <Polish>Gracze vs gracze</Polish>
+            <English>Players vs players</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_Rules_OneLife">
+            <Polish>Jeden gracz - jedno życie</Polish>
+            <English>One player - one life</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_Rules_CanHaveRespawn">
+            <Polish>Możliwy respawn po śmierci</Polish>
+            <English>Possible respawn after death</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_Rules_CanHaveZeus">
+            <Polish>Może zawierać sloty zeusa</Polish>
+            <English>Can include zeus slots</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_Rules_CanBeOfficial">
+            <Polish>Może być misją oficjalną</Polish>
+            <English>May be an official mission</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_Rules_CanHaveExtraAI">
+            <Polish>Może zawierać AI jako dodatkowe urudnienie lub urozmaicenie rozgrywki</Polish>
+            <English>May include AI as an added difficulty or gameplay enhancement</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_Limit_NotOfficial">
+            <Polish>Nie może być misją oficjalną</Polish>
+            <English>Cannot be an official mission</English>
+        </Key>
+        <Key ID="STR_A4ES_Gamemodes_Warning_InfoOnly">
+            <Polish>Pamiętaj, że ustawienie trybu gry ma charakter czysto informacyjny. Wciąż musisz dostosować misję do danego trybu, włączyć respawn itp.</Polish>
+            <English>Remember that the game mode setting is purely informational. You still need to adjust the mission for the mode, enable respawn, etc.</English>
+        </Key>
     </Package>
 </Project>

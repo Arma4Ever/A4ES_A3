@@ -19,7 +19,7 @@ class POL_st_sierzant {
     importance = 3;
 };
 class POL_sierzant_sztabowy {
-    name = "Sierzant Sztabowy";
+    name = CSTRING(Ranks_Sierzant_Sztabowy);
     icon = QPATHTOF(ranks\POL\sierzant_sztabowy.paa);
     importance = 4;
 };

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A4ES">
-  <Package name="Headless">
-    <Key ID="STR_A4ES_Headless_headlessConnectedInfo">
-      <Polish>[A4ES] Headless client #%1 połączył się poprawnie.</Polish>
-    </Key>
-  </Package>
+    <Package name="Headless">
+        <Key ID="STR_A4ES_Headless_headlessConnectedInfo">
+            <Polish>[A4ES] Headless client #%1 połączył się poprawnie.</Polish>
+            <English>[A4ES] Headless client #%1 connected successfully.</English>
+        </Key>
+    </Package>
 </Project>

@@ -50,9 +50,9 @@ LOG_2('Saving object "%1"',_objectName);
 private _class = typeOf _object;
 private _pos = getPosASL _logic;
 
-private _objectPostInit = "";
+private _objectPostInit = {};
 if (_logic getVariable [QGVAR(addObjectPostInit), false]) then {
-  _objectPostInit = compile (_logic getVariable [QGVAR(_objectPostInit), ""]);
+  _objectPostInit = compile (_logic getVariable [QGVAR(objectPostInit), ""]);
 };
 
 private _objects = [_objectName, _class, _objectCount, _pos, _items, _objectPostInit];

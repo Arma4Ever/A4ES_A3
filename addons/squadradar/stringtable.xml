@@ -1,230 +1,237 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A4ES">
-  <Package name="Squadradar">
-    <Key ID="STR_A4ES_Squadradar_Settings_Addon">
-      <English>A4ES Squad Radar</English>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Chat_RadarDisabledByMission">
-      <English>[A4ES] Squad radar has been disabled in mission settings!</English>
-      <Polish>[A4ES] Radar drużynowy został wyłączony w ustawieniach misji!</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_GUI">
-      <English>GUI</English>
-      <Polish>Wygląd</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_OpacityTooltip">
-      <English>0 = 0%, 1 = 100%</English>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_enable">
-      <English>Enable</English>
-      <Polish>Włącz</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_enable_Tooltip">
-      <English>Enable squad radar</English>
-      <Polish>Włącz radar drużynowy</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_showRadar">
-      <English>Show radar</English>
-      <Polish>Pokaż radar</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_showRadar_Tooltip">
-      <English>Show radar with your squad members positions near you</English>
-      <Polish>Pokaż radar z pozycjami członków Twojej drużyny wokół Ciebie</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_showMemberlist">
-      <English>Show squad members</English>
-      <Polish>Pokaż członków drużyny</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_showMemberlist_Tooltip">
-      <English>Show list of your squad members</English>
-      <Polish>Pokaż listę członków Twojej drużyny</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_showSpecialStates">
-      <English>Show special states icons</English>
-      <Polish>Pokazuj ikonki stanów specjalnych</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_showSpecialStates_Tooltip">
-      <English>Show special states like talking with ACRE or dead/unconscious</English>
-      <Polish>Pokazuj stany specjalne jak mówienie przez ACRE lub martwy/nieprzytomny</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_showFingerPointers">
-      <English>Show finger pointers</English>
-      <Polish>Pokazuj wskazania palcem</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_showFingerPointers_Tooltip">
-      <English>Show finger pointer icon on radar</English>
-      <Polish>Pokazuj wskazania palcem na tarczy radaru</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_radarBackground">
-      <English>Radar background</English>
-      <Polish>Tło radaru</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_radarBackground_Tooltip">
-      <English>Radar background texture</English>
-      <Polish>Tekstura tła radaru</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_radarBackground_Blurred">
-      <English>Dark with blurred edge</English>
-      <Polish>Ciemne z rozmytą krawędzią</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_radarBackground_Sharp">
-      <English>Dark with sharp edge</English>
-      <Polish>Ciemne z ostrą krawędzią</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_radarBackground_Border">
-      <English>Dark with light border</English>
-      <Polish>Ciemne z jasnym obramowaniem</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_uiScale">
-      <English>UI scale</English>
-      <Polish>Skala UI</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_uiScale_Tooltip">
-      <English>Squad radar UI scale, 1 = 100% of normal size, 2 = 200% of normal size</English>
-      <Polish>Skala wielkości UI radaru drużynowego, 1 = 100% normalnej wielkości, 2 = 200% normalnej wielkości</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_radarBackgroundOpacity">
-      <English>Radar background opacity</English>
-      <Polish>Widoczność tła radaru</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_radarIconsOpacity">
-      <English>Radar icons opacity</English>
-      <Polish>Widoczność ikon radaru</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_fingerPointerColor">
-      <English>Finger pointer color</English>
-      <Polish>Kolor wskaznika wskazania palcem</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_fingerPointerColor_Tooltip">
-      <English>Finger pointer texture color</English>
-      <Polish>Kolor tekstury wskaznika wskazania palcem</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_memberlistTextScale">
-      <English>Squad members text scale</English>
-      <Polish>Skala tekstu listy członków</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_memberlistTextScale_Tooltip">
-      <English>0 = 0%, 1 = 100%, 2 = 200%</English>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_memberlistOpacity">
-      <English>Squad members opacity</English>
-      <Polish>Widoczność listy członków drużyny radaru</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_memberlistColumnWidthScale">
-      <English>Squad members columns width</English>
-      <Polish>Szerokość kolumn listy członków drużyny</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_memberlistColumnWidthScale_Tooltip">
-      <English>0 = 0%, 1 = 100%, 2 = 200%</English>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_memberlistTextShadow">
-      <English>Squad members text shadow</English>
-      <Polish>Cień tekstu listy członków drużyny</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_memberlistTextShadow_Tooltip">
-      <English>Shadow type used on squad members list text</English>
-      <Polish>Wersja cienia tekstu listy członków drużyny</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_memberlistTextShadow_Classic">
-      <English>Classic (light shadow under text)</English>
-      <Polish>Klasyczny (lekki cień pod tekstem)</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Settings_memberlistTextShadow_Outline">
-      <English>Outline (strong shadow, outline around text characters)</English>
-      <Polish>Zarys (mocny cień, zarys wokół liter)</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Attributes_baseIconClass">
-      <English>Squad radar icon</English>
-      <Polish>Ikona na radarze drużyny</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Attributes_baseIconClass_Tooltip">
-      <English>Unit icon visible on squad radar</English>
-      <Polish>Ikona jednostki wyświetlana na radarze drużyny</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_iconClasses_auto">
-      <English>Auto</English>
-      <Polish>Automatyczna</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_iconClasses_auto_Tooltip">
-      <English>Selects icon automatically (supported cases: squad leader, medic, engineer, eod)</English>
-      <Polish>Wybiera ikonę automatycznie (obsługiwane przypadki: dowódca drużyny, medyk, inżynier, saper)</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_iconClasses_rifleman">
-      <English>Rifleman</English>
-      <Polish>Strzelec</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_iconClasses_grenadier">
-      <English>Grenadier</English>
-      <Polish>Grenadier</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_iconClasses_mg">
-      <English>Machine gunner</English>
-      <Polish>Strzelec MG</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_iconClasses_ammobearer">
-      <English>Ammo bearer</English>
-      <Polish>Amunicyjny</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_iconClasses_at">
-      <English>Anti-tank</English>
-      <Polish>Strzelec AT</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_iconClasses_medic">
-      <English>Medic</English>
-      <Polish>Medyk</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_iconClasses_rto">
-      <English>RTO</English>
-      <Polish>RTO</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_iconClasses_marksman">
-      <English>Marksman</English>
-      <Polish>Strzelec wyborowy</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_iconClasses_engineer">
-      <English>Engineer</English>
-      <Polish>Inżynier</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_iconClasses_eod">
-      <English>EOD</English>
-      <Polish>Saper</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_iconClasses_squadleader">
-      <English>Squad leader</English>
-      <Polish>Dowódca drużyny</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_iconClasses_sectionleader">
-      <English>Section leader</English>
-      <Polish>Dowódca sekcji</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_iconClasses_officer">
-      <English>Officer</English>
-      <Polish>Oficer</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_iconClasses_civilian">
-      <English>Civilian (consultant/contractor/translator etc.)</English>
-      <Polish>Cywil (konsultant/kontraktor/tłumacz itp.)</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_AttributeCategory">
-      <Polish>Radar drużynowy</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Attributes_disableSquadRadar">
-      <Polish>Wyłącz radar drużynowy</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Attributes_disableSquadRadar_Tooltip">
-      <Polish>Wyłącza radar drużynowy wszystkim graczom</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Attributes_showHelpIconToEveryone">
-      <Polish>Pokaż ikonę pomocy wszystkim</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Attributes_showHelpIconToEveryone_Tooltip">
-      <Polish>Pokaż ikonę pomocy na radarze drużynowym każdemu członkowi drużyny (zamiast tylko medykowi)</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Attributes_disableHelpIconFOVCheck">
-      <Polish>Pokaż ikonę pomocy w zasięgu</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Squadradar_Attributes_disableHelpIconFOVCheck_Tooltip">
-      <Polish>Wyłącza sprawdzanie linii wzroku dla ikony pomocy (ikona pojawi się jak tylko jednostka znajdzie się w zasięgu radaru)</Polish>
-    </Key>
-  </Package>
+    <Package name="Squadradar">
+        <Key ID="STR_A4ES_Squadradar_Settings_Addon">
+            <English>A4ES Squad Radar</English>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Chat_RadarDisabledByMission">
+            <English>[A4ES] Squad radar has been disabled in mission settings!</English>
+            <Polish>[A4ES] Radar drużynowy został wyłączony w ustawieniach misji!</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_GUI">
+            <English>GUI</English>
+            <Polish>Wygląd</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_OpacityTooltip">
+            <English>0 = 0%, 1 = 100%</English>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_enable">
+            <English>Enable</English>
+            <Polish>Włącz</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_enable_Tooltip">
+            <English>Enable squad radar</English>
+            <Polish>Włącz radar drużynowy</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_showRadar">
+            <English>Show radar</English>
+            <Polish>Pokaż radar</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_showRadar_Tooltip">
+            <English>Show radar with your squad members positions near you</English>
+            <Polish>Pokaż radar z pozycjami członków Twojej drużyny wokół Ciebie</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_showMemberlist">
+            <English>Show squad members</English>
+            <Polish>Pokaż członków drużyny</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_showMemberlist_Tooltip">
+            <English>Show list of your squad members</English>
+            <Polish>Pokaż listę członków Twojej drużyny</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_showSpecialStates">
+            <English>Show special states icons</English>
+            <Polish>Pokazuj ikonki stanów specjalnych</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_showSpecialStates_Tooltip">
+            <English>Show special states like talking with ACRE or dead/unconscious</English>
+            <Polish>Pokazuj stany specjalne jak mówienie przez ACRE lub martwy/nieprzytomny</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_showFingerPointers">
+            <English>Show finger pointers</English>
+            <Polish>Pokazuj wskazania palcem</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_showFingerPointers_Tooltip">
+            <English>Show finger pointer icon on radar</English>
+            <Polish>Pokazuj wskazania palcem na tarczy radaru</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_radarBackground">
+            <English>Radar background</English>
+            <Polish>Tło radaru</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_radarBackground_Tooltip">
+            <English>Radar background texture</English>
+            <Polish>Tekstura tła radaru</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_radarBackground_Blurred">
+            <English>Dark with blurred edge</English>
+            <Polish>Ciemne z rozmytą krawędzią</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_radarBackground_Sharp">
+            <English>Dark with sharp edge</English>
+            <Polish>Ciemne z ostrą krawędzią</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_radarBackground_Border">
+            <English>Dark with light border</English>
+            <Polish>Ciemne z jasnym obramowaniem</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_uiScale">
+            <English>UI scale</English>
+            <Polish>Skala UI</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_uiScale_Tooltip">
+            <English>Squad radar UI scale, 1 = 100% of normal size, 2 = 200% of normal size</English>
+            <Polish>Skala wielkości UI radaru drużynowego, 1 = 100% normalnej wielkości, 2 = 200% normalnej wielkości</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_radarBackgroundOpacity">
+            <English>Radar background opacity</English>
+            <Polish>Widoczność tła radaru</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_radarIconsOpacity">
+            <English>Radar icons opacity</English>
+            <Polish>Widoczność ikon radaru</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_fingerPointerColor">
+            <English>Finger pointer color</English>
+            <Polish>Kolor wskaznika wskazania palcem</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_fingerPointerColor_Tooltip">
+            <English>Finger pointer texture color</English>
+            <Polish>Kolor tekstury wskaznika wskazania palcem</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_memberlistTextScale">
+            <English>Squad members text scale</English>
+            <Polish>Skala tekstu listy członków</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_memberlistTextScale_Tooltip">
+            <English>0 = 0%, 1 = 100%, 2 = 200%</English>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_memberlistOpacity">
+            <English>Squad members opacity</English>
+            <Polish>Widoczność listy członków drużyny radaru</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_memberlistColumnWidthScale">
+            <English>Squad members columns width</English>
+            <Polish>Szerokość kolumn listy członków drużyny</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_memberlistColumnWidthScale_Tooltip">
+            <English>0 = 0%, 1 = 100%, 2 = 200%</English>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_memberlistTextShadow">
+            <English>Squad members text shadow</English>
+            <Polish>Cień tekstu listy członków drużyny</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_memberlistTextShadow_Tooltip">
+            <English>Shadow type used on squad members list text</English>
+            <Polish>Wersja cienia tekstu listy członków drużyny</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_memberlistTextShadow_Classic">
+            <English>Classic (light shadow under text)</English>
+            <Polish>Klasyczny (lekki cień pod tekstem)</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Settings_memberlistTextShadow_Outline">
+            <English>Outline (strong shadow, outline around text characters)</English>
+            <Polish>Zarys (mocny cień, zarys wokół liter)</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Attributes_baseIconClass">
+            <English>Squad radar icon</English>
+            <Polish>Ikona na radarze drużyny</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Attributes_baseIconClass_Tooltip">
+            <English>Unit icon visible on squad radar</English>
+            <Polish>Ikona jednostki wyświetlana na radarze drużyny</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_iconClasses_auto">
+            <English>Auto</English>
+            <Polish>Automatyczna</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_iconClasses_auto_Tooltip">
+            <English>Selects icon automatically (supported cases: squad leader, medic, engineer, eod)</English>
+            <Polish>Wybiera ikonę automatycznie (obsługiwane przypadki: dowódca drużyny, medyk, inżynier, saper)</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_iconClasses_rifleman">
+            <English>Rifleman</English>
+            <Polish>Strzelec</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_iconClasses_grenadier">
+            <English>Grenadier</English>
+            <Polish>Grenadier</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_iconClasses_mg">
+            <English>Machine gunner</English>
+            <Polish>Strzelec MG</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_iconClasses_ammobearer">
+            <English>Ammo bearer</English>
+            <Polish>Amunicyjny</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_iconClasses_at">
+            <English>Anti-tank</English>
+            <Polish>Strzelec AT</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_iconClasses_medic">
+            <English>Medic</English>
+            <Polish>Medyk</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_iconClasses_rto">
+            <English>RTO</English>
+            <Polish>RTO</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_iconClasses_marksman">
+            <English>Marksman</English>
+            <Polish>Strzelec wyborowy</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_iconClasses_engineer">
+            <English>Engineer</English>
+            <Polish>Inżynier</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_iconClasses_eod">
+            <English>EOD</English>
+            <Polish>Saper</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_iconClasses_squadleader">
+            <English>Squad leader</English>
+            <Polish>Dowódca drużyny</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_iconClasses_sectionleader">
+            <English>Section leader</English>
+            <Polish>Dowódca sekcji</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_iconClasses_officer">
+            <English>Officer</English>
+            <Polish>Oficer</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_iconClasses_civilian">
+            <English>Civilian (consultant/contractor/translator etc.)</English>
+            <Polish>Cywil (konsultant/kontraktor/tłumacz itp.)</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_AttributeCategory">
+            <Polish>Radar drużynowy</Polish>
+            <English>Squad Radar</English>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Attributes_disableSquadRadar">
+            <Polish>Wyłącz radar drużynowy</Polish>
+            <English>Turn off the squad radar</English>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Attributes_disableSquadRadar_Tooltip">
+            <Polish>Wyłącza radar drużynowy wszystkim graczom</Polish>
+            <English>Disables squad radar for all players</English>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Attributes_showHelpIconToEveryone">
+            <Polish>Pokaż ikonę pomocy wszystkim</Polish>
+            <English>Show help icon to everyone</English>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Attributes_showHelpIconToEveryone_Tooltip">
+            <Polish>Pokaż ikonę pomocy na radarze drużynowym każdemu członkowi drużyny (zamiast tylko medykowi)</Polish>
+            <English>Show the help icon on the squad radar to every team member (instead of just the medic)</English>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Attributes_disableHelpIconFOVCheck">
+            <Polish>Pokaż ikonę pomocy w zasięgu</Polish>
+            <English>Show help icon in range</English>
+        </Key>
+        <Key ID="STR_A4ES_Squadradar_Attributes_disableHelpIconFOVCheck_Tooltip">
+            <Polish>Wyłącza sprawdzanie linii wzroku dla ikony pomocy (ikona pojawi się jak tylko jednostka znajdzie się w zasięgu radaru)</Polish>
+            <English>Disables line-of-sight checking for the help icon (the icon will appear as soon as the unit is within radar range)</English>
+        </Key>
+    </Package>
 </Project>

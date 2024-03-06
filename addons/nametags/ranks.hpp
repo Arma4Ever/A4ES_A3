@@ -7,7 +7,7 @@ class GVAR(ranks_categories) {
         displayName = CSTRING(RankCategory_PL);
     };
     class pol {
-        displayName = "Polska Policja";
+        displayName = CSTRING(RankCategory_PolicePL);
     };
     class usnavy {
         displayName = "US Navy";
@@ -40,16 +40,16 @@ class GVAR(ranks_categories) {
         displayName = "[WW2] UK";
     };
     class ww2ru {
-        displayName = "[WW2] ZSRR";
+        displayName = CSTRING(RankCategory_ww2RU);
     };
     class ww2ger {
         displayName = "[WW2] Wehrmacht";
     };
     class ww2jap {
-        displayName = "[WW2] Japonia";
+        displayName = CSTRING(RankCategory_ww2JAP);
     };
     class ww2lwp {
-        displayName = "[WW2] Legiony Wojska Polskiego";
+        displayName = CSTRING(RankCategory_ww2POL);
     };
 };
 

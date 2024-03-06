@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A4ES">
-  <Package name="Disconnects">
-    <Key ID="STR_A4ES_Disconnects_Prepare">
-      <Polish>Przygotuj się!</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Disconnects_UnlockTimeInfo">
-      <Polish>Twoja postać zostanie odblokowana za:</Polish>
-    </Key>
-  </Package>
+    <Package name="Disconnects">
+        <Key ID="STR_A4ES_Disconnects_Prepare">
+            <Polish>Przygotuj się!</Polish>
+            <English>Get ready!</English>
+        </Key>
+        <Key ID="STR_A4ES_Disconnects_UnlockTimeInfo">
+            <Polish>Twoja postać zostanie odblokowana za:</Polish>
+            <English>Your character will be unlocked in:</English>
+        </Key>
+    </Package>
 </Project>
