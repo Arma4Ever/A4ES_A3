@@ -180,7 +180,7 @@ def build_mod(buildMode):
             print("  ### Vendor mod {} not found\n".format(modKey))
             continue
 
-        print("  {} from {}".format(modKey, "local build" if modLocalRootPath == modRootPath else "workshop"))
+        print("{} {} from {}".format("Base" if isBaseMod else "Internal", modKey, "local build" if modLocalRootPath == modRootPath else "workshop"))
 
         # Copy dll's
         copiedDlls = copy_dll_files(modRootPath, hemttOutPath if isBaseMod else hemttOutInternalPath)

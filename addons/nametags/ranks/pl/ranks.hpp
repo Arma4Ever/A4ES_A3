@@ -81,7 +81,7 @@ class PL_podpulkownik {
 class PL_pulkownik {
     name = CSTRING(Ranks_Colonel);
     icon = QPATHTOF(ranks\PL\pulkownik.paa);
-    importance = 16;d:\A4ES\addons\nametags\ranks\pl\ranks.hpp
+    importance = 16;
 };
 class PL_general_brygady {
     name = CSTRING(Ranks_BrygadierGeneral);

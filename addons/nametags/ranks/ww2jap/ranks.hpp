@@ -1,5 +1,5 @@
 class WW2JAP_szeregowy {
-    CSTRING(Ranks_Private);
+    name = CSTRING(Ranks_Private);
     icon = QPATHTOF(ranks\ww2jap\szer.paa);
     importance = 0;
 };
@@ -24,7 +24,7 @@ class WW2JAP_sierzant {
     importance = 4;
 };
 class WW2JAP_st_sierzant {
-    name = STRING(Ranks_MasterSergant);
+    name = CSTRING(Ranks_MasterSergant);
     icon = QPATHTOF(ranks\ww2jap\st_sierzant.paa);
     importance = 5;
 };

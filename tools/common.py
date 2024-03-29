@@ -3,7 +3,7 @@ import os
 # Prefix of A4ES pbo's
 modPboPrefix = 'a4es'
 # A4ES addons that should be moved to internal mod
-internalAddons = ['admin','stats','settings','main_menu','branding']
+internalAddons = ['admin','stats','settings','main_menu','branding','vendor']
 # Project root files that should be copied to internal mod
 internalCommonRootFiles = ["LICENSE", "logo_a4es.paa", "logosmall_a4es.paa", "picture_a4es.paa"]
 
