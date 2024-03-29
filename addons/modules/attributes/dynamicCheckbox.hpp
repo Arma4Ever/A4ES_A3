@@ -1,6 +1,6 @@
 
 class GVAR(dynamicCheckbox): Checkbox {
-    attributeLoad = QUOTE(_this call FUNC(dynamicCheckbox_attributeLoad););
+    attributeLoad = QUOTE(_this call FUNC(dynamicCheckbox_attributeLoad));
     defaultValue = "false";
     typeName = "BOOL";
 

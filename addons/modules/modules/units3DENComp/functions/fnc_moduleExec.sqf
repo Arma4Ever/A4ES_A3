@@ -63,7 +63,7 @@ if (_logic getVariable [QGVAR(addVehiclePostInit), false]) then {
   _vehiclePostInit = compile (_logic getVariable [QGVAR(vehiclePostInit), ""]);
 };
 
-private _defenderBehaviour = _logic getVariable [QGVAR(defenderBehaviour), -1],
+private _defenderBehaviour = _logic getVariable [QGVAR(defenderBehaviour), -1];
 if (_defenderBehaviour isEqualType "") then {
   _defenderBehaviour = parseNumber _defenderBehaviour;
 };

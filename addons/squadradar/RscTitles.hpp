@@ -10,8 +10,8 @@ class RscTitles {
         duration = 1e+011;
         fadein = 0;
         fadeout = 0;
-        onLoad = QUOTE(_this call FUNC(handleRscRadarLoad););
-        onUnload = QUOTE(_this call FUNC(handleRscRadarUnload););
+        onLoad = QUOTE(_this call FUNC(handleRscRadarLoad));
+        onUnload = QUOTE(_this call FUNC(handleRscRadarUnload));
 
         class ControlsBackground {
             class radar {

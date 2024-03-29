@@ -8,7 +8,7 @@ class Cfg3DEN {
             			tooltip = CSTRING(Attribute_isCurator_Tooltip);
             			property = QGVAR(isCurator);
             			control = "Checkbox";
-            			expression = QUOTE(if (_value) then {_this setVariable [ARR_3(QQGVAR(isCurator),true,true)]};);
+            			expression = QUOTE(if (_value) then {_this setVariable [ARR_3(QQGVAR(isCurator),true,true)]});
             			defaultValue = "false";
             			condition = "objectControllable";
                     };
@@ -17,7 +17,7 @@ class Cfg3DEN {
             			tooltip = CSTRING(addCuratorEditableObject_Tooltip);
             			property = QGVAR(addCuratorEditableObject);
             			control = "Checkbox";
-            			expression = QUOTE(if (_value) then {_this call FUNC(addCuratorEditable3DENObject)};);
+            			expression = QUOTE(if (_value) then {_this call FUNC(addCuratorEditable3DENObject)});
             			defaultValue = "false";
             			condition = "(1 - objectBrain) * (1 - objectVehicle)";
                     };

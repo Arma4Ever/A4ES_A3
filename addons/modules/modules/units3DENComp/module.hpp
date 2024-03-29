@@ -23,7 +23,7 @@ class GVAR(units3DENComp): GVAR(base) {
             displayName = "data";
             tooltip = "data";
             property = QGVAR(data);
-            defaultValue = "'[]'";
+            defaultValue = QUOTE('[]');
             ATTRIBUTE_LOCAL;
         };
 
@@ -39,7 +39,7 @@ class GVAR(units3DENComp): GVAR(base) {
             displayName = "dataStatsArr";
             tooltip = "dataStatsArr";
             property = QGVAR(dataStatsArr);
-            defaultValue = "'[]'";
+            defaultValue = QUOTE('[]');
             ATTRIBUTE_LOCAL;
         };
 

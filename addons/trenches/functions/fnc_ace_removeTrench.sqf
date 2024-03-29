@@ -17,7 +17,7 @@
  */
 
 params ["_trench", "_unit"];
-TRACE_2("removeTrench",_trench,_unit);
+TRACE_2("ace_removeTrench",_trench,_unit);
 
 private _actualProgress = _trench getVariable [QGVAR(progress), 1];
 if(_actualProgress == 0) exitWith {};

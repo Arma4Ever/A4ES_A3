@@ -78,7 +78,7 @@ GVAR(treatmentMessageTypes) = createHashMapFromArray [
   params ["_unit"];
 
   private _lastDamageType = _unit getVariable [QGVAR(lastDamageType), ""];
-  TRACE_2("ace_medical_death: publishing lastDamageType"_unit, _lastDamageType);
+  TRACE_2("ace_medical_death: publishing lastDamageType",_unit,_lastDamageType);
   _unit setVariable [QGVAR(lastDamageType), _lastDamageType, true];
 }] call CBA_fnc_addEventHandler;
 

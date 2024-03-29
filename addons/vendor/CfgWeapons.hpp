@@ -52,7 +52,7 @@ class CfgWeapons {
             };
             class StandardSound: BaseSoundModeType {
                 weaponSoundEffect = "DefaultDMRLaser";
-                begin1[] = {PATHTOF(data\lshot),1.1220185,1,1100};
+                begin1[] = {QPATHTOF(data\lshot),1.1220185,1,1100};
                 soundBegin[] = {"begin1",1};
                 closure1[] = {};
                 soundClosure[] = {"closure1",0.5};

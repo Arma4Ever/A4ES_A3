@@ -70,7 +70,7 @@ class GVAR(ambientFlyby): GVAR(base) {
             control = QGVAR(dynamicClassSelect);
             property = QGVAR(classList);
             typeName = "STRING";
-            defaultValue = '[]';
+            defaultValue = QUOTE('[]');
             GVAR(assetsTypes[]) = {"Plane","Helicopter"};
             GVAR(onValuesChanged) = QFUNC(dynamicClassSelect_updateUI);
             ATTRIBUTE_LOCAL;

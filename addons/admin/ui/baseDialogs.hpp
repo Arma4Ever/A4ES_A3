@@ -216,14 +216,14 @@ class A4ES_ui_selectMenuButtonBase {
     type = 1;
     text = "";
     font = FONT_STANDARD;
-    sizeEx = "0.8 / 40 / (getResolution select 5)";
+    sizeEx = QUOTE(0.8 / 40 / (getResolution select 5));
     shadow = 2;
 
     style = 2;
     x = 0;
     y = 0;
-    w = 2.0 / 16 * safezoneW;
-    h = 0.3 / 9 * safezoneH;
+    w = QUOTE(2.0 / 16 * safezoneW);
+    h = QUOTE(0.3 / 9 * safezoneH);
 
     offsetX = 0.003;
     offsetY = 0.003;
@@ -248,18 +248,18 @@ class A4ES_ui_selectMenuButtonBase {
 class A4ES_ui_listBox {
     idd = -1;
     movingEnable = 0;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2('A4ES_ui_listBox', _this select 0)];);
-    onUnload = QUOTE(uiNamespace setVariable [ARR_2('A4ES_ui_listBox', nil)];);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2('A4ES_ui_listBox',_this select 0)]);
+    onUnload = QUOTE(uiNamespace setVariable [ARR_2('A4ES_ui_listBox',nil)]);
     class controlsBackground {
         class HeaderBackground: A4ES_ui_backgroundBase {
             idc = -1;
             type = CT_STATIC;
             style = ST_LEFT + ST_SHADOW;
-            x = X_ORIGINAL(0) + X_LISTBOX_OFFSET;
-            y = Y_ORIGINAL(1) + Y_LISTBOX_OFFSET;
-            w = W_ORIGINAL(24);
-            h = H_ORIGINAL(1);
-            SizeEx = H_ORIGINAL(1);
+            x = QUOTE(X_ORIGINAL(0) + X_LISTBOX_OFFSET);
+            y = QUOTE(Y_ORIGINAL(1) + Y_LISTBOX_OFFSET);
+            w = QUOTE(W_ORIGINAL(24));
+            h = QUOTE(H_ORIGINAL(1));
+            SizeEx = QUOTE(H_ORIGINAL(1));
             colorText[] = {0.95, 0.95, 0.95, 0.75};
             colorBackground[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
             text = "";
@@ -268,11 +268,11 @@ class A4ES_ui_listBox {
             idc = -1;
             type = CT_STATIC;
             style = ST_LEFT + ST_SHADOW;
-            x = X_ORIGINAL(0) + X_LISTBOX_OFFSET;
-            y = Y_ORIGINAL(2) + Y_LISTBOX_OFFSET;
-            w = W_ORIGINAL(24);
-            h = H_ORIGINAL(17);
-            SizeEx = H_ORIGINAL(1);
+            x = QUOTE(X_ORIGINAL(0) + X_LISTBOX_OFFSET);
+            y = QUOTE(Y_ORIGINAL(2) + Y_LISTBOX_OFFSET);
+            w = QUOTE(W_ORIGINAL(24));
+            h = QUOTE(H_ORIGINAL(17));
+            SizeEx = QUOTE(H_ORIGINAL(1));
             colorText[] = {0.95, 0.95, 0.95, 0.75};
             colorBackground[] = {0, 0, 0, 0.8};
             text = "";
@@ -282,10 +282,10 @@ class A4ES_ui_listBox {
         class HeaderName {
             idc = IDC_LISTBOX_HEADER;
             type = CT_STATIC;
-            x = X_ORIGINAL(0) + X_LISTBOX_OFFSET;
-            y = Y_ORIGINAL(1) + Y_LISTBOX_OFFSET;
-            w = W_ORIGINAL(24);
-            h = H_ORIGINAL(1);
+            x = QUOTE(X_ORIGINAL(0) + X_LISTBOX_OFFSET);
+            y = QUOTE(Y_ORIGINAL(1) + Y_LISTBOX_OFFSET);
+            w = QUOTE(W_ORIGINAL(24));
+            h = QUOTE(H_ORIGINAL(1));
             style = ST_LEFT + ST_SHADOW;
             font = FONT_STANDARD;
             SizeEx = H_PART(1);
@@ -296,10 +296,10 @@ class A4ES_ui_listBox {
         class List: A4ES_ui_listNBoxBase {
             idc = IDC_LISTBOX_LIST;
             style = ST_LEFT + LB_TEXTURES;
-            x = X_ORIGINAL(0) + X_LISTBOX_OFFSET;
-            y = Y_ORIGINAL(2.5) + Y_LISTBOX_OFFSET;
-            w = W_ORIGINAL(24);
-            h = H_ORIGINAL(15);
+            x = QUOTE(X_ORIGINAL(0) + X_LISTBOX_OFFSET);
+            y = QUOTE(Y_ORIGINAL(2.5) + Y_LISTBOX_OFFSET);
+            w = QUOTE(W_ORIGINAL(24));
+            h = QUOTE(H_ORIGINAL(15));
             colorText[] = {1,1,1,1};
             colorDisabled[] = {1,1,1,0.25};
             colorSelect[] = {1,1,1,1};
@@ -309,14 +309,14 @@ class A4ES_ui_listBox {
             colorPictureSelected[] = {1,1,1,1};
             colorPictureDisabled[] = {1,1,1,0.25};
             onMouseButtonDblClick = "";
-            SizeEx = H_ORIGINAL(1);
+            SizeEx = QUOTE(H_ORIGINAL(1));
         };
         class ButtonOne: A4ES_ui_buttonBase {
             idc = IDC_LISTBOX_BUTTON1;
-            x = X_ORIGINAL(0) + X_LISTBOX_OFFSET;
-            y = Y_ORIGINAL(18) + Y_LISTBOX_OFFSET;
-            w = W_ORIGINAL(8);
-            h = H_ORIGINAL(1);
+            x = QUOTE(X_ORIGINAL(0) + X_LISTBOX_OFFSET);
+            y = QUOTE(Y_ORIGINAL(18) + Y_LISTBOX_OFFSET);
+            w = QUOTE(W_ORIGINAL(8));
+            h = QUOTE(H_ORIGINAL(1));
             animTextureNormal = "#(argb,8,8,3)color(0,0,0,0.8)";
             animTextureDisabled = "#(argb,8,8,3)color(0,0,0,0.5)";
             animTextureOver = "#(argb,8,8,3)color(1,1,1,1)";
@@ -337,19 +337,19 @@ class A4ES_ui_listBox {
         };
         class ButtonTwo: ButtonOne {
             idc = IDC_LISTBOX_BUTTON2;
-            x = X_ORIGINAL(8) + X_LISTBOX_OFFSET;
-            y = Y_ORIGINAL(18) + Y_LISTBOX_OFFSET;
-            w = W_ORIGINAL(8);
-            h = H_ORIGINAL(1);
+            x = QUOTE(X_ORIGINAL(8) + X_LISTBOX_OFFSET);
+            y = QUOTE(Y_ORIGINAL(18) + Y_LISTBOX_OFFSET);
+            w = QUOTE(W_ORIGINAL(8));
+            h = QUOTE(H_ORIGINAL(1));
             text = "";
             action = "";
         };
         class ButtonThree: ButtonOne {
             idc = IDC_LISTBOX_BUTTON3;
-            x = X_ORIGINAL(16) + X_LISTBOX_OFFSET;
-            y = Y_ORIGINAL(18) + Y_LISTBOX_OFFSET;
-            w = W_ORIGINAL(8);
-            h = H_ORIGINAL(1);
+            x = QUOTE(X_ORIGINAL(16) + X_LISTBOX_OFFSET);
+            y = QUOTE(Y_ORIGINAL(18) + Y_LISTBOX_OFFSET);
+            w = QUOTE(W_ORIGINAL(8));
+            h = QUOTE(H_ORIGINAL(1));
             text = "";
             action = "";
         };
@@ -358,18 +358,18 @@ class A4ES_ui_listBox {
 class A4ES_ui_editBox {
     idd = -1;
     movingEnable = 0;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2('A4ES_ui_editBox', _this select 0)];);
-    onUnload = QUOTE(uiNamespace setVariable [ARR_2('A4ES_ui_editBox', nil)];);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2('A4ES_ui_editBox',_this select 0)]);
+    onUnload = QUOTE(uiNamespace setVariable [ARR_2('A4ES_ui_editBox',nil)]);
     class controlsBackground {
         class HeaderBackground: A4ES_ui_backgroundBase {
             idc = -1;
             type = CT_STATIC;
             style = ST_LEFT + ST_SHADOW;
-            x = X_ORIGINAL(0) + X_EDITBOX_OFFSET;
-            y = Y_ORIGINAL(1) + Y_EDITBOX_OFFSET;
-            w = W_ORIGINAL(24);
-            h = H_ORIGINAL(1);
-            SizeEx = H_ORIGINAL(1);
+            x = QUOTE(X_ORIGINAL(0) + X_EDITBOX_OFFSET);
+            y = QUOTE(Y_ORIGINAL(1) + Y_EDITBOX_OFFSET);
+            w = QUOTE(W_ORIGINAL(24));
+            h = QUOTE(H_ORIGINAL(1));
+            SizeEx = QUOTE(H_ORIGINAL(1));
             colorText[] = {0.95, 0.95, 0.95, 0.75};
             colorBackground[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
             text = "";
@@ -378,11 +378,11 @@ class A4ES_ui_editBox {
             idc = -1;
             type = CT_STATIC;
             style = ST_LEFT + ST_SHADOW;
-            x = X_ORIGINAL(0) + X_EDITBOX_OFFSET;
-            y = Y_ORIGINAL(2) + Y_EDITBOX_OFFSET;
-            w = W_ORIGINAL(24);
-            h = H_ORIGINAL(4);
-            SizeEx = H_ORIGINAL(1);
+            x = QUOTE(X_ORIGINAL(0) + X_EDITBOX_OFFSET);
+            y = QUOTE(Y_ORIGINAL(2) + Y_EDITBOX_OFFSET);
+            w = QUOTE(W_ORIGINAL(24));
+            h = QUOTE(H_ORIGINAL(4));
+            SizeEx = QUOTE(H_ORIGINAL(1));
             colorText[] = {0.95, 0.95, 0.95, 0.75};
             colorBackground[] = {0, 0, 0, 0.8};
             text = "";
@@ -392,10 +392,10 @@ class A4ES_ui_editBox {
         class HeaderName {
             idc = IDC_EDITBOX_HEADER;
             type = CT_STATIC;
-            x = X_ORIGINAL(0) + X_EDITBOX_OFFSET;
-            y = Y_ORIGINAL(1) + Y_EDITBOX_OFFSET;
-            w = W_ORIGINAL(24);
-            h = H_ORIGINAL(1);
+            x = QUOTE(X_ORIGINAL(0) + X_EDITBOX_OFFSET);
+            y = QUOTE(Y_ORIGINAL(1) + Y_EDITBOX_OFFSET);
+            w = QUOTE(W_ORIGINAL(24));
+            h = QUOTE(H_ORIGINAL(1));
             style = ST_LEFT + ST_SHADOW;
             font = FONT_STANDARD;
             SizeEx = H_PART(1);
@@ -405,25 +405,25 @@ class A4ES_ui_editBox {
         };
         class TextInputLabel: A4ES_ui_staticBase {
             idc = IDC_EDITBOX_TEXTINPUTLABEL;
-            x = X_ORIGINAL(0.5) + X_EDITBOX_OFFSET;
-            y = Y_ORIGINAL(3) + Y_EDITBOX_OFFSET;
-            w = W_ORIGINAL(4.5);
-            h = H_ORIGINAL(1);
+            x = QUOTE(X_ORIGINAL(0.5) + X_EDITBOX_OFFSET);
+            y = QUOTE(Y_ORIGINAL(3) + Y_EDITBOX_OFFSET);
+            w = QUOTE(W_ORIGINAL(4.5));
+            h = QUOTE(H_ORIGINAL(1));
             text = "";
         };
         class TextInput: ctrlEdit {
             idc = IDC_EDITBOX_TEXTINPUT;
-            x = X_ORIGINAL(5) + X_EDITBOX_OFFSET;
-            y = Y_ORIGINAL(3.1) + Y_EDITBOX_OFFSET;
-            w = W_ORIGINAL(18.5);
-            h = H_ORIGINAL(1);
+            x = QUOTE(X_ORIGINAL(5) + X_EDITBOX_OFFSET);
+            y = QUOTE(Y_ORIGINAL(3.1) + Y_EDITBOX_OFFSET);
+            w = QUOTE(W_ORIGINAL(18.5));
+            h = QUOTE(H_ORIGINAL(1));
         };
         class ButtonOne: A4ES_ui_buttonBase {
             idc = IDC_EDITBOX_BUTTON1;
-            x = X_ORIGINAL(0) + X_EDITBOX_OFFSET;
-            y = Y_ORIGINAL(5) + Y_EDITBOX_OFFSET;
-            w = W_ORIGINAL(8);
-            h = H_ORIGINAL(1);
+            x = QUOTE(X_ORIGINAL(0) + X_EDITBOX_OFFSET);
+            y = QUOTE(Y_ORIGINAL(5) + Y_EDITBOX_OFFSET);
+            w = QUOTE(W_ORIGINAL(8));
+            h = QUOTE(H_ORIGINAL(1));
             animTextureNormal = "#(argb,8,8,3)color(0,0,0,0.8)";
             animTextureDisabled = "#(argb,8,8,3)color(0,0,0,0.5)";
             animTextureOver = "#(argb,8,8,3)color(1,1,1,1)";
@@ -444,19 +444,19 @@ class A4ES_ui_editBox {
         };
         class ButtonTwo: ButtonOne {
             idc = IDC_EDITBOX_BUTTON2;
-            x = X_ORIGINAL(8) + X_EDITBOX_OFFSET;
-            y = Y_ORIGINAL(5) + Y_EDITBOX_OFFSET;
-            w = W_ORIGINAL(8);
-            h = H_ORIGINAL(1);
+            x = QUOTE(X_ORIGINAL(8) + X_EDITBOX_OFFSET);
+            y = QUOTE(Y_ORIGINAL(5) + Y_EDITBOX_OFFSET);
+            w = QUOTE(W_ORIGINAL(8));
+            h = QUOTE(H_ORIGINAL(1));
             text = "";
             action = "";
         };
         class ButtonThree: ButtonOne {
             idc = IDC_EDITBOX_BUTTON3;
-            x = X_ORIGINAL(16) + X_EDITBOX_OFFSET;
-            y = Y_ORIGINAL(5) + Y_EDITBOX_OFFSET;
-            w = W_ORIGINAL(8);
-            h = H_ORIGINAL(1);
+            x = QUOTE(X_ORIGINAL(16) + X_EDITBOX_OFFSET);
+            y = QUOTE(Y_ORIGINAL(5) + Y_EDITBOX_OFFSET);
+            w = QUOTE(W_ORIGINAL(8));
+            h = QUOTE(H_ORIGINAL(1));
             text = "";
             action = "";
         };

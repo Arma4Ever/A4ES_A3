@@ -9,4 +9,4 @@ description = "Arma4Ever System";
 tooltip = "Arma4Ever System";
 tooltipOwned = "Arma4Ever System";
 overview = "Arma4Ever System";
-author = "SzwedzikPL oraz twórcy addonów zewnętrznych";
+author = "Arma4Ever.pl and respectful authors of included external mods";

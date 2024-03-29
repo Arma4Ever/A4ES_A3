@@ -1,0 +1,12 @@
+name = "Arma4Ever System Internal";
+picture = "picture_a4es.paa";
+logo = "logo_a4es.paa";
+logoOver = "logo_a4es.paa";
+logoSmall = "logosmall_a4es.paa";
+actionName = "Forum";
+action = "http://arma4ever.pl";
+description = "Arma4Ever System Internal";
+tooltip = "Arma4Ever System Internal";
+tooltipOwned = "Arma4Ever System Internal";
+overview = "Arma4Ever System Internal";
+author = "Arma4Ever.pl and respectful authors of included external mods";

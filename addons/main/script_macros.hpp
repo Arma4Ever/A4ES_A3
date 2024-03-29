@@ -1,11 +1,10 @@
 #define DEBUG_SYNCHRONOUS
 #include "\x\cba\addons\main\script_macros_common.hpp"
 #include "\x\cba\addons\xeh\script_xeh.hpp"
+#pragma hemtt flag pe23_ignore_has_include
 #if __has_include("\z\a4es\addons\main\script_input.hpp")
 #include "\z\a4es\addons\main\script_input.hpp"
 #endif
-
-//#include "script_input.hpp"
 
 #define DFUNC(var1) TRIPLES(ADDON,fnc,var1)
 #define DEFUNC(var1,var2) TRIPLES(DOUBLES(PREFIX,var1),fnc,var2)

@@ -9,7 +9,7 @@ params ["_newUnit", "_corpse"];
 // Exit if not server
 if !(isServer) exitWith {};
 
-LOG_1('Handling respawn event (unit: "%1" corpse: "%2")',str _unit,str _corpse);
+LOG_2('Handling respawn event (unit: "%1" corpse: "%2")',str _unit,str _corpse);
 
 // Replace corpse with new unit
 [_corpse, _newUnit] call FUNC(replaceSquadUnit);

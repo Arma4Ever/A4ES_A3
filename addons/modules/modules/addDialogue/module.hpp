@@ -73,7 +73,7 @@ class GVAR(addDialogue): GVAR(base) {
             displayName = CSTRING(addDialogue_Attributes_conditionLogicFlags);
             tooltip = CSTRING(addDialogue_Attributes_conditionLogicFlags_tooltip);
             property = QGVAR(conditionLogicFlags);
-            defaultValue = "'[]'";
+            defaultValue = QUOTE('[]');
             GVAR(conditionActive) = QUOTE(((_this getVariable QQGVAR(addCondition)) isEqualTo true) && {(_this getVariable QQGVAR(conditionType)) isEqualTo 0});
             ATTRIBUTE_LOCAL;
         };

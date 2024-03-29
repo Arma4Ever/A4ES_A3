@@ -22,7 +22,7 @@ if (_source isEqualTo 0) then {
 
     // Exit if classList is not array or array is empty
     if (!(_classList isEqualType []) || (count _classList) isEqualTo 0) exitWith {
-      WARNING_2('EXEC_MODULE_NAME - classList is not array or array is empty (classList: %1).',str _classList);
+      WARNING_1('EXEC_MODULE_NAME - classList is not array or array is empty (classList: %1).',str _classList);
     };
 
     // Calculate group units classes
@@ -81,13 +81,14 @@ if (is3DENPreview) then {
 };
 
 // Prep units init based on source & disableRandomization params
-private _unitInit = if (
+private _unitInit = [
+  "",
+  "this setVariable ['BIS_enableRandomization', false];this setVariable ['ALiVE_OverrideLoadout', true];this setVariable ['CFP_DisableRandom', true];this setVariable ['NoRandom', true];"
+] select (
   (_logic getVariable [QGVAR(disableRandomization), false])
   // Randomization is disabled for compositions
   || (_source isEqualTo 1)
-) then {
-  "this setVariable ['BIS_enableRandomization', false];this setVariable ['ALiVE_OverrideLoadout', true];this setVariable ['CFP_DisableRandom', true];this setVariable ['NoRandom', true];"
-} else {""};
+);
 
 // Calc unit spawn range based on unit count
 private _unitSpawnRange = _unitCount * 1.5;

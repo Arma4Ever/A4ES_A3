@@ -5,7 +5,7 @@
  */
 
 params ["_logic"];
-TRACE_1("convertToNamespace", _logic);
+TRACE_1("convertToNamespace",_logic);
 
 if (
   // Exit if logic is already converted

@@ -5,7 +5,7 @@
  */
 
 params ["_unit"];
-TRACE_2("getUnitDialogue",_unit);
+TRACE_1("getUnitDialogue",_unit);
 
 private _dialogue = _unit getVariable [QGVAR(dialogue), ""];
 

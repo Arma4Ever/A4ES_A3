@@ -28,7 +28,12 @@ GVAR(voiceLinesData) = createHashMapFromArray [
 ["ace_unconscious", {
   params ["_unit", "_state"];
 
-  if (!_state || {!(alive _unit)} || {!(isNull (objectParent _unit))}) exitWith {};
+  if (
+    !_state || 
+    {!(alive _unit)} || 
+    {objectParent _unit isKindOf "Tank"} ||
+    {objectParent _unit isKindOf "Plane"}
+  ) exitWith {};
 
   private _id = ceil (random 10);
   if (_id < 10) then {

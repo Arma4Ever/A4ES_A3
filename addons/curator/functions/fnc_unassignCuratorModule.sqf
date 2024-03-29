@@ -10,7 +10,7 @@ TRACE_1("unassignCuratorModule",_unit);
 private _module = getAssignedCuratorLogic _unit;
 if (isNull _module) exitWith {};
 
-LOG_1("Unassigning curator module from '%1'", _unit);
+LOG_1("Unassigning curator module from '%1'",_unit);
 unassignCurator _module;
 
 // A4ES Server log

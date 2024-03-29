@@ -1,0 +1,58 @@
+#define COMPONENT dialog
+#define COMPONENT_BEAUTIFIED Dialog
+#include "\x\zen\addons\main\script_mod.hpp"
+
+// #define DEBUG_MODE_FULL
+// #define DISABLE_COMPILE_CACHE
+// #define ENABLE_PERFORMANCE_COUNTERS
+
+#ifdef DEBUG_ENABLED_DIALOG
+    #define DEBUG_MODE_FULL
+#endif
+
+#ifdef DEBUG_SETTINGS_DIALOG
+    #define DEBUG_SETTINGS DEBUG_SETTINGS_DIALOG
+#endif
+
+#include "\x\zen\addons\main\script_macros.hpp"
+
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
+#include "\a3\ui_f\hpp\defineCommonGrids.inc"
+#include "\x\zen\addons\common\defineResinclDesign.inc"
+
+#define POS_X(N) ((N) * GUI_GRID_W + GUI_GRID_CENTER_X)
+#define POS_Y(N) ((N) * GUI_GRID_H + GUI_GRID_CENTER_Y)
+#define POS_W(N) ((N) * GUI_GRID_W)
+#define POS_H(N) ((N) * GUI_GRID_H)
+
+#define VERTICAL_SPACING POS_H(0.1)
+
+#define CIRCLE_DOTS_SCALE 0.5
+#define CIRCLE_DOTS_MIN 6
+#define CIRCLE_DOTS_SPACING 5
+
+#define IDC_ROW_GROUP 1000
+#define IDC_ROW_LABEL 1001
+#define IDC_ROW_CHECKBOX 1002
+#define IDC_ROW_COMBO 1003
+#define IDC_ROW_EDIT 1004
+#define IDC_ROW_SLIDER 1005
+#define IDC_ROW_TOOLBOX 1006
+#define IDC_ROW_SIDES 1007
+#define IDC_ROW_OWNERS 1008
+#define IDC_ROW_COLOR_PREVIEW 1009
+#define IDC_ROW_COLOR_RED 1010
+#define IDC_ROW_COLOR_RED_EDIT 1011
+#define IDC_ROW_COLOR_GREEN 1012
+#define IDC_ROW_COLOR_GREEN_EDIT 1013
+#define IDC_ROW_COLOR_BLUE 1014
+#define IDC_ROW_COLOR_BLUE_EDIT 1015
+#define IDC_ROW_COLOR_ALPHA 1016
+#define IDC_ROW_COLOR_ALPHA_EDIT 1017
+#define IDC_ROW_VECTOR_X 1018
+#define IDC_ROW_VECTOR_Y 1019
+#define IDC_ROW_VECTOR_Z 1020
+
+#define IDCS_ROW_COLOR [IDC_ROW_COLOR_RED, IDC_ROW_COLOR_GREEN, IDC_ROW_COLOR_BLUE, IDC_ROW_COLOR_ALPHA]
+#define IDCS_ROW_COLOR_EDIT [IDC_ROW_COLOR_RED_EDIT, IDC_ROW_COLOR_GREEN_EDIT, IDC_ROW_COLOR_BLUE_EDIT, IDC_ROW_COLOR_ALPHA_EDIT]
+#define IDCS_ROW_VECTOR [IDC_ROW_VECTOR_X, IDC_ROW_VECTOR_Y, IDC_ROW_VECTOR_Z]

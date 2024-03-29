@@ -21,7 +21,7 @@ class GVAR(objects3DENComp): GVAR(base) {
             displayName = "data";
             tooltip = "data";
             property = QGVAR(data);
-            defaultValue = "'[]'";
+            defaultValue = QUOTE('[]');
             ATTRIBUTE_LOCAL;
         };
 

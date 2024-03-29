@@ -35,7 +35,7 @@ private _object = (synchronizedObjects _logic) select {(_x isKindOf "AllVehicles
 
 // Exit if there're no synced object
 if ((count _object) isEqualTo 0) exitWith {
-  LOG_1('Execution of EXEC_MODULE_NAME aborted - no synced object.');
+  LOG('Execution of EXEC_MODULE_NAME aborted - no synced object.');
   deleteVehicle _logic;
 };
 
@@ -46,7 +46,7 @@ private _cargo = getItemCargo _object;
 {_items pushBack [_x, (_cargo # 1) # _forEachIndex];} forEach (_cargo #0);
 
 // Save object
-LOG_2('Saving object "%1"',_objectName);
+LOG_1('Saving object "%1"',_objectName);
 private _class = typeOf _object;
 private _pos = getPosASL _logic;
 

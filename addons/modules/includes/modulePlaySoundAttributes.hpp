@@ -158,7 +158,7 @@ class GVAR(soundRepeatLogicFlags): GVAR(dynamicLogicFlagCondSoundRepeat) {
     displayName = CSTRING(Attributes_soundRepeatLogicFlags);
     tooltip = CSTRING(Attributes_soundRepeatLogicFlags_Tooltip);
     property = QGVAR(soundRepeatLogicFlags);
-    defaultValue = "'[]'";
+    defaultValue = QUOTE('[]');
     GVAR(conditionActive) = QUOTE(PLAYSOUND_COND && {(_this getVariable QQGVAR(soundRepeat)) isEqualTo true} && {(_this getVariable QQGVAR(soundRepeatMode)) isEqualTo 1});
     ATTRIBUTE_LOCAL;
 };

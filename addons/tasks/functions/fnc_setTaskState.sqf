@@ -20,7 +20,7 @@ if !(_id in _createdTasks) exitWith {
 
 private _currentState = _createdTasks get _id;
 if (_currentState isEqualTo _state) exitWith {
-  TRACE_2("setTaskState - skipping setting task state, task state not changed",_id, _state);
+  TRACE_2("setTaskState - skipping setting task state, task state not changed",_id,_state);
   false
 };
 

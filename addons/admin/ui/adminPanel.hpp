@@ -1,8 +1,8 @@
 class A4ES_adminPanel {
     idd = -1;
     movingEnable = false;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2('A4ES_adminPanel', _this select 0)];0 call FUNC(onLoadAdminPanel););
-    onUnload = QUOTE(uiNamespace setVariable [ARR_2('A4ES_adminPanel', nil)];);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2('A4ES_adminPanel',_this select 0)];0 call FUNC(onLoadAdminPanel));
+    onUnload = QUOTE(uiNamespace setVariable [ARR_2('A4ES_adminPanel',nil)]);
     class controlsBackground {
         class HeaderBackground: A4ES_ui_backgroundBase {
             idc = -1;
@@ -130,7 +130,7 @@ class A4ES_adminPanel {
             y = Y_PART(5.5);
             w = W_PART(23);
             h = H_PART(15);
-            SizeEx = H_ORIGINAL(0.8);
+            SizeEx = QUOTE(H_ORIGINAL(0.8));
             colorBackground[] = {0, 0, 0, 0.9};
             colorSelectBackground[] = {0, 0, 0, 0.9};
             columns[] = {0.0, 0.45};
@@ -151,7 +151,7 @@ class A4ES_adminPanel {
             y = Y_PART(7);
             w = W_PART(11.7);
             h = H_PART(15);
-            SizeEx = H_ORIGINAL(0.8);
+            SizeEx = QUOTE(H_ORIGINAL(0.8));
             colorBackground[] = {0, 0, 0, 0};
             colorSelectBackground[] = {0, 0, 0, 0};
             columns[] = {0.0, 0.45};

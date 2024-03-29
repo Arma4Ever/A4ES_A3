@@ -1,0 +1,9 @@
+PREP(addGroupColorMapping);
+PREP(drawMapGestures);
+PREP(getProximityPlayers);
+PREP(initDisplayCurator);
+PREP(initDisplayDiary);
+PREP(initDisplaySpectator);
+PREP(isValidColorArray);
+PREP(moduleGroupSettings);
+PREP(moduleSettings);

@@ -100,7 +100,7 @@ class GVAR(generateSoldiers): GVAR(base) {
             control = QGVAR(dynamicClassSelect);
             property = QGVAR(classList);
             typeName = "STRING";
-            defaultValue = '[]';
+            defaultValue = QUOTE('[]');
             GVAR(observeValue) = 1;
             GVAR(assetsTypes[]) = {"CAManBase"};
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(source)) isEqualTo 0);

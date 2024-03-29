@@ -5,7 +5,7 @@
  */
 
 params ["_ctrlButton"];
-TRACE_1("spotlightEnter", _ctrlButton);
+TRACE_1("spotlightEnter",_ctrlButton);
 
 private _ctrlGroup = ctrlParentControlsGroup _ctrlButton;
 private _ctrlPicture = _ctrlGroup controlsGroupCtrl 1023;

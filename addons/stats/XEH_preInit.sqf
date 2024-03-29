@@ -41,7 +41,7 @@ GVAR(aceLastUnloadCargoTime) = 0;
 
 ["ace_cargo_paradropItem", {
   params ["_item", "_vehicle"];
-  TRACE_3("ace_cargo_paradropItem",_item,_vehicle);
+  TRACE_2("ace_cargo_paradropItem",_item,_vehicle);
 
 	GVAR(aceLastUnloadCargo) = [_item, _vehicle, ace_player, "paradrop"];
 	GVAR(aceLastUnloadCargoTime) = CBA_missionTime;

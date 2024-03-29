@@ -22,7 +22,7 @@ class GVAR(onLogicFlags): GVAR(base) {
             displayName = CSTRING(Attributes_activationFlags);
             tooltip = CSTRING(Attributes_activationFlags_Tooltip);
             property = QGVAR(activationFlags);
-            defaultValue = "'[]'";
+            defaultValue = QUOTE('[]');
             ATTRIBUTE_LOCAL;
         };
 

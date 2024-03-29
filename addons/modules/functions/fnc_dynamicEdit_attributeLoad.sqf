@@ -7,7 +7,7 @@
 // Original BI function
 private _control = _this controlsGroupCtrl 100;
 
-if (typename _value != typename '') then {
+if !(_value isEqualType '') then {
   _value = str _value;
 };
 

@@ -1,7 +1,7 @@
 
 class GVAR(dynamicToolbox): Toolbox {
-    attributeLoad = QUOTE(_this call FUNC(dynamicToolbox_attributeLoad););
-    attributeSave = QUOTE(_this call FUNC(dynamicToolbox_attributeSave););
+    attributeLoad = QUOTE(_this call FUNC(dynamicToolbox_attributeLoad));
+    attributeSave = QUOTE(_this call FUNC(dynamicToolbox_attributeSave));
     class Controls: Controls {
         class Title: Title {
             DISPLAY3DENEDITATTRIBUTES_ATTRIBUTE_TITLE_PROPERTIES(right,0);

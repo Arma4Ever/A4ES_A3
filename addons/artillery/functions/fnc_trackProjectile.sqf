@@ -5,7 +5,7 @@
  */
 
 params ["_projectile", "_startPos", "_magazine"];
-TRACE_2("trackProjectile",_projectile,_startPos,_magazine);
+TRACE_3("trackProjectile",_projectile,_startPos,_magazine);
 
 if (
   (isNull _projectile) ||
