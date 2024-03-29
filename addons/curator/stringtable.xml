@@ -1,202 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A4ES">
-  <Package name="Curator">
-    <Key ID="STR_A4ES_Curator_Addon">
-      <English>A4ES Zeus</English>
-    </Key>
-    <Key ID="STR_A4ES_Curator_showPlayersIcons">
-      <English>Show player icons during remote control</English>
-      <Polish>Pokaż ikony gracza podczas zdalnej kontroli</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_addCuratorEditableObject">
-      <Polish>Dodaj do obiektów zeusa</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_addCuratorEditableObject_Tooltip">
-      <Polish>Dodaje obiekt do edytowalnych obiektów każdego zeusa.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_CuratorModuleAssigned">
-      <Polish>[A4ES] Dostęp do interfejsu zeusa został aktywowany. Obecnych zeusów: %1.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_CuratorPinged">
-      <Polish>[A4ES] Ping zeusa: %1</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_Attribute_isCurator">
-      <Polish>Dostęp do zeusa</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_Attribute_isCurator_Tooltip">
-      <Polish>Czy dana jednostka ma mieć dostęp do zeusa</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_FactionClass_logicFlags">
-      <English>A4ES Logic flags</English>
-      <Polish>A4ES Flagi logiczne</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_FactionClass_AI">
-      <English>A4ES AI</English>
-      <Polish>A4ES AI</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_FactionClass_Players">
-      <English>A4ES Players</English>
-      <Polish>A4ES Gracze</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_FactionClass_tasks">
-      <English>A4ES Tasks</English>
-      <Polish>A4ES Zadania</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_FactionClass_headlessClients">
-      <English>A4ES Headless clients</English>
-      <Polish>A4ES Headless klienci</Polish>
-    </Key>
-  </Package>
-  <Package name="Curator_moveHeadlessClients">
-    <Key ID="STR_A4ES_Curator_moveHeadlessClients_displayName">
-      <English>Move headless clients</English>
-      <Polish>Przenieś headless klientów</Polish>
-    </Key>
-  </Package>
-  <Package name="Curator_revealUnit">
-    <Key ID="STR_A4ES_Curator_revealUnit_displayName">
-      <English>Reveal unit</English>
-      <Polish>Ujawnij jednostkę</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_revealUnit_UnitRevealed">
-      <English>Unit revealed</English>
-      <Polish>Jednostka ujawniona</Polish>
-    </Key>
-  </Package>
-  <Package name="Curator_revealAllPlayers">
-    <Key ID="STR_A4ES_Curator_revealAllPlayers_displayName">
-      <English>Reveal all players</English>
-      <Polish>Ujawnij wszystkich graczy</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_revealAllPlayers_PlayersRevealed">
-      <English>Players revealed</English>
-      <Polish>Gracze ujawnieni</Polish>
-    </Key>
-  </Package>
-  <Package name="Curator_switchPath">
-    <Key ID="STR_A4ES_Curator_switchPath_displayName">
-      <English>Toggle walking</English>
-      <Polish>Przełącz chodzenie</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_switchPath_Attributes_PathEnabled">
-      <English>Walking enabled</English>
-      <Polish>Chodzenie włączone</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_switchPath_Attributes_ForGroup">
-      <English>Set for whole group</English>
-      <Polish>Zastosuj dla całej grupy</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_switchPath_Path_enabled_unit">
-      <English>Walking enabled for unit</English>
-      <Polish>Chodzenie włączone dla jednostki</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_switchPath_Path_enabled_group">
-      <English>Walking enabled for group</English>
-      <Polish>Chodzenie włączone dla grupy</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_switchPath_Path_disabled_unit">
-      <English>Walking disabled for unit</English>
-      <Polish>Chodzenie wyłączone dla jednostki</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_switchPath_Path_disabled_group">
-      <English>Walking disabled for group</English>
-      <Polish>Chodzenie wyłączone dla grupy</Polish>
-    </Key>
-  </Package>
-  <Package name="Curator_defenderBehaviour">
-    <Key ID="STR_A4ES_Curator_defenderBehaviour_displayName">
-      <English>Static defender</English>
-      <Polish>Stacjonarny obrońca</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_defenderBehaviour_Attributes_Behaviour">
-      <English>Behaviour</English>
-      <Polish>Zachowanie</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_defenderBehaviour_Attributes_ForGroup">
-      <English>Set for whole group</English>
-      <Polish>Zastosuj dla całej grupy</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_defenderBehaviour_disabled_unit">
-      <English>Static defender disabled for unit</English>
-      <Polish>Wyłączono stacjonarnego obrońcę dla jednostki</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_defenderBehaviour_disabled_group">
-      <English>Static defender disabled for group</English>
-      <Polish>Wyłączono stacjonarnego obrońcę dla grupy</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_defenderBehaviour_setFor_unit">
-      <English>Static defender settings set for unit</English>
-      <Polish>Zmieniono ustawienia stacjonarnego obrońcy dla jednostki</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_defenderBehaviour_setFor_group">
-      <English>Static defender settings set for group</English>
-      <Polish>Zmieniono ustawienia stacjonarnego obrońcy dla grupy</Polish>
-    </Key>
-  </Package>
-  <Package name="Curator_toggleDynamicSimulation">
-    <Key ID="STR_A4ES_Curator_toggleDynamicSimulation_displayName">
-      <English>Toggle dynamic simulation</English>
-      <Polish>Przełącz dynamiczną symulację</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_toggleDynamicSimulation_Attributes_Enabled">
-      <English>Enabled</English>
-      <Polish>Włączona</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_toggleDynamicSimulation_sim_enabled">
-      <English>Dynamic simulation enabled</English>
-      <Polish>Włączono dynamiczną symulację</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_toggleDynamicSimulation_sim_disabled">
-      <English>Dynamic simulation disabled</English>
-      <Polish>Wyłączono dynamiczną symulację</Polish>
-    </Key>
-  </Package>
-  <Package name="Curator_setLogicFlagValue">
-    <Key ID="STR_A4ES_Curator_setLogicFlagValue_displayName">
-      <English>Set logic flag value</English>
-      <Polish>Zmień wartości flagi logicznej</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_setLogicFlagValue_Attributes_Flag">
-      <English>Flag</English>
-      <Polish>Flaga logiczna</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_setLogicFlagValue_Attributes_Value">
-      <English>New value</English>
-      <Polish>Nowa wartość</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_setLogicFlagValue_Message_NoLogicFlags">
-      <English>There are currently no logic flags in the mission</English>
-      <Polish>W misji nie ma aktualnie flag logicznych</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_setLogicFlagValue_Message_ValueChanged">
-      <English>Logic flag "%1" value has been set to "%2"</English>
-      <Polish>Wartość flagi "%1" została zmieniona na "%2"</Polish>
-    </Key>
-  </Package>
-  <Package name="Curator_setTaskState">
-    <Key ID="STR_A4ES_Curator_setTaskState_displayName">
-      <English>Set task state</English>
-      <Polish>Zmień stan zadania</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_setTaskState_Attributes_Task">
-      <English>Task</English>
-      <Polish>Zadanie</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_setTaskState_Attributes_State">
-      <English>New state</English>
-      <Polish>Nowy stan</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_setTaskState_Attributes_ShowNotification">
-      <English>Show notification</English>
-      <Polish>Pokaż powiadomienie</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_setTaskState_Message_NoTasks">
-      <English>There are currently no tasks in the mission</English>
-      <Polish>W misji nie ma aktualnie zadań</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Curator_setTaskState_Message_StateChanged">
-      <English>State of task "%1" has been set to "%2"</English>
-      <Polish>Stan zadania "%1" został zmieniony na "%2"</Polish>
-    </Key>
-  </Package>
+    <Package name="Curator">
+        <Key ID="STR_A4ES_Curator_Addon">
+            <English>A4ES Zeus</English>
+            <Polish>A4ES Zeus</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_showPlayersIcons">
+            <English>Show player icons during remote control</English>
+            <Polish>Pokaż ikony gracza podczas zdalnej kontroli</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_addCuratorEditableObject">
+            <Polish>Dodaj do obiektów zeusa</Polish>
+            <English>Add to zeus objects</English>
+        </Key>
+        <Key ID="STR_A4ES_Curator_addCuratorEditableObject_Tooltip">
+            <Polish>Dodaje obiekt do edytowalnych obiektów każdego zeusa.</Polish>
+            <English>Adds object to editable objects for all zeus</English>
+        </Key>
+        <Key ID="STR_A4ES_Curator_CuratorModuleAssigned">
+            <Polish>[A4ES] Dostęp do interfejsu zeusa został aktywowany. Obecnych zeusów: %1.</Polish>
+            <English>[A4ES] Access to the zeus interface has been activated. Number of Zeus present: %1.</English>
+        </Key>
+        <Key ID="STR_A4ES_Curator_CuratorPinged">
+            <Polish>[A4ES] Ping zeusa: %1</Polish>
+            <English>[A4ES] Zeus ping: %1</English>
+        </Key>
+        <Key ID="STR_A4ES_Curator_Attribute_isCurator">
+            <Polish>Dostęp do zeusa</Polish>
+            <English>Access to zeus</English>
+        </Key>
+        <Key ID="STR_A4ES_Curator_Attribute_isCurator_Tooltip">
+            <Polish>Czy dana jednostka ma mieć dostęp do zeusa</Polish>
+            <English>Whether the unit has access to zeus</English>
+        </Key>
+        <Key ID="STR_A4ES_Curator_FactionClass_logicFlags">
+            <English>A4ES Logic flags</English>
+            <Polish>A4ES Flagi logiczne</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_FactionClass_AI">
+            <English>A4ES AI</English>
+            <Polish>A4ES AI</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_FactionClass_Players">
+            <English>A4ES Players</English>
+            <Polish>A4ES Gracze</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_FactionClass_tasks">
+            <English>A4ES Tasks</English>
+            <Polish>A4ES Zadania</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_FactionClass_headlessClients">
+            <English>A4ES Headless clients</English>
+            <Polish>A4ES Headless klienci</Polish>
+        </Key>
+    </Package>
+    <Package name="Curator_moveHeadlessClients">
+        <Key ID="STR_A4ES_Curator_moveHeadlessClients_displayName">
+            <English>Move headless clients</English>
+            <Polish>Przenieś headless klientów</Polish>
+        </Key>
+    </Package>
+    <Package name="Curator_revealUnit">
+        <Key ID="STR_A4ES_Curator_revealUnit_displayName">
+            <English>Reveal unit</English>
+            <Polish>Ujawnij jednostkę</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_revealUnit_UnitRevealed">
+            <English>Unit revealed</English>
+            <Polish>Jednostka ujawniona</Polish>
+        </Key>
+    </Package>
+    <Package name="Curator_revealAllPlayers">
+        <Key ID="STR_A4ES_Curator_revealAllPlayers_displayName">
+            <English>Reveal all players</English>
+            <Polish>Ujawnij wszystkich graczy</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_revealAllPlayers_PlayersRevealed">
+            <English>Players revealed</English>
+            <Polish>Gracze ujawnieni</Polish>
+        </Key>
+    </Package>
+    <Package name="Curator_switchPath">
+        <Key ID="STR_A4ES_Curator_switchPath_displayName">
+            <English>Toggle walking</English>
+            <Polish>Przełącz chodzenie</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_switchPath_Attributes_PathEnabled">
+            <English>Walking enabled</English>
+            <Polish>Chodzenie włączone</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_switchPath_Attributes_ForGroup">
+            <English>Set for whole group</English>
+            <Polish>Zastosuj dla całej grupy</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_switchPath_Path_enabled_unit">
+            <English>Walking enabled for unit</English>
+            <Polish>Chodzenie włączone dla jednostki</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_switchPath_Path_enabled_group">
+            <English>Walking enabled for group</English>
+            <Polish>Chodzenie włączone dla grupy</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_switchPath_Path_disabled_unit">
+            <English>Walking disabled for unit</English>
+            <Polish>Chodzenie wyłączone dla jednostki</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_switchPath_Path_disabled_group">
+            <English>Walking disabled for group</English>
+            <Polish>Chodzenie wyłączone dla grupy</Polish>
+        </Key>
+    </Package>
+    <Package name="Curator_defenderBehaviour">
+        <Key ID="STR_A4ES_Curator_defenderBehaviour_displayName">
+            <English>Static defender</English>
+            <Polish>Stacjonarny obrońca</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_defenderBehaviour_Attributes_Behaviour">
+            <English>Behaviour</English>
+            <Polish>Zachowanie</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_defenderBehaviour_Attributes_ForGroup">
+            <English>Set for whole group</English>
+            <Polish>Zastosuj dla całej grupy</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_defenderBehaviour_disabled_unit">
+            <English>Static defender disabled for unit</English>
+            <Polish>Wyłączono stacjonarnego obrońcę dla jednostki</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_defenderBehaviour_disabled_group">
+            <English>Static defender disabled for group</English>
+            <Polish>Wyłączono stacjonarnego obrońcę dla grupy</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_defenderBehaviour_setFor_unit">
+            <English>Static defender settings set for unit</English>
+            <Polish>Zmieniono ustawienia stacjonarnego obrońcy dla jednostki</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_defenderBehaviour_setFor_group">
+            <English>Static defender settings set for group</English>
+            <Polish>Zmieniono ustawienia stacjonarnego obrońcy dla grupy</Polish>
+        </Key>
+    </Package>
+    <Package name="Curator_toggleDynamicSimulation">
+        <Key ID="STR_A4ES_Curator_toggleDynamicSimulation_displayName">
+            <English>Toggle dynamic simulation</English>
+            <Polish>Przełącz dynamiczną symulację</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_toggleDynamicSimulation_Attributes_Enabled">
+            <English>Enabled</English>
+            <Polish>Włączona</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_toggleDynamicSimulation_sim_enabled">
+            <English>Dynamic simulation enabled</English>
+            <Polish>Włączono dynamiczną symulację</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_toggleDynamicSimulation_sim_disabled">
+            <English>Dynamic simulation disabled</English>
+            <Polish>Wyłączono dynamiczną symulację</Polish>
+        </Key>
+    </Package>
+    <Package name="Curator_setLogicFlagValue">
+        <Key ID="STR_A4ES_Curator_setLogicFlagValue_displayName">
+            <English>Set logic flag value</English>
+            <Polish>Zmień wartości flagi logicznej</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_setLogicFlagValue_Attributes_Flag">
+            <English>Flag</English>
+            <Polish>Flaga logiczna</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_setLogicFlagValue_Attributes_Value">
+            <English>New value</English>
+            <Polish>Nowa wartość</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_setLogicFlagValue_Message_NoLogicFlags">
+            <English>There are currently no logic flags in the mission</English>
+            <Polish>W misji nie ma aktualnie flag logicznych</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_setLogicFlagValue_Message_ValueChanged">
+            <English>Logic flag "%1" value has been set to "%2"</English>
+            <Polish>Wartość flagi "%1" została zmieniona na "%2"</Polish>
+        </Key>
+    </Package>
+    <Package name="Curator_setTaskState">
+        <Key ID="STR_A4ES_Curator_setTaskState_displayName">
+            <English>Set task state</English>
+            <Polish>Zmień stan zadania</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_setTaskState_Attributes_Task">
+            <English>Task</English>
+            <Polish>Zadanie</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_setTaskState_Attributes_State">
+            <English>New state</English>
+            <Polish>Nowy stan</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_setTaskState_Attributes_ShowNotification">
+            <English>Show notification</English>
+            <Polish>Pokaż powiadomienie</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_setTaskState_Message_NoTasks">
+            <English>There are currently no tasks in the mission</English>
+            <Polish>W misji nie ma aktualnie zadań</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Curator_setTaskState_Message_StateChanged">
+            <English>State of task "%1" has been set to "%2"</English>
+            <Polish>Stan zadania "%1" został zmieniony na "%2"</Polish>
+        </Key>
+    </Package>
 </Project>

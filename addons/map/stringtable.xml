@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A4ES">
-  <Package name="Map">
-    <Key ID="STR_A4ES_Map_Tank">
-      <Polish>Czołg</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Map_PlayerDeletedMarker">
-      <Polish>%1 usunął marker</Polish>
-    </Key>
-  </Package>
+    <Package name="Map">
+        <Key ID="STR_A4ES_Map_Tank">
+            <Polish>Czołg</Polish>
+            <English>Tank</English>
+        </Key>
+        <Key ID="STR_A4ES_Map_PlayerDeletedMarker">
+            <Polish>%1 usunął marker</Polish>
+            <English>%1 deleted marker</English>
+        </Key>
+    </Package>
 </Project>

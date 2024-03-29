@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A4ES">
-  <Package name="Mission">
-    <Key ID="STR_A4ES_Mission_WrongMissionTemplateWarning">
-      <Polish>[A4ES] Nie wykryto szablonu misji lub jest on nieaktualny. Pobierz najnowszy szablon misji z repozytorium A4E i wklej go do misji.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Mission_FixInvisibleGear">
-      <English>A4ES Refresh gear</English>
-      <Polish>A4ES Odśwież sprzęt</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Mission_FixInvisibleGear_Tooltip">
-      <English>Refresh gear to fix invisible uniform/vest.</English>
-      <Polish>Odśwież sprzęt aby naprawić bug z niewidzialnym mundurem/kamizelką.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Mission_Warning_Message">
-      <English>You have single "G" as your grenade bind. It's highly recommended to rebind it to "2xG".</English>
-      <Polish>Masz zbindowane pojedyncze "G" jako klawisz rzutu granatem. Zaleca się przebindowanie na "2xG".</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Mission_Warning_Message_Header">
-      <English>Rebind granade throw!</English>
-      <Polish>Przebinduj rzut granatem!</Polish>
-    </Key>
-  </Package>
+    <Package name="Mission">
+        <Key ID="STR_A4ES_Mission_WrongMissionTemplateWarning">
+            <Polish>[A4ES] Nie wykryto szablonu misji lub jest on nieaktualny. Pobierz najnowszy szablon misji z repozytorium A4E i wklej go do misji.</Polish>
+            <English>[A4ES] Mission template not detected or outdated. Download the latest mission template from the A4E repository and paste it into the mission.</English>
+        </Key>
+        <Key ID="STR_A4ES_Mission_FixInvisibleGear">
+            <English>A4ES Refresh gear</English>
+            <Polish>A4ES Odśwież sprzęt</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Mission_FixInvisibleGear_Tooltip">
+            <English>Refresh gear to fix invisible uniform/vest.</English>
+            <Polish>Odśwież sprzęt aby naprawić bug z niewidzialnym mundurem/kamizelką.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Mission_Warning_Message">
+            <English>You have single "G" as your grenade bind. It's highly recommended to rebind it to "2xG".</English>
+            <Polish>Masz zbindowane pojedyncze "G" jako klawisz rzutu granatem. Zaleca się przebindowanie na "2xG".</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Mission_Warning_Message_Header">
+            <English>Rebind granade throw!</English>
+            <Polish>Przebinduj rzut granatem!</Polish>
+        </Key>
+    </Package>
 </Project>

@@ -5,46 +5,46 @@ class CfgFactionClasses {
         side = 7;
     };
     class GVAR(AI): GVAR(base) {
-        displayName = "A4ES AI";
+        displayName = CSTRING(FactionClasses_AI_displayName);
     };
     class GVAR(3DENComp): GVAR(base) {
-        displayName = "A4ES Kompozycje edytora";
+        displayName = CSTRING(FactionClasses_3DENComp_displayName);
     };
     class GVAR(actions): GVAR(base) {
-        displayName = "A4ES Akcje";
+        displayName = CSTRING(FactionClasses_actions_displayName);
     };
     class GVAR(tasks): GVAR(base) {
-        displayName = "A4ES Zadania";
+        displayName = CSTRING(FactionClasses_tasks_displayName);
     };
     class GVAR(logicFlags): GVAR(base) {
-        displayName = "A4ES Flagi logiczne";
+        displayName = CSTRING(FactionClasses_logicFlags_displayName);
     };
     class GVAR(effects): GVAR(base) {
-        displayName = "A4ES Efekty";
+        displayName = CSTRING(FactionClasses_effects_displayName);
     };
     class GVAR(map): GVAR(base) {
-        displayName = "A4ES Mapa";
+        displayName = CSTRING(FactionClasses_map_displayName);
     };
     class GVAR(markers): GVAR(base) {
-        displayName = "A4ES Markery";
+        displayName = CSTRING(FactionClasses_markers_displayName);
     };
     class GVAR(events): GVAR(base) {
         displayName = CSTRING(FactionClasses_events_displayName);
     };
     class GVAR(radio): GVAR(base) {
-        displayName = "A4ES Radia";
+        displayName = CSTRING(FactionClasses_radio_displayName);
     };
     class GVAR(curator): GVAR(base) {
-        displayName = "A4ES Zeus";
+        displayName = CSTRING(FactionClasses_curator_displayName);
     };
     class GVAR(ambient): GVAR(base) {
-        displayName = "A4ES Ambient";
+        displayName = CSTRING(FactionClasses_ambient_displayName);
     };
     class GVAR(fortify): GVAR(base) {
-        displayName = "A4ES Fortyfikacje";
+        displayName = CSTRING(FactionClasses_fortify_displayName);
     };
     class GVAR(dialogues): GVAR(base) {
-        displayName = "A4ES Dialogi";
+        displayName = CSTRING(FactionClasses_dialogues_displayName);
     };
     class GVAR(supplies): GVAR(base) {
         displayName = CSTRING(FactionClasses_supplies_displayName);

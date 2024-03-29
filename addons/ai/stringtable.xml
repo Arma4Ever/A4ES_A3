@@ -1,109 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A4ES">
-  <Package name="AI">
-    <Key ID="STR_A4ES_AI_skill_displayName">
-      <Polish>Umiejętności</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_skill_tooltip">
-      <Polish>Umiejętności AI. Poziom umiejętności ma wpływ tylko na celność ostrzału oraz szybkość celowania, wszystkie inne umiejętności jak poruszanie się, dowodzenie, czy odwaga są jednakowe, niezależnie od ogólnego poziomu umiejętności.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_skillLevel_partisans">
-      <Polish>Partyzant</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_skillLevel_partisans_description">
-      <Polish>Członek partyzantki, ochotnik bez wyszkolenia</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_skillLevel_partisanVeterans">
-      <Polish>Doświadczony partyzant</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_skillLevel_partisanVeterans_description">
-      <Polish>Partyzant z krótkim doświadczeniem bojowym</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_skillLevel_militia">
-      <Polish>Milicjant</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_skillLevel_militia_description">
-      <Polish>Żołnierz zorganizowanej milicji z amatorskim wyszkoleniem</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_skillLevel_guards">
-      <Polish>Gwardzista</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_skillLevel_guards_description">
-      <Polish>Żołnierz gwardii narodowej z minimalnym wyszkoleniem</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_skillLevel_conscripts">
-      <Polish>Poborowy</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_skillLevel_conscripts_description">
-      <Polish>Żołnierz armii poborowej z podstawowym wyszkoleniem</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_skillLevel_professionals">
-      <Polish>Zawodowy</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_skillLevel_professionals_description">
-      <Polish>Żołnierz armii zawodowej z dobrym wyszkoleniem</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_skillLevel_professionalVeterans">
-      <Polish>Doświadczony zawodowy</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_skillLevel_professionalVeterans_description">
-      <Polish>Żołnierz zawodowy z doświadczeniem bojowym</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_skillLevel_elite">
-      <Polish>Specjalista</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_skillLevel_elite_description">
-      <Polish>Żołnierz sił specjalnych z doskonałym wyszkoleniem</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_skillLevel_eliteVeterans">
-      <Polish>Weteran sił specjalnych</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_skillLevel_eliteVeterans_description">
-      <Polish>Żołnierz sił specjalnych z długim doświadczeniem bojowym</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_defenderBehaviour_displayName">
-      <Polish>Stacjonarny obrońca</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_defenderBehaviour_tooltip">
-      <Polish>Ustawienia systemu stacjonarnego obrońcy.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_defenderBehaviour_Attributes_disabled_name">
-      <Polish>Wyłączony</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_defenderBehaviour_Attributes_disabled_tooltip">
-      <Polish>System będzie wyłączony dla danej jednostki.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_defenderBehaviour_Attributes_up_name">
-      <Polish>Wstawianie i kładzenie się</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_defenderBehaviour_Attributes_up_tooltip">
-      <Polish>Postać będzie wstawać i kłaść się w różnych interwałach czasowych. Na zachowanie jednostki ma też wpływ ostrzał prowadzony w kierunku tej jednostki. W momencie włączenia systemu, poruszanie się tej jednostki zostanie automatycznie wyłączone.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_defenderBehaviour_Attributes_middle_name">
-      <Polish>Kucanie i kładzenie się</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_defenderBehaviour_Attributes_middle_tooltip">
-      <Polish>Postać będzie kucać i kłaść się w różnych interwałach czasowych. Na zachowanie jednostki ma też wpływ ostrzał prowadzony w kierunku tej jednostki. W momencie włączenia systemu, poruszanie się tej jednostki zostanie automatycznie wyłączone.</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_NVGoggles_displayName">
-      <English>Hidden AI NVG</English>
-      <Polish>Ukryta noktowizja AI</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_NVGoggles_description">
-      <English>Invisible NV goggles, usable only by AI units</English>
-      <Polish>Niewidzialne gogle NV, używalne tylko przez jednostki AI</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_hideBody_displayName">
-      <English>Hide body</English>
-      <Polish>Ukryj ciało</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_hideBody_hidingBody">
-      <English>Hiding body...</English>
-      <Polish>Ukrywanie ciała...</Polish>
-    </Key>
-    <Key ID="STR_A4ES_AI_hideBody_bodyHidden">
-      <English>Body has been hidden</English>
-      <Polish>Ciało zostało ukryte</Polish>
-    </Key>
-  </Package>
+    <Package name="AI">
+        <Key ID="STR_A4ES_AI_skill_displayName">
+            <Polish>Umiejętności</Polish>
+            <English>Skill</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_skill_tooltip">
+            <Polish>Umiejętności AI. Poziom umiejętności ma wpływ tylko na celność ostrzału oraz szybkość celowania, wszystkie inne umiejętności jak poruszanie się, dowodzenie, czy odwaga są jednakowe, niezależnie od ogólnego poziomu umiejętności.</Polish>
+            <English>AI skills. Skill level only affects firing accuracy and aiming speed, all other skills like movement, command and courage are the same, regardless of overall skill level.</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_skillLevel_partisans">
+            <Polish>Partyzant</Polish>
+            <English>Guerrilla</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_skillLevel_partisans_description">
+            <Polish>Członek partyzantki, ochotnik bez wyszkolenia</Polish>
+            <English>Guerrilla member, volunteer without training</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_skillLevel_partisanVeterans">
+            <Polish>Doświadczony partyzant</Polish>
+            <English>Experienced Guerrilla</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_skillLevel_partisanVeterans_description">
+            <Polish>Partyzant z krótkim doświadczeniem bojowym</Polish>
+            <English>Guerrilla with short combat experience</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_skillLevel_militia">
+            <Polish>Milicjant</Polish>
+            <English>Militia</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_skillLevel_militia_description">
+            <Polish>Żołnierz zorganizowanej milicji z amatorskim wyszkoleniem</Polish>
+            <English>Organised militia soldier with amateur training</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_skillLevel_guards">
+            <Polish>Gwardzista</Polish>
+            <English>National Guard</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_skillLevel_guards_description">
+            <Polish>Żołnierz gwardii narodowej z minimalnym wyszkoleniem</Polish>
+            <English>National Guard soldier with minimal training</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_skillLevel_conscripts">
+            <Polish>Poborowy</Polish>
+            <English>Conscript</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_skillLevel_conscripts_description">
+            <Polish>Żołnierz armii poborowej z podstawowym wyszkoleniem</Polish>
+            <English>Conscript army soldier with basic training</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_skillLevel_professionals">
+            <Polish>Zawodowy</Polish>
+            <English>Professional</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_skillLevel_professionals_description">
+            <Polish>Żołnierz armii zawodowej z dobrym wyszkoleniem</Polish>
+            <English>Professional army soldier with good training</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_skillLevel_professionalVeterans">
+            <Polish>Doświadczony zawodowy</Polish>
+            <English>Experienced professional</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_skillLevel_professionalVeterans_description">
+            <Polish>Żołnierz zawodowy z doświadczeniem bojowym</Polish>
+            <English>Professional soldier with combat experience</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_skillLevel_elite">
+            <Polish>Specjalista</Polish>
+            <English>Special forces</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_skillLevel_elite_description">
+            <Polish>Żołnierz sił specjalnych z doskonałym wyszkoleniem</Polish>
+            <English>Special forces soldier with excellent training</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_skillLevel_eliteVeterans">
+            <Polish>Weteran sił specjalnych</Polish>
+            <English>Special forces veteran</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_skillLevel_eliteVeterans_description">
+            <Polish>Żołnierz sił specjalnych z długim doświadczeniem bojowym</Polish>
+            <English>Special forces soldier with long combat experience</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_defenderBehaviour_displayName">
+            <Polish>Stacjonarny obrońca</Polish>
+            <English>Stationary defender</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_defenderBehaviour_tooltip">
+            <Polish>Ustawienia systemu stacjonarnego obrońcy.</Polish>
+            <English>Stationary defender system settings.</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_defenderBehaviour_Attributes_disabled_name">
+            <Polish>Wyłączony</Polish>
+            <English>Disabled</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_defenderBehaviour_Attributes_disabled_tooltip">
+            <Polish>System będzie wyłączony dla danej jednostki.</Polish>
+            <English>The system will be switched off for the unit concerned.</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_defenderBehaviour_Attributes_up_name">
+            <Polish>Wstawianie i kładzenie się</Polish>
+            <English>Standing up and lying down</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_defenderBehaviour_Attributes_up_tooltip">
+            <Polish>Postać będzie wstawać i kłaść się w różnych interwałach czasowych. Na zachowanie jednostki ma też wpływ ostrzał prowadzony w kierunku tej jednostki. W momencie włączenia systemu, poruszanie się tej jednostki zostanie automatycznie wyłączone.</Polish>
+            <English>The character will stand up and lie down at different time intervals. The behaviour of the unit is also influenced by gunfire directed towards that unit. When the system is activated, the movement of this unit will be automatically disabled.</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_defenderBehaviour_Attributes_middle_name">
+            <Polish>Kucanie i kładzenie się</Polish>
+            <English>Crouching and lying down</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_defenderBehaviour_Attributes_middle_tooltip">
+            <Polish>Postać będzie kucać i kłaść się w różnych interwałach czasowych. Na zachowanie jednostki ma też wpływ ostrzał prowadzony w kierunku tej jednostki. W momencie włączenia systemu, poruszanie się tej jednostki zostanie automatycznie wyłączone.</Polish>
+            <English>The character will crouch and lie down at different time intervals. The behaviour of the unit is also affected by gunfire directed towards that unit. When the system is activated, the movement of this unit will be automatically disabled.</English>
+        </Key>
+        <Key ID="STR_A4ES_AI_NVGoggles_displayName">
+            <English>Hidden AI NVG</English>
+            <Polish>Ukryta noktowizja AI</Polish>
+        </Key>
+        <Key ID="STR_A4ES_AI_NVGoggles_description">
+            <English>Invisible NV goggles, usable only by AI units</English>
+            <Polish>Niewidzialne gogle NV, używalne tylko przez jednostki AI</Polish>
+        </Key>
+        <Key ID="STR_A4ES_AI_hideBody_displayName">
+            <English>Hide body</English>
+            <Polish>Ukryj ciało</Polish>
+        </Key>
+        <Key ID="STR_A4ES_AI_hideBody_hidingBody">
+            <English>Hiding body...</English>
+            <Polish>Ukrywanie ciała...</Polish>
+        </Key>
+        <Key ID="STR_A4ES_AI_hideBody_bodyHidden">
+            <English>Body has been hidden</English>
+            <Polish>Ciało zostało ukryte</Polish>
+        </Key>
+    </Package>
 </Project>

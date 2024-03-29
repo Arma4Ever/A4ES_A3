@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="A4ES">
-  <Package name="Debug">
-    <Key ID="STR_A4ES_Debug_StartLogsWatcher">
-      <Polish>[A4ES] Uruchamiam obserwację logów</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Debug_ToggleLogsAction">
-      <Polish>DEBUG - Pokaż/ukryj logi</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Debug_ToggleDebugMap">
-      <Polish>DEBUG - Pokaż/ukryj debug na mapie</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Debug_Activated">
-      <Polish>aktywowany</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Debug_Deactivated">
-      <Polish>deaktywowany</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Debug_Module_StatusChangedLog">
-      <Polish>Moduł %1 %2</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Debug_Trigger_StatusChangedLog">
-      <Polish>Trigger %1 %2</Polish>
-    </Key>
-  </Package>
+    <Package name="Debug">
+        <Key ID="STR_A4ES_Debug_StartLogsWatcher">
+            <Polish>[A4ES] Uruchamiam obserwację logów</Polish>
+            <English>[A4ES] Starting to observe the logs</English>
+        </Key>
+        <Key ID="STR_A4ES_Debug_ToggleLogsAction">
+            <Polish>DEBUG - Pokaż/ukryj logi</Polish>
+            <English>DEBUG - Show/hide logs</English>
+        </Key>
+        <Key ID="STR_A4ES_Debug_ToggleDebugMap">
+            <Polish>DEBUG - Pokaż/ukryj debug na mapie</Polish>
+            <English>DEBUG - Show/hide debug on map</English>
+        </Key>
+        <Key ID="STR_A4ES_Debug_Activated">
+            <Polish>aktywowany</Polish>
+            <English>activated</English>
+        </Key>
+        <Key ID="STR_A4ES_Debug_Deactivated">
+            <Polish>deaktywowany</Polish>
+            <English>deactivated</English>
+        </Key>
+        <Key ID="STR_A4ES_Debug_Module_StatusChangedLog">
+            <Polish>Moduł %1 %2</Polish>
+            <English>Module %1 %2</English>
+        </Key>
+        <Key ID="STR_A4ES_Debug_Trigger_StatusChangedLog">
+            <Polish>Trigger %1 %2</Polish>
+            <English>Trigger %1 %2</English>
+        </Key>
+    </Package>
 </Project>
