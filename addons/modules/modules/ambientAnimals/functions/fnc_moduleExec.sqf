@@ -25,7 +25,7 @@ _logic spawn {
   private _animalsCount = _logic getVariable [QGVAR(animalsCount), 0];
 
   if ((_animalsType isEqualTo "") || {_animalsCount isEqualTo 0}) exitWith {
-    WARNING_2('EXEC_MODULE_NAME - animal type is empty or animal count is 0 (animalsType: %1, animalsCount: %2).',str _animalsType,str _animalsCount);
+    WARNING_3('EXEC_MODULE_NAME - animal type is empty or animal count is 0 (animalsType: %1,animalsCount: %2).',str _animalsType,str _animalsCount);
   };
 
   private _animalsMaxIndex = _animalsCount - 1;

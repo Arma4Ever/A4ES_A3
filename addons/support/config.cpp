@@ -37,8 +37,8 @@ class RscButtonMenu;
 class RscButtonMenuCancel;
 
 class GVAR(RscSupportPanel) {
-	onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(RscSupportPanel), _this select 0)];);
-	onUnload = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(RscSupportPanel), displayNull)];);
+	onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(RscSupportPanel),_this select 0)]);
+	onUnload = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(RscSupportPanel),displayNull)]);
 	idd = -1;
     movingEnable = 1;
 	enableSimulation = 1;

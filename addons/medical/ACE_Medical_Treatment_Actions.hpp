@@ -102,7 +102,7 @@ class ACE_Medical_Treatment_Actions {
         callbackProgress = QUOTE([ARR_2(_this,500)] call FUNC(drawBloodProgress));
         callbackFailure = QUOTE([ARR_3(_medic,_patient,500)] call FUNC(drawBloodFailure));
         callbackSuccess = QUOTE([ARR_3(_medic,_patient,500)] call FUNC(drawBloodSuccess));
-        condition = QUOTE([ARR_3(_medic, _patient,500)] call FUNC(canDrawBlood));
+        condition = QUOTE([ARR_3(_medic,_patient,500)] call FUNC(canDrawBlood));
         items[] = {"A4ES_emptyBloodBag"};
         animationPatient = "";
         animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
@@ -121,7 +121,7 @@ class ACE_Medical_Treatment_Actions {
         callbackProgress = QUOTE([ARR_2(_this,250)] call FUNC(drawBloodProgress));
         callbackFailure = QUOTE([ARR_3(_medic,_patient,250)] call FUNC(drawBloodFailure));
         callbackSuccess = QUOTE([ARR_3(_medic,_patient,250)] call FUNC(drawBloodSuccess));
-        condition = QUOTE([ARR_3(_medic, _patient,250)] call FUNC(canDrawBlood));
+        condition = QUOTE([ARR_3(_medic,_patient,250)] call FUNC(canDrawBlood));
         items[] = {"A4ES_emptyBloodBag"};
         animationPatient = "";
         animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";

@@ -5,7 +5,7 @@
  */
 
 params ["_ctrlButtonOk"];
-TRACE_1("joinClick", _ctrlButtonOk);
+TRACE_1("joinClick",_ctrlButtonOk);
 
 // Exit if dialog closed
 if (isNull (uiNamespace getVariable [QGVAR(RscDisplayA4ESServerToken), displayNull])) exitWith {};

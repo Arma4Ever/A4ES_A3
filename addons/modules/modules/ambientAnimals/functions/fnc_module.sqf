@@ -19,4 +19,4 @@ if (isNull _logic || _isCuratorPlaced) exitWith {};
 
 LOG('Starting init of EXEC_MODULE_NAME.');
 
-#include "\z\a4es\addons\modules\includes\moduleActivation.sqf"
+#include "\z\a4es\addons\modules\includes\moduleActivation.inc.sqf"

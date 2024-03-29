@@ -15,7 +15,7 @@ class GVAR(preActivationFlags): GVAR(dynamicLogicFlagCondPreActivator) {
     displayName = CSTRING(Attributes_preActivationFlags);
     tooltip = CSTRING(Attributes_preActivationFlags_Tooltip);
     property = QGVAR(preActivationFlags);
-    defaultValue = "'[]'";
+    defaultValue = QUOTE('[]');
     GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(addPreActivation)) isEqualTo true);
     ATTRIBUTE_LOCAL;
 };
@@ -75,7 +75,7 @@ class GVAR(activationFlags): GVAR(dynamicLogicFlagCondActivator) {
     displayName = CSTRING(Attributes_activationFlags);
     tooltip = CSTRING(Attributes_activationFlags_Tooltip);
     property = QGVAR(activationFlags);
-    defaultValue = "'[]'";
+    defaultValue = QUOTE('[]');
     GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(activationMode)) isEqualTo 1);
     ATTRIBUTE_LOCAL;
 };

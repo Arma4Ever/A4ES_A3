@@ -17,7 +17,7 @@ class Cfg3DEN {
 			};
 		};
         class Skill: Slider {
-            attributeLoad = QUOTE(_this call FUNC(skill_attributeLoad););
+            attributeLoad = QUOTE(_this call FUNC(skill_attributeLoad));
             h = "10 * (pixelH * pixelGrid * 0.50)";
 
             class Controls: Controls {
@@ -63,7 +63,7 @@ class Cfg3DEN {
                         property = QGVAR(defenderBehaviour);
                         typeName = "NUMBER";
                         defaultValue = "0";
-                        expression = QUOTE(if (_value > 0) then {_this setVariable [ARR_3(QQGVAR(defenderBehaviour),_value,true)];_this call FUNC(defenderBehaviour);};);
+                        expression = QUOTE(if (_value > 0) then {_this setVariable [ARR_3(QQGVAR(defenderBehaviour),_value,true)];_this call FUNC(defenderBehaviour);});
                         condition = "objectBrain";
 
                         class values {

@@ -30,7 +30,7 @@ private _shape = _logic getVariable [QGVAR(flybyShape), 1];
 
 // Exit if classList is not array or array is empty
 if (!(_classList isEqualType []) || (count _classList) isEqualTo 0) exitWith {
-  WARNING_2('EXEC_MODULE_NAME - classList is not array or array is empty (classList: %1).',str _classList);
+  WARNING_1('EXEC_MODULE_NAME - classList is not array or array is empty (classList: %1).',str _classList);
 };
 
 // Calculate group units classes

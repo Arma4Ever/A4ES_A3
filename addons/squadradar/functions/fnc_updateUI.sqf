@@ -6,7 +6,7 @@
 
 params [["_settingsChanged", false, [false]]];
 
-LOG_3("Updating UI (settingsChanged: %1 enable: %2 enabled: %3 showCurrentSquad %4)",str _settingsChanged,str GVAR(enable),str GVAR(enabled),str GVAR(showCurrentSquad));
+LOG_4("Updating UI (settingsChanged: %1 enable: %2 enabled: %3 showCurrentSquad %4)",str _settingsChanged,str GVAR(enable),str GVAR(enabled),str GVAR(showCurrentSquad));
 
 // Remove RscRadar
 if ((!GVAR(enable) || !GVAR(showCurrentSquad) || GVAR(disabledInMission)) && GVAR(enabled)) exitWith {

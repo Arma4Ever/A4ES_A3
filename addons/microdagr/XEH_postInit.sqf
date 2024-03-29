@@ -12,7 +12,7 @@ if (hasInterface) then {
     params ["_unit", "_visibleMap"];
     if !(_unit getVariable ["ace_microdagr_receivePos", false]) exitWith {};
     
-    private _alpha = [0, 1] select (ace_microdagr_showMicrodagrMarkersOnMap || !_visibleMap);
+    private _alpha = parseNumber (ace_microdagr_showMicrodagrMarkersOnMap || !_visibleMap);
     {_x setMarkerAlphaLocal _alpha} forEach ace_microdagr_receiveMarkers;
   }] call CBA_fnc_addPlayerEventHandler;
 

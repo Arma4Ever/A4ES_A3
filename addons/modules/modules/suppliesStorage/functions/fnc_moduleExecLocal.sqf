@@ -16,7 +16,7 @@ if (_validTargets isEqualTo []) exitWith {
   TRACE_1("suppliesStorage_moduleExecLocal abort: no valid target",_target);
 };
 
-TRACE_6("suppliesStorage_moduleExecLocal - adding action");
+LOG("suppliesStorage_moduleExecLocal - adding action");
 
 // Child interactions - generated per each object
 private _insertChildren = { 

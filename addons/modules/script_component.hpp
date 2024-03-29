@@ -8,7 +8,7 @@
 
 #include "\z\a4es\addons\main\script_macros.hpp"
 
-#define ATTRIBUTE_LOCAL expression = QUOTE(_this setVariable [ARR_2('%s',_value)];); \
+#define ATTRIBUTE_LOCAL expression = QUOTE(_this setVariable [ARR_2('%s',_value)]); \
 __isLocalAttr = 1
 #define ATTRIBUTE_IGNORED expression = ""
 

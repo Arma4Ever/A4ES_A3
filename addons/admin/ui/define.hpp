@@ -109,7 +109,7 @@
 #define W_MAKEITBIGGA(num) (num * (safeZoneH / 40))
 #define H_MAKEITBIGGA(num) (num * (safeZoneH / 30))
 
-#define X_PART(num) QUOTE(linearConversion [ARR_5(0, 2, 0, X_ORIGINAL(num), X_MAKEITBIGGA(num))])
-#define Y_PART(num) QUOTE(linearConversion [ARR_5(0, 2, 0, Y_ORIGINAL(num), Y_MAKEITBIGGA(num))])
-#define W_PART(num) QUOTE(linearConversion [ARR_5(0, 2, 0, W_ORIGINAL(num), W_MAKEITBIGGA(num))])
-#define H_PART(num) QUOTE(linearConversion [ARR_5(0, 2, 0, H_ORIGINAL(num), H_MAKEITBIGGA(num))])
+#define X_PART(num) QUOTE(linearConversion [ARR_5(0,2,0,X_ORIGINAL(num),X_MAKEITBIGGA(num))])
+#define Y_PART(num) QUOTE(linearConversion [ARR_5(0,2,0,Y_ORIGINAL(num),Y_MAKEITBIGGA(num))])
+#define W_PART(num) QUOTE(linearConversion [ARR_5(0,2,0,W_ORIGINAL(num),W_MAKEITBIGGA(num))])
+#define H_PART(num) QUOTE(linearConversion [ARR_5(0,2,0,H_ORIGINAL(num),H_MAKEITBIGGA(num))])

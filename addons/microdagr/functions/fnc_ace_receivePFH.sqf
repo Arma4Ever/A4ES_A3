@@ -16,7 +16,7 @@ _receiveMarkers = [];
 
 private _units = (playableUnits + switchableUnits) select {(_x getVariable [QGVAR(broadcastPos), false]) && (alive _x)};
 private _index = 0;
-private _alpha = [0, 1] select (GVAR(showMicrodagrMarkersOnMap) || !visibleMap);
+private _alpha = parseNumber (GVAR(showMicrodagrMarkersOnMap) || !visibleMap);
 
 GVAR(receiveMarkers) = _units apply {
   _index = _index + 1;

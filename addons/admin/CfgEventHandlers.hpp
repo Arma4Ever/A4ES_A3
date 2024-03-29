@@ -15,6 +15,6 @@ class Extended_PostInit_EventHandlers {
 };
 class Extended_DisplayLoad_EventHandlers {
     class RscDisplayMPInterrupt {
-        ADDON = QUOTE([ARR_2('RscDisplayMPInterrupt', _this)] call COMPILE_FILE(XEH_displayLoad));
+        ADDON = QUOTE([ARR_2('RscDisplayMPInterrupt',_this)] call COMPILE_FILE(XEH_displayLoad));
     };
 };

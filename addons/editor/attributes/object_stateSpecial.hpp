@@ -19,7 +19,7 @@ class GVAR(isStationary) {
     tooltip = CSTRING(isStationary_Tooltip);
     property = QGVAR(isStationary);
     control = "Checkbox";
-    expression = QUOTE(if (is3DEN) then {[ARR_2(_this,_value)] call FUNC(isStationaryAttribute)};);
+    expression = QUOTE(if (is3DEN) then {[ARR_2(_this,_value)] call FUNC(isStationaryAttribute)});
     defaultValue = "false";
     condition = "objectBrain";
 };

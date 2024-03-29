@@ -42,7 +42,7 @@ if (_insertFunctionName isNotEqualTo "") then {
     if (_insertOptions isEqualType []) then {
       _options append _insertOptions;
     } else {
-      ERROR_3("InsertValues function of '%1' attribute returned type '%2' ('%3' expected).",configName _config,typeName _insertOptions,typeName []);
+      ERROR_1("InsertValues function of '%1' attribute returned wrong type.",configName _config);
     };
   } else {
     ERROR_2("Missing insertValues function of attribute '%1' (function name '%2')",configName _config,_insertFunctionName);
@@ -85,7 +85,7 @@ if ((lbSize _control) isEqualTo 0 && !_hasInsertFunction) then {
 
 // Normalize control value
 if (_value isEqualType true) then {
-  _value = [0,1] select _value;
+  _value = parseNumber _value;
 } else {
   if (_value isEqualType '') then {
     _value = tolower _value;

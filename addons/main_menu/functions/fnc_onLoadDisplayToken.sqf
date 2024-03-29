@@ -5,7 +5,7 @@
  */
 
 params ["_display"];
-TRACE_1("onLoadDisplayToken", _display);
+TRACE_1("onLoadDisplayToken",_display);
 
 if (isNull _display) exitWith {};
 

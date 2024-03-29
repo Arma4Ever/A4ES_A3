@@ -6,13 +6,13 @@
         "P:/"
     ],
     "excludeList": [
-        "initsettings.sqf",
-        "initkeybinds.sqf",
+        "initsettings.inc.sqf",
+        "initkeybinds.inc.sqf",
         "xeh_prep.sqf",
+        "cba_settings.sqf",
         "common\\functions\\fnc_dummy.sqf",
-        "modules\\includes\\moduleActivation.sqf",
+        "modules\\includes\\moduleActivation.inc.sqf",
 		"main_menu\\functions\\fnc_join.sqf"
-		
     ],
     "outputDir": "P:/",
     "workerThreads": 8

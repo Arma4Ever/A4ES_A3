@@ -6,7 +6,7 @@ class RscTitles {
         fadeIn = 0;
         fadeOut = 0;
         duration = 9.9999998e+010;
-        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(overlay), _this select 0)]);
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(overlay),_this select 0)]);
         class controls {
             class RscOverlay: RscPicture {
                 idc = IDC_OVERLAY;

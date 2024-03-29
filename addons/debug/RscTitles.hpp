@@ -6,14 +6,14 @@ class RscTitles {
         fadeIn = 0;
         fadeOut = 0;
         duration = 9.9999998e+010;
-        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(logsList), _this select 0)]);
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(logsList),_this select 0)]);
         class controls {
             class GVAR(logsListStructuredText): RscStructuredText {
             	idc = IDC_LOGSLIST;
-            	x = 0.78 * safezoneW + safezoneX;
-            	y = 0.29 * safezoneH + safezoneY;
-            	w = 0.21 * safezoneW;
-            	h = 0.61 * safezoneH;
+            	x = QUOTE(0.78 * safezoneW + safezoneX);
+            	y = QUOTE(0.29 * safezoneH + safezoneY);
+            	w = QUOTE(0.21 * safezoneW);
+            	h = QUOTE(0.61 * safezoneH);
             };
     	};
     };

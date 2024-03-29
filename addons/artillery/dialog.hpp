@@ -9,7 +9,7 @@ class RscButtonMenuCancel;
 
 class GVAR(artilleryRadarDialog) {
     idd = -1;
-    movingEnable = false;
+    movingEnable = 0;
 	onLoad = QUOTE(_this call FUNC(onRadarDialogLoad));
 	onUnload = QUOTE(_this call FUNC(onRadarDialogUnload));
 	class controlsBackground {

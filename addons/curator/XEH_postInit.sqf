@@ -21,7 +21,7 @@ if (isServer) then {
 };
 
 if (hasInterface) then {
-  #include "initKeybinds.sqf"
+  #include "initKeybinds.inc.sqf"
 
   if ((typeOf player) == "VirtualCurator_F") then {
     player setVariable [QGVAR(isCurator), true, true];

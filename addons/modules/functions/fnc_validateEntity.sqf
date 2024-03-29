@@ -43,7 +43,7 @@ private _warnings = [_entity, _values] call _validator;
 
 // Exit without warnings if validator didn't return an array
 if !(_warnings isEqualType []) exitWith {
-  ERROR_3("Validator of '%1' returned type '%2' ('%3' expected).",_className,typeName _warnings,typeName []);
+  ERROR_1("Validator of '%1' returned wrong type.",_className);
   []
 };
 

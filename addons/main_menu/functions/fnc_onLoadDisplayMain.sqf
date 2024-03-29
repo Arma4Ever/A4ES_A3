@@ -5,7 +5,7 @@
  */
 
 params ["_display"];
-TRACE_1("onLoadDisplayMain", _display);
+TRACE_1("onLoadDisplayMain",_display);
 
 // Disable SOG main menu and multiplayer menu
 private _emmMainMenuEnabled = profileNamespace getVariable ["emm_mainmenu_enabled", true];

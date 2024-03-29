@@ -457,7 +457,7 @@ class GVAR(fireArtillery): GVAR(base) {
             property = QGVAR(conditionSalvosCount);
             defaultValue = "'1'";
             validate = "NUMBER";
-            GVAR(conditionActive) = QUOTE( ((_this getVariable QQGVAR(conditionType)) isEqualTo 0) && ((_this getVariable QQGVAR(salvos)) isEqualTo true));
+            GVAR(conditionActive) = QUOTE(((_this getVariable QQGVAR(conditionType)) isEqualTo 0) && ((_this getVariable QQGVAR(salvos)) isEqualTo true));
             ATTRIBUTE_LOCAL;
         };
         class GVAR(conditionShellsCount): GVAR(dynamicEdit) {
@@ -466,7 +466,7 @@ class GVAR(fireArtillery): GVAR(base) {
             property = QGVAR(conditionShellsCount);
             defaultValue = "'1'";
             validate = "NUMBER";
-            GVAR(conditionActive) = QUOTE( ((_this getVariable QQGVAR(conditionType)) isEqualTo 0) && ((_this getVariable QQGVAR(salvos)) isEqualTo false));
+            GVAR(conditionActive) = QUOTE(((_this getVariable QQGVAR(conditionType)) isEqualTo 0) && ((_this getVariable QQGVAR(salvos)) isEqualTo false));
             ATTRIBUTE_LOCAL;
         };
         class GVAR(conditionTime): GVAR(dynamicEdit) {
@@ -483,7 +483,7 @@ class GVAR(fireArtillery): GVAR(base) {
             displayName = CSTRING(fireArtillery_Attributes_conditionLogicFlags);
             tooltip = CSTRING(fireArtillery_Attributes_conditionLogicFlags_tooltip);
             property = QGVAR(conditionLogicFlags);
-            defaultValue = "'[]'";
+            defaultValue = QUOTE('[]');
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(conditionType)) isEqualTo 2);
             ATTRIBUTE_LOCAL;
         };

@@ -12,8 +12,8 @@ private _isSilentWalking = (
 
 // Update icon if status changed
 if (GVAR(isSilentWalking) isNotEqualTo _isSilentWalking) then {
-  TRACE_1("Silent walking status changed", _isSilentWalking);
-  player setUnitTrait ["audibleCoef", [1, 0] select _isSilentWalking];
+  TRACE_1("Silent walking status changed",_isSilentWalking);
+  player setUnitTrait ["audibleCoef", parseNumber !_isSilentWalking];
 
   // Update icon
   [

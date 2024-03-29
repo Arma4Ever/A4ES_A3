@@ -46,7 +46,7 @@ class RscDisplayStart: RscStandardDisplay {
         class LoadingStart: RscControlsGroupNoScrollbars {
             class controls {
                 class Logo: RscPictureKeepAspect {
-                    text = PATHTOF(data\a4e_logo_512.paa);
+                    text = QPATHTOF(data\a4e_logo_512.paa);
                     x="0.125 * safezoneW";
 					y="0.234375 * safezoneH";
 					w="0.75 * safezoneW";
@@ -61,7 +61,7 @@ class RscDisplayNotFreeze: RscStandardDisplay {
         class LoadingStart: RscControlsGroupNoScrollbars {
             class controls {
                 class Logo: RscPictureKeepAspect {
-                    text = PATHTOF(data\a4e_logo_512.paa);
+                    text = QPATHTOF(data\a4e_logo_512.paa);
                     x="0.125 * safezoneW";
 					y="0.234375 * safezoneH";
 					w="0.75 * safezoneW";
@@ -76,7 +76,7 @@ class RscDisplayLoadMission: RscStandardDisplay {
         class LoadingStart: RscControlsGroupNoScrollbars {
             class controls {
                 class Logo: RscPictureKeepAspect {
-                    text = PATHTOF(data\a4e_logo_512.paa);
+                    text = QPATHTOF(data\a4e_logo_512.paa);
                     x="0.125 * safezoneW";
 					y="0.234375 * safezoneH";
 					w="0.75 * safezoneW";
@@ -94,7 +94,7 @@ class RscDisplayMain: RscStandardDisplay {
         delete Spotlight;
         delete LogoApex;
 		class Logo: RscActivePicture {
-			text = PATHTOF(data\a4e_logo_shadow.paa);
+			text = QPATHTOF(data\a4e_logo_shadow.paa);
 			tooltip = "Arma4Ever.pl";
 			color[] = {0.89999998,0.89999998,0.89999998,1};
 			colorActive[] = {1,1,1,1};

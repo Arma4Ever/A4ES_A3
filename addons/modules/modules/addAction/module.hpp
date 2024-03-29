@@ -71,7 +71,7 @@ class GVAR(addAction): GVAR(base) {
             displayName = CSTRING(addAction_Attributes_conditionLogicFlags);
             tooltip = CSTRING(addAction_Attributes_conditionLogicFlags_tooltip);
             property = QGVAR(conditionLogicFlags);
-            defaultValue = "'[]'";
+            defaultValue = QUOTE('[]');
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(conditionType)) isEqualTo 0);
             ATTRIBUTE_LOCAL;
         };
@@ -187,7 +187,7 @@ class GVAR(addAction): GVAR(base) {
             property = QGVAR(progressFailedScriptHandler);
             defaultValue = "''";
             typeName = "STRING";
-            GVAR(conditionActive) = QUOTE( ((_this getVariable QQGVAR(progress)) isEqualTo true) && {(_this getVariable QQGVAR(addProgressFailedScriptHandler)) isEqualTo true});
+            GVAR(conditionActive) = QUOTE(((_this getVariable QQGVAR(progress)) isEqualTo true) && {(_this getVariable QQGVAR(addProgressFailedScriptHandler)) isEqualTo true});
         };
 
         class GVAR(activatorSettingsSubCategory): GVAR(moduleSubCategory) {

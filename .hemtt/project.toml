@@ -1,0 +1,23 @@
+name = "A4ES"
+prefix = "a4es"
+author = "Arma4Ever.pl"
+mainprefix = "z"
+
+[files]
+include = [
+    "*.dll",
+    "*.so",
+    "mod.cpp",
+    "README.md",
+    "LICENSE",
+    "logo_a4es.paa",
+	"logosmall_a4es.paa",
+	"picture_a4es.paa",
+    "meta.cpp"
+]
+exclude = [
+    ".inc.sqf"
+]
+
+[version]
+git_hash = 0

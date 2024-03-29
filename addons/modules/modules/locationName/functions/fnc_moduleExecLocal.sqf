@@ -7,7 +7,7 @@
 params ["_mapLocation", "_customName", "_locationType"];
 
 if (!hasInterface) exitWith {
-  TRACE_1("locationName_moduleExecLocal abort: no interface", _customName);
+  TRACE_1("locationName_moduleExecLocal abort: no interface",_customName);
 };
 
 private _editableLocation = createLocation [_mapLocation];
