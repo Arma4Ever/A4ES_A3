@@ -1,6 +1,6 @@
 name = "A4ES"
 prefix = "a4es"
-author = "Arma4Ever.pl"
+author = "Arma4Ever.pl and respectful authors of included external mods"
 mainprefix = "z"
 
 [files]
@@ -21,3 +21,7 @@ exclude = [
 
 [version]
 git_hash = 0
+
+[hemtt.release]
+sign = false
+archive = false

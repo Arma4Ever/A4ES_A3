@@ -1,7 +1,17 @@
 import os
 
-VENDOR = {
+# Prefix of A4ES pbo's
+modPboPrefix = 'a4es'
+# A4ES addons that should be moved to internal mod
+internalAddons = ['admin','stats','settings','main_menu','branding']
+# Project root files that should be copied to internal mod
+internalCommonRootFiles = ["LICENSE", "logo_a4es.paa", "logosmall_a4es.paa", "picture_a4es.paa"]
+
+# Vendor mods
+vendorModsList = {
+    # ---------------------------------------------- BASE MODS
     "@ACE": {
+        "baseMod": True,
         "blacklist": [
             "ace_advanced_fatigue",
             "ace_hearing",
@@ -17,18 +27,37 @@ VENDOR = {
             os.path.join("@ace_nouniformrestrictions", "addons", "ace_nouniformrestrictions.pbo"),
         ],
     },
-    "@LAMBS_Danger.fsm": {},
-    "@LAMBS_Suppression": {},
-    "@LAMBS_Turrets": {},
-    "@LAMBS_RPG": {},
+    "@LAMBS_Danger.fsm": {
+        "baseMod": True,
+    },
+    "@LAMBS_Suppression": {
+        "baseMod": True,
+    },
+    "@LAMBS_Turrets": {
+        "baseMod": True,
+    },
+    "@LAMBS_RPG": {
+        "baseMod": True,
+    },
+    "@Zeus Enhanced": {
+        "baseMod": True,
+    },
+    "@Zeus Enhanced - ACE3 Compatibility": {
+        "baseMod": True,
+    },
+    "@Gruppe Adler Trenches": {
+        "baseMod": True,
+    },
+    "@ArmaZeusCache": {
+        "baseMod": True,
+    },
+    # ---------------------------------------------- INTERNAL MODS
     "@3den Enhanced": {},
+    "@PLP Markers": {},
     "@Blurry Laser": {},
     "@Ladder Tweak": {},
-    "@Zeus Enhanced": {},
-    "@Zeus Enhanced - ACE3 Compatibility": {},
     "@Enhanced Movement": {},
     "@Enhanced Movement Rework": {},
-    "@Gruppe Adler Trenches": {},
     "@VET_Unflipping": {},
     "@BackpackOnChest - Redux": {},
     "@Breaching Charge": {},
@@ -37,11 +66,8 @@ VENDOR = {
         "blacklist": ["expEden_static_ssDM"],
     },
     "@Metis Nature": {},
-    "@PLP Markers": {},
     "@Blastcore Murr Edition": {},
     "@Swim Faster": {},
-    "@Hate's Hidden Cameras": {},
-    "@ArmaZeusCache": {},
     "@ILBE Assault Pack - Rewrite": {},
     "@FRXA's TFAR Extra Retextured Equipment": {},
     "@ACD - Arma3 Containers And Decorations": {},
@@ -49,9 +75,11 @@ VENDOR = {
     "@MS_IFF_Strobe": {},
     "@Deformer": {},
     "@Death and Hit reactions": {},
-    # "@VcomAI custom": {},
     "@Snapping for Eden and Zeus": {},
 
+    # ---------------------------------------------- LEGACY MODS
+    #"@Hate's Hidden Cameras": {},
+    #"@VcomAI custom": {},
     #"@L3-GPNVG18 Panoramic Night Vision": {},
     #"@Uriki's Mission Items": {},
     #"@Simple Armbands": {},
@@ -72,3 +100,24 @@ VENDOR = {
     #"-JSHK_Contamination_Gear": {},
     #"-A4ES_vendor": {},
 }
+
+# Paths
+
+projectPath = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+hemttExePath = os.path.join(projectPath, "hemtt.exe")
+
+hemttOutPath = os.path.join(projectPath, ".hemttout")
+hemttOutDevPath = os.path.join(hemttOutPath, "dev")
+hemttOutDevAddonsPath = os.path.join(hemttOutDevPath, "addons")
+
+hemttOutInternalPath = os.path.join(hemttOutPath, "dev_internal")
+hemttOutInternalAddonsPath = os.path.join(hemttOutInternalPath, "addons")
+
+internalFilesPath = os.path.join(projectPath, "internal")
+
+vendorPath = os.path.join(projectPath, "vendor")
+vendorWorkshopPath = os.path.join(vendorPath, "workshop")
+vendorLocalPath = os.path.join(vendorPath, "local")
+vendorAddonsPath = os.path.join(vendorPath, "addons")
+
+outsideVendorPath = os.path.join(projectPath, '..', 'a4es__vendor__tmp')

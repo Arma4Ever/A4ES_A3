@@ -2,8 +2,8 @@
 <Project name="A4ES">
   <Package name="Main">
     <Key ID="STR_A4ES_Main_Author">
-      <English>SzwedzikPL and respectful authors of included external mods</English>
-      <Polish>SzwedzikPL oraz autorzy załączonych modów zewnętrznych</Polish>
+      <English>Arma4Ever.pl and respectful authors of included external mods</English>
+      <Polish>Arma4Ever.pl oraz autorzy załączonych modów zewnętrznych</Polish>
     </Key>
     <Key ID="STR_A4ES_Main_URL">
       <English>https://arma4ever.pl/</English>

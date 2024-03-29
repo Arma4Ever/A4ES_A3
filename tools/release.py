@@ -4,7 +4,7 @@ import sys
 import helpers
 
 def main():
-    return helpers.build_mod('dev')
+    return helpers.build_mod('release')
 
 if __name__ == "__main__":
     sys.exit(main())
