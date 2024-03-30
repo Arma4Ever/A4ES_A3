@@ -8,7 +8,6 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
 			"a4es_common",
-			"a4es_particles",
 			"A3_Ui_F",
 			"A3_Weapons_F",
 			"A3_Weapons_F_Jets",

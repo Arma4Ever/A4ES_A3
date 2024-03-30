@@ -3,7 +3,7 @@ import os
 # Prefix of A4ES pbo's
 modPboPrefix = 'a4es'
 # A4ES addons that should be moved to internal mod
-internalAddons = ['admin','stats','settings','main_menu','branding','vendor']
+internalAddons = ['admin','stats','settings','main_menu','branding','vendor','particles']
 # Project root files that should be copied to internal mod
 internalCommonRootFiles = ["LICENSE", "logo_a4es.paa", "logosmall_a4es.paa", "picture_a4es.paa"]
 
@@ -51,32 +51,43 @@ vendorModsList = {
     "@ArmaZeusCache": {
         "baseMod": True,
     },
-    # ---------------------------------------------- INTERNAL MODS
-    "@3den Enhanced": {},
-    "@PLP Markers": {},
-    "@Blurry Laser": {},
-    "@Ladder Tweak": {},
-    "@Enhanced Movement": {},
-    "@Enhanced Movement Rework": {},
-    "@VET_Unflipping": {},
-    "@BackpackOnChest - Redux": {},
-    "@Breaching Charge": {},
-    "@Eden Extended Objects": {},
+    "@Eden Extended Objects": {
+        "baseMod": True,
+    },
     "@O&T Expansion Eden": {
+        "baseMod": True,
         "blacklist": ["expEden_static_ssDM"],
     },
-    "@Metis Nature": {},
+    "@ACD - Arma3 Containers And Decorations": {
+        "baseMod": True,
+    },
+    "@3den Enhanced": {
+        "baseMod": True,
+    },
+    "@Deformer": {
+        "baseMod": True,
+    },
+    "@ILBE Assault Pack - Rewrite": {
+        "baseMod": True,
+    },
+    # ---------------------------------------------- INTERNAL MODS
     "@Blastcore Murr Edition": {},
-    "@Swim Faster": {},
-    "@ILBE Assault Pack - Rewrite": {},
-    "@FRXA's TFAR Extra Retextured Equipment": {},
-    "@ACD - Arma3 Containers And Decorations": {},
+    "@PLP Markers": {},
+    "@Breaching Charge": {},
+    "@Metis Nature": {},
     "@Enhanced Map Ace Version": {},
     "@MS_IFF_Strobe": {},
-    "@Deformer": {},
+    "@FRXA's TFAR Extra Retextured Equipment": {},
     "@Death and Hit reactions": {},
+    "@Swim Faster": {},
+    "@Enhanced Movement": {},
+    "@Enhanced Movement Rework": {},
     "@Snapping for Eden and Zeus": {},
-
+    "@BackpackOnChest - Redux": {},
+    "@Blurry Laser": {},
+    "@Ladder Tweak": {},
+    "@VET_Unflipping": {},
+    
     # ---------------------------------------------- LEGACY MODS
     #"@Hate's Hidden Cameras": {},
     #"@VcomAI custom": {},

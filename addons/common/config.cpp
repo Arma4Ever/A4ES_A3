@@ -13,11 +13,12 @@ class CfgPatches {
         VERSION_CONFIG;
     };
 };
-
+/*
 class a4es_functions_overrides {
     ace_common_fnc_setVolume = QPATHTOF(functions\fnc_ace_setVolume.sqf);
     ace_common_fnc_setHearingCapability = QPATHTOF(functions\fnc_ace_setHearingCapability.sqf);
 };
+*/
 
 #include "CfgEventHandlers.hpp"
 #include "CfgDifficultyPresets.hpp"

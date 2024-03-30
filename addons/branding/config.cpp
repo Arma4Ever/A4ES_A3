@@ -72,7 +72,7 @@ class RscDisplayMain: RscStandardDisplay {
         delete Spotlight;
         delete LogoApex;
 		class Logo: RscActivePicture {
-			text = QPATHTOF(data\a4e_logo_shadow.paa);
+			text = QPATHTOEF(main,data\a4e_logo_shadow.paa);
 			tooltip = "Arma4Ever.pl";
 			color[] = {0.89999998,0.89999998,0.89999998,1};
 			colorActive[] = {1,1,1,1};
