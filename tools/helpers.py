@@ -145,8 +145,8 @@ def build_mod(buildMode):
     for fileName in common.internalCommonRootFiles:
         filePath = os.path.join(hemttOutPath, fileName)
         if os.path.exists(filePath):
-            print("  Copying {} to internal mod".format(file))
-            shutil.copy2(filePath, os.path.join(hemttOutInternalPath, file))
+            print("  Copying {} to internal mod".format(fileName))
+            shutil.copy2(filePath, os.path.join(hemttOutInternalPath, fileName))
 
     # Copy internal static files
     for file in os.listdir(common.internalFilesPath):
