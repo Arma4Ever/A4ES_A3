@@ -25,4 +25,4 @@ private _count = 0;
   } forEach _data;
 } forEach _dataArray;
 
-systemChat format ["[A4ES] Stworzono %1 obiektów prostych", _count];
+systemChat format [LLSTRING(objects3DENComp_chatMessage), _count];

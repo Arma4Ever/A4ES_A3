@@ -27,7 +27,7 @@ class Cfg3DEN {
                     y = "0 * 5 * (pixelH * pixelGrid * 0.50)";
                     w = "82 * (pixelW * pixelGrid * 0.50)";
                     h = "5 * (pixelH * pixelGrid * 0.50)";
-                    text = "Kategoria rangi";
+                    text = CSTRING(Attributes_rankCategory);
                     colorText[] = {1, 1, 1, 0.4};
                 };
                 class GVAR(category): ctrlCombo {
@@ -43,7 +43,7 @@ class Cfg3DEN {
                     y = "2 * 5 * (pixelH * pixelGrid * 0.50)";
                     w = "82 * (pixelW * pixelGrid * 0.50)";
                     h = "5 * (pixelH * pixelGrid * 0.50)";
-                    text = "Ranga";
+                    text = CSTRING(Attributes_rank);
                     colorText[] = {1, 1, 1, 0.4};
                 };
                 class Value: Value {
