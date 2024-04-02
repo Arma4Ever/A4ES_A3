@@ -21,5 +21,17 @@
             <English>Rebind granade throw!</English>
             <Polish>Przebinduj rzut granatem!</Polish>
         </Key>
+        <Key ID="STR_A4ES_Mission_Settings_Addon">
+            <English>A4ES Mission</English>
+            <Polish>A4ES Mision</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Mission_Settings_checkTemplate">
+            <English>Check Mission Template</English>
+            <Polish>Sprawdzaj Szablon Misji</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Mission_Settings_checkTemplate_Tooltip">
+            <English>Check if mission template is up to date on mission start.</English>
+            <Polish>Przy uruchomieniu misji sprawdza czy szablon misji jest aktualny.</Polish>
+        </Key>
     </Package>
 </Project>
