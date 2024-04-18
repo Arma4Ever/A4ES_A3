@@ -175,7 +175,6 @@ class CfgAmmo {
         suppressionRadiusHit = 200; //200
         missileLockMaxDistance = 64000; //32000
         explosionAngle = 85; //60
-        explosionEffects = "A4ES_VLSExplosion";
 
         class Components: Components {
             class SensorsManagerComponent {

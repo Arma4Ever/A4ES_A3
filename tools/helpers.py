@@ -141,6 +141,13 @@ def build_mod(buildMode):
     os.makedirs(hemttOutInternalPath)
     os.makedirs(hemttOutInternalAddonsPath)
 
+    # Copy common static files
+    for fileName in common.internalCommonRootFiles:
+        filePath = os.path.join(hemttOutPath, fileName)
+        if os.path.exists(filePath):
+            print("  Copying {} to internal mod".format(fileName))
+            shutil.copy2(filePath, os.path.join(hemttOutInternalPath, fileName))
+
     # Copy internal static files
     for file in os.listdir(common.internalFilesPath):
         print("  Copying {} to internal mod".format(file))
@@ -180,7 +187,7 @@ def build_mod(buildMode):
             print("  ### Vendor mod {} not found\n".format(modKey))
             continue
 
-        print("  {} from {}".format(modKey, "local build" if modLocalRootPath == modRootPath else "workshop"))
+        print("{} {} from {}".format("Base" if isBaseMod else "Internal", modKey, "local build" if modLocalRootPath == modRootPath else "workshop"))
 
         # Copy dll's
         copiedDlls = copy_dll_files(modRootPath, hemttOutPath if isBaseMod else hemttOutInternalPath)

@@ -8,6 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "a4es_common",
+			"a4es_support",
             "A3_Data_F_ParticleEffects",
             "Blastcore_VEP"
         };
@@ -91,5 +92,13 @@ class A4ES_VLSExplosion: HeavyBombExplosion {
 		smokeGenMaxDist = 1200;
 		smokeSizeCoef = 0;
 		smokeIntervalCoef = 0;
+	};
+};
+
+class CfgAmmo {
+    class MissileCore;
+    class MissileBase: MissileCore {};
+	class ammo_Missile_CruiseBase: MissileBase {
+		explosionEffects = "A4ES_VLSExplosion";
 	};
 };

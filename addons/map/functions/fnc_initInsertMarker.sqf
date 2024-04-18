@@ -29,14 +29,14 @@ private _pos = [
     _this call FUNC(handleButtonClick);
   }];
 } forEach [
-  ["Piechota", ["o_inf", "ColorEAST", parseNumber _canTimestamp]],
-  ["Piechota zmot.", ["o_motor_inf", "ColorEAST", parseNumber _canTimestamp]],
-  ["Piechota zmech.", ["o_mech_inf", "ColorEAST", parseNumber _canTimestamp]],
+  [LLSTRING(Inf), ["o_inf", "ColorEAST", parseNumber _canTimestamp]],
+  [LLSTRING(Inf_mot), ["o_motor_inf", "ColorEAST", parseNumber _canTimestamp]],
+  [LLSTRING(Inf_mech), ["o_mech_inf", "ColorEAST", parseNumber _canTimestamp]],
   [LLSTRING(Tank), ["o_armor", "ColorEAST", parseNumber _canTimestamp]],
-  ["Artyleria", ["o_art", "ColorEAST", parseNumber _canTimestamp]],
-  ["AA", ["o_antiair", "ColorEAST", parseNumber _canTimestamp]],
-  ["Mina", ["loc_mine", "ColorEAST", parseNumber _canTimestamp]],
-  ["Umocnienia", ["mil_triangle", "ColorEAST", parseNumber _canTimestamp]],
-  ["Cel ogniowy", ["hd_Contact_pencilTask1", "ColorEAST", parseNumber _canTimestamp]],
-  ["LZ", ["hd_Contact_circle4", "ColorBlack", 2]]
+  [LLSTRING(Art), ["o_art", "ColorEAST", parseNumber _canTimestamp]],
+  [LLSTRING(AA), ["o_antiair", "ColorEAST", parseNumber _canTimestamp]],
+  [LLSTRING(Mine), ["loc_mine", "ColorEAST", parseNumber _canTimestamp]],
+  [LLSTRING(Def), ["mil_triangle", "ColorEAST", parseNumber _canTimestamp]],
+  [LLSTRING(Target), ["hd_Contact_pencilTask1", "ColorEAST", parseNumber _canTimestamp]],
+  [LLSTRING(LZ), ["hd_Contact_circle4", "ColorBlack", 2]]
 ];

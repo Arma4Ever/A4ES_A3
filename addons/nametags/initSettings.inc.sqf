@@ -43,8 +43,7 @@
 
 [
     QGVAR(2DNameTagShowTraits), "CHECKBOX",
-    // LSTRING(2DNameTagShowTraits)
-    "Wyswietlaj uprawnienia jednostki na nametagu 2D",
+    LSTRING(Settings_2DNameTagShowTraits),
     LSTRING(Settings_Addon),
     true,
     2

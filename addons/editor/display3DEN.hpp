@@ -148,7 +148,7 @@ class Display3DEN {
                         // "ENH_BriefingEditor",
                         // "ENH_AttributeSearch",
                         // "ENH_ActionCreator",
-                        "ENH_BatchReplace",
+                        // "ENH_BatchReplace", - MISSING
                         "ENH_NameObjects"
                         // "ENH_ZeusAddons"
                     };

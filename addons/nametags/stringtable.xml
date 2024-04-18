@@ -85,6 +85,10 @@
             <English>Big</English>
             <Polish>Duży</Polish>
         </Key>
+        <Key ID="STR_A4ES_NameTags_Attributes_rankCategory">
+            <Polish>Kategoria rangi</Polish>
+            <English>Rank category</English>
+        </Key>
         <Key ID="STR_A4ES_NameTags_Attributes_showNameTag">
             <Polish>Wyświetlaj nametag jednostki (AI)</Polish>
             <English>Display unit nametag (AI)</English>
@@ -137,7 +141,7 @@
         </Key>
         <Key ID="STR_A4ES_NameTags_RankCategory_RU">
             <Polish>Rosyjskie Siły Zbrojne</Polish>
-            <English>Russian Armed Forces.</English>
+            <English>Russian Armed Forces</English>
         </Key>
         <Key ID="STR_A4ES_NameTags_RankCategory_CDF">
             <Polish>Siły Obrony Czernorusi</Polish>
@@ -263,11 +267,11 @@
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_BrygadierGeneral">
             <Polish>Generał Brygady</Polish>
-            <English>	Brigadier General</English>
+            <English>Brigadier General</English>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_MajorGeneral">
             <Polish>Generał Dywizji</Polish>
-            <English>	Major General</English>
+            <English>Major General</English>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_LieutenantGeneral">
             <Polish>Generał Broni</Polish>
@@ -275,23 +279,27 @@
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_General">
             <Polish>Generał</Polish>
-            <English>	General</English>
+            <English>General</English>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_Marshal">
             <Polish>Marszałek</Polish>
             <English>Marshal</English>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_Ml_Aspirant">
+            <English>Mł. Aspirant</English>
             <Polish>Mł. Aspirant</Polish>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_Ml_Inspektor">
-            <Polish>Mł. Inspektor</Polish>
+            <English>Mł. Inspektor</English>
+            <Polish>Mł. Aspirant</Polish>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_St_Sierzant_Sztabowy">
-            <Polish>St. Sierżant Sztabowy</Polish>
+            <English>St. Sierżant Sztabowy</English>
+            <Polish>Mł. Aspirant</Polish>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_Ml_Podporucznik">
-            <Polish>Mł. Podporucznik</Polish>
+            <English>Mł. Podporucznik</English>
+            <Polish>Mł. Aspirant</Polish>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_Sierzant_Technik">
             <Polish>Sierżant - Technik</Polish>
@@ -301,13 +309,13 @@
             <Polish>Lotnik</Polish>
             <English>Airman</English>
         </Key>
-        <Key ID="STR_A4ES_NameTags_Ranks_Ariman2">
+        <Key ID="STR_A4ES_NameTags_Ranks_Airman2">
             <Polish>St. Lotnik</Polish>
             <English>Senior Airman</English>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_Seaman">
             <Polish>Marynarz</Polish>
-            <English>	Seaman Recruit</English>
+            <English>Seaman Recruit</English>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_Seaman2">
             <Polish>St. Marynarz</Polish>
@@ -319,43 +327,43 @@
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_Petty2nd">
             <Polish>St. Mat</Polish>
-            <English>	Petty Officer 2rd Class</English>
+            <English>Petty Officer 2rd Class</English>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_Petty1st">
             <Polish>Bosmanmat</Polish>
-            <English>	Petty Officer 1st Class</English>
+            <English>Petty Officer 1st Class</English>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_ChiefPetty">
             <Polish>Bosman</Polish>
-            <English>	Chief Petty Officer</English>
+            <English>Chief Petty Officer</English>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_SeniorChiefPetty">
             <Polish>St. Bosman</Polish>
-            <English>	Senior Chief Petty Officer</English>
+            <English>Senior Chief Petty Officer</English>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_JuniorWarrant">
             <Polish>Mł. Chorąży Marynarki</Polish>
-            <English>	Junior Warrant Officer</English>
+            <English>Junior Warrant Officer</English>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_Ensign">
             <Polish>Podporucznik marynarki</Polish>
-            <English>	Ensign</English>
+            <English>Ensign</English>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_SubLieutenant">
             <Polish>Porucznik marynarki</Polish>
-            <English>	Sub-Lieutenant</English>
+            <English>Sub-Lieutenant</English>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_LieutenantNavy">
             <Polish>Kapitan marynarki</Polish>
-            <English>	Lieutenant</English>
+            <English>Lieutenant</English>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_CaptainNavy">
             <Polish>Komandor</Polish>
-            <English>	Captain</English>
+            <English>Captain</English>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_Admiral">
             <Polish>Admirał</Polish>
-            <English>	Admiral</English>
+            <English>Admiral</English>
         </Key>
     </Package>
 </Project>
