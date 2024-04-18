@@ -3524,7 +3524,7 @@
             <Polish>System stacjonarnego obrońcy będzie wyłączony dla wszystkich jednostek stworzonych przez moduł.</Polish>
         </Key>
         <Key ID="STR_A4ES_Modules_units3DENComp_Attributes_defenderBehaviour_up">
-            <English>Standing up and laying down</English>
+            <English>Standing up and lying down</English>
             <Polish>Wstawianie i kładzenie się</Polish>
         </Key>
         <Key ID="STR_A4ES_Modules_units3DENComp_Attributes_defenderBehaviour_up_tooltip">

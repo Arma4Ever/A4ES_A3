@@ -291,15 +291,15 @@
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_Ml_Inspektor">
             <English>Mł. Inspektor</English>
-            <Polish>Mł. Aspirant</Polish>
+            <Polish>Mł. Inspektor</Polish>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_St_Sierzant_Sztabowy">
             <English>St. Sierżant Sztabowy</English>
-            <Polish>Mł. Aspirant</Polish>
+            <Polish>St. Sierżant Sztabowy</Polish>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_Ml_Podporucznik">
             <English>Mł. Podporucznik</English>
-            <Polish>Mł. Aspirant</Polish>
+            <Polish>Mł. Podporucznik</Polish>
         </Key>
         <Key ID="STR_A4ES_NameTags_Ranks_Sierzant_Technik">
             <Polish>Sierżant - Technik</Polish>
