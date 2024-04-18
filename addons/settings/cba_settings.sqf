@@ -2,6 +2,9 @@
 force ace_viewdistance_enabled = true;
 force ace_viewdistance_limitViewDistance = 12000;
 
+// A4ES Mission
+force a4es_mission_checkTemplate = true;
+
 // ACE Advanced Ballistics
 force ace_advanced_ballistics_ammoTemperatureEnabled = true;
 force ace_advanced_ballistics_barrelLengthInfluenceEnabled = true;

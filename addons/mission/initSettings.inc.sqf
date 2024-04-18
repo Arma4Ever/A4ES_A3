@@ -5,5 +5,5 @@
     [LSTRING(Settings_checkTemplate), LSTRING(Settings_checkTemplate_Tooltip)],
     LSTRING(Settings_Addon),
     true,
-    2
+    true
 ] call CBA_settings_fnc_init;
