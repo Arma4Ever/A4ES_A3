@@ -1006,7 +1006,7 @@
     </Package>
     <Package name="Modules_dynamicToolbox3DENCompMode">
         <Key ID="STR_A4ES_Modules_dynamicToolbox3DENCompMode_edit">
-            <English>Editn</English>
+            <English>Edit</English>
             <Polish>Edycja</Polish>
         </Key>
         <Key ID="STR_A4ES_Modules_dynamicToolbox3DENCompMode_edit_tooltip">
