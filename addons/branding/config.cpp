@@ -72,11 +72,13 @@ class RscDisplayMain: RscStandardDisplay {
         delete Spotlight;
         delete LogoApex;
 		class Logo: RscActivePicture {
-			text = QPATHTOEF(main,data\a4e_logo_shadow.paa);
+			text = QPATHTOEF(main,data\a4e_logo_header.paa);
 			tooltip = "Arma4Ever.pl";
 			color[] = {0.89999998,0.89999998,0.89999998,1};
 			colorActive[] = {1,1,1,1};
 			shadow = 0;
+            w="1.73 * 	5 * 	(pixelW * pixelGrid * 2)";
+			h="1.7 * 	5 * 	(pixelH * pixelGrid * 2)";
             url = "https://arma4ever.pl";
 			onButtonClick = "";
 			onSetFocus = "(_this select 0) ctrlsettextcolor [1,1,1,1];";

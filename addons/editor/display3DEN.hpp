@@ -44,7 +44,8 @@ class Display3DEN {
                 "ENH_ShowModuleInformation",
                 "ENH_Garrison",
                 "ENH_AddToFavorites",
-                "ENH_MoveToLayer"
+                "ENH_MoveToLayer",
+                "ENH_OtherTools"
             };
 
             class ConnectParent {
