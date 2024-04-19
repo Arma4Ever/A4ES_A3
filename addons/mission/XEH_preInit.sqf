@@ -3,6 +3,7 @@
 ADDON = false;
 
 #include "XEH_PREP.hpp"
+#include "initSettings.inc.sqf"
 
 ["a4es_missionStart", {
   if !(hasInterface) exitWith {};

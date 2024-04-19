@@ -66,7 +66,7 @@ if (hasInterface) then {
   disableRemoteSensors true;
 
   // Validate mission template
-  if ((getMissionConfigValue ["a4e_missionTemplate", 0]) < REQUIRED_MISSION_TEMPLATE_VERSION) then {
+  if (GVAR(checkTemplate) && {(getMissionConfigValue ["a4e_missionTemplate", 0]) < REQUIRED_MISSION_TEMPLATE_VERSION}) then {
     0 spawn {
       sleep 3;
       if (EGVAR(common,isMainMenu)) exitWith {};
