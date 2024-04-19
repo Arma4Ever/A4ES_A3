@@ -4,17 +4,6 @@ class CfgVehicles {
     class Items_base_F;
     class Item_Base_F;
 
-    class GVAR(painkillersItem): Item_Base_F {
-        scope = 2;
-        scopeCurator = 2;
-        displayName = CSTRING(Painkillers_DisplayName);
-        author = "Alganthe";
-        vehicleClass = "Items";
-        class TransportItems {
-            MACRO_ADDITEM(A4ES_painkillers,1);
-        };
-    };
-
     class GVAR(dressingSet): Items_base_F {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
