@@ -4,11 +4,10 @@
  * suppliesStorage module local exec function
  */
 
-params ["_logic", "_target", "_storageID"];
-TRACE_3("suppliesStorage_moduleExecLocal",_logic,_targets,_storageID);
+params ["_target", "_storageID"];
 
-if (!hasInterface || {isNull _logic}) exitWith {
-  TRACE_1("suppliesStorage_moduleExecLocal abort: no interface or logic null",_logic);
+if (!hasInterface) exitWith {
+  TRACE_1("suppliesStorage_moduleExecLocal abort: no interface",_target);
 };
 
 private _validTargets = _target select {!(isNull _x)};

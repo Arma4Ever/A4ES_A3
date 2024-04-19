@@ -41,9 +41,17 @@ if ((count _object) isEqualTo 0) exitWith {
 
 _object = _object#0;
 // Get object content
-private _items = [];
-private _cargo = getItemCargo _object;
-{_items pushBack [_x, (_cargo # 1) # _forEachIndex];} forEach (_cargo #0);
+private _itemCargo = getItemCargo _object;
+private _magazineCargo = getMagazineCargo _object;
+private _weaponCargo = getWeaponCargo _object;
+private _backpackCargo = getBackpackCargo _object;
+
+private _items = [
+  _itemCargo,
+  _magazineCargo,
+  _weaponCargo,
+  _backpackCargo
+];
 
 // Save object
 LOG_1('Saving object "%1"',_objectName);

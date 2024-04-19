@@ -44,7 +44,7 @@ private _side = "west";
 private _target = (synchronizedObjects _logic) select {!(_x isKindOf "EmptyDetector") || !(_x isKindOf QGVAR(suppliesObject))};
 
 // Send global event and save for JIP
-[QGVAR(addSuppliesAction), [_logic, _target, _storageID]] call CBA_fnc_globalEventJIP;
+[QGVAR(addSuppliesAction), [_target, _storageID]] call CBA_fnc_globalEventJIP;
 
 // Delete module
 deleteVehicle _logic;

@@ -4,7 +4,14 @@
  * spawnSupply function
  */
 
-params ["_objectName", "_class", "_objectCount", "_pos", "_items", "_objectPostInit", "_side", "_storageID"];
+params ["_objectName", "_class", "_objectCount", "_pos", "_inventory", "_objectPostInit", "_side", "_storageID"];
+
+_inventory params [
+    ["_itemCargo", [], [[]]],
+    ["_magazineCargo", [], [[]]],
+    ["_weaponCargo", [], [[]]],
+    ["_backpackCargo", [], [[]]]
+];
 
 private _object = _class createVehicle _pos;
 
@@ -17,7 +24,11 @@ clearMagazineCargoGlobal _object;
 clearItemCargoGlobal _object;
 clearBackpackCargoGlobal _object;
 _object setMaxLoad 99999;
-{_object addItemCargoGlobal _x} forEach _items;
+
+{_object addMagazineCargoGlobal [_x, (_magazineCargo #1) select _forEachIndex]} forEach (_magazineCargo #0);
+{_object addWeaponCargoGlobal [_x, (_weaponCargo #1) select _forEachIndex]} forEach (_weaponCargo #0);
+{_object addBackpackCargoGlobal [_x, (_backpackCargo #1) select _forEachIndex]} forEach (_backpackCargo #0);
+{_object addItemCargoGlobal [_x, (_itemCargo #1) select _forEachIndex]} forEach (_itemCargo #0);
 
 _object setVariable ["ace_cargo_customName", _objectName, true];
 [_object, 2] call ace_cargo_fnc_setSize;

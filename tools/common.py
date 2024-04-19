@@ -70,23 +70,39 @@ vendorModsList = {
     "@ILBE Assault Pack - Rewrite": {
         "baseMod": True,
     },
+    "@Breaching Charge": {
+        "baseMod": True,
+    },
+    "@FRXA's TFAR Extra Retextured Equipment": {
+        "baseMod": True,
+    },
+    "@Swim Faster": {
+        "baseMod": True,
+    },
+    "@Enhanced Movement": {
+        "baseMod": True,
+    },
+    "@Enhanced Movement Rework": {
+        "baseMod": True,
+    },
+    "@Ladder Tweak": {
+        "baseMod": True,
+    },
+    "@VET_Unflipping": {
+        "baseMod": True,
+    },
+    "@BackpackOnChest - Redux": {
+        "baseMod": True,
+    },
     # ---------------------------------------------- INTERNAL MODS
     "@Blastcore Murr Edition": {},
     "@PLP Markers": {},
-    "@Breaching Charge": {},
     "@Metis Nature": {},
     "@Enhanced Map Ace Version": {},
     "@MS_IFF_Strobe": {},
-    "@FRXA's TFAR Extra Retextured Equipment": {},
     "@Death and Hit reactions": {},
-    "@Swim Faster": {},
-    "@Enhanced Movement": {},
-    "@Enhanced Movement Rework": {},
     "@Snapping for Eden and Zeus": {},
-    "@BackpackOnChest - Redux": {},
     "@Blurry Laser": {},
-    "@Ladder Tweak": {},
-    "@VET_Unflipping": {},
     
     # ---------------------------------------------- LEGACY MODS
     #"@Hate's Hidden Cameras": {},
