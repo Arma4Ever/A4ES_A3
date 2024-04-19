@@ -1006,7 +1006,7 @@
     </Package>
     <Package name="Modules_dynamicToolbox3DENCompMode">
         <Key ID="STR_A4ES_Modules_dynamicToolbox3DENCompMode_edit">
-            <English>Editn</English>
+            <English>Edit</English>
             <Polish>Edycja</Polish>
         </Key>
         <Key ID="STR_A4ES_Modules_dynamicToolbox3DENCompMode_edit_tooltip">
@@ -1036,6 +1036,7 @@
             <Polish>Generator piechoty</Polish>
         </Key>
         <Key ID="STR_A4ES_Modules_generateSoldiers_shortDescription">
+            <English>Module generates infantry units in a given area.</English>
             <Polish>Moduł generuje jednostki piechoty na danym obszarze.</Polish>
         </Key>
         <Key ID="STR_A4ES_Modules_generateSoldiers_positionInfo">
@@ -1135,6 +1136,7 @@
             <Polish>Strona do której należeć będą wygenerowane grupy.</Polish>
         </Key>
         <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_skill_Tooltip">
+            <English>Skill level that will be set on each generated unit.</English>
             <Polish>Poziom umiejętności jaki zostanie nadany każdej wygenerowanej jednostce.</Polish>
         </Key>
         <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_areaSettingsSubCategory">
@@ -2476,6 +2478,7 @@
             <English>The name of the function (the name of the variable that is the function) that is to be called when zeus uses the module, e.g. mission_fnc_myZeusModule</English>
         </Key>
         <Key ID="STR_A4ES_Modules_addCuratorModule_Attributes_function_Description">
+            <English>The function will be executed at zeus who placed module. Function will be called with parameters:&lt;br /&gt;#0 - _posASL: module ASL position.&lt;br /&gt;#1 - _attachedObj: object on which module was placed (objNull if none).</English>
             <Polish>Funkcja zostanie wykonana u zeusa który postawi moduł. Funckja zostanie wywołana z parametrami:&lt;br /&gt;#0 - _posASL: pozycja ASL modułu.&lt;br /&gt;#1 - _attachedObj: obiekt na którym został postawiony moduł (objNull jeśli brak).</Polish>
         </Key>
         <Key ID="STR_A4ES_Modules_addCuratorModule_Warning_CategoryEmpty_Desc">
@@ -3521,7 +3524,7 @@
             <Polish>System stacjonarnego obrońcy będzie wyłączony dla wszystkich jednostek stworzonych przez moduł.</Polish>
         </Key>
         <Key ID="STR_A4ES_Modules_units3DENComp_Attributes_defenderBehaviour_up">
-            <English>Standing up and laying down</English>
+            <English>Standing up and lying down</English>
             <Polish>Wstawianie i kładzenie się</Polish>
         </Key>
         <Key ID="STR_A4ES_Modules_units3DENComp_Attributes_defenderBehaviour_up_tooltip">
@@ -3777,6 +3780,10 @@
         <Key ID="STR_A4ES_Modules_objects3DENComp_Warning_EditMode_Desc">
             <Polish>Moduł jest aktualnie w trybie edycji. Pamiętaj, aby po zakończonej pracy, połączyć odpowiednie obiekty z modułem a następnie przełączyć moduł w tryb odczytu.</Polish>
             <English>The module is currently in edit mode. Remember to connect the relevant objects to the module when you are finished and then switch the module to read mode.</English>
+        </Key>
+        <Key ID="STR_A4ES_Modules_objects3DENComp_chatMessage">
+            <Polish>[A4ES] Stworzono %1 obiektów prostych</Polish>
+            <English>[A4ES] Created %1 simple objects</English>
         </Key>
     </Package>
     <Package name="Modules_suppliesObject">

@@ -9,22 +9,22 @@ class POL_st_posterunkowy {
     importance = 1;
 };
 class POL_sierzant {
-    name = CSTRING(Ranks_Sierzant);
+    name = "Sierzant"
     icon = QPATHTOF(ranks\POL\sierzant.paa);
     importance = 2;
 };
 class POL_st_sierzant {
-    name = CSTRING(Ranks_St_Sierzant);
+    name = "St. Sierzant";
     icon = QPATHTOF(ranks\POL\st_sierzant.paa);
     importance = 3;
 };
 class POL_sierzant_sztabowy {
-    name = CSTRING(Ranks_Sierzant_Sztabowy);
+    name = "Sierzant Sztabowy"
     icon = QPATHTOF(ranks\POL\sierzant_sztabowy.paa);
     importance = 4;
 };
 class POL_ml_aspirant {
-    name = CSTRING(Ranks_Ml_Aspirant);
+    name = "Ml. Aspirant"
     icon = QPATHTOF(ranks\POL\ml_aspirant.paa);
     importance = 5;
 };

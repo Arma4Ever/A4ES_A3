@@ -5,6 +5,50 @@
             <Polish>Czołg</Polish>
             <English>Tank</English>
         </Key>
+         <Key ID="STR_A4ES_Map_Inf">
+            <Polish>Piechota</Polish>
+            <English>Infantry</English>
+        </Key>
+        <Key ID="STR_A4ES_Map_Inf">
+            <Polish>Piechota</Polish>
+            <English>Infantry</English>
+        </Key>
+        <Key ID="STR_A4ES_Map_Inf_mot">
+            <Polish>Piechota Zmot.</Polish>
+            <English>Mot. Infantry</English>
+        </Key>
+        <Key ID="STR_A4ES_Map_Inf_mech">
+            <Polish>Piechota Zmech.</Polish>
+            <English>Mech. Infantry</English>
+        </Key>
+        <Key ID="STR_A4ES_Map_Art">
+            <Polish>Artyleria.</Polish>
+            <English>Artillery</English>
+        </Key>
+        <Key ID="STR_A4ES_Map_AA">
+            <Polish>AA</Polish>
+            <English>AA</English>
+        </Key>
+        <Key ID="STR_A4ES_Map_Mine">
+            <Polish>Mina</Polish>
+            <English>Mine</English>
+        </Key>
+        <Key ID="STR_A4ES_Map_Def">
+            <Polish>Umocnienia</Polish>
+            <English>Fortification</English>
+        </Key>
+        <Key ID="STR_A4ES_Map_Def">
+            <Polish>Umocnienia</Polish>
+            <English>Fortification</English>
+        </Key>
+        <Key ID="STR_A4ES_Map_Target">
+            <Polish>Cel Ogniowy</Polish>
+            <English>Fire Target</English>
+        </Key>
+        <Key ID="STR_A4ES_Map_LZ">
+            <Polish>LZ</Polish>
+            <English>LZ</English>
+        </Key>
         <Key ID="STR_A4ES_Map_PlayerDeletedMarker">
             <Polish>%1 usunął marker</Polish>
             <English>%1 deleted marker</English>
