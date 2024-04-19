@@ -9,7 +9,7 @@ class POL_st_posterunkowy {
     importance = 1;
 };
 class POL_sierzant {
-    name = "Sierzant"
+    name = "Sierzant";
     icon = QPATHTOF(ranks\POL\sierzant.paa);
     importance = 2;
 };
@@ -19,12 +19,12 @@ class POL_st_sierzant {
     importance = 3;
 };
 class POL_sierzant_sztabowy {
-    name = "Sierzant Sztabowy"
+    name = "Sierzant Sztabowy";
     icon = QPATHTOF(ranks\POL\sierzant_sztabowy.paa);
     importance = 4;
 };
 class POL_ml_aspirant {
-    name = "Ml. Aspirant"
+    name = "Ml. Aspirant";
     icon = QPATHTOF(ranks\POL\ml_aspirant.paa);
     importance = 5;
 };
