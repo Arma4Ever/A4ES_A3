@@ -39,17 +39,6 @@ class ACE_Medical_Treatment_Actions {
         treatmentTime = QFUNC(getTreatmentTimeAutoinjector);
     };
 
-    class A4ES_painkillers: Morphine {
-        displayName = CSTRING(Painkillers_DisplayName);
-        displayNameProgress = CSTRING(Painkillers_Progress);
-        allowedSelections[] = {"head"};
-        items[] = {"A4ES_painkillers"};
-        icon = QPATHTOF(data\painkillers_icon_ca.paa);
-        condition = "";
-        treatmentTime = "ace_medical_treatment_treatmentTimeAutoinjector";
-        callbackSuccess = QUOTE(call ACEFUNC(medical_treatment,medication));
-    };
-
     class Diagnose: BasicBandage {};
     class A4ES_CheckMedications: Diagnose {
         displayName = CSTRING(CheckMedications_DisplayName);

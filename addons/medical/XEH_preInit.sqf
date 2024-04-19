@@ -16,7 +16,6 @@ GVAR(treatmentMessageTypes) = createHashMapFromArray [
   ["A4ES_checkNeurologicalInjuries", "examine"],
   ["A4ES_DrawBlood250", "drawing"],
   ["A4ES_DrawBlood500", "drawing"],
-  ["A4ES_painkillers", "painkillers"],
   ["Adenosine", "injection"],
   ["ApplyTourniquet", "applyTourniquet"],
   ["BasicBandage", "bandage"],

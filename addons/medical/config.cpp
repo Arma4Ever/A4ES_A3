@@ -5,13 +5,11 @@ class CfgPatches {
         name = COMPONENT_NAME;
         units[] = {
             QGVAR(dressingSet),
-            QGVAR(painkillersItem),
             QGVAR(crateBig),
             QGVAR(crateStandard)
         };
         weapons[] = {
             "A4ES_dressingSet",
-            "A4ES_painkillers",
             "A4ES_emptyBloodBag",
             "A4ES_usedBloodBag",
             "A4ES_clottedBloodBag"

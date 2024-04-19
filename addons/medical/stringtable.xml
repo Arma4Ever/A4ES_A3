@@ -33,14 +33,6 @@
       <English>Not enough place in inventory to pickup dressing set</English>
       <Polish>Za mało miejsca w ekwipunku aby podnieść zestaw opatrunkowy</Polish>
     </Key>
-    <Key ID="STR_A4ES_Medical_Painkillers_DisplayName">
-      <English>Painkillers</English>
-      <Polish>Leki przeciwbólowe</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Medical_Painkillers_Progress">
-      <English>Administering painkillers...</English>
-      <Polish>Podawanie leków przeciwbólowych...</Polish>
-    </Key>
     <Key ID="STR_A4ES_Medical_CheckDogtag_DisplayName">
       <English>Check Dog Tag</English>
       <Polish>Sprawdź nieśmiertelnik</Polish>
@@ -256,10 +248,6 @@
     <Key ID="STR_A4ES_Medical_TreatmentMessage_drawing">
       <English>%1 is drawing your blood...</English>
       <Polish>%1 pobiera Ci krew...</Polish>
-    </Key>
-    <Key ID="STR_A4ES_Medical_TreatmentMessage_painkillers">
-      <English>%1 is giving you painkillers...</English>
-      <Polish>%1 podaje Ci środki przeciwbólowe...</Polish>
     </Key>
     <Key ID="STR_A4ES_Medical_TreatmentMessage_injection">
       <English>%1 is giving you injection...</English>
