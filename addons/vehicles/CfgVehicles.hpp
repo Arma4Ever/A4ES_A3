@@ -78,42 +78,162 @@ class CfgVehicles {
         displayName = "Jak-135";
     };
 
+    // UAVs
+
     class B_UAV_01_F;
     class A4ES_Kamikaze_Drone_B: B_UAV_01_F {
         displayName = "Mavic 3 - C4";
         ExplosionShielding = 30;
-        Fuelexplosionpower = 120;
+        Fuelexplosionpower = 150;
+
+        class assembleInfo {
+            assembleTo = "";
+            primary = 0;
+            base = "";
+            displayName = "";
+			dissasembleTo[] = {"A4ES_Kamikaze_Drone_B_Pack"};
+		};
     };
 
     class A4ES_Combat_Drone_B: B_UAV_01_F {
         displayName = "Mavic 3 - M67";
         weapons[] = {"BombDemine_01_F"};
         magazines[] = {"PylonRack_4Rnd_BombDemine_01_F"};
+
+        class assembleInfo {
+            assembleTo = "";
+            primary = 0;
+            base = "";
+            displayName = "";
+			dissasembleTo[] = {"A4ES_Combat_Drone_B_Pack"};
+		};
     };
 
     class O_UAV_01_F;
     class A4ES_Kamikaze_Drone_O: O_UAV_01_F {
         displayName = "Mavic 3 - C4";
         ExplosionShielding = 30;
-        Fuelexplosionpower = 120;
+        Fuelexplosionpower = 150;
+
+        class assembleInfo {
+            assembleTo = "";
+            primary = 0;
+            base = "";
+            displayName = "";
+			dissasembleTo[] = {"A4ES_Kamikaze_Drone_O_Pack"};
+		};
     };
 
     class A4ES_Combat_Drone_O: O_UAV_01_F {
         displayName = "Mavic 3 - M67";
         weapons[] = {"BombDemine_01_F"};
         magazines[] = {"PylonRack_4Rnd_BombDemine_01_F"};
+
+        class assembleInfo {
+            assembleTo = "";
+            primary = 0;
+            base = "";
+            displayName = "";
+			dissasembleTo[] = {"A4ES_Combat_Drone_O_Pack"};
+		};
     };
 
     class I_UAV_01_F;
     class A4ES_Kamikaze_Drone_I: I_UAV_01_F {
         displayName = "Mavic 3 - C4";
         ExplosionShielding = 30;
-        Fuelexplosionpower = 120;
+        Fuelexplosionpower = 150;
+
+        class assembleInfo {
+            assembleTo = "";
+            primary = 0;
+            base = "";
+            displayName = "";
+			dissasembleTo[] = {"A4ES_Kamikaze_Drone_I_Pack"};
+		};
     };
 
     class A4ES_Combat_Drone_I: I_UAV_01_F {
         displayName = "Mavic 3 - M67";
         weapons[] = {"BombDemine_01_F"};
         magazines[] = {"PylonRack_4Rnd_BombDemine_01_F"};
+        
+        class assembleInfo {
+            assembleTo = "";
+            primary = 0;
+            base = "";
+            displayName = "";
+			dissasembleTo[] = {"A4ES_Combat_Drone_I_Pack"};
+		};
+    };
+
+    // Backpacks
+    class B_UAV_01_backpack_F;
+    class A4ES_Kamikaze_Drone_B_Pack: B_UAV_01_backpack_F {
+        displayName = CSTRING(Backpack_KamikazeUAV_Blufor);
+        class assembleInfo {
+			assembleto = "A4ES_Kamikaze_Drone_B";
+            primary = 1;
+			base = "";
+			displayname = "Mavic 3 - C4";
+            dissasembleTo[] = {};
+		};
+    };
+
+    class O_UAV_01_backpack_F;
+    class A4ES_Kamikaze_Drone_O_Pack: O_UAV_01_backpack_F {
+        displayName = CSTRING(Backpack_KamikazeUAV_Opfor);
+        class assembleInfo {
+			assembleto = "A4ES_Kamikaze_Drone_O";
+            primary = 1;
+			base = "";
+			displayname = "Mavic 3 - C4";
+            dissasembleTo[] = {};
+		};
+    };
+
+    class I_UAV_01_backpack_F;
+    class A4ES_Kamikaze_Drone_I_Pack: I_UAV_01_backpack_F {
+        displayName = CSTRING(Backpack_KamikazeUAV_Indfor);
+        class assembleInfo {
+			assembleto = "A4ES_Kamikaze_Drone_I";
+            primary = 1;
+			base = "";
+			displayname = "Mavic 3 - C4";
+            dissasembleTo[] = {};
+		};
+    };
+
+    class A4ES_Combat_Drone_B_Pack: B_UAV_01_backpack_F {
+        displayName = CSTRING(Backpack_CombatUAV_Blufor);
+        class assembleInfo {
+			assembleto = "A4ES_Combat_Drone_B";
+            primary = 1;
+			base = "";
+			displayname = "Mavic 3 - M67";
+            dissasembleTo[] = {};
+		};
+    };
+
+    class A4ES_Combat_Drone_O_Pack: O_UAV_01_backpack_F {
+        displayName = CSTRING(Backpack_CombatUAV_Opfor);
+        class assembleInfo {
+			assembleto = "A4ES_Combat_Drone_O";
+            primary = 1;
+			base = "";
+			displayname = "Mavic 3 - M67";
+            dissasembleTo[] = {};
+		};
+    };
+
+    class A4ES_Combat_Drone_I_Pack: I_UAV_01_backpack_F {
+        displayName = CSTRING(Backpack_CombatUAV_Indfor);
+        class assembleInfo {
+			assembleto = "A4ES_Combat_Drone_I";
+            primary = 1;
+			base = "";
+			displayname = "Mavic 3 - M67";
+            dissasembleTo[] = {};
+		};
     };
 };

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A4ES">
+  <Package name="Vehicles">
+    <Key ID="STR_A4ES_Vehicles_Backpack_KamikazeUAV_Opfor">
+      <English>UAV Bag (Mavic 3 - C4) [CSAT]</English>
+      <Polish>Torba na drona (Mavic 3 - C4) [CSAT]</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Vehicles_Backpack_KamikazeUAV_Blufor">
+      <English>UAV Bag (Mavic 3 - C4) [NATO]</English>
+      <Polish>Torba na drona (Mavic 3 - C4) [NATO]</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Vehicles_Backpack_KamikazeUAV_Indfor">
+      <English>UAV Bag (Mavic 3 - C4) [AAF]</English>
+      <Polish>Torba na drona (Mavic 3 - C4) [AAF]</Polish>
+    </Key>
+     <Key ID="STR_A4ES_Vehicles_Backpack_CombatUAV_Opfor">
+      <English>UAV Bag (Mavic 3 - M67) [CSAT]</English>
+      <Polish>Torba na drona (Mavic 3 - M67) [CSAT]</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Vehicles_Backpack_CombatUAV_Blufor">
+      <English>UAV Bag (Mavic 3 - M67) [NATO]</English>
+      <Polish>Torba na drona (Mavic 3 - M67) [NATO]</Polish>
+    </Key>
+    <Key ID="STR_A4ES_Vehicles_Backpack_CombatUAV_Indfor">
+      <English>UAV Bag (Mavic 3 - M67) [AAF]</English>
+      <Polish>Torba na drona (Mavic 3 - M67) [AAF]</Polish>
+    </Key>
+  </Package>
+</Project>
