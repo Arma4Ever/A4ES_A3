@@ -59,8 +59,8 @@ if (GVAR(disabledInMission)) then {
   (_this # 0) call FUNC(handleUnitStatusUpdate);
 }] call CBA_fnc_addEventHandler;
 
-["CBA_teamColorChanged", {
-  LOG_1("CBA_teamColorChanged event: %1",str _this);
+[QEGVAR(nametags,unitColorChanged), {
+  LOG_1("unitColorChanged event: %1",str _this);
   _this call FUNC(handleUnitStatusUpdate);
 }] call CBA_fnc_addEventHandler;
 
