@@ -66,9 +66,7 @@ if (_supEH == -1) then {
     if !(local _unit) exitWith {};
     TRACE_1("defenderBehaviour Suppressed",_unit);
     _unit setVariable [QGVAR(lastSuppress), CBA_missionTime];
-    if ((unitPos _unit) != "down") then {
-      _unit setUnitPos "DOWN";
-    };
+    _unit setUnitPos "DOWN";
   }];
   _unit setVariable [QGVAR(suppressedEH), _supEH];
 };
