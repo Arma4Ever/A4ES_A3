@@ -5,9 +5,69 @@
             <English>Arma4Ever</English>
             <Polish>Arma4Ever</Polish>
         </Key>
+        <Key ID="STR_A4ES_Main_Menu_SpotlightJoinHover">
+            <English>Join Arma4Ever server</English>
+            <Polish>Dołącz na serwer Arma4Ever</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Main_Menu_SpotlightEditorHover">
+            <English>Create scenario</English>
+            <Polish>Stwórz scenariusz</Polish>
+        </Key>
         <Key ID="STR_A4ES_Main_Menu_SpotlightJoin">
             <English>Join</English>
             <Polish>Dołącz</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Main_Menu_SpotlightEditor">
+            <English>Editor</English>
+            <Polish>Edytor</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Main_Menu_VerifyWithToken">
+            <English>Token Verification</English>
+            <Polish>Weryfikacja Tokenem</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Main_Menu_Verifying">
+            <English>Verifying...</English>
+            <Polish>Weryfikacja...</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Main_Menu_VerificationCorrect">
+            <English>Verification correct.</English>
+            <Polish>Weryfikacja poprawna.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Main_Menu_VerificationFail">
+            <English>Werification unsuccessful.&lt;/t&gt;&lt;br/&gt;Generate &lt;a href='https://forum.arma4ever.pl/playercp#/server'&gt;on webstie&lt;/a&gt; new token and try again.</English>
+            <Polish>Weryfikacja nie powiodła się.&lt;/t&gt;&lt;br/&gt;Wygeneruj &lt;a href='https://forum.arma4ever.pl/playercp#/server'&gt;na stronie&lt;/a&gt; nowy token i spróbuj ponownie.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Main_Menu_ServerLockedCadre">
+            <English>Server is temporarily available only to cadre members&lt;/t&gt;&lt;br/&gt;For more information, contact any cadre member.</English>
+            <Polish>Serwer jest tymczasowo dostępny tylko dla członków kadry.&lt;/t&gt;&lt;br/&gt;Po więcej informacji zgłoś się do dowolnego członka kadry.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Main_Menu_ServerLockedGroup">
+            <English>Server is temporarily available only to a selected group of people&lt;/t&gt;&lt;br/&gt;For more information, contact any cadre member.</English>
+            <Polish>Serwer jest tymczasowo dostępny tylko dla wybranej grupy osób.&lt;/t&gt;&lt;br/&gt;Po więcej informacji zgłoś się do dowolnego członka kadry.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Main_Menu_ServerResponseError">
+            <English>Server response error.&lt;/t&gt;&lt;br/&gt;Try again, if after several attempts you still see this message, generate a new token on the forum and try again.</English>
+            <Polish>Błąd odpowiedzi z serwera.&lt;/t&gt;&lt;br/&gt;Spróbuj ponownie, jeśli po kilku próbach wciąż widzisz ten komunikat, wygeneruj na forum nowy token i spróbuj ponownie.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Main_Menu_ExtensionResponseError">
+            <English>Extension response error - "a4es_common"&lt;/t&gt;&lt;br/&gt;Make sure Battleye is disabled and the mods are properly installed.</English>
+            <Polish>Błąd odpowiedzi rozszerzenia "a4es_common".&lt;/t&gt;&lt;br/&gt;Upewnij się, że Battleye jest wyłączony a mody poprawnie zainstalowane.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Main_Menu_EnterToken">
+            <English>Enter your verification token. You can generate it on the forum in the player panel, &lt;a href='https://forum.arma4ever.pl/playercp#/server'&gt;server tab&lt;/a&gt;.</English>
+            <Polish>Podaj swój token weryfikacyjny. Możesz go wygenerować na forum w panelu gracza, &lt;a href='https://forum.arma4ever.pl/playercp#/server'&gt;zakładka serwer&lt;/a&gt;.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Main_Menu_TokenError">
+            <English>NO TOKEN&lt;/t&gt;&lt;br/&gt;&lt;t font='PuristaMedium' size='0.8'&gt;Generate token &lt;t color='#e3b130'&gt;&lt;a href='https://forum.arma4ever.pl/playercp#/server'&gt;on website&lt;/a&gt;&lt;/t&gt; and enter it by pressing the "JOIN" button.</English>
+            <Polish>BRAK TOKENU&lt;/t&gt;&lt;br/&gt;&lt;t font='PuristaMedium' size='0.8'&gt;Wygeneruj token &lt;t color='#e3b130'&gt;&lt;a href='https://forum.arma4ever.pl/playercp#/server'&gt;na stronie&lt;/a&gt;&lt;/t&gt; i wprowadź go kilkając przycisk "DOŁĄCZ"</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Main_Menu_VerificationError">
+            <English>VERIFICATION ERROR&lt;/t&gt;&lt;br/&gt;&lt;t font='PuristaMedium' size='0.8'&gt;Generate token &lt;t color='#e3b130'&gt;&lt;a href='https://forum.arma4ever.pl/playercp#/server'&gt;on website&lt;/a&gt;&lt;/t&gt; and enter it by pressing the "JOIN" button.</English>
+            <Polish>BŁĄD WERYFIKACJI&lt;/t&gt;&lt;br/&gt;&lt;t font='PuristaMedium' size='0.8'&gt;Wygeneruj token &lt;t color='#e3b130'&gt;&lt;a href='https://forum.arma4ever.pl/playercp#/server'&gt;na stronie&lt;/a&gt;&lt;/t&gt; i wprowadź go kilkając przycisk "DOŁĄCZ"</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Main_Menu_ExtensionError">
+            <English>NO EXTENSION&lt;/t&gt;&lt;br/&gt;&lt;t font='PuristaMedium' size='0.8'&gt;Make sure Battleye is disabled and the mods are properly installed.</English>
+            <Polish>BRAK ROZSZERZENIA&lt;/t&gt;&lt;br/&gt;&lt;t font='PuristaMedium' size='0.8'&gt;Upewnij się, że Battleye jest wyłączony a mody poprawnie zainstalowane.</Polish>
         </Key>
     </Package>
 </Project>

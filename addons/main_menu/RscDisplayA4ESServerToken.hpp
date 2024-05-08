@@ -53,7 +53,7 @@ class RscDisplayA4ESServerToken: RscStandardDisplay {
         class Title: RscTitle {
             style = 0;
             idc = 1000;
-            text = "Weryfikacja tokenem";
+            text = CSTRING(VerifyWithToken);
             x = "(1 + 20) * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX)";
             y = "(15 - 18) * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))";
             w = "15 * (((safezoneW / safezoneH) min 1.2) / 40)";

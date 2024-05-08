@@ -65,6 +65,6 @@ _spotlightButtonRight ctrlAddEventHandler ["buttonClick", {
     _ctrlButton ctrlAddEventHandler ["killFocus", {_this call (uiNamespace getVariable QFUNC(spotlightExit))}];
     
 } forEach [
-    ["DOŁĄCZ", _spotlightGroupLeft],
-    ["EDYTOR", _spotlightGroupRight]
+    [LLSTRING(SpotlightJoin), _spotlightGroupLeft],
+    [LLSTRING(SpotlightEditor), _spotlightGroupRight]
 ];

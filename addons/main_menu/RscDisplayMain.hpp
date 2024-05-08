@@ -52,14 +52,14 @@ class RscDisplayMain: RscStandardDisplay {
                         class LineLeft: LineLeft {};
                         class LineRight: LineRight {};
                         class LineTop: LineTop {
-                            text = "Dołącz na serwer Arma4Ever";
+                            text = CSTRING(SpotlightJoinHover);
                         };
                         class LineBottom: LineBottom {};
                     };
                 };
                 class TextBackground: TextBackground {};
                 class Text: Text {
-                    text = "DOŁĄCZ";
+                    text = CSTRING(SpotlightJoin);
                 };
                 class Button: Button {};
             };
@@ -116,14 +116,14 @@ class RscDisplayMain: RscStandardDisplay {
                         class LineLeft: LineLeft {};
                         class LineRight: LineRight {};
                         class LineTop: LineTop {
-                            text = "Stwórz scenariusz";
+                            text = CSTRING(SpotlightEditorHover);
                         };
                         class LineBottom: LineBottom {};
                     };
                 };
                 class TextBackground: TextBackground {};
                 class Text: Text {
-                    text = "EDYTOR";
+                    text = CSTRING(SpotlightEditor);
                 };
                 class Button: Button {};
             };

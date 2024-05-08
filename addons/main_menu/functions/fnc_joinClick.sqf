@@ -22,7 +22,7 @@ _ctrlButtonOk ctrlShow false;
 _ctrlButtonCancel ctrlShow false;
 _ctrlSubtext ctrlShow false;
 _ctrlLoadingText ctrlShow true;
-_ctrlLoadingText ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'>Weryfikacja...</t>";
+_ctrlLoadingText ctrlSetStructuredText parseText format["<t font='RobotoCondensedBold'>%1</t>", CSTRING(Verifying)];
 
 private _response = "a4es_common" callExtension ["connectIDToken", [A4ES_C_G, ctrlText _ctrlEditToken, profileNameSteam]];
 _response params ["_result", "_code"];
@@ -34,7 +34,7 @@ if (isNull (uiNamespace getVariable [QGVAR(RscDisplayA4ESServerToken), displayNu
 if (_code == 1) exitWith {
     private _resultArray = parseSimpleArray _result;
 
-    _ctrlLoadingText ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'><t color='#1ad40d'>Weryfikacja poprawna.</t></t>";
+    _ctrlLoadingText ctrlSetStructuredText parseText format["<t font='RobotoCondensedBold'><t color='#1ad40d'>%1</t></t>", LLSTRING(VerificationCorrect)];
 
     profileNamespace setVariable [QGVAR(actkn), _resultArray deleteAt 3];
     saveProfileNamespace;
@@ -57,20 +57,20 @@ _ctrlSubtext ctrlShow true;
 
 // Error
 if (_code == 2) exitWith {
-    _ctrlSubtext ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'><t color='#e01709'>Weryfikacja nie powiodła się.</t><br />Wygeneruj <a href='https://forum.arma4ever.pl/playercp#/server'>na forum</a> nowy token i spróbuj ponownie.</t>";
+    _ctrlSubtext ctrlSetStructuredText parseText format["<t font='RobotoCondensedBold'><t color='#e01709'>%1</t>", LLSTRING(VerificationFail)];
     profileNamespace setVariable [QGVAR(actkn), ""];
     saveProfileNamespace;
 };
 
 // Only cadre is allowed to enter
 if (_code == 3) exitWith {
-    _ctrlSubtext ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'><t color='#e01709'>Serwer jest tymczasowo dostępny tylko dla członków kadry.</t><br />Po więcej informacji zgłoś się do dowolnego członka kadry.</t>";
+    _ctrlSubtext ctrlSetStructuredText parseText format["<t font='RobotoCondensedBold'><t color='#e01709'>%1</t>", LLSTRING(ServerLockedCadre)];
 };
 
 // Only selected users are allowed to enter
 if (_code == 4) exitWith {
-    _ctrlSubtext ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'><t color='#e01709'>Serwer jest tymczasowo dostępny tylko dla wybranej grupy osób.</t><br />Po więcej informacji zgłoś się do dowolnego członka kadry.</t>";
+    _ctrlSubtext ctrlSetStructuredText parseText format["<t font='RobotoCondensedBold'><t color='#e01709'>%1</t>", LLSTRING(ServerLockedGroup)];
 };
 
 // Unknown code
-_ctrlSubtext ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'><t color='#e01709'>Błąd odpowiedzi z serwera.</t><br />Spróbuj ponownie, jeśli po kilku próbach wciąż widzisz ten komunikat, wygeneruj na forum nowy token i spróbuj ponownie.</t>";
+_ctrlSubtext ctrlSetStructuredText parseText format["<t font='RobotoCondensedBold'><t color='#e01709'>%1</t>", LLSTRING(ServerResponseError)];

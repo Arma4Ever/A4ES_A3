@@ -39,10 +39,10 @@ if (_test != "true") exitWith {
     _ctrlButtonCancel ctrlShow false;
     _ctrlSubtext ctrlShow false;
     _ctrlLoadingText ctrlShow true;
-    _ctrlLoadingText ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'><t color='#e01709'>Błąd odpowiedzi rozszerzenia ""a4es_common"".</t><br/>Upewnij się, że Battleye jest wyłączony a mody poprawnie zainstalowane.</t>";
+    _ctrlLoadingText ctrlSetStructuredText parseText format["<t font='RobotoCondensedBold'><t color='#e01709'>%1</t>", LLSTRING(ExtensionResponseError)];
 };
 
-_ctrlSubtext ctrlSetStructuredText parseText "<t font='RobotoCondensedBold'>Podaj swój token weryfikacyjny. Możesz go wygenerować na forum w panelu gracza, <a href='https://forum.arma4ever.pl/playercp#/server'>zakładka serwer</a>.</t>";
+_ctrlSubtext ctrlSetStructuredText parseText format["<t font='RobotoCondensedBold'>%1</t>", LLSTRING(EnterToken)];
 
 _ctrlButtonCancel ctrlAddEventHandler ["buttonClick", {
     (uiNamespace getVariable [QGVAR(RscDisplayA4ESServerToken), displayNull]) closeDisplay 2;

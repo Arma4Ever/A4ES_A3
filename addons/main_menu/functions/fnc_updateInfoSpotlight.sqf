@@ -17,7 +17,7 @@ private _test = "a4es_common" callExtension "test";
 if (_test == "true") then {
     private _accessToken = profileNamespace getVariable [QGVAR(actkn), ""];
     if (_accessToken == "") exitWith {
-        _spotlightCenterText ctrlSetStructuredText (parseText "<t font='PuristaBold' size='1' color='#e01709'>BRAK TOKENU</t><br /><t font='PuristaMedium' size='0.8'>Wygeneruj token <t color='#e3b130'><a href='https://forum.arma4ever.pl/playercp#/server'>na forum</a></t> i wprowadź go kilkając przycisk ""DOŁĄCZ""</t>");
+        _spotlightCenterText ctrlSetStructuredText (parseText format["<t font='PuristaBold' size='1' color='#e01709'>%1</t>", LLSTRING(NoToken)]);
     };
 
     private _response = "a4es_common" callExtension ["playerInfo", [A4ES_C_G, _accessToken, profileNameSteam]];
@@ -28,10 +28,10 @@ if (_test == "true") then {
         _spotlightCenterBackground ctrlSetText QPATHTOF(data\spotlight_info_ca.paa);
         uiNamespace setVariable [QGVAR(spotlightInfoError), false];
     } else {
-        _spotlightCenterText ctrlSetStructuredText (parseText "<t font='PuristaBold' size='1' color='#e01709'>BŁĄD WERYFIKACJI</t><br /><t font='PuristaMedium' size='0.8'>Wygeneruj token <t color='#e3b130'><a href='https://forum.arma4ever.pl/playercp#/server'>na forum</a></t> i wprowadź go kilkając przycisk ""DOŁĄCZ""</t>");
+        _spotlightCenterText ctrlSetStructuredText (parseText format["<t font='PuristaBold' size='1' color='#e01709'>%1</t>", LLSTRING(VerificationError)]);
     };
 } else {
-    _spotlightCenterText ctrlSetStructuredText (parseText "<t font='PuristaBold' size='1' color='#e01709'>BRAK ROZSZERZENIA</t><br /><t font='PuristaMedium' size='0.8'>Upewnij się, że Battleye jest wyłączony a mody poprawnie zainstalowane.</t>");
+    _spotlightCenterText ctrlSetStructuredText (parseText format["<t font='PuristaBold' size='1' color='#e01709'>%1</t>", LLSTRING(ExtensionError)]);
 };
 
 if (uiNamespace getVariable [QGVAR(spotlightInfoError), false]) then {
