@@ -15,4 +15,5 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgUnitInsignia.hpp"
 #include "gui.hpp"

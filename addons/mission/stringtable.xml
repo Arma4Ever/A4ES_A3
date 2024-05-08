@@ -32,6 +32,14 @@
         <Key ID="STR_A4ES_Mission_Settings_checkTemplate_Tooltip">
             <English>Check if mission template is up to date on mission start.</English>
             <Polish>Przy uruchomieniu misji sprawdza czy szablon misji jest aktualny.</Polish>
+        </Key> 
+        <Key ID="STR_A4ES_Mission_Insignia">
+            <English>Arma4Ever</English>
+            <Polish>Arma4Ever</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Mission_InsigniaSubdued">
+            <English>Arma4Ever - Subdued</English>
+            <Polish>Arma4Ever - Zgaszona</Polish>
         </Key>
     </Package>
 </Project>
