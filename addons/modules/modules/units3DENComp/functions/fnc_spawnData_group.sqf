@@ -54,7 +54,7 @@ if (isNull _group) exitWith {
     _unitPostInit
   ] spawn FUNC(units3DENComp_spawnData_unit);
   waitUntil {scriptDone _unitSpawn};
-  sleep 0.15;
+  sleep 0.32;
 } forEach _unitsData;
 
 // Group params
@@ -84,7 +84,7 @@ if (_enableGunLights) then {
 // Waypoints
 {
   [_x, _group] call FUNC(units3DENComp_spawnData_waypoint);
-  sleep 0.05;
+  sleep 0.15;
 } forEach _waypointsData;
 
 // Dynamic simulation
