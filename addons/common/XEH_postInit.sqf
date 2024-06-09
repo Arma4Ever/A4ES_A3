@@ -13,15 +13,6 @@ if (isServer) then {
   }, [], 0.01] call CBA_fnc_waitAndExecute;
 };
 
-// Observe player team and call event on each change
-GVAR(assignedTeam) = "MAIN";
-GVAR(playerStatePFH) = [{
-  if (GVAR(assignedTeam) != assignedTeam player) then {
-    GVAR(assignedTeam) = assignedTeam player;
-    [QGVAR(teamChanged), [player, GVAR(assignedTeam)]] call CBA_fnc_globalEvent;
-  };
-}, 0.5] call CBA_fnc_addPerFrameHandler;
-
 if (hasInterface) then {
   0 spawn {
     sleep 1;
