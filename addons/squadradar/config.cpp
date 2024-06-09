@@ -21,6 +21,10 @@ class CfgPatches {
 
 class ctrlCombo;
 
+class a4es_functions_overrides {
+    ace_interaction_fnc_joinTeam = QPATHTOF(functions\fnc_ace_joinTeam.sqf);
+};
+
 #include "CfgEventHandlers.hpp"
 #include "RscTitles.hpp"
 #include "Cfg3DEN.hpp"

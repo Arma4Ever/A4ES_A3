@@ -6,7 +6,7 @@
 
 params ["_team"];
 
-private _color = switch (_team) do {
+private _color = switch (toUpper _team) do {
     case "RED": {
       [[1.00, 0.37, 0.37], '#ff5e5e']
     };
