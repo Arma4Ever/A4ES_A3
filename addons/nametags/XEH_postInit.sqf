@@ -8,6 +8,15 @@ if !(hasInterface) exitWith {};
 
 // JIP support
 [{
+  // Update all playable units teams
+  {
+    private _team = assignedTeam _x;
+    
+    if (_team isNotEqualTo "") then {
+      [QEGVAR(common,teamChanged), [_x, _team]] call CBA_fnc_localEvent;
+    };
+  } forEach playableUnits;
+  
   // Get player squad
   private _squad = player getVariable [QGVAR(squad), objNull];
   // Exit if player has no squad
@@ -22,7 +31,6 @@ if !(hasInterface) exitWith {};
 
 [QEGVAR(common,teamChanged), {
   params ["_unit", "_team"];
-
   LOG_2('teamChanged event (unit: "%1" team: "%2")',str _unit,_team);
 
   private _color = _team call EFUNC(common,getTeamColor);
