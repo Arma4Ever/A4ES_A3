@@ -17,6 +17,21 @@ class CfgVehicles {
                         exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                     };
                 };
+
+                class GVAR(simpleGPSOn) {
+                    displayName = CSTRING(SimpleGPSOn);
+                    condition = QUOTE(!(_player getVariable [ARR_2('ace_microdagr_broadcastPos',false)]) && {'A4ES_simpleGPS' in (_player call ACEFUNC(common,uniqueItems))});
+                    statement = QUOTE([true] call FUNC(simpleGps));
+                    icon = QPATHTOF(data\icon_simpleGPS.paa);
+                    exceptions[] = {"notOnMap", "isNotInside"};
+                };
+                class GVAR(simpleGPSOff) {
+                    displayName = CSTRING(SimpleGPSOff);
+                    condition = QUOTE((_player getVariable [ARR_2('ace_microdagr_broadcastPos',false)]) && {'A4ES_simpleGPS' in (_player call ACEFUNC(common,uniqueItems))});
+                    statement = QUOTE([false] call FUNC(simpleGps));
+                    icon = QPATHTOF(data\icon_simpleGPS.paa);
+                    exceptions[] = {"notOnMap", "isNotInside"};
+                };
             };
         };
     };

@@ -25,6 +25,7 @@ class a4es_functions_overrides {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"
 
 class ace_microdagr_TheDialog {
     onLoad = "uiNamespace setVariable ['ace_microdagr_DialogDisplay', _this select 0];(_this select 0) spawn a4es_microdagr_fnc_onDialog;";

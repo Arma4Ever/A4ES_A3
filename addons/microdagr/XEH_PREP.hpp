@@ -1,2 +1,3 @@
 
 PREP(onDialog);
+PREP(simpleGPS);
