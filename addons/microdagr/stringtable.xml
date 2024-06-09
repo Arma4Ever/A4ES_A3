@@ -81,5 +81,29 @@
             <English>Hide unit markers on map</English>
             <Polish>Ukryj markery jednostek na mapie</Polish>
         </Key>
+        <Key ID="STR_A4ES_Microdagr_simpleGPS">
+            <English>GPS Transmitter</English>
+            <Polish>Nadajnik GPS</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Microdagr_simpleGPS_Description">
+            <English>Only transmits position, can't receive.</English>
+            <Polish>Wyłącznie nadaje pozycje, nie może odbierać.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Microdagr_simpleGPSOn">
+            <English>Turn on GPS transmitter</English>
+            <Polish>Włącz nadajnik GPS</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Microdagr_simpleGPSOff">
+            <English>Turn off GPS transmitter</English>
+            <Polish>Wyłącz nadajnik GPS</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Microdagr_simpleGPSTurnedOn">
+            <English>GPS Transmitter ON</English>
+            <Polish>Nadajnik GPS Włączony</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Microdagr_simpleGPSTurnedOff">
+            <English>GPS Transmitter OFF</English>
+            <Polish>Nadajnik GPS Wyłączony</Polish>
+        </Key>
     </Package>
 </Project>

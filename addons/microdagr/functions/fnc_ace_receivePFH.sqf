@@ -30,9 +30,17 @@ GVAR(receiveMarkers) = _units apply {
   };
 
   private _marker = createMarkerLocal [format [QGVAR(marker_%1), _index], position (vehicle _x)];
-  _marker setMarkerTypeLocal (_x getVariable [QGVAR(markerTypeCache), "b_unknown"]);
-  _marker setMarkerColorLocal (_x getVariable [QGVAR(markerColorCache), "ColorWEST"]);
-  _marker setMarkerTextLocal (_x getVariable [QGVAR(broadcastMarkerTitle), ""]);
+
+  if (_x getVariable ["A4ES_simpleGPSOn", false]) then {
+    _marker setMarkerTypeLocal (_x getVariable [QGVAR(markerTypeCache), "Contact_dot1"]);
+    _marker setMarkerColorLocal (_x getVariable [QGVAR(markerColorCache), "ColorWEST"]);
+    _marker setMarkerTextLocal (_x getVariable [QGVAR(broadcastMarkerTitle), ""]);
+  } else {
+    _marker setMarkerTypeLocal (_x getVariable [QGVAR(markerTypeCache), "b_unknown"]);
+    _marker setMarkerColorLocal (_x getVariable [QGVAR(markerColorCache), "ColorWEST"]);
+    _marker setMarkerTextLocal (_x getVariable [QGVAR(broadcastMarkerTitle), ""]);
+  };
+
   _marker setMarkerAlphaLocal _alpha;
 
   _marker
