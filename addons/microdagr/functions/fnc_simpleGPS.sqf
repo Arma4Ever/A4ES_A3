@@ -3,7 +3,6 @@
 params ["_mode"];
 
 ace_player setVariable ["ace_microdagr_broadcastPos", _mode, true];
-ace_player setVariable ["A4ES_simpleGPSOn", _mode, true];
 
 if (_mode) then {
     [LLSTRING(simpleGPSTurnedOn)] call EFUNC(common,displayTextStructured);
