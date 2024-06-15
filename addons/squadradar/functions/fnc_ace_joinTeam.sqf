@@ -22,6 +22,8 @@ params ["_unit", "_team", ["_displayHint", false, [false]]];
 
 _unit assignTeam _team;
 
+["A4ES_common_teamChanged", [ACE_player, _team]] call CBA_fnc_globalEvent;
+
 // display message
 if (_unit == ACE_player) then {
     private _message = "";
@@ -35,6 +37,4 @@ if (_unit == ACE_player) then {
     if (_displayHint) then {
         [_message] call EFUNC(common,displayTextStructured);
     };
-    
-    ["A4ES_common_teamChanged", [ACE_player, _team]] call CBA_fnc_globalEvent;
 };
