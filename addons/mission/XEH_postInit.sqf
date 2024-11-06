@@ -65,18 +65,20 @@ if (hasInterface) then {
   // Disable client remote sensors
   disableRemoteSensors true;
 
-  addMissionEventHandler ["MarkerCreated", {
-    params ["_marker", "", "_owner", "_local"];
+  if (getMissionConfigValue [QGVAR(enableLocalMarkers), false]) then {
+    addMissionEventHandler ["MarkerCreated", {
+      params ["_marker", "", "_owner", "_local"];
 
-    if (
-      _local || 
-      {isNull _owner} || 
-      {time < 1} || 
-      {_owner isEqualTo player}
-    ) exitWith {};
+      if (
+        _local || 
+        {isNull _owner} || 
+        {time < 1} || 
+        {_owner isEqualTo player}
+      ) exitWith {};
 
-    deleteMarkerLocal _marker;
-  }];
+      deleteMarkerLocal _marker;
+    }];
+  };
 
   // Validate mission template
   if (GVAR(checkTemplate) && {(getMissionConfigValue ["a4e_missionTemplate", 0]) < REQUIRED_MISSION_TEMPLATE_VERSION}) then {
