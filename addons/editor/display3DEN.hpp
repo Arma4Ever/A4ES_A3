@@ -166,10 +166,7 @@ class Display3DEN {
                         "Separator",
                         "ENH_ExportGUIBaseClasses",
                         "ENH_GUITestGrids",
-                        "Separator",
-                        "ENH_ToggleDrawBuildingPositions",
-                        "ENH_ToggleDrawDLCIcons",
-                        "ENH_ToggleDrawHitpoints"
+                        "Separator"
                     };
                 };
 

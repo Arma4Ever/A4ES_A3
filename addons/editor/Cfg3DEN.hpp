@@ -79,6 +79,18 @@ class Cfg3DEN {
             h = "0";
         };
 	};
+    class Marker {
+        class AttributeCategories {
+            delete ENH_MarkerHideOnStart;
+
+			class Style {
+				class Attributes {
+                    delete markerAttach;
+                    delete markerBlink;
+                };
+            };
+        };
+    };
  	class Mission {
         class Scenario {
             class AttributeCategories {
@@ -94,6 +106,9 @@ class Cfg3DEN {
                 delete ENH_MissionEnding_Casualties;
                 delete ENH_Volume;
                 delete ENH_SPR;
+                delete ENH_MusicEventHandlers_Global;
+                delete ENH_MissionEventHandlers_Server;
+                delete ENH_MissionEventHandlers_Global;
 
                 class Misc {
                     class Attributes {
@@ -175,6 +190,7 @@ class Cfg3DEN {
 	class Group {
         class AttributeCategories {
             delete ENH_GroupMarker;
+            delete ENH_EventHandlers;
 
             class State {
                 class Attributes {
@@ -192,6 +208,7 @@ class Cfg3DEN {
             delete ENH_AI;
             delete ENH_UnitTraits;
             delete ENH_HoldAction;
+            delete ENH_EventHandlers;
 
             class StateSpecial {
                 class Attributes {
