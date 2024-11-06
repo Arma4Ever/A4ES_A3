@@ -41,5 +41,17 @@
             <English>Arma4Ever - Subdued</English>
             <Polish>Arma4Ever - Zgaszona</Polish>
         </Key>
+        <Key ID="STR_A4ES_Mission_Attributes_Category_Markers">
+            <English>Markers</English>
+            <Polish>Markery</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Mission_Attributes_enableLocalMarkers">
+            <English>Enable Local Markers</English>
+            <Polish>Włącz Lokalne Markery</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Mission_Attributes_enableLocalMarkers_Tooltip">
+            <English>After the game starts, all NEW markers will be local - visible only to the player who placed them.</English>
+            <Polish>Po rozpoczęciu rozgrywki, wszystkie NOWE markery będą lokalne - widoczne tylko dla gracza, który je postawił.</Polish>
+        </Key>
     </Package>
 </Project>
