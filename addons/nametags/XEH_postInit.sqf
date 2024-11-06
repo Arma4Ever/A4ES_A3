@@ -12,6 +12,10 @@ if !(hasInterface) exitWith {};
   {
     private _team = assignedTeam _x;
     
+    if (_team isEqualTo "") then {
+      _team = _x getVariable [QGVAR(assignedTeam), ""];
+    };
+
     if (_team isNotEqualTo "") then {
       [QEGVAR(common,teamChanged), [_x, _team]] call CBA_fnc_localEvent;
     };
@@ -33,9 +37,10 @@ if !(hasInterface) exitWith {};
   params ["_unit", "_team"];
   LOG_2('teamChanged event (unit: "%1" team: "%2")',str _unit,_team);
 
-  private _color = _team call EFUNC(common,getTeamColor);
-  _unit setVariable [QGVAR(unitColor), _color];
+  _unit setVariable [QGVAR(assignedTeam), _team, true];
 
+  private _color = _team call EFUNC(common,getTeamColor);
+  _unit setVariable [QGVAR(unitColor), _color, true];
   [QGVAR(unitColorChanged), [_unit, _color]] call CBA_fnc_localEvent;
 }] call CBA_fnc_addEventHandler;
 
