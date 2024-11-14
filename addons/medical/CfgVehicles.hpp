@@ -63,8 +63,8 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_surgicalKit,2);
             MACRO_ADDITEM(ACE_bodyBag,20);
             MACRO_ADDITEM(ACE_CableTie,20);
+            MACRO_ADDITEM(ACE_painkillers,12);
             MACRO_ADDITEM(A4ES_dressingSet,2);
-            MACRO_ADDITEM(A4ES_painkillers,50);
             MACRO_ADDITEM(A4ES_emptyBloodBag,10);
         };
     };
@@ -88,8 +88,8 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_surgicalKit,2);
             MACRO_ADDITEM(ACE_bodyBag,10);
             MACRO_ADDITEM(ACE_CableTie,20);
+            MACRO_ADDITEM(ACE_painkillers,12);
             MACRO_ADDITEM(A4ES_dressingSet,2);
-            MACRO_ADDITEM(A4ES_painkillers,30);
             MACRO_ADDITEM(A4ES_emptyBloodBag,5);
         };
     };
