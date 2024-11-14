@@ -73,6 +73,10 @@
             <English>Ship</English>
             <Polish>Okręt</Polish>
         </Key>
+        <Key ID="STR_A4ES_Microdagr_Icon_Dot">
+            <English>Dot</English>
+            <Polish>Kropka</Polish>
+        </Key>
         <Key ID="STR_A4ES_Microdagr_showMarkersOnMap">
             <English>Show unit markers on map</English>
             <Polish>Wyświetlaj markery jednostek na mapie</Polish>

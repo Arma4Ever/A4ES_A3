@@ -65,7 +65,7 @@ switch (_itemClicked) do {
         };
       };
 
-      if (_markerId > 52) then {_markerId = 0;};
+      if (_markerId > 55) then {_markerId = 0;};
 
       ace_player setvariable [QGVAR(broadcastMarkerId), _markerId, true];
       [] call FUNC(updateDisplay);

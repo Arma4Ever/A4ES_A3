@@ -88,4 +88,9 @@ if (_markerType in [49,50,51,52]) exitWith {
   ["HQ", "b_hq", _colors select (_markerType - 49)]
 };
 
+// Dot
+if (_markerType in [53,54,55,55]) exitWith {
+  [localize "STR_A4ES_Microdagr_Icon_Dot", "hd_dot", _colors select (_markerType - 53)]
+};
+
 ["Nieznany", "b_unknown", _colors # 0]
