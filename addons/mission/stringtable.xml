@@ -53,5 +53,9 @@
             <English>After the game starts, all NEW markers will be local - visible only to the player who placed them.</English>
             <Polish>Po rozpoczęciu rozgrywki, wszystkie NOWE markery będą lokalne - widoczne tylko dla gracza, który je postawił.</Polish>
         </Key>
+        <Key ID="STR_A4ES_Mission_Attributes_enableLocalMarkers_IngameTooltip">
+            <English>[A4ES] Local markers enabled. Markers you place during the game will be invisible to others</English>
+            <Polish>[A4ES] Włączono lokalne markery. Markery, które postawisz w trakcie gry będą niewidoczne dla innych.</Polish>
+        </Key>
     </Package>
 </Project>

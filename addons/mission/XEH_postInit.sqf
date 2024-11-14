@@ -56,6 +56,12 @@ if (isServer) then {
       };
     }, true, [], true] call CBA_fnc_addClassEventHandler;
   }, [], 0.1] call CBA_fnc_waitAndExecute;
+
+  if (getMissionConfigValue [QGVAR(enableLocalMarkers), false]) then {
+    ["CBA_loadingScreenDone", {
+      missionNamespace setVariable [QGVAR(briefingMarkers), allMapMarkers, true];
+    }] call CBA_fnc_addEventHandler;
+  };
 };
 
 // Client side stuff
@@ -67,17 +73,21 @@ if (hasInterface) then {
 
   if (getMissionConfigValue [QGVAR(enableLocalMarkers), false]) then {
     addMissionEventHandler ["MarkerCreated", {
-      params ["_marker", "", "_owner", "_local"];
+      params ["_marker", "_channel", "_owner", "_local"];
 
       if (
-        _local || 
+        _local ||
         {isNull _owner} || 
-        {time < 1} || 
+        {time < 1} ||
         {_owner isEqualTo player}
       ) exitWith {};
 
       deleteMarkerLocal _marker;
     }];
+
+    ["CBA_loadingScreenDone", {
+      [{0 call FUNC(handleMarkersDelayed)}, [], 7] call CBA_fnc_waitAndExecute;
+    }] call CBA_fnc_addEventHandler;
   };
 
   // Validate mission template
