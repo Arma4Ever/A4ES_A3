@@ -237,9 +237,12 @@ case (APP_MODE_SETUP): {
         } else {
             private _markerData = _markerId call FUNC(getMarkerData);
             private _markerIconColor = (_markerData # 2) # 0;
-
+            private _path = "a3\ui_f\data\map\Markers\NATO\%1.paa";
+            if (_markerID > 52) then {
+                _path = "a3\ui_f\data\map\markers\military\%1.paa";
+            };
             _settingListBox lbSetTextRight [5, _markerData select 0];
-            _settingListBox lbSetPictureRight [5, format ["a3\ui_f\data\map\Markers\NATO\%1.paa", _markerData # 1]];
+            _settingListBox lbSetPictureRight [5, format [_path, _markerData # 1]];
             _settingListBox lbSetPictureRightColor  [5, _markerIconColor];
             _settingListBox lbSetPictureRightColorDisabled [5, _markerIconColor];
             _settingListBox lbSetPictureRightColorSelected [5, _markerIconColor];
