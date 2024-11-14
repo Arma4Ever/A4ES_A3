@@ -22,24 +22,17 @@ params ["_medic", "_patient", "_bodyPart"];
 TRACE_3("tourniquetRemove",_medic,_patient,_bodyPart);
 
 // Remove tourniquet from body part, exit if no tourniquet applied
-private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
+private _partIndex = ALL_BODY_PARTS find toLowerANSI _bodyPart;
 private _tourniquets = GET_TOURNIQUETS(_patient);
 
 if (_tourniquets select _partIndex == 0) exitWith {
-    [LSTRING(noTourniquetOnBodyPart), 1.5] call EFUNC(common,displayTextStructured);
+    if (_medic == ACE_player) then {
+        [LSTRING(noTourniquetOnBodyPart), 1.5] call EFUNC(common,displayTextStructured);
+    };
 };
 
 _tourniquets set [_partIndex, 0];
 _patient setVariable [VAR_TOURNIQUET, _tourniquets, true];
-
-// Send server log if medic is player
-if (_medic getVariable ["a4es_common_isPlayer", false]) then {
-  if (_medic isEqualTo _patient) then {
-    ["a4es_playerRemTourniqSelf", [_medic, _bodyPart]] call CBA_fnc_serverEvent;
-  } else {
-    ["a4es_playerRemTourniq", [_medic, _patient, _bodyPart]] call CBA_fnc_serverEvent;
-  };
-};
 
 [_patient] call EFUNC(medical_status,updateWoundBloodLoss);
 
@@ -47,9 +40,16 @@ private _nearPlayers = (_patient nearEntities ["CAManBase", 6]) select {_x call 
 TRACE_1("clearConditionCaches: tourniquetRemove",_nearPlayers);
 [QEGVAR(interact_menu,clearConditionCaches), [], _nearPlayers] call CBA_fnc_targetEvent;
 
-// Add tourniquet item to medic's inventory
-// todo: should there be a setting to select who receives the removed tourniquet?
-[_medic, "ACE_tourniquet"] call EFUNC(common,addToInventory);
+// Add tourniquet item to medic or patient
+if (_medic call EFUNC(common,isPlayer)) then {
+    private _receiver = [_patient, _medic, _medic] select GVAR(allowSharedEquipment);
+    [_receiver, "ACE_tourniquet"] call EFUNC(common,addToInventory);
+} else {
+    // If the medic is AI, only return tourniquet if enabled
+    if (missionNamespace getVariable [QEGVAR(medical_ai,requireItems), 0] > 0) then {
+        [_medic, "ACE_tourniquet"] call EFUNC(common,addToInventory);
+    };
+};
 
 // Handle occluded medications that were blocked due to tourniquet
 private _occludedMedications = _patient getVariable [QEGVAR(medical,occludedMedications), []];
@@ -70,4 +70,13 @@ private _arrayModified = false;
 if (_arrayModified) then {
     _occludedMedications = _occludedMedications - [[]];
     _patient setVariable [QEGVAR(medical,occludedMedications), _occludedMedications, true];
+};
+
+// Send server log if medic is player
+if (_medic getVariable ["a4es_common_isPlayer", false]) then {
+  if (_medic isEqualTo _patient) then {
+    ["a4es_playerRemTourniqSelf", [_medic, _bodyPart]] call CBA_fnc_serverEvent;
+  } else {
+    ["a4es_playerRemTourniq", [_medic, _patient, _bodyPart]] call CBA_fnc_serverEvent;
+  };
 };

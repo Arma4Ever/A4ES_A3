@@ -9,7 +9,7 @@ params ["_medic"];
 private _time = ace_medical_treatment_treatmentTimeAutoinjector;
 
 if !([_medic] call ACEFUNC(medical_treatment,isMedic)) then {
-  _time = _time * 4;
+  _time = _time * 2;
 };
 
 _time

@@ -25,7 +25,7 @@ params ["_medic", "_patient", "_bodyPart", "_classname", "", "_usedItem"];
 [_patient, _usedItem] call FUNC(addToTriageCard);
 [_patient, "activity", LSTRING(Activity_gaveIV), [[_medic, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
 
-[QGVAR(ivBagLocal), [_patient, _bodyPart, _classname], _patient] call CBA_fnc_targetEvent;
+[QGVAR(ivBagLocal), [_patient, _bodyPart, _classname, _medic], _patient] call CBA_fnc_targetEvent;
 
 // Send server log if medic is player
 if !(_medic getVariable ["a4es_common_isPlayer", false]) exitWith {};
