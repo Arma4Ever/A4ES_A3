@@ -42,9 +42,6 @@ vendorModsList = {
     "@Zeus Enhanced": {
         "baseMod": True,
     },
-    "@Zeus Enhanced - ACE3 Compatibility": {
-        "baseMod": True,
-    },
     "@Gruppe Adler Trenches": {
         "baseMod": True,
     },
