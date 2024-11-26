@@ -16,6 +16,7 @@ class CfgPatches {
 
 class a4es_functions_overrides {
     ace_trenches_fnc_removeTrench = QPATHTOF(functions\fnc_ace_removeTrench.sqf);
+    grad_trenches_functions_fnc_continueDiggingTrench = QPATHTOF(functions\fnc_grad_continueDiggingTrench.sqf);
     grad_trenches_functions_fnc_trenchesEntireVehicleSuccess = QPATHTOF(functions\fnc_grad_removeTrench.sqf);
 };
 

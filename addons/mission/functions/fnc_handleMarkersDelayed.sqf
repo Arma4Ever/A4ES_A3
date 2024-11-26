@@ -10,7 +10,7 @@ private _markerArray = [];
 private _playerID = getPlayerID ace_player;
 private _markerID = 0;
 
-private _briefingMarkers = missioNamespace getVariable [QGVAR(briefingMarkers), []];
+private _briefingMarkers = missionNamespace getVariable [QGVAR(briefingMarkers), []];
 private _markersToIterate = allMapMarkers - _briefingMarkers;
 {
   _markerToCheck = _x;
@@ -22,7 +22,7 @@ private _markersToIterate = allMapMarkers - _briefingMarkers;
     if (_markerID isNotEqualTo _playerID) then {
       deleteMarkerLocal _markerToCheck;
     };
-  }
+  };
 } forEach _markersToIterate;
 
 systemChat LLSTRING(Attributes_enableLocalMarkers_IngameTooltip);

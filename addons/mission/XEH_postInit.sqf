@@ -58,9 +58,7 @@ if (isServer) then {
   }, [], 0.1] call CBA_fnc_waitAndExecute;
 
   if (getMissionConfigValue [QGVAR(enableLocalMarkers), false]) then {
-    ["CBA_loadingScreenDone", {
-      missionNamespace setVariable [QGVAR(briefingMarkers), allMapMarkers, true];
-    }] call CBA_fnc_addEventHandler;
+      [{missionNamespace setVariable [QGVAR(briefingMarkers), allMapMarkers, true]}, [], 0.5] call CBA_fnc_waitAndExecute;
   };
 };
 
