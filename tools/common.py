@@ -100,7 +100,6 @@ vendorModsList = {
     "@Death and Hit reactions": {},
     "@Snapping for Eden and Zeus": {},
     "@Blurry Laser": {},
-    "@Better Inventory": {},
     # ---------------------------------------------- LEGACY MODS
     #"@Hate's Hidden Cameras": {},
     #"@VcomAI custom": {},
