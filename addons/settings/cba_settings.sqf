@@ -30,7 +30,7 @@ force force ace_arsenal_allowDefaultLoadouts = true;
 force force ace_arsenal_allowSharedLoadouts = true;
 force force ace_arsenal_camInverted = false;
 force force ace_arsenal_enableIdentityTabs = true;
-force force ace_arsenal_enableModIcons = true;
+ace_arsenal_enableModIcons = 2;
 force force ace_arsenal_EnableRPTLog = false;
 force force ace_arsenal_fontHeight = 4.5;
 
@@ -522,7 +522,7 @@ force WBK_DeathAnimMod_Deaths_PLR = true;
 force WBK_DeathAnimMod_Flinch_AI = true;
 force WBK_DeathAnimMod_Flinch_PLR = true;
 force WBK_DeathAnimMod_Hit_AI = true;
-force force WBK_DeathAnimMod_Hit_Chance = "100";
+force force WBK_DeathAnimMod_Hit_Chance = "50";
 force force WBK_DeathAnimMod_Hit_Chance_PLR = "15";
 force force WBK_DeathAnimMod_Hit_PLR = true;
 
