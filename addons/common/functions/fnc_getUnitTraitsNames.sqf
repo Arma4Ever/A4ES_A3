@@ -16,6 +16,8 @@ if (_medicClass > 0) then {
 };
 
 private _engineerClass = _unit getVariable ["ACE_IsEngineer", parseNumber (_unit getUnitTrait "engineer")];
+// ACE_IsEngineer can be true/false or 0/1/2, ensure it's a number
+_engineerClass = [0, 1, 2] select _engineerClass;
 if (_engineerClass > 0) then {
   _traits pushBack (localize ([
     LSTRING(AdvEngineer),
