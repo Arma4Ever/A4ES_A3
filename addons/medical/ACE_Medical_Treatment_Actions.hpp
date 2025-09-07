@@ -60,7 +60,7 @@ class ACE_Medical_Treatment_Actions {
         treatmentTime = 3;
         medicRequired = 1;
         allowSelfTreatment = 1;
-        condition = QUOTE(_patient getVariable [ARR_2(QQEGVAR(common,isPlayer),false)]);
+        condition = "true";
         callbackSuccess = QFUNC(checkNeurologicalInjuries);
         animationMedicProne = "";
         animationMedicSelfProne = "";
