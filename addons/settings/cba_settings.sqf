@@ -294,9 +294,9 @@ force force ace_medical_gui_showDamageEntry = true;
 // ACE Nightvision
 force force ace_nightvision_aimDownSightsBlur = 0;
 force force ace_nightvision_disableNVGsWithSights = false;
-force ace_nightvision_effectScaling = 0.5;
-force ace_nightvision_fogScaling = 0.3;
-force ace_nightvision_noiseScaling = 0.2;
+force ace_nightvision_effectScaling = 0.7;
+force ace_nightvision_fogScaling = 0;
+force ace_nightvision_noiseScaling = 0.3;
 force force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
