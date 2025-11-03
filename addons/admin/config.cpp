@@ -142,6 +142,12 @@ class GVAR(admins) {
         allowedModules[] = {"endMission", "adminMessages", "debugConsole", "debugCamera", "debugCurator", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
     };
 
+    class Krzyciu {
+        uid = "76561198017606120";
+        admin = 1;
+        allowedModules[] = {"endMission", "adminMessages", "debugConsole", "debugCurator", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
+    };
+
     CADRE_ADMIN(76561198090975186,Diamentowy);
     CADRE_ADMIN(76561198091312264,Radrix);
     CADRE_ADMIN(76561198055300928,Modzyn);
@@ -150,10 +156,7 @@ class GVAR(admins) {
     CADRE_ADMIN(76561198119905360,Symbiotyk);
     CADRE_ADMIN(76561198192520870,Oscar);
     CADRE_ADMIN(76561198062200104,Gazela);
-    CADRE_ADMIN(76561198017606120,Krzyciu);
-    CADRE_ADMIN(76561198047501206,Orzel);
     CADRE_ADMIN(76561198858767937,Sidorowicz);
-    CADRE_ADMIN(76561198028261265,Kestrel);
     CADRE_ADMIN(76561198134192331,Quiet);
     CADRE_ADMIN(76561198023415639,Monobear);
 };
