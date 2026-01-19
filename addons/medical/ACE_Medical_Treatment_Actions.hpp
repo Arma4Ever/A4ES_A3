@@ -38,6 +38,9 @@ class ACE_Medical_Treatment_Actions {
     class Epinephrine: Morphine {
         treatmentTime = QFUNC(getTreatmentTimeAutoinjector);
     };
+    class ApplyTourniquet: BasicBandage {
+        sounds[] = {{"z\a4es\addons\medical\data\tourniquet.ogg", 5, 1, 25}};
+    };
 
     class Diagnose: BasicBandage {};
     class A4ES_CheckMedications: Diagnose {
