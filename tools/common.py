@@ -90,6 +90,9 @@ vendorModsList = {
     },
     "@BackpackOnChest - Redux": {
         "baseMod": True,
+    },    
+    "@Simple Artillery Computer": {
+        "baseMod": True,
     },
     # ---------------------------------------------- INTERNAL MODS
     "@Blastcore Murr Edition": {},
