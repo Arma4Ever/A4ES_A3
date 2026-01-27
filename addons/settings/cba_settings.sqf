@@ -161,8 +161,8 @@ force force ace_rearm_level = 0;
 force force ace_rearm_supply = 0;
 force force ace_refuel_cargoRate = 18;
 force force ace_refuel_hoseLength = 12;
-force force ace_refuel_progressDuration = 2;
-force force ace_refuel_rate = 1;
+force ace_refuel_progressDuration = 2;
+force ace_refuel_rate = 1;
 force ace_towing_addRopeToVehicleInventory = true;
 
 // ACE Magazine Repack
