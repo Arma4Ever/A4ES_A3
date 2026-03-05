@@ -24,7 +24,8 @@ if (_test == "true") then {
     _response params ["_result", "_code"];
 
     if (_code == 1) then {
-        _spotlightCenterText ctrlSetStructuredText (parseText _result);
+        private _fixText = _result regexReplace ["&aogon;", "ą"] regexReplace ["&zdot;", "ż"] regexReplace ["&lacute;", "ł"] regexReplace ["&oogon;", "ę"] regexReplace ["&sacute;", "ś"] regexReplace ["&cacute;", "ć"] regexReplace ["&nacute;", "ń"] regexReplace ["&oacute;", "ó"] regexReplace ["&period;", "."];
+        _spotlightCenterText ctrlSetStructuredText (parseText _fixText);
         _spotlightCenterBackground ctrlSetText QPATHTOF(data\spotlight_info_ca.paa);
         uiNamespace setVariable [QGVAR(spotlightInfoError), false];
     } else {
