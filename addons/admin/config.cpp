@@ -136,12 +136,6 @@ class GVAR(modules) {
 }
 
 class GVAR(admins) {
-    class SzwedzikPL {
-        uid = "76561198005080407";
-        admin = 1;
-        allowedModules[] = {"endMission", "adminMessages", "debugConsole", "debugCamera", "debugCurator", "debugLogs", "missionLogs", "playersList", "adminList", "curatorList", "activeScripts", "activeScriptsServer"};
-    };
-
     class Krzyciu {
         uid = "76561198017606120";
         admin = 1;
@@ -151,7 +145,6 @@ class GVAR(admins) {
     CADRE_ADMIN(76561198090975186,Diamentowy);
     CADRE_ADMIN(76561198091312264,Radrix);
     CADRE_ADMIN(76561198055300928,Modzyn);
-    CADRE_ADMIN(76561197964250959,Foton);
 
     CADRE_ADMIN(76561198119905360,Symbiotyk);
     CADRE_ADMIN(76561198192520870,Oscar);
@@ -159,4 +152,6 @@ class GVAR(admins) {
     CADRE_ADMIN(76561198858767937,Sidorowicz);
     CADRE_ADMIN(76561198134192331,Quiet);
     CADRE_ADMIN(76561198023415639,Monobear);
+    CADRE_ADMIN(76561197991660891,Calling);
+    CADRE_ADMIN(76561198275899114,lucznikpl);
 };
