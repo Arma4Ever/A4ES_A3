@@ -14,7 +14,7 @@ private _receiveMarkers = GVAR(receiveMarkers);
 {deleteMarkerLocal _x} forEach _receiveMarkers;
 _receiveMarkers = [];
 
-private _units = (playableUnits + switchableUnits) select {(_x getVariable [QGVAR(broadcastPos), false]) && (alive _x)};
+private _units = (playableUnits + switchableUnits + allDeadMen) select {(_x getVariable [QGVAR(broadcastPos), false])};
 private _index = 0;
 private _alpha = parseNumber (GVAR(showMicrodagrMarkersOnMap) || !visibleMap);
 

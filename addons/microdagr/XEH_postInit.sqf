@@ -24,7 +24,7 @@ if (hasInterface) then {
     {deleteMarkerLocal _x} forEach ace_microdagr_receiveMarkers;
 
     if (_unit getVariable ["ace_microdagr_receivePos", false]) then {
-      ace_microdagr_receivePFH = [{_this call ace_microdagr_fnc_receivePFH;}, 5] call CBA_fnc_addPerFrameHandler;
+      ace_microdagr_receivePFH = [{_this call ace_microdagr_fnc_receivePFH;}, 8] call CBA_fnc_addPerFrameHandler;
     };
   }] call CBA_fnc_addPlayerEventHandler;
 
@@ -42,4 +42,19 @@ if (hasInterface) then {
       };
     };
   }] call CBA_fnc_addPlayerEventHandler;
+
+  ace_player addEventHandler ["Take", { 
+    params ["_unit", "_container", "_item"];
+    if (alive _container) exitWith {
+      private _parent = objectParent _container;
+      if (!isNull _parent && !alive _parent) then {
+          if (_item isEqualTo "ACE_microDAGR") then {
+            _parent setVariable ["ace_microdagr_broadcastPos", false, true];
+          }
+      };
+    };
+
+    if (_item isNotEqualTo "ACE_microDAGR") exitWith {};
+    _container setVariable ["ace_microdagr_broadcastPos", false, true];
+  }];
 };
