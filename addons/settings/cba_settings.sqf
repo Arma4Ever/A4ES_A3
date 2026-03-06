@@ -522,8 +522,8 @@ force WBK_DeathAnimMod_Deaths_PLR = true;
 force WBK_DeathAnimMod_Flinch_AI = true;
 force WBK_DeathAnimMod_Flinch_PLR = true;
 force WBK_DeathAnimMod_Hit_AI = true;
-force force WBK_DeathAnimMod_Hit_Chance = "50";
-force force WBK_DeathAnimMod_Hit_Chance_PLR = "15";
+force force WBK_DeathAnimMod_Hit_Chance = "15";
+force force WBK_DeathAnimMod_Hit_Chance_PLR = "5";
 force force WBK_DeathAnimMod_Hit_PLR = true;
 
 // Enhanced Movement Rework
