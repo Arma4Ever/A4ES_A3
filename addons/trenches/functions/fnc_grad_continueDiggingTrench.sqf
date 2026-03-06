@@ -118,7 +118,7 @@ if (_actualProgress == 0) then {
 
     //## Reduce digging time for engineers
     if ([_unit, 1] call ace_repair_fnc_isEngineer) then {
-        _diggerCount = _diggerCount + 1;
+        _diggerCount = _diggerCount + 3;
     };
 
     private _newProgress = _actualProgress + (_diggerCount / _digTime);
