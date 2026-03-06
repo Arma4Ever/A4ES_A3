@@ -6,7 +6,7 @@
 
 params ["_player"];
 
-[5, 0, {
+[3, 0, {
   _player removeItem "A4ES_dressingSet";
 
   private _pos = _player modelToWorld [0, 1.2, 0];
