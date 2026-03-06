@@ -69,6 +69,27 @@ if (hasInterface) then {
   // Disable client remote sensors
   disableRemoteSensors true;
 
+  ["ace_tagCreated", {
+    params ["", "_texture", "_object", "_unit"];
+    if (getMissionConfigValue [QGVAR(enableLocalMarkers), false]) exitWith {};
+    
+    // Check if tag created on building by local player
+    if (!(_object isKindOf "Building") || {_unit isNotEqualTo ace_player}) exitWith {};
+
+    private _colorIndex = TEXTURE_COLORS findIf {toLower _texture find _x != -1};
+
+    // no matching color, do not create marker
+    if (_colorIndex == -1) exitWith {};
+
+    private _markerId = format ["%1_%2", getPlayerUID ace_player, GVAR(playerMarkerIdx)];
+    GVAR(playerMarkerIdx) = GVAR(playerMarkerIdx) + 1;
+    private _marker = createMarkerLocal [_markerId, _object, 0, ace_player];
+    _marker setMarkerBrushLocal "SolidFull";
+    _marker setMarkerShapeLocal "ELLIPSE";
+    _marker setMarkerSizeLocal [3, 3];
+    _marker setMarkerColor (MARKER_COLORS select _colorIndex);
+  }] call CBA_fnc_addEventHandler;
+
   if (getMissionConfigValue [QGVAR(enableLocalMarkers), false]) then {
     addMissionEventHandler ["MarkerCreated", {
       params ["_marker", "_channel", "_owner", "_local"];
@@ -127,7 +148,5 @@ if (hasInterface) then {
       diag_log text ("Message blocked: " + _message);
       true
     }];
-
-    // TODO: Add all systemChat messages to admin panel (like last 30 or something like that)
   };
 };

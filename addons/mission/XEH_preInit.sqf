@@ -21,6 +21,7 @@ ADDON = false;
 
 // Disable RHS Engine startup script
 RHS_ENGINE_STARTUP_OFF = true;
+GVAR(playerMarkerIdx) = 0;
 
 if (hasInterface) then {
   // Add fix invisible gear pause menu option

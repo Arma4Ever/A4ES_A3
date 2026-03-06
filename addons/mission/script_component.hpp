@@ -9,3 +9,5 @@
 #include "\z\a4es\addons\main\script_macros.hpp"
 
 #define EMPTY_GROUPS_CLEANUP_INTERVAL 10
+#define MARKER_COLORS   ["ColorRed", "ColorGreen", "ColorBlue", "ColorBlack", "ColorYellow", "ColorWhite"]
+#define TEXTURE_COLORS  ["red", "green", "blue", "black", "yellow", "white"]
