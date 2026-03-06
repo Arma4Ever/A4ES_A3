@@ -17,6 +17,8 @@ if (
   {_unit getVariable [QGVAR(disabled), false]}
 ) exitWith {};
 
+if (isPlayer _unit) exitWith {};
+
 private _blood = createSimpleObject [selectRandom GVAR(bloodModels), getPosWorld _unit];
 _blood setDir (random 360);
 _blood setVectorUp (surfaceNormal (position _blood));
