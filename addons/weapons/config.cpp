@@ -19,7 +19,8 @@ class CfgPatches {
             "a4es_common",
             "ace_advanced_ballistics",
             "ace_reload",
-            "ace_overheating"
+            "ace_overheating",
+            "ace_nightvision"
         };
         author = ECSTRING(main,Author);
         authors[] = {"SzwedzikPL"};

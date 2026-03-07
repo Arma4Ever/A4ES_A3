@@ -1,5 +1,9 @@
 #include "script_component.hpp"
 
+//## ACE NVG brightness override
+ace_nightvision_const_maxBrightness = 5;
+ace_nightvision_const_minBrightness = -5;
+
 // Disable RHS Engine startup script
 RHS_ENGINE_STARTUP_OFF = true;
 

@@ -126,6 +126,27 @@ class CfgWeapons {
             };
         };
     };
+
+    class Binocular;
+    class NVGoggles: Binocular {
+        ace_nightvision_hideHex = 1;
+    };
+
+    class NVGoggles_OPFOR;
+    class A4ES_NVG_Gen4_Black_AmberFilter: NVGoggles_OPFOR {
+        displayName = "NV Goggles (Gen4, Black, Amber)";
+        ace_nightvision_generation = 4;
+        ace_nightvision_colorpreset[] = {0,{0,0,0,0},{0.7,0.65,0.4,0},{0.199,1.3,0.114,1}};
+        ace_nightvision_bluradius = 0.13;
+    };
+
+    class ACE_NVG_Wide_Black;
+    class A4ES_NVG_Gen4_Wide_Black_AmberFilter: ACE_NVG_Wide_Black {
+        displayName = "NV Goggles (Wide, Black, Amber)";
+        ace_nightvision_generation = 4;
+        ace_nightvision_colorpreset[] = {0, {0, 0, 0, 0}, {0.7, 0.65, 0.4, 0}, {0.199, 1.3, 0.114, 1}};
+        ace_nightvision_bluradius = 0.13;
+    };
 };
 
 class asdg_OpticRail;
