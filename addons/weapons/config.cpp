@@ -23,11 +23,25 @@ class CfgPatches {
             "ace_nightvision"
         };
         author = ECSTRING(main,Author);
-        authors[] = {"SzwedzikPL"};
+        authors[] = {"SzwedzikPL", "Krzyciu", "Cyruz143"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
+#include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgAmmo.hpp"
+
+class CfgSounds {
+    class GVAR(nvg_on) {
+        name = "nvg_on";
+        sound[] = {QPATHTOF(sounds\nvg_on.ogg), 0.75, 1, 1};
+        titles[] = {};
+    };
+
+    class GVAR(nvg_off): GVAR(nvg_on) {
+        name = "nvg_off";
+        sound[] = {QPATHTOF(sounds\nvg_off.ogg), 0.75, 1, 1};
+    };
+};
