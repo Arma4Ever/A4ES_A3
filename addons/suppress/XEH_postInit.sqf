@@ -25,3 +25,17 @@ GVAR(lastSuppress) = -10;
 
 // Update overlay texture based on map lighting conditions every 60 sec
 [{0 call FUNC(updateOverlayTexture)}, 60] call CBA_fnc_addPerFrameHandler;
+
+ace_player addEventHandler ["Explosion", {
+  params ["_vehicle", "_damage", "_explosionSource"];
+  if (_damage > 0 && !isNull _explosionSource) then {
+     [_explosionSource, _damage] call FUNC(addExplosionShake);
+  };
+}];
+
+{
+  [_x, "Killed", {
+    params ["_unit", "_killer", "_instigator", "_useEffects"];
+   _unit call FUNC(addExplosionShake);
+  }] call CBA_fnc_addClassEventHandler;
+} forEach ["Air","Car","Tank"];

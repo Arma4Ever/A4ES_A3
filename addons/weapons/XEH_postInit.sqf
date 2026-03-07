@@ -2,10 +2,15 @@
 
 if (!hasInterface) exitWith {};
 
-ace_player addEventHandler ["VisionModeChanged", {
-    params ["_person", "_visionMode"];
-    if (isNull objectParent _person) then {
-        private _visionModeSound = [QGVAR(nvg_off), QGVAR(nvg_on)] select _visionMode;
-        playSound _visionModeSound;
+["visionMode", {
+    params ["_unit", "_newvVsionMode", "_oldVisionMode"];
+    if (isNull objectParent _unit) then {
+        if (_newvVsionMode > 0 && _oldVisionMode == 0) then {
+            playSound QGVAR(nvg_on);
+        } else {
+            if (_newvVsionMode == 0) then {
+                playSound QGVAR(nvg_off);
+            };
+        };
     };
-}];
+}] call CBA_fnc_addPlayerEventHandler;

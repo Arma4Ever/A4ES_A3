@@ -8,7 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"a4es_common"};
         author = ECSTRING(main,Author);
-        authors[] = {"SzwedzikPL"};
+        authors[] = {"SzwedzikPL", "Cyruz143"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
