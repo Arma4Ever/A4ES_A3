@@ -10,7 +10,7 @@ ADDON = false;
 
 [QGVAR(toggleContainerSim), {
   params ["_bodyContainer", "_enabled"];
-  toggleContainerSim enableSimulationGlobal _enabled;
+  _bodyContainer enableSimulationGlobal _enabled;
 }] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
