@@ -270,9 +270,17 @@ force force ace_medical_treatment_treatmentTimeBodyBag = 10;
 force force ace_medical_treatment_treatmentTimeCoeffZeus = 1;
 force force ace_medical_treatment_treatmentTimeCPR = 10;
 force force ace_medical_treatment_treatmentTimeGrave = 30;
-force force ace_medical_treatment_treatmentTimeIV = 8;
+
+force force ace_medical_treatment_treatmentTimeIV = 12;
+force force ace_medical_treatment_treatmentTimeAutoinjector = 4;
 force force ace_medical_treatment_treatmentTimeSplint = 8;
 force force ace_medical_treatment_treatmentTimeTourniquet = 2.5;
+
+force force ace_medical_treatment_treatmentTimeTrainedIV = 6;
+force force ace_medical_treatment_treatmentTimeTrainedAutoinjector = 3;
+force force ace_medical_treatment_treatmentTimeTrainedSplint = 6;
+force force ace_medical_treatment_treatmentTimeTrainedTourniquet = 2;
+
 force force ace_medical_treatment_woundReopenChance = 0.75;
 force force ace_medical_treatment_woundStitchTime = 5;
 force force ace_medical_vitals_simulateSpO2 = false;
@@ -502,8 +510,8 @@ force bocr_main_disabled = false;
 force bocr_main_walk = true;
 
 // Blastcore Murr Edition
-WarFXPE_BlastWave = 0;
-WarFXPE_HeatHaze = false;
+WarFXPE_BlastWave = 1;
+WarFXPE_HeatHaze = true;
 WarFXPE_WeatherEffects = true;
 
 // Community Base Addons
