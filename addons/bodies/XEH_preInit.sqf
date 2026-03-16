@@ -10,7 +10,10 @@ ADDON = false;
 
 [QGVAR(toggleContainerSim), {
   params ["_bodyContainer", "_enabled"];
+  private _pos = getPosASL _bodyContainer;
   _bodyContainer enableSimulationGlobal _enabled;
+  _bodyContainer setPosASL _pos;
+  [_bodyContainer, "KIA_gunner_static_low01"] remoteExec ["switchMove"];
 }] call CBA_fnc_addEventHandler;
 
 if (isServer) then {

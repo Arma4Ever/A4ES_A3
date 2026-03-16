@@ -33,8 +33,7 @@ if (hasInterface) then {
       private _units = _container getVariable [QGVAR(inventoryAccessUnits), []];
       _units pushBack player;
       _container setVariable [QGVAR(inventoryAccessUnits), _units, true];
-      // Enable sim locally
-      _container enableSimulation true;
+
       // Enable sim globally
       [QGVAR(toggleContainerSim), [_container, true]] call CBA_fnc_serverEvent;
     };
