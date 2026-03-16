@@ -37,7 +37,7 @@ private _suppress = (_newSuppress + _curSuppress) min 1;
 
 TRACE_1("Suppress value updated",_suppress);
 
-private _ppFactor = (_suppress * 0.35);
+private _ppFactor = (_suppress * 0.27);
 
 // Add effects
 _overlayCtrl ctrlSetFade (1 - _suppress);
@@ -58,10 +58,10 @@ GVAR(lastSuppress) = CBA_missionTime;
 _overlayCtrl spawn {
   sleep 0.07;
   _this ctrlSetFade 1;
-  _this ctrlCommit 7;
+  _this ctrlCommit 6;
 
   GVAR(ppEffectBlur) ppEffectAdjust [0];
-  GVAR(ppEffectBlur) ppEffectCommit 7;
+  GVAR(ppEffectBlur) ppEffectCommit 6;
   GVAR(ppEffectCC) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [1, 1, 1, 1], [1, 1, 1, 0]];
-  GVAR(ppEffectCC) ppEffectCommit 7;
+  GVAR(ppEffectCC) ppEffectCommit 6;
 };
