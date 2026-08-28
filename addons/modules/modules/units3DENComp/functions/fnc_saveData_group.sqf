@@ -16,8 +16,11 @@ _units insert [0, [_leader]];
 private _unitsData = _units apply {[_x, _vehiclesList, _vehiclesCrewList] call FUNC(units3DENComp_saveData_unit)};
 
 private _waypoints = (get3DENConnections _group) select {
-  (_x isEqualType []) && {(count _x) isEqualTo 2} && {(_x # 0) isEqualTo _group}
+    (_x # 0) isEqualTo "Waypoint"
+} apply {
+    _x # 1
 };
+
 // Sort waypoints by index
 _waypoints sort true;
 

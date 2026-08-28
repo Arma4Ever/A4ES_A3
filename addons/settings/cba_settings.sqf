@@ -283,7 +283,7 @@ force force ace_medical_treatment_treatmentTimeTrainedTourniquet = 2;
 
 force force ace_medical_treatment_woundReopenChance = 0.75;
 force force ace_medical_treatment_woundStitchTime = 5;
-force force ace_medical_vitals_simulateSpO2 = false;
+force force ace_medical_vitals_simulateSpO2 = true;
 
 // ACE Medical Interface
 force force ace_medical_feedback_bloodVolumeEffectType = 2;
@@ -573,7 +573,7 @@ force force grad_trenches_functions_allowCamouflage = false;
 force force grad_trenches_functions_allowDigging = true;
 force force grad_trenches_functions_allowEffects = true;
 force force grad_trenches_functions_allowGiantEnvelope = true;
-force force grad_trenches_functions_allowHitDecay = true;
+force grad_trenches_functions_allowHitDecay = true;
 force force grad_trenches_functions_allowLongEnvelope = true;
 force force grad_trenches_functions_allowShortEnvelope = true;
 force force grad_trenches_functions_allowSmallEnvelope = true;
