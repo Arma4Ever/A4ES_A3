@@ -1,6 +1,6 @@
 class GVAR(generateSoldiers): GVAR(base) {
     scope = 2;
-    author = "SzwedzikPL";
+    author = "SzwedzikP, Krzyciu";
     displayName = CSTRING(generateSoldiers_displayName);
     icon = QPATHTOF(modules\generateSoldiers\data\icon.paa);
     category = QGVAR(AI);
@@ -157,6 +157,11 @@ class GVAR(generateSoldiers): GVAR(base) {
                     name = CSTRING(generateSoldiers_Attributes_behaviour_assault);
                     tooltip = CSTRING(generateSoldiers_Attributes_behaviour_assault_Tooltip);
                     value = 7;
+                };
+                class defend {
+                    name = CSTRING(generateSoldiers_Attributes_behaviour_defend);
+                    tooltip = CSTRING(generateSoldiers_Attributes_behaviour_defend_Tooltip);
+                    value = 8;
                 };
             };
         };
@@ -391,6 +396,81 @@ class GVAR(generateSoldiers): GVAR(base) {
             typeName = "STRING";
             validate = "condition";
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(behaviour)) in [ARR_2(6,7)] && {(_this getVariable QQGVAR(assaultAddRepeat)) isEqualTo true});
+        };
+        class GVAR(defendRange): GVAR(dynamicSlider) {
+            displayName = CSTRING(generateSoldiers_Attributes_range);
+            tooltip = CSTRING(generateSoldiers_Attributes_defendRange_tooltip);
+            property = QGVAR(defendRange);
+            defaultValue = "75";
+            GVAR(range[]) = {20, 250};
+            GVAR(valueUnit) = "m";
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(behaviour)) isEqualTo 8);
+        };
+        class GVAR(defendUseCover): GVAR(dynamicCombo) {
+            displayName = CSTRING(generateSoldiers_Attributes_defendUseCover);
+            tooltip = CSTRING(generateSoldiers_Attributes_defendUseCover_Tooltip);
+            property = QGVAR(defendUseCover);
+            typeName = "NUMBER";
+            defaultValue = "0";
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(behaviour)) isEqualTo 8);
+            class values {
+                class all {
+                    name = CSTRING(generateSoldiers_Attributes_defendUseCover_all);
+                    tooltip = CSTRING(generateSoldiers_Attributes_defendUseCover_all_Tooltip);
+                    value = 0;
+                    default = 1;
+                };
+                class buildings {
+                    name = CSTRING(generateSoldiers_Attributes_defendUseCover_buildings);
+                    tooltip = CSTRING(generateSoldiers_Attributes_defendUseCover_buildings_Tooltip);
+                    value = 1;
+                };
+                class walls {
+                    name = CSTRING(generateSoldiers_Attributes_defendUseCover_walls);
+                    tooltip = CSTRING(generateSoldiers_Attributes_defendUseCover_walls_Tooltip);
+                    value = 2;
+                };
+                class vegetation {
+                    name = CSTRING(generateSoldiers_Attributes_defendUseCover_vegetation);
+                    tooltip = CSTRING(generateSoldiers_Attributes_defendUseCover_vegetation_Tooltip);
+                    value = 3;
+                };
+                class buildingsVegetation {
+                    name = CSTRING(generateSoldiers_Attributes_defendUseCover_buildingsVegetation);
+                    tooltip = CSTRING(generateSoldiers_Attributes_defendUseCover_buildingsVegetation_Tooltip);
+                    value = 4;
+                };
+                class buildingsWalls {
+                    name = CSTRING(generateSoldiers_Attributes_defendUseCover_buildingsWalls);
+                    tooltip = CSTRING(generateSoldiers_Attributes_defendUseCover_buildingsWalls_Tooltip);
+                    value = 5;
+                };
+                class wallsVegetation {
+                    name = CSTRING(generateSoldiers_Attributes_defendUseCover_wallsVegetation);
+                    tooltip = CSTRING(generateSoldiers_Attributes_defendUseCover_wallsVegetation_Tooltip);
+                    value = 6;
+                };
+            };
+        };
+        class GVAR(defendTeleportUnits): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(generateSoldiers_Attributes_defendTeleportUnits);
+            tooltip = CSTRING(generateSoldiers_Attributes_defendTeleportUnits_Tooltip);
+            property = QGVAR(defendTeleportUnits);
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(behaviour)) isEqualTo 8);
+        };
+        class GVAR(defendStealth): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(generateSoldiers_Attributes_defendStealth);
+            tooltip = CSTRING(generateSoldiers_Attributes_defendStealth_Tooltip);
+            property = QGVAR(defendStealth);
+            defaultValue = "true";
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(behaviour)) isEqualTo 8);
+        };
+        class GVAR(defendPatrol): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(generateSoldiers_Attributes_defendPatrol);
+            tooltip = CSTRING(generateSoldiers_Attributes_defendPatrol_Tooltip);
+            property = QGVAR(defendPatrol);
+            defaultValue = "false";
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(behaviour)) isEqualTo 8);
         };
         class GVAR(eventHandlersSubCategory): GVAR(moduleSubCategory) {
             displayName = CSTRING(generateSoldiers_Attributes_eventHandlersSubCategory);

@@ -1603,6 +1603,106 @@
             <English>Code executed on each repeat interval, evaluated with the module logic as _this. The variable _groupCount is also available and holds the total number of groups spawned by this module so far (initial batch + repeats). Example: "_groupCount < 10" limits the module to 10 additional groups in total.</English>
             <Polish>Kod wykonywany przy każdym odstępie powtarzania, wywoływany z logiką modułu jako _this. Dostępna jest również zmienna _groupCount, przechowująca łączną liczbę grup zespawnowanych dotychczas przez ten moduł (partia startowa + powtórzenia). Przykład: "_groupCount < 10" ogranicza moduł do łącznie 10 dodatkowych grup.</Polish>
         </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_behaviour_defend">
+            <English>Defend</English>
+            <Polish>Obrona</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_behaviour_defend_Tooltip">
+            <English>The group defends a position using nearby buildings and cover, and will not leave the area.</English>
+            <Polish>Grupa broni pozycji, wykorzystując pobliskie budynki i osłony, i nie opuszcza tego obszaru.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendRange_tooltip">
+            <English>Radius, in meters, around the defended position that the group covers.</English>
+            <Polish>Promień (w metrach) wokół bronionej pozycji, jaki obejmuje grupa.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendUseCover">
+            <English>Cover type</English>
+            <Polish>Typ osłony</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendUseCover_Tooltip">
+            <English>Which types of nearby objects are used as defensive cover positions.</English>
+            <Polish>Jakie rodzaje pobliskich obiektów są wykorzystywane jako pozycje osłonowe.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendUseCover_all">
+            <English>All</English>
+            <Polish>Wszystkie</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendUseCover_all_Tooltip">
+            <English>Use buildings, walls/fortifications and vegetation as cover.</English>
+            <Polish>Wykorzystuje budynki, mury/fortyfikacje i roślinność jako osłonę.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendUseCover_buildings">
+            <English>Buildings</English>
+            <Polish>Budynki</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendUseCover_buildings_Tooltip">
+            <English>Use only building positions as cover.</English>
+            <Polish>Wykorzystuje tylko pozycje w budynkach jako osłonę.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendUseCover_walls">
+            <English>Walls</English>
+            <Polish>Mury</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendUseCover_walls_Tooltip">
+            <English>Use only walls and fortifications as cover.</English>
+            <Polish>Wykorzystuje tylko mury i fortyfikacje jako osłonę.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendUseCover_vegetation">
+            <English>Vegetation</English>
+            <Polish>Roślinność</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendUseCover_vegetation_Tooltip">
+            <English>Use only trees and bushes as cover.</English>
+            <Polish>Wykorzystuje tylko drzewa i krzewy jako osłonę.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendUseCover_buildingsVegetation">
+            <English>Buildings and vegetation</English>
+            <Polish>Budynki i roślinność</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendUseCover_buildingsVegetation_Tooltip">
+            <English>Use buildings and vegetation as cover.</English>
+            <Polish>Wykorzystuje budynki i roślinność jako osłonę.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendUseCover_buildingsWalls">
+            <English>Buildings and walls</English>
+            <Polish>Budynki i mury</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendUseCover_buildingsWalls_Tooltip">
+            <English>Use buildings, walls and fortifications as cover.</English>
+            <Polish>Wykorzystuje budynki, mury i fortyfikacje jako osłonę.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendUseCover_wallsVegetation">
+            <English>Walls and vegetation</English>
+            <Polish>Mury i roślinność</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendUseCover_wallsVegetation_Tooltip">
+            <English>Use walls, fortifications and vegetation as cover.</English>
+            <Polish>Wykorzystuje mury, fortyfikacje i roślinność jako osłonę.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendTeleportUnits">
+            <English>Teleport units</English>
+            <Polish>Teleportuj jednostki</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendTeleportUnits_Tooltip">
+            <English>If enabled, units are teleported directly to their defensive positions instead of moving there on foot.</English>
+            <Polish>Jeśli włączone, jednostki są teleportowane bezpośrednio na swoje pozycje obronne zamiast przemieszczać się tam pieszo.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendStealth">
+            <English>Ambush</English>
+            <Polish>Zasadzka</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendStealth_Tooltip">
+            <English>If enabled, the group holds fire and waits in ambush instead of engaging openly.</English>
+            <Polish>Jeśli włączone, grupa wstrzymuje ogień i czeka w zasadzce zamiast otwarcie angażować przeciwnika.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendPatrol">
+            <English>Spawn patrol sub-unit</English>
+            <Polish>Wydziel patrol</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_defendPatrol_Tooltip">
+            <English>If enabled, one or two units are split off into a separate group that patrols the defended area instead of holding a fixed position.</English>
+            <Polish>Jeśli włączone, jedna lub dwie jednostki zostają wydzielone do osobnej grupy patrolującej broniony obszar zamiast utrzymywać stałą pozycję.</Polish>
+        </Key>
         <Key ID="STR_A4ES_Modules_generateSoldiers_emptyCompositions_Tooltip">
             <English>No compositions have been detected. To use a composition, you must first create it (module "Generator composition") and give it a unique name (in the attributes of the module "Generator composition").</English>
             <Polish>Nie wykryto żadnych kompozycji. Aby móc użyć kompozycji musisz ją najpierw stworzyć (moduł "Kompozycja generatora") oraz nadać jej unikalną nazwę (w atrybutach modułu "Kompozycja generatora").</Polish>

@@ -196,7 +196,7 @@ if (_logic getVariable [QGVAR(addModulePostExec), false]) then {
 sleep 5;
 
 private _repeatBehaviour = _logic getVariable [QGVAR(behaviour), 0];
-private _addRepeat = (_logic getVariable [QGVAR(assaultAddRepeat), false]) && (_repeatBehaviour isEqualTo 7);
+private _addRepeat = (_logic getVariable [QGVAR(assaultAddRepeat), false]);
 
 if (_addRepeat) then {
   private _repeatCond = compile (_logic getVariable [QGVAR(assaultRepeatCond), "true"]);

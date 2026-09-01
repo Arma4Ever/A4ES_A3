@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: SzwedzikPL
+ * Author: SzwedzikPL, Krzyciu
  * Inits generated group according to generateSoldiers module params
  */
 
@@ -212,6 +212,22 @@ if (_behaviour isEqualto 7) exitWith {
     (_logic getVariable [QGVAR(assaultScriptInterval), 10]) max 5,
     false
   ] spawn lambs_wp_fnc_taskAssault;
+};
+
+// Defend
+if (_behaviour isEqualto 8) exitWith {
+  LOG_1('Executing defend behaviour for %1 group.',str (groupId _group));
+
+  [
+    _group,
+    _groupPos,
+    (_logic getVariable [QGVAR(defendRange), 75]) max 20,
+    _logic getVariable ["objectarea", []],
+    _logic getVariable [QGVAR(defendTeleportUnits), false],
+    _logic getVariable [QGVAR(defendUseCover), 0],
+    _logic getVariable [QGVAR(defendStealth), false],
+    _logic getVariable [QGVAR(defendPatrol), false]
+  ] spawn lambs_wp_fnc_taskDefend;
 };
 
 // Log error if no behaviour script was selected
