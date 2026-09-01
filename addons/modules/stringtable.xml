@@ -1436,8 +1436,8 @@
             <Polish>Wymuszony odwrót</Polish>
         </Key>
         <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_assaultForcedRetreat_Tooltip">
-            <English>Check this option if the group is to recognize this order as a retreat order. The effect of this option is more aggressive movement and the inability to undertake an independent retreat.</English>
-            <Polish>Zaznacz tą opcję, jeśli grupa ma uznać ten rozkaz jako rozkaz odwrotu. Efektem tej opcji jest agresywniejszy ruch oraz brak możliwości podjęcia samodzielnego odwrotu.</Polish>
+            <English>Check this option if the group is to recognize this order as a retreat order. The effect of this option is more panic movement and the inability to undertake an independent retreat.</English>
+            <Polish>Zaznacz tą opcję, jeśli grupa ma uznać ten rozkaz jako rozkaz odwrotu. Efektem tej opcji jest bardziej paniczny ruch oraz brak możliwości podjęcia samodzielnego odwrotu.</Polish>
         </Key>
         <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_eventHandlersSubCategory">
             <English>Event handler</English>
@@ -1566,6 +1566,42 @@
         <Key ID="STR_A4ES_Modules_generateSoldiers_emptyCompositions">
             <English>None (no compositions detected)</English>
             <Polish>Brak (nie wykryto żadnych kompozycji)</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_assaultAggressive">
+            <English>Aggressive assault</English>
+            <Polish>Agresywny szturm</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_assaultAggressive_Tooltip">
+            <English>If enabled, the group will assault more aggressively (less cautious, more direct approach on the target).</English>
+            <Polish>Jeśli włączone, grupa będzie szturmować bardziej agresywnie (mniej ostrożne, bardziej bezpośrednie podejście do celu).</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_assaultAddRepeat">
+            <English>Repeat</English>
+            <Polish>Zapętl</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_assaultAddRepeat_Tooltip">
+            <English>If enabled, the module keeps spawning additional groups over time, as long as the repeat condition below evaluates to true. The module logic is not deleted while this is active.</English>
+            <Polish>Jeśli włączone, moduł będzie cyklicznie tworzył kolejne grupy, dopóki poniższy warunek powtarzania jest spełniony. Dopóki ta opcja jest aktywna, logika modułu nie zostanie usunięta.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_assaultRepeatInterval">
+            <English>Repeat interval</English>
+            <Polish>Interwał</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_assaultRepeatInterval_Tooltip">
+            <English>Time in seconds between each check of the repeat condition and, if met, each additional group spawn.</English>
+            <Polish>Czas w sekundach między kolejnymi sprawdzeniami warunku - jeśli jest spełniony - kolejnymi tworzonymi grupami.</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_assaultRepeatCond">
+            <English>Repeat condition</English>
+            <Polish>Warunek powtarzania</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_assaultRepeatCond_tooltip">
+            <English>Condition checked on each repeat interval. Must return a Boolean - a new group is spawned only when it returns true. _groupCount - number of spawned groups</English>
+            <Polish>Warunek sprawdzany przy każdym odstępie powtarzania. Musi zwracać wartość logiczną - nowa grupa zostanie zespawnowana tylko wtedy, gdy zwróci true. _groupCount - liczba stworzonych grup</Polish>
+        </Key>
+        <Key ID="STR_A4ES_Modules_generateSoldiers_Attributes_assaultRepeatCond_desc">
+            <English>Code executed on each repeat interval, evaluated with the module logic as _this. The variable _groupCount is also available and holds the total number of groups spawned by this module so far (initial batch + repeats). Example: "_groupCount < 10" limits the module to 10 additional groups in total.</English>
+            <Polish>Kod wykonywany przy każdym odstępie powtarzania, wywoływany z logiką modułu jako _this. Dostępna jest również zmienna _groupCount, przechowująca łączną liczbę grup zespawnowanych dotychczas przez ten moduł (partia startowa + powtórzenia). Przykład: "_groupCount < 10" ogranicza moduł do łącznie 10 dodatkowych grup.</Polish>
         </Key>
         <Key ID="STR_A4ES_Modules_generateSoldiers_emptyCompositions_Tooltip">
             <English>No compositions have been detected. To use a composition, you must first create it (module "Generator composition") and give it a unique name (in the attributes of the module "Generator composition").</English>

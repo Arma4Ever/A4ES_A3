@@ -99,17 +99,26 @@ private _logCompositionId = _logic getVariable [QGVAR(composition), ""];
 LOG_4('Starting generating groups of EXEC_MODULE_NAME (groupCount: %1 unitCount: %2 source: %3 composition: "%4").',str _groupCount,str _unitCount,str _source,_logCompositionId);
 #endif
 
-// Generate groups
-for "_i" from 1 to _groupCount do {
+// Spawns a single group (used for the initial batch and for repeat spawning below).
+// Takes all required data explicitly so it can be safely reused from another spawned thread.
+// Returns the created group, or objNull if the side group limit has been reached.
+private _fnc_spawnGroup = {
+  params [
+    "_groupIndex", "_side", "_logic", "_logicArea", "_boundaryArea",
+    "_spawnPosMode", "_unitClassesData", "_randomWeighted", "_unitMaxIndex",
+    "_unitSpawnRange", "_unitSkill", "_unitInit", "_enableDynSim"
+  ];
+
   private _group = createGroup [_side, true];
   // Exit if new group is null - means we reached game group limit in selected side
   if (isNull _group) exitWith {
-    LOG('Generating groups for EXEC_MODULE_NAME aborted - createdGroup is null: probably side group limit has been reached.');
+    LOG('Generating group for EXEC_MODULE_NAME aborted - createdGroup is null: probably side group limit has been reached.');
+    objNull
   };
 
   // Set custom groupId in debug mode
   #ifdef DEBUG_MODE_FULL
-  private _groupId = format ["generateSoldiers #%1", _i - 1];
+  private _groupId = format ["generateSoldiers #%1", _groupIndex];
   _group setGroupIdGlobal [_groupId];
   #endif
 
@@ -153,6 +162,22 @@ for "_i" from 1 to _groupCount do {
     }, [_group], 5] call CBA_fnc_waitAndExecute;
   };
 
+  _group
+};
+
+// Generate initial batch of groups
+private _groupIndex = 0;
+for "_i" from 1 to _groupCount do {
+  private _group = [
+    _groupIndex, _side, _logic, _logicArea, _boundaryArea,
+    _spawnPosMode, _unitClassesData, _randomWeighted, _unitMaxIndex,
+    _unitSpawnRange, _unitSkill, _unitInit, _enableDynSim
+  ] call _fnc_spawnGroup;
+  _groupIndex = _groupIndex + 1;
+
+  // Exit if new group is null - means we reached game group limit in selected side
+  if (isNull _group) exitWith {};
+
   // Wait a while to avoid sync problems
   sleep 0.5;
 };
@@ -170,7 +195,51 @@ if (_logic getVariable [QGVAR(addModulePostExec), false]) then {
 
 sleep 5;
 
-// Delete module
-deleteVehicle _logic;
+private _repeatBehaviour = _logic getVariable [QGVAR(behaviour), 0];
+private _addRepeat = (_logic getVariable [QGVAR(assaultAddRepeat), false]) && (_repeatBehaviour isEqualTo 7);
+
+if (_addRepeat) then {
+  private _repeatCond = compile (_logic getVariable [QGVAR(assaultRepeatCond), "true"]);
+  private _repeatInterval = (_logic getVariable [QGVAR(assaultRepeatInterval), 60]) max 10;
+
+  LOG_1('Enabling repeat group spawning for EXEC_MODULE_NAME (interval: %1s). Module logic will not be deleted.',str _repeatInterval);
+
+  [
+    _fnc_spawnGroup, _groupIndex, _side, _logic, _logicArea, _boundaryArea,
+    _spawnPosMode, _unitClassesData, _randomWeighted, _unitMaxIndex,
+    _unitSpawnRange, _unitSkill, _unitInit, _enableDynSim,
+    _repeatCond, _repeatInterval
+  ] spawn {
+    params [
+      "_fnc_spawnGroup", "_groupCount", "_side", "_logic", "_logicArea", "_boundaryArea",
+      "_spawnPosMode", "_unitClassesData", "_randomWeighted", "_unitMaxIndex",
+      "_unitSpawnRange", "_unitSkill", "_unitInit", "_enableDynSim",
+      "_repeatCond", "_repeatInterval"
+    ];
+
+    while {!isNull _logic} do {
+      sleep _repeatInterval;
+
+      if (isNull _logic) exitWith {};
+
+      if (_logic call _repeatCond) then {
+        LOG_1('Repeat condition met (groupCount: %1) - spawning additional group for EXEC_MODULE_NAME.',str _groupCount);
+        [
+          _groupCount, _side, _logic, _logicArea, _boundaryArea,
+          _spawnPosMode, _unitClassesData, _randomWeighted, _unitMaxIndex,
+          _unitSpawnRange, _unitSkill, _unitInit, _enableDynSim
+        ] call _fnc_spawnGroup;
+        _groupCount = _groupCount + 1;
+      } else {
+        deleteVehicle _logic;
+      }
+    };
+
+    LOG('Repeat group spawning for EXEC_MODULE_NAME stopped - module logic no longer exists.');
+  };
+} else {
+  // Delete module
+  deleteVehicle _logic;
+};
 
 LOG('Execution of EXEC_MODULE_NAME local exec function finished.');

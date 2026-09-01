@@ -367,6 +367,31 @@ class GVAR(generateSoldiers): GVAR(base) {
             property = QGVAR(assaultForcedRetreat);
             GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(behaviour)) isEqualTo 7);
         };
+        class GVAR(assaultAddRepeat): GVAR(dynamicCheckbox) {
+            displayName = CSTRING(generateSoldiers_Attributes_assaultAddRepeat);
+            tooltip = CSTRING(generateSoldiers_Attributes_assaultAddRepeat_Tooltip);
+            property = QGVAR(assaultAddRepeat);
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(behaviour)) in [ARR_2(6,7)]);
+        };
+        class GVAR(assaultRepeatInterval): GVAR(dynamicSlider) {
+            displayName = CSTRING(generateSoldiers_Attributes_assaultRepeatInterval);
+            tooltip = CSTRING(generateSoldiers_Attributes_assaultRepeatInterval_Tooltip);
+            property = QGVAR(assaultRepeatInterval);
+            defaultValue = "60";
+            GVAR(range[]) = {10, 1200};
+            GVAR(valueUnit) = "s";
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(behaviour)) in [ARR_2(6,7)] && {(_this getVariable QQGVAR(assaultAddRepeat)) isEqualTo true});
+        };
+        class GVAR(assaultRepeatCond): GVAR(dynamicEditCodeMulti5) {
+            displayName = CSTRING(generateSoldiers_Attributes_assaultRepeatCond);
+            tooltip = CSTRING(generateSoldiers_Attributes_assaultRepeatCond_tooltip);
+            GVAR(description) = CSTRING(generateSoldiers_Attributes_assaultRepeatCond_desc);
+            property = QGVAR(assaultRepeatCond);
+            defaultValue = "'_groupCount < 10'";
+            typeName = "STRING";
+            validate = "condition";
+            GVAR(conditionActive) = QUOTE((_this getVariable QQGVAR(behaviour)) in [ARR_2(6,7)] && {(_this getVariable QQGVAR(assaultAddRepeat)) isEqualTo true});
+        };
         class GVAR(eventHandlersSubCategory): GVAR(moduleSubCategory) {
             displayName = CSTRING(generateSoldiers_Attributes_eventHandlersSubCategory);
             property = QGVAR(eventHandlersSubCategory);
